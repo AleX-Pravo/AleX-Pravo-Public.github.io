@@ -1,0 +1,204 @@
+.mobile-menu {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin: 2px 0 0;
+    transition: top .3s ease-out;
+
+    @media (max-width: 599px) {
+        margin: 42px 0 0;
+    }
+
+    &__button {
+        position: relative;
+        display: block;
+        width: 43px;
+        height: 26px;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            right: 0;
+            left: 0;
+            height: 4px;
+            content: '';
+            background: $brandPrimary;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+
+        &-line {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            height: 4px;
+            margin-top: -2px;
+            background: $brandPrimary;
+        }
+    }
+
+    &__drop {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        width: 280px;
+        height: 100%;
+        transition: transform .3s ease-out;
+        //border-right: 1px solid $grayLight;
+        background: $base;
+
+        &.open {
+            transform: translateX(0);
+            will-change: transform;
+            overflow: auto;
+        }
+
+        &-top {
+            height: 50px;
+            background-color: $grayDark;
+            position: relative;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+        top: 12px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        background: url('../images/header/close.png') no-repeat;
+        //background-size: 105%;
+    }
+
+    &__language-wrapper {
+        position: absolute;
+        top: 29px;
+        right: 20px;
+    }
+
+    &__language-item {
+        display: inline-block;
+        margin-left: 10px;
+
+        .language-link {
+
+            &:hover {
+                background: none;
+                //color: $sec1;
+            }
+        }
+    }
+
+    &__wrapper {
+        height: 100%;
+    }
+
+    &__content {
+        padding: 20px;
+    }
+
+    &__item {
+        position: relative;
+        margin: 0 0 10px 0;
+
+        &:hover {
+            .mobile-menu {
+                &__link {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        transition: all .2s linear;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $brandPrimary;
+        font-family: $fontFamilyOpenSans_R;
+        letter-spacing: 1px;
+        font-size: 18px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $grayDark;
+        padding-left: 5px;
+    }
+
+    &__flyout {
+        padding: 20px 10px 20px 15px;
+
+        &List {
+            position: relative;
+            font-family: $fontFamilyOpenSans_R;
+            font-size: 20px;
+            color: $brandPrimary;
+        }
+    }
+
+    &__sub {
+        margin: -3px 0 0;
+
+        &item {
+            margin: 0 0 10px;
+            line-height: 24px;
+        }
+
+        &link {
+            text-decoration: none;
+            color: $brandPrimary;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+
+.mobile-menu__item {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background: url("../images/header/arrowsbottom.png") no-repeat;
+        width: 13px;
+        height: 8px;
+        top: 9px;
+        right: 0;
+        transform: rotate(0);
+        transition: transform 0.2s ease-out;
+        display: none;
+    }
+
+    &.active {
+        &:after {
+            display: block;
+        }
+
+        &.open {
+            &:after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+

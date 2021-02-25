@@ -1,0 +1,90 @@
+-
+    var tabsContent = [
+        {
+            active: true,
+            text: 'Marketing1',
+            id: 'content1'
+        },
+        {
+            text: 'Marketing2',
+            id: 'content2'
+        },
+        {
+            text: 'Marketing3',
+            id: 'content3'
+        }
+    ]
+
+= '\n'
+//= tabs =
+//- (source/assets/css/module/_tabs.scss)
+.tabs.vertical
+    .container
+        .containerTabs
+            ul.tabs__infoNews
+
+                li.tabs__infoNews-inner#high1.active
+                    div.tabs__infoNews-wrap
+                        p.textTitle Branding
+                        .bigName
+                            p.keyText Branding
+                            p.underText Branding
+
+                li.tabs__infoNews-inner#high2
+                    div.tabs__infoNews-wrap
+                        p.textTitle Marketing
+                        .bigName
+                            p.keyText Marketing
+                            p.underText Marketing
+                            //-p.underText
+
+                                //-img(src='assets/images/content/marketing-min.svg' alt='')
+                                canvas#canvasText-3(width='1170' height='100' data-text= 'Marketing')
+                                canvas#canvasText-4(width='1170' height='90' data-text= 'Marketing')
+                                canvas#canvasText-5(width='1170' height='60' data-text= 'Marketing')
+                li.tabs__infoNews-inner#high3
+                    div.tabs__infoNews-wrap
+                        p.textTitle Online
+                        .bigName
+                            p.keyText Online
+                            p.underText Online
+
+            .tabs__news
+                each val in tabsContent
+                    if val.active
+                        .tabs__content.active(id= val.id)
+                            .tabs__content-text.text
+
+                                p.color--text(style='color: #7800FF; margin: 0 0 10px 0;' data-content= val.text)
+                                p At 32x32, we work closely withorganisations and help them tell their story effectively.
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Brand identity
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Brand development
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Brand guidelines
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Art direction
+                                a(href="#")
+
+                    else
+                         .tabs__content(id= val.id)
+                            .tabs__content-text.text
+
+                                p.color--text(style='color: #7800FF; margin: 0 0 10px 0;' data-content= val.text)
+                                p At 32x32, we work closely withorganisations and help them tell their story effectively.
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Brand identity
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Brand development
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Brand guidelines
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Art direction
+                                a(href="#")
+                                    p(style='color: #7800FF; margin: 0 0 16px 0;') Stationery design
+
+                //-проверка всего текста для редактора
+                //-include _text-audit.pug
+//= End tabs =
+= '\n'

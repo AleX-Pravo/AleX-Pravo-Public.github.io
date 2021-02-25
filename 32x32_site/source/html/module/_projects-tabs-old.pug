@@ -1,0 +1,99 @@
+-
+    var tabsInfoNews = [
+        {
+            title: 'All'
+        },
+        {
+            active: true,
+            title: 'Branding'
+        },
+        {
+            title: 'Sites'
+        },
+        {
+            title: 'E-commersce'
+        },
+        {
+            title: 'Logo'
+        }
+    ]
+
+    var tabsContent = [
+        {
+            active: true,
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ]
+
+= '\n'
+//= projects-tabs =
+//- (source/assets/css/module/_projects.scss)
+.projects-tabs.horizontal
+    //-.container
+    .containerTabs
+        ul.projects-tabs__infoNews
+            each item in tabsInfoNews
+                if item.active
+                    li.projects-tabs__infoNews-inner.active
+                        a(href='javascript:void(0);')= item.title
+
+                else
+                    li.projects-tabs__infoNews-inner
+                        a(href='javascript:void(0);')= item.title
+
+        .projects-tabs__news
+            each val in tabsContent
+                if val.active
+                    .projects-tabs__content.active
+                        .projects-tabs__top
+                            .projects-tabs__wrap.slider-projects
+
+                                //= Swiper =
+                                .swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            - imgProjects = '1'
+                                            - var imglink= true
+                                            include _projects__top.pug
+                                        .swiper-slide
+                                            - imgProjects = '1'
+                                            - var imglink= true
+                                            include _projects__top.pug
+                                        .swiper-slide
+                                            - imgProjects = '1'
+                                            - var imglink= true
+                                            include _projects__top.pug
+                                .swiper-button-next next
+                                .swiper-button-prev prev
+                else
+                    .projects-tabs__content
+                        .projects-tabs__top
+                            .projects-tabs__wrap.slider-projects
+
+                                //= Swiper =
+                                .swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            - imgProjects = '1'
+                                            - var imglink= true
+                                            include _projects__top.pug
+                                        .swiper-slide
+                                            - imgProjects = '2'
+                                            - var imglink= true
+                                            include _projects__top.pug
+                                        .swiper-slide
+                                            - imgProjects = '1'
+                                            - var imglink= true
+                                            include _projects__top.pug
+                                .swiper-button-next next
+                                .swiper-button-prev prev
+
+//= End projects-tabs =
+= '\n'

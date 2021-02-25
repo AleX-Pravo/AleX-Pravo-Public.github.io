@@ -1,0 +1,48 @@
+.primaryMenu {
+    margin-right: 38px;
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+
+    &.primaryMenu-novisible {
+        opacity: 0;
+    }
+
+    ul.primaryMenu__inner {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            padding: 0 19px;
+            position: relative;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &.active {
+
+                a {
+                    color: $grayDarker;
+                }
+            }
+
+            a {
+                color: $grayDarker;
+                text-decoration: none;
+                position: relative;
+                font-size: 16px;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+

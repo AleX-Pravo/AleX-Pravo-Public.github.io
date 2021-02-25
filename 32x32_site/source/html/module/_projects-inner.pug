@@ -1,0 +1,47 @@
+= '\n'
+//= projects-inner =
+//- (source/assets/css/module/_projects.scss)
+.projects-inner
+    //- .projects-inner__top
+    //-     .projects-inner__wrap
+    //-         - imgProjects = '1'
+    //-         -var projectsLine = true
+    //-         include _projects__top.pug
+
+    .projects-inner__content
+        = '\n'
+        //= about-base =
+        //-source/assets/css/module/_about-base.scss
+        .about-base
+            .container
+                .about-base__main
+                    .about-base__left
+                        .about-base__text.text
+                            h1(style='font-weight: 500;') Patifon.ua Redesigning the smart home leader’s website bringing together modern.
+
+                            p(style='color: rgba(71, 71, 71, 0.75);').
+                                Arlo sets the standard for smart home technology, bringing together modern design, wireless connectivity, and cloud infrastructure to create a seamless platform for its customers. The brand looked to Baunfire to build a user-friendly website, optimized for engagement and conversion.
+                            p(style='color: rgba(71, 71, 71, 0.75);').
+                                The ask for this project was to develop a flexible and intuitive design system online that could be easily maintained by their internal content management team. We achieved this by designing a simple grid layout with the ability to combine various modules for each page.
+
+                    .about-base__right
+                        .about-base__text.text
+                            .about-base__title
+                                h6.color--text(data-content='TASK' style='font-weight: bold; line-height: 18px; letter-spacing: 0.15em; color: #7800FF; text-transform: uppercase;')
+                            p(style='font-size: 16px; line-height: 28px; color: rgba(71, 71, 71, 0.75);').
+                                Redesigning the smart home leader’s website
+                            .about-base__title
+                                h6.color--text(data-content='SERVICE' style='font-weight: bold; line-height: 18px; letter-spacing: 0.15em; color: #7800FF; text-transform: uppercase;')
+                            p(style='font-size: 16px; line-height: 28px; color: rgba(71, 71, 71, 0.75); margin: 12px 0 8px;').
+                                Website Design & User Experience
+                            p(style='font-size: 16px; line-height: 28px; color: rgba(71, 71, 71, 0.75); margin: 0 0 8px;').
+                                Front end development
+                            p(style='font-size: 16px; line-height: 28px; color: rgba(71, 71, 71, 0.75); margin: 0 0 8px;').
+                                Back end development
+        //= End about-base =
+        = '\n'
+        .projects-inner__basicImages
+            //-.projects-inner__images(style='background-image: url(data/projects/project1.png);')
+            img(src='data/projects/project1.jpg' alt='')
+//= End projects-inner =
+= '\n'

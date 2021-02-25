@@ -1,0 +1,27 @@
+= '\n'
+//= Header =
+//-=(/assets/css/layout/_header.scss)=
+//- modifierHeader = (pageTitle == 'main') ? 'header--transparent' : ''
+header.header#header(class= headerBg class= modifierHeader)
+    .container
+
+        .header__main
+
+            .header__language
+                include header/language/_language.pug
+
+            .header__logo
+                include header/logo/_logo.pug
+
+            .header__menu
+                include header/primaryMenu/_primaryMenu.pug
+
+                //-layout/header/device/_device.scss
+                .header-device
+                    - var deviceFlag = true
+                    //-.header-button
+                    a.header-button(href='javascript:void(0);')
+                        i.button-line
+
+//= End header =
+= '\n'

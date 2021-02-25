@@ -1,0 +1,47 @@
+
+= '\n'
+//= fullscreen-menu-container =
+//-layout/header/device/_device.scss
+.fullscreen-menu-container.js-menu-container
+    .line
+    .container.fullscreen__container
+        .fullscreen
+            .fullscreen-language
+                include ../language/_language.pug
+            .fullscreen-menu
+                nav.fullscreen-menu__nav(data-content="menu")
+                    ol
+                        li
+                            a(href="projects.html") Projects
+                        li
+                            a(href="services-branding.html") Services
+                        li
+                            a(href="about.html") About us
+                        li
+                            a(href="contact.html") Contact
+            .fullscreen-info
+                .fullscreen-info__left
+                    .fullscreen-info__city
+
+                        .fullscreen-info__city-name Kiev
+                        a.fullscreen-info__city-phone(href='tel:+380443830458') (044) 383-04-58
+
+                        .fullscreen-info__city-name Rivne
+                        a.fullscreen-info__city-phone(href='tel:+380362434650') (0362) 43-46-50
+
+
+                    .fullscreen-info__manger
+                        .fullscreen-info__manger-name Manger
+                        a.fullscreen-info__manger-phone(href='tel:+380969635425') (096) 963-54-25
+                        a.fullscreen-info__manger-phone(href='tel:+380502384537') (050) 238-45-37
+
+                .fullscreen-info__right
+                    .fullscreen-info__email
+                        .fullscreen-info__email-name Email
+                        a.fullscreen-info__email-mail(href='mailto:contact@32x32.com.ua') contact@32x32.com.ua
+                    .fullscreen-info__email
+                        .fullscreen-info__email-name Leave a message for CEO  V.V.Bishuk
+                        a.fullscreen-info__email-mail(href='mailto:vb@32x32.com.ua') vb@32x32.com.ua
+
+//= End fullscreen-menu-container =
+= '\n'

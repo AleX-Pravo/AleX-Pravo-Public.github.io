@@ -1,0 +1,51 @@
+.servicesMenu {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    //max-width: 615px;
+    margin: auto;
+    list-style: none;
+    padding: 18px 0 0;
+    position: relative;
+    z-index: 1;
+
+    li.servicesMenu-inner {
+        position: relative;
+        padding: 0 20px 20px;
+
+        &:not(.active) {
+            cursor: pointer;
+        }
+
+        &.active {
+
+            a {
+                //text-decoration: underline;
+
+                &:after {
+                    content: '';
+                    border-bottom: 2px solid $grayDarker;
+                    position: absolute;
+                    top: 125%;
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+
+        a {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 24px;
+            color: $grayDarker;
+            text-decoration: none;
+            position: relative;
+        }
+    }
+
+    @media (min-width: $screenSmMin) {
+        li.servicesMenu-inner {
+            padding: 0 40px;
+        }
+    }
+}

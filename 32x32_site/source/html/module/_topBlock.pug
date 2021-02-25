@@ -1,0 +1,24 @@
+= '\n'
+//= topBlock
+//-=(module/_topBlock.scss)=
+.topBlock
+    .container
+        .topBlockName(class=topBlock__title)
+            if (topBlock__title)
+                //-data-content=topBlock__title
+                .topBlock__title= topBlock__title
+                if (topBlock__img)
+                    .topBlock__img
+                        //-img(src='assets/images/content/marketing.svg' alt='')
+                        canvas#canvasText-1(width='1170' height='250' data-text= topBlock__title)
+                        //-.topBlock__img-inner
+                        canvas#canvasText-2(width='1170' height='150' data-text= topBlock__title)
+            if (topBlock__titleShadow)
+                .topBlock__title-shadow= topBlock__title
+
+        if (topBlock__desc)
+            .topBlock__item
+                .topBlock__desc !{topBlock__desc}
+
+//= End topBlock =
+= '\n'

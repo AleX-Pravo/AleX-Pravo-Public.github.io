@@ -1,0 +1,91 @@
+
+.header-404 {
+    padding: 47px 0 31px;
+    text-align: center;
+}
+
+.block-404 {
+    text-align: center;
+
+    .topBlock-404 {
+        font-weight: bold;
+        font-size: 130px;
+        line-height: 130px;
+        color: $brandPrimary;
+        position: relative;
+        height: 107px;
+        text-align: center;
+        margin: 87px 0 98px;
+
+        @media (min-width: 600px) {
+            font-size: 250px;
+            line-height: 250px;
+            height: 192px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 350px;
+            line-height: 350px;
+            height: 275px;
+        }
+    }
+
+    p {
+        font-size: 38px;
+        line-height: 38px;
+        color: $grayDarker;
+        margin-bottom: 15px;
+
+        @media (min-width: 600px) {
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
+
+    span {
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        color: rgba(10, 10, 10, 0.5);
+    }
+
+    .contactForm__button {
+        background:none;
+        text-decoration: none;
+        margin: 33px auto;
+
+        .button__icon {
+            width: 100%;
+            padding: 29px 20px;
+
+            &:before {
+                content: attr(data-content);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 180px;
+                height: auto;
+                -webkit-transform: translate3d(0, 100%, 0) translate3d(0, -2px, 0);
+                transform: translate3d(0, 100%, 0) translate3d(0, -2px, 0);
+                -webkit-transform-origin: 50% 100%;
+                transform-origin: 50% 100%;
+
+                white-space: pre;
+                font-size: 18px;
+                line-height: 27px;
+                text-align: center;
+                color: $brandPrimary;
+                background: none;
+                font-style: normal;
+            }
+        }
+
+        span {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $grayDarker;
+        }
+    }
+}

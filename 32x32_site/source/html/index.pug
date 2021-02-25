@@ -1,0 +1,98 @@
+//- Utility
+include utils/_variable.pug
+
+- pageTitle = 'main'
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout.layout--main
+
+            //= Main =
+            main#main.main
+
+                #scroll-container
+                    section#one
+                        include layout/_header.pug
+                        include module/_requestAnimFrame.pug
+                        include layout/header/fullscreen-menu/_fullscreen-menu.pug
+                    section#two
+                        include module/_line-just.pug
+                        include module/_tabs.pug
+                    section#three
+                        include module/_index-succeful.pug
+                        include layout/_footer.pug
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        //-look at the file (source/assets/html/module/_requestAnimFrame.pug)
+        script(src='assets/js/requestAnimFrame.js')
+
+        include layout/_scripts.pug
+
+        //-look at the file (source/assets/html/module/_requestAnimFrame.pug)
+        //-script(src='assets/js/jquery.particleground.js')
+        //-script(src='assets/js/particleEmitter.js')
+
+        script.
+            $(document).ready(function() {
+
+                if ($(window).width() >= 1024 && $('#scroll-container').length > 0) {
+                    let controller = new ScrollMagic.Controller(),
+                        duration = 1, // 1000 milliseconds
+
+                        wipeAnimation = new TimelineMax()
+                        .fromTo('#two', duration, {y:  '100%'}, {y: '0%', ease: Linear.easeNone})
+                        .to('#high1, #content1', .3, {className:'+=active'})
+                        .to('#high1, #content1', 0,{className:'-=active'})
+                        .to('#high2, #content2', .3, {className:'+=active'})
+                        .to('#high2, #content2', 0,{className:'-=active'})
+                        .to('#high3, #content3', .3, {className:'+=active'})
+                        .to('#high3, #content3', 0,{className:'-=active'})
+                        .fromTo('#three', duration, {y: '100%'}, {y: '0%', ease: Linear.easeNone});
+
+                    // create scene to pin and link animation
+                    new ScrollMagic.Scene({
+                        triggerElement: '#scroll-container',
+                        triggerHook: '0',
+                        duration: '300%'
+                    })
+                    .setPin('#scroll-container')
+                    .setTween(wipeAnimation)
+                    //.addIndicators()
+                    .addTo(controller);
+
+                    controller.scrollTo(function (newpos) {
+                        TweenMax.to(window, 0, {scrollTo: {y: newpos}});
+                    });
+
+                    $(document).on('click', ".tabs__infoNews-inner:not(.active)", function(e) {
+                        let id = $(this).attr('id'),
+                            offset = duration * 1000 + $('#' + id).position().top;
+
+                        if ($('#' + id).length > 0) {
+                            e.preventDefault();
+                            controller.scrollTo(offset);
+                        }
+                    });
+                }
+
+                //- $('#particles').particleground({
+                //-     dotColor: '#7800FF',
+                //-     //lineColor: 'transparent',
+                //-     lineColor: '#7800FF',
+                //-     particleRadius: '8',
+                //-     lineWidth: '1',
+                //-     density: '10000',
+                //-     curvedLines: false,
+                //-     parallaxMultiplier: '8'
+                //- });
+            });

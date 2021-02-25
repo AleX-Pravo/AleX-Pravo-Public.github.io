@@ -1,0 +1,69 @@
+//== BASE
+// --------------------------------------------------
+
+//== Colors
+
+$base:                  #fff !default;     //*SS
+$grayBase:              #000 !default;     //*SS
+$grayDarker:            #0A0A0A !default;  //*SS
+$grayDark:              #333 !default;
+$gray:                  #555 !default;
+$grayLight:             #777 !default;
+$grayLighter:           #999 !default;
+
+$brandPrimary:          #7800FF !default;   //*SS rgba(120, 0, 255, 1)
+$brandSuccess:          #F5F4F4 !default;
+$brandInfo:             #474747 !default; //Інформація:
+$brandWarning:          #000 !default; //УВАГА:
+$brandDanger:           #d33242 !default; //Небезпека:
+
+//== Reset
+
+$bodyBg:                $base !default;//source/assets/css/base/_reset.scss
+$textColor:             $grayDark !default;//source/assets/css/base/_reset.scss
+$linkColor:             $grayDarker !default;
+
+//== Typography
+
+$fontFamilySansSerif:    'Arial', sans-serif !default;   //*SS
+$fontFamilyGilroy_Bd:    'gilroybold' !default;          //*SS
+$fontFamilyGilroy_Lt:    'gilroylight' !default;         //*SS
+$fontFamilyGilroy_Rg:    'gilroyregular' !default;       //*SS
+$fontFamilyAxiforma_Rg:  'Axiforma' !default;            //*SS
+
+$fontFamilyBase:       $fontFamilyAxiforma_Rg, $fontFamilySansSerif !default;//source/assets/css/base/_reset.scss
+
+$fontSizeBase:          14px !default;
+$fontSizeLarge:         18px !default;
+$fontSizeSmall:         12px !default;
+
+$fontSizeH1:            20px !default;
+
+$lineHeightBase:        1.428571429 !default; // 20/14
+
+
+//== MODULE
+// --------------------------------------------------
+
+
+//== Components
+
+
+//== Grid system
+
+$gridMaxWidth:          1200px !default;
+$gridColumns:           12 !default;
+$gridGutterWidth:       30px !default;
+
+
+//== Media queries breakpoints
+
+$screenXsMin:           480px !default;
+$screenSmMin:           768px !default;
+$screenMdMin:           1024px !default;
+$screenLgMin:           1200px !default;
+
+$screenMbMax:           ($screenXsMin - 1) !default;
+$screenXsMax:           ($screenSmMin - 1) !default;
+$screenSmMax:           ($screenMdMin - 1) !default;
+$screenMdMax:           ($screenLgMin - 1) !default;

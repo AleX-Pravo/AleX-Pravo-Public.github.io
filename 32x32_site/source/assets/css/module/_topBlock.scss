@@ -1,0 +1,184 @@
+
+.topBlock,
+.topBlock-404 {
+    position: relative;
+    z-index: 1;
+    margin: 55px 0 41px;
+
+    &Name {
+        position: relative;
+        height: 140px;
+        font-size: 54px;
+        text-align: center;
+
+        @media screen and (min-width: 600px) {
+            font-size: 100px;
+            line-height: 150px;
+            height: 210px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            font-size: 200px;
+            line-height: 250px;
+            height: 250px;
+        }
+    }
+
+    &__title {
+        color: $brandPrimary;
+        margin: 0 0 24px;
+        font-weight: 900;
+        font-size: inherit;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    &__title-shadow {
+
+        position: relative;
+        margin: auto;
+        top: 5px;
+        left: -9px;
+        text-align: center;
+        font-weight: 900;
+        font-size: inherit;
+        color: transparent;
+        -webkit-text-stroke: 1px $brandPrimary;
+        z-index: 1;
+        transition: all .15s ease-out;
+        display: none;
+
+        @media screen and (min-width: 600px) {
+            display: block;
+        }
+
+        @media screen and (min-width: 1200px) {
+            position: absolute;
+            top: 5px;
+            left: -9px;
+        }
+    }
+
+    &Name.Marketing {
+
+        .topBlock__title-shadow {
+            color: transparent;
+            -webkit-text-stroke: 1px $brandPrimary;
+            //-text-shadow: -5px -2px $brandPrimary, -4px -1px #fff;
+            background: repeating-linear-gradient(45deg, $brandPrimary, $brandPrimary 1px, white 2px, white 3px);
+            -webkit-background-clip: text;
+            z-index: -1;
+        }
+    }
+
+    &Name.Online {
+
+        .topBlock__title-shadow {
+            filter: blur(7px);
+            opacity: .6;
+            color: $brandPrimary;
+        }
+    }
+
+    &__item {
+        margin: 0;
+        text-align: center;
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        color: $brandInfo;
+    }
+
+    &__img {
+        position: absolute;
+        left:-7px;
+        top: 3px;
+        margin: auto;
+        text-align: center;
+        display: none;
+        width: 100%;
+        z-index: -1;
+
+        #canvasText-1 {
+            display: none;
+        }
+
+        #canvasText-2 {
+            display: none;
+        }
+
+        .topBlock__img-inner {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media screen and (min-width: 600px) {
+            display: block;
+            top: 0;
+            left:-5px;
+
+            #canvasText-2 {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            position: relative;
+            width: 100%;
+
+            #canvasText-1 {
+                display: block;
+            }
+
+            #canvasText-2 {
+                display: none;
+            }
+
+            .topBlock__img-inne {
+                display: none;
+            }
+        }
+    }
+}
+
+.about-topBlock {
+    position: relative;
+    z-index: 1;
+    margin: 120px 0 12px;
+
+    @media screen and (min-width: 600px) {
+        margin: 172px 0 48px;
+    }
+
+    &__title {
+        color: $base;
+        margin: 0 0 24px;
+        font-weight: 900;
+        font-size: 54px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        height: 140px;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 25px rgba(120, 0, 255, 0.2);
+
+        @media screen and (min-width: 600px) {
+            font-size: 100px;
+            line-height: 150px;
+            height: 210px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            font-size: 250px;
+            line-height: 250px;
+            height: 250px;
+        }
+    }
+}

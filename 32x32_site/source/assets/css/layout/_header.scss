@@ -1,0 +1,59 @@
+.header {
+    position: relative;
+    z-index: 3;
+    padding: 47px 0 31px;
+    background-color: $base;
+
+    &-bg {
+        background: rgba(253, 192, 9, 0.1);
+    }
+
+    &--transparent {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    &__main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__language {
+        display: none;
+        flex-shrink: 0;
+
+        @media (min-width: 960px) {
+            display: block;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (min-width: 960px) {
+            flex-grow: 1;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+        flex-shrink: 0;
+
+        .primaryMenu {
+            display: none;
+
+            @media (min-width: 960px) {
+                display: block;
+            }
+        }
+
+        .header-device {
+
+        }
+    }
+}

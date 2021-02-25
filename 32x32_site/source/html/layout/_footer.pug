@@ -1,0 +1,25 @@
+= '\n'
+//= Footer =
+if (pageTitle == 'main')
+    footer.footer.footer--index
+        .container
+
+            .footer__main
+                .footer__left
+                    .footer__logo
+                        include footer/logo/_logo.pug
+                    .footer__slogan Pushing the boundaries of digital design.
+                .footer__menu
+                    include footer/menu/_menu.pug
+else
+    footer#footer.footer
+        .container
+
+            .footer__main
+                .footer__left
+                    .footer__logo
+                        include footer/logo/_logo.pug
+                    .footer__slogan Pushing the boundaries of digital design.
+                .footer__menu
+                    include footer/menu/_menu.pug
+//= End footer =

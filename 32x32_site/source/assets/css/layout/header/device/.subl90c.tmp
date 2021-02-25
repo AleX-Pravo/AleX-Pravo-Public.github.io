@@ -1,0 +1,341 @@
+.header-device {
+    position: relative;
+}
+
+.header-device .header-button {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 14px;
+    padding: 6px 0 8px;
+    top: -2px;
+}
+
+.header-device .header-button:before,
+.header-device .header-button:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 2px;
+    content: '';
+    background: $brandPrimary;
+    transition: transform 300ms ease-in;
+}
+
+.header-device .header-button:before {
+    top: 0;
+}
+
+.header-device .header-button:after {
+    bottom: 0;
+}
+
+.header-device .button-line {
+    position: absolute;
+    display: block;
+    height: 2px;
+    background: $brandPrimary;
+    left: 5px;
+    right: 0;
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+
+.header-device.open {
+
+    .header-button {
+        top: 4px;
+
+        &:before,
+        &:after {
+            top: 0;
+
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        .button-line {
+            opacity: 0;
+        }
+    }
+}
+/*
+
+    Start New Code For Menu
+
+*/
+/* Fullscreen Menu */
+
+.fullscreen-menu-container {
+    position: fixed; /* Fix the menu to the viewport */
+    top: 12.5rem; /* Add the top value to allow the element to animate up over */
+    top: 100%;
+    left: 0; /* Position to the left of the viewport */
+    z-index: 2; /* Add z-index to make sure the element is always above everything else */
+    width: calc(100vw - 17px); /* Cover the whole width of the viewport */
+    width: 100vw; /* Cover the whole width of the viewport */
+    height: 100vh; /* Cover the whole height of the viewport */
+    overflow: scroll; /* Allow scrolling when the content is larger than the viewport */
+
+    background-color: $base; /* Semi-transparent white background for the menu-overlay */
+
+    opacity: 0; /* Apply 0 transparency to hide the overlay on load */
+    pointer-events: none; /* Stop the elements in the menu-container from being clicked */
+
+    transition: top 500ms ease-in, opacity 300ms ease-in; /* Transition the top and opacity */
+    overflow: hidden;
+
+    &.is-open {
+        opacity: 1; /* Transition opacity from 0 to 1 */
+        top: 0; /* Transition to the top of the viewport */
+        pointer-events: auto; /* Re-add pointer events to elements can be clicked again */
+        background-color: $base;
+    }
+
+    .line {
+        display: none;
+
+        @media (min-width: 1080px) {
+            display: block;
+            height: 95%;
+        }
+    }
+}
+
+.fullscreen {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: absolute;
+    width: 100%;
+    top: 14%;
+    margin: 0 0 0 -12px;
+
+    &__container {
+        position: relative;
+        height: 100vh;
+    }
+
+    &-language {
+        display: block;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        flex-shrink: 0;
+    }
+
+    &-menu {
+        margin-left: 20px;
+
+        &__nav {
+            padding-left: 15px;
+            position: relative;
+
+            &:before {
+                content: attr(data-content);
+                position: absolute;
+                top: 12px;
+                left: -25px;
+                transform: rotate(-90deg);
+                font-size: 16px;
+                color: $brandPrimary;
+            }
+
+            ol {
+                list-style: none;
+                counter-reset: list1;
+
+                li {
+                    margin-bottom: 15px;
+                    position: relative;
+                    transition: opacity 200ms ease-in;
+                    line-height: 1;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &:before {
+                        counter-increment: list1; /* Увеличиваем значение счетчика */
+                        content:'0'counter(list1);/* Выводим число */
+                        color: $brandPrimary;
+                        font-size: 16px;
+                        letter-spacing: 0.18em;
+                        color: $grayDarker;
+                        position: absolute;
+                        left: -1px;
+                        top: 2px;
+                        opacity: 0;
+                        transition: opacity 50ms ease-in 800ms;
+                    }
+
+                    a {
+                        font-size: 32px;
+                        color: $grayDarker;
+                        text-decoration: none;
+                        letter-spacing: 0.18em;
+                        transition: opacity 200ms ease-in 100ms, left 800ms ease-in, letter-spacing 800ms ease-in;
+                        position: relative;
+                        left: 0;
+                        font-weight: 900;
+                        letter-spacing: 0.01px;
+
+                        &:before {
+
+                        }
+                    }
+
+                    &.active {
+
+
+                        &:before {
+                            opacity: 1;
+                        }
+
+                        a {
+                            left: 35px;
+                            letter-spacing: 8.4px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto 30px;
+
+        &__left {
+        }
+
+        &__right {
+        }
+
+        & [class$="city"] {
+            margin-bottom: 8px;
+        }
+
+        & [class$="name"] {
+            font-size: 14px;
+            color: $brandInfo;
+            margin-bottom: 2px;
+            letter-spacing: 0.1px;
+        }
+
+        & [class$="phone"],
+        & [class$="mail"] {
+            font-size: 14px;
+            color: $brandPrimary;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        & [class$="email"] {
+            margin-bottom: 8px;
+        }
+    }
+
+    @media (min-width: 600px) {
+
+        &-language {
+            margin-bottom: 35px;
+        }
+
+        &-menu {
+
+            &__nav {
+                padding-left: 44px;
+
+                ol li {
+                    margin-bottom: 49px;
+
+                    a {
+                        font-size: 56px;
+                    }
+                }
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+
+            &__left {
+                padding-left: 41px;
+            }
+
+            &__right {
+                padding-left: 60px;
+            }
+
+            & [class$="city"] {
+                margin-bottom: 22px;
+            }
+
+            & [class$="name"] {
+                font-size: 16px;
+                color: $brandInfo;
+                margin-bottom: 2px;
+                letter-spacing: 0.1px;
+            }
+
+            & [class$="phone"],
+            & [class$="mail"] {
+                font-size: 16px;
+                color: $brandPrimary;
+                display: block;
+                margin-bottom: 6px;
+            }
+
+            & [class$="email"] {
+                margin-bottom: 22px;
+            }
+        }
+    }
+
+    @media (min-width: 960px) {
+
+        &-language {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        top: 30.7%;
+        align-items: flex-end;
+        height: 69%;
+
+        &-menu {
+            width: 48%;
+            height: 100%;
+        }
+
+        &-info {
+            width: 50%;
+            //margin-top: 24%;
+            justify-content: flex-start;
+        }
+    }
+
+    @media (min-width: 1250px) {
+
+        &-menu {
+            margin-left: 0;
+        }
+    }
+}

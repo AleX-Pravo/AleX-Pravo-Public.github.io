@@ -1,0 +1,30 @@
+= '\n'
+//= Footer menu =
+//-=(/assets/css/layout/_footerMenu.scss)=
+.footerMenu
+    -
+        var footerMenu = [
+            {
+                html: 'projects.html',
+                title: 'Projects'
+            },
+            {
+                html: 'services.html',
+                title: 'Services'
+            },
+            {
+                html: 'about.html',
+                title: 'About us'
+            },
+            {
+                html: 'contacts.html',
+                title: 'Contact'
+            }
+        ]
+    ul.footerMenu__list
+
+        each val in footerMenu
+            li.footerMenu__item
+                a.footerMenu__link(href=val.html)= val.title
+//= End Footer menu =
+= '\n'

@@ -1,0 +1,98 @@
+-
+    var tabsContent = [
+        {
+            active: true,
+            img1: '1',
+            img2: '1',
+            img3: '1',
+            img4: '1',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '2',
+            img3: '1',
+            img4: '1',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '1',
+            img3: '2',
+            img4: '1',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '1',
+            img3: '1',
+            img4: '2',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '1',
+            img3: '1',
+            img4: '2',
+            img5: '2',
+            img6: '1'
+        }
+    ]
+
+
+= '\n'
+//= services =
+//- (source/assets/css/module/_services.scss)
+.services
+    .services-tabs
+        .container
+            ul.services-tabs__infoNews
+                each item in tabsInfoNews
+                    if item.active
+                        li.services-tabs__infoNews-inner.active= item.title
+
+                    else
+                        li.services-tabs__infoNews-inner= item.title
+
+            .services-tabs__news
+                each val in tabsContent
+                    if val.active
+                        .services-tabs__content.active
+                            .services-tabs__inner
+                                //proportions and the maximum size of images 380x250
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img1 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img2 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img3 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img4 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img5 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img6 +'.png' alt='')
+
+                    else
+                        .services-tabs__content
+                            .services-tabs__inner
+                                //proportions and the maximum size of images 380x250
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img1 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img2 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img3 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img4 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img5 +'.png' alt='')
+                                a(href="projects.html")
+                                    img(src='data/services/'+ val.img6 +'.png' alt='')
+
+//= End services =
+= '\n'

@@ -1,0 +1,25 @@
+= '\n'
+//= projects-inner__top =
+//- (source/assets/css/module/_projects.scss)
+
+.projects-inner__name Patifon.ua
+    a(href="projects-inner.html") detail
+
+if (imglink)
+    .projects-inner__img
+        a(href='projects-inner.html')
+        img(src='data/projects/' + imgProjects + '.png' alt='')
+else
+    .projects-inner__img
+        img(src='data/projects/' + imgProjects + '.png' alt='')
+
+.projects-inner__mission
+    |internet store
+    br
+    |electronics
+
+if (projectsLine)
+    .projects-inner__line
+
+//= End projects-inner__top =
+= '\n'

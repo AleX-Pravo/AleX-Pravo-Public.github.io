@@ -1,0 +1,278 @@
+.about-views {
+    margin-bottom: 50px;
+
+    &__container {
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .swiper-object {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        order: 1;
+
+        h2 {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 36px;
+            letter-spacing: 0.15em;
+            color: $brandPrimary;
+            margin: 0 0 16px;
+        }
+
+        p {
+            margin: 20px 0 0;
+        }
+    }
+
+    .swiper-container {
+        width: calc(100% + 30px);
+        left: -15px;
+        right: -15px;
+
+        order: 4;
+    }
+
+    .swiper-pagination-progressbar {
+        width: 13%;
+        left: calc(50% - 585px);
+        top: 0;
+        height: 4px;
+    }
+
+    .swiper-pagination-fraction {
+        width: 150px;
+        height: 12px;
+        bottom: auto;
+
+        position: relative;
+        transform: none;
+        text-align: center;
+        left: 2px;
+        order: 2;
+        margin-bottom: 20px;
+
+        .swiper-pagination-current,
+        .swiper-pagination-total{
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.15em;
+            color: $grayDarker;
+            position: absolute;
+        }
+
+        .swiper-pagination-current {
+            left: 0;
+        }
+
+        .swiper-pagination-total {
+            right: 0;
+        }
+
+        .line-pagination {
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            top: 0;
+            bottom: 0;
+            background-color:  rgba(120, 0, 255, 0.1);
+            left: 50%;
+            top: 71%;
+            transform: translate(-50%,-50%);
+        }
+
+        .line-pagination__animation {
+            height: 1px;
+            //animation-name: line__animation;//Название анимации
+            //animation-duration: 5s;//Продолжительность анимации
+            //animation-delay: 0s;// перед воспроизведением анимации
+            //animation-timing-function: step-end;//Временная функция
+            //animation-fill-mode: backwards;//Состояние элемента до и после воспроизведения
+            background-color: $brandPrimary;
+            //animation-iteration-count: infinite;//Свойство определяет, сколько раз проигрывать цикл анимации до её остановки
+
+            animation: line__animation 5s ease-in-out infinite;
+        }
+    }
+
+    .swiper-slide {
+        text-align: center;
+    }
+
+    .swiper-slide-active {
+        position: relative;
+
+        &:before {
+            content: '';
+            background: linear-gradient(317.58deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 15.3%;
+        width: 6px;
+        height: 12px;
+        margin-top: -3px;
+        z-index: 10;
+        cursor: pointer;
+        background-size: 6px 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        position: relative;
+        order: 3;
+        top: -34px;
+    }
+
+    .swiper-button-next {
+        left: calc(50% + 20px);
+        background-image: url(../images/content/swiper-button-next.svg);
+        left: 92px;
+        top: -25px;
+    }
+
+    .swiper-button-prev {
+        left: calc(50% - 20px);
+        background-image: url(../images/content/swiper-button-prev.svg);
+        left: -91px;
+    }
+
+    @media (min-width: 720px) {
+
+        .swiper-object {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 580px;
+        }
+
+        &__text {
+            margin-bottom: 71px;
+            width: 40%;
+            text-align: left;
+            order: 0;
+        }
+
+        .swiper-container {
+            width: 60%;
+            position: absolute;
+            left: auto;
+            order: 0;
+        }
+
+        .swiper-slide {
+            text-align: left;
+        }
+
+        .swiper-pagination-fraction {
+            position: absolute;
+            top: 65%;
+            bottom: auto;
+            left: 20px;
+            transform: none;
+            order: 0;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+
+            top: 66.3%;
+            bottom: auto;
+            order: 0;
+        }
+
+        .swiper-button-next {
+            left: 182px;
+        }
+
+        .swiper-button-prev {
+            left: -1px;
+        }
+    }
+
+    @media (min-width: 840px) {
+
+        .swiper-pagination-fraction {
+            top: 61%;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 62.3%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        &__container {
+            max-width: none;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        &__text {
+            width: (500 / 1920) * 100%;
+            margin-bottom: 71px;
+            margin-left: calc(50% - 585px);
+        }
+
+        .swiper-container {
+            width: (1130 / 1920) * 100%;
+            position: absolute;
+            right: -55px;
+            margin-left: calc(50% - 115px);
+        }
+
+        .swiper-pagination-fraction {
+            left: calc(50% - 553px);
+        }
+
+        .swiper-button-next {
+            left: calc(50% - 391px);
+        }
+
+        .swiper-button-prev {
+            left: calc(50% - 574px);
+        }
+    }
+
+    @media (min-width: 1560px) {
+
+        &__text {
+            width: (370 / 1920) * 100%;
+        }
+    }
+}
+
+@keyframes line__animation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

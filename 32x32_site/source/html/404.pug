@@ -1,0 +1,37 @@
+//- Utility
+include utils/_variable.pug
+
+- pageTitle = 'services-marketing'
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            .header-404
+                include layout/header/logo/_logo.pug
+
+            //= Main =
+            main#main.main
+                .block-404
+                    .topBlock-404
+                        .topBlock-404__title 404
+                        .topBlock-404__title-shadow 404
+
+                    p OOPS!
+                    span We can’t find the page that  you’re looking for :(
+
+                    a.contactForm__button(href="index.html")
+                        i.button__icon(data-content="main page")
+                        span main page
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+        include layout/_footer.pug
+        include layout/_scripts.pug

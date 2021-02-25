@@ -1,0 +1,106 @@
+.services {
+    margin: 0 0 74px;
+
+    &-tabs {
+
+        &__infoNews {
+            list-style: none;
+            position: relative;
+            margin-bottom: 67px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (min-width: 720px) {
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+
+            li.services-tabs__infoNews-inner {
+                position: relative;
+                font-size: 24px;
+                line-height: 48px;
+                color: $brandPrimary;
+                margin-right: 0;
+                cursor: pointer;
+
+                @media screen and (min-width: 720px) {
+                    margin-right: 41px;
+                }
+
+                &:not(.active) {
+                    cursor: pointer;
+                }
+
+                &.active {
+
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+        }
+
+        &__news {
+            position: relative;
+            margin: 0 -7px;
+        }
+
+        &__content {
+            display: none;
+            position: relative;
+            height: 100%;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        &__inner {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-flow: row wrap;
+        }
+
+        a {
+            width: (100 / 1) * 1%;
+            padding: 7px;
+
+            @media screen and (min-width: 380px) {
+                width: (100 / 2) * 1%;
+            }
+
+            @media screen and (min-width: 720px) {
+                width: (100 / 3) * 1%;
+            }
+        }
+    }
+
+    .vertical .tabs__infoNews {
+        float: left;
+        display: block;
+    }
+    .vertical .tabs__infoNews li {
+        float: none;
+    }
+
+    .vertical .tabs__content {
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: 1080px) {
+
+        .tabs {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+// Utility
+@import 'utils/variables';
+@import 'utils/mixin';
+
+
+// Vendor
+
+// Base
+@import 'base/reset';
+@import 'base/fonts';
+
+// Components
+
+// Layout
+@import 'layout/grid';
+@import 'layout/layout'; //all style
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/form';
+
+// header
+@import 'layout/header/language/language';
+@import 'layout/header/primaryMenu/primaryMenu';
+@import 'layout/header/device/device';
+
+// footer
+@import 'layout/footer/footerMenu';
+@import 'layout/footer/footerLogo';
+
+
+// Module
+@import 'module/line';
+@import 'module/requestAnimFrame';
+@import 'module/text';
+
+
+//Page
+//index
+@import 'module/tabs';
+@import 'module/index-succeful';
+
+// services
+@import 'module/servicesMenu';
+@import 'module/topBlock';
+@import 'module/services';
+
+//about-base
+@import 'module/about-base';
+@import 'module/about-views';
+
+//projects-tabs
+@import 'module/projects';
+
+//contact
+@import 'module/contact';
+@import 'module/joinForm';
+
+// 404
+@import 'module/404';

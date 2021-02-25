@@ -1,0 +1,60 @@
+-
+    var contactForm = [
+        {
+            placeholder: 'Name',
+            error: true
+        },
+        {
+            placeholder: 'Email address'
+        }
+    ]
+= '\n'
+//= contact =
+//-source/assets/css/module/_contact.scss
+.contact
+    .container
+        .contact__title Let us know how we can help.
+        .contact__slogan
+            p You can always connect with us at
+            a.phone.color--text(data-content='(0362) 43-46-50' href='tel:+380362434650')
+            p or
+            a.mail.color--text(data-content='contact@32x32.com.ua' href='mailto:contact@32x32.com.ua')
+        ='\n'
+        // = contactForm =
+        //- =(module/_joinForm.scss)=
+        form.contactForm(action='' method='')
+            .contactForm__main
+                .contactForm__container
+                    .contactForm__left
+                        each item in contactForm
+                            if item.error
+                                .form-group.has-error
+                                    input.form-control(type='text' placeholder= item.placeholder)
+                                    .help-block
+                                    a.help__close(href='javascript: void(0);')
+                            else
+                                .form-group
+                                    input.form-control(type='text' placeholder= item.placeholder)
+                                    .help-block
+                                    a.help__close(href='javascript: void(0);')
+                    .contactForm__right
+                        .form-group
+                            input.form-control(type='text' placeholder = 'Phone number')
+                            .help-block
+                            a.help__close(href='javascript: void(0);')
+                        .form-group
+                            input.form-control(type='text' placeholder = 'Company name')
+                            .help-block
+                            a.help__close(href='javascript: void(0);')
+                .contactForm__textarea
+                    .form-group
+                        textarea.form-control(placeholder='Brief, scope, timeline, budget, etc.')
+
+                //если сообщение отправлено добавляем класс active
+                button.contactForm__button.active(type='button')
+                    i.button__icon
+                    span submit
+        // = End contactForm =
+        ='\n'
+//= End contact =
+= '\n'

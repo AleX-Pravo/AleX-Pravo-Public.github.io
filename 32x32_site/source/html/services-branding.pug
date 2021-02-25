@@ -1,0 +1,52 @@
+//- Utility
+include utils/_variable.pug
+
+- pageTitle = 'services-branding'
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/header/fullscreen-menu/_fullscreen-menu.pug
+
+            //= Main =
+            main#main.main
+                include module/_servicesMenu.pug
+                - topBlock__title = 'Branding'
+                - topBlock__titleShadow = true
+                - topBlock__desc = 'At 32x32, we work closely with organisations and help them <br> tell their story effectively'
+                include module/_topBlock.pug
+                -
+                    var tabsInfoNews = [
+                        {
+                            active: true,
+                            title: 'Brand identity'
+                        },
+                        {
+                            title: 'Brand development'
+                        },
+                        {
+                            title: 'Brand guidelines'
+                        },
+                        {
+                            title: 'Art direction'
+                        },
+                        {
+                            title: 'Stationery design'
+                        }
+                    ]
+
+                include module/_services.pug
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+        include layout/_footer.pug
+        include layout/_scripts.pug

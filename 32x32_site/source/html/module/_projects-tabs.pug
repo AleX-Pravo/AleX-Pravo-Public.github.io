@@ -1,0 +1,143 @@
+-
+    var tabsInfoNews = [
+        {
+            title: 'All'
+        },
+        {
+            active: true,
+            title: 'Branding'
+        },
+        {
+            title: 'Sites'
+        },
+        {
+            title: 'E-commersce'
+        },
+        {
+            title: 'Logo'
+        }
+    ]
+
+    var tabsContent = [
+        {
+            active: true,
+            img1: '1',
+            img2: '1',
+            img3: '1',
+            img4: '1',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '2',
+            img3: '1',
+            img4: '1',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '1',
+            img3: '2',
+            img4: '1',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '1',
+            img3: '1',
+            img4: '2',
+            img5: '1',
+            img6: '1'
+        },
+        {
+            img1: '1',
+            img2: '1',
+            img3: '1',
+            img4: '2',
+            img5: '2',
+            img6: '1'
+        }
+    ]
+
+= '\n'
+//= projects-tabs =
+//- (source/assets/css/module/_projects.scss)
+.projects-tabs.horizontal
+    //-.containerTabs
+    .container
+        ul.projects-tabs__infoNews
+            each item in tabsInfoNews
+                if item.active
+                    li.projects-tabs__infoNews-inner.active
+                        a(href='javascript:void(0);')= item.title
+
+                else
+                    li.projects-tabs__infoNews-inner
+                        a(href='javascript:void(0);')= item.title
+
+        .projects-tabs__news
+            each val in tabsContent
+                if val.active
+                    .projects-tabs__content.active
+                        .projects-tabs__inner
+                            //proportions and the maximum size of images 380x250
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img1 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img2 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img3 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img4 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img5 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img6 +'.png' alt='')
+
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img1 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img2 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img3 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img4 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img5 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img6 +'.png' alt='')
+                else
+                    .projects-tabs__content
+                        .projects-tabs__inner
+                            //proportions and the maximum size of images 380x250
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img1 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img2 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img3 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img4 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img5 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img6 +'.png' alt='')
+
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img1 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img2 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img3 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img4 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img5 +'.png' alt='')
+                            a(href="projects.html")
+                                img(src='data/services/'+ val.img6 +'.png' alt='')
+
+//= End projects-tabs =
+= '\n'

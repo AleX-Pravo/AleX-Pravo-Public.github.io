@@ -1,0 +1,14 @@
+{
+    "name": "32x32",
+    "version": "1.0.0",
+    "description": "32x32",
+    "authors": [
+        "ALex Pravo <ss911.varan@gmail.com>"
+    ],
+    "license": "ISC",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}

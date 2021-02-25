@@ -1,0 +1,110 @@
+
+.line,
+.line-just {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color:  rgba(120, 0, 255, 0.1);
+    z-index: -1;
+
+    &__anim {
+      animation-name: line;//Название анимации
+      animation-duration: 2s;//Продолжительность анимации
+      animation-delay: 2s;// перед воспроизведением анимации
+      animation-timing-function: linear;//Временная функция
+      animation-fill-mode: forwards;//Состояние элемента до и после воспроизведения
+      background-color: $brandPrimary;
+    }
+
+    &__text {
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(120, 0, 255, .1);
+        transform: translateX(-50%) rotate(90deg);
+        position: absolute;
+        left: 50%;
+        bottom: 41px;
+        background-color: $base;
+        padding: 0 40px 0 20px;
+        bottom: 56px;
+      animation-name: lineText;//Название анимации
+      animation-duration: 3s;//Продолжительность анимации
+      animation-delay: 5.8s;// перед воспроизведением анимации
+      animation-timing-function: linear;//Временная функция
+      animation-direction: alternate;
+      animation-fill-mode: backward;//Состояние элемента до и после воспроизведения
+      animation-iteration-count: infinite;
+        //(data-content='Scroll')
+        // &:before {
+        //     content: attr(data-content);
+        //     position: absolute;
+        //     top: 0;
+        //     font-weight: 800;
+        //     font-size: 14px;
+        //     letter-spacing: 0.18em;
+        //     text-transform: uppercase;
+        //     color: $brandPrimary;
+        //     top: 20px;
+        //     display: none;
+        // }
+    }
+}
+
+.line-just {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .line-just {
+        display: block;
+        z-index: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .line-just {
+        z-index: -1;
+    }
+}
+
+//-https://codepen.io/Rudchyk/pen/DgxKm
+
+#example {
+    display:none;
+}
+
+#example .new { opacity: 0.1; }
+#example .new { opacity: 0.1; color: $brandPrimary; transition: opacity .2s linear;}
+
+#example .div_opacity {
+  //transition: opacity .2s linear 5.5s;
+  opacity: 1;
+  color: $brandPrimary;
+}
+
+@keyframes lineText {
+    from,
+    to {
+        //transform: translateX(-50%) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px) rotate(90deg);
+    }
+}
+
+@keyframes line {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}

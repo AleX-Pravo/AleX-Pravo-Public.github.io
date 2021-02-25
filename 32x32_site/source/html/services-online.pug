@@ -1,0 +1,58 @@
+//- Utility
+include utils/_variable.pug
+
+- pageTitle = 'services-online'
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/header/fullscreen-menu/_fullscreen-menu.pug
+
+            //= Main =
+            main#main.main
+                include module/_servicesMenu.pug
+                - topBlock__title = 'Online'
+                - topBlock__titleShadow = true
+                - topBlock__desc = 'We take a user centric focus,creating websites that are stunning <br> and successful.'
+                include module/_topBlock.pug
+                -
+                    var tabsInfoNews = [
+                        {
+                            active: true,
+                            title: 'Strategic consultation'
+                        },
+                        {
+                            title: 'User Experience (UX)'
+                        },
+                        {
+                            title: 'Responsive '
+                        },
+                        {
+                            title: 'Web development'
+                        },
+                        {
+                            title: 'Frontend development'
+                        },
+                        {
+                            title: 'Backend development'
+                        },
+                        {
+                            title: 'Ecommerce'
+                        }
+                    ]
+
+                include module/_services.pug
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+        include layout/_footer.pug
+        include layout/_scripts.pug

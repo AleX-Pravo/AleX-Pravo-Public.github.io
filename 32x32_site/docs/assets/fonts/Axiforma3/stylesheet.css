@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-ExtraBold.woff2') format('woff2'),
+        url('Axiforma-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Medium.woff2') format('woff2'),
+        url('Axiforma-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-LightItalic.woff2') format('woff2'),
+        url('Axiforma-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Heavy.woff2') format('woff2'),
+        url('Axiforma-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-MediumItalic.woff2') format('woff2'),
+        url('Axiforma-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-ExtraBoldItalic.woff2') format('woff2'),
+        url('Axiforma-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-SemiBoldItalic.woff2') format('woff2'),
+        url('Axiforma-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-BlackItalic.woff2') format('woff2'),
+        url('Axiforma-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Black.woff2') format('woff2'),
+        url('Axiforma-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Italic.woff2') format('woff2'),
+        url('Axiforma-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-BoldItalic.woff2') format('woff2'),
+        url('Axiforma-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Thin.woff2') format('woff2'),
+        url('Axiforma-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Bold.woff2') format('woff2'),
+        url('Axiforma-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-HeavyItalic.woff2') format('woff2'),
+        url('Axiforma-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Light.woff2') format('woff2'),
+        url('Axiforma-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Book.woff2') format('woff2'),
+        url('Axiforma-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-SemiBold.woff2') format('woff2'),
+        url('Axiforma-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-ThinItalic.woff2') format('woff2'),
+        url('Axiforma-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-BookItalic.woff2') format('woff2'),
+        url('Axiforma-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Regular.woff2') format('woff2'),
+        url('Axiforma-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

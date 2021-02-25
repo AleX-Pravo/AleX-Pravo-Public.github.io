@@ -1,0 +1,47 @@
+.requestAnimFrame {
+    position: relative;
+    height: 100vh;
+    z-index: -1;
+
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+        color: $grayDarker;
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        //'top: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 60px;
+        width: 100%;
+
+        @media (min-width: 720px) {
+            font-size: 64px;
+            line-height: 96px;
+        }
+    }
+
+    #c {
+        position: relative;
+        //top: -150px;
+        //top: -30px;
+        z-index: -1;
+        display: none;
+        display: block;
+    }
+
+    #particles,
+    #container-canvas {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+
+        #c {
+            display: block;
+        }
+    }
+}

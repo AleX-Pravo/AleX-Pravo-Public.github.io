@@ -1,0 +1,33 @@
+-
+    var servicesMenu = [
+        {
+            name: 'services-branding',
+            href: 'services-branding.html',
+            title: 'Branding'
+        },
+        {
+            name: 'services-marketing',
+            href: 'services-marketing.html',
+            title: 'Marketing'
+        },
+        {
+            name: 'services-online',
+            href: 'services-online.html',
+            title: 'Online'
+        }
+    ]
+
+= '\n'
+//= servicesMenu =
+//- (source/assets/css/module/_servicesMenu.scss)
+ul.servicesMenu
+    each item in servicesMenu
+        if pageTitle == item.name
+            li.servicesMenu-inner.active
+                a(href= item.href)= item.title
+
+        else
+            li.servicesMenu-inner
+                a(href= item.href)= item.title
+//= End servicesMenu =
+= '\n'
