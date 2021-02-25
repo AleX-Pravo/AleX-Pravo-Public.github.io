@@ -1,0 +1,183 @@
+.dealer {
+    margin: 25px auto 60px;
+
+    &__wrapper {
+        max-width: 870px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 30px;
+        width: 100%;
+    }
+
+    &__fond {
+        padding: 15px 10px 40px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: rgba(129, 129, 129, 0.35);
+            filter: blur(10px);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &Form {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+
+        &__title {
+            font-family: $um;
+            margin: 0 0 20px;
+            text-align: center;
+            font-size: 17px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+
+        &__main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 485px;
+            width: 100%;
+            margin: auto;
+            align-items: center;
+        }
+
+        &__button {
+            cursor: pointer;
+            border: 1px solid #FF4A4A;
+            font-family: $um;
+            font-size: 10px;
+            line-height: 24px;
+            color: #FFFFFF;
+            width: 150px;
+            height: 30px;
+            -webkit-background: #FF4A4A;
+            -khtml-background: #FF4A4A;
+            -moz-background: #FF4A4A;
+            -ms-background: #FF4A4A;
+            -o-background: #FF4A4A;
+            background: #fb5e5e;
+            background: #FF4A4A;
+            border-radius: 6px;
+            transition: .3s all;
+            text-align: center;
+
+            &:hover {
+                -webkit-background: #fb5e5e;
+                -khtml-background: #fb5e5e;
+                -moz-background: #fb5e5e;
+                -ms-background: #fb5e5e;
+                -o-background: #fb5e5e;
+                background: #fb5e5e;
+                color: #FFFFFF;
+            }
+        }
+
+        .form {
+            &-group {
+                position: relative;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            &-control {
+                background: transparent;
+                padding: 12px 17px;
+                outline: 0;
+                width: 100%;
+                border: 1px solid #FFFFFF;
+                border-radius: 8px;
+                font-family: $gm;
+                font-size: 15px;
+                line-height: 24px;
+                color: #fff;
+
+                &:focus {
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        textarea {
+            &.form {
+                &-control {
+                    //height: 120px;
+                    width: 100%;
+                    resize: none;
+                    padding: 16px 16px 10px;
+                    margin: 0;
+                    height: 190px;
+                }
+            }
+        }
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #fff;
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+        margin: 60px auto;
+
+        &__fond {
+            padding: 55px 30px;
+
+            &:after {
+                background: rgba(129, 129, 129, 0.35);
+                box-shadow: 2px 6px 24px 20px rgba(0, 0, 0, 0.2);
+                filter: none;
+            }
+        }
+
+        &Form {
+
+            &__title {
+                margin: 0 0 30px;
+                font-size: 35px;
+                line-height: 40px;
+            }
+
+            &__main {
+                align-items: flex-start;
+            }
+
+            &__button {
+                font-size: 20px;
+                line-height: 54px;
+                width: 230px;
+                height: 60px;
+            }
+
+            .form {
+                &-group {
+                    margin-bottom: 20px;
+                }
+
+                &-control {
+                    padding: 17px 25px;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+
+            textarea {
+                &.form {
+                    &-control {
+                        padding: 16px 16px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+= '\n'
+//= Mobile menu =
+//- (source/scss/module/_mobile-menu.scss)
+.mobile-menu.hide-screen-l-min
+    #mobile-drop.mobile-menu__drop
+        .mobile-menu__wrapper
+            a.mobile-menu__close.close-aside(href='javascript:void(0);') &times;
+            .mobile-menu__content
+                .mobile-menu__logo
+                    img(src="images/logo.svg" alt="logo")
+                .mobile-menu__primary-menu
+                    include ../layout/_navigation.pug
+
+//= End mobile menu =
+= '\n'

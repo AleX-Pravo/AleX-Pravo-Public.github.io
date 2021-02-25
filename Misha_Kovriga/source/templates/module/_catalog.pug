@@ -1,0 +1,16 @@
+= '\n'
+//= product =
+//- (source/assets/style/modules/_catalog.scss)
+//- (source/scss/module/_catalog.scss)
+.catalog
+    .catalog__wrapper
+        .catalog__inner
+            each item in Сatalog
+                .catalog__info
+                    .catalog__img
+                        //proportions and the maximum size of images 360x230
+                        img(src='data/catalog/'+ item.img +'.png' alt="logo")
+                    a.catalog__block(href='products.html')
+                        .catalog__text= item.text
+//= End product =
+= '\n'

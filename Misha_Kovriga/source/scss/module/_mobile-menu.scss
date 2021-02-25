@@ -1,0 +1,148 @@
+.mobile-menu {
+    transition: top .3s ease-out;
+    position: relative;
+    right: 0;
+    order: 2;
+    margin-bottom: 27px;
+
+    &__button {
+        position: relative;
+        display: block;
+        width: 30px;
+        padding: 8px 0 10px;
+        height: 19px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            right: 0;
+            left: 0;
+            display: block;
+            height: 2px;
+            content: '';
+            background: $base;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+
+        .button-line {
+            position: absolute;
+            display: block;
+            height: 2px;
+            background: $base;
+            left: 0;
+            right: 0;
+        }
+    }
+
+
+    &__drop {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: -320px;
+        width: 320px;
+        height: 100%;
+        transition: left .3s ease-out;
+        background: #353738;
+        overflow-y: auto;
+
+        &.move {
+            left: 0;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        text-align: center;
+        font-size: 50px;
+        text-decoration: none;
+        line-height: 30px;
+    }
+
+    &__wrapper {
+        height: 100%;
+        position: relative;
+        padding: 49px 0 0 0;
+    }
+
+    &__content {
+        position: relative;
+        height: 100%;
+    }
+
+    &__logo {
+        width: 118px;
+        margin: 0 auto 28px;
+    }
+
+    &__primary-menu {
+        margin-bottom: 30px;
+        padding: 0 15px 0 42px;
+        border: 1px solid rgba(255, 255, 255, 0.27);
+        border-left: none;
+        border-right: none;
+
+        .navigation {
+            display: block;
+            margin-top: 32px;
+            margin-bottom: 31px;
+
+            ul {
+                display: block;
+
+                li {
+                    margin: 0 0 32px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        font-family: $msb;
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        text-decoration: none;
+                        transition: .3s all;
+                        line-height: 15px;
+
+                        &:hover {
+                            color: #FF4A4A;
+                            text-decoration: none;
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            color: #FF4A4A;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //600px
+    @media (min-width: 600px) {
+        order: initial;
+        margin: inherit;
+    }
+
+    ////768px
+    //@media (min-width: $screen_M_Min) {
+    //    order: initial;
+    //}
+}

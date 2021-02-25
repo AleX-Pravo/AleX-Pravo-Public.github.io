@@ -1,0 +1,56 @@
+//- Utility
+
+include utils/_variable.pug
+
+-
+    pageTitle = 'products'
+    products = true
+    nameTitle = 'Варені ковбаси'
+    //- use if necessary
+
+    // tab = true // init tab.js
+    // rating = true // init rating.js
+
+    // magnificPopup = true // init magnificPopup styles
+    // magnificPopupInline = true // init magnificPopup
+    // magnificPopupGallery = true // init magnificPopup for gallery
+    // ionRangeSlider = true // init ionRangeSlider
+    // select2 = true // init select2
+    // slick = true
+
+    //for breadcrumbs
+    breadcrumbItems = ['Main', 'Щось', 'Щось конкретно']
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header.pug
+
+            //= Main =
+            main#main.main
+                .layout__box
+
+                    //- (source/scss/layout/_layout.scss)
+                    h1.nameTitle !{nameTitle}
+
+                    section
+                        include module/_products.pug
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include module/_mobile-menu.pug
+        include module/_cookies.pug
+
+        include layout/_sprite.pug
+        include layout/_scripts.pug

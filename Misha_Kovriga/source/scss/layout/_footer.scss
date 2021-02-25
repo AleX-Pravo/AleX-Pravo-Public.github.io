@@ -1,0 +1,38 @@
+.footer {
+    position: relative;
+    border-top: 2px solid #FF8383;
+
+    &__wrapper {
+        max-width: 1550px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 30px;
+        width: 100%;
+    }
+
+    &__cover {
+        margin: 3px 0 5px;
+
+        span {
+            font-family: $msb;
+            color: #FFFFFF;
+            font-size: 9px;
+            line-height: 11px;
+        }
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+
+        &__cover {
+            margin: 20px 0 15px;
+
+            span {
+                font-family: $msb;
+                font-size: 16px;
+                line-height: 20px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

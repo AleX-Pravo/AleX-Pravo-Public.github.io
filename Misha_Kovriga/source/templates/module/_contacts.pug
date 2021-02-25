@@ -1,0 +1,41 @@
+= '\n'
+//= contacts =
+//- (source/assets/style/modules/_contacts.scss)
+//- (source/scss/module/_contacts.scss)
+.contacts
+    .contacts__wrapper
+        .contacts__fond
+            .contacts__inner
+                .contacts__info
+                    ul.contacts__list
+                        li.contacts__list-item
+                            .contacts__list-item__icon
+                                +icon('icon-address')
+                            .contacts__list-item__inner
+                                p
+                                    |35400 , Рівненська обл., Гощанський р-н'
+                                    br
+                                    |смт. Гоща, вул. Незалежності 100
+                        li.contacts__list-item
+                            .contacts__list-item__icon
+                                +icon('icon-phonec')
+                            .contacts__list-item__inner
+                                a(href='tel:+380962547381') +38 (096) 254-73-81
+                        li.contacts__list-item
+                            .contacts__list-item__icon
+                                +icon('icon-main')
+                            .contacts__list-item__inner
+                                a(href='mailto:info@gmk.com.ua') info@gmk.com.ua
+                        li.contacts__list-item
+                            .contacts__list-item__icon
+                                +icon('icon-facebook')
+                            .contacts__list-item__inner
+                                a(href='https://www.facebook.com/tipoverivne') info@gmk.com.ua
+                    a.contacts__button(href='dealer.html') Стати дилером
+
+                .contacts__map
+                    .map#map
+
+//= End contacts =
+= '\n'
+

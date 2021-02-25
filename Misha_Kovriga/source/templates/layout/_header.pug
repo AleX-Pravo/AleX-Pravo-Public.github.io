@@ -1,0 +1,41 @@
+= '\n'
+//= Header =
+- header = true
+header.header
+
+    = '\n'
+    //= Mobile menu => button =
+    .mobile-menu.hide-screen-l-min
+        a.mobile-menu__button.call-aside(href='javascript:void(0);' data-trigger='mobile-drop')
+            i.button-line
+    //= End mobile menu => button =
+    = '\n'
+
+    .header__logo
+        include ../module/_logo.pug
+        hr
+
+    .header__wrapper
+        .header__info
+
+            .header__info-phone
+                p
+                    +icon('icon-phone')
+                    span +38 (096)
+                        i 254-73-81
+
+                a.hide-screen-l-min(href='tel:+380962547381')
+                    +icon('icon-phone')
+                    span +38 (096)
+                        i 254-73-81
+
+            .header__info-address
+                p смт. Гоща, вул. Незалежності 100
+
+    .header__wrapper.hide-screen-l-max
+        .header__menu
+            include _navigation.pug
+
+//= End header =
+= '\n'
+- header = false

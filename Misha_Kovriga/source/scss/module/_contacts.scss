@@ -1,0 +1,314 @@
+.contacts {
+    margin: 30px auto 50px;
+
+    &__wrapper {
+        max-width: 1695px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 30px;
+        width: 100%;
+    }
+
+    &__fond {
+        padding: 30px 10px 10px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: rgba(129, 129, 129, 0.5);
+            filter: blur(6px);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__info {
+        order: 2;
+        z-index: 1;
+    }
+
+    &__list {
+        order: 2;
+        max-width: 750px;
+        width: 100%;
+        padding: 20px 12px 0 12px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .icon-address {
+                width: 15px;
+            }
+
+            .icon-phonec {
+                width: 18px;
+            }
+
+            .icon-main {
+                width: 22px;
+            }
+
+            .icon-facebook {
+                width: 11px;
+            }
+
+            &__inner {
+                padding-left: 10px;
+
+                p, a {
+                    font-family: $ur;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #FFFFFF;
+                }
+
+                a {
+                    text-decoration: none;
+                    transition: .3s all;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        border: 1px solid #FF4A4A;
+        font-family: $um;
+        font-size: 10px;
+        line-height: 24px;
+        color: #FFFFFF;
+        width: 150px;
+        height: 30px;
+        background: #FF4A4A;
+        border-radius: 6px;
+        transition: .3s all;
+        text-align: center;
+        display: block;
+        margin: 15px auto 10px;
+        text-decoration: none;
+
+        &:hover {
+            background: #fb5e5e;
+            color: #FFFFFF;
+        }
+    }
+
+    &__map {
+        order: 1;
+        width: 100%;
+
+        .map {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            z-index: 1;
+        }
+    }
+
+    //600px
+    @media (min-width: 480px) {
+
+        &__inner {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        &__map {
+            .map {
+                height: 300px;
+            }
+        }
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+        margin: 60px auto 70px;
+
+        &__fond {
+            padding: 30px 32px 45px;
+
+            &:after {
+                background: rgba(129, 129, 129, 0.35);
+                box-shadow: 2px 6px 24px 20px rgba(0, 0, 0, 0.2);
+                filter: none;
+            }
+        }
+
+        &__inner {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            max-width: none;
+        }
+
+        &__info {
+            order: 1;
+            width: 45%;
+        }
+
+        &__list {
+            order: 2;
+            max-width: 750px;
+            width: 100%;
+            padding: 20px 10px 0 0;
+
+            &-item {
+                margin-bottom: 25px;
+
+                .icon-address,
+                .icon-phonec{
+                    width: 34px;
+                    width: 100%;
+                }
+
+                .icon-main {
+                    width: 37px;
+                    width: 100%;
+                }
+
+                .icon-facebook {
+                    width: 21px;
+                    width: 100%;
+                }
+
+                &__icon {
+                    width: 30px;
+                }
+
+                &__inner {
+                    padding-left: 20px;
+
+                    p, a {
+                        font-family: $ur;
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        transition: .3s all;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__button {
+            font-size: 15px;
+            line-height: 40px;
+            width: 200px;
+            height: 45px;
+            margin: 30px 0;
+        }
+
+        &__map {
+            order: 2;
+            width: 55%;
+
+            .map {
+                height: 300px;
+            }
+        }
+    }
+
+    //1080px
+    @media (min-width: $screen_L_Min) {
+
+        &__fond {
+            padding: 60px 50px 70px 50px;
+        }
+
+        &__inner {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+        &__info {
+            width: auto;
+        }
+
+        &__list {
+            order: 1;
+            padding: 20px 50px 0 0;
+
+            &-item {
+                margin-bottom: 47px;
+
+                &__icon {
+                    width: 37px;
+                }
+
+                &__inner {
+                    padding-left: 40px;
+
+                    p, a {
+                        font-size: 20px;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+
+        &__button {
+            background: #FF4A4A;
+            border-radius: 10px;
+            margin: 72px 0 0;
+            font-size: 20px;
+            line-height: 54px;
+            width: 230px;
+            height: 60px;
+        }
+
+        &__map {
+            max-width: 760px;
+            width: 100%;
+
+            .map {
+                height: 390px;
+            }
+        }
+    }
+
+    //1440px
+    @media (min-width: $screen_XXL_Min) {
+
+        &__fond {
+            padding: 60px 50px 70px 180px;
+        }
+
+        &__list {
+
+            &-item {
+                &__inner {
+                    padding-left: 70px;
+                }
+            }
+        }
+    }
+}
+

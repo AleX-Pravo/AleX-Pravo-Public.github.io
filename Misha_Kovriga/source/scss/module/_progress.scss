@@ -1,0 +1,17 @@
+progress {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1500px; // $gridMaxWidth - $gridGutterWidth
+    height: 2px;
+    background: $base;
+    
+
+    &::-webkit-progress-bar {
+        background: $base;
+    }
+
+    &::-webkit-progress-value {
+        background: $brandPrimary;
+    }
+}

@@ -1,0 +1,58 @@
+/* skeleton's structure for tab
+
+// delete after use
+
+.tab
+    .tab-menu
+        ul.tab-list
+            li.tab-item
+                a.tab-link(href='#one')
+            li.tab-item
+                a.tab-link(href='#two')
+            li.tab-item
+                a.tab-link(href='#three')
+    .tab-content
+        #one.tab-box
+            //-content
+        #two.tab-box
+            //-content
+        #three.tab-box
+            //-content
+*/
+
+.tab {
+    position: relative;
+
+    &-menu {
+        position: relative;
+    }
+
+    &-list {
+        position: relative;
+        display: flex;
+    }
+
+    &-item {
+        position: relative;
+
+        &.active {
+            color: $brandPrimary;
+        }
+    }
+
+    &-link {
+        color: inherit;
+    }
+
+    &-content {
+        position: relative;
+    }
+
+    &-box {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

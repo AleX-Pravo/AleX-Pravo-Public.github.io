@@ -1,0 +1,232 @@
+.slick {
+    &-slider {
+        position: relative;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        outline: none;
+
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+
+        a {
+            outline: none;
+        }
+    }
+
+    &-list {
+        position: relative;
+        overflow: hidden;
+        height: inherit;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.dragging {
+            cursor: hand;
+        }
+    }
+
+    &-slider {
+        .slick {
+            &-track,
+            &-list {
+                transform: translate3d(0, 0, 0);
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: inherit;
+        outline: none;
+    }
+
+    &-loading {
+        .slick {
+            &-track {
+                visibility: hidden;
+            }
+
+            &-slide {
+                visibility: hidden;
+            }
+        }
+    }
+
+    &-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+        outline: none;
+
+        &.slick {
+            &-loading {
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        &.dragging {
+            img {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &-initialized {
+        .slick {
+            &-slide {
+                display: block;
+            }
+        }
+    }
+
+    &-vertical {
+        .slick {
+            &-slide {
+                display: block;
+                height: auto;
+            }
+        }
+    }
+
+    &-prev {
+        left: 15px;
+
+        &:before {
+            background-position: 0 0;
+        }
+    }
+
+    &-next {
+        right: 15px;
+
+        &:before {
+            background-position: -25px 0;
+        }
+    }
+
+    &-dots {
+        position: absolute;
+        z-index: 1;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 15px;
+        text-align: left;
+
+        li {
+            display: inline-block;
+            margin: 0 15px 0 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.slick {
+                &-active {
+                    button {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            width: 12px;
+            height: 12px;
+            padding: 0;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            outline: none;
+            background: transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .5s linear;
+            text-indent: -200em;
+            border-radius: 50%;
+
+            &:hover {
+                transition: .5s all;
+                border: 3px solid rgba(255, 255, 255, 1);
+
+                &:before {
+                    background: rgba(255, 255, 255, 1);
+                }
+            }
+
+            &:before {
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                width: 15px;
+                height: 15px;
+                margin: 0;
+                content: '';
+                opacity: 0;
+                background: rgba(255, 255, 255, .6);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+
+        &-dots {
+            bottom: 20px;
+            height: 23px;
+
+            li {
+                margin: 0 40px 0 0;
+            }
+
+            button {
+                width: 23px;
+                height: 23px;
+                border: 3px solid rgba(255, 255, 255, 0.5);
+
+                &:before {
+                    top: -3px;
+                    left: -3px;
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+
+    //1080px
+    @media (min-width: $screen_L_Min) {
+
+        &-dots {
+            bottom: 30px;
+        }
+    }
+
+    //1200px
+    @media (min-width: $screen_XL_Min) {
+
+        &-dots {
+            bottom: 40px;
+        }
+    }
+
+    //1440px
+    @media (min-width: $screen_XXL_Min) {
+
+        &-dots {
+            bottom: 65px;
+        }
+    }
+}
