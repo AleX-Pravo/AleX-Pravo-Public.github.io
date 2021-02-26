@@ -5,8 +5,9 @@ You can use the [editor on GitHub](https://github.com/AleX-Pravo/AleX-Pravo.gith
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
-[32x32](https://alex-pravo.github.io/32x32_site/)
-[Misha Kovriga](https://alex-pravo.github.io/sn/)
+###[32x32](https://alex-pravo.github.io/32x32_site/)
+###[Misha Kovriga](https://alex-pravo.github.io/sn/)
+
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
