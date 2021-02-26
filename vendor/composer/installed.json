@@ -1,0 +1,321 @@
+[
+    {
+        "name": "bower-asset/ion.rangeslider",
+        "version": "2.2.0",
+        "version_normalized": "2.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/IonDen/ion.rangeSlider.git",
+            "reference": "4bb522d3d28aedaaf035e3daa0f2f46850b2242c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/IonDen/ion.rangeSlider/zipball/4bb522d3d28aedaaf035e3daa0f2f46850b2242c",
+            "reference": "4bb522d3d28aedaaf035e3daa0f2f46850b2242c",
+            "shasum": null
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.8"
+        },
+        "type": "bower-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery",
+        "version": "3.4.1",
+        "version_normalized": "3.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery-dist.git",
+            "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/15bc73803f76bc53b654b9fdbbbc096f56d7c03d",
+            "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d",
+            "shasum": null
+        },
+        "type": "bower-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "bower-asset/magnific-popup",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:dimsemenov/Magnific-Popup.git",
+            "reference": "6b7a8088783cbce01034414c1fd2d8e1889093ae"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dimsemenov/Magnific-Popup/zipball/6b7a8088783cbce01034414c1fd2d8e1889093ae",
+            "reference": "6b7a8088783cbce01034414c1fd2d8e1889093ae",
+            "shasum": null
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.8.0"
+        },
+        "type": "bower-asset",
+        "installation-source": "dist"
+    },
+    {
+        "name": "bower-asset/perfect-scrollbar",
+        "version": "0.8.1",
+        "version_normalized": "0.8.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/utatti/perfect-scrollbar-bower.git",
+            "reference": "b0a26373855b3d31ce5bd9904e2ba4d9a24ebf52"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/utatti/perfect-scrollbar-bower/zipball/b0a26373855b3d31ce5bd9904e2ba4d9a24ebf52",
+            "reference": "b0a26373855b3d31ce5bd9904e2ba4d9a24ebf52",
+            "shasum": null
+        },
+        "type": "bower-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "bower-asset/select2",
+        "version": "4.0.5",
+        "version_normalized": "4.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:ivaynberg/select2.git",
+            "reference": "ebf10c93db7d6d7a0d1330119d4c6f32cbd231d7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ivaynberg/select2/zipball/ebf10c93db7d6d7a0d1330119d4c6f32cbd231d7",
+            "reference": "ebf10c93db7d6d7a0d1330119d4c6f32cbd231d7",
+            "shasum": null
+        },
+        "type": "bower-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "bower-asset/slick-carousel",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:kenwheeler/slick.git",
+            "reference": "a2aa3fec335c50aceb58f6ef6d22df8e5f3238e1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kenwheeler/slick/zipball/a2aa3fec335c50aceb58f6ef6d22df8e5f3238e1",
+            "reference": "a2aa3fec335c50aceb58f6ef6d22df8e5f3238e1",
+            "shasum": null
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.7"
+        },
+        "type": "bower-asset",
+        "installation-source": "source",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "bower-asset/swiper",
+        "version": "v4.5.0",
+        "version_normalized": "4.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nolimits4web/swiper.git",
+            "reference": "1c4dfa3b08727f7febd9238980d8249d89202702"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nolimits4web/swiper/zipball/1c4dfa3b08727f7febd9238980d8249d89202702",
+            "reference": "1c4dfa3b08727f7febd9238980d8249d89202702",
+            "shasum": null
+        },
+        "type": "bower-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "composer/installers",
+        "version": "v1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/installers.git",
+            "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+            "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0"
+        },
+        "replace": {
+            "roundcube/plugin-installer": "*",
+            "shama/baton": "*"
+        },
+        "require-dev": {
+            "composer/composer": "1.0.*@dev",
+            "phpunit/phpunit": "^4.8.36"
+        },
+        "time": "2018-08-27T06:10:37+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "Composer\\Installers\\Plugin",
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Composer\\Installers\\": "src/Composer/Installers"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Robinson Young",
+                "email": "kyle@dontkry.com",
+                "homepage": "https://github.com/shama"
+            }
+        ],
+        "description": "A multi-framework Composer library installer",
+        "homepage": "https://composer.github.io/installers/",
+        "keywords": [
+            "Craft",
+            "Dolibarr",
+            "Eliasis",
+            "Hurad",
+            "ImageCMS",
+            "Kanboard",
+            "Lan Management System",
+            "MODX Evo",
+            "Mautic",
+            "Maya",
+            "OXID",
+            "Plentymarkets",
+            "Porto",
+            "RadPHP",
+            "SMF",
+            "Thelia",
+            "WolfCMS",
+            "agl",
+            "aimeos",
+            "annotatecms",
+            "attogram",
+            "bitrix",
+            "cakephp",
+            "chef",
+            "cockpit",
+            "codeigniter",
+            "concrete5",
+            "croogo",
+            "dokuwiki",
+            "drupal",
+            "eZ Platform",
+            "elgg",
+            "expressionengine",
+            "fuelphp",
+            "grav",
+            "installer",
+            "itop",
+            "joomla",
+            "kohana",
+            "laravel",
+            "lavalite",
+            "lithium",
+            "magento",
+            "majima",
+            "mako",
+            "mediawiki",
+            "modulework",
+            "modx",
+            "moodle",
+            "osclass",
+            "phpbb",
+            "piwik",
+            "ppi",
+            "puppet",
+            "pxcms",
+            "reindex",
+            "roundcube",
+            "shopware",
+            "silverstripe",
+            "sydes",
+            "symfony",
+            "typo3",
+            "wordpress",
+            "yawik",
+            "zend",
+            "zikula"
+        ]
+    },
+    {
+        "name": "oomphinc/composer-installers-extender",
+        "version": "v1.1.2",
+        "version_normalized": "1.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/oomphinc/composer-installers-extender.git",
+            "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
+            "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0",
+            "composer/installers": "^1.0"
+        },
+        "time": "2017-03-31T16:57:39+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "OomphInc\\ComposerInstallersExtender\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Stephen Beemsterboer",
+                "email": "stephen@oomphinc.com",
+                "homepage": "https://github.com/balbuf"
+            }
+        ],
+        "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
+        "homepage": "http://www.oomphinc.com/"
+    }
+]
