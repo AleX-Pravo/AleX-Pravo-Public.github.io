@@ -1,0 +1,57 @@
+.payment {
+    margin: 30px -15px 47px;
+
+    @include clearfix;
+
+    &__item {
+        margin-bottom: 30px;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    &__picture {
+        min-height: 51px;
+        margin-bottom: 13px;
+    }
+
+    &__title {
+        font-size: $fontSizeLarge;
+        font-weight: 700;
+        line-height: (26px / $fontSizeLarge);
+        color: $gray;
+    }
+
+    &__text {
+        font-size: $fontSizeBase;
+        line-height: (24px / $fontSizeBase);
+        color: $grayMiddle;
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__item {
+            float: left;
+            width: 50%;
+        }
+
+        &__title {
+            font-size: $fontSizeH3;
+            line-height: (26px / $fontSizeH3);
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__item {
+            width: 25%;
+            margin-bottom: 0;
+        }
+
+        &__text {
+            font-size: $fontSizeH4;
+        }
+
+        &__title {
+            font-size: $fontSizeH2;
+            line-height: (26px / $fontSizeH2);
+        }
+    }
+}

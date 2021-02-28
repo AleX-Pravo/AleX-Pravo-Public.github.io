@@ -1,0 +1,17 @@
+= '\n'
+//= Footer =
+footer#footer.footer
+    .container
+        .footer__part.hide-sm-max
+            +footerMenu('hide-sm-max')
+            +footerSocnet('hide-sm-max')
+            include footer/_cards.pug
+
+        .footer__part
+            include footer/_phone.pug
+            include footer/_copyright.pug
+            include footer/_32x32.pug
+    //-кнопка вверх
+    include footer/_up.pug
+
+//= End footer =

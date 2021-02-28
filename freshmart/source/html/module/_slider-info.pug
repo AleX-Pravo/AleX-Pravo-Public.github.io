@@ -1,0 +1,17 @@
+= '\n'
+//= Slider-info =
+- var modifier = (sliderInfoModifier) ? 'slider-info--' + sliderInfoModifier : ''
+.slider-info(class= modifier)
+    .slider-info__list
+        a.slider-info__item(href='#')
+            img.slider-info__image(src='data/sliderinfo/1.png' alt='')
+        a.slider-info__item(href='#')
+            img.slider-info__image(src='data/sliderinfo/1.png' alt='')
+        a.slider-info__item(href='#')
+            img.slider-info__image(src='data/sliderinfo/1.png' alt='')
+
+    .bx__pager
+        - for (var i = 0; i < 3; i++)
+            a.bx__pager-item(href='#' data-slide-index=i)
+//= End slider-info =
+= '\n'

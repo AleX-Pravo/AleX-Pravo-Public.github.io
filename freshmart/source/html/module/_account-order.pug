@@ -1,0 +1,71 @@
+-
+    var accountUserinfoList = [
+        {
+            id: '№ 99582174',
+            date: '28.03.2017',
+            time: '12:30',
+            status: 'Доставлено',
+            mod: 'delivered',
+            subitem: [{
+                    image: 'order-1',
+                    title: 'Капуста белокочанная',
+                    price: '5.50 грн',
+                    weight: '25 кг',
+                    total: '1 500 грн'
+                },
+                {
+                    image: 'order-2',
+                    title: 'Масло «Golden Kings of Ukraine» льняное 100 мл',
+                    price: '34 грн',
+                    weight: '100 мл',
+                    total: '34 грн'
+                }
+
+            ]
+        },
+        {
+            id: '№ 99582174',
+            date: '28.03.2017',
+            time: '12:30',
+            status: 'Не доставлено',
+            mod: 'undelivered'
+        },
+        {
+            id: '№ 99582174',
+            date: '28.03.2017',
+            time: '12:30',
+            status: 'Отменено',
+            mod: 'canceled'
+        }
+    ]
+= '\n'
+//= Account order =
+.account-order#account_order
+    each item in accountUserinfoList
+        .account-order__item
+            .account-order__header
+                .account-order__id= item.id
+                .account-order__datetime
+                    span.account-order__date= item.date
+                    span.account-order__time= item.time
+                .account-order__type
+                    - for(var i = 0; i < 5; i++)
+                        img.account-order__type-image(src='data/order/type-1.png' alt='')
+                    span.account-order__type-text еще 10 товаров
+                .account-order__status(class='account-order__status--' + item.mod)= item.status
+
+            if (item.subitem)
+                .account-order__content(style='display: none')
+                    each subitem in item.subitem
+                        .account-order__content-item
+                            .account-order__content-left
+                                a.account-order__content-picture(href='#')
+                                    img.account-order__content-image(src='data/order/' + subitem.image + '.png' alt='')
+                                a.account-order__content-title(href='#')= subitem.title
+                            .account-order__content-right
+                                .account-order__content-price= subitem.price
+                                .account-order__content-weight= subitem.weight
+                                .account-order__content-total= subitem.total
+
+//= End account order =
+= '\n'

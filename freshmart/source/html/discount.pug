@@ -1,0 +1,65 @@
+-
+    pageTitle = 'Система скидок'
+//- Utilites
+include utils/_variables.pug
+
+//- Mixin
+include layout/header/_menu.pug
+include layout/header/_socnet.pug
+include layout/header/_phone.pug
+
+include layout/nav/_primary-menu.pug
+
+include layout/footer/_socnet.pug
+include layout/footer/_menu.pug
+
+include module/_search.pug
+include module/_catalog.pug
+include module/_breadcrumbs.pug
+
+
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    +breadcrumbs(['Главная'], 'Система скидок')
+
+                    = '\n'
+                    //= Section =
+                    .text
+                        .text__box(style='background-image: url(assets/images/content/section-icon-4.png)')
+                            p.
+                                Мы стремимся сделать все, чтобы покупки на нашем интернет-рынке FreshMart приносили Вам только радость и комфорт. Именно поэтому мы разработали систему скидок, отвечающую потребностям каждого клиента. Её суть очень проста – чем больше сумма покупки, тем больше Ваша экономия. Обратите внимание, что скидка не распространяется на акцинные товары, ведь на них уже действует сниженная цена. Согласитесь, скидка не может не радовать. Ведь продуктов, как и скидок, много не бывает!
+
+                            p.
+                                Итак, если сумма Вашего чека перешагнула черту в 1000 гривен, Вы гарантировано получаете не только бесплатную доставку, но еще и скидку в 3%. За Ваш заказ суммой более 1700 гривен, мы подарим Вам скидку уже в 5%, и не забывайте что при этом он приедет к Вам совершенно бесплатно. Кроме того, клиентам сформировавшим заказ, сумма которого перешагнула отметку в 2400 гривен, мы предоставляем скидку в 7%. И это все при бесплатной доставке прямо под Вашу дверь!
+
+                            p.
+                                Расширив заказ, Вы сможете не только заполнить холодильник необходимыми продуктами на неделю вперед, а ещё и сократить расходы. Экономьте правильно, а мы поможем Вам в этом!
+
+                    //= End section =
+                    = '\n'
+
+
+                include module/_questions.pug
+
+
+                include layout/_navigation-bottom.pug
+
+            //= End main =
+
+            = '\n'
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug

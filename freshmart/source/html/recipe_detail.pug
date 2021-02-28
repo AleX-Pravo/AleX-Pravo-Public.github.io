@@ -1,0 +1,130 @@
+-
+    var pageTitle = 'Супы'
+    var slick = true
+
+//- Utilites
+include utils/_variables.pug
+
+//- Mixin
+include layout/header/_menu.pug
+include layout/header/_socnet.pug
+include layout/header/_phone.pug
+
+include layout/nav/_primary-menu.pug
+
+include layout/footer/_socnet.pug
+include layout/footer/_menu.pug
+
+include module/_search.pug
+include module/_breadcrumbs.pug
+include module/_write.pug
+include module/_blog-menu.pug
+include module/_tags.pug
+
+include module/_catalog.pug
+
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    +breadcrumbs(['Главная', 'Блог', 'Рецепты', 'Супы'])
+
+                    //= Layout box =
+                    .layout-box.layout-box--info
+                        .layout-box__content
+                            include module/_recipe.pug
+
+
+                        aside.layout-box__aside
+                            = '\n'
+                            +search(dropped)
+                            +blogMenu(recipeDetailMenu)
+                            .section.section--aside
+                                .section__title ТОП тегов
+                                +tags(recipeTagList)
+                            .section.section--aside
+                                .section__title ТОП записей
+                                include module/_posts.pug
+                    //= End layout box =
+                    = '\n'
+
+                include layout/_navigation-bottom.pug
+            //= End main =
+
+            = '\n'
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+
+        script.
+            // carousel
+            var goodsPopular = $('#recipe_popular .carousel__list');
+
+            if (goodsPopular.find('.catalog__item').length <= 3) {
+                $('#recipe_popular .carousel__controls').css({'display': 'none'});
+            }
+
+            goodsPopular.slick({
+                dots: false,
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: '#recipe_popular .carousel__btn--prev',
+                nextArrow: '#recipe_popular .carousel__btn--next',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 490,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            goodsPopular.on('breakpoint', function (event, slick, breakpoint) {
+                var boxWidth = $(this)[0].offsetWidth,
+                    possible = Math.floor(boxWidth / slick.slideWidth);
+
+                if (possible) {
+
+                    if (possible >= slick.slideCount) {
+                        $('#recipe_popular .carousel__controls').css({'display': 'none'});
+                    } else {
+                        $('#recipe_popular .carousel__controls').css({'display': 'block'});
+                    }
+                }
+            });
+
+
+            // Sliders
+            $('#slider_recipe').bxSlider({
+                mode: 'fade',
+                pagerCustom: '#pager',
+                controls: true,
+            });

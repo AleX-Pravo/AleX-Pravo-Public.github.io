@@ -1,0 +1,268 @@
+.promotional {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0 0 27px;
+    transition: visibility 0s step-end, opacity .2s ease-out;
+
+    &--active {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__slider {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    @media (max-width: $screenMbMax) {
+        &__slider {
+            .bx__pager {
+                text-align: center;
+                margin-top: 5px;
+
+                &-item  {
+                    width: 12px;
+                    height: 12px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    overflow: hidden;
+                    background: #ccc;
+                    border-radius: 50%;
+                    text-indent: -200em;
+                    margin-right: 6px;
+                    //transition: all 0.2s ease-out;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &.active {
+                        background: #96c93d;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__slider {
+            .bx {
+                &__pager {
+                    font-size: $fontSizeTiny;
+                    height: 106px;
+                    background: $brandPrimaryDark;
+
+
+                    @include clearfix;
+                }
+
+                &__pager-item {
+                    padding: 0 6px;
+                    float: left;
+                    width: 25%;
+                    height: 100%;
+                    text-transform: uppercase;
+                    color: $base;
+                    background: $bxPagerBg2 linear-gradient(to top right, $bxPagerBg1, $bxPagerBg2);
+                    position: relative;
+
+
+                    &:nth-last-child(5):first-child,
+                    &:nth-last-child(5):first-child ~ .bx__pager-item {
+                        width: 20%;
+                        font-size: 13px!important;
+
+                        &:before {
+                            transform: translateZ(0) scale(0.75);
+                        }
+                    }
+
+                    &.active {
+                        background: $bxPagerBg2 linear-gradient(to bottom left, $bxPagerBg1, $bxPagerBg2);
+                    }
+
+                    &:before {
+                        position: relative;
+                        display: block;
+                        width: 56px;
+                        height: 52px;
+                        //margin: 13px auto 9px;
+                        margin: 8px auto 6px;
+                        content: '';
+                        background: url('../images/slider/slider.png') no-repeat;
+                        transition: all 0.2s ease-out;
+                        transform: translateZ(0) scale(1)
+
+                    }
+
+                    &--avatar {
+                        &:before {
+                            //background-position: 0 0;
+                            background-position: -352px 0;
+                            width: 50px;
+                            height: 54px;
+                        }
+                    }
+
+                    &--bag {
+                        &:before {
+                            background-position: -56px 0;
+                        }
+                    }
+
+                    &--truck {
+                        &:before {
+                            //background-position: -112px 0;
+                            background-position: -224px 0;
+                            width: 121px;
+                            height: 54px;
+                        }
+                    }
+
+                    &--map {
+                        &:before {
+                            background-position: -168px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 700px) {
+        &__slider {
+            .bx {
+                &__pager {
+                    font-size: $fontSizeSmall;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenSmMin) {
+        &__slider {
+            .bx {
+                &__pager {
+                    font-size: $fontSizeBase;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__goods {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__title {
+            font-family: $fontFamilyNatilus;
+            font-size: $fontSizeH2;
+            line-height: (50px / $fontSizeH2);
+            position: relative;
+            margin: -27px -10px 0;
+            text-align: center;
+            color: $gray;
+            background: $base;
+
+            &:before {
+                position: absolute;
+                z-index: 52;
+                top: -40px;
+                right: 0;
+                left: 0;
+                height: 40px;
+                content: '';
+                background: url('../images/content/good-bg.png') center no-repeat;
+            }
+
+            &-inner {
+                position: relative;
+
+                &:before,
+                &:after {
+                    position: relative;
+                    top: -8px;
+                    display: inline-block;
+                    width: 30px;
+                    height: 3px;
+                    content: '';
+                    background: $brandPrimary;
+                }
+
+                &:before {
+                    margin-right: 14px;
+                }
+
+                &:after {
+                    margin-left: 14px;
+                }
+            }
+        }
+
+        &__slider {
+            margin-right: -276px;
+            padding-right: 302px;
+        }
+
+        &__goods {
+            display: inline-block;
+            width: 270px;
+            vertical-align: top;
+
+            .bx__pager {
+                margin: -1px 0 0;
+
+                .bx__pager-item {
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    margin: 0 5px;
+                    border: 1px solid $grayLight;
+                    border-radius: 50%;
+
+                    &:before {
+                        position: absolute;
+                        top: 3px;
+                        left: 3px;
+                        width: 7px;
+                        height: 7px;
+                        content: '';
+                        transition: all .2s ease-out;
+                        opacity: 0;
+                        border-radius: 50%;
+                        background: $brandPrimary;
+                    }
+
+                    &.active,
+                    &:hover {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenLgMin) {
+        &__slider {
+            .bx {
+                &__pager {
+                    font-size: $fontSizeH4;
+                }
+            }
+        }
+    }
+}

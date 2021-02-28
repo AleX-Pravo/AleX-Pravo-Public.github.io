@@ -1,0 +1,131 @@
+.account-edit {
+    margin: 0 -15px 30px;
+
+    @include clearfix;
+
+    &__item {
+        padding: 0 15px;
+    }
+
+    &__content {
+        font-size: $fontSizeBase;
+        display: block;
+        width: 100%;
+        margin: -1px -1px -1px 0;
+        padding: 10px 20px 9px 48px;
+        transition: all .2s ease-out;
+        color: $lightText;
+        border: 1px solid $grayLight;
+        outline: none;
+        background: $inputBg;
+
+        &:focus {
+            border-color: $brandPrimary;
+            background: $base;
+        }
+    }
+
+    &__field {
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+        color: $grayMiddle;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 19px;
+            width: 14px;
+            height: 11px;
+            margin-top: -7px;
+            content: '';
+            background: url('../images/content/icon/form.png') 20px 20px no-repeat;
+        }
+
+        &--user {
+            &:before {
+                background-position: 0 0;
+            }
+        }
+
+        &--letter {
+            &:before {
+                background-position: -14px 0;
+            }
+        }
+
+        &--message {
+            &:before {
+                background-position: -28px 0;
+            }
+        }
+
+        &--phone {
+            &:before {
+                background-position: -42px 0;
+            }
+        }
+
+        &--home {
+            &:before {
+                background-position: -56px 0;
+            }
+        }
+    }
+
+    &__controls {
+        clear: both;
+        @include clearfix;
+
+
+        &-item {
+            float: left;
+            width: 50%;
+            padding: 0 15px;
+        }
+    }
+
+    &__button {
+        font-size: $fontSizeH4;
+        line-height: (40px / $fontSizeH4);
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        transition: all .2s ease-out;
+        color: $brandPrimary;
+        border: 1px solid $brandPrimary;
+        border-radius: 5px;
+        outline: none;
+        background: $base;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            color: $base;
+            background: $brandPrimary;
+            text-shadow: 0 2px 0 rgba(0, 0, 0, .1);
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__item {
+            float: left;
+            width: 50%;
+            padding: 0 15px;
+
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+
+        &__button {
+            font-size: $fontSizeLarge;
+            line-height: (40px / $fontSizeLarge);
+        }
+
+        &__content {
+            font-size: $fontSizeH4;
+        }
+    }
+}

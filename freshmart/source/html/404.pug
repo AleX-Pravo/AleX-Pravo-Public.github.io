@@ -1,0 +1,33 @@
+-
+    pageTitle = 'Страница не найдена'
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+
+            //= Main =
+            main#main.main.main--notfound
+                = '\n'
+                //= Not found =
+                .notfound
+                    .notfound__inner
+                        .notfound__logo
+                            include layout/header/_logo.pug
+                        .notfound__picture
+                            img.notfound__image(src='assets/images/content/404.png' alt='')
+                        .notfound__text Страница не найдена или не существует
+
+                        a.button.notfound__link(href='#') На главную
+                //= End not found =
+                = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_scripts.pug

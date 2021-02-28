@@ -1,0 +1,62 @@
+-
+    var profilemenuList = [
+        {
+            title: 'Мои заказы',
+            href: 'profile-orders.html',
+            image: 'orders'
+        },
+        {
+            title: 'Мои подписки',
+            href: 'profile-subscriptions.html',
+            image: 'subscriptions'
+        },
+        {
+            title: 'Мой аккаунт',
+            href: 'profile-account.html',
+            image: 'account'
+        },
+        {
+            title: 'Мои баллы',
+            href: 'profile-points.html',
+            image: 'points'
+        },
+        {
+            title: 'Список покупок',
+            href: 'profile-shoppinglist.html',
+            image: 'shoppinglist'
+        },
+        {
+            title: 'Избранное',
+            href: 'profile-favorites.html',
+            image: 'favorites'
+        },
+        {
+            title: 'Еко програма',
+            href: 'profile-ecoprogram.html',
+            image: 'ecoprogram'
+        },
+        {
+            title: 'Рассылка',
+            href: 'profile-newsletter.html',
+            image: 'newsletter'
+        }
+    ]
+= '\n'
+//= profile menu =
+//- (source/assets/css/layout/_profile-menu.scss)
+ul.profile-menu
+    each item in profilemenuList
+        if (item.title === subTitle)
+            li.profile-menu__item.profile-menu__item--active
+                a.profile-menu__link(href=item.href)
+                    .profile-menu__image
+                        img(src='assets/images/content/icon/' + item.image + '.svg' alt='')
+                    .profile-menu__name= item.title
+        else
+            li.profile-menu__item
+                a.profile-menu__link(href=item.href)
+                    .profile-menu__image
+                        img(src='assets/images/content/icon/' + item.image + '.svg' alt='')
+                    .profile-menu__name= item.title
+//= End profile menu =
+= '\n'

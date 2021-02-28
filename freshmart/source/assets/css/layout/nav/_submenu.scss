@@ -1,0 +1,153 @@
+.submenu {
+    display: table;
+    padding: 20px 20px 13px 20px;
+    border: 1px solid $brandPrimary;
+    background: $base;
+
+    @include clearfix;
+
+    &__wrapper {
+        display: table-row;
+        width: 100%;
+        vertical-align: top;
+    }
+
+    &__list {
+        position: relative;
+        display: table-cell;
+        padding: 0 20px;
+        vertical-align: top;
+        border-right: 1px solid $grayLight;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+            border-right: none;
+        }
+    }
+
+    &__item {
+        font-family: $fontFamilySansSerif;
+        font-size: $fontSizeSmall;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+        margin-bottom: 21px;
+        transition: all .2s ease-out;
+        white-space: nowrap;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $grayMiddle;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--active {
+            color: $brandPrimary;
+        }
+
+        &:hover {
+            color: $brandPrimary;
+        }
+    }
+
+    &__good {
+        display: block;
+        width: 100%;
+    }
+
+    &__good-picture {
+        position: relative;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        width: 230px;
+        margin-right: -230px;
+        vertical-align: top;
+    }
+
+    &__goods-info {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin: 24px -4px 0 0;
+        padding-left: 240px;
+        text-align: center;
+        vertical-align: top;
+
+        .status {
+            left: 235px;
+        }
+    }
+
+    &__good-title {
+        font-family: $fontFamilySansSerif;
+        font-size: $fontSizeH2;
+        font-weight: 700;
+        line-height: (29px / $fontSizeH2);
+        position: relative;
+        display: inline-block;
+        margin: 0 0 13px 0;
+        padding-bottom: 17px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $gray;
+
+        &:before,
+        &:after {
+            position: absolute;
+            left: 50%;
+            content: '';
+            background: $brandPrimary;
+        }
+
+        &:before {
+            bottom: 0;
+            width: 41px;
+            height: 1px;
+            margin-left: -20px;
+        }
+
+        &:after {
+            bottom: -2px;
+            width: 5px;
+            height: 5px;
+            margin-left: -3px;
+            border-radius: 50%;
+        }
+    }
+
+    &__good-price {
+        position: relative;
+        top: -3px;
+        white-space: nowrap;
+
+        .price__old {
+            font-size: $fontSizeLarge;
+            display: inline-block;
+            margin: 0 0 0 4px;
+            color: $brandDanger;
+
+            &:after {
+                background: $brandDanger;
+            }
+        }
+
+        .price__number {
+            font-size: $fontSizeH2;
+            display: inline-block;
+            margin: 0 6px 0 13px;
+        }
+
+        .price__postfix {
+            font-size: $fontSizeLarge;
+            font-weight: 700;
+            display: inline-block;
+            color: $gray;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+-
+    var pageTitle = 'sms1'
+
+
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+
+            //= Main =
+            main#main.main
+
+                ='\n'
+                //= smsBlock =
+                //- =(module/_smsBlock.scss)=
+
+                .smsBlock-improve
+                    .smsBlock-improve__logo
+                        img(src='data/new-logo-freshmart.png' alt='')
+                    .smsBlock-improve__title Оцените, пожалуйста, нашу работу
+                    .smsBlock-improve__forms
+                        .smsBlock-improve__forms-title Что нам нужно улучшить?
+
+                        form(method='')
+                            .smsBlock-improve__forms-textarea
+                                ul
+                                    li
+                                        a(href='#') Качество продукции
+                                    li
+                                        a(href='#') Доставка
+                                    li
+                                        a(href='#') Компетентность
+                            .smsBlock-improve__forms-next
+                                button.smsBlock-improve__forms-button(type='button') Другое
+
+                //= End smsBlock =
+                ='\n'
+
+            //= End main =
+
+            = '\n'
+        //= End layout =
+
+        include layout/_scripts.pug

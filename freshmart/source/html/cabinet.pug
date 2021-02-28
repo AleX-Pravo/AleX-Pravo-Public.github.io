@@ -1,0 +1,73 @@
+-
+    pageTitle = 'Личный кабинет'
+//- Utilites
+include utils/_variables.pug
+
+//- Mixin
+include layout/header/_menu.pug
+include layout/header/_socnet.pug
+include layout/header/_phone.pug
+
+include layout/nav/_primary-menu.pug
+
+include layout/footer/_socnet.pug
+include layout/footer/_menu.pug
+
+include module/_search.pug
+include module/_catalog.pug
+include module/_breadcrumbs.pug
+
+
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    +breadcrumbs(['Главная'], 'Личный кабинет')
+
+                    = '\n'
+                    //= Section =
+                    .text
+                        .text__box(style='background-image: url(assets/images/content/section-icon-5.png);  background-size: 40% auto; background-position: top right;')
+                            p.
+                                Дорогие наши покупатели! Cпешим сообщить Вам радостную новость - теперь Вы можете создать свой личный аккаунт на нашем сайте!
+
+                            p.
+                                Личный кабинет позволит Вам следить за статусами своих заказов и оперативно просматривать все изменения в ходе их обработки. Кроме этого, Вы гарантированно получите множество бонусов, среди которых снижение стоимости доставки (для заказов меньше 450 грн) до 35 гривен. Также, зарегистрировавшись, Вы сможете накапливать сумму покупок, увеличивая размер Вашей скидки. Так, сразу после регистрации, Вы получаете стартовую скидку 2%, а затем сумма скидки увеличивается, в зависимости от общей суммы Ваших заказов.
+
+                            b УСЛОВИЯ НАКОПЛЕНИЯ ВАШЕЙ ПЕРСОНАЛЬНОЙ СКИДКИ:
+
+                            ul
+                                li при регистрации Ваша стартовая скидка составит 2%
+                                li если сумма Ваших заказов превысила 5 000 грн - Ваша скидка составит 5%
+                                li если сумма Ваших заказов превысила 8 000 грн - Ваша скидка составит 7%
+                                li если сумма Ваших заказов превысила 15 000 грн - Ваша скидка составит 10%
+                                li когда сумма Ваших заказов превысит 30 000 грн - Вы получите постоянную скидку 15%!
+
+                    a.button.button--light(href='#') Регистрация
+
+                    //= End section =
+                    = '\n'
+
+
+                include module/_questions.pug
+
+
+                include layout/_navigation-bottom.pug
+
+            //= End main =
+
+            = '\n'
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug

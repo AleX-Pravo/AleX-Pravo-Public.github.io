@@ -1,0 +1,232 @@
+
+.social {
+
+    &--plug {
+
+        .social {
+
+            &__title {
+                font-size: 18px;
+                margin: 0 0 25px 0;
+            }
+
+            &__list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+
+            &__item {
+                margin: 0 25px 0 0;
+                display: flex;
+
+                &:first-child {
+                    left: 0;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &--instagram {
+                    .social {
+                        &__link {
+                            width: 35px;
+                            height: 35px;
+                            background: url('../images/content/icon/social/instagram.svg') no-repeat;
+
+                            &:after {
+                                background: url('../images/content/icon/social/instagram-green.svg') no-repeat;
+                            }
+                        }
+                    }
+                }
+
+                &--facebook {
+                    .social {
+                        &__link {
+                            width: 18px;
+                            height: 35px;
+                            background: url('../images/content/icon/social/facebook.svg') no-repeat;
+
+                            &:after {
+                                background: url('../images/content/icon/social/facebook-green.svg') no-repeat;
+                            }
+                        }
+                    }
+                }
+
+                &--viber {
+                    .social {
+                        &__link {
+                            width: 34px;
+                            height: 35px;
+                            background: url('../images/content/icon/social/viber.svg') no-repeat;
+
+                            &:after {
+                                background: url('../images/content/icon/social/viber-green.svg') no-repeat;
+                            }
+                        }
+                    }
+                }
+
+                &--youtube {
+                    .social {
+                        &__link {
+                            width: 35px;
+                            height: 25px;
+                            background: url('../images/content/icon/social/youtube.svg') no-repeat;
+
+                            &:after {
+                                background: url('../images/content/icon/social/youtube-green.svg') no-repeat;
+                            }
+                        }
+                    }
+                }
+
+                &--telegram {
+                    .social {
+                        &__link {
+                            width: 35px;
+                            height: 31px;
+                            background: url('../images/content/icon/social/telegram.svg') no-repeat;
+
+                            &:after {
+                                background: url('../images/content/icon/social/telegram-green.svg') no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__link {
+                position: relative;
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                background: url('../images/content/icon/social.png') 50px 50px no-repeat;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    content: '';
+                    transition: all .2s ease-out;
+                    opacity: 0;
+                    background: url('../images/content/icon/social.png') 50px 50px no-repeat;
+                }
+
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-size: $fontSizeLarge;
+        font-weight: 700;
+        line-height: ($fontSizeLarge / $fontSizeLarge);
+        color: $gray;
+    }
+
+    &__list {
+        margin-top: 16px;
+
+        @include clearfix;
+    }
+
+    &__item {
+        float: left;
+
+        &:first-child {
+            position: relative;
+            left: -10px;
+        }
+
+        &--facebook {
+            .social {
+                &__link {
+                    background-position: -68px 0;
+
+                    &:after {
+                        background-position: 0 0;
+                    }
+                }
+            }
+        }
+
+        &--vkontakte {
+            .social {
+                &__link {
+                    background-position: -102px 0;
+
+                    &:after {
+                        background-position: -34px 0;
+                    }
+                }
+            }
+        }
+
+        &--instagram {
+            margin-left: 14px;
+            .social {
+                &__link {
+                    background-position: -170px 0;
+
+                    &:after {
+                        background-position: -136px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        background: url('../images/content/icon/social.png') 50px 50px no-repeat;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            transition: all .2s ease-out;
+            opacity: 0;
+            background: url('../images/content/icon/social.png') 50px 50px no-repeat;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+
+        &--plug {
+
+            .social {
+
+                &__title {
+                    font-size: 24px;
+                }
+
+                &__item {
+                    margin: 0 40px 0 0;
+                }
+            }
+        }
+    }
+}

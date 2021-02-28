@@ -1,0 +1,300 @@
+.primary-menu {
+    position: relative;
+
+    @import 'submenu.scss';
+
+    &__item {
+        position: relative;
+
+        &:hover {
+            .primary-menu {
+                &__drop {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        transition: all .2s ease-out;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $grayDark;
+
+        &:hover,
+        &--active {
+            color: $brandPrimary;
+        }
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 25px;
+            content: '';
+            //background: url('../images/navigation/icon/sprite-small.png') no-repeat;
+        }
+
+        &--mushrooms {
+            &:before {
+                width: 30px;
+                background: url('../images/navigation/icon-svg/mushrooms.svg') no-repeat 0 0;
+            }
+        }
+
+        &--vegetables {
+            &:before {
+                width: 30px;
+                //background-position: 0 0;
+                background: url('../images/navigation/icon-svg/vegetables.svg') no-repeat;
+            }
+        }
+
+        &--greenery {
+            &:before {
+                width: 30px;
+                //background-position: 0 -75px;
+                background: url('../images/navigation/icon-svg/greenery.svg') no-repeat;
+            }
+        }
+
+        &--fruits {
+            &:before {
+                width: 30px;
+                //background-position: 0 -100px;
+                background: url('../images/navigation/icon-svg/fruits.svg') no-repeat;
+            }
+        }
+
+        &--dried-fruits {
+            &:before {
+                width: 30px;
+                //background-position: 0 -125px;
+                background: url('../images/navigation/icon-svg/dried-fruit.svg') no-repeat;
+            }
+        }
+
+        &--nuts {
+            &:before {
+                width: 20px;
+                //background-position: 0 -150px;
+                background: url('../images/navigation/icon-svg/nuts.svg') no-repeat;
+            }
+        }
+
+        &--bakaleya {
+            &:before {
+                width: 22px;
+                //background-position: 0 -175px;
+                background: url('../images/navigation/icon-svg/grocery.svg') no-repeat;
+            }
+        }
+
+        &--sweet {
+            &:before {
+                width: 30px;
+                //background-position: 0 -25px;
+                background: url('../images/navigation/icon-svg/sweets.svg') no-repeat;
+            }
+        }
+
+        &--drink {
+            &:before {
+                width: 26px;
+                //background-position: 0 -200px;
+                background: url('../images/navigation/icon-svg/drinks.svg') no-repeat;
+            }
+        }
+
+        &--sets {
+            &:before {
+                width: 24px;
+                //background-position: 0 -225px;
+                background: url('../images/navigation/icon-svg/sets.svg') no-repeat;
+            }
+        }
+
+        &--bakery {
+            &:before {
+                //background-position: 0 -50px;
+                //background: url('../images/navigation/icon-svg/greenery.svg') no-repeat;
+            }
+        }
+    }
+
+    &__drop {
+        position: absolute;
+        z-index: 53;
+        left: -12px;
+        display: none;
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__link {
+            //padding: 9px 0;
+            padding: 9px 0 9px 42px;
+        }
+    }
+
+    @media (min-width: $screenLgMin) {
+        &__item {
+            &:first-child {
+                .primary-menu {
+                    &__link {
+                        margin-left: -15px;
+                    }
+                }
+            }
+
+            &:last-child {
+                .primary-menu {
+                    &__link {
+                        margin-right: -15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        display: table;
+        width: 100%;
+
+        &__list {
+            display: table-row;
+            display: flex; //ss
+            flex-flow: row nowrap;//ss
+            justify-content: space-between;//ss
+        }
+
+        &__item {
+            //display: table-cell;
+            flex: 0 1 10%;//ss
+
+            &:first-child {
+                .primary-menu {
+                    &__link {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            &:last-child {
+                .primary-menu {
+                    &__link {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        &__link {
+            padding: 18px 33px 18px 0;
+            padding: 18px 0 18px 0;//ss
+            text-align: center;
+
+            &:before {
+                top: auto;
+                left: auto;
+                position: relative;
+                display: block;
+                width: 61px;
+                height: 50px;
+                margin: 0 auto 20px;
+                content: '';
+                transform: none;
+                //background: url('../images/navigation/icon/sprite.png') no-repeat;
+            }
+
+            &--mushrooms {
+                &:before {
+                    width: 52px;
+                    background: url('../images/navigation/icon-svg/mushrooms.svg') no-repeat 0 0;
+                }
+            }
+
+            &--vegetables {
+                &:before {
+                    width: 47px;
+                    //background-position: 0 0;
+                    background: url('../images/navigation/icon-svg/vegetables.svg') no-repeat;
+                }
+            }
+
+            &--greenery {
+                &:before {
+                    width: 46px;
+                    //background-position: 0 -75px;
+                    background: url('../images/navigation/icon-svg/greenery.svg') no-repeat;
+                }
+            }
+
+            &--fruits {
+                &:before {
+                    width: 43px;
+                    //background-position: 0 -100px;
+                    background: url('../images/navigation/icon-svg/fruits.svg') no-repeat;
+                }
+            }
+
+            &--dried-fruits {
+                &:before {
+                    width: 42px;
+                    //background-position: 0 -125px;
+                    background: url('../images/navigation/icon-svg/dried-fruit.svg') no-repeat;
+                }
+            }
+
+            &--nuts {
+                &:before {
+                    width: 46px;
+                    //background-position: 0 -150px;
+                    background: url('../images/navigation/icon-svg/nuts.svg') no-repeat;
+                }
+            }
+
+            &--bakaleya {
+                &:before {
+                    width: 46px;
+                    //background-position: 0 -175px;
+                    background: url('../images/navigation/icon-svg/grocery.svg') no-repeat;
+                }
+            }
+
+            &--sweet {
+                &:before {
+                    width: 72px;
+                    //background-position: 0 -25px;
+                    background: url('../images/navigation/icon-svg/sweets.svg') no-repeat;
+                }
+            }
+
+            &--drink {
+                &:before {
+                    width: 59px;
+                    //background-position: 0 -200px;
+                    background: url('../images/navigation/icon-svg/drinks.svg') no-repeat;
+                }
+            }
+
+            &--sets {
+                &:before {
+                    width: 46px;
+                    //background-position: 0 -225px;
+                    background: url('../images/navigation/icon-svg/sets.svg') no-repeat;
+                }
+            }
+
+            &--bakery {
+                &:before {
+                    //background-position: 0 -50px;
+                    //background: url('../images/navigation/icon-svg/greenery.svg') no-repeat;
+                }
+            }
+        }
+    }
+}

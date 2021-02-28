@@ -1,0 +1,70 @@
+-
+    var productOrderList = [
+        {
+            image: '1',
+            title: 'Капуста белокочанная',
+            price: '5.50',
+            quantity: '1.5',
+            sum: '2 275.30'
+        },
+        {
+            image: '1',
+            title: 'Капуста белокочанная',
+            price: '5.50',
+            quantity: '1.5',
+            sum: '2 275.30'
+        },
+        {
+            image: '1',
+            title: 'Капуста белокочанная',
+            price: '5.50',
+            quantity: '1.5',
+            sum: '2 275.30'
+        },
+    ]
+= '\n'
+//= Order =
+.order
+    .order__clear
+        a.order__clear-item(href='javascript:void(0)') Очистить корзину
+    .order__table
+        .order__header
+            .order__field-item Товар
+                a.order__field-clear(href='javascript:void(0)')
+            .order__field-item Цена
+            .order__field-item Количество
+            .order__field-item Сумма
+        each val in productOrderList
+            .order__field
+                .order__cell
+                    .order__product
+                        a.order__product-picture(href='#')
+                            img.order__product-image(src='data/order/' + val.image + '.png' alt='')
+                        a.order__product-title(href='#')= val.title
+                        a.order__product-close(href='#')
+
+                        = '\n'
+                        //= Calendar =
+                        .calendar.calendar--tooltip.calendar--order
+                            .calendar__drop Можно заказать на завтра и позже
+                        //= End calendar =
+                        = '\n'
+
+                .order__cell
+                    .order__price= val.price + ' грн'
+                .order__cell
+                    include _quantity.pug
+                .order__cell
+                    .order__sum= val.sum + ' грн'
+    .order__total
+        .order__total-title Общая сумма:
+        .order__total-price 4 800 грн
+
+    .order__bonuses
+        .order__bonuses-item Ваши бонусы:*
+        .order__bonuses-item Бесплатная доставка
+        .order__bonuses-item Скидка 5% – экономия 119.75 грн
+        .order__bonuses-item Закажите еще на 4.95 грн для скидки 7%
+    .order__info * акционные товары в сумму скидки не учитываются
+//= End order =
+= '\n'

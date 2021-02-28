@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+        <title>Freshmart | Овощи</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;amp;subset=cyrillic">
+        <link rel="stylesheet" href="assets/css/main.min.css">
+    </head>
+
+    <body itemscope itemtype="http://schema.org/WebPage">
+
+        <!--= Layout =-->
+        <div id="layout">
+
+            <!--= Header =-->
+            <!-- Класс "header--fixed" фиксирует меню с верху странички (моб версия)-->
+            <header class="header" id="header" itemscope itemprop="Freshmart" itemtype="http://schema.org/Organization">
+                <div class="header__top">
+                    <div class="container">
+
+                        <!--= Menu =-->
+                        <ul class="menu hide-sm-max">
+                            <li class="menu__item"><a class="menu__link menu__link--active" href="#">О наc</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Блог</a>
+                            </li>
+                            <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a>
+                            </li>
+                            <li class="menu__item"><a class="menu__link" href="#">Сотрудничество</a>
+                                <div class="drop">
+                                    <ul class="drop__list">
+                                        <li class="drop__list-item"><a class="drop__list-link" href="#">Оптовим покупателям</a></li>
+                                        <li class="drop__list-item"><a class="drop__list-link" href="#">Вакансии</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu__item"><a class="menu__link" href="#">Контакты</a>
+                            </li>
+                            <li class="menu__item"><a class="menu__link" href="#">Отзывы</a>
+                            </li>
+                        </ul>
+                        <!--= End menu =-->
+
+                        <div class="header__top-right">
+
+                            <!--= Userbar =-->
+                            <div class="userbarNew">
+                                <ul>
+                                    <li class="userbarNew__box"><a class="userbarNew__link-people" href="#"></a>
+                                        <div class="userbarNew__drop">
+                                            <ul class="userbarNew__list">
+                                                <li class="userbarNew__list-item"><a class="userbarNew__list-link" href="#">Вход</a></li>
+                                                <li class="userbarNew__list-item"><a class="userbarNew__list-link" href="#">Регистрация</a></li>
+                                                <li class="userbarNew__list-item"><a class="userbarNew__list-link" href="#">Личный кабинет</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="userbarNew__box"><a class="userbarNew__link-percent" href="#"></a></li>
+                                </ul>
+                            </div>
+                            <!--= End userbar =-->
+
+                            <!--= Socnet =-->
+                            <ul class="socnet hide-sm-max border">
+                                <li class="socnet__item"><a class="socnet__link socnet__link--facebook" href="#"></a></li>
+                                <li class="socnet__item"><a class="socnet__link socnet__link--vkontakte" href="#"></a></li>
+                                <li class="socnet__item"><a class="socnet__link socnet__link--instagram" href="#"></a></li>
+                            </ul>
+                            <!--= End socnet =-->
+
+
+                            <!--=Language=-->
+                            <div class="language">
+                                <div class="language__wrapper">
+                                    <div class="language__box">
+                                        <div class="language__box-item">ru</div>
+                                        <div class="language__box-arrow"></div>
+                                    </div>
+                                    <div class="language__drop">
+                                        <ul class="language__list">
+                                            <li class="language__list-item"><a class="language__list-link" href="#">ua</a></li>
+                                            <li class="language__list-item"><a class="language__list-link" href="#">ru</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--=End language=-->
+
+
+                            <!--=cities=-->
+                            <div class="cities">
+                                <div class="cities__wrapper">
+                                    <div class="cities__box">
+                                        <div class="cities__box-item">Киев</div>
+                                    </div>
+                                    <div class="cities__drop">
+                                        <ul class="cities__list">
+                                            <li class="cities__list-item"><a class="cities__list-link" href="#">Киев</a></li>
+                                            <li class="cities__list-item"><a class="cities__list-link" href="#">Одесса</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--=End cities=-->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+
+                    <!--= Mobile menu =-->
+                    <div class="mobile-menu"><a class="mobile-menu__button" href="javascript:void(0)"><i class="mobile-menu__button-line"></i></a>
+                        <div class="mobile-menu__drop"><a class="mobile-menu__close" href="#"></a>
+                            <div class="mobile-menu__search">
+
+                                <!--= Search =-->
+                                <form class="search" action="#" method="post">
+                                    <input class="search__text" type="text" placeholder="Поиск продуктов..."/>
+                                    <input class="search__submit" type="submit" value=""/>
+                                </form>
+                                <!--= End search =-->
+
+                            </div>
+                            <div class="mobile-menu__wrapper">
+                                <div class="mobile-menu__content">
+
+                                    <!--= Menu =-->
+                                    <ul class="menu">
+                                        <li class="menu__item"><a class="menu__link menu__link--active" href="#">О наc</a></li>
+                                        <li class="menu__item"><a class="menu__link" href="#">Блог</a>
+                                        </li>
+                                        <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a>
+                                        </li>
+                                        <li class="menu__item"><a class="menu__link" href="#">Сотрудничество</a>
+                                            <div class="drop">
+                                                <ul class="drop__list">
+                                                    <li class="drop__list-item"><a class="drop__list-link" href="#">Оптовим покупателям</a></li>
+                                                    <li class="drop__list-item"><a class="drop__list-link" href="#">Вакансии</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="menu__item"><a class="menu__link" href="#">Контакты</a>
+                                        </li>
+                                        <li class="menu__item"><a class="menu__link" href="#">Отзывы</a>
+                                        </li>
+                                    </ul>
+                                    <!--= End menu =-->
+
+                                    <nav class="navigation" id="nav__divice">
+
+                                        <!--= Primary menu =-->
+                                        <div class="primary-menu">
+                                            <ul class="primary-menu__list">
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--active primary-menu__link--mushrooms" href="#">Грибы</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--vegetables" href="#">Овощи</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--greenery" href="#">Зелень</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--fruits" href="#">Ягоды, фрукты</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--dried-fruits" href="#">Сухофрукты</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--nuts" href="#">Орехи</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--bakaleya" href="#">Бакалея</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--sweet" href="#">Сладости</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--drink" href="#">Напитки</a>
+                                                </li>
+                                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--sets" href="#">Наборы</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--= End primary menu =-->
+
+                                    </nav>
+
+                                    <!--= Phone =-->
+                                    <div class="phone">
+                                        <div class="phone__item"><a class="phone__link" href="tel:+380443315163">+38 (044) 331-51-63</a>
+                                            <meta itemprop="telephone" content="+380443315163"/>
+                                        </div>
+                                        <div class="phone__item"><a class="phone__link" href="tel:+380677379979">+38 (067) 737-99-79</a>
+                                            <meta itemprop="telephone" content="+380677379979"/>
+                                        </div>
+                                        <div class="phone__item"><a class="phone__link" href="tel:+380501748337">+38 (050) 174-83-37</a>
+                                            <meta itemprop="telephone" content="+380501748337"/>
+                                        </div>
+                                    </div>
+                                    <!--= End phone =-->
+
+                                    <!--= Socnet =-->
+                                    <ul class="socnet">
+                                        <li class="socnet__item"><a class="socnet__link socnet__link--facebook" href="#"></a></li>
+                                        <li class="socnet__item"><a class="socnet__link socnet__link--vkontakte" href="#"></a></li>
+                                        <li class="socnet__item"><a class="socnet__link socnet__link--instagram" href="#"></a></li>
+                                    </ul>
+                                    <!--= End socnet =-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--= End mobile menu =-->
+
+                    <!--= Logo =-->
+                    <!--= Для неактивного логотипа необходимо заменить элемент "a" на "span" =-->
+                    <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                        <meta itemprop="name" content="FreshMart">
+                        <meta itemtype="http://schema.org/PostalAddress">
+                        <meta itemprop="address" content="г. Киев, ул. Электротехническая 18">
+                        <meta itemprop="email" content="info@freshmart.com.ua"><a class="logo__link" href="#" itemprop="url"><img src="assets/images/header/logo.svg" alt="logo" itemprop="logo image"></a>
+                    </div>
+                    <!--= End logo =-->
+
+                    <div class="header__content">
+
+                        <!--= Phone =-->
+                        <div class="phone">
+                            <div class="phone__item"><a class="phone__link" href="tel:+380443315163">+38 (044) 331-51-63</a>
+                                <meta itemprop="telephone" content="+380443315163"/>
+                            </div>
+                            <div class="phone__item"><a class="phone__link" href="tel:+380677379979">+38 (067) 737-99-79</a>
+                                <meta itemprop="telephone" content="+380677379979"/>
+                            </div>
+                            <div class="phone__item"><a class="phone__link" href="tel:+380501748337">+38 (050) 174-83-37</a>
+                                <meta itemprop="telephone" content="+380501748337"/>
+                            </div>
+                        </div>
+                        <!--= End phone =-->
+
+                        <!--= Search =-->
+                        <form class="search" action="#" method="post">
+                            <input class="search__text" type="text" placeholder="Поиск продуктов..."/>
+                            <div class="search__drop" style="display:none">
+                                <div class="search__list">
+                                    <div class="search__item"><a class="search__picture" href="#"><img class="search__image" src="data/search/1.png" alt=""/></a>
+                                        <div class="search__info"><a class="search__title" href="#">Лук порей</a>
+                                            <div class="search__price">33.00 грн/кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="search__item"><a class="search__picture" href="#"><img class="search__image" src="data/search/2.png" alt=""/></a>
+                                        <div class="search__info"><a class="search__title" href="#">Корень хрена</a>
+                                            <div class="search__price">93.50 грн/кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="search__item"><a class="search__picture" href="#"><img class="search__image" src="data/search/3.png" alt=""/></a>
+                                        <div class="search__info"><a class="search__title" href="#">Корень имбиря</a>
+                                            <div class="search__price">74.00 грн/кг</div>
+                                        </div>
+                                    </div>
+                                </div><a class="search__link" href="#">Все результаты поиска</a>
+                            </div>
+                            <input class="search__submit" type="submit" value=""/>
+                        </form>
+                        <!--= End search =-->
+
+                    </div>
+
+                    <!--= Basket =-->
+                    <div class="basket">
+                        <div class="basket__wrapper"><a class="basket__link" href="#">
+                                <div class="basket__title">Корзина</div>
+                                <div class="basket__price"><span class="basket__number">265</span> грн</div>
+                                <div class="basket__count">3</div></a><a class="basket__order" href="#">Оформить заказ</a></div>
+                    </div>
+                    <!--= End basket =-->
+
+                </div>
+            </header>
+            <!--= End header =-->
+
+            <!--= Nav =-->
+            <nav class="navigation hide-sm-max" id="nav">
+                <div class="container">
+
+                    <!--= Primary menu =-->
+                    <div class="primary-menu">
+                        <ul class="primary-menu__list">
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--active primary-menu__link--mushrooms" href="#">Грибы</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--vegetables" href="#">Овощи</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--greenery" href="#">Зелень</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--fruits" href="#">Ягоды, фрукты</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--dried-fruits" href="#">Сухофрукты</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--nuts" href="#">Орехи</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--bakaleya" href="#">Бакалея</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--sweet" href="#">Сладости</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--drink" href="#">Напитки</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                            <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--sets" href="#">Наборы</a>
+                                <div class="primary-menu__drop">
+
+                                    <!--= Submenu =-->
+                                    <div class="submenu">
+                                        <div class="submenu__wrapper">
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Помидоры, огурцы</a><a class="submenu__item" href="#">Картофель, морковь, свекла</a><a class="submenu__item" href="#">Капуста</a><a class="submenu__item" href="#">Лук, чеснок</a><a class="submenu__item" href="#">Перец</a><a class="submenu__item" href="#">Кабачки, баклажаны</a><a class="submenu__item" href="#">Грибы</a>
+                                            </div>
+                                            <div class="submenu__list"><a class="submenu__item" href="#">Редис</a><a class="submenu__item" href="#">Корни</a><a class="submenu__item" href="#">Экзотические овощи</a><a class="submenu__item" href="#">Мини-овощи</a><a class="submenu__item" href="#">Кукуруза, горошек</a><a class="submenu__item" href="#">Тыква</a><a class="submenu__item" href="#">Фасоль, бобы</a>
+                                            </div>
+                                            <div class="submenu__list">
+                                                <div class="submenu__good"><a class="submenu__good-picture" href="#"><span class="status"><span class="status__item status__item--share"></span></span><img class="submenu__good-image" src="data/goods/10.png" alt=""/></a>
+                                                    <div class="submenu__goods-info"><a class="submenu__good-title" href="#">Клубника</a>
+                                                        <div class="submenu__good-price price"><span class="price__old">675</span><span class="price__number">563</span><span class="price__postfix">грн/кг</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--= End submenu =-->
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--= End primary menu =-->
+
+                </div>
+            </nav>
+            <!--= End navigation =-->
+
+            <!--= Main =-->
+            <main class="main" id="main">
+                <div class="container">
+
+                    <!--= Breadcrumbs =-->
+                    <div class="breadcrumbs">
+                        <ol class="breadcrumbs__list" itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+                            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="#" itemprop="item"><span itemprop="name" content="Главная">Главная</span></a>
+                                <link itemprop="item" href="https://example.com/dresses"/>
+                                <meta itemprop="position" content="1"/>
+                            </li>
+                        </ol>
+                    </div>
+                    <!--= End breadcrumbs =-->
+
+                    <h1 class="breadcrumbs__title breadcrumbs__title--left" style="margin: 15px 0 22px 0;">Поиск</h1>
+                </div>
+                <!--= Layout box =-->
+                <div class="layout-box layout-box--full">
+                    <!--.layout-box--search-->
+                    <aside class="layout-box__aside">
+                        <!--= Cart =-->
+                        <div class="cart" id="cart_mobile">
+                            <div class="cart__drop">
+                                <div class="cart__drop-title">Корзина</div><a class="cart__drop-close" href="javascript:void(0)"></a>
+                                <div class="cart__drop-wrapper">
+                                    <div class="cart__drop-content">
+                                        <div class="cart__header">
+                                            <div class="cart__title">Корзина</div><a class="cart__close" href="#"></a>
+                                        </div>
+                                        <div class="cart__content">
+                                            <div class="cart__list">
+                                                <div class="cart__section">
+                                                    <div class="cart__controls"><a class="cart__edit" href="#"></a><a class="cart__close" href="#"></a></div><a class="cart__product" href="#">Шампиньоны для фаршировки</a>
+                                                    <div class="cart__product-edit">
+                                                        <textarea class="cart__textarea"></textarea>
+                                                        <div class="cart__save"><a class="cart__link" href="#">Сохранить</a></div>
+                                                    </div>
+                                                    <div class="cart__info"><a class="cart__arrow cart__arrow--min" href="#"></a>
+                                                        <input class="cart__output" type="text" value="1.5"><a class="cart__arrow cart__arrow--max" href="#"></a>кг<span class="cart__price">120.50грн</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cart__section">
+                                                    <div class="cart__controls"><a class="cart__edit" href="#"></a><a class="cart__close" href="#"></a></div><a class="cart__product" href="#">Шампиньоны для фаршировки</a>
+                                                    <div class="cart__product-edit">
+                                                        <textarea class="cart__textarea"></textarea>
+                                                        <div class="cart__save"><a class="cart__link" href="#">Сохранить</a></div>
+                                                    </div>
+                                                    <div class="cart__info"><a class="cart__arrow cart__arrow--min" href="#"></a>
+                                                        <input class="cart__output" type="text" value="1.5"><a class="cart__arrow cart__arrow--max" href="#"></a>кг<span class="cart__price">120.50грн</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__delivery">
+                                                <div class="cart__delivery-field">
+                                                    <div class="cart__delivery-name">Доставка:</div>
+                                                    <div class="cart__delivery-value">49.00 грн</div>
+                                                </div>
+                                                <div class="cart__delivery-field">
+                                                    <div class="cart__delivery-name">Сумма:</div>
+                                                    <div class="cart__delivery-value">54.50 грн</div>
+                                                </div>
+                                            </div>
+                                            <div class="cart__bonuses">
+                                                <div class="cart__bonuses-title">Ваши бонусы:*</div>
+                                                <div class="cart__bonuses-item"><span class="cart__bonuses-item-span">Бесплатная доставка</span></div>
+                                                <div class="cart__bonuses-item"><span class="cart__bonuses-item-span">Скидка 5% – экономия 119.75 грн</span></div>
+                                                <div class="cart__bonuses-text">Закажите еще на 4.95 грн<br> для скидки 7%</div>
+                                                <div class="cart__bonuses-info">* акционные товары в сумму скидки не учитываются</div>
+                                            </div>
+                                        </div><a class="button cart__button" href="#">Оформить заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--= End cart =-->
+
+                    </aside>
+                    <div class="layout-box__content" style="padding-top: 0">
+
+                        <!--= Catalog =-->
+                        <div class="catalog catalog--category">
+                            <div class="catalog__item">
+                                <div class="catalog__item-inner"><a class="catalog__picture" href="#"><img src="data/goods/1.png" alt="Конфеты Raffaello"/>
+                                        <div class="calendar calendar--tooltip">
+                                            <div class="calendar__drop">Можно заказать на завтра и позже</div>
+                                        </div>
+                                        <div class="status">
+                                            <div class="status__item status__item--share"></div>
+                                            <div class="status__item status__item--hit"></div>
+                                            <div class="status__item status__item--new"></div>
+                                        </div></a>
+                                    <div class="catalog__title"><a class="catalog__link" href="#" title="Конфеты Raffaello 150г">Конфеты Raffaello 150г</a></div>
+                                    <div class="price catalog__price"><span class="price__number">99 </span><span class="price__postfix">грн/шт.</span>
+                                    </div>
+                                    <button class="catalog__button">В корзину</button>
+                                    <!--else
+                                    .catalog__absent
+                                    button.catalog__button= val.button
+                                    
+                                    -->
+                                </div>
+                            </div>
+                            <div class="catalog__item">
+                                <div class="catalog__item-inner"><a class="catalog__picture" href="#"><img src="data/goods/2.png" alt="Красная икра малосольная"/></a>
+                                    <div class="catalog__title"><a class="catalog__link" href="#" title="Красная икра малосольная Горбуша 250г">Красная икра малосольная Горбуша 250г</a></div>
+                                    <div class="catalog__absent catalog__absent--absent"></div>
+                                    <!--(class='catalog__absent--' + val.absent)-->
+                                    <button class="catalog__button catalog__button--absent">Сообщите о наличии</button>
+                                    <!--else
+                                    .catalog__absent
+                                    button.catalog__button= val.button
+                                    
+                                    -->
+                                </div>
+                            </div>
+                            <div class="catalog__item">
+                                <div class="catalog__item-inner"><a class="catalog__picture" href="#"><img src="data/goods/3.png" alt="Кабачок"/>
+                                        <div class="calendar calendar--tooltip">
+                                            <div class="calendar__drop">Можно заказать на завтра и позже</div>
+                                        </div>
+                                        <div class="status">
+                                            <div class="status__item status__item--season"></div>
+                                        </div></a>
+                                    <div class="catalog__title"><a class="catalog__link" href="#" title="Кабачок">Кабачок</a></div>
+                                    <div class="catalog__absent catalog__absent--absent"></div>
+                                    <!--(class='catalog__absent--' + val.absent)-->
+                                    <button class="catalog__button catalog__button--absent">Сообщите о наличии</button>
+                                    <!--else
+                                    .catalog__absent
+                                    button.catalog__button= val.button
+                                    
+                                    -->
+                                </div>
+                            </div>
+                            <div class="catalog__item">
+                                <div class="catalog__item-inner"><a class="catalog__picture" href="#"><img src="data/goods/1.png" alt="Конфеты Raffaello"/>
+                                        <div class="calendar calendar--tooltip">
+                                            <div class="calendar__drop">Можно заказать на завтра и позже</div>
+                                        </div>
+                                        <div class="status">
+                                            <div class="status__item status__item--share"></div>
+                                            <div class="status__item status__item--hit"></div>
+                                            <div class="status__item status__item--new"></div>
+                                        </div></a>
+                                    <div class="catalog__title"><a class="catalog__link" href="#" title="Конфеты Raffaello 150г">Конфеты Raffaello 150г</a></div>
+                                    <div class="price catalog__price"><span class="price__number">99 </span><span class="price__postfix">грн/шт.</span>
+                                    </div>
+                                    <button class="catalog__button">В корзину</button>
+                                    <!--else
+                                    .catalog__absent
+                                    button.catalog__button= val.button
+                                    
+                                    -->
+                                </div>
+                            </div>
+                            <div class="catalog__item">
+                                <div class="catalog__item-inner"><a class="catalog__picture" href="#"><img src="data/goods/2.png" alt="Красная икра малосольная"/></a>
+                                    <div class="catalog__title"><a class="catalog__link" href="#" title="Красная икра малосольная Горбуша 250г">Красная икра малосольная Горбуша 250г</a></div>
+                                    <div class="catalog__absent catalog__absent--absent"></div>
+                                    <!--(class='catalog__absent--' + val.absent)-->
+                                    <button class="catalog__button catalog__button--absent">Сообщите о наличии</button>
+                                    <!--else
+                                    .catalog__absent
+                                    button.catalog__button= val.button
+                                    
+                                    -->
+                                </div>
+                            </div>
+                            <div class="catalog__item">
+                                <div class="catalog__item-inner"><a class="catalog__picture" href="#"><img src="data/goods/3.png" alt="Кабачок"/>
+                                        <div class="calendar calendar--tooltip">
+                                            <div class="calendar__drop">Можно заказать на завтра и позже</div>
+                                        </div>
+                                        <div class="status">
+                                            <div class="status__item status__item--season"></div>
+                                        </div></a>
+                                    <div class="catalog__title"><a class="catalog__link" href="#" title="Кабачок">Кабачок</a></div>
+                                    <div class="catalog__absent catalog__absent--absent"></div>
+                                    <!--(class='catalog__absent--' + val.absent)-->
+                                    <button class="catalog__button catalog__button--absent">Сообщите о наличии</button>
+                                    <!--else
+                                    .catalog__absent
+                                    button.catalog__button= val.button
+                                    
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--= End catalog =-->
+
+                        <!--= Pagination =-->
+                        <div class="pagination">
+                            <div class="pagination__item">
+                                <!-- .pagination__arrow--disabled - неактивность элемента-->
+                                <!-- "a" можно заменить на "span"--><span class="pagination__arrow pagination__arrow--prev pagination__arrow--disabled"></span>
+                            </div>
+                            <div class="pagination__item pagination__item--active"><a class="pagination__link" href="#">1</a></div>
+                            <div class="pagination__item"><a class="pagination__link" href="#">2</a></div>
+                            <div class="pagination__item"><a class="pagination__link" href="#">3</a></div>
+                            <div class="pagination__item">...</div>
+                            <div class="pagination__item"><a class="pagination__link" href="#">10</a></div>
+                            <div class="pagination__item"><a class="pagination__arrow pagination__arrow--next" href="#"></a></div>
+                        </div>
+                        <!--= End pagination =-->
+
+                    </div>
+                </div>
+
+                <!--= Navigation bottom =-->
+                <nav class="navigation hide-sm-max" id="nav_bottom">
+                    <div class="container">
+
+                        <!--= Primary menu =-->
+                        <div class="primary-menu">
+                            <ul class="primary-menu__list">
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--active primary-menu__link--mushrooms" href="#">Грибы</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--vegetables" href="#">Овощи</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--greenery" href="#">Зелень</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--fruits" href="#">Ягоды, фрукты</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--dried-fruits" href="#">Сухофрукты</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--nuts" href="#">Орехи</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--bakaleya" href="#">Бакалея</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--sweet" href="#">Сладости</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--drink" href="#">Напитки</a>
+                                </li>
+                                <li class="primary-menu__item"><a class="primary-menu__link primary-menu__link--sets" href="#">Наборы</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--= End primary menu =-->
+
+                    </div>
+                </nav>
+                <!--= End navigation bottom   =-->
+
+            </main>
+            <!--= End main =-->
+
+        </div>
+        <!--= End layout =-->
+
+        <!--= Footer =-->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__part hide-sm-max">
+
+                    <!--= Menu =-->
+                    <ul class="menu hide-sm-max">
+                        <li class="menu__item"><a class="menu__link" href="#">О наc</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Оптовым покупателям</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Выгодное соседство</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Карта сайта</a></li>
+                    </ul>
+                    <!--= End menu =-->
+
+                    <!--= Socnet =-->
+                    <ul class="socnet hide-sm-max">
+                        <li class="socnet__item"><a class="socnet__link socnet__link--facebook" href="#"></a>
+                            <div class="socnet__drop"><img src="data/vk.png" alt="" style="max-width: none;"/></div>
+                        </li>
+                        <li class="socnet__item"><a class="socnet__link socnet__link--vkontakte" href="#"></a>
+                            <div class="socnet__drop"><img src="data/vk.png" alt="" style="max-width: none;"/></div>
+                        </li>
+                        <li class="socnet__item"><a class="socnet__link socnet__link--instagram" href="#"></a>
+                            <div class="socnet__drop"><img src="data/vk.png" alt="" style="max-width: none;"/></div>
+                        </li>
+                    </ul>
+                    <!--= End cocnet =-->
+
+
+                    <!--= cards =-->
+                    <ul class="cards">
+                        <li><img class="cards__picture" src="data/cards/mastercard.png"></li>
+                        <li><img class="cards__picture" src="data/cards/visa.png"></li>
+                    </ul>
+                    <!--= End cards =-->
+
+                </div>
+                <div class="footer__part">
+
+                    <!--= Phone =-->
+                    <div class="phone">
+                        <div class="phone__item"><a class="phone__link" href="tel:+380443315163">+38 (044) 331-51-63</a></div>
+                        <div class="phone__item"><a class="phone__link" href="tel:+380677379979">+38 (067) 737-99-79</a></div>
+                        <div class="phone__item"><a class="phone__link" href="tel:+380501748337">+38 (050) 174-83-37</a></div>
+                        <div class="phone__item phone__item--callback"><a class="phone__callback" href="#">Обратний звонок</a></div>
+                    </div>
+                    <!--= End phone =-->
+
+                    <!--= Copyright =-->
+                    <div class="copyright" itemscope itemtype="http://schema.org/CreativeWork" itemprop="copyrightHolder" typeof="FreshMart">© 2011–2017 FreshMart</div>
+                    <!--= End copyright =-->
+
+                    <!--= Company =-->
+                    <div class="logo32x32"><span class="logo32x32__text">Разработан:</span><a class="logo32x32__image" href="http://32x32.com.ua/"><img src="assets/images/footer/32x32.png" alt="Компания 32x32"></a></div>
+                    <!--= End company =-->
+
+                </div>
+            </div>
+
+            <!--= Up =--><a class="up" href="#layout"><img class="anchor" src="assets/images/footer/up_arrow.png" alt=""></a>
+            <!--= End up =-->
+
+        </footer>
+        <!--= End footer =-->
+
+        <!--= Cart mobile =-->
+        <div class="cart-mobile" id="cart_mobile_btn"><a class="cart-mobile__btn" href="javascript:void(0)"></a></div>
+        <!--= End cart mobile =-->
+
+
+        <!--= Scripts =-->
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
+        <script src="../bower_components/jquery-selectric/public/jquery.selectric.min.js"></script>
+        <script src="assets/js/own.box.min.js"></script>
+        <script src="assets/js/main.min.js"></script>
+        <!--= End scripts =-->
+
+    </body>
+</html>

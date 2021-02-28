@@ -1,0 +1,11 @@
+mixin blogMenu(data)
+    //= Blog menu =
+    ul.blog-menu
+        each val in data
+            li.blog-menu__item
+                if (val.active)
+                    a.blog-menu__link(class='blog-menu__link--active' href='#')= val.name
+                else
+                    a.blog-menu__link(href='#')= val.name
+    //= End blog menu =
+    = '\n'

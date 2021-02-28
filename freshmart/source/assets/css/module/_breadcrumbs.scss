@@ -1,0 +1,105 @@
+.breadcrumbs {
+    position: relative;
+    margin-top: 15px;
+    color: $gray;
+
+    &__list {
+        position: relative;
+
+        @include clearfix;
+    }
+
+    &__item {
+        position: relative;
+        float: left;
+        margin: 0 6px 0 0;
+
+        &:after {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin: 0 0 0 6px;
+            content: '';
+            vertical-align: middle;
+            border-radius: 50%;
+            background: $brandPrimary;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__name {
+        font-size: $fontSizeH2;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0 0 10px;
+        text-align: center;
+        color: $gray;
+    }
+
+    &__title {
+        font-family: $fontFamilyNatilus;
+        font-size: $fontSizeH3;
+        font-weight: 400;
+        line-height: 1;
+        margin: 27px 0 15px;
+        letter-spacing: -1px;
+        color: $gray;
+
+        &--left {
+            margin: 0;
+        }
+
+        &:before {
+            position: relative;
+            top: -5px;
+            display: inline-block;
+            width: 15px;
+            height: 3px;
+            margin-right: 10px;
+            content: '';
+            background: $brandPrimary;
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__title {
+            font-size: $fontSizeH2;
+
+            &:before {
+                width: 30px;
+                margin-right: 14px;
+            }
+        }
+
+        &__name {
+            text-align: left;
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__title {
+            font-size: $fontSizeH7;
+
+            &:before {
+                top: -11px;
+            }
+        }
+
+        &__name {
+            font-size: $fontSizeH1;
+        }
+    }
+
+    @media (min-width: $screenLgMin) {
+        &__title {
+            font-size: $fontSizeH1;
+        }
+    }
+}

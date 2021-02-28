@@ -1,0 +1,119 @@
+.invoice {
+    padding: 20px;
+    border: 1px solid $border;
+    border-radius: 4px;
+    background: $grayLighter;
+
+    &__title {
+        font-size: $fontSizeH3;
+        margin-bottom: 20px;
+
+        &-date {
+            font-size: $fontSizeBase;
+        }
+    }
+
+    &__box {
+        margin-bottom: 20px;
+    }
+
+    &__field {
+        font-size: $fontSizeBase;
+        padding: 4px 0;
+    }
+
+    &__name {
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    &__value {
+        display: inline-block;
+        color: $grayDark;
+    }
+
+    &__order {
+        font-size: $fontSizeBase;
+        list-style-position: inside;
+        list-style-type: decimal;
+        border-top: 1px dashed $grayDark;
+
+        &-wrapper {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &-item {
+            padding: 8px 0 8px 30px;
+            border-bottom: 1px dashed $grayDark;
+        }
+
+        &-title {
+            font-weight: bold;
+        }
+    }
+
+    &__total {
+        font-size: $fontSizeBase;
+        margin-top: 20px;
+        padding-left: 30px;
+
+        &-field {
+            padding: 4px 0;
+        }
+
+        &-name {
+            display: inline-block;
+        }
+
+        &-value {
+            display: inline-block;
+        }
+    }
+
+    &__sign {
+        margin-top: 20px;
+
+        &-item {
+            font-weight: bold;
+            display: inline-block;
+            width: 200px;
+            margin: 0 20px 20px 0;
+            padding: 15px 15px 50px;
+            text-align: center;
+            color: $gray;
+            border: 1px dashed $grayDark;
+        }
+    }
+
+    &__text {
+        font-size: $fontSizeH4;
+        margin: 20px 20px 20px 60px;
+    }
+
+    @media (min-width: $screenSmMin) {
+        &__title {
+            font-size: $fontSizeH2;
+
+            &-date {
+                font-size: $fontSizeLarge;
+            }
+        }
+
+        &__field {
+            font-size: $fontSizeH4;
+        }
+
+        &__order {
+            font-size: $fontSizeLarge;
+        }
+
+        &__total {
+            font-size: $fontSizeLarge;
+        }
+
+        &__text {
+            font-size: $fontSizeLarge;
+        }
+    }
+}

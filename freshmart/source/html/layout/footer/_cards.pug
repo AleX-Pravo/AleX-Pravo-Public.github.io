@@ -1,0 +1,20 @@
+='\n'
+//= cards =
+//- (layout/_cards.scss)
+-
+    var cards = [
+        {
+            img: 'mastercard',
+        },
+        {
+            img: 'visa',
+        }
+    ]
+
+ul.cards
+    each item in cards
+        li
+            img.cards__picture(src = 'data/cards/' + item.img + '.png')
+
+//= End cards =
+='\n'

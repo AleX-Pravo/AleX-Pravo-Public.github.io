@@ -1,0 +1,68 @@
+= '\n'
+//= Submenu =
+-
+    var submenuList = [
+        [
+            'Помидоры, огурцы',
+            'Картофель, морковь, свекла',
+            'Капуста',
+            'Лук, чеснок',
+            'Перец',
+            'Кабачки, баклажаны',
+            'Грибы'
+        ],
+        [
+            'Редис',
+            'Корни',
+            'Экзотические овощи',
+            'Мини-овощи',
+            'Кукуруза, горошек',
+            'Тыква',
+            'Фасоль, бобы'
+        ]
+    ]
+
+    var submenuGood = [
+        {
+            image: '10',
+            title: 'Клубника',
+            oldprice: '675',
+            price: '563',
+            postfix: 'грн/кг',
+            status: [
+                {
+                    class: 'share'
+                }
+            ]
+        }
+    ]
+.submenu
+    .submenu__wrapper
+        each val in submenuList
+            .submenu__list
+                each list in val
+                    a.submenu__item(href='#')=list
+
+
+        .submenu__list
+            each val in submenuGood
+                .submenu__good
+                    a.submenu__good-picture(href='#')
+                        span.status
+                            each status in val.status
+                                span.status__item(class="status__item--" + status.class)
+                        img.submenu__good-image(src='data/goods/' + val.image + '.png' alt='')
+
+                    .submenu__goods-info
+
+                        a.submenu__good-title(href='#')=val.title
+
+                        .submenu__good-price.price
+                            if (val.oldprice !== undefined)
+                                span.price__old=val.oldprice
+                            span.price__number=val.price
+                            span.price__postfix=val.postfix
+
+
+//= End submenu =
+= '\n'

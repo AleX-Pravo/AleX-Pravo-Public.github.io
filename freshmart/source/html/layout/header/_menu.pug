@@ -1,0 +1,58 @@
+mixin headerMenu(className)
+
+    -
+        var headerMenu = [
+            {
+                name: 'О наc',
+                active: true
+            },
+            {
+                name: 'Блог'
+            },
+            {
+                name: 'Оплата и доставка'
+            },
+            {
+                name: 'Сотрудничество',
+                drop: [
+                    {
+                        name: 'Оптовим покупателям'
+                    },
+                    {
+                        name: 'Вакансии'
+                    }
+                ]
+            },
+            {
+                name: 'Контакты'
+            },
+            {
+                name: 'Отзывы'
+            }
+        ]
+
+    if (className != '')
+        - var name = className
+    else
+        - var name = ''
+
+    = '\n'
+    //= Menu =
+    ul.menu(class=name)
+        each val in headerMenu
+            if (val.active == true)
+                li.menu__item
+                    a.menu__link.menu__link--active(href='#')= val.name
+            else
+                li.menu__item
+                    a.menu__link(href='#')= val.name
+
+                    if ('drop' in val)
+                        .drop
+                            ul.drop__list
+                                each item in val.drop
+                                    li.drop__list-item
+                                        a.drop__list-link(href='#')= item.name
+
+    //= End menu =
+    = '\n'

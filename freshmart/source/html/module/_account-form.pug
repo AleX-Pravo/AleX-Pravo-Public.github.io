@@ -1,0 +1,83 @@
+= '\n'
+//= account-form =
+//- (source/assets/css/module/_account-form.scss)
+form.account-form(id='' action='#' method='post')
+    p.table-title Личные данные
+        span.edit
+    .account-form__personal
+        .account-form__wrapper
+            .form-group.has-error
+                .account-form__image
+                    img(src="data/icons/profile.svg", alt="")
+                input.form-control(type='text', placeholder='Гембаровський Олександр Сергійович')
+                .help-block
+            .form-group
+                .account-form__image
+                    img(src="data/icons/call.svg", alt="")
+                input.form-control(type='text', placeholder='+38(0__)___-__-__')
+            a.account-form__button(href="javascript:void(0)") Добавить еще один номер
+            .discount Ваша скидка <b>-2</b>
+                span %
+                .account-form__image
+                    img(src="data/icons/percent.svg", alt="")
+
+        .account-form__wrapper
+            .form-group.account-form__select
+                label.control-label Дата рождения
+                select.form-control.select2
+                    option(value='1' selected) 1983
+                    option(value='2') 1984
+                select.form-control.select2
+                    option(value='1' selected) Сентябрь
+                    option(value='2') Ноябрь
+                select.form-control.select2
+                    option(value='1' selected) 22
+                    option(value='2') 23
+            .form-group
+                .account-form__image
+                    img(src="data/icons/email.svg", alt="")
+                input.form-control(type='email', placeholder='info@freshmart.com.ua')
+            a.account-form__button(href="javascript:void(0)") Добавить еще один e-mail
+
+    p.table-title Адрес
+    .account-form__position
+        .account-form__address
+            h3 Домашний адрес
+                span.edit
+            .account-form__global
+                .form-group.has-error
+                    input.form-control(type='text', placeholder='Ивано Франковск')
+                    .help-block
+                .form-group
+                    input.form-control(type='text', placeholder='ул.Крещатик')
+
+            .account-form__local
+                .form-group
+                    input.form-control(type='text', placeholder='Дом №78')
+                .form-group
+                    input.form-control(type='text', placeholder='Квартира №967')
+                .form-group
+                    input.form-control(type='text', placeholder='Подъезд №16')
+                .form-group
+                    input.form-control(type='text', placeholder='Этаж №9')
+
+            .form-group
+                label Есть лифт
+                    input.checkbox(type="checkbox")
+
+            .form-group
+                textarea.form-control(type='text', placeholder='Коментарий' rows='4')
+
+        a.account-form__button(href="javascript:void(0)") + Добавить адрес
+
+    p.table-title Пароль
+    .account-form__password
+        .form-group
+            input.form-control(type='password', placeholder='Новый пароль')
+        .form-group
+            input.form-control(type='password', placeholder='Новий пароль еще раз')
+        .form-group
+            input.form-control(type='password', placeholder='Старый пароль')
+        button.catalog__button Сохранить
+//= End account-form =
+= '\n'

@@ -1,0 +1,25 @@
+.logo {
+    margin: 14px 0;
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        width: 270px;
+
+        @media (max-width: 419px) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+        max-width: 391px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 60px;
+    }
+
+    @media (min-width: $screenMdMin) {
+        float: left;
+        width: (400 / 1170 * 100%);
+    }
+}

@@ -1,0 +1,263 @@
+.comments {
+
+    &--product {
+        padding-top: 15px;
+
+        .comments {
+            &__item {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__reviews {
+        display: block;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        margin-bottom: 3px;
+
+        .rating {
+            margin-left: -5px;
+            margin-right: 13px;
+        }
+
+
+        .vote-block {
+            position: absolute;
+        }
+        .vote-result {
+            display: none;
+        }
+        .vote-success {
+            display: none;
+        }
+
+    }
+    &__title {
+        font-family: $fontFamilyNatilus;
+        font-size: $fontSizeH3;
+        font-weight: normal;
+        line-height: (50px / $fontSizeH3);
+        color: $gray;
+
+        &:before {
+            position: relative;
+            top: -8px;
+            display: inline-block;
+            width: 20px;
+            height: 3px;
+            margin-right: 14px;
+            content: '';
+            background: $brandPrimary;
+        }
+
+        &--decorate {
+            text-align: center;
+
+            &:after {
+                position: relative;
+                top: -8px;
+                display: inline-block;
+                width: 20px;
+                height: 3px;
+                margin-left: 14px;
+                content: '';
+                background: $brandPrimary;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
+
+        @include clearfix;
+    }
+
+    &__picture {
+        float: left;
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+    }
+
+    &__data {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__name {
+        font-size: $fontSizeH4;
+        font-weight: 700;
+        line-height: ($fontSizeH4 / $fontSizeH4);
+        margin-bottom: 6px;
+        color: $gray;
+    }
+
+    &__text {
+        font-size: $fontSizeBase;
+        line-height: (21px / $fontSizeBase);
+        margin-bottom: 10px;
+        color: $lightText;
+    }
+
+    &__complaint {
+        font-size: $fontSizeBase;
+        line-height: (21px / $fontSizeBase);
+        display: inline-block;
+        transition: all .2s ease-out;
+        text-decoration: none;
+        color: $gray;
+        border-bottom: 1px dashed $gray;
+
+        &:hover {
+            color: $brandPrimary;
+            border-color: transparent;
+        }
+    }
+
+    &__info {
+        position: static;
+        margin: 10px 0;
+    }
+
+    &__date {
+        font-size: $fontSizeBase;
+        font-weight: 700;
+        font-style: italic;
+        line-height: ($fontSizeBase / $fontSizeBase);
+        color: $gray;
+    }
+
+    &__likes,
+    &__dislikes {
+        position: relative;
+        padding-left: 26px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            margin-top: -8px;
+            content: '';
+            vertical-align: middle;
+            background: url('../images/content/icon/likes.png') 50px 50px no-repeat;
+        }
+
+        &:after {
+            transition: all .2s ease-out;
+            opacity: 0;
+        }
+    }
+
+    &__likes {
+        font-size: $fontSizeH4;
+        margin-left: 10px;
+        text-decoration: none;
+        color: $brandPrimary;
+
+        &:before {
+            background-position: 0 0;
+        }
+
+        &:after {
+            background-position: 0 -32px;
+        }
+
+        &--active,
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &--disabled {
+            cursor: default;
+            color: $lightText;
+
+            &:after {
+                opacity: 1;
+                background-position: 0 -16px;
+            }
+        }
+    }
+
+    &__dislikes {
+        font-size: $fontSizeH4;
+        margin-left: 10px;
+        text-decoration: none;
+        color: $brandDanger;
+
+        &:before {
+            background-position: -16px 0;
+        }
+
+        &:after {
+            background-position: -16px -32px;
+        }
+
+        &--active,
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &--disabled {
+            cursor: default;
+            color: $lightText;
+
+            &:after {
+                opacity: 1;
+                background-position: -16px -16px;
+            }
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__title {
+            font-size: $fontSizeH2;
+
+            &:before {
+                width: 30px;
+            }
+
+            &--decorate {
+                &:after {
+                    width: 30px;
+                }
+            }
+        }
+
+        &__reviews {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+
+
+        &__likes,
+        &__dislikes {
+            margin-left: 19px;
+        }
+    }
+
+    @media (min-width: 800px) {
+        &__info {
+            position: absolute;
+            top: -1px;
+            right: 0;
+            margin: 0;
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__title {
+            font-size: $fontSizeH1;
+        }
+    }
+}

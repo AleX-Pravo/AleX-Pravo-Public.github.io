@@ -1,0 +1,90 @@
+-
+    var smallArticleList = [
+        {
+            title: 'Хорошее настроение – здоровая жизнь',
+            text: 'В наше быстротечное время многие стараются следить за здоровым образом жизни, занимаясь в спортивных клубах, активно проводя время на свежем воздухе, посещая косметические салоны. Но очень часто',
+            image: '1',
+            category: '21.01 Рецепты',
+            tags: 'Итальянская кухня',
+            views: '15',
+            comments: '2'
+        },
+        {
+            title: 'Качественность продуктов – залог идеального здоровья',
+            text: 'В наше быстротечное время многие стараются следить за здоровым образом жизни, занимаясь в спортивных клубах, активно проводя время',
+            image: '2',
+            category: '21.01 Рецепты',
+            tags: 'Итальянская кухня',
+            views: '15',
+            comments: '2'
+        },
+        {
+            title: 'Доставка продуктов Freshmart - как мы работаем',
+            text: 'В наше быстротечное время многие стараются следить за здоровым образом жизни, занимаясь в спортивных клубах, активно проводя время на свежем воздухе, посещая косметические салоны. Но очень часто',
+            image: '3',
+            category: '21.01 Рецепты',
+            tags: 'Итальянская кухня',
+            views: '15',
+            comments: '2'
+        },
+        {
+            title: 'Онлайн продукты как это работает?',
+            text: 'Что Вы ощущаете, когда неожиданно понимаете, что холодильник абсолютно пустой и надо срочно идти в магазин, несмотря на то, что на улице дождь и нет ни времени, ни сил? Согласитесь, перспектива так себе.',
+            image: '4',
+            category: '21.01 Рецепты',
+            tags: 'Итальянская кухня',
+            views: '15',
+            comments: '2'
+        },
+        {
+            title: 'Кучмачи',
+            text: '',
+            image: '5',
+            category: '21.01 Рецепты',
+            tags: 'Итальянская кухня',
+            views: '15',
+            comments: '2'
+        },
+        {
+            title: 'Интернет магазин продуктов - недалекое будущее',
+            text: 'Согласитесь, в современном мире зачастую нам попросту не хватает времени заниматься такими простыми, но необходимыми делами, как',
+            image: '6',
+            category: '21.01 Рецепты',
+            tags: 'Итальянская кухня',
+            views: '15',
+            comments: '2'
+        }
+    ]
+
+//= Article =
+.article
+    .article__item.article__item--big
+        .article__picture
+            img.article__image(src='data/blog/1-big.png' alt='' itemprop='image')
+        .article__info
+            .article__category 21.01 Рецепты
+            .article__tags
+                a.article__tags-link(href='#') Итальянская кухня
+            .article__info-icons
+                .article__comments 2
+                .article__views 15
+        h2.article__title
+            a.article__title-link(href='#') Густой суп из брюссельской капусты
+
+    each article in smallArticleList
+        .article__item.article__item--small
+            a.article__picture(href='#')
+                img.article__image(src='data/blog/articles/' + article.image + '.png' alt='')
+            .article__data
+                .article__info
+                    .article__category= article.category
+                    .article__tags
+                        a.article__tags-link(href='')= article.tags
+                    .article__info-icons
+                        .article__comments= article.comments
+                        .article__views= article.views
+                h2.article__title
+                    a.article__title-link(href='#')= article.title
+                .article__text= article.text
+    //= End article =
+    = '\n'

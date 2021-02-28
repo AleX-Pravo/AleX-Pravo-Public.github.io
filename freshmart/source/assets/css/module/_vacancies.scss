@@ -1,0 +1,92 @@
+.vacancies {
+    margin-top: 10px;
+
+    &__item {
+        margin-bottom: 30px;
+
+    }
+
+    &__date {
+        font-size: 14px;
+        line-height: 1;
+        color: #999999;
+        margin-bottom: 15px;
+    }
+
+    &__name {
+        display: inline;
+        font-size: 24px;
+        line-height: 1.2;
+        color: #534746;
+        font-weight: 500;
+        text-decoration: none;
+
+        &-link {
+            display: inline;
+            text-decoration: underline;
+        }
+
+        &:hover {
+            .vacancies {
+                &__name {
+                    &-link {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: (24px / 16px);
+        color: #707070;
+        margin-top: 10px;
+    }
+
+    &__info {
+        padding-top: 5px;
+
+        &-item {
+            position: relative;
+            padding: 10px 0 10px 47px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 25px;
+        }
+
+        &-icon {
+            background: url('../images/content/icon/vacancies-info.png') 50px 50px no-repeat;
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            overflow: hidden;
+
+            &.employment {
+                background-position: 0 0;
+            }
+
+            &.experience {
+                background-position: -36px 0;
+            }
+
+            &.experience-full {
+                background-position: -108px 0;
+            }
+
+            &.salary {
+                background-position: -72px 0;
+            }
+        }
+        &-text {
+            font-size: 14px;
+            line-height: (24px / 14px);
+            text-transform: uppercase;
+            color: #999999;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.language,
+.cities {
+    margin-left: 18px;
+    float: right;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__box {
+        display: inline-block;
+        position: relative;
+        height: 26px;
+        cursor: pointer;
+
+        &-item {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: $fontFamilySansSerif;
+            color: $gray;
+            line-height: 1.5;
+            vertical-align: middle;
+            margin-right: 2px;
+        }
+
+        &-arrow {
+            display: inline-block;
+            margin-right: 2px;
+            width: 10px;
+            height: 6px;
+            background: url(../images/header/icon/button_up.svg) no-repeat;
+            transform: rotate(0deg);
+            transition: 0.3s;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            + .language  {
+                &__drop {
+                    display: block;
+                }
+            }
+
+            + .cities  {
+                &__drop {
+                    display: block;
+                }
+            }
+
+            .language,
+            .cities  {
+                &__box {
+                    &-arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__drop {
+        display: none;
+        position: absolute;
+        top: 30px;
+        cursor: pointer;
+        right: 0;
+        z-index: 5;
+        background-color: $base;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            //background: $base;
+            height: 50px;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &:hover {
+            display: block;
+        }
+    }
+
+    &__list {
+
+        &-item {
+            display: block;
+            text-align: right;
+            position: relative;
+            border: 1px solid $grayLight;
+            padding: 8px 15px;
+            border-bottom: 0;
+
+            &:last-child {
+                border-bottom: 1px solid $grayLight;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 26px;
+            color: $lightText;
+            //font-family: $fontFamilyproximanova_Rg;
+            font-size: 14px;
+
+            &:hover{
+                color: $brandPrimary;
+            }
+        }
+    }
+}
+
+.cities {
+
+    &__box {
+
+        &-item {
+            position: relative;
+            padding-left: 18px;
+
+            &:before {
+                position: absolute;
+                background:transparent url('../images/header/icon/location-pin.svg') no-repeat;
+                width: 13px;
+                height: 18px;
+                left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+-
+    var languageItems = [
+        {
+            link: '#',
+            name: 'ua'
+        },
+        {
+            link: '#',
+            name: 'ru'
+        },
+        // {
+        //     link: '#',
+        //     name: 'en'
+        // }
+    ]
+='\n'
+//=Language=
+//- (source/assets/css/layout/header/_language.scss)
+.language
+    .language__wrapper
+        .language__box
+            .language__box-item ru
+            .language__box-arrow
+        .language__drop
+            ul.language__list
+                each item in languageItems
+                    li.language__list-item
+                        a.language__list-link(href= item.link)= item.name
+
+//=End language=
+='\n'

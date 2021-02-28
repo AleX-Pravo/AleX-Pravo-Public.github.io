@@ -1,0 +1,116 @@
+.rewiews {
+    &__item {
+        position: relative;
+        color: $gray;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__user {
+        font-size: $fontSizeH4;
+        font-weight: 700;
+        line-height: (21px / $fontSizeH4);
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+
+    &__date {
+        font-size: $fontSizeSmall;
+        font-weight: 700;
+        font-style: italic;
+        line-height: (21px / $fontSizeSmall);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__text {
+        font-size: $fontSizeBase;
+        line-height: (24px / $fontSizeBase);
+        margin-top: 0;
+        //margin-bottom: 20px;
+        color: $lightText;
+    }
+
+    &__form {
+        margin: 22px 0 0 0;
+    }
+
+    &__callback {
+        text-decoration: none;
+        display: inline-block;
+        color: #96c93d;
+        border-bottom: 1px dashed #96c93d;
+        transition: all 0.2s ease-out;
+
+        &:hover,
+        &.active {
+            border-bottom-color: transparent;
+        }
+    }
+
+    &__answer {
+        margin-left: 20px;
+        margin-top: 22px;
+
+        .rewiews {
+            &__user {
+                &.freshmart {
+                    padding-left: 30px;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 21px;
+                        height: 21px;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background: $base url('../images/content/icon/freshmart.png') 50% 50% no-repeat;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin-top: -2px;
+                    }
+                }
+            }
+            &__text {
+                padding-left: 30px;
+            }
+
+            &__item {
+                padding-bottom: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom-color: transparent;
+
+                    .rewiews {
+                        &__text {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__user {
+            font-size: $fontSizeLarge;
+            line-height: (21px / $fontSizeLarge);
+        }
+
+        &__date {
+            font-size: $fontSizeBase;
+            line-height: (21px / $fontSizeBase);
+        }
+
+        &__text {
+            font-size: $fontSizeH4;
+            line-height: (24px / $fontSizeH4);
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.ownbox-lock {
+    overflow: hidden!important;
+}
+
+#ownbox-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: $ownbox-opacity;
+    background: $ownbox-bg;
+}
+
+#box {
+    position: relative;
+    min-height: 100%;
+    padding: 50px 0;
+}
+
+#ownbox {
+    position: fixed;
+    z-index: $ownbox-index;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow-x: auto;
+    overflow-y: scroll;
+
+    &-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 44px;
+        height: 44px;
+        margin: 0 auto;
+        margin: -17px 0 0 -17px;
+        padding: 10px;
+        border-radius: $ownbox-border-radius;
+        background: $ownbox-loader-bg;
+    }
+
+    .ownbox-close {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        transition: all .2s ease 0s;
+        text-decoration: none;
+        border-radius: 0 0 0 0;
+        background: $brandPrimary;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            background: url('../images/content/icon/close.png') no-repeat;
+        }
+
+        &:after {
+            transition: all .2s ease-out;
+            opacity: .6;
+            background-position: 0 0;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .form-content {
+        position: relative;
+        max-width: 360px;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: $ownbox-border-radius;
+        background: $base;
+    }
+
+    .my-orders {
+        position: relative;
+        border-radius: $ownbox-border-radius;
+        background: $base;
+        padding: 10px;
+        margin: 0 20px;
+
+        @media (min-width: 768px) {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .form-content {
+            margin: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+-
+    var cartItems = [
+        {
+            title: 'Шампиньоны для фаршировки',
+            quantity: '1.5',
+            price: '120.50'
+        },
+        {
+            title: 'Шампиньоны для фаршировки',
+            quantity: '1.5',
+            price: '120.50'
+        }
+    ]
+//= Cart =
+.cart#cart_mobile
+    .cart__drop
+        .cart__drop-title Корзина
+        a.cart__drop-close(href='javascript:void(0)')
+        .cart__drop-wrapper
+            .cart__drop-content
+
+                .cart__header
+                    .cart__title Корзина
+                    a.cart__close(href='#')
+                .cart__content
+                    .cart__list
+
+                        each val in cartItems
+                            .cart__section
+                                .cart__controls
+                                    a.cart__edit(href='#')
+                                    a.cart__close(href='#')
+
+                                a.cart__product(href='#')= val.title
+                                .cart__product-edit
+                                    textarea.cart__textarea
+                                    .cart__save
+                                        a.cart__link(href='#') Сохранить
+                                .cart__info
+                                    a.cart__arrow.cart__arrow--min(href='#')
+                                    input.cart__output(type='text' value=val.quantity)
+                                    a.cart__arrow.cart__arrow--max(href='#')
+                                    |кг
+
+                                    span.cart__price= val.price + 'грн'
+
+                    .cart__delivery
+                        .cart__delivery-field
+                            .cart__delivery-name Доставка:
+                            .cart__delivery-value 49.00 грн
+                        .cart__delivery-field
+                            .cart__delivery-name Сумма:
+                            .cart__delivery-value 54.50 грн
+
+                    .cart__bonuses
+                        .cart__bonuses-title Ваши бонусы:*
+                        .cart__bonuses-item
+                            span.cart__bonuses-item-span Бесплатная доставка
+                        .cart__bonuses-item
+                            span.cart__bonuses-item-span Скидка 5% – экономия 119.75 грн
+                        .cart__bonuses-text Закажите еще на 4.95 грн<br> для скидки 7%
+                        .cart__bonuses-info * акционные товары в сумму скидки не учитываются
+
+                a.button.cart__button(href='#') Оформить заказ
+//= End cart =
+= '\n'
