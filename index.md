@@ -48,25 +48,22 @@
 6. ![Image](https://alex-pravo.github.io/geography/prod/favicon.ico)
    [geography](https://alex-pravo.github.io/geography/prod/)
    
-7. [Grab My Essay Project](https://alex-pravo.github.io/Grab My Essay Project/prod/)
+7. [Grab My Essay Project](https://alex-pravo.github.io/GrabMyEssayProject/prod/)
 
-8. ![Image](https://alex-pravo.github.io/its-ukraineV2.0/prod/icon.ico)
-   [its-ukraineV2.0](https://alex-pravo.github.io/its-ukraineV2.0/prod/)
+8. [its-ukraineV2.0](https://alex-pravo.github.io/its-ukraineV2.0/prod/)
 
 9. ![Image](https://alex-pravo.github.io/mirad/prod/favicon.ico)
    [mirad](https://alex-pravo.github.io/mirad/prod/)
 
-10. ![Image](https://alex-pravo.github.io/patifonV2.0/prod/favicon.ico)
+10. ![Image](https://alex-pravo.github.io/patifonV2.0/prod/favicon.png)
    [patifonV2.0](https://alex-pravo.github.io/patifonV2.0/prod/)
    
-11. ![Image](https://alex-pravo.github.io/mirad/sprinteravto/icon.ico)
-   [sprinteravto](https://alex-pravo.github.io/sprinteravto/prod/)
+11. [sprinteravto](https://alex-pravo.github.io/sprinteravto/prod/)
    
 12. ![Image](https://alex-pravo.github.io/ua-development/production/icon.ico)
    [ua-development](https://alex-pravo.github.io/ua-development/production/)
    
-13. ![Image](https://alex-pravo.github.io/waterpost/prod/icon.ico)
-   [waterpost](https://alex-pravo.github.io/waterpost/prod/)
+13. [waterpost](https://alex-pravo.github.io/waterpost/prod/)
    
 14. ![Image](https://alex-pravo.github.io/zagrava/production/favicon.png)
    [zagrava](https://alex-pravo.github.io/zagrava/production/)
