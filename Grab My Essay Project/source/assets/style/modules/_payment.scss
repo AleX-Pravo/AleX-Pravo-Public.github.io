@@ -1,0 +1,23 @@
+/* Payment */
+.payment {
+	display: flex;
+
+	&__item {
+		margin-right: 10px;
+	}
+
+	//480px
+	@media (min-width: $screen_XS_Min) {
+
+		&__item {
+			margin-right: 0;
+		}
+	}
+	//768px
+	@media (min-width: $screen_M_Min) {
+
+		&__item {
+			margin-left: 10px;
+		}
+	}
+}

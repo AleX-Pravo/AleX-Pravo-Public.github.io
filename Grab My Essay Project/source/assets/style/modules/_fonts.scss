@@ -1,0 +1,27 @@
+/* Neo Display */
+@font-face {
+  font-family: 'Neo Display';
+  src: url('../fonts/Noe_Display/NoeDisplay-Medium.woff2') format('woff2'),
+       url('../fonts/Noe_Display/NoeDisplay-Medium.woff') format('woff');
+  font-weight: normal;
+}
+
+/* Gilroy */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy/regular/Gilroy-Regular.woff2') format('woff2'),
+  url('../fonts/Gilroy/regular/Gilroy-Regular.woff') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy/light/Gilroy-Light.woff2') format('woff2'),
+  url('../fonts/Gilroy/light/Gilroy-Light.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy/medium/Gilroy-Medium.woff2') format('woff2'),
+  url('../fonts/Gilroy/medium/Gilroy-Medium.woff') format('woff');
+  font-weight: 500;
+}

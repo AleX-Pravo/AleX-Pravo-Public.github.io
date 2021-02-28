@@ -1,0 +1,110 @@
+/* Promo */
+.promo {
+	padding-bottom: 26px;
+
+	&__wrapper {
+		background: $primaryColor;
+		height: 26px;
+		display: flex;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 999;
+		justify-content: flex-end;
+	}
+
+	&__info {
+		width: 100%;
+		
+		p {
+			font-size: 13px;
+			line-height: 26px;
+			text-transform: uppercase;
+			color: #CCFF84;
+			//width: 100%;
+			//animation-play-state: running;
+			//animation: text-anime 9s infinite linear;
+			animation: scroll 16s infinite linear;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+
+	&__button {
+		background: #CCFF84;
+		width: 110px;
+		height: 26px;
+		color: $grayBase;
+		text-transform: uppercase;
+		font-size: 13px;
+		line-height: 26px;
+		text-align: right;
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+		z-index: 1;
+		position: relative;
+		flex-shrink: 0;
+		display: block;
+		padding: 0 10px;
+
+		&:before {
+			position: absolute;
+			content: '\2192';
+			//right: 132px;
+			top: 50%;
+			font-size: 16px;
+			line-height: 16px;
+			margin-top: -8px;
+			color: $grayBase;
+			left: 8px;
+		}
+	}
+
+	&__close {
+		width: 28px;
+		height: 26px;
+		line-height: 26px;
+		cursor: pointer;
+		position: relative;
+		text-decoration: none;
+		z-index: 1;
+		background: $primaryColor;
+		flex-shrink: 0;
+
+		&:before {
+			content: '';
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: url('../img/close.svg') 50% 50% no-repeat;
+		}
+	}
+
+	//480px
+	@media (min-width: $screen_XS_Min) {
+
+		&__button {
+			width: 150px;
+			text-align: center;
+			padding: 0;
+
+			&:before {
+				left: 20px;
+			}
+		}
+	}
+}
+
+@keyframes scroll {
+	0% {
+		transform: translate(100%, 0);
+	}
+	100% {
+		transform: translate(-100%, 0)
+	}
+}

@@ -1,0 +1,133 @@
+/* Layout */
+.layout {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	//overflow: hidden;
+
+	&--box {
+		.layout {
+			&__header,
+			&__body,
+			&__footer {
+				width: 100%;
+				max-width: $containerMaxWidth;
+				margin: auto;
+				/*padding: 0 $containerPadding;*/
+			}
+		}
+	}n
+
+	&--left {
+		.layout {
+			&__main {
+				order: 1;
+			}
+		}
+	}
+
+	&--right {
+		.layout {
+			&__side {
+				order: 1;
+			}
+		}
+	}
+
+	&__header {
+		flex: none;
+		height: 80px;
+		//height: 150px;
+	}
+
+	&__body {
+		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content {
+		//display: flex;
+		//flex: 1 0 auto;
+		//flex-flow: column nowrap;
+	}
+
+	&__main {
+		//flex: 1;
+		//padding: $containerPadding;
+	}
+
+	&__side {
+		width: 100%;
+		/*transition: all 0.2s ease-out;*/
+
+		&--stretch {
+			display: flex; /* for vertical stretch */
+		}
+	}
+
+	&__footer {
+		flex: none;
+	}
+
+	@media (min-width: 1024px) {
+		&__content {
+			flex-flow: row nowrap;
+		}
+
+		&__side {
+			width: 280px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		@media (max-width: 1224px) {
+
+			.layout__header {
+				height: 130px;
+			}
+		}
+	}
+}
+
+.label-icon {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background: url('../img/best-icon.svg') 50% 50% no-repeat;
+		position: relative;
+		top: 3px;
+		margin-right: 4px;
+	}
+}
+
+.bg-blue {
+	font-size: $fontSize13;
+	font-weight: 600;
+	line-height: 16px;
+	color: $grayDarker;
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: $backgroundColor_blue;
+	padding: 6px 26px 4px 15px;
+}
+
+.bg-pink {
+	font-size: $fontSize13;
+	font-weight: 600;
+	line-height: 16px;
+	color: $grayDarker;
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: $backgroundColor_pink;
+	padding: 6px 26px 4px 15px;
+}
+

@@ -1,0 +1,17 @@
+/* Rate */
+.rate {
+  display: inline-block;
+  vertical-align: middle;
+
+  &__item {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../img/star-total.svg') 50% 50% no-repeat;
+
+    &.active {
+      background-image: url('../img/star-total-active.svg');
+    }
+  }
+}

@@ -1,0 +1,296 @@
+/* Discounts */
+.discounts {
+	padding: 40px 15px 80px;
+
+	&__title {
+		font-size: 35px;
+		line-height: 1;
+		color: #000615;
+		font-family: $headingFont;
+		margin-bottom: 15px;
+	}
+
+	&__label {
+		display: inline-block;
+		padding: 5px 15px;
+		background: #FDFBE0;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: bold;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 28px;
+		color: #393939;
+		margin-bottom: 65px;
+		border-left: 1px solid #000;
+		padding-left: 19px;
+		margin-left: 6px;
+
+		p {
+			margin-bottom: 28px;
+		}
+
+	}
+
+	&__block {
+		margin-bottom: 60px;
+		border-radius: 4px;
+
+		&-title {
+			color: #000615;
+			font-size: 28px;
+			font-family: $headingFont;
+			position: relative;
+			margin-bottom: 21px;
+			text-align: center;
+		}
+	}
+
+	&__list {
+		background: #EFFBF2;
+		padding: 50px 15px 22px 46px;
+	}
+
+	&__item {
+		display: flex;
+		flex-flow: column nowrap;
+		margin-bottom: 50px;
+		align-items: flex-start;
+		margin-bottom: 44px;
+	}
+
+	&__name {
+		font-size: 20px;
+		line-height: 46px;
+		font-family: $headingFont;
+		width: 150px;
+		margin-bottom: 10px;
+		font-weight: bold;
+		color: #000615;
+
+		span {
+			font-size: 42px;
+			line-height: 30px;
+			margin-right: 6px;
+		}
+	}
+
+	&__value {
+		font-size: 16px;
+		line-height: 18px;
+		color: #2C2C2C;
+	}
+
+	&__support {
+		position: relative;
+		background: #FDFAF6;
+		padding: 37px 70px 30px 20px;
+		margin: 0 -15px;
+
+		&-info {
+			display: flex;
+			justify-content: space-between;
+			flex-flow: column nowrap;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: -9px;
+				right: 9px;
+				width: 140px;
+				height: 101px;
+				background: url('../img/telephone.png') 50% 50% no-repeat;
+			}
+		}
+
+		&-data {
+
+		}
+
+		&-title {
+			color: #000615;
+			font-family: $headingFont;
+			font-weight: 500;
+			font-size: 35px;
+			line-height: 35px;
+			margin-bottom: 21px;
+		}
+
+		&-text {
+			font-size: 15px;
+			line-height: 25px;
+			color: #2C2C2C;
+			margin-bottom: 23px;
+		}
+
+		&-button {
+			max-width: 260px;
+			width: 100%;
+		}
+	}
+
+	@media (min-width: 550px) {
+
+		&__header {
+			border-left: 1px solid #000;
+			padding-left: 29px;
+		}
+
+		&__text {
+			border-left: none;
+			padding-left: 0;
+			margin-left: 0;
+		}
+	}
+
+	@media (min-width: 768px) {
+		padding: 90px 40px 0;
+
+		&__title {
+			font-size: 50px;
+			margin-bottom: 24px;
+		}
+
+		&__block {
+			padding: 57px 15px 6px 65px;
+			margin-bottom: 71px;
+			background: #EFFBF2;
+
+			&-title {
+				font-size: 38px;
+				text-align: left;
+				padding-bottom: 50px;
+				margin-bottom: 50px;
+
+				&:before {
+					content: '';
+					height: 1px;
+					width: 90px;
+					background: #000;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+		}
+
+		&__list {
+			padding: 0;
+		}
+
+		&__item {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			margin-bottom: 54px;
+		}
+
+		&__name {
+			margin-bottom: 0;
+
+			span {
+				font-size: 38px;
+				line-height: 46px;
+			}
+		}
+
+		&__support {
+			padding: 21px 30px 17px 0;
+			margin: 0 -25px;
+
+			&-info {
+				align-items: center;
+				flex-flow: row nowrap;
+
+				&:before {
+					top: -11px;
+					left: -15px;
+					right: auto;
+				}
+			}
+
+			&-data {
+				padding-left: 135px;
+				padding-right: 15px;
+			}
+
+			&-title {
+				font-size: 28px;
+				line-height: 38px;
+				margin-bottom: 6px;
+			}
+
+			&-text {
+				line-height: 22px;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	//1024px
+	@media (min-width: $screen_L_Min) {
+		padding: 60px 0 80px 15px;
+
+		&__header {
+			border-left: 1px solid #000;
+			padding-left: 50px;
+		}
+
+		&__title {
+			font-size: 56px;
+			margin-bottom: 15px;
+		}
+
+		&__block {
+			padding: 55px 15px 3px 115px;
+			margin-bottom: 70px;
+
+			&-title {
+				font-size: 44px;
+				margin-bottom: 60px;
+			}
+		}
+
+		&__support {
+			padding: 21px 30px 25px 0;
+			margin: 0;
+
+			&-info {
+
+				&:before {
+					top: -10px;
+					left: 0;
+				}
+			}
+
+			&-data {
+				padding-left: 160px;
+			}
+		}
+
+		@media (max-width: 1225px) {
+
+			&__support {
+
+				&-info {
+					flex-flow: column nowrap;
+				}
+
+				&-data {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		@media (max-width: 1224px) {
+			padding: 66px 40px 76px;
+		}
+	}
+}
+
+

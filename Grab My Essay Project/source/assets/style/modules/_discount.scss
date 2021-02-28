@@ -1,0 +1,102 @@
+/* Discount */
+.discount {
+	background: #FEF1EC;
+	padding: 35px 20px 30px 20px;
+	position: relative;
+	border-radius: 4px;
+	margin-bottom: 40px;
+
+	&:before {
+		content: '';
+		background: url('../img/discount.svg') 50% 50% no-repeat;
+		position: absolute;
+		top: -24px;
+		right: 10px;
+		width: 81px;
+		height: 96px;
+	}
+
+	&__title {
+		color: #000615;
+		font-size: 32px;
+		line-height: 35px;
+		font-weight: bold;
+
+		br {
+			display: none;
+		}
+	}
+
+	&__label {
+		color: #fff;
+		font-size: 13px;
+		line-height: 1;
+		display: inline-block;
+		padding: 7px 15px 6px 34px;
+		background: #000;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin: 15px 0 25px;
+		position: relative;
+
+		&:before {
+			content: '';
+			width: 14px;
+			height: 15px;
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			transform: translateY(-50%);
+			background: url('../img/tag.svg') 50% 50% no-repeat;
+		}
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 22px;
+		color: #2C2C2C;
+
+		span {
+			color: #40AC60;
+		}
+	}
+
+	//768px
+	@media (min-width: $screen_M_Min) {
+		margin: 0 25px 40px;
+		padding: 30px 20px 27px 30px;
+
+		&:before {
+			top: -16px;
+			right: 30px;
+			width: 81px;
+			height: 96px;
+		}
+
+		&__label {
+			margin: 15px 0 15px;
+		}
+	}
+
+	//1024px
+	@media (min-width: $screen_L_Min) {
+		margin: 65px 0 40px;
+		padding: 25px 20px 27px 21px;
+
+		&:before {
+			top: -25px;
+			right: 20px;
+		}
+
+		&__title {
+
+			br {
+				display: block;
+			}
+		}
+
+		&__label {
+			margin: 20px 0 20px;
+		}
+	}
+}

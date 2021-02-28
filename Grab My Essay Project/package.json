@@ -1,0 +1,25 @@
+{
+  "name": "base_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Oleksandr Kozachuk <css3@ukr.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-minifier": "^2.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "dependencies": {}
+}

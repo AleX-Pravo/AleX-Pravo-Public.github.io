@@ -1,0 +1,69 @@
+/* Paginator */
+.paginator {
+  text-align: center;
+
+  &__wrapper {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__arrow {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 50px;
+    border-radius: 50%;
+    background: #EFFBF2;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      border: 1px solid #000;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 7px;
+      height: 11px;
+    }
+
+    &--back {
+      margin-right: 40px;
+
+      &:before {
+        background: url('../img/prevarrow.svg') 50% 50% no-repeat;
+      }
+    }
+    &--next {
+      margin-left: 40px;
+
+      &:before {
+        background: url('../img/nextarrow.svg') 50% 50% no-repeat;
+      }
+    }
+  }
+  &__current {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #626262;
+    margin-right: 12px;
+  }
+  &__link {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #E2E7ED;
+    margin-right: 12px;
+    text-decoration: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

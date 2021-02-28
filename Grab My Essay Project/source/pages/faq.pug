@@ -1,0 +1,134 @@
+doctype html
+html(lang='ru')
+    head
+        include partials/_head.pug
+        title FAQ
+        include partials/_styles.pug
+
+    body
+        = '\n'
+        // layout
+        .layout
+            .layout__header
+                include modules/_header.pug
+
+            .layout__body
+                .layout__content
+                    main.layout__main
+
+                        = '\n'
+                        // box
+                        .box
+                            .box__content
+
+                                -
+                                    let faqs = [
+                                        {
+                                            title: 'Basic Information About GrabMyEssay.com',
+                                            list: [
+                                                {
+                                                    name: 'What is GrabMyEssay.com?',
+                                                    value: [
+                                                        'It is a professional writing service that specializes in all types of academic writing, for students from high school through graduate study. Such writing may include essays, research papers, analyses, case studies, lab reports, book reviews, presentations, research projects, literature reviews, theses, dissertations, and admissions/scholarship essays. It is our mission to promote academic success by providing students with superior research and writing, produced by exceptional writers and editors, each of whom has specific academic credentials related to the content fields in which they write.',
+                                                        'In addition to academic writing, provides a wide variety of other writing – resumes, CV’s, articles, blog posts, website copy, and a full range of business-related products – proposals, presentations, and reports. Anyone whois concerned about their own writing skills should contact us for exceptional assistance.'
+                                                    ]
+                                                },
+                                                {
+                                                    name: 'How is GrabMyEssay.com different from any other service I can find on the web?',
+                                                    value: ['text']
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            title: 'The Ordering Process',
+                                            list: [
+                                                {
+                                                    name: 'How do I place an order?',
+                                                    value: ['text']
+                                                },
+                                                {
+                                                    name: 'What if I am not satisfied with the final draft I receive?',
+                                                    value: ['text']
+                                                },
+                                                {
+                                                    name: 'How do I pay for an order?',
+                                                    value: ['text']
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            title: 'Our Writers',
+                                            list: [
+                                                {
+                                                    name: 'How do you assign writers to orders?',
+                                                    value: ['text']
+                                                },
+                                                {
+                                                    name: 'Can I speak directly with my writer?',
+                                                    value: ['text']
+                                                },
+                                                {
+                                                    name: 'Do you have writers in all subjects and for any level of study?',
+                                                    value: ['text']
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            title: 'Resume/CV Production',
+                                            list: [
+                                                {
+                                                    name: 'Do you have writers for resumes and CV’s?',
+                                                    value: ['text']
+                                                },
+                                                {
+                                                    name: 'What types of writers do you use for resumes?',
+                                                    value: ['text']
+                                                },
+                                                {
+                                                    name: 'Who writes the CV’s?',
+                                                    value: ['text']
+                                                }
+                                            ]
+                                        }
+
+                                    ]
+
+
+                                = '\n'
+                                // faqs
+                                .faqs
+                                    h1.faqs__title Frequently Asked Questions
+                                    h2.faqs__label GRABMYESSAY.COM OFFERS TO EVALUATE SAMPLES OF VARIOUS TYPES OF PAPERS
+
+                                    each item in faqs
+                                        h3.faqs__name= item.title
+                                        .faqs__content
+                                            each val in item.list
+                                                .faqs__item
+                                                    .faqs__appellation
+                                                        h4.faqs__appellation-title= val.name
+                                                        .faqs__appellation-icon
+                                                    .faqs__value
+                                                        each paragraph in val.value
+                                                            p= paragraph
+
+                                // end faqs
+                                = '\n'
+
+                            .box__side
+                                .box__item
+                                    include modules/_getaprice.pug
+                        // end box
+                        = '\n'
+
+                        include modules/_need.pug
+
+            .layout__footer
+                include modules/_footer.pug
+                include modules/_promo.pug
+
+        // end layout
+        = '\n'
+        include modules/_up.pug
+        include modules/_cookies.pug
+        include partials/_scripts.pug

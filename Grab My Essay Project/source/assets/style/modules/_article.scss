@@ -1,0 +1,151 @@
+/* Article */
+.article {
+	padding: 22px 15px 80px;
+
+	&__title {
+		font-size: 35px;
+		line-height: 40px;
+		color: #000615;
+		margin-bottom: 35px;
+		font-family: $headingFont;
+		font-weight: 500;
+	}
+
+	&__tags {
+		margin-bottom: 25px;
+	}
+
+	&__tag {
+		color: #696969;
+		font-size: 13px;
+		line-height: 15px;
+		background: #FDFBE0;
+		display: inline-block;
+		padding: 6px;
+		margin: 0 8px 8px 0;
+	}
+
+	&__picture {
+		margin-bottom: 40px;
+	}
+
+	&__image {
+		width: 100%;
+		min-width: 100%;
+	}
+
+	&__subtitle {
+		font-size: 38px;
+		line-height: 46px;
+		color: #000615;
+		font-family: $headingFont;
+		font-weight: normal;
+	}
+
+	&__name {
+		font-size: 20px;
+		line-height: 24px;
+		color: #000000;
+		margin-bottom: 14px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 28px;
+		color: #2C2C2C;
+		margin-bottom: 30px;
+
+		ol {
+			list-style-type: decimal;
+			margin-left: 27px;
+			font-size: 16px;
+			line-height: 28px;
+		}
+
+		ul {
+			li {
+				position: relative;
+				padding-left: 30px;
+
+				&:before {
+					content: '';
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					left: 0;
+					top: 4px;
+					background: url('../img/marker.svg') 50% 50% no-repeat;
+				}
+			}
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 28px;
+			color: #2C2C2C;
+			margin: 28px 0;
+		}
+
+		span, a {
+			color: #40AC60;
+			text-decoration: none;
+		}
+	}
+
+	&__code {
+		margin-bottom: 55px;
+	}
+
+	&__action {
+		text-align: center;
+	}
+
+	&__button {
+		text-decoration: none;
+		max-width: 200px;
+		width: 100%;
+		height: 44px;
+		line-height: 44px;
+	}
+
+	@media (min-width: 768px) {
+
+		&__action {
+			text-align: left;
+		}
+
+		&__title {
+			font-size: 50px;
+			margin-bottom: 44px;
+
+			br {
+				display: none;
+			}
+		}
+
+		&__button {
+			max-width: 260px;
+		}
+	}
+
+	//1024px
+	@media (min-width: $screen_L_Min) {
+		padding: 6px 0 80px 15px;
+
+		&__title {
+			font-size: 56px;
+			line-height: 58px;
+		}
+
+		&__button {
+			max-width: 200px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		@media (max-width: 1224px) {
+			padding: 26px 40px 80px;
+		}
+	}
+}
+

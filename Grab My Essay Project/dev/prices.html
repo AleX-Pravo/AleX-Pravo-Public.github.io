@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prices</title>
+    <link rel="stylesheet" href="assets/vendor/css/nanoscroller.css">
+    <link rel="stylesheet" href="assets/vendor/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="assets/vendor/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <!-- layout-->
+    <div class="layout">
+      <div class="layout__header">
+
+        <!-- header-->
+        <header class="header">
+          <div class="header__wrapper container container--fluit">
+            <div class="header__logo">
+
+              <!-- logo-->
+              <div class="logo"><a class="logo__link" href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+              </div>
+              <!-- end logo-->
+
+            </div>
+            <div class="header__nav header__nav--close">
+
+              <!-- navigation-->
+              <div class="navigation">
+                <ul class="navigation__list">
+                                <li><a class="navigation__link" href="#">Prices</a></li>
+                                <li><a class="navigation__link" href="#">Samples</a></li>
+                                <li><a class="navigation__link" href="#">Discounts</a></li>
+                                <li class="drop_list"><i class="more"></i><a class="more" href="#">More</a>
+                                  <ul>
+                                                  <li><a class="navigation__link" href="#">Extras</a></li>
+                                                  <li><a class="navigation__link" href="#">Testimonials</a></li>
+                                                  <li><a class="navigation__link" href="#">Blog</a></li>
+                                                  <li><a class="navigation__link" href="#">FAQ</a></li>
+                                                  <li><a class="navigation__link" href="#">Contact us</a></li>
+                                  </ul>
+                                </li>
+                </ul>
+              </div>
+              <!-- end navigation-->
+
+            </div>
+            <div class="header__relations">
+
+              <!-- relations-->
+              <div class="relations">
+                <div class="relations__item relations__item--chat"><a class="relations__link fz14" href="#">Live Chat</a></div>
+                <div class="relations__item relations__item--phone"><a class="relations__link" href="tel:18665157710">1-866-515-7710</a></div>
+              </div>
+              <!-- end relations-->
+
+            </div>
+            <div class="header__cabinet" style="display: none;">
+
+              <!-- cabinet-->
+              <div class="cabinet">
+                <div class="cabinet__item">
+                  <div class="cabinet__user"><a class="cabinet__user-link" href="#">Francis Gonzalez</a>
+                    <ul class="cabinet__user-drop">
+                      <li><a href="#">New Order</a></li>
+                      <li><a href="#">My Orders</a></li>
+                      <li><a href="#">My Discounts</a></li>
+                      <li><a href="#">Settings</a></li>
+                      <li><a href="#">My Balance</a></li>
+                      <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                  </div>
+                  <div class="cabinet__messages"><a class="cabinet__messages-link" href="#"><span class="cabinet__messages-count">7</span></a>
+                    <div class="cabinet__messages-drop"></div>
+                  </div>
+                </div>
+                <div class="cabinet__item"><a class="cabinet__link" href="#">Log Out</a></div>
+                <!--.cabinet__itema.cabinet__link(href='#') Login
+                -->
+                <!--.cabinet__item.cabinet__button.button.button--tiny New Order-->
+              </div>
+              <!-- end cabinet-->
+
+            </div>
+            <div class="header__enter">
+
+              <!--= enter =-->
+              <div class="enter">
+                <div class="enter__item"><a class="enter__login" href="#">Login</a></div>
+                <div class="enter__item"><a class="enter__order" href="#">New Order</a></div>
+              </div>
+              <!--= End enter =-->
+
+            </div><a class="header__button" href="#"><span class="header__button-line"></span></a>
+          </div>
+        </header>
+        <!-- end header-->
+
+      </div>
+      <div class="layout__body">
+        <div class="layout__content">
+          <main class="layout__main">
+
+            <!-- box-->
+            <div class="box">
+              <div class="box__content">
+
+                <!-- price-->
+                <div class="price">
+                  <div class="price__title">Prices</div>
+                  <div class="price__text">
+                    <p class="price__slogan">The price for your custom paper depends mainly on three aspects:</p>
+                    <ul>
+                      <li>Urgency</li>
+                      <li>Academic level</li>
+                      <li>Number of pages</li>
+                    </ul>
+                    <p>
+                      The given table shows the price per 1 page of your order for writing from scratch. Use Type of Service button to choose the specific type of assignment and/or service you need.
+                      
+                    </p>
+                  </div>
+                  <div class="price__form">
+                    <label class="price__checkbox">
+                      <input class="price__checkbox-input" type="checkbox" checked="checked"><span class="price__checkbox-checker"></span><span class="price__checkbox-label">I’m a new customer <span>(15% OFF)</span></span>
+                    </label>
+                    <div class="price__box">
+                      <div class="price__field f_group currency">
+                        <label class="price__label">Select currency</label>
+                        <div class="price__check currency_check">
+                          <input type="radio" name="currency" id="currency_USD" checked="checked">
+                          <label for="currency_USD">USD</label>
+                          <input type="radio" name="currency" id="currency_GBP">
+                          <label for="currency_GBP">GBP</label>
+                          <input type="radio" name="currency" id="currency_EUR">
+                          <label for="currency_EUR">EUR</label>
+                          <input type="radio" name="currency" id="currency_CAD">
+                          <label for="currency_CAD">CAD</label>
+                          <input type="radio" name="currency" id="currency_AUD">
+                          <label for="currency_AUD">AUD</label>
+                        </div>
+                      </div>
+                      <div class="price__field f_group">
+                        <label class="price__label">Type of paper</label>
+                        <div class="price__select f_select">
+                          <select>
+                            <option>Essay</option>
+                            <option>Essay</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="price__field f_group">
+                        <label class="price__label">Type of service</label>
+                        <div class="price__select f_select">
+                          <select>
+                            <option>Academic paper writing</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="price__field f_group">
+                        <label class="price__label">Academic level</label>
+                        <div class="price__select f_select">
+                          <select>
+                            <option>Hight school</option>
+                            <option>Hight school</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="price__field f_group">
+                        <label class="price__label">Urgency</label>
+                        <div class="price__select f_select">
+                          <select>
+                            <option>14 days</option>
+                            <option>14 days</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="price__field f_group pages">
+                        <label class="price__label">Pages *825 words</label>
+                        <div class="price__select spin_edit_wrapper">
+                          <input type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <label class="price__item">
+                      <div class="price__days">14 days</div>
+                      <div class="price__date">06/01/2020</div>
+                      <div class="price__price">$ 14.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">10 days</div>
+                      <div class="price__date">05/28/2020</div>
+                      <div class="price__price">$ 15.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">7 days</div>
+                      <div class="price__date">05/25/2020</div>
+                      <div class="price__price">$ 16.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">6 days</div>
+                      <div class="price__date">Sunday at 9:27 AM</div>
+                      <div class="price__price">$ 17.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">5 days</div>
+                      <div class="price__date">Saturday at 9:27 AM</div>
+                      <div class="price__price">$ 19.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">4 days</div>
+                      <div class="price__date">Wednesday at 9:27 AM</div>
+                      <div class="price__price">$ 21.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">3 days</div>
+                      <div class="price__date">Thursday at 9:27 AM</div>
+                      <div class="price__price">$ 23.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">48 hours</div>
+                      <div class="price__date">Wednesday at 9:27 AM</div>
+                      <div class="price__price">$ 25.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">24 hours</div>
+                      <div class="price__date">Tomorrow at 9:27 AM</div>
+                      <div class="price__price">$ 29.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">18 hours</div>
+                      <div class="price__date">Tomorrow at 9:27 AM</div>
+                      <div class="price__price">$ 33.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">12 hours</div>
+                      <div class="price__date">Today at 9:27 AM</div>
+                      <div class="price__price">$ 38.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">8 hours</div>
+                      <div class="price__date">Today at 9:27 AM</div>
+                      <div class="price__price">$ 43.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">6 hours</div>
+                      <div class="price__date">Today at 9:27 AM</div>
+                      <div class="price__price">$ 49.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <label class="price__item">
+                      <div class="price__days">3 hours</div>
+                      <div class="price__date">Today at 9:27 AM</div>
+                      <div class="price__price">$ 54.99/page</div>
+                      <input class="price__input" type="radio" name="price">
+                      <div class="price__checker"></div>
+                    </label>
+                    <div class="price__total"><a class="price__button button" href="#">Proceed to Order</a>
+                      <div class="price__value">
+                        <div class="price__label">Total price</div>
+                        <div class="price__cost">$ 14.99</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end price-->
+
+              </div>
+              <div class="box__side">
+                <div class="box__item">
+
+                  <!-- notice-->
+                  <div class="notice">
+                    <div class="notice__title">What Clients Say About Us</div>
+                    <div class="notice__rating"><span>Our Customers Rated Us</span><span><b>Great
+
+                        <!-- rate-->
+                        <div class="rate">
+                          <div class="rate__item active"></div>
+                          <div class="rate__item active"></div>
+                          <div class="rate__item active"></div>
+                          <div class="rate__item active"></div>
+                          <div class="rate__item"></div>
+                        </div>
+                        <!-- end rate-->
+5.0</b></span><span>Out of 5 Based on <em>106 Reviews</em></span></div>
+                    <div class="notice__content">
+                      <div class="notice__list">
+                        <div class="notice__item">
+                          <div class="notice__top">
+                            <div class="notice__quote"></div>
+                            <div class="notice__ratio">
+
+                              <!-- ratio-->
+                              <div class="ratio">
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item"></div>
+                              </div>
+                              <!-- end ratio-->
+
+                            </div>
+                          </div>
+                          <div class="notice__text">My GPA is 4.0 and I’ve always been doing everything myself, but there is a class which I was about to fail thus my GPA would decrease first time in so many years. I ordered few assignments to be completed with GrabMyEssay.com and you did a great job! Thanks to you I still remain one of the best students on campus.</div>
+                          <div class="notice__bottom"><span>Rosalinda, Mexico</span></div>
+                          <div class="notice__bottom">Essay・Politics・8 pages・5 days・Junior</div>
+                        </div>
+                        <div class="notice__item">
+                          <div class="notice__top">
+                            <div class="notice__quote"></div>
+                            <div class="notice__ratio">
+
+                              <!-- ratio-->
+                              <div class="ratio">
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item active"></div>
+                                <div class="ratio__item"></div>
+                              </div>
+                              <!-- end ratio-->
+
+                            </div>
+                          </div>
+                          <div class="notice__text">My GPA is 4.0 and I’ve always been doing everything myself, but there is a class which I was about to fail thus my GPA would decrease first time in so many years. I ordered few assignments to be completed with GrabMyEssay.com and you did a great job! Thanks to you I still remain one of the best students on campus.</div>
+                          <div class="notice__bottom"><span>Rosalinda, Mexico</span></div>
+                          <div class="notice__bottom">Essay・Politics・8 pages・5 days・Junior</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="notice__arrows">
+                      <div class="notice__arrow notice__arrow--prev"></div>
+                      <div class="notice__arrow notice__arrow--next"></div>
+                    </div>
+                  </div>
+                  <!-- end notice-->
+
+                </div>
+                <div class="box__item">
+
+                  <!-- security-->
+                  <div class="security">
+                    <div class="security__title">Privacy & Security</div>
+                    <div class="security__data">
+                      <div class="security__text">No one will ever know whether you used our services. We are bounded with non-disclosure agreement - your Privacy is first and foremost.</div>
+                      <div class="security__content">
+                        <div class="security__item">
+                          <div class="security__icon"><img class="security__image" src="assets/img/pic1.png"></div>
+                          <div class="security__name">BEST QUALITY</div>
+                          <div class="security__description">・SATISFACTION GUARANTEED・</div>
+                        </div>
+                        <div class="security__item">
+                          <div class="security__icon"><img class="security__image" src="assets/img/pic2.png"></div>
+                          <div class="security__name">BEST CHOICE</div>
+                          <div class="security__description">・GUARANTEED・</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end security-->
+
+                </div>
+              </div>
+            </div>
+            <!-- end box-->
+
+
+            <!-- need-->
+            <section class="need">
+              <h2 class="need__title">Do not know exactly what you need?</h2>
+              <div class="need__field">
+                <div class="need__button button button--dark">Get a Free Quote</div>
+              </div>
+            </section>
+            <!-- end need-->
+
+
+            <!-- safe-->
+            <section class="safe">
+              <div class="safe__wrapper">
+                <p class="safe__text">
+                  <b>We at GrabMyEssay.com</b> <br>
+                  work according to the General Data Protection Regulation (GDPR), which means you have the control over your personal data.<br>
+                  All payment transactions go through a secure online payment system, thus your Billing information is not stored, saved or available to the Company in any way.<br>
+                  Additionally, we guarantee confidentiality and anonymity all throughout your cooperation with our Company.
+                </p>
+              </div>
+            </section>
+            <!-- end safe-->
+
+          </main>
+        </div>
+      </div>
+      <div class="layout__footer">
+
+        <!-- footer-->
+        <footer class="footer">
+          <div class="footer__top">
+            <div class="container">
+              <div class="footer__logo">
+
+                <!-- logo-->
+                <div class="logo"><a class="logo__link" href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+                </div>
+                <!-- end logo-->
+
+              </div>
+              <div class="footer__contact">
+                <div class="footer__contact-title">Contact Info</div><a class="footer__contact-link" href="tel:18889801257">1-888-980-1257</a><a class="footer__contact-link" href="mailto:support@grabmyessay.com">support@grabmyessay.com</a>
+                <div class="footer__social">
+
+                  <!-- social-->
+                  <ul class="social">
+                    <li class="social__item"><a class="social__link social__link--facebook" href="#"></a></li>
+                    <li class="social__item"><a class="social__link social__link--twitter" href="#"></a></li>
+                  </ul>
+                  <!-- end social-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__center">
+            <div class="container">
+              <div class="footer__menu">
+                <div class="footer__wrap">
+                  <div class="footer__inner"><a class="footer__title" href="#">Terms and Conditions</a></div>
+                  <div class="footer__inner"><a class="footer__title" href="#">Money Back Guarantee</a></div>
+                  <div class="footer__inner"><a class="footer__title" href="#">Cookie Policy</a></div>
+                  <div class="footer__inner"><a class="footer__title" href="#">Privacy Policy</a></div>
+                </div>
+                <div class="footer__submenu">
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__link" href="#">Essay Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Essay Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Essay Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Type My Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Research Paper Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Essay Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Essay For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Paper For Money</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Research Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Research Paper Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Research Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Term Paper For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy College Papers Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Research Paper For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Term Paper Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">College Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional College Paper Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Term Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Term Paper Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">College Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Term Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">College Papers For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Results Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Thesis Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Dissertation Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Discussion Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Thesis Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Thesis Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Proposal Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Thesis Proposal</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Introduction Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Phd Thesis Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Dissertation Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Abstract Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Coursework Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Coursework</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Book Report Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Narrative Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Coursework</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Case Study Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Writers Case Study Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Process Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Coursework Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Descriptive Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Argumentative Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Coursework</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Definition Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Critical Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Coursework Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Case Study Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Compare And Contrast Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Expository Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Coursework Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Cause And Effect Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Persuasive Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Literature Review</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Lab Report</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Admission Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Lab Report Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Admission Essay Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Personal Statement Online</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="container">
+              <div class="footer__box">
+                <div class="footer__copyright">© GrabMyEssay.com, 2019</div>
+                <div class="footer__payment">
+
+                  <!-- payment-->
+                  <div class="payment">
+                    <div class="payment__item"><img class="payment__image" src="assets/img/paypal.svg" alt="PayPal"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/visa.svg" alt="Visa"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/mastercard.svg" alt="MasterCard"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/americanexpress.svg" alt="American Express"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/discover.svg" alt="Discover Network"></div>
+                  </div>
+                  <!-- end payment-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- end footer-->
+
+
+        <!-- promo-->
+        <div class="promo">
+          <div class="promo__wrapper">
+            <div class="promo__info">
+              <p>Try our service with <b>15% Discount</b> for your first order!</p>
+            </div><a class="promo__button" href="#">Order Now</a><a class="promo__close" href="javascript: void(0)"></a>
+          </div>
+        </div>
+        <!-- end promo-->
+
+      </div>
+    </div>
+    <!-- end layout-->
+
+
+    <!--= Up =--><a class="up" href="#"><img src="../../assets/img/arrows.svg" alt=""></a>
+    <!--= End up =-->
+
+
+    <!--= Cookies =-->
+    <div class="cookies --hide">
+      <div class="cookies__wrapper"><img src="../../assets/img/cookies.png" alt="">
+        <p>We use cookies to personalize your experience. By counting to visit this website you agree to our use of cookis.<a class="cookies__link" href="javascript:void(0);">Read More</a></p><a class="cookies__button button button--dark">Agree</a>
+      </div>
+    </div>
+    <!--= End cookies =-->
+
+    <script src="assets/vendor/js/jquery.min.js"></script>
+    <script src="assets/vendor/js/jquery.nanoscroller.js"></script>
+    <script src="assets/vendor/js/jquery.formstyler.js"></script>
+    <script src="assets/vendor/js/bootstrap-spinedit.js"></script>
+    <script src="assets/vendor/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
