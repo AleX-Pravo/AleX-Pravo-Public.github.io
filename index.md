@@ -1,37 +1,28 @@
 # Welcome to GitHub Pages AleX-Pravo.github.io
 
+## PROJECTS
 
-You can use the [editor on GitHub](https://github.com/AleX-Pravo/AleX-Pravo.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-### 32x32 
- Numbered
-1. ![Image](https://alex-pravo.github.io/32x32_site/source/favicon-32x32.png)   [32x32](https://alex-pravo.github.io/32x32_site/prod/)
-    - [services](https://alex-pravo.github.io/32x32_site/prod/services-branding.html)
-    - [about](https://alex-pravo.github.io/32x32_site/prod/about.html)
-2. ![Image](https://alex-pravo.github.io/Misha_Kovriga/source/favicon_32x32.png)
-   [Misha Kovriga](https://alex-pravo.github.io/Misha_Kovriga/production/)
-**ghghgh**
-_Italicffgfg_
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+1. ![Image](https://alex-pravo.github.io/32x32_site/source/favicon-16x16.png)   [The site of the company](https://alex-pravo.github.io/32x32_site/prod/)
 
 
+2. ![Image](https://alex-pravo.github.io/anguish-law/production/favicon_32x32.png)
+   [anguish law](https://alex-pravo.github.io/anguish-law/production/)
+   
+3. ![Image](https://alex-pravo.github.io/domova-2018/prod/favicon.ico)
+   [domova-2018](https://alex-pravo.github.io/domova-2018/prod/)
+    - [article]((https://alex-pravo.github.io/domova-2018/prod/article.html)
+    - [blog]((https://alex-pravo.github.io/domova-2018/prod/blog.html)
+    - [cabinet]((https://alex-pravo.github.io/domova-2018/prod/cabinet.html)
+    - [contacts]((https://alex-pravo.github.io/domova-2018/prod/contacts.html)
+    - [faq]((https://alex-pravo.github.io/domova-2018/prod/faq.html)
+    - [reviews]((https://alex-pravo.github.io/domova-2018/prod/reviews.html)
+    - [search]((https://alex-pravo.github.io/domova-2018/prod/search.html)
+    - [service]((https://alex-pravo.github.io/domova-2018/prod/service.html)
+    - [servicelist]((https://alex-pravo.github.io/domova-2018/prod/servicelist.html)
+    - [servicelist-inner]((https://alex-pravo.github.io/domova-2018/prod/servicelist-inner.html)
+    - [sitemap]((https://alex-pravo.github.io/domova-2018/prod/sitemap.html)
+    - [text-standard]((https://alex-pravo.github.io/domova-2018/prod/text-standard.html)
+    - [vacancy]((https://alex-pravo.github.io/domova-2018/prod/vacancy.html)
+
+4. ![Image](https://alex-pravo.github.io/fortuna/prod/favicon.ico)
+   [fortuna](https://alex-pravo.github.io/fortuna/prod/)
