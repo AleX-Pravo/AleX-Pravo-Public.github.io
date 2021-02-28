@@ -1,0 +1,10 @@
+.details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width:$screenMdMin) {//1080
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,24 @@
+= '\n'
+//= slider =
+//- (source/assets/css/module/_slider.scss)
+.slider
+    .swiper-container.gallery-top
+        .swiper-wrapper
+            each val in catalogCarouselBig
+                a.swiper-slide(href=val.href class= val.class)
+                    img(src="data/slider/big/" + val.image, alt="")
+                    .sales(data-content="Продано!")
+
+    .swiper-container.gallery-thumbs
+        .swiper-wrapper
+            each item in sliderItems
+                if item.link
+                    a.swiper-slide(href= item.link class= item.class)
+                else
+                    .swiper-slide
+                        img(src="data/slider/big/" + item.image, alt="")
+        .slider-next
+        .slider-prev
+
+//= End slider =
+= '\n'

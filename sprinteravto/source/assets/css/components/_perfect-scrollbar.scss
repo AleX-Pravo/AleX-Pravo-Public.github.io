@@ -1,0 +1,12 @@
+.ps {
+    > .ps__scrollbar-y-rail {
+        width: 0;
+        margin: -40px 0 0;
+
+        &:hover {
+            > .ps__scrollbar-y {
+                width: 6px;
+            }
+        }
+    }
+}

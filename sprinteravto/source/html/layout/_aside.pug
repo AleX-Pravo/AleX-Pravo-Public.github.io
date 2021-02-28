@@ -1,0 +1,47 @@
+//= Aside =
+
+aside#aside.aside
+
+    .aside__drop
+        a.aside__close.close(href='javascript:void(0);')
+
+        .aside__wrapper
+            .aside__content
+                .aside__primary
+                    .aside__logo
+                        include ../module/_logo.pug
+                    .aside__search
+                        include ../module/_search.pug
+                    .aside__menu
+                        include ../module/_menu.pug
+                .aside__secondary
+                    .aside__callback
+                        include ../module/_callback.pug
+                    a.aside__test-drive.call-modal(href='#test-drive' title='Замовити тест-драйв' )
+                        span Тест-драйв
+                    include ../module/_languages.pug
+
+        a.aside__button(href='javascript:void(0);')
+
+        = '\n'
+        //= Modal =
+        .modal.modal--example.white-popup-block.mfp-hide#form-callback
+
+            .modal__content
+
+                include ../module/_popup.pug
+
+        //= End modal =
+        = '\n'
+
+        = '\n'
+        //= Modal =
+        .modal.modal--example.white-popup-block.mfp-hide#test-drive
+
+            .modal__content
+                - formPopup = formCallback
+                include ../module/_popup.pug
+
+        //= End modal =
+        = '\n'
+//= End aside =

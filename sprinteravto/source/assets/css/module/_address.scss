@@ -1,0 +1,28 @@
+.address {
+    background: $white;
+    padding: 15px 20px;
+    margin: 0 0 15px 0;
+    border-radius: 0 0 6px 6px;
+
+    .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 7px 0 7px 0;
+
+        label {
+            // max-width: 170px;
+            // width: 100%;
+            display: flex;
+            flex-shrink: 0;
+            margin: 0 20px 0 0;
+            min-width: 170px;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .form-group {
+            flex-wrap: nowrap;
+        }
+    }
+}

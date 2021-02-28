@@ -1,0 +1,60 @@
+//- Utility
+include utils/_variable.pug
+
+-
+    pageTitle = 'catalog'
+    select2 = true
+    ionRangeSlider = true
+    perfectScrollBar = true
+    magnificPopup = true
+    filter = true
+
+    breadcrumbs = [{name: 'На головну'}, {name: 'Автомобілі', active: true}]
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+
+            include layout/_aside.pug
+
+            //= Main =
+            main#main.main
+                include layout/_navigation.pug
+
+                .container
+                    .layout__box
+                        include module/_breadcrumb.pug
+
+                        section
+                            .layout__box.layout__box--search
+                                include module/_search.pug
+                            .layout__box-sort
+                                h1 результати пошуку
+                                include module/_sort.pug
+
+                            .layout__box-filters
+                                .layout__box-forms#filterDrop
+                                    .layout__box-forms-close.close(href="javascript:void(0)")
+                                    include module/_filter.pug
+                                .layout__box-catalog
+                                    - for(var i = 0; i < 2; i++)
+                                        each item in productItems
+                                            include module/_product.pug
+                        section
+                            include module/_pagination.pug
+
+            //= End main =
+
+            #shadow
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+

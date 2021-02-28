@@ -1,0 +1,14 @@
+{
+    "name": "sprinteravto",
+    "version": "1.0.0",
+    "description": "sprinteravto layout project",
+    "authors": [
+        "Vlad Fedorov <gkorchun@gmail.com>"
+    ],
+    "license": "ISC",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}

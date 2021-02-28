@@ -1,0 +1,345 @@
+.navigation {
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: all .4s;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    background: $white;
+    margin: 0 0 0 auto;
+
+    &__list {
+        position: relative;
+        display: flex;
+
+        &-item {
+            width: 25%;
+            min-width: 68px;
+
+            &:not(:last-child) {
+                border-right: 1px solid $borderColor;
+            }
+
+            &--filter {
+                min-width: 0;
+                max-width: 45px;
+
+                .navigation {
+                    &__list {
+                        &-link {
+
+                            img {
+                                filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1.5);
+                            }
+
+                            &:hover {
+                                img {
+                                    filter: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--cart {
+                .navigation {
+                    &__list {
+
+                        &-title {
+                            font-size: 0;
+                            display: block;
+                            align-self: flex-start;
+                            z-index: 1;
+
+                            > span {
+                                font-size: 0;
+
+                                span {
+                                    position: relative;
+                                    margin: -7px 0 0 -20px;
+                                    font-size: 14px;
+                                    width: 21px;
+                                    height: 21px;
+                                    line-height: 21px;
+                                    border-radius: 50%;
+                                    background: $brandPrimary;
+                                    text-align: center;
+                                    color: $white;
+                                    transition: all .3s;
+
+                                    &:empty {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid $borderColor;
+            height: 45px;
+            text-decoration: none;
+            transition: all .3s;
+            background: $white;
+            padding: 9px 11px;
+            //pointer-events: none;
+
+            img {
+                transition: filter .3s;
+                filter: grayscale(100%) brightness(50%) contrast(0.9);
+            }
+
+            &:hover {
+                background: $brandPrimary;
+                border-bottom-color: $brandPrimary;
+
+
+                img {
+                    filter: none;
+                }
+
+                .navigation {
+                    &__list {
+                        &-title {
+                            color: $white;
+
+                            > span {
+                                span {
+                                    background: $white;
+                                    color: $brandPrimary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    + .navigation {
+                        &__drop {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-title {
+            font-family: $fontFamilyOswald;
+            font-size: $fontSizeLarge;
+            font-weight: bold;
+            color: $gray;
+            margin: 0 0 0 10px;
+            transition: all .3s;
+            display: none;
+
+            span {
+                display: inline-block;
+                font-weight: normal;
+                font-size: $fontSizeBase;
+            }
+        }
+    }
+
+    &__drop {
+        position: absolute;
+        background: $white;
+        width: 100%;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 25px 30px 30px;
+        opacity: 0;
+        visibility: hidden;
+        column-count: 2;
+        column-gap: 30px;
+        column-rule: 1px solid $borderColor;
+        box-shadow: 0px -5px 8px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &-item {
+            position: relative;
+            line-height: 1;
+            margin: 0 0 13px 0;
+        }
+
+        &-link {
+            color: $grayBase;
+            text-decoration: none;
+            font-size: $fontSizeBase;
+            transition: all .3s;
+            line-height: 1;
+
+            &:hover {
+                color: $brandPrimary;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__drop {
+            column-count: 3;
+        }
+    }
+
+    @media (min-width: $screenSmMin) {
+        &__list {
+            &-link {
+                height: 55px;
+            }
+
+            &-title {
+                display: block;
+
+                span {
+                    display: none;
+                }
+            }
+
+            &-item {
+                &--cart {
+                    .navigation {
+                        &__list {
+                            &-title {
+                                font-size: 16px;
+                                align-self: center;
+
+                                > span {
+                                    font-size: 0;
+                                    display: block;
+
+                                    span {
+                                        display: block;
+                                        margin: -35px 0 0 -24px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        position: relative;
+        //width: auto;
+        width: 100%;
+
+        &.fixed {
+            position: fixed;
+            width: calc(100% - 70px);
+            right: 0;
+        }
+
+        &__list {
+            &-item {
+                &--filter {
+                    max-width: 70px;
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                &--cart {
+                    .navigation {
+                        &__list {
+                            &-title {
+                                > span {
+                                    font-size: 14px;
+                                    display: flex;
+
+                                    span {
+                                        margin: 0 4px 0 0;
+                                        order: -1;
+                                        color: $gray;
+                                        background: transparent;
+                                        width: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-link {
+                height: 70px;
+
+                svg {
+                    max-height: 100%;
+                }
+
+                &:hover {
+                    .navigation {
+                        &__list {
+                            &-title {
+                                > span {
+                                    span {
+                                        background: transparent;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-title {
+                span {
+                    display: block;
+                    font-size: $fontSizeSmall;
+                }
+            }
+        }
+
+        &__drop {
+            transition: all .2s;
+        }
+    }
+
+    @media (min-width: $screenLgMin) {
+        &__list {
+            &-title {
+                span {
+                    font-size: $fontSizeBase;
+                }
+            }
+
+            &-item {
+                position: relative;
+            }
+
+            &-link {
+                &:hover {
+                    +.navigation {
+                        &__drop {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__drop {
+            width: 200%;
+            transform: none;
+            left: 0;
+            column-gap: 46px;
+        }
+    }
+}

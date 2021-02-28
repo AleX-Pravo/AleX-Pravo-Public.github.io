@@ -1,0 +1,13 @@
+= '\n'
+//= Menu =
+
+ul.menu
+    each item, index in menuItems
+
+        - modifier = (index == 0) ? '--active' : ''
+
+        li.menu__item(class= modifier)
+            a.menu__link(href= item.link)= item.name
+
+//= End menu =
+= '\n'

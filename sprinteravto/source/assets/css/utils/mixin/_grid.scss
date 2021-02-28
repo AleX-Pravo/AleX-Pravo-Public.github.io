@@ -1,0 +1,22 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+@mixin containerFixed($gutter: $gridGutterWidth) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: ceil(($gutter / 2));
+    padding-left: floor(($gutter / 2));
+
+    @include clearfix;
+}
+
+
+// Creates a wrapper for a series of columns
+@mixin makeRow($gutter: $gridGutterWidth) {
+    margin-right: floor(($gutter / -2));
+    margin-left: ceil(($gutter / -2));
+
+    @include clearfix;
+}

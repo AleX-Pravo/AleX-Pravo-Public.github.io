@@ -1,0 +1,46 @@
+= '\n'
+//= Filter =
+
+form.filter#filter
+    each item in catalogFilter
+
+        - condition = (item.hide) ? 'hide' : ''
+        .filter__section
+            .filter__section-title= item.title
+                a.filter__section-arrow(href='javascript:void(0);')
+            .filter__section-block.appearance
+                if item.list
+                    each val, index in item.list
+                        - modifier = (index == 0) ? 'disabled' : false
+
+                        label(class= modifier)= val
+                            input(type='checkbox' disabled= modifier)
+
+    if (pageTitle == 'catalog')
+        .form-group
+            label.control-label Рік
+            .range__controls
+                .range__controls-text від
+                    input.range__controls-input(type='number' value='1985')
+                .range__controls-text до
+                    input.range__controls-input(type='number' value='2019')
+        .form-group
+            label.control-label Ціна
+            .range__controls.price
+                .range__controls-text від
+                    input.range__controls-input(type='text' value='$5 000')
+                .range__controls-text до
+                    input.range__controls-input(type='text' value='$100 000')
+            input#range(type='text')
+
+    if (pageTitle == 'parts')
+        .form-group
+            label.control-label Стан
+            select.form-control
+                option(value='1' selected) Любий
+                option(value='2') Новий
+    button.button Пошук
+
+
+//= End filter =
+= '\n'

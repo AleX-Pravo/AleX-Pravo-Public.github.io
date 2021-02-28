@@ -1,0 +1,28 @@
+= '\n'
+//= table =
+//- (source/assets/css/module/_table.scss)
+.table
+    if (pageTitle == 'details-spare' || pageTitle == 'order')
+        ul.table__list
+            each item in table
+                li
+                    p= item.name
+                    span= item.value
+
+    else
+        ul.table__list.table__list--details
+            each item in table
+                li
+                    .table__list-item
+                        p= item.name
+                        span= item.value
+                    .table__list-item
+                        p= item.name2
+                        span= item.value2
+            li.table__booklet
+                p * Холодильний агрегат працює від електрики, що економить паливо.
+                a(href="javascript:void(0)") Завантажити буклет
+    if (pageTitle == 'details')
+        include _destination.pug
+//= End table =
+= '\n'

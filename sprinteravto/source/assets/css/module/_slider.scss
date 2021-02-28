@@ -1,0 +1,112 @@
+.slider {
+    max-width: 814px;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+
+    .gallery {
+        &-top {
+            margin-bottom: 15px;
+
+            .swiper {
+                &-slide {
+                    max-height: 450px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &-thumbs {
+            position: relative;
+
+            .swiper {
+
+                &-slide {
+                    position: relative;
+                    max-width: 140px;
+                    height: 77px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid $grayLighter;
+                    opacity: 0.5;
+
+                    &-thumb {
+                        &-active {
+                            opacity: 1;
+                            &:before {
+                               content:'';
+                               width: 80px;
+                               height: 2px;
+                               position: absolute;
+                               background: $brandPrimary;
+                               bottom: 0;
+                               left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-next,
+    &-prev {
+        position: absolute;
+        z-index: 3;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        outline: none;
+
+        &:before {
+           content:'';
+           width: 12px;
+           height: 9px;
+           position: absolute;
+           background: url(../images/icons/arrow.svg)no-repeat;
+           top: 50%;
+        }
+
+        &.swiper {
+            &-button {
+                &-disabled {
+                    background: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    &-prev {
+        left: 0;
+
+        &:before {
+            left: 0;
+            background: url(../images/icons/arrow.svg)no-repeat;
+            transform: translateY(-50%) rotate(90deg);
+        }
+    }
+
+    &-next {
+        right: 0;
+        &:before {
+            right: 0;
+            background: url(../images/icons/arrow.svg)no-repeat;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        max-width: (700px * 100%) / 1460px;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: (814px * 100%) / 1460px;
+    }
+}

@@ -1,0 +1,86 @@
+.quantity {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $grayLighter;
+    border-radius: 50px;
+    max-width: 100px;
+    width: 100%;
+    padding: 0 15px;
+    max-height: 40px;
+    height: 100%;
+
+    input {
+        width: 50px;
+        text-align: center;
+        color: $grayBase;
+        font-family: $fontFamilyBase;
+        font-size: $fontSizeLarge;
+        font-weight: 500;
+        background: transparent;
+        border: none;
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button { 
+            appearance: none;
+            margin: 0;
+        }
+    }
+
+    &__button {
+        width: 23px;
+        height: 23px;
+        position: relative;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        &:before {
+            content: '';
+            width: 7px;
+            height: 11px;
+            position: absolute;
+            background: url(../images/cart/quantity-sprite.svg)no-repeat;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--minus {
+            left: -8px;
+
+            &:before {
+                background-position-x: -7px;
+            }
+
+            &:disabled {
+                &:before {
+                    background-position-x: 0;
+                }
+            }
+        }
+
+        &--plus {
+            right: -8px;
+
+            &:before {
+                background-position-x: -17px;
+            }
+
+            &:disabled {
+                &:before {
+                    background-position-x: -24px;
+                }
+            }
+        }
+    }
+    @media (min-width: 480px) {
+        max-width: 130px;
+    }
+}
