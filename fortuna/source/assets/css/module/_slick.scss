@@ -1,0 +1,184 @@
+.slick {
+    &-slider {
+        position: relative;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        outline: none;
+
+        -ms-touch-action: pan-y;
+            touch-action: pan-y;
+
+        a {
+            outline: none;
+        }
+    }
+
+    &-list {
+        position: relative;
+        overflow: hidden;
+        height: inherit;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.dragging {
+            cursor: pointer;
+            cursor: hand;
+        }
+    }
+
+    &-slider {
+        .slick {
+            &-track,
+            &-list {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
+    &-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: inherit;
+        outline: none;
+
+        @include clearfix;
+    }
+
+    &-loading {
+        .slick {
+            &-track {
+                visibility: hidden;
+            }
+
+            &-slide {
+                visibility: hidden;
+            }
+        }
+    }
+
+    &-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+        outline: none;
+
+        &.slick {
+            &-loading {
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        &.dragging {
+            img {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &-initialized {
+        .slick {
+            &-slide {
+                display: block;
+            }
+        }
+    }
+
+    &-vertical {
+        .slick {
+            &-slide {
+                display: block;
+                height: auto;
+            }
+        }
+    }
+
+    &-prev {
+        left: 15px;
+
+        &:before {
+            background-position: 0 0;
+        }
+    }
+
+    &-next {
+        right: 15px;
+
+        &:before {
+            background-position: -25px 0;
+        }
+    }
+
+    &-dots {
+
+        position: absolute;
+        z-index: 1;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 16px;
+        text-align: left;
+
+        li {
+            display: inline-block;
+            margin: 0 10px 0 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.slick {
+                &-active {
+                    button {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            padding: 0;
+            border: 2px solid #a62221;
+            outline: none;
+            background: transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .2s linear;
+            text-indent: -200em;
+            outline: none;
+            border-radius: 50%;
+
+            &:hover {
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                margin: -4px 0 0 -4px;
+                content: '';
+                transition: opacity .2s ease-out;
+                opacity: 0;
+                background: #a62221;
+                border-radius: 50%;
+            }
+        }
+    }
+}

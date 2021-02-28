@@ -1,0 +1,17 @@
+= '\n'
+//= reports =
+//- (source/assets/css/module/_reports.scss)
+.reports
+    .container
+        h1 Звіти тих хто прийшов
+        .reports__block
+            .swiper-container(data-breakpoints='{"9999":{"slidesPerView":3}, "960":{"slidesPerView":2},"480":{"slidesPerView":1}}')
+                .reports__wrapper.swiper-wrapper
+                    - for(var i = 0; i < 3; i++)
+                        .swiper-slide
+                            - review = true
+                            include _blogs.pug
+            .reports__add
+                a.button(href="javascript:void(0)") Додати звіт
+//= End reports =
+= '\n'

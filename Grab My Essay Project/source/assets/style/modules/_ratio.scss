@@ -1,0 +1,18 @@
+/* Ratio */
+
+.ratio {
+  display: inline-block;
+  vertical-align: middle;
+
+  &__item {
+    width: 23px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../img/star-bg.svg') 50% 50% no-repeat;
+
+    &.active {
+      background-image: url('../img/star-bg-active.svg');
+    }
+  }
+}

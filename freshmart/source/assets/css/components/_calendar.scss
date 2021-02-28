@@ -1,0 +1,102 @@
+.calendar {
+    position: absolute;
+    right: 20%;
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+    background: url('../images/content/icon/calendar.png') 0 0 no-repeat;
+
+    &:before {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 43px;
+        display: none;
+        width: 14px;
+        height: 14px;
+        margin-top: -7px;
+        content: '';
+        transform: rotate(45deg);
+        border: 1px solid $brandPrimary;
+        background: $base;
+    }
+
+    &__drop {
+        font-size: $fontSizeBase;
+        font-weight: 700;
+        line-height: 1.5;
+        position: absolute;
+        z-index: 1;
+        top: 62px;
+        left: -66px;
+        display: none;
+        width: 153px;
+        padding-left: 12px;
+        transform: translateY(-50%);
+        text-align: left;
+        text-transform: none;
+        color: $gray;
+        border: 1px solid $brandPrimary;
+        background: $base;
+
+        &:before {
+            position: absolute;
+            z-index: -1;
+            top: -7px;
+            left: 50%;
+            width: 14px;
+            height: 14px;
+            margin-left: -3px;
+            content: '';
+            transform: rotate(45deg);
+            border: 1px solid $brandPrimary;
+            background: $base;
+        }
+    }
+
+    &.open {
+        .calendar {
+            &__drop {
+                display: block;
+            }
+        }
+    }
+
+    &--tooltip {
+        cursor: pointer;
+
+        .calendar {
+            &__drop {
+                &:after {
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 50%;
+                    width: 30px;
+                    height: 14px;
+                    margin-left: -10px;
+                    content: '';
+                    background: $base;
+                }
+            }
+        }
+    }
+
+    &--order {
+        margin: 22px auto 0 auto;
+        position: relative;
+        right: auto;
+        bottom: auto;
+    }
+
+
+
+    @media (min-width: $screenXsMin) {
+        &--order {
+            position: absolute;
+            top: -8px;
+            right: 10px;
+            margin: 0;
+        }
+    }
+}

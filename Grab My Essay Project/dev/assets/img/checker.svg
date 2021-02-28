@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>checkbox</title>
+    <g id="Home-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1_Home-page" transform="translate(-433.000000, -4922.000000)" fill-rule="nonzero">
+            <g id="Txt" transform="translate(390.000000, 4686.000000)">
+                <g transform="translate(43.000000, 232.000000)" id="Items">
+                    <g id="checkbox" transform="translate(0.000000, 4.000000)">
+                        <path d="M10,19.1666667 C4.93725,19.1666667 0.833333333,15.06275 0.833333333,10 C0.833333333,4.93725 4.93725,0.833333333 10,0.833333333 C15.06275,0.833333333 19.1666667,4.93725 19.1666667,10 C19.1666667,15.06275 15.06275,19.1666667 10,19.1666667 Z" id="Path" fill="#DEF8F2"></path>
+                        <polygon id="Path" fill="#50B8A0" points="9.08608333 13.6666667 15.5669167 7.18491667 14.27075 5.88875 9.08608333 11.0743333 6.49283333 8.48108333 5.19666667 9.77725"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

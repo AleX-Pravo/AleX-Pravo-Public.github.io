@@ -1,0 +1,46 @@
+.gps {
+    font-size: $fontSizeLarge;
+    color: $brandPrimary;
+
+    a {
+        color: $grayBase;
+        margin: 7px 0 0;
+        font-size: $fontSizeBase;
+        text-decoration: none;
+        display: block;
+
+        &.gps {
+            &__route {
+                margin: 14px 0 0;
+                display: inline-block;
+                line-height: 1;
+                color: #c5a26d;
+            }
+        }
+    }
+
+    @media (min-width: $screenSmMin) {
+        line-height: 1;
+
+        a {
+            line-height: 1.428571;
+            margin: 14px 0 0;
+
+            &.gps {
+                &__route {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        a {
+            &.gps {
+                &__route {
+                    //display: none;
+                }
+            }
+        }
+    }
+}

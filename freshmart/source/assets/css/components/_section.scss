@@ -1,0 +1,114 @@
+.section {
+    position: relative;
+    overflow: hidden;
+    //margin: 0 0 33px;
+    margin: 0;
+    padding-bottom: 33px;
+
+    &--aside {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-family: $fontFamilyNatilus;
+        font-size: $fontSizeH3;
+        font-weight: normal;
+        line-height: 1;
+        //margin: 27px -1px 15px;
+        margin: 27px 67px 15px 0;
+        letter-spacing: -1px;
+        color: $gray;
+        position: relative;
+        padding-left: 25px;
+
+        &:before {
+            //position: relative;
+            //top: -8px;
+            //display: inline-block;
+            width: 15px;
+            height: 3px;
+            margin-right: 10px;
+            content: '';
+            background: $brandPrimary;
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+
+        }
+
+        &--decorate {
+            text-align: center;
+            padding-left: 0;
+            margin: 27px 0 15px 0;
+
+            &:before {
+                top: -5px;
+                display: inline-block;
+                position: relative;
+                left: auto;
+                transform: none;
+            }
+
+            &:after {
+                position: relative;
+                top: -5px;
+                display: inline-block;
+                width: 15px;
+                height: 3px;
+                margin-left: 10px;
+                content: '';
+                background: $brandPrimary;
+            }
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__title {
+            font-size: $fontSizeH2;
+            padding-left: 40px;
+
+            &:before {
+                width: 30px;
+                //margin-right: 14px;
+            }
+
+            &--decorate {
+                &:after {
+                    width: 30px;
+                    //margin-left: 14px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__title {
+            font-size: $fontSizeH7;
+
+            /*&:before {
+                top: -11px;
+            }*/
+        }
+
+        &--aside {
+            .section {
+                &__title {
+                    font-size: $fontSizeH2;
+
+                    /*&:before {
+                        top: -8px;
+                    }*/
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenLgMin) {
+        &__title {
+            font-size: $fontSizeH1;
+        }
+    }
+}

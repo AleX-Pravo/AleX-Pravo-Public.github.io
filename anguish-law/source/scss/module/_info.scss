@@ -1,0 +1,86 @@
+.info {
+    position: relative;
+    display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    flex-flow: column wrap;
+
+    li {
+        position: relative;
+
+        ul {
+            position: relative;
+
+            li {}
+        }
+
+        .icon-adress,
+        .icon-phone,
+        .icon-mail {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .icon-adress {
+            width: 15px;
+            height: 21px;
+            left: -1px;
+        }
+
+        .icon-mail {
+            top: 2px;
+            transform: none;
+            left: -2px;
+        }
+
+        a,
+        p,
+        span {
+            padding-left: 30px;
+            font-size: $fontSize16;
+            color: $base;
+            margin-bottom: 1px;
+            line-height: 20px;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all .2s ease-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+//768px
+@media (min-width: $screen_M_Min) {
+    &__link {
+
+        a {
+            display: flex;
+        }
+
+        a.header-phone-mob {
+            display: none;
+        }
+    }
+}
+
+//1024px
+@media (min-width: $screen_L_Min) {
+    &__link {
+
+        a {
+            display: none;
+        }
+
+        p {
+            display: flex;
+        }
+    }
+}

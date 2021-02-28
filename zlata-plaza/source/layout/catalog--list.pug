@@ -1,0 +1,41 @@
+include vars/_variable.pug
+
+-
+    var pageTitle = 'Catalog page'
+    var breadcrumbsLastItem = 'Магазини'
+    var breadcrumbsTitle = 'Каталог'
+
+doctype html
+html
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include region/header/_header.pug
+
+            //= Main =
+            main#main.main
+                #nav_side.nav.nav-side.hide-sm-max
+                    include region/nav/module/secondaryMenu/_secondaryMenu.pug
+
+                .container
+                    .main__top
+                        .main__top-inner
+                            include module/breadcrumbs/_breadcrumbs.pug
+
+                            .controls-panel
+                                include module/category/_category.pug
+                                include module/catalogType/_catalogType.pug
+
+                    include module/catalog/_catalog--list.pug
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+        include module/deviceMenu/_deviceMenu.pug
+        include core/_script.pug

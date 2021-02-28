@@ -1,0 +1,20 @@
+= '\n'
+//= form =
+//- (source/assets/css/module/_form.scss)
+.form
+    h2 Для нас важлива ваша думка
+    form(id='form' action='#' method='post' name='form')
+        .form__wrapper
+            .form-group.required.has-error
+                input.form-control(type='text', placeholder='Ім`я' name='name')
+                .help-block
+            .form-group
+                input.form-control(type='text', placeholder='Номер телефону')
+                .help-block
+        .form-group
+            textarea.form-control(col='25', row='3') Відгук
+            .help-block
+        .form-group
+            button(type='button' disabled) Відправити
+//= End form =
+= '\n'

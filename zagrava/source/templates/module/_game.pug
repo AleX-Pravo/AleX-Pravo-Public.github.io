@@ -1,0 +1,13 @@
+= '\n'
+//= Game =
+
+.game(class= main ? 'game--pinch' : 'game--full')
+    if main
+        a(href= prop.link)
+            img(src=`data/games/${prop.image}.jpg` alt='')
+    else
+        img(src=`data/games/${prop.image}.jpg` alt='')
+    include _info-mask.pug
+
+//= End game =
+= '\n'

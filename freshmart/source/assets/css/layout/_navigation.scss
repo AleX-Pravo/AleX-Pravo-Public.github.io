@@ -1,0 +1,13 @@
+.navigation {
+    margin: 0;
+
+    @import 'nav/primary-menu';
+
+    &--nodec {
+        border-bottom-color: transparent!important;
+
+        &:before {
+            display: none;
+        }
+    }
+}

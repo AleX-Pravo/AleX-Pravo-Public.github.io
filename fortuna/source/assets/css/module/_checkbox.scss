@@ -1,0 +1,267 @@
+.checkbox {
+    //max-height: 280px;
+    //overflow: auto;
+
+    &__item {
+        position: relative;
+        margin: 0 40px 15px 0;
+    }
+
+    &-input,
+    &__input {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        outline: 0;
+
+        &:checked {
+            + .checkbox {
+                &-checker,
+                &__checker {
+                    //border-color: #50a659!important;
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &[disabled] {
+            & ~ .checkbox__text,
+            & ~ .checkbox__checker {
+                cursor: default;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+
+        .form-group {
+            position: relative;
+        }
+
+        label {
+            display: block;
+            text-decoration: none;
+            //cursor: pointer;
+            font-size: 14px!important;
+            line-height: 1.5!important;
+            padding-left: 37px;
+            transition: all .2s ease-out;
+            color: #777!important;
+            position: relative;
+            //padding-right: 20px;
+            //cursor: pointer;
+            text-transform: none!important;
+            //margin-bottom: 15px;
+        }
+
+        .form-control {
+            height: auto;
+            line-height: 1;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            outline: 0;
+
+            &:checked {
+                + .checkbox {
+                    &__checker {
+
+
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .checkbox {
+            &__item {
+                &:nth-child(1n+8) {
+                    //display: none;
+                }
+            }
+        }
+
+        &--open {
+            .checkbox {
+                &__item {
+                    &:nth-child(1n+8) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        //cursor: pointer;
+        cursor: auto;
+    }
+
+    &__checker {
+        cursor: pointer;
+    }
+
+    &-checker,
+    &__checker {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #d8dbdf;
+        background: $base;
+        overflow: hidden;
+        transition: all 0.2s ease-out;
+        border-radius: 3px;
+        overflow: hidden;
+        border: 2px solid rgba(51, 53, 56, 0.15);
+        border-radius: 2px;
+
+        &:before {
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            right: 0;
+            bottom: 0;
+            content: '';
+            transition: all .2s ease-out;
+            opacity: 0;
+            //background: #50a659 url('../images/content/checker.png') top right no-repeat;
+            background: url('../images/container/checker-avtr.png') 50% 50% no-repeat;
+            width: 18px;
+            height: 14px;
+
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: (24px / 16px);
+        display: block;
+        //padding-left: 25px;
+        transition: all .2s ease-out;
+        color: #777;
+        position: relative;
+        //padding-right: 40px;
+        color: #abaaaa;
+        cursor: pointer;
+
+        font-family: $fontFamilyBase;
+        font-weight: 500;
+        font-size: 18px;
+        color: $brandPrimary;
+
+        small {
+            float: right;
+            margin-right: 10px;
+        }
+    }
+
+    &__count {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-left: 5px;
+        color: #777;
+        line-height: (30px / 14px);
+        transform: translateY(-50%);
+    }
+
+    &__more {
+        line-height: 1;
+        position: relative;
+        padding-left: 21px;
+
+        &:before {
+            left: 0;
+            transition: transform .2s ease-out;
+            content: '';
+            position: absolute;
+            top: 50%;
+            background: url('../images/content/icon/sort-arrow.png') no-repeat;
+            width: 13px;
+            height: 8px;
+            transform: translateY(-50%) rotate(-180deg);
+        }
+
+        &-text {
+            display: inline-block;
+            transition: all .2s ease-out;
+            text-decoration: none;
+            color: #777;
+            border-bottom: 1px dashed #777;
+
+            &:hover {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &--active {
+            &:before {
+                transform: translateY(-50%) rotate(0);
+            }
+        }
+    }
+
+    &--double {
+        .checkbox {
+            &__list {
+                font-size: 0;
+            }
+        }
+
+        .checkbox {
+            &__list {
+                font-size: 0;
+            }
+            &__item {
+                margin-bottom: 13px;
+                transition: all 0.2s ease-out;
+
+                &:nth-child(1n+3) {
+                    display: inline-block;
+                }
+
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+            }
+
+            &__text {
+                padding-right: 0;
+                line-height: 1.2;
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        &--double {
+
+            .checkbox {
+                &__item {
+                    margin-bottom: 0;
+                }
+
+                &__text {
+                    font-size: 14px;
+                    line-height: (30px / 14px);
+                }
+            }
+
+        }
+    }
+}

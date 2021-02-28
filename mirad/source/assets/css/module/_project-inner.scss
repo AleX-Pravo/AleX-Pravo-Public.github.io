@@ -1,0 +1,97 @@
+.project-inner {
+    margin-bottom: 60px;
+    .title-block {
+        font-size: $fontSizeH2;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .product-slider {
+            display: block;
+            width: 100%;
+            &--small {
+                max-width: (120px * 100%) / 1020px;
+                width: 100%;
+                margin-right: 0;
+                display: none;
+                .slick {
+                    &-slide {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            &--big {
+                width: 100%;
+                height: auto;
+                display: inline-block;
+                float: right;
+                .product-slider {
+                    &__slide {
+                        img {
+                            max-height: 515px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid $footerBackground;
+        ul {
+            li {
+                padding: 5px 0;
+                a {
+                    color: $grayDarker;
+                }
+                span {
+                    &:first-child {
+                        font-weight: 800;
+                        color: $brandPrimary;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    &__image {
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .title-block {
+            font-size: $fontSizeH3;
+        }
+        .product-slider {
+            width: (1020px * 100%) / 1530px;
+        }
+        &__wrapper {
+            flex-direction: row;
+        }
+        &__info {
+            max-width: (500px * 100%) / 1530px;
+        }
+    }
+    @media (min-width: 1024px) {
+        &__wrapper {
+            .product-slider {
+                &--small {
+                    display: inline-block;
+                }
+                &--big {
+                    max-width: (885px * 100%) / 1020px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &__info {
+            padding: 75px 30px;
+        }
+    }
+}

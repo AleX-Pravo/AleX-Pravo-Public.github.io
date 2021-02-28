@@ -1,0 +1,67 @@
+//- Helpers
+@import 'helpers/clearfix/_clearfix.scss';
+
+.rating {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &-list {
+        position: relative;
+        margin: 0 -2px;
+
+        @include clearfix;
+    }
+
+    &-item {
+        position: relative;
+        float: left;
+        width: 14px;
+        height: 14px;
+        margin: 0 2px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            transition: all .2s linear;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAdCAYAAACaCl3kAAAA/0lEQVQ4je3Tv0oDQRDH8c8dAa1so4122qSzkFgq2OUV7PIoEVJbpBEEH8PC3iJWCocEbNIFQSxSRE0ssofreReuNwPDzuz+vuzsn0myLFNhJ2G8K1tsVEAJLkLcxqIoSCvADo6Cd8oEZWCKXpT3ynSNSLyPQ5yhFWlauMYthnjGPMmy7BLn2Koou2jvuEnRx1tNCF7RTzHGKSY1oInlUcb5oUeWtzddAU2DZsTv27rH0wrwMWgUQdhdAe7FSQxuohnln/iI8iY2ysB8txmuLN/1IMSzYkUxuI1BALp4Cd4NcwPs5OJksfjzf2tZY/5wXLW2bquvYXvdVj/279rqG/gUVuX9MEUEAAAAAElFTkSuQmCC');
+        }
+
+        &:after {
+            opacity: 0;
+            background-position: 0 -15px;
+        }
+    }
+
+    &-full {
+        &:before {
+            opacity: 0;
+        }
+
+        &:after {
+            opacity: 1;
+        }
+
+        .rating {
+            &-name {
+                color: #2a2a29;
+            }
+        }
+    }
+
+    &-name {
+        font-size: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: #999;
+        text-align: center;
+    }
+}

@@ -1,0 +1,241 @@
+-
+    var pageTitle = 'Продукт'
+    var slick = true
+//- Utilites
+include utils/_variables.pug
+
+//- Mixin
+include layout/header/_menu.pug
+include layout/header/_socnet.pug
+include layout/header/_phone.pug
+
+include layout/nav/_primary-menu.pug
+
+include layout/footer/_socnet.pug
+include layout/footer/_menu.pug
+
+include module/_search.pug
+include module/_breadcrumbs.pug
+include module/_write.pug
+include module/_blog-menu.pug
+include module/_tags.pug
+
+include module/_catalog.pug
+
+
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    +breadcrumbs(['Главная', 'Овощи'])
+
+                    //= Layout box =
+                    .layout-box.layout-box--info
+                        .layout-box__content
+                            //-include module/_recipe.pug
+                            include module/_product.pug
+
+                        aside.layout-box__aside
+                            include module/_cart.pug
+                    //= End layout box =
+                    = '\n'
+
+                    //= Section =
+                    .section#goods_similar
+                        .section__title Похожие товары
+                        +catalogCarousel(popularGoods)
+
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section#recipes
+                        .section__title Рецепты в которых есть этот товар
+                        include module/_recipes-carousel.pug
+
+                    //= End section =
+                    = '\n'
+
+                include layout/_navigation-bottom.pug
+            //= End main =
+
+            = '\n'
+        //= End layout =
+
+        include layout/_footer.pug
+
+        include module/_cart-mobile.pug
+
+        include layout/_scripts.pug
+        //-script(src='assets/js/jquery.rating-2.0.min.js')
+        script(src='assets/js/rating.js')
+        script(src='assets/js/jquery.fancybox.min.js')
+
+        script.
+            // carousel
+            var goodsPopular = $('#goods_similar .carousel__list');
+
+            if (goodsPopular.find('.catalog__item').length <= 3) {
+                $('#goods_similar .carousel__controls').css({'display': 'none'});
+            }
+
+            goodsPopular.slick({
+                dots: false,
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: '#goods_similar .carousel__btn--prev',
+                nextArrow: '#goods_similar .carousel__btn--next',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 490,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            goodsPopular.on('breakpoint', function (event, slick, breakpoint) {
+                var boxWidth = $(this)[0].offsetWidth,
+                    possible = Math.floor(boxWidth / slick.slideWidth);
+
+                if (possible) {
+
+                    if (possible >= slick.slideCount) {
+                        $('#goods_similar .carousel__controls').css({'display': 'none'});
+                    } else {
+                        $('#goods_similar .carousel__controls').css({'display': 'block'});
+                    }
+                }
+            });
+
+            // carousel
+            var goodsAction = $('#recipes .recipes-list');
+
+            if (goodsAction.find('.recipes-list__item').length <= 4) {
+                $('#recipes .carousel__controls').css({'display': 'none'});
+            }
+
+            goodsAction.slick({
+                dots: false,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                prevArrow: '#recipes .carousel__btn--prev',
+                nextArrow: '#recipes .carousel__btn--next',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 490,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            goodsAction.on('breakpoint', function (event, slick, breakpoint) {
+                var boxWidth = $(this)[0].offsetWidth,
+                    possible = Math.round(boxWidth / slick.slideWidth);
+
+                if (possible) {
+
+                    if (possible >= slick.slideCount) {
+                        $('#recipes .carousel__controls').css({'display': 'none'});
+                    } else {
+                        $('#recipes .carousel__controls').css({'display': 'block'});
+                    }
+                }
+            });
+
+
+            if ($('.product__picture li').length > 1) {
+                // Sliders
+                $('#slider_recipe').bxSlider({
+                    mode: 'fade',
+                    pagerCustom: '#pager',
+                    controls: true,
+                });
+            } else {
+                $('.product__slider-list').css('display', 'none');
+                $('.product__picture li').css('border', '2px solid #96c93d');
+            }
+
+            $('.rating--view').rating({
+                fx: 'full',
+                image: 'assets/images/content/icon/star-small.png',
+                readOnly: true,
+                loader: 'assets/images/content/icon/star-small-loader.png',
+                titles: ['отзыв', 'отзывы', 'отзывов'],
+            });
+            $('.rating--write').rating({
+                fx: 'full',
+                image: 'assets/images/content/icon/star-small.png',
+                //readOnly: true,
+                loader: 'assets/images/content/icon/star-small-loader.png',
+                // titles: ['відгук','відгуки','відгуків'],
+                //titles: ['оценка', 'оценка', 'оценка'],
+                titles: ['отзыв', 'отзывы', 'отзывов'],
+                //width: 40,
+            });
+
+            // table sizez
+            $('#tabs .tabs__btn').on('click', function(e) {
+              e.preventDefault();
+              var id = $(this).attr('href');
+
+              $('.tabs__btn').removeClass('tabs__btn--active');
+              $(this).addClass('tabs__btn--active');
+
+              $('#tabs .tabs__item').hide();
+              $('#tabs .tabs__item' + id).fadeIn(200);
+            });
+
+
+            $('.slider-info__list').bxSlider({
+                mode: 'fade',
+                controls: true,
+                auto: true,
+                touchEnabled: true,
+                pagerCustom: '.slider-info .bx__pager',
+            });

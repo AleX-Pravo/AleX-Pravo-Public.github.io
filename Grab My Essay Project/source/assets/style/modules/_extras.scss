@@ -1,0 +1,264 @@
+/* Extras */
+.extras {
+	padding: 28px 20px 65px;
+
+	&__title {
+		color: #000615;
+		font-family: $headingFont;
+		font-size: 35px;
+		line-height: 1;
+		margin-bottom: 42px;
+		font-weight: 500;
+	}
+
+	&__label {
+		margin-bottom: 15px;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		color: #2C2C2C;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: start;
+		flex-wrap: wrap;
+		margin: 0 -10px 20px -10px;
+	}
+
+	&__item {
+		border: 1px solid #40AC60;
+		border-radius: 4px;
+		padding: 15px 20px 20px 20px;
+		position: relative;
+		width: 100%;
+	}
+
+	&__wrapper {
+		width: 100%;
+		padding: 0 10px 15px 10px;
+		display: flex;
+	}
+
+	&__data {
+
+	}
+
+	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+
+		&:checked + .extras__checker {
+			border-color: #40AC60;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+			}
+
+			&:after {
+				background: url('../img/mark.svg') 50% 50% no-repeat;
+				z-index: 1;
+				width: 18px;
+				height: 17px;
+			}
+
+			&:before {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #F7FFF9;
+				z-index: -1;
+			}
+		}
+	}
+
+	&__checker {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 1px solid #CCCCCC;
+		margin-right: 12px;
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+
+	&__name {
+		font-size: 17px;
+		line-height: 21px;
+		color: #2C2C2C;
+		margin: 7px 0 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+
+	&__inner {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		//margin-top: 7px;
+		width: calc(100% - 32px);
+	}
+
+	&__caption {
+		font-weight: 500;
+		color: #2C2C2C;
+		margin: 0 5px 5px 0;
+		font-size: 15px;
+	}
+
+	&__value {
+		font-size: 15px;
+		line-height: 21px;
+		color: #40AC60;
+		margin: 0 0 5px;
+		font-weight: 500;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 20px;
+		color: #696969;
+		padding-left: 32px;
+	}
+
+	&__info {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	&__box {
+		margin-bottom: 45px;
+	}
+
+	&__paragraph,
+	&__txt {
+		font-size: 16px;
+		line-height: 28px;
+
+		span {
+			color: #40AC60;
+		}
+	}
+
+	&__paragraph {
+		margin-bottom: 25px;
+	}
+
+	&__action {
+		text-align: center;
+	}
+
+	&__button {
+		width: 260px;
+	}
+
+	//480px
+	@media (min-width: $screen_XS_Min) {
+
+		&__wrapper {
+			width: (100% / 2);
+		}
+	}
+
+	@media (min-width: 650px) {
+		&__wrapper {
+			width: (100% / 3);
+		}
+	}
+
+
+	@media (min-width: 768px) {
+		padding: 90px 40px 0;
+
+		&__list {
+			margin: 0 -10px 24px -10px;
+		}
+
+		&__wrapper {
+			padding: 0 10px 20px 10px;
+		}
+
+		&__title {
+			font-size: 50px;
+			margin-bottom: 50px;
+		}
+
+		&__label {
+			font-size: 20px;
+			line-height: 24px;
+			margin-bottom: 20px;
+			font-weight: 500;
+			color: #2C2C2C;
+		}
+
+		&__item {
+			padding: 20px 20px 20px 20px;
+		}
+
+		&__caption {
+			font-size: 17px;
+			margin: 0 5px 7px 0;
+		}
+
+		&__value {
+			font-size: 17px;
+			margin: 0 0 15px;
+		}
+
+		&__box {
+			margin-bottom: 0;
+		}
+
+		&__info {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		&__text {
+			font-size: 15px;
+			line-height: 22px;
+			color: #696969;
+			padding: 0;
+		}
+
+		&__action {
+			text-align: right;
+		}
+	}
+
+	//1024px
+	@media (min-width: $screen_L_Min) {
+		padding: 54px 0 80px 15px;
+
+		&__list {
+			margin: 0 -10px 24px -10px;
+		}
+
+		&__title {
+			font-size: 56px;
+			margin-bottom: 66px;
+		}
+
+		&__paragraph {
+			margin-bottom: 15px;
+		}
+	}
+
+
+	@media (min-width: 768px) {
+		@media (max-width: 1224px) {
+			padding: 66px 40px 60px;
+		}
+	}
+}

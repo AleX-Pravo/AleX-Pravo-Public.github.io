@@ -1,0 +1,194 @@
+.header-device {
+    position: relative;
+    // top: 32px;
+    // right: 63px;
+    // height: 0;
+
+    @media (min-width: 1320px) {
+        display: none;
+    }
+}
+
+.header-device.open {
+    //top: 18px;
+    z-index: 103;
+}
+
+.header-device.open .button {
+    position: fixed;
+    z-index: 102;
+    top: 24px;
+    transform: translateX(262px);
+    opacity: 0;
+    display: block;
+    width: 42px;
+    height: 21px;
+}
+
+.header-device.open .button:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 3px;
+    content: '';
+    background: #252525;
+    top: 9px;
+    transform: rotate(135deg);
+    z-index: 1;
+}
+
+.header-device.open .button:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 3px;
+    content: '';
+    background: #252525;
+    bottom: 9px;
+    transform: rotate(-135deg);
+    z-index: 1;
+}
+
+.header-device.open .button-line {
+    //left: 21px;
+    //opacity: 0;
+}
+
+.header-device .header-button {
+    position: relative;
+    display: block;
+    width: 42px;
+    height: 21px;
+    padding: 9px 0 8px;
+}
+
+.header-device .header-button:before,
+.header-device .header-button:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 3px;
+    content: '';
+    background: $base;
+}
+
+.header-device .header-button:before {
+    top: 0;
+}
+
+.header-device .header-button:after {
+    bottom: 0;
+}
+
+.header-device .button-line {
+    position: absolute;
+    display: block;
+    height: 3px;
+    background: $base;
+    left: 0;
+    right: 0;
+}
+
+.header-device .drop {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    padding: 0;
+    transition: all .2s linear;
+    transform: translateX(-320px);
+    background: #fff;
+    overflow: auto;
+}
+
+.header-device .drop-content {
+    position: relative;
+    overflow: auto;
+    max-height: 100%;
+    padding: 30px;
+}
+
+.header-device .drop-box {
+    position: relative;
+    margin: 0 0 20px;
+}
+
+.header-device .drop-box:last-child {
+    margin-bottom: 0;
+}
+
+.header-device .drop-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 30px;
+    background: #f7f7f7;
+}
+
+.header-device .drop .phone {
+    text-align: left;
+}
+
+.header-device .drop .phone .item {
+    font-size: 16px;
+    float: none;
+    margin: 10px 0;
+}
+
+.header-device .drop .phone .item:after {
+    display: none;
+}
+
+.header-device .drop .phone .link {
+    font-size: inherit;
+}
+
+.header-device .title {
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    color: #252525;
+}
+
+.header-device {
+    .secondaryMenu {
+        display: block;
+    }
+}
+
+
+.header-device {
+
+    .drop-content {
+        overflow: visible;
+
+        .drop-box {
+
+            .headerPhone {
+                display: block;
+
+                @media (min-width: 800px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.innerPage {
+
+    .header-device .header-button:before,
+    .header-device .header-button:after {
+        background: $grayDark;
+    }
+
+    .header-device .button-line {
+        background: $grayDark;
+    }
+}

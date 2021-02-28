@@ -1,0 +1,15 @@
+= '\n'
+//= Questions =
+.questions
+    .container
+        .questions__title Если у Вас возникли вопросы
+        .questions__text напишите свое имя и номер телефона,мы Вам перезвоним
+        form.questions__form(action='#' method='post')
+            .questions__form-field.questions__form-field--user
+                input.questions__input(type='text' name='name' placeholder='Введите Ваше имя')
+            .questions__form-field.questions__form-field--phone
+                input.questions__input(type='text' name='phone' placeholder='Введите Ваш телефон')
+            .questions__form-field
+                input.button.questions__button(type='submit' value='Заказать звонок')
+//= End questions =
+= '\n'

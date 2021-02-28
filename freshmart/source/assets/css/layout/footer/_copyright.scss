@@ -1,0 +1,19 @@
+.copyright {
+    position: relative;
+    width: 160px;
+    margin: 0 auto;
+    color: $grayLight;
+
+    @media (max-width: $screenSmMax) {
+
+        padding-top: 30px;
+
+    }
+
+    @media (min-width: $screenMdMin) {
+
+            top: 20px;
+            padding-top: 0!important;
+
+    }
+}

@@ -1,0 +1,63 @@
+//- Utility
+
+include utils/_variable.pug
+
+-
+    pageTitle = 'contacts'
+    nameTitle = 'Контакти'
+    //-subTitle = 'Маршрути'
+
+    //- use if necessary
+    map = true
+    magnificPopup = true // init magnificPopup styles
+    magnificPopupOrdercall = true
+
+    //for breadcrumbs
+    breadcrumbItems = ['Головна']
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header.pug
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+                        .layout-box__content.__base
+                            include module/_breadcrumb.pug
+                            .contacts
+                                include module/_map.pug
+                                include module/_contacts.pug
+
+                        .layout-box__nav.__right
+                            include layout/header/secondMenu/_secondMenu.pug
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.mfp-hide#ordercall-drive
+
+            .modal__content
+                - ordercall = true
+                include module/_popup.pug
+
+        //= End modal =
+        = '\n'
+
+        include layout/_footer.pug
+        include module/_mobile-menu.pug
+        include module/_cookies.pug
+
+        include layout/_sprite.pug
+        include layout/_scripts.pug

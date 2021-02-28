@@ -1,0 +1,21 @@
+include _nested-list.pug
+
+= '\n'
+//= sitemap =
+//- (source/assets/css/module/_sitemap.scss)
+
+.sitemap
+     .container
+        - var titleInfo ='Карта сайту'
+        include _title-block.pug
+        .sitemap__wrapper
+            ul.sitemap__box
+                +nested-list(sitemapListFirst)
+
+            ul.sitemap__box
+                +nested-list(sitemapListSecond)
+
+            ul.sitemap__box
+                +nested-list(sitemapListThird)
+//= End sitemap =
+= '\n'

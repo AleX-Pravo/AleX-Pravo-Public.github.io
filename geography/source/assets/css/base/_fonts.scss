@@ -1,0 +1,33 @@
+/* Gilroy */
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy/regular/gilroy.woff2') format('woff2'),
+    url('../fonts/gilroy/regular/gilroy.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy/light/gilroy.woff2') format('woff2'),
+        url('../fonts/gilroy/light/gilroy.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy/medium/gilroy.woff2') format('woff2'),
+        url('../fonts/gilroy/medium/gilroy.woff') format('woff');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy/bold/gilroy.woff2') format('woff2'),
+        url('../fonts/gilroy/bold/gilroy.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+}

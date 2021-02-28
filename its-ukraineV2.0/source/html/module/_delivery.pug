@@ -1,0 +1,17 @@
+= '\n'
+//= delivery =
+//- (source/assets/css/module/_delivery.scss)
+.delivery
+    form(action='#' method='post')
+        h3 Доставка
+        .form-group
+            each item in deliveryValue
+                label= item
+                    input(type="radio" name='delivery')
+    .delivery__price
+        each val in deliveryPrice
+            span.text= val.name
+            span.sum= val.value
+    button.button Оформити
+//= End delivery =
+= '\n'

@@ -1,0 +1,103 @@
+= '\n'
+//= Footer =
+footer#footer.footer
+    .subservisez__action.order__wizard.footer__action
+        a.button.subservisez__button(href='#') Замовити майстра
+
+    .footer__section.fill
+        .container
+            .footer__section-wrapper
+                //- .footer__section-wrapper
+                //-     .footer__subscribe
+                //-         include ../module/_subscribe.pug
+
+                //-     .footer__apps
+                //-         include ../module/_apps.pug
+
+                .footer__section-wrapper
+
+                    .footer__apps
+                        include ../module/_apps.pug
+
+    .footer__section
+        .container
+            .footer__inner
+
+                .footer__info
+                    .footer__title.subtitle Ідея
+                    .footer__text.
+                        Служба працює у Києві з 2002 року.
+                        Наші майстри вже виконали більше
+                        150 тисяч замовлень. У клієнтській
+                        базі служби більше 45 000 клієнтів.
+
+                    .footer__social
+                        include ../module/_social.pug
+
+                .footer__content
+                    .footer__content-wrapper
+
+                        .footer__item.footer__item--contacts
+                            .footer__title.subtitle Контакти
+                            .footer__item-content
+                                //- .footer__field
+                                //-     .footer__field-name Багатоканальний
+                                //-     .footer__field-value.dropping 0 800 505 505
+                                //-             .footer__field-drop
+                                //-                 .footer__field-drop-inner
+                                //-                     a(href='tel:+380800505505') 0 (800) 505-505
+                                //-                     a(href='tel:+380800505505') 0 (800) 505-505
+                                //-                     a(href='tel:+380800505505') 0 (800) 505-505
+
+                                .footer__field.footer__field--phone
+                                    .footer__field--phone-inner
+                                        a(href='tel:+380352425303') 0352 42 53 03
+                                        a(href='tel:+380676960303') 067 696 03 03
+                                        a(href='tel:+380936050303') 093 605 03 03
+                                        a(href='tel:+380996050303') 099 605 03 03
+
+                                .footer__field
+                                    .footer__field-name Щоденно
+                                    .footer__field-value 07:00-21:00
+
+                                .footer__field
+                                    .footer__field-name Електронна пошта
+                                    .footer__field-value
+                                        a(href='mailto:domslugba@gmail.com') domslugba@gmail.com
+
+                        each item in footerMenu
+                            .footer__item(class='footer__item--' + item.modifier)
+                                .footer__title.subtitle= item.title
+                                .footer__item-content
+                                    ul.footer__menu
+                                        each val in item.menu
+                                            li.footer__menu-item
+                                                if (val.active)
+                                                    a.footer__menu-link.active(href='#')= val.link
+                                                else
+                                                    a.footer__menu-link(href='#')= val.link
+
+                        .footer__item.footer__item--languages
+                            .footer__title.subtitle Мова та місто
+                            .footer__item-content
+                                .footer__field
+                                    .footer__field-name Виберіть мову
+                                    .footer__field-value
+                                        include ../module/_languagelist.pug
+
+                                .footer__field
+                                    .footer__field-name Виберіть місто
+                                    .footer__field-value
+                                        - selectricBorder = false
+                                        include ../module/_citylist.pug
+
+
+    .footer__section.sign
+        .container
+            .footer__section-wrapper
+                .footer__copyright ©  Copyright 2018, Домова служба
+                .footer__developer
+                    | Розробка і підтримка
+                    a(href='#') Компанія &laquo;32x32&raquo;
+//= End footer =
+= '\n'

@@ -1,0 +1,90 @@
+.nav {
+    position: relative;
+
+    &__list {
+        position: relative;
+        margin: 0 -24px;
+        display: flex;
+        align-items: center;
+
+        &-item {
+            position: relative;
+            padding: 0 24px;
+
+            a {
+                position: relative;
+                display: block;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: $fontSizeH5;
+                color: $brandDarkBlue;
+                text-align: center;
+                transition: color .3s;
+
+                &:after {
+                    display: block;
+                    content: attr(data-expansion);
+                    font-weight: bold;
+                    height: 0;
+                    color: transparent;
+                    overflow: hidden;
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    color: $brandPrimary;
+                }
+            }
+
+            &.active {
+                a {
+                    color: $brandPrimary;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &--dots {
+        .nav {
+            &__list {
+                &-item {
+                    &:nth-child(n+2) {
+                        &:before,
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 2px;
+                            height: 2px;
+                            background: $gray;
+                            left: 0;
+                            transform: translateY(-50%);
+                        }
+
+                        &:before {
+                            top: calc(50% - 2px);
+                        }
+
+                        &:after {
+                            top: calc(50% + 2px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_XL_Min) {
+        &__list {
+            margin: 0 -29px;
+
+            &-item {
+                padding: 0 28px;
+
+                a {
+                    font-size: $fontSizeSmall;
+                }
+            }
+        }
+    }
+}

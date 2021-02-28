@@ -1,0 +1,89 @@
+.text--payment .payment__picture {
+    min-height: 51px;
+    margin-bottom: 13px;
+}
+
+@media (min-width:1024px) {
+    .text--payment .payment__item {
+        width:33%;
+    }
+}
+
+.order-delivery-payment {
+    font-size: 14px;
+    line-height: 1;
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    padding: 9px 0 15px;
+    color: #534746;
+}
+
+.order-delivery-payment-radiobox {
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 17px;
+    vertical-align: middle;
+}
+
+.order-delivery-payment-radio {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    border: 0;
+    outline: 0;
+}
+
+.order-delivery-payment-radio:checked + .order-delivery-payment-checker:after, .order-delivery-payment-radio:hover + .order-delivery-payment-checker:after {
+    opacity: 0;
+}
+
+.order-delivery-payment-radio:checked + .order-delivery-payment-checker:before, .order-delivery-payment-radio:hover + .order-delivery-payment-checker:before {
+    opacity: 1;
+}
+
+.order-delivery-payment-checker {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-width: 550px) {
+    .order-delivery-payment {
+        font-size: 22px;
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 50px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .order-delivery-payment {
+        display: inline-block;
+        width: 35%;
+        margin-right: -4px;
+        font-size: 16px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 1090px) {
+    .order-delivery-payment {
+        width: 100% !important;
+    }
+}
+
+.to-up {
+    bottom: 45px !important;
+    top: auto !important;
+}

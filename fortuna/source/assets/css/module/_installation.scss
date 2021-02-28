@@ -1,0 +1,104 @@
+.installation {
+    position: relative;
+
+    @media (max-width: 719px) {
+        height: auto;
+        background-image: none !important;
+    }
+
+    @media (min-width: 720px) {
+        //height: 1000px;
+        //background: no-repeat center top/cover;
+        //background-attachment: fixed;
+        //background-repeat: no-repeat;
+        //background-size: cover;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__item {
+        position: relative;
+        background: $base;
+
+        @media (min-width: 720px) {
+            left: auto;
+            position: absolute;
+            top: 0;
+            right: 15px;
+        }
+    }
+
+    &__text {
+        margin: 0 20px 40px 20px;
+
+        @media (min-width: 720px) {
+            margin: 41px 59px 56px 40px;
+        }
+
+        h2 {
+            font-family: $fontFamilyGilroy_Bd;
+            font-size: 64px;
+            color: $grayDark;
+            font-weight: bold;
+            line-height: 1;
+            margin: 11px 0 17px;
+        }
+
+        strong {
+            width: auto;
+            font-family: $fontFamilyBase;
+            font-size: 36px;
+            color: $grayDark;
+            line-height: 1.35;
+            margin-bottom: 62px;
+            display: block;
+
+            @media (min-width: 420px) {
+                width: 350px;
+            }
+        }
+
+        p {
+            font-family: $fontFamilyGilroy_SmBd;
+            font-size: 24px;
+            margin-bottom: 33px;
+        }
+
+        ul {
+
+            li {
+                position: relative;
+                margin-bottom: 40px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &:nth-child(2) {
+                    img {
+                        margin-left: 5px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    img {
+                        margin-left: 5px;
+                    }
+
+                }
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}

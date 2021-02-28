@@ -1,0 +1,175 @@
+= '\n'
+//= Service =
+.service
+    .service__list
+        .service__list-wrapper
+            .service__list-header
+                .service__list-item.service__list-name
+                    .service__list-header-title Перелік послуг
+                    .service__list-header-text * Одиниця вказана поштучно
+
+                .service__list-item.service__list-unit
+                    .service__list-header-title Одиниця виміру
+                .service__list-item.service__list-value
+                    .service__list-header-title Ціна
+                    .service__list-header-city
+                        - selectricBorder = false
+                        include _citylist.pug
+                .service__list-item.service__list-guarantee
+                    .service__list-header-title Гарантія
+
+            each item in serviceList
+                .service__list-field <!--(class=item.class)-->
+                    .service__list-item.service__list-name= item.name
+                    .service__list-item.service__list-unit= item.unit
+                    .service__list-item.service__list-value #{item.price} грн.
+                        if (item.img)
+                            img(src='../../assets/images/content/stamp-' + item.img + '.png', alt="")
+                    .service__list-item.service__list-guarantee #{item.month} міс.
+
+                    //.service__list-item.service__list-value
+                        a.service__list-value__button(href='#') ціна
+    .service__list
+        .service__list-footer.
+            Вартість виявлення пошкодженої ділянки електропроводки з подальшим ремонтом встановлюється за виїзд (за умови, що майстер працював не більше години часу).
+
+    .service__details
+        .service__details-wrapper
+            .service__details-box.double
+                .service__details-boxwrapper
+                    .service__details-col
+                        .service__details-inner
+                            .service__details-icon.success
+                            .service__details-title У вартість входить
+                            .service__details-list
+                                .service__details-item
+                                    .service__details-name Виявлення пошкодженої електропроводки
+
+                                .service__details-item
+                                    .service__details-name Ремонт електропроводки у розподільчій коробці
+
+                                .service__details-item
+                                    .service__details-name Заміна пошкодженої ділянки електропроводки
+
+                    .service__details-col
+                        .service__details-inner
+                            .service__details-icon.danger
+                            .service__details-title У вартість не входить
+                            .service__details-list
+                                .service__details-item
+                                    .service__details-name Вартість матеріалів необхідних для ремонту пошкодженої електропроводки
+
+                                .service__details-item
+                                    .service__details-name Штробіння стін
+
+                                .service__details-item
+                                    .service__details-name Демонтаж, монтаж стінового покриття
+
+            .service__details-box.single
+                .service__details-boxwrapper
+                    .service__details-col
+                        .service__details-inner
+                            .service__details-icon.info
+                            .service__details-title Гарантія
+                            .service__details-list
+                                .service__details-item
+                                    .service__details-name Гарантія 12 місяців
+                                    .service__details-text Гарантія дає право на безкоштовне усунення проблеми, яка виникла під час вказаного в Акті виконаних робіт періоду і пов’язана з неякісною роботою майстра
+
+    .service__calc
+        .service__calc-wrapper
+            .service__calc-box
+                - var title = [{modifier: 'title--left', elem: 'h2', icon: '', text: 'ФОРМА ЗАЯВКИ', name: 'Розрахувати вартість'}]
+                include _title.pug
+
+                .service__calc-content
+                    .service__calc-field
+                        input.service__calc-input.error(type='text' placeholder="Введіть ваше ім'я")
+                        input.service__calc-input(type='text' placeholder='Введіть ваш телефон')
+                        input.service__calc-input(type='text' placeholder='Введіть ваш EMAIL')
+                    .service__calc-field
+                        textarea.service__calc-textarea(placeholder='ОПИШІТЬ ПЕРЕЛІК ЗАПИТАНЬ І МИ З ВАМИ ЗВЯЖЕМОСЬ ')
+                    .service__calc-field
+                        button.service__calc-button(type='submit') ВІДІСЛАТИ
+
+            .service__calc-box
+                img.service__calc-image(src='data/service/1.png' alt='')
+
+    .service__description
+        .service__description-wrapper
+            .service__description-item
+                .service__description-text.
+                    Електричні явища були відомі ще в давнину, давнім грекам, фінікійцям, жителям Межиріччя. Те, що при натиранні бурштин отримує властивість притягати до себе легкі предмети, описував в 600-х роках до н.е.
+            .service__description-item
+                .service__description-text.
+                    Новий крок у вивченні електричних явищ здійснив у 1600 році англійський лікар Вільям Ґілберт. Провівши дослідження електричних і магнітних явищ він опублікував книгу, в якій зробив висновок, що властивості постійного магніта.
+
+    .service__affined
+        - var title = [{modifier: '', elem: 'h2', icon: '', text: 'КОРИСНА ІНФОРМАЦІЯ', name: 'Схожі послуги'}]
+        include _title.pug
+        .service__affined-list
+            .service__affined-wrap
+                .service__affined-item
+                    a.service__affined-name(href="#") Встановлення звичайного умивальника
+
+                .service__affined-item
+                    a.service__affined-name(href="#") Встановлення нового лічильника води
+
+                .service__affined-item
+                    a.service__affined-name(href="#") Встановлення унітазу-компакту
+
+                .service__affined-item
+                    a.service__affined-name(href="#") Дрібний ремонт бачка унітазу
+
+                .service__affined-item
+                    a.service__affined-name(href="#") Заміна корінного вентиля
+
+                .service__affined-item
+                    a.service__affined-name(href="#") Чищення каналізації в квартирі багатоквартирного будинку
+
+
+    .service__info
+        - var title = [{modifier: '', elem: 'h2', icon: '', text: 'КОРИСНА ІНФОРМАЦІЯ', name: 'Додаткова інформація'}]
+        include _title.pug
+
+        .service__info-wrapper
+            .service__info-box
+                img.service__info-image(src='data/service/2.png' alt='')
+
+            .service__info-box
+                .service__info-list
+                    .service__info-item
+                        img.service__info-icon(src='data/service/info-1.png' alt='')
+                        .service__info-name
+                            a.service__info-link(href='#') Доставка майстра
+
+                    .service__info-item
+                        img.service__info-icon(src='data/service/info-2.png' alt='')
+                        .service__info-name
+                            a.service__info-link(href='#') Оплата послуг
+
+                    .service__info-item
+                        img.service__info-icon(src='data/service/info-3.png' alt='')
+                        .service__info-name
+                            a.service__info-link(href='#') Гарантія
+
+                    .service__info-item
+                        img.service__info-icon(src='data/service/info-4.png' alt='')
+                        .service__info-name
+                            a.service__info-link(href='#') Лояльність
+
+    .service__ather
+
+        - var title = [{modifier: '', elem: 'h2', icon: '', text: 'ПОСЛУГИ ІНШИХ КАТЕГОРІЙ', name: 'Суміжні послуги'}]
+        include _title.pug
+
+        .service__ather-list
+            each item in serviceAtherList
+                - var modifier = (item.active) ? 'active' : ''
+                .service__ather-item(class= modifier)
+                    a.service__ather-outer(href='#')
+                        .service__ather-inner
+                            .service__ather-text= item.name
+
+//= End service =
+= '\n'

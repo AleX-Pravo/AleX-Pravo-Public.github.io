@@ -1,0 +1,27 @@
+= '\n'
+//= search =
+
+.search#search
+    .search__wrapper
+        .search__inner
+            form.form.form--search(action='' method='')
+                .form-group
+                    input.form-control(type='text' name='search' placeholder='Введіть назву міста...' tabindex='0')
+                .form-group
+                    button.button.button--bright(type='button') шукати
+
+            if searchList
+                ul
+                    each item in ciriesList
+
+                        if item.strong
+                            li(class= item.class)
+                                strong
+                                    a(href="javascript:void(0)")= item.name
+                        else
+                            li(class= item.class)
+                                a(href="javascript:void(0)")= item.name
+
+
+//= End search =
+= '\n'

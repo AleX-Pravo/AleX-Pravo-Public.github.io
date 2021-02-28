@@ -1,0 +1,16 @@
+//- COMPARISON
+//------------------------------------------------
+
+$comparison__baseFontSize:                  $fontSizeBase !default;
+$comparison__baseBackgroundColor:           $base !default;
+
+$comparison__borderColor:                   $borderColor !default;
+$comparison__borderColor--active:           $brandPrimary !default;
+
+$comparison__backgroundColor:               $brandInfo !default;
+
+$comparison__shadowColor:                   transparentize($grayBase, .8) !default;
+
+$comparison__clearBackgroundColor--active:  $brandInfo !default;
+
+$comparison__priceTextFontSize:             $fontSizeLarge !default;

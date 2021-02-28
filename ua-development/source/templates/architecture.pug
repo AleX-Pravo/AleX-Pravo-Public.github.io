@@ -1,0 +1,71 @@
+//- Utility
+
+include utils/_variable.pug
+
+-
+    pageTitle = 'architecture'
+    nameTitle = 'Архітектура та дизайн'
+    //-subTitle = 'Маршрути'
+
+    //- use if necessary
+    magnificPopup = true // init magnificPopup styles
+    magnificPopupOrdercall = true
+
+    //for breadcrumbs
+    breadcrumbItems = ['Головна']
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header.pug
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+                        .layout-box__content.__base
+                            include module/_breadcrumb.pug
+                            - nameBlock = nameTitle
+                            include module/_name-block.pug
+
+                            - p1 = 'На етапі проектування приймаються рішення (в категоріях ціна-якість-стиль) щодо будівельних і оздоблювальних матеріалів. Коли ескізний проект замовником затверджено, створюється «Проект» - пакет будівельних креслень:'
+                            - li1 = 'пакет документації, креслення: плани, ескізи. види. перерізи, розгортки, специфікації тощо. За ними виконуються загальнобудівельні роботи, прокладка комунікацій і мереж, оздоблення і прикрашання приміщень.'
+                            - li2 = 'За проектом зводять будинок.'
+                            - li3 = 'За проектом виконують облаштування інтер\'єру.'
+                            - p2 = 'Дизайн інтер’єру – це, по суті, конкретизація зовнішнього вигляду приміщення. На даному етапі вирішується якими будуть підлогові покриття, оздоблення стін, двері в кажному конкретному прорізі, як і які будуть разставлені меблі, складається план освітлення і вирішується багато інших питань'
+                            - p3 = 'з детальної проробки майбутнього інтер’єру. Дизайнерський блок може йти зразу за архітектурною роботою, а може і разом з нею там, де форма й функції пприміщення залишаються попередніми або ж міняються несуттєво. Якщо тільке не йдеться про спорудження нової будівлі і її приміщень, то дизайн интер’єру містить в собі і деталізоване архітектурне проектування.'
+                            include module/_text-block.pug
+                            include module/_expand.pug
+                            include module/_advice.pug
+
+                        .layout-box__nav.__right
+                            include layout/header/secondMenu/_secondMenu.pug
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.mfp-hide#ordercall-drive
+
+            .modal__content
+                - ordercall = true
+                include module/_popup.pug
+
+        //= End modal =
+        = '\n'
+
+        include layout/_footer.pug
+        include module/_mobile-menu.pug
+        include module/_cookies.pug
+
+        include layout/_sprite.pug
+        include layout/_scripts.pug

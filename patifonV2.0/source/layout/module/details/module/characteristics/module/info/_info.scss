@@ -1,0 +1,29 @@
+.info {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+
+    &__glossary {
+
+        &-title {
+            font-weight: bold;
+            font-size: $fontSizeH4;
+        }
+
+        &-description {
+            margin: 13px 0;
+            font-size: $fontSizeH6;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        background: url('../images/forms/close.png') no-repeat;
+        cursor: pointer;
+    }
+}

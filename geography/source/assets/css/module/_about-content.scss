@@ -1,0 +1,26 @@
+.about-content {
+    max-width: 770px;
+    width: 100%;
+    margin: auto;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        flex-wrap: wrap;
+        li {
+            width: 33%;
+            font-size: $fontSizeExtraSmall;
+            color: $grayDark;
+            text-align: center;
+            position: relative;
+            padding-top: 25px;
+        }
+    }
+    @media (min-width: 768px) {
+        &__list {
+            li {
+                font-size: $fontSizeSmall;
+            }
+        }
+    }
+}

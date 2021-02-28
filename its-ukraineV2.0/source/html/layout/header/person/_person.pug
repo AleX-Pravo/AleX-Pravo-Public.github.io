@@ -1,0 +1,34 @@
+
+-
+    var person = [
+        {
+            text: 'Моя сторінка'
+        },
+        {
+            text: 'Редагувати'
+        },
+        {
+            text: 'Налаштування'
+        },
+        {
+            text: 'Вихід'
+        }
+    ]
+
+
+= '\n'
+//= person =
+//-=(/layout/header/person/_person.scss)=
+.person
+    //-.person-name Олександр
+    //-.person-img
+    a.person-img.admission-modal(href='#admission-drive')
+    //-.person-arrow
+
+    //-ul.person-drop
+        each val in person
+            li
+                a(href='#')= val.text
+
+//= End person =
+= '\n'

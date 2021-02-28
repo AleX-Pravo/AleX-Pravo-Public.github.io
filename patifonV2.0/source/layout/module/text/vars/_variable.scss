@@ -1,0 +1,22 @@
+//- TEXT
+//------------------------------------------------
+
+$text__h2TextFontSize:              $fontSizeH1 !default;
+$text__h3TextFontSize:              $fontSizeH3 !default;
+$text__h4TextFontSize:              $fontSizeH5 !default;
+$text__h5TextFontSize:              $fontSizeBase !default;
+
+$text__olListCounterTextFontSize:   $fontSizeH6 !default;
+$text__olListCounterTextColor:      $brandPrimary !default;
+
+$text__tableBorderColor:            $borderColor !default;
+
+$text__tableHeadBackgroundColor:    #dfdfdf !default;
+$text__tableHeadBorderColor:        #bbbaba !default;
+
+$text__tableBodyBorderColor:        #e5e5e5 !default;
+$text__tableBodyBackgroundColor:    $brandInfo !default;
+
+$text__blockquoteTextFontSize:      $fontSizeLarge !default;
+$text__blockquoteTextColor:         $grayExtraLight !default;
+$text__blockquoteBorderColor:       $brandPrimary !default;

@@ -1,0 +1,125 @@
+@import 'vars/_variable.scss';
+
+&__drop {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: $searchDrop__backgrondColor;
+    box-shadow: 0 0 10px $searchDrop__shadowColor;
+
+    &--list {
+        z-index: 11;
+    }
+
+    &List {
+        position: relative;
+
+        &Item {
+            position: relative;
+            margin: 0 0 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &Link {
+            transition: all .2s linear;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                color: $searchDrop__listTextColor--active;
+            }
+        }
+    }
+
+    &Item {
+        position: relative;
+        padding: 15px 0 15px 85px;
+        border-bottom: 1px solid $searchDrop__borderColor;
+
+        @include clearfix;
+    }
+
+    &Image {
+        font-size: 0;
+        position: relative;
+        float: left;
+        width: 70px;
+        height: 70px;
+        margin: 0 15px 0 -85px;
+
+        &:before {
+            position: relative;
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            content: '';
+            vertical-align: middle;
+        }
+
+        img {
+            font-size: $searchDrop__baseFontSize;
+        }
+    }
+
+    &Content {
+        position: relative;
+    }
+
+    &Title {
+        line-height: (20px / $searchDrop__baseFontSize);
+        position: relative;
+
+        &Link {
+            color: inherit;
+        }
+    }
+
+    &Category {
+        position: relative;
+        margin: 0 0 4px;
+        color: $grayLighter;
+    }
+
+    &Price {
+        font-size: $searchDrop__priceTextFontSize;
+        font-weight: 700;
+        position: relative;
+    }
+
+    &Result {
+        position: relative;
+        margin: 4px 0 0;
+        text-align: right;
+
+        &Link {
+            color: $searchDrop__resultTextColor;
+
+            &:after {
+                position: relative;
+                top: -1px;
+                display: inline-block;
+                width: 8px;
+                height: 15px;
+                margin: 0 0 0 10px;
+                content: '';
+                vertical-align: middle;
+                background: url('../images/header/icon/arrow-right.png') no-repeat;
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        z-index: 4;
+
+        &--list {
+            z-index: 5;
+        }
+    }
+}

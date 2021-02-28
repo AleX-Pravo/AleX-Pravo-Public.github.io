@@ -1,0 +1,70 @@
+//== Colors
+
+$white:                 #fff !default;
+$black:                 #000 !default;
+
+$base:                  #E5E5E5 !default;
+$grayBase:              #1A1A1D !default;
+$gray:                  #73737C !default;
+$grayLight:             #A6A9B0 !default;
+$grayLighter:           #DADADA !default;
+$brandPrimary:          #ED0035 !default;
+$bodyColor:             #F2F3F6 !default;
+
+//== Reset
+
+$bodyBg:                $base !default;
+$textColor:             $grayBase !default;
+$linkColor:             $brandPrimary !default;
+$borderColor:           $grayLighter !default;
+
+
+//== Typography
+
+$fontFamilySansSerif:   'Arial', sans-serif !default;
+$fontFamilyBase:        'Montserrat', $fontFamilySansSerif !default;
+$fontFamilyOswald:      'Oswald', $fontFamilySansSerif !default;
+
+$fontSizeBase:          14px !default;
+$fontSizeLarge:         16px !default;
+$fontSizeSmall:         12px !default;
+
+$fontSizeH1:            30px !default;
+$fontSizeH2:            20px !default;
+$fontSizeH3:            18px !default;
+
+$lineHeightBase:        1.5 !default; // 21/14
+
+
+//== Form sizes
+
+$formControlHeight:     40px !default;
+$checkboxSize:          26px !default;
+
+
+//== Grid system
+
+$gridMaxWidth:          1495px !default;
+$gridColumns:           12 !default;
+$gridGutterWidth:       30px !default;
+
+
+//== Media queries breakpoints
+//
+$screenXxMin:           360px !default;
+$screenXXsMin:          480px !default;
+$screenXsMin:           600px !default;
+$screenSmMin:           768px !default;
+$screenSMin:            840px !default;
+$screenSMd:             960px !default;
+$screenMdMin:           1080px !default;
+$screenLgMin:           1200px !default;
+$screenLgMax:           1320px !default;
+$screenXLgMax:          1560px !default;
+
+$screenXxMax:           ($screenXXsMin - 1) !default;//479
+$screenXXsMax:          ($screenXsMin - 1)  !default;//559
+$screenXsMax:           ($screenSmMin - 1)  !default;//767
+$screenSmMax:           ($screenSMin - 1)   !default;//839
+$screenSMax:            ($screenMdMin - 1)  !default;//1079
+$screenMdMax:           ($screenLgMin - 1)  !default;//1199

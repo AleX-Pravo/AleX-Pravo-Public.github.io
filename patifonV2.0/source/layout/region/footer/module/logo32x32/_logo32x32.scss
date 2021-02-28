@@ -1,0 +1,35 @@
+@import 'vars/_variable.scss';
+
+.logo32x32 {
+    font-family: $logo32x32__textFontFamily;
+    font-size: $logo32x32__textFontSize;
+    line-height: (13px / $logo32x32__textFontSize);
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    color: $logo32x32__textColor;
+
+    &__image {
+        position: relative;
+        display: block;
+        float: left;
+        width: 90px;
+        height: 22px;
+        margin: 2px 5px 0 0;
+    }
+
+    &__link {
+        color: $logo32x32__linkTextColor;
+    }
+
+    @media (max-width: $screenMbMax) {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__link {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+@import 'vars/_variable.scss';
+
+.button {
+    font-weight: 700;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    transition: all .2s linear;
+    text-align: center;
+    text-decoration: none;
+    color: $button__textColor;
+    border: none;
+    outline: none;
+    background-color: $button__backgroundColor;
+
+    &:hover {
+        background-color: $button__backgroundColor--active;
+
+        .button {
+            &__icon {
+                &:before {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &--search {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-image: url('../images/header/icon/search.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--buy {
+        border-radius: 4px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            transition: all .2s linear;
+        }
+
+        &:before {
+            background: linear-gradient(to bottom, $button__backgroundGradientColor);
+        }
+
+        &:after {
+            opacity: 0;
+            background: linear-gradient(to top, $button__backgroundGradientColor);
+        }
+
+        &:hover {
+            &:before {
+                opacity: 0;
+            }
+
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &[disabled] {
+
+            &:before,
+            &:after {
+                display: none;
+            }
+
+            background: linear-gradient(to bottom, #bfbeb9, #888783);
+        }
+    }
+
+    &--default {
+        color: inherit;
+        border: 1px solid $button__defaultBorderColor;
+        border-radius: 4px;
+        background: transparent;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__icon {
+        position: relative;
+        display: inline-block;
+        width: 8px;
+        height: 15px;
+        margin: 0 20px 0 0;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            transition: all .2s linear;
+            background: url('../images/content/icon/back.png') no-repeat;
+        }
+
+        &:before {
+            background-position: 0 0;
+        }
+
+        &:after {
+            opacity: 0;
+            background-position: 0 -16px;
+        }
+    }
+
+    &--link {
+        font-size: 24px;
+        line-height: (48px / 24px);
+        width: 100%;
+        height: 48px;
+    }
+
+    &--catalog {
+        height: 40px;
+        width: 100%;
+        max-width: 300px;
+        border: 1px solid $brandPrimary;
+        border-radius: 3px;
+        background: transparent;
+        margin: 0 auto;
+
+        &:hover {
+            span {
+                color: $base;
+            }
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        span {
+            line-height: 40px;
+            color: $brandPrimary;
+        }
+    }
+}

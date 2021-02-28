@@ -1,0 +1,25 @@
+{
+    "name": "studio32x32/layout/domova",
+    "description": "domova",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kozachuk Oleksandr",
+            "email": "css3@ukr.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bower-asset/jquery": "2.x",
+        "bower-asset/dimsemenov/magnific-popup": "dev-master",
+        "bower-asset/slick-carousel": "dev-master",
+        "bower-asset/magnific-popup": "^1.1"
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "npm",
+            "bower-asset-library": "bower"
+        }
+    }
+}

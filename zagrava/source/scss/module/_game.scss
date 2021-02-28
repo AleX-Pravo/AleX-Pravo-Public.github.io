@@ -1,0 +1,221 @@
+.game {
+    position: relative;
+    width: calc(100% - 30px);
+    margin: 15px;
+
+    > a {
+        display: block;
+        margin: 0 0 23px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    &--full {
+        width: calc(100% - 15px);
+        overflow: hidden;
+        margin: 7.5px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all .3s;
+            background: $brandDarkBlue;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .info-mask {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: $base;
+            padding: 17px;
+            opacity: 0;
+            transition: all .3s;
+            z-index: 2;
+            justify-content: center;
+
+            &__title {
+                margin: 0 0 25px;
+                //line-height: 34px;
+                line-height: 28px;
+            }
+
+            &__inner {
+                margin: 0 0 25px;
+            }
+
+            &__text {
+                max-height: 80px;
+                p {
+                    font-size: $fontSizeH5;
+                }
+            }
+        }
+
+        &:hover {
+            &:before {
+                opacity: .6;
+            }
+
+            .info-mask {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--pinch {
+        height: auto;
+        overflow: hidden;
+        max-width: 100%;
+
+        .info-mask {
+            position: static;
+            padding: 0;
+            opacity: 1;
+            color: $brandDarkBlue;
+            align-items: flex-start;
+
+            &__inner {
+                margin: 0 0 20px;
+                align-items: flex-start;
+            }
+
+            &__title {
+                margin: 0 0 15px;
+                text-align: left;
+            }
+
+            &__text {
+                color: $brandDirtPurple;
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_XXS_Min) {
+        &--full {
+            .info-mask {
+                padding: 46px 17px 53px 17px;
+            }
+        }
+    }
+
+    @media (min-width: $screen_S_Min) {
+        &--full {
+            width: calc(50% - 15px);
+
+            .info-mask {
+                padding: 17px;
+
+                &__text {
+                    max-height: 65px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_M_Min) {
+        &--full {
+            .info-mask {
+                padding: 46px 17px 53px 17px;
+                justify-content: space-between;
+
+                &__text {
+                    max-height: 100px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 860px) {
+        &--pinch {
+            max-width: 460px;
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+        &--full {
+            width: calc(33.333334% - 30px);
+            margin: 15px;
+
+            .info-mask {
+                padding: 17px;
+
+                &__text {
+                    max-height: 105px;
+                }
+
+                &__title {
+                    line-height: 34px;
+                }
+            }
+        }
+
+        &--pinch {
+
+            .info-mask {
+                &__inner {
+                    margin: 0 0 17px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_XL_Min) {
+        &--full {
+            .info-mask {
+                padding: 35px;
+
+                &__title {
+                    margin: 0 0 35px;
+                    font-size: $fontSizeLarge;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_XXL_Min) {
+        &--full {
+            min-height: 490px;
+            max-width: 460px;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                position: static;
+                top: auto;
+                left: auto;
+                transform: none;
+            }
+
+            .info-mask {
+                padding: 73px 41px 70px;
+
+                &__title {
+                    margin: 0 0 44px;
+                    max-width: 300px;
+                    line-height: 34px;
+                }
+
+                &__text {
+                    p {
+                        font-size: $fontSizeSmall;
+                    }
+                }
+            }
+        }
+    }
+}

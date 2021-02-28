@@ -1,0 +1,68 @@
+= '\n'
+//= enter-popup =
+//- (source/assets/css/module/_enter-popup.scss)
+
+.enter-popup.enter-popup--office#enter
+    each elem in popItems
+        if elem.login
+            .enter-popup__wrapper
+                .enter-popup__image
+                    img(src="data/popup/" + elem.image, alt="")
+                h2= elem.title
+                .enter-popup__text= elem.text
+                form(id='' action='#' method='post')
+                    .form-group
+                        input.form-control(type='text' placeholder=elem.placeholder required)
+                        label.control-label= elem.labelFirst
+                        .help-block
+                    .form-group
+                        input.form-control(type='text' placeholder='' required)
+                        label.control-label= elem.labelSecond
+
+                    a(href='#')=elem.pass
+                    .form-group
+                        button.enter(type='button' disabled)= elem.enter
+                    .form-group
+                        button.registration(type='button' disabled)= elem.registr
+        if elem.registartion
+            .enter-popup__wrapper
+                .enter-popup__image
+                    img(src="data/popup/" + elem.image, alt="")
+                h2= elem.title
+                .enter-popup__text= elem.text
+                form(id='' action='#' method='post')
+                    .form-group
+                        input.form-control(type='text' placeholder=elem.placeholder required)
+                        label.control-label= elem.labelFirst
+                        .help-block
+                    .form-group
+                        input.form-control(type='text' placeholder='' required)
+                        label.control-label= elem.labelSecond
+                    .form-group
+                        input.form-control(type='text' placeholder='' required)
+                        label.control-label= elem.labelThird
+
+                    .conditions
+                        span Я погоджуюсь з
+                            a(href='#0') умовами публічного договору та умовами використання та обробки персональних даних
+                        input(type='checkbox')
+                    .form-group
+                        button.enter(type='button' disabled)= elem.enter
+        if elem.passwordForgot
+            .enter-popup__wrapper
+                .enter-popup__image
+                    img(src="data/popup/" + elem.image, alt="")
+                h2= elem.title
+                .enter-popup__text= elem.text
+                form(id='' action='#' method='post')
+                    .form-group
+                        input.form-control(type='text' placeholder=elem.placeholder required)
+                        label.control-label= elem.labelFirst
+                        .help-block
+
+                    .form-group
+                        button.enter(type='button' disabled)= elem.enter
+                    .form-group
+                        button.registration(type='button' disabled)= elem.registr
+//= End enter-popup =
+= '\n'

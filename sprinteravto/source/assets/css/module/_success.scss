@@ -1,0 +1,23 @@
+.success {
+    max-width: 620px;
+    width: 100%;
+    background: $white;
+    text-align: center;
+    padding: 50px 0;
+    margin: 0 auto;
+
+    &__image {
+        width: 52px;
+        height: 52px;
+        background: url(../images/success/success.svg)no-repeat;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color: $grayBase;
+        font-size: $fontSizeH1;
+        font-family: $fontFamilyOswald;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}

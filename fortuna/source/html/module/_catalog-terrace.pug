@@ -1,0 +1,62 @@
+= '\n'
+//= catalog-terrace =
+//-=(source/assets/css/module/_aboutCompany.scss)=
+
+.catalog-terrace
+    - var titleInfo = subTitle
+    include __title.pug
+
+    //-=(module/_text.scss)=
+    .catalog-terrace__text.text
+
+        p(style='font-family: gilroysemibold;').
+            У кожному будинку ми створюємо світ, де нам добре і комфортно. Ми цінуємо ексклюзивні і в той же час практичні речі. Гідною прикрасою вашого дому стане терасна дошка, яка широко використовується при будівництві:
+        ul(style='margin: -25px 0 23px;')
+            li(style='margin-bottom: 5px;') Відкритих терас
+            li(style='margin-bottom: 5px;') Територій навколо басейнів
+            li(style='margin-bottom: 5px;') Літніх кафе, ресторанів
+            li(style='margin-bottom: 5px;') Містків і причалів
+            li(style='margin-bottom: 5px;') Готелів
+            li(style='margin-bottom: 5px;') Альтанок
+            li(style='margin-bottom: 5px;') Балконів
+
+        - picNumber = '1'
+        include _small-Slider.pug
+
+        p(style='font-family: gilroysemibold;').
+            Сучасні системи для терас представляють собою новітній матеріал, який утворюється при змішуванні деревної тирси з екологічно чистим поліпропіленом (пластмасою) при спеціальному температурному режимі. У результаті цього змішування виходить довговічний матеріал з переконливими якостями:
+        ul(style='margin: -25px 0 36px;')
+            li(style='margin-bottom: 5px;') Натуральний зовнішній вигляд;
+            li(style='margin-bottom: 5px;') Безосколкова поверхня (при такому настилі неможливо отримати скалку);
+            li(style='margin-bottom: 5px;') Не ковзає, приємний при при ходінні босоніж;
+            li(style='margin-bottom: 5px;') Не піддається ураженню грибком і комахами, не гниє, не руйнується;
+            li(style='margin-bottom: 5px;') Легко чиститися за допомогою води під напором;
+            li(style='margin-bottom: 5px;') Ідеальний для використання в місцях з підвищеною вологістю;
+            li(style='margin-bottom: 5px;') Не вимагає постійного догляду.
+
+        - picNumber = '2'
+        include _small-Slider.pug
+
+        p(style='font-family: gilroysemibold;').
+            Наш матеріал також характеризується високою стійкістю:
+        ul(style='margin-top: -25px;')
+            li(style='margin-bottom: 5px;') Стабільність форми, завдяки матеріалу і техніці монтажу
+            li(style='margin-bottom: 5px;') Стійкість до погодних умов (ультрафіолетових променів, дощу, морозу, снігу)
+            li(style='margin-bottom: 5px;') Зберігається натуральний колір — не вимагає фарбування і промаслюванням
+            li(style='margin-bottom: 5px;') Висока міцність
+            li(style='margin-bottom: 5px;') Важкозаймистий матеріал
+            li(style='margin-bottom: 5px;') Довгий термін експлуатації.
+
+        //- p(style='font-weight: bold; font-size: 18px;') Процес виготовлення чаю включає:
+        //- ul
+        //-     li збір та попереднє сортування
+        //-     li зав’ялення
+        //-     li скручування
+        //-     li ферментація та просушування
+        //-     li кінцеве сортування, маркування та пакування
+
+        //-проверка всего текста для редактора
+        //-include _text-audit.pug
+
+//= End catalog-terrace =
+= '\n'

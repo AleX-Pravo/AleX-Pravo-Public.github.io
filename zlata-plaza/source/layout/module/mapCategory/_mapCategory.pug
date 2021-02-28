@@ -1,0 +1,94 @@
+include vars/_variable.pug
+
+= '\n'
+//= Map category =
+.map-category
+    a.map-category__close.hide-md-min(href='javascript:void(0);')
+
+    ul.map-category__menu
+        li.map-category__menu-item
+            a.map-category__menu-link.map-category__menu-link--shop(href='javascript:void(0);') Магазини
+
+            ul.map-category__list
+                each val in mapCategory
+                    li.map-category__item
+                        .map-category__box
+                            a.map-category__box-close(href='javascript:void(0);')
+                            a.map-category__link(href='javascript:void(0);' class='map-category__link--' + val.class)= val.title
+                                span.map-category__count= val.count
+
+                            if ('floor' in val)
+                                .map-category__drop
+                                    ul.map-category__floor
+                                        each floor in val.floor
+                                            li.map-category__floor-item
+                                                a.map-category__floor-link(href='javascript:void(0);' data-floor='-1')= floor.title
+
+                                                ul.map-category__floor-list
+                                                    each list in floor.list
+                                                        li.map-category__floor-list-item
+                                                            a.map-category__floor-list-link(href='javascript:void(0);' data-area= list.area)= list.title
+
+        li.map-category__menu-item
+            a.map-category__menu-link.map-category__menu-link--food(href='javascript:void(0);') Де поїсти
+
+            ul.map-category__list
+                each val in mapCategory
+                    li.map-category__item
+                        .map-category__box
+                            a.map-category__box-close(href='javascript:void(0);')
+                            a.map-category__link(href='javascript:void(0);' class='map-category__link--' + val.class)= val.title
+                                span.map-category__count= val.count
+
+                            if ('floor' in val)
+                                .map-category__drop
+                                    ul.map-category__floor
+                                        each floor in val.floor
+                                            li.map-category__floor-item
+                                                a.map-category__floor-link(href='javascript:void(0);' data-floor='-1')= floor.title
+
+                                                ul.map-category__floor-list
+                                                    each list in floor.list
+                                                        li.map-category__floor-list-item
+                                                            a.map-category__floor-list-link(href='javascript:void(0);' data-area= list.area)= list.title
+
+        li.map-category__menu-item
+            a.map-category__menu-link.map-category__menu-link--service(href='javascript:void(0);') Послуги
+
+            ul.map-category__list
+                each val in mapCategory
+                    li.map-category__item
+                        .map-category__box
+                            a.map-category__box-close(href='javascript:void(0);')
+                            a.map-category__link(href='javascript:void(0);' class='map-category__link--' + val.class)= val.title
+                                span.map-category__count= val.count
+
+                            if ('floor' in val)
+                                .map-category__drop
+                                    ul.map-category__floor
+                                        each floor in val.floor
+                                            li.map-category__floor-item
+                                                a.map-category__floor-link(href='javascript:void(0);' data-floor='-1')= floor.title
+
+                                                ul.map-category__floor-list
+                                                    each list in floor.list
+                                                        li.map-category__floor-list-item
+                                                            a.map-category__floor-list-link(href='javascript:void(0);' data-area= list.area)= list.title
+
+        li.map-category__menu-item
+            a.map-category__menu-link.map-category__menu-link--entertainment(href='javascript:void(0);') Розваги
+
+            .map-category__box
+                if ('floor' in mapCategory[0])
+                    .map-category__drop
+                        ul.map-category__floor
+                            each floor in mapCategory[0].floor
+                                li.map-category__floor-item
+                                    a.map-category__floor-link(href='javascript:void(0);' data-floor='-1')= floor.title
+
+                                    ul.map-category__floor-list
+                                        each list in floor.list
+                                            li.map-category__floor-list-item
+                                                a.map-category__floor-list-link(href='javascript:void(0);' data-area= list.area)= list.title
+//= End map category =
+= '\n'

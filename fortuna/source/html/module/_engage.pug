@@ -1,0 +1,158 @@
+-
+    var engageCatalogsauna = [
+        {
+            image: '1',
+            title: 'Fuga',
+            text1: 'Розмір сауни 2-4.5 м3',
+            text2: 'Потужність (кВт): 3.6'
+        },
+        {
+            image: '2',
+            title: 'Compact',
+            text1: 'Розмір сауни 3-4 м3',
+            text2: 'Потужність (кВт): 5.2'
+        },
+        {
+            image: '3',
+            title: 'Sound',
+            text1: 'Розмір сауни 7-13 10-15 м3',
+            text2: 'Потужність 3-фазна 380В'
+        },
+        {
+            image: '4',
+            title: 'Trendi',
+            text1: 'Розмір сауни 2-4 м3',
+            text2: 'Потужність (кВт): 3.6'
+        },
+        {
+            image: '5',
+            title: 'Moderna',
+            text1: 'Розмір сауни 4-5 м3',
+            text2: 'Потужність (кВт): 2.8'
+        }
+    ]
+
+= '\n'
+//= engage =
+//- (source/assets/css/layout/_engage.scss)
+.engage
+    .container
+
+        .engage__catalog-sauna
+            .engage__catalog-sauna__item
+                .engage__catalog-sauna__inner.engage__catalog-sauna__caption
+                    .engage__catalog-sauna__picture
+                        img(src='assets/images/container/engage.png' alt='')
+                        .engage__catalog-sauna__slogan
+                            .engage__catalog-sauna__title Топ 5
+                            .engage__catalog-sauna__subtext саун котрі в нас замовляють
+
+                each val in engageCatalogsauna
+                    .engage__catalog-sauna__inner
+                        a.maska(href='catalog-furnaces.html')
+                        .engage__catalog-sauna__img
+                            img(src='data/engage/sauna' + val.image + '.png' alt='')
+                        .engage__catalog-sauna__info
+                            a(href='catalog-furnaces.html')= val.title
+                            p= val.text1
+                            p= val.text2
+
+        .engage__catalog-basin
+            //-if (pageTitle == 'Жатки для уборки кукурузы')
+
+            //-- var stone = true;
+
+            -
+                var catalog = [
+                    {
+                        href: 'catalog-pools.html',
+                        image: 'background-image: url(data/catalog/pools/a1.png);',
+                        src: 'data/catalog/pools/a1.png',
+                        title: 'Олімпік',
+                        //subtitle: 'Розмір сауни 2-4.5 м3',
+                        //price: 'Потужність (кВт): 3.6',
+                        width: '7,30м',
+                        height: '4,00м',
+                        depth: '8,50м',
+                        volume: '37 м3',
+                        whiskerBoard: true,
+                        weight: '14 мм'
+                    },
+                    {
+                        href: 'catalog-pools.html',
+                        image: 'background-image: url(data/catalog/pools/a2.png);',
+                        src: 'data/catalog/pools/a2.png',
+                        title: 'Комфорт',
+                        //subtitle: 'Розмір сауни 2-4.5 м3',
+                        //price: 'Потужність (кВт): 3.6',
+                        width: '6,20м',
+                        height: '3,00м',
+                        depth: '8,50м',
+                        volume: '27 м3',
+                        whiskerBoard: true,
+                        weight: '20 мм'
+                    },
+                    {
+                        href: 'catalog-pools.html',
+                        image: 'background-image: url(data/catalog/pools/a2.png);',
+                        src: 'data/catalog/pools/a2.png',
+                        title: 'Комфорт',
+                        //subtitle: 'Розмір сауни 2-4.5 м3',
+                        //price: 'Потужність (кВт): 3.6',
+                        width: '6,20м',
+                        height: '3,00м',
+                        depth: '8,50м',
+                        volume: '27 м3',
+                        whiskerBoard: true,
+                        weight: '20 мм'
+                    },
+                    {
+                        href: 'catalog-pools.html',
+                        image: 'background-image: url(data/catalog/pools/a3.png);',
+                        src: 'data/catalog/pools/a3.png',
+                        title: 'Атлантик',
+                        //subtitle: 'Розмір сауни 2-4.5 м3',
+                        //price: 'Потужність (кВт): 3.6',
+                        width: '8,20м',
+                        height: '5,00м',
+                        depth: '8,30м',
+                        volume: '25 м3',
+                        whiskerBoard: true,
+                        weight: '35 мм'
+                    },
+                    {
+                        href: 'catalog-pools.html',
+                        image: 'background-image: url(data/catalog/pools/a4.png);',
+                        src: 'data/catalog/pools/a4.png',
+                        title: 'Амазонка',
+                        //subtitle: 'Розмір сауни 2-4.5 м3',
+                        //price: 'Потужність (кВт): 3.6',
+                        width: '6,20м',
+                        height: '3,00м',
+                        depth: '8,50м',
+                        volume: '27 м3',
+                        whiskerBoard: true,
+                        weight: '20 мм'
+                    },
+                    {
+                        href: 'catalog-pools.html',
+                        image: 'background-image: url(data/catalog/pools/a5.png);',
+                        src: 'data/catalog/pools/a6.png',
+                        title: 'Купель',
+                        //subtitle: 'Розмір сауни 2-4.5 м3',
+                        //price: 'Потужність (кВт): 3.6',
+                        width: '9,20м',
+                        height: '6,00м',
+                        depth: '5,30м',
+                        volume: '19 м3',
+                        whiskerBoard: true,
+                        weight: '30 мм'
+                    }
+                ]
+
+            include _catalog.pug
+
+
+//= End engage =
+= '\n'
+

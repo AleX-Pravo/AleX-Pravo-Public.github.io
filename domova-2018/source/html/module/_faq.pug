@@ -1,0 +1,15 @@
+= '\n'
+//= Faq =
+.faq
+    .faq__wrapper
+        each item in faq
+            .faq__item
+                .faq__question
+                    span.faq__icon
+                    span.faq__name= item.name
+                .faq__drop
+                    .faq__text= item.text
+
+
+//= End faq =
+= '\n'

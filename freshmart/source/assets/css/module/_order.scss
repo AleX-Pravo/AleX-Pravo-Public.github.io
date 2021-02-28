@@ -1,0 +1,352 @@
+.order {
+    margin-bottom: 50px;
+
+    &__clear {
+        text-align: right;
+
+        &-item {
+            font-size: $fontSizeBase;
+            line-height: 1;
+            color: $brandPrimary;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__table {
+        display: block;
+        width: 100%;
+    }
+
+    &__header {
+        font-size: $fontSizeBase;
+        line-height: 1;
+        display: none;
+        text-align: center;
+        text-transform: uppercase;
+        color: $grayMiddle;
+        background: $grayLighter;
+    }
+
+    &__field-clear {
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        text-decoration: none;
+        background: transparent url('../images/content/icon/order.png') -1px -44px no-repeat;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent url('../images/content/icon/order.png') 50px 50px no-repeat;
+            transition: opacity 0.2s ease-out;
+        }
+        &:before {
+            opacity: 0;
+            background-position: -21px -44px
+        }
+
+        &:after {
+            opacity: 1;
+            background-position: -1px -44px
+        }
+
+        &:hover {
+            &:before,
+            &:after {
+                will-change: opacity;
+            }
+
+            &:before {
+                opacity: 1;
+            }
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__field-item {
+        display: block;
+        padding: 13px 0 12px;
+        border-bottom: 1px solid $grayLight;
+        position: relative;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__field {
+        font-size: $fontSizeBase;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: $grayMiddle;
+        border-bottom: 1px solid $grayLight;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__cell {
+        display: block;
+        padding: 10px 0;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &__product {
+        position: relative;
+        text-align: center;
+
+        &-picture {
+            display: inline-block;
+            margin: 0;
+            margin-bottom: 20px;
+            border: 1px solid $grayLight;
+        }
+
+        &-title {
+            font-size: $fontSizeBase;
+            line-height: 1;
+            display: block;
+            color: $gray;
+        }
+
+        &-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 19px;
+            height: 19px;
+            content: '';
+            text-decoration: none;
+            background: $grayLighter url('../images/content/icon/order.png') -1px -44px no-repeat;
+
+            &:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                content: '';
+                transition: all .2s ease-out;
+                opacity: 0;
+                background: $base url('../images/content/icon/order.png') -21px -44px no-repeat;
+            }
+
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__total {
+        line-height: 1;
+        margin-top: -1px;
+        padding: 13px 20px;
+        text-transform: uppercase;
+        border: 1px solid $grayLight;
+        border-right: none;
+        border-left: none;
+        background: $grayLighter;
+
+        @include clearfix;
+    }
+
+    &__total-title {
+        font-size: $fontSizeBase;
+        float: left;
+        color: $grayMiddle;
+    }
+
+    &__total-price {
+        font-size: $fontSizeH4;
+        font-weight: 700;
+        float: right;
+        color: $brandPrimary;
+    }
+
+    &__bonuses {
+        font-size: $fontSizeBase;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        padding-bottom: 15px;
+        color: $grayMiddle;
+        border: 1px solid $grayLight;
+        background: $cartBonusesBg;
+
+        &-item {
+            display: block;
+            padding: 5px 15px;
+            text-align: left;
+            border-right: none;
+
+            &:first-child {
+                font-weight: 700;
+                margin-bottom: 15px;
+                padding: 15px 0;
+                text-align: center;
+                text-transform: uppercase;
+                border-bottom: 1px solid $bounusBorder;
+            }
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+
+    &__info {
+        font-size: $fontSizeSmall;
+        margin-top: 11px;
+        text-align: center;
+        color: $grayMiddle;
+    }
+
+    &__button {
+        font-size: $fontSizeBase;
+        font-weight: 700;
+        width: 100%;
+        margin-top: 31px;
+        margin-bottom: 25px;
+        padding: 13px 0;
+        cursor: pointer;
+        transition: all .2s ease-out;
+        text-align: center;
+        text-transform: uppercase;
+        color: $brandPrimary;
+        border: 1px solid $brandPrimary;
+        outline: none;
+        background: $base;
+
+        &:hover {
+            color: $base;
+            background: $brandPrimary;
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+
+        &__clear {
+            display: none;
+        }
+        &__table {
+            display: table;
+        }
+
+        &__header {
+            display: table-row;
+        }
+
+        &__field-item {
+            display: table-cell;
+            border-right: 1px solid $grayLight;
+            border-bottom: none;
+        }
+
+        &__field {
+            display: table-row;
+            padding: 0;
+        }
+
+        &__cell {
+            display: table-cell;
+            padding: 20px 0 19px;
+            border-right: 1px solid $grayLight;
+            border-bottom: 1px solid $grayLight;
+        }
+
+        &__product {
+            text-align: left;
+
+            &-picture {
+                margin: 0 20px 20px 30px;
+            }
+
+            &-title {
+                display: inline-block;
+            }
+
+            &-close {
+                right: auto;
+                left: 0;
+            }
+        }
+
+        &__bonuses {
+            display: table;
+            padding-bottom: 0;
+
+            &-item {
+                display: table-cell;
+                padding: 15px 0 13px;
+                text-align: center;
+                border-right: 1px solid $bounusBorder;
+
+                &:first-child {
+                    margin-bottom: 0;
+                    padding: 0;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__header {
+            font-size: $fontSizeLarge;
+        }
+
+        &__field {
+            font-size: $fontSizeLarge;
+        }
+
+        &__product {
+            &-title {
+                font-size: $fontSizeLarge;
+            }
+        }
+
+        &__total-title {
+            font-size: $fontSizeLarge;
+        }
+
+        &__total-price {
+            font-size: $fontSizeH5;
+        }
+
+        &__bonuses {
+            font-size: $fontSizeLarge;
+        }
+
+        &__info {
+            font-size: $fontSizeBase;
+        }
+
+        &__button {
+            font-size: $fontSizeH4;
+        }
+    }
+}

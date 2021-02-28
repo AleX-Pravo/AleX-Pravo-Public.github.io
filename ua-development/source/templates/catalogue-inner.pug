@@ -1,0 +1,82 @@
+//- Utility
+
+include utils/_variable.pug
+
+-
+    pageTitle = 'catalogue-inner'
+    nameTitle = 'Каталог нерухомості'
+    //-subTitle = 'Маршрути'
+
+    //- use if necessary
+    swiper = true
+    innerSwiper = true
+    //innerSwiperPopap = true
+    magnificPopup = true // init magnificPopup styles
+    magnificPopupOrdercall = true
+    //magnificPopupInvest = true
+
+    //for breadcrumbs
+    breadcrumbItems = ['Головна',nameTitle]
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout.layout--investment
+            include layout/_header.pug
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+                        .layout-box__content.__base
+                            include module/_breadcrumb.pug
+
+                            include module/_inner.pug
+
+                    .layout-box__nav.__right
+                        include layout/header/secondMenu/_secondMenu.pug
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.mfp-hide#ordercall-drive
+
+            .modal__content
+                - ordercall = true
+                include module/_popup.pug
+                - ordercall = false
+
+        //= End modal =
+        = '\n'
+
+        = '\n'
+
+        //- = '\n'
+        //- //= Modal =
+        //- .modal.modal--user.mfp-hide#invest-drive
+
+        //-     .modal__content
+        //-         - invest = true
+        //-         include module/_popup.pug
+        //-         - invest = false
+
+        //- //= End modal =
+        //- = '\n'
+
+
+        include layout/_footer.pug
+        include module/_mobile-menu.pug
+        include module/_cookies.pug
+
+        include layout/_sprite.pug
+        include layout/_scripts.pug
+

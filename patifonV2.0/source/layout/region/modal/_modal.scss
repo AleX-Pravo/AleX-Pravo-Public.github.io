@@ -1,0 +1,347 @@
+@import 'vars/_variable.scss';
+
+.modal {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    background: $modal__backgroundColor;
+
+    &--cart {
+        max-width: 1200px;
+    }
+
+    .section {
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    }
+
+    .mfp {
+        &-close {
+            overflow: hidden;
+            text-indent: 100%;
+
+            &:before,
+            &:after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin: -8px 0 0 -8px;
+                content: '';
+                transition: all .2s linear;
+                background: url('../images/modal/icon/close.png') no-repeat;
+            }
+
+            &:after {
+                opacity: 0;
+                background-position: 0 -17px;
+            }
+
+            &:hover {
+                &:before {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &--wishes {
+        max-width: 530px;
+
+        h2 {
+            margin: 0;
+        }
+
+        button {
+            height: 42px;
+            padding: 0 23px;
+        }
+
+        .mfp-close {
+            font-size: 0;
+        }
+
+        label {
+            position: relative;
+            display: block;
+            margin: 15px 0;
+        }
+
+        .radio-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+        }
+    }
+
+    &--crop {
+        height: 450px;
+        width: 100%;
+        max-width: 550px;
+        padding: 30px 30px 105px 30px;
+
+        button.mfp-close {
+            display: none;
+        }
+
+        .mfp-close {
+            text-indent: 0;
+            width: auto;
+            position: static;
+            font-size: 14px;
+            color: $base;
+        }
+
+        .croppie {
+            height: 100%;
+
+            &__links {
+                margin: 45px 0 0;
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    line-height: 42px;
+                    padding: 0 11px;
+
+                    &:last-child {
+                        
+                        &:before,
+                        &:after {
+                            display: none;
+                        }
+
+                        background: linear-gradient(to bottom, #bfbeb9, #888783);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 359px) {
+        &--cart {
+            .cart {
+                &__row {
+                    .cart {
+                        &__content {
+                            &--price {
+                                width: 128px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 420px) {
+        @media (max-width: 479px) {
+            &--cart {
+                .cart {
+                    &__row {
+                        &--main {
+                            padding-bottom: 106px;
+
+                            .cart {
+                                &__content {
+                                    &--amount {
+                                        float: none;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        &--cart {
+            .cart {
+                &__row {
+                    &--main {
+                        .cart {
+                            &__content {
+                                &--remove {
+                                    top: -5px;
+                                }
+                            }
+                        }
+                    }
+
+                    &--options {
+                        margin-left: -90px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 480px) {
+        @media (max-width: 519px) {
+            &--cart {
+                .cart {
+                    &__row {
+                        &--main {
+                            .cart {
+                                &__content {
+                                    &--remove {
+                                        top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 519px) {
+        &--cart {
+            .cart {
+                &__row {
+                    &--main,
+                    &--options {
+                        .cart {
+                            &__content {
+                                &--remove {
+                                    position: absolute;
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &--options {
+                        .cart {
+                            &__content {
+                                &--remove {
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 720px) {
+        @media (max-width: 839px) {
+            &--cart {
+                .cart {
+                    &__share {
+                        .cart {
+                            &__item {
+                                &Container {
+                                    &--right {
+                                        bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &__item {
+                        &Container {
+                            &--right {
+                                position: absolute;
+                                bottom: 10px;
+                                left: 0;
+                                right: 0;
+                                float: none;
+                                padding: 0;
+
+                                @include clearfix;
+                            }
+                        }
+                    }
+
+                    &__row {
+                        &--main {
+                            padding-bottom: 76px;
+                        }
+
+                        &--options {
+                            padding-bottom: 52px;
+
+                            &:last-child {
+                                padding-bottom: 42px;
+
+                                .cart {
+                                    &__item {
+                                        &Container {
+                                            &--right {
+                                                bottom: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &--edit {
+                            .cart {
+                                &__item {
+                                    &Container {
+                                        &--fixedRight {
+                                            padding-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &--bottom {
+                            padding-bottom: 52px;
+
+                            .cart {
+                                &__item {
+                                    &Container {
+                                        &--fixedRight {
+                                            padding-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 839px) {
+        &--cart {
+            .cart {
+                margin-right: -21px;
+                margin-left: -21px;
+
+                &__clear {
+                    margin-left: 21px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+        &--cart {
+            .section {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+-
+    var primaryMenu = [
+        {
+            href: 'index.html',
+            name: 'Головна'
+        },
+        {
+            href: 'aboutCompany.html',
+            name: 'Про компанію'
+        },
+        {
+            href: 'catalog-pools.html',
+            name: 'Каталог'
+        },
+        {
+            href: 'feedback.html',
+            name: 'Відгуки'
+        },
+        {
+            href: 'contacts.html',
+            name: 'Контакти'
+        }
+    ]
+= '\n'
+//= primaryMenu =
+//-=(/layout/header/primaryMenu/_primaryMenu.scss)=
+
+.primaryMenu
+    ul.primaryMenu__inner
+        each val in primaryMenu
+            if (val.name === pageTitle)
+                li.active
+                    a(href=val.href)= val.name
+            else
+                li
+                    a(href=val.href)= val.name
+
+//= End primaryMenu =
+= '\n'

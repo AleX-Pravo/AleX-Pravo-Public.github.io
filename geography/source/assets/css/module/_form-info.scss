@@ -1,0 +1,174 @@
+.form-info {
+	max-width: 870px;
+	width: 100%;
+
+	&__block {
+		padding: 16px;
+		border: 1px solid $grayLighter;
+		margin: 0 0 24px;
+		display: flex;
+		justify-content: space-between;
+
+		.form-group {
+
+			min-height: 48px;
+			width: 100%;
+
+			.help-block {
+				display: none;
+				font-size: 0;
+			}
+
+			&.has-error {
+
+				input,
+				textarea {
+					border: 1px solid red;
+				}
+			}
+
+			input {
+				height: 100%;
+				padding: 0 15px;
+				border: 1px solid $grayLighter;
+			}
+
+			&--button {
+
+				.pin {
+					min-width: 133px;
+					min-height: 48px;
+					box-shadow: none;
+				}
+			}
+		}
+
+		&--info {
+			flex-wrap: wrap;
+			position: relative;
+
+			.form-group {
+
+				max-width: 410px;
+				margin: 0 0 16px;
+
+
+				input {
+					width: 100%;
+				}
+
+				&--button {
+					width: 100%;
+					text-align: center;
+					margin: 0;
+					max-width: none;
+
+				}
+			}
+		}
+
+		&--password {
+
+			flex-wrap: wrap;
+
+			.form-group {
+				margin: 0 0 16px;
+
+				input {
+					width: 100%;
+				}
+
+				&--button {
+					max-width: none;
+					flex-grow: 0;
+					width: auto;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+
+	&__add {
+		text-decoration: none;
+		margin: 0 0 16px;
+		background: linear-gradient($brandPrimary, $brandPrimary) no-repeat;
+		background-size: 100% 1px;
+		background-position: 0 1.15em;
+		font-size: $fontSizeSmall;
+
+		&:hover {
+			background: none;
+		}
+	}
+
+	@media (min-width: 480px) {
+
+		&__block {
+
+			&--info {
+
+				.form-group {
+					width: 49%;
+
+					&--button {
+						width: 100%;
+						text-align: center;
+						margin: 0;
+						max-width: none;
+
+					}
+				}
+			}
+
+			&--password {
+
+				.form-group {
+					width: 49%;
+
+					&--button {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+
+		&__block {
+
+			&--password {
+
+				flex-wrap: nowrap;
+
+				.form-group {
+					max-width: 220px;
+					width: 100%;
+
+					&:not(&:last-child) {
+
+						margin: 0 16px 0 0;
+					}
+
+					input {
+						max-width: 220px;
+					}
+
+					&--button {
+						max-width: none;
+						flex-grow: 0;
+						width: auto;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+
+		&__add {
+			position: absolute;
+			left: 16px;
+			bottom: 50px;
+			margin: 0;
+		}
+	}
+}

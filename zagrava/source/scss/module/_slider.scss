@@ -1,0 +1,98 @@
+.slider {
+    position: relative;
+    margin: 0 0 17px;
+
+    &__image {
+        background-position: center;
+        background-size: cover;
+        width: 1440px;
+        height: 320px;
+    }
+
+    .slick {
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: $grayLight;
+            box-shadow: 0 3px 7px 0 rgba(0, 42, 54, 0.1);
+            border: none;
+            z-index: 1;
+            cursor: pointer;
+            opacity: .9;
+            transition: all .3s;
+
+            &:before {
+               content:'';
+               width: 22px;
+               height: 36px;
+               position: absolute;
+               background: url(../images/icons/slider-arrow.svg)no-repeat;
+               top: 50%;
+               left: calc(50% + 3px);
+               transform: translate(-50%, -50%) scale(0.6);
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+
+        &-prev {
+            left: 10px;
+
+            &:before {
+                left: calc(50% - 3px);
+                transform: translate(-50%, -50%) rotate(-180deg) scale(0.6);
+            }
+        }
+
+        &-next {
+            right: 10px;
+        }
+    }
+
+    @media (min-width: $screen_XS_Min) {//480
+
+        .slick {
+
+            &-prev,
+            &-next {
+                width: 70px;
+                height: 70px;
+            }
+
+            &-prev {
+                left: 40px;
+
+                &:before {
+                    transform: translate(-50%, -50%) rotate(-180deg) scale(1);
+                }
+            }
+
+            &-next {
+                right: 40px;
+
+                &:before {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_S_Min) {//600
+
+        &__image {
+            height: 540px;
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {//1080
+        margin: 80px 0 47px;
+    }
+}

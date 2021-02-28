@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patifon | News page</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="../bower/perfect-scrollbar/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/tab.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+    <!--= Layout =-->
+    <div id="layout">
+
+        <!--= Page 404 =-->
+        <div class="page404">
+            <div class="page404__main">
+                <div class="page404__logo"><a class="page404__logoLink" href="#"><img src="images/header/logo.png" alt=""></a></div>
+                <div class="page404__code"><img src="images/page404/logo.png" alt=""></div>
+                <div class="page404__title">Cтраница не найдена</div>
+                <div class="page404__text">Возможно, Вы ошиблись при вводе адреса. Проверьте ее, пожалуйста, еще раз</div><a class="button button--buy" href="#"><span class="button__text">На главную</span></a>
+                <div class="page404__menu hide-sm-max">
+                    <ul class="page404__menuList">
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">ВСЕ СМАРТФОНЫ</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">APPLE</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">SAMSUNG</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">HUAWEI</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">MEIZU</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">XIAOMI</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">МОБИЛЬНЫЕ ТЕЛЕФОНЫ</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">АКСЕССУАРЫ</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">ЗАЩИТНЫЕ ЧЕХЛЫ</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">НАУШНИКИ</a></li>
+                        <li class="page404__menuItem"><a class="page404__menuLink" href="#">РЮКЗАКИ И СУМКИ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--= End page 404 =-->
+
+    </div>
+    <!--= End layout =-->
+
+    <!--= Script =-->
+    <script src="../bower/jquery/dist/jquery.min.js"></script>
+    <!--script(src=bowerDir + 'perfect-scrollbar/js/perfect-scrollbar.jquery.min.js')-->
+    <script src="js/tab.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tab-menu').tab('');
+        });
+    </script>
+    <!--= End script =-->
+
+</body>
+
+</html>

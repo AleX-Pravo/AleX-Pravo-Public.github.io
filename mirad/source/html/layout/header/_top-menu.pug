@@ -1,0 +1,11 @@
+= '\n'
+//= top-menu =
+//- (source/assets/css/layout/header/_top-menu.scss)
+- modifier = (mobile) ? ('top-menu--mobile') : ''
+ul.top-menu(class=modifier)
+    each item in topMenu
+        li
+            a(href=item.link)= item.name
+- mobile = false
+//= End top-menu =
+= '\n'

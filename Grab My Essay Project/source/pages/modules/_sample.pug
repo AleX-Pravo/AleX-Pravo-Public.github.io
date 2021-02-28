@@ -1,0 +1,62 @@
+-
+    let samples = [{
+            info: 'Essay・5 pages・MLA',
+            label: 'Hamlet',
+            description: 'Shakespeare wrote Hamlet after the death of his only son in 1601. Literary scholars assume that the death of his son inspired his authorship, twhile some critics’ point is that the loss…',
+            img: 'autor1',
+            name: 'Hester Pratt',
+            value: '653 Completed orders'
+        },
+        {
+            info: 'Research paper・14 pages・APA',
+            label: 'Global Terrorism',
+            description: 'Terrorists use different methods to achieve their objectives. The major strategies that they employ include: attrition, spoiling, provocation, intimidation, and outbidding…',
+            img: 'autor2',
+            name: 'Marvin Ballard',
+            value: '12 Completed orders'
+        },
+        {
+            info: 'Essay・14 pages・Harvard',
+            label: 'Gulf View Inc, Sales',
+            description: 'Location (Gulf view or no Gulf view) of a condominium and property listing prices are very essential part of number of days it takes to sell a property and real estate sales price…',
+            img: 'autor3',
+            name: 'Josie Lambert',
+            value: '331 Completed orders'
+        },
+        {
+            info: 'Thesis・15 pages・Chicago',
+            label: 'Barefoot Running',
+            description: 'When it comes to barefoot running, there are usually two opposing views among people. The first group of people finds it is good for health, while the second is trying to deny it, by all means…',
+            img: 'autor4',
+            name: 'Mina Todd',
+            value: '19543 Completed orders'
+        }
+    ]
+
+= '\n'
+// sample
+section.sample
+    .container
+        h2.sample__title our sample works
+        .sample__subtitle
+            h3.sample__subtitle-item.bg-pink grabmyessay.com offers to evaluate samples of various types of papers
+        .sample__list
+
+            each item in samples
+                .sample__item
+                    a.sample__link
+                        .sample__info
+                            .sample__info-text= item.info
+                            .sample__info-eye
+                        .sample__label= item.label
+                        .sample__description= item.description
+                        .sample__author
+                            .sample__author-logo
+                                img.sample__author-img(src='assets/img/' + item.img + '.svg' alt= item.name)
+                            .sample__author-data
+                                .sample__author-name= item.name
+                                .sample__author-value= item.value
+        .sample__more
+            .sample__button.button.button--light View all Samples
+// end sample
+= '\n'

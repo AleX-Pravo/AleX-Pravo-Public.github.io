@@ -1,0 +1,532 @@
+.header {
+    position: relative;
+    height: 60px;
+    z-index: 103;
+    position: absolute;
+    width: 100%;
+    //background: $brandPrimary;
+
+    @media (min-width: 768px) {
+        //margin-bottom: -110px;
+        height: auto;
+        //background: none;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__main {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        flex-grow: 1;
+        flex-shrink: 0;
+        text-align: center;
+        //margin: 0 auto;
+
+        @media (min-width: 1024px) {
+            flex-shrink: 0;
+            flex-grow: 0;
+            margin: 0;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @media (min-width: 1024px) {
+            flex-grow: 1;
+            margin-top: 16px;
+            display: block;
+        }
+    }
+
+    &-device.hide-md-min {
+        margin: 0;
+        flex-shrink: 0;
+        width: 20px;
+        background: rgba(255, 255, 255, 0.25);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+
+        @media (min-width: 1024px) {
+            width: 45px;
+            height: 45px;
+            background: none;
+        }
+    }
+
+    &__rightBlock {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            margin-top: 15px;
+
+        }
+    }
+
+    &__searchButton {
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: block;
+            margin-right: 32px;
+        }
+
+        .searchButton {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25) url('../images/header/Search.svg') no-repeat center center;
+            background-size: 14px 14px;
+            display: block;
+
+            @media (min-width: 1024px) {
+                display: block;
+                width: 24px;
+                height: 24px;
+                border-radius: 0;
+                background: transparent url('../images/header/Search.svg') no-repeat;
+                background-size: 24px 24px;
+            }
+        }
+
+        &--none {
+            display: none !important;
+
+            @media (min-width: 1024px) {
+                display: block !important;
+            }
+        }
+    }
+
+    &__language {
+        margin-right: 32px;
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &__person {
+        flex-shrink: 0;
+        margin-right: 32px;
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &__cart {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid $brandPrimary;
+            background: $base;
+            position: relative;
+            font-size: $fontSizeSmall;
+            padding-top: 5px;
+            min-width: inherit;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../images/container/cart.svg)no-repeat;
+                width: 19px;
+                height: 25px;
+            }
+        }
+
+        .sum {
+            display: inline-block;
+            min-width: 85px;
+            padding: 4px 3px 4px 7px;
+            text-align: right;
+            position: relative;
+            font-size: $fontSizeBase;
+            color: $grayDarker;
+            font-family: $fontFamilyMuseoSansCyrl_lt2;
+            background: $base;
+            border-radius: 5px;
+            border: 1px solid $brandPrimary;
+            z-index: -1;
+            margin-left: -8px;
+
+            @media (min-width: 768px) {
+                min-width: 100px;
+                padding: 4px 7px;
+                text-align: right;
+                position: relative;
+                font-size: $fontSizeMedium;
+            }
+
+            &:empty {
+                display: none;
+            }
+        }
+    }
+}
+
+.header {
+
+    &--search {
+        background: $base;
+    }
+
+    &.animation {
+        &.header--search {
+            .search .input-text {
+                height: 18px;
+            }
+
+            .search .box {
+                top: 6px;
+            }
+
+            .search .input-btn {
+                top: 5px;
+            }
+
+            a.searchButton__close {
+                width: 36px;
+                height: 36px;
+                top: -3px;
+            }
+        }
+
+        .header__cart {
+            padding: 2px 0;
+
+            .quantity {
+                width: 40px;
+                height: 40px;
+                font-size: 12px;
+            }
+
+            .sum {
+                font-size: 14px;
+                border-radius: 0 5px 5px 0;
+                min-width: 95px;
+            }
+        }
+    }
+
+    &--light {
+        margin-bottom: 0;
+        height: auto;
+        //padding: 0 0 10px 0;
+        position: fixed;
+        z-index: 105;
+        top: 0;
+        width: 100%;
+        background: transparent;
+        transition: all ease .3s;
+
+        &.header--search {
+
+            .search.open {
+                background: transparent;
+            }
+        }
+
+        .header {
+
+            &__searchButton {
+                margin: 4px 0;
+                display: block;
+
+                .searchButton {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.25) url('../images/header/Search.svg')no-repeat center center;
+                    background-size: 14px 14px;
+                }
+            }
+
+            &__person {
+                display: none;
+            }
+
+            &__rightBlock {
+                margin-top: 0;
+                align-items: center;
+
+                .language {
+
+                    &__box {
+                        height: auto;
+
+                        &-item {
+                            background: url(../images/header/lang.svg)no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        .logo {
+            &__link {
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+
+        &.hide {
+            top: -100%;
+        }
+
+        &.animation {
+            background: $base;
+            box-shadow: 0px -1px 7px rgba(0, 0, 0, 0.3);
+
+            .header {
+                &__menu {
+                    margin-top: 6px;
+                }
+
+                &__logo {
+                    transform: scale(0.7);
+
+                    .logo {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &.sticky {
+            position: fixed;
+            top: 0;
+            z-index: 102;
+            height: 60px;
+
+            .logo {
+                margin: 20px 0;
+
+                .logo__desk {
+                    display: block;
+                    width: 119px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    &--store {
+        background: $brandPrimary;
+
+        &.animation {
+            background: $brandPrimary;
+            box-shadow: 0px -1px 7px rgba(0, 0, 0, 0.3);
+
+            .header {
+                &__menu {
+                    margin-top: 6px;
+                }
+
+                &__logo {
+                    transform: scale(0.7);
+
+                    .logo {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &.header--search {
+            background: $brandPrimary;
+
+            .search.open {
+                background: $brandPrimary;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &--light {
+            .header {
+                &__searchButton {
+                    margin-right: 32px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        &--search {
+
+            .header {
+
+                &__logo {
+                    z-index: 1;
+
+                    .logo {
+                        &__desk {
+                            filter: grayscale(100%) brightness(70%) sepia(100%) hue-rotate(50deg) saturate(1000%) contrast(0.3);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__searchButton {
+            margin-right: 32px;
+        }
+
+        &--light {
+            padding: 0;
+            background: $base;
+
+            //box-shadow: 0px 8px 16px rgba(153, 153, 153, 0.16);
+            .logo {
+                &__link {
+                    img {
+                        filter: brightness(1) invert(0) !important;
+                    }
+                }
+            }
+
+            &.header--search {
+
+                .search.open {
+                    background: $base;
+                }
+            }
+
+            .language {
+                background: url(../images/header/lang.svg)no-repeat;
+            }
+
+            .header {
+                &__person {
+                    display: block;
+
+                    .person {
+                        &-img {
+                            background: url(../images/header/man-user.svg)no-repeat;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+
+                &__searchButton {
+                    .searchButton {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 0;
+                        background: url(../images/header/search-green.svg)no-repeat;
+                        background-size: 24px 24px;
+                    }
+                }
+
+                &__rightBlock {
+                    align-items: center;
+                }
+            }
+
+            &.animation {
+                //box-shadow: none;
+            }
+        }
+
+        &--store {
+
+            &.animation {
+                background: $base;
+            }
+
+            &.header--search {
+                background: $base;
+
+                .logo__desk-sea {
+                    opacity: 1;
+                }
+
+                .header__logo {
+                    z-index: 1;
+                }
+
+                .search.open {
+                    background: $base;
+                }
+            }
+        }
+    }
+}
+
+.header-fixed {
+    height: auto;
+    padding: 10px 0;
+
+    &.default {
+        display: none;
+    }
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        background: $brandPrimary !important;
+        padding: 0;
+        z-index: 99;
+        box-shadow: 0.01px 0.01px 15px $brandSuccess;
+        display: block;
+
+        .header {
+            &__menu {
+                margin-top: 10px;
+            }
+        }
+
+        .person-img {
+            background: url(../images/container/person.svg) 0 0 no-repeat;
+            width: 50px;
+            height: 51px;
+            display: block;
+        }
+
+        .header-device.hide-md-min,
+        .header-fixed-device.hide-md-min {
+            background: $base;
+        }
+
+        .header-device .header-button:before,
+        .header-device .header-button:after {
+            background: $brandPrimary;
+        }
+
+        .header-device .button-line {
+            background: $brandPrimary;
+        }
+    }
+}

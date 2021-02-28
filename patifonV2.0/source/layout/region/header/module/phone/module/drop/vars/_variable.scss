@@ -1,0 +1,9 @@
+//- DROP
+//------------------------------------------------
+
+$phoneDrop__backgroundColor:        $base !default;
+$phoneDrop__shadowColor:            transparentize($grayBase, .8) !default;
+
+$phoneDrop__numberTextFontSize:     $fontSizeH6 !default;
+
+$phoneDrop__operatorTextColor:      $grayLighter !default;

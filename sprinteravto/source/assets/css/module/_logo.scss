@@ -1,0 +1,47 @@
+.logo {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+
+    &__image {
+        display: flex;
+        position: relative;
+        width: 200px;
+        height: 65px;
+        overflow: hidden;
+        transition: width .3s;
+
+        img {
+            opacity: 1;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            right: 0;
+            bottom: 0;
+            width: 0; 
+            height: 0;
+            transition: all .4s;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 28px;
+            height: 37px;
+            background: url(../images/logo/logo_small.svg) no-repeat;
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__image {
+            &:before {
+                border-right: 200px solid $grayBase;
+                border-top: 65px solid $grayBase;
+            }
+        }
+    }
+}

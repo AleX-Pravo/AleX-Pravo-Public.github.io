@@ -1,0 +1,10 @@
+= '\n'
+//= about-info =
+//- (source/assets/css/module/_about-info.scss)
+.about-info
+    each item in aboutInfo
+        .about-info__item
+            img(src="data/about/" + item.image, alt="")
+            span= item.name
+//= End about-info =
+= '\n'

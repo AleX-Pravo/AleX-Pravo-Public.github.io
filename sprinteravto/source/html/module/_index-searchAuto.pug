@@ -1,0 +1,60 @@
+= '\n'
+//= index-searchAuto =
+//- (source/assets/css/module/_index-searchAuto.scss)
+.index-searchAuto
+
+    .index-searchAuto__wrap
+
+        form.form(action='' method='')
+            .index-searchAuto__inner
+                .index-searchAuto__infoTitle Тип кузова
+
+                .index-searchAuto__type
+                    each val in indexSearchAuto
+                        a(href='javascript:void(0);')
+                            img(src='data/search/'+ val.img +'.png' alt='')
+                            p= val.text
+
+            .index-searchAuto__form
+                .index-searchAuto__infoTitle Додаткова інформація
+                .form-group-wrap
+                    .form-group
+                        label.control-label Марка:
+                        select.form-control
+                            option(value='1' selected) Mercedes1
+                            option(value='2') Mercedes2
+                        .help-block
+                    .form-group
+                        label.control-label Модель:
+                        select.form-control
+                            option(value='3' selected) Sprinter1
+                            option(value='4') Sprinter2
+                        .help-block
+                    .form-group__wrap
+                        .form-group
+                            label.control-label Ціна:
+                            select.form-control
+                                option(value='5' selected) Від
+                                option(value='6') 0
+                            .help-block
+                        .form-group
+                            select.form-control
+                                option(value='7' selected) До
+                                option(value='8') 1000
+                            .help-block
+                    .form-group__wrap
+                        .form-group
+                            label.control-label Рік:
+                            select.form-control
+                                option(value='5' selected) Від
+                                option(value='6') 1997
+                            .help-block
+                        .form-group
+                            select.form-control
+                                option(value='7' selected) До
+                                option(value='8') 2020
+                            .help-block
+                    .form-group
+                        button.form-control.button(type='submit') Пошук
+//= End index-searchAuto =
+= '\n'

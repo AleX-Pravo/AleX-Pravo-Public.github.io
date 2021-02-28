@@ -1,0 +1,6 @@
+@mixin makeRow($gutter: $gridGutterWidth) {
+    margin-right: floor(($gutter / -2));
+    margin-left: ceil(($gutter / -2));
+
+    @include clearfix;
+}

@@ -1,0 +1,58 @@
+@import 'vars/_variable.scss';
+
+
+//- Helpers
+@import 'helpers/clearfix/_clearfix.scss';
+
+
+//- Core
+@import 'core/_font.scss';
+@import 'core/_reset.scss';
+
+
+//- Components
+@import 'components/controlsPanel/_controlsPanel.scss';
+@import 'components/form/_form.scss';
+@import 'components/greeting/_greeting.scss';
+@import 'components/grid/_grid.scss';
+@import 'components/owl.carousel/_owl.carousel.scss';
+@import 'components/photoswipe/_photoswipe.scss';
+@import 'components/section/_section.scss';
+@import 'components/select2/_select2.scss';
+@import 'components/slick/_slick.scss';
+@import 'components/tab/_tab.scss';
+
+
+//- Region
+@import 'region/_region.scss';
+@import 'region/header/_header.scss';
+@import 'region/nav/_nav.scss';
+@import 'region/footer/_footer.scss';
+//- @import 'region/modal/_modal.scss';
+
+
+// Module
+@import 'module/about/_about.scss';
+@import 'module/breadcrumbs/_breadcrumbs.scss';
+@import 'module/catalog/_catalog.scss';
+@import 'module/catalogType/_catalogType.scss';
+@import 'module/category/_category.scss';
+@import 'module/deviceMenu/_deviceMenu.scss';
+@import 'module/gallery/_gallery.scss';
+@import 'module/galleryInner/_galleryInner.scss';
+@import 'module/mainNews/_mainNews.scss';
+@import 'module/map/_map.scss';
+@import 'module/mapCategory/_mapCategory.scss';
+@import 'module/mapZlata/_mapZlata.scss';
+@import 'module/news/_news.scss';
+@import 'module/newsInner/_newsInner.scss';
+@import 'module/page404/_page404.scss';
+@import 'module/pagination/_pagination.scss';
+@import 'module/partners/_partners.scss';
+@import 'module/share/_share.scss';
+@import 'module/sharePage/_sharePage.scss';
+@import 'module/sharePageInner/_sharePageInner.scss';
+@import 'module/shop/_shop.scss';
+@import 'module/tenants/_tenants.scss';
+@import 'module/tour3d/_tour3d.scss';
+@import 'module/works/_works.scss';

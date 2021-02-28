@@ -1,0 +1,50 @@
+include vars/_variable.pug
+
+= '\n'
+//= Characteristics =
+.characteristics
+
+    if (!characteristicsFull)
+        .characteristics__menu
+            ul.characteristics__menuList
+
+                each val in characteristicsMenu
+
+                    if ('active' in val && val.active)
+                        li.characteristics__menuItem.characteristics__menuItem--active
+                            a.characteristics__menuLink(href='javascript:void(0);')= val.title
+
+                    else
+                        li.characteristics__menuItem
+                            a.characteristics__menuLink(href='#')= val.title
+
+        .characteristics__container
+            ul.characteristics__list
+
+                each val in characteristics
+                    li.characteristics__item(class='characteristics__item--' + val.class)
+                        .characteristics__name= val.title
+                        .characteristics__value= val.value
+
+    else
+        .characteristics__containerTable
+            table.characteristics__table
+                tr.characteristics__title
+                    td.characteristics__name(colspan='2') Общие характеристики
+
+                each val in characteristicsTable
+                    tr.characteristics__row
+                        td.characteristics__name= val.name
+                            a.characteristics__name-info(href='#test-modal') i
+                        td.characteristics__value= val.value
+
+                tr.characteristics__title
+                    td.characteristics__name(colspan='2') Дисплей
+
+                each val in characteristicsTable2
+                    tr.characteristics__row
+                        td.characteristics__name= val.name
+                            a.characteristics__name-info(href='#test-modal') i
+                        td.characteristics__value= val.value
+//= End characteristics =
+= '\n'

@@ -1,0 +1,10 @@
+.nav {
+    //display: none;
+    //margin-right: 20px;
+
+    @media (min-width: 1024px) {
+        z-index: 3;
+        margin: 0;
+        display: block;
+    }
+}

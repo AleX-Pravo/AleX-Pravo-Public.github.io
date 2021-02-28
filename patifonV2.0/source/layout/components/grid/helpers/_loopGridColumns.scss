@@ -1,0 +1,5 @@
+@mixin loopGridColumns($columns, $class, $type) {
+    @for $i from 0 through $columns {
+        @include calcGridColumn($i, $class, $type);
+    }
+}

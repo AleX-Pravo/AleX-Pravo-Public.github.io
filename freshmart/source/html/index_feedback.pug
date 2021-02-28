@@ -1,0 +1,266 @@
+-
+    var pageTitle = 'Главная'
+    var slick = true
+//- Utilites
+include utils/_variables.pug
+
+//- Mixin
+include layout/header/_menu.pug
+include layout/header/_socnet.pug
+include layout/header/_phone.pug
+
+include layout/nav/_primary-menu.pug
+
+include layout/footer/_socnet.pug
+include layout/footer/_menu.pug
+
+include module/_search.pug
+include module/_catalog.pug
+include module/_formfield.pug
+include module/_write.pug
+-
+    // Класс чтобы убирать подчеркивание в навигации
+    var headerClass = 'nodec';
+    var actionGoods = [
+        {
+            image: '4',
+            alt: 'Сухарики Домашні гріночки',
+            status: [
+                {
+                    class: 'share'
+                }
+            ],
+            title: 'Сухарики «Домашні гріночки» с аджикой 100г',
+            oldprice: '15.50',
+            price: '12.00',
+            button: 'В корзину'
+        },
+        {
+            image: '5',
+            alt: 'Сок Золотой Пармен» яблочно-тыквенный',
+            status: [
+                {
+                    class: 'hit'
+                }
+            ],
+            title: 'Сок «Золотой Пармен» яблочно-тыквенный органический 3л',
+            oldprice: '120.00',
+            price: '105.00',
+            button: 'В корзину'
+        },
+        {
+            image: '6',
+            alt: 'Грейпфрут',
+            status: [
+                {
+                    class: 'share'
+                }
+            ],
+            title: 'Грейпфрут',
+            oldprice: '69.00',
+            price: '60.00',
+            button: 'В корзину'
+        }
+    ]
+
+doctype html
+html.ownbox-lock(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    include module/_promotional.pug
+
+                    = '\n'
+                    //= Section =
+                    .section
+                        .section__title.section__title--decorate График доставки
+                        include module/_delivery.pug
+
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section#goods_popular
+                        .section__title Популярные товары
+                        +catalogCarousel(popularGoods)
+
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section#goods_action
+                        .section__title Акционные товары
+                        +catalogCarousel(actionGoods)
+
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section
+                        h1.section__title Онлайн интернет-магазин продуктов
+                        include module/_seotext.pug
+                    //= End section =
+                    = '\n'
+
+                include layout/_navigation-bottom.pug
+
+            //= End main =
+
+            = '\n'
+        //= End layout =
+
+        include layout/_footer.pug
+
+        = '\n'
+        //= Ownbox =
+        #ownbox(style='display: block')
+            #box
+                #ownbox-mask
+                .ownbox-content.form.form-content
+                    a.ownbox-close(href='#')
+
+                    = '\n'
+                    //= Form =
+                    .form
+                        .form__title.section__title.section__title--decorate Обратная связь
+
+                        +write()
+
+                    //= End form =
+                    = '\n'
+        //= End ownbox =
+
+        include layout/_scripts.pug
+
+        script.
+            // carousel
+            var goodsPopular = $('#goods_popular .carousel__list');
+
+            if (goodsPopular.find('.catalog__item').length <= 4) {
+                $('#goods_popular .carousel__controls').css({'display': 'none'});
+            }
+
+            goodsPopular.slick({
+                dots: false,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                prevArrow: '#goods_popular .carousel__btn--prev',
+                nextArrow: '#goods_popular .carousel__btn--next',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 490,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            goodsPopular.on('breakpoint', function (event, slick, breakpoint) {
+                var boxWidth = $(this)[0].offsetWidth,
+                    possible = Math.floor(boxWidth / slick.slideWidth);
+
+                if (possible) {
+
+                    if (possible >= slick.slideCount) {
+                        $('#goods_popular .carousel__controls').css({'display': 'none'});
+                    } else {
+                        $('#goods_popular .carousel__controls').css({'display': 'block'});
+                    }
+                }
+            });
+
+            // carousel
+            var goodsAction = $('#goods_action .carousel__list');
+
+            if (goodsAction.find('.catalog__item').length <= 4) {
+                $('#goods_action .carousel__controls').css({'display': 'none'});
+            }
+
+            goodsAction.slick({
+                dots: false,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                prevArrow: '#goods_action .carousel__btn--prev',
+                nextArrow: '#goods_action .carousel__btn--next',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 490,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            goodsAction.on('breakpoint', function (event, slick, breakpoint) {
+                var boxWidth = $(this)[0].offsetWidth,
+                    possible = Math.round(boxWidth / slick.slideWidth);
+
+                if (possible) {
+
+                    if (possible >= slick.slideCount) {
+                        $('#goods_action .carousel__controls').css({'display': 'none'});
+                    } else {
+                        $('#goods_action .carousel__controls').css({'display': 'block'});
+                    }
+                }
+            });
+
+            // Sliders
+            $('#sl_main').bxSlider({
+                mode: 'fade',
+                pagerCustom: '#sl_main__pager',
+                controls: true,
+            });
+
+            $('#sl_goods').bxSlider({
+                mode: 'fade',
+                pagerCustom: '#sl_goods__pager',
+                controls: false,
+                auto: true,
+                touchEnabled: false,
+            });
+
+

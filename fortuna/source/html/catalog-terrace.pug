@@ -1,0 +1,111 @@
+//- Utility
+include utils/_variable.pug
+
+- pageTitle = 'Терасна система'
+- nameTitle = 'catalog-terrace'
+- subTitle = 'Терасна система'
+//-source/html/layout/_header.pug
+- var innerPage = 'innerPage'
+- var secondMenu = true
+
+//-_topBlock.pug_breadcrumbs.pug
+- var breadcrumbs = ['Головна']
+
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_header-device.pug
+
+            //= Main =
+            main#main.main
+                include module/_topBlock.pug
+                include module/_catalog-terrace.pug
+                include module/_big-Slider.pug
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+        script.
+            $(document).ready(function(){
+
+                // small-Slider init
+                $('.small-Slider').slick({
+                    infinite: true,
+                    dots: true,
+                    arrows: false
+                });
+
+                // small-Slider init
+                $('.big-Slider').slick({
+                infinite: true,
+                arrows: true,
+                centerMode: true,
+                //centerPadding: '516px',
+                centerPadding: '27.1%',
+                slidesToShow: 1,
+                responsive: [
+                    {
+                        breakpoint: 1801,
+                        settings: {
+                            centerPadding: '26%',
+                        }
+                    },
+                    {
+                        breakpoint: 1681,
+                        settings: {
+                            centerPadding: '24%',
+                    }
+                    },
+                    {
+                        breakpoint: 1561,
+                        settings: {
+                            centerPadding: '22%',
+                        }
+                    },
+                    {
+                        breakpoint: 1441,
+                        settings: {
+                            centerPadding: '20%',
+                        }
+                    },
+                    {
+                        breakpoint: 1321,
+                        settings: {
+                            centerPadding: '17%',
+                        }
+                    },
+                    {
+                        breakpoint: 1201,
+                        settings: {
+                            centerPadding: '14%',
+                        }
+                    },
+                    {
+                        breakpoint: 1081,
+                        settings: {
+                            centerPadding: '10%',
+                        }
+                    },
+                    {
+                        breakpoint: 961,
+                        settings: {
+                            //centerMode: false,
+                            centerPadding: '0',
+                        }
+                    }
+                ],
+                prevArrow: '<button type="button" class="slick-prev"><i class="slick-prev-inner"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="slick-next-inner"></i></button>'
+                });
+            });

@@ -1,0 +1,128 @@
+.answer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    //padding-left: 75px;
+
+    &__wrapper {
+        display: flex;
+
+        .answer__button {
+            max-width: 114px;
+            max-height: 40px;
+            padding: 8px 16px;
+            font-size: $fontSizeMedium;
+            border: 1px solid $brandPrimary;
+            color: $brandPrimary;
+            background: #EFF8F1;
+            border-radius: 5px;
+            margin-right: 8px;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &__link,
+    &__like,
+    &__dislike {
+        display: block;
+        width: 80px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid rgba(153, 153, 153, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        i {
+            padding-left: 8px;
+            font-size: $fontSizeBase;
+            color: $grayLighter;
+        }
+    }
+
+    &__link {
+        background: url(../images/route/link.svg)no-repeat center center;
+    }
+
+    &__like {
+
+
+        &.active {
+            border: 1px solid $brandPrimary;
+            background: #EFF8F1 url(../images/route/like-green.svg)no-repeat center center;
+        }
+
+        &:hover {
+            border: 1px solid $brandPrimary;
+            background: #EFF8F1;
+
+            .__like {
+                background: #EFF8F1 url(../images/route/like-green.svg)no-repeat center center;
+            }
+
+            i {
+                color: $brandPrimary;
+            }
+        }
+
+        .__like {
+            width: 21px;
+            height: 18px;
+            background: url(../images/route/like.svg)no-repeat center center;
+
+        }
+    }
+
+    &__dislike {
+        margin-left: 8px;
+
+        &.active {
+            background: #FDEBEC url(../images/route/like-red.svg)no-repeat center center;
+            border: 1px solid rgba(230, 46, 61, 0.5);
+            transform: rotate(0);
+        }
+
+        &:hover {
+            border: 1px solid rgba(230, 46, 61, 0.5);
+            background: #FDEBEC ;
+
+            .__dislike {
+                background: #FDEBEC url(../images/route/like-red.svg)no-repeat center center;
+                transform: rotate(0);
+            }
+
+            i {
+                color: #E62E3D;
+            }
+        }
+
+        .__dislike {
+            background: url(../images/route/like.svg)no-repeat center center;
+            transform: rotate(-180deg);
+            width: 21px;
+            height: 18px;
+        }
+    }
+
+    @media (min-width: 480px) {
+        padding-left: 75px;
+    }
+
+    @media (min-width: 1320px) {
+
+        &__link,
+        &__like,
+        &__dislike {
+            width: 80px;
+        }
+    }
+}

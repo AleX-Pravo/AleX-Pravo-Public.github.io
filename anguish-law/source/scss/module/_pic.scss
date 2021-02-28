@@ -1,0 +1,10 @@
+.pic {
+    &__icon {
+        display: flex;
+        flex-flow: column wrap;
+
+        a:first-child {
+            padding-bottom: 10px;
+        }
+    }
+}

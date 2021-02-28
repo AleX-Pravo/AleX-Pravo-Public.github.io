@@ -1,0 +1,18 @@
+= '\n'
+//= index-news__wrap =
+//- (source/assets/css/module/_index-news.scss)
+.index-news__wrap
+    - for(var i = 0; i < cycleNumber; i++)
+        each val in indexNews
+            .index-news__inner
+                a.index-news__img(href="blog-inner.html")
+                    //proportions and the maximum size of images 570x400
+                    img(src='data/index/news/' + val.img + '.jpg' alt='')
+                .index-news__info
+                    include _date.pug
+
+                    a.index-news__title(href="blog-inner.html")= val.title
+                    .index-news__text
+                        p.mCustomScrollbar.limited= val.text
+//= End index-news__wrap =
+= '\n'

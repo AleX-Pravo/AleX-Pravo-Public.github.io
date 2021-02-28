@@ -1,0 +1,39 @@
+.button {
+    font-size: $fontSizeLarge;
+    line-height: (40px / $fontSizeLarge);
+    display: inline-block;
+    height: 40px;
+    margin: 15px 0 20px 0;
+    padding: 0 48px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    text-decoration: none;
+    color: $base;
+    border: none;
+    border-bottom: 3px solid $brandSuccess;
+    border-radius: 5px;
+    outline: none;
+    background: $brandPrimary;
+    text-shadow: 0 2px 0 rgba(0,0,0, .1);
+    white-space: nowrap;
+    text-align: center;
+
+    &:hover {
+        background: $brandPrimaryDark;
+    }
+
+    &--light {
+        border: 1px solid #96c93d;
+        background: $base;
+        color: #96c93d;
+        text-shadow: none;
+        padding: 0;
+        width: 100%;
+        max-width: 370px;
+        margin: 0 0 45px 0;
+
+        &:hover {
+            color: $base;
+        }
+    }
+}

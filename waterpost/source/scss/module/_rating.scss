@@ -1,0 +1,66 @@
+.rating {
+    position: relative;
+    display: inline-flex;
+    padding: 0 0 0 48px;
+    z-index: 1;
+
+    &:before {
+        position: absolute;
+        content: attr(data-aggregate);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $brandPrimary;
+        font-weight: bold;
+        font-size: $fontSizeH4;
+        line-height: 26px;
+    }
+
+    &-list {
+        padding: 0;
+        list-style: none;
+    }
+
+    &-item {
+        float: left;
+        cursor: pointer;
+        width: 24px;
+        height: 31px;
+        position: relative;
+
+        &:not(:last-child) {
+            margin: 0 8px 0 0;
+        }
+
+        &:before,
+        &:after{
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 31px;
+            left: 0;
+            top: 0;
+            transition: all .3s;
+        }
+
+        &:before {
+            background: url(../images/rating/bottle-light.svg) no-repeat;
+            opacity: 1;
+        }
+
+        &:after {
+            background: url(../images/rating/bottle-full.svg) no-repeat;
+            opacity: 0;
+        }
+    }
+
+    &-full {
+        &:before {
+            opacity: 0;
+        }
+
+        &:after {
+            opacity: 1;
+        }
+    }
+}

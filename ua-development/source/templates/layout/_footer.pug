@@ -1,0 +1,35 @@
+= '\n'
+//= Footer =
+
+footer#footer.footer
+    .container
+        .footer__wrapper
+            .footer__logo
+                include ../module/_logo.pug
+            .footer__menu
+                .footer__menu-primary
+                    h3 Послуги
+                    - header = false
+                    include header/primaryMenu/_primaryMenu.pug
+                .footer__menu-second
+                    h3 Про нас
+                    include header/secondMenu/_secondMenu.pug
+                .footer__contact
+                    h3 Контакти
+                    include ../module/_footerInfo.pug
+                .footer__soc
+                    h3 Соцмережі
+                    include ../module/_social.pug
+                    img(src="", alt="")
+
+    .footer__bottom
+        .container
+            .footer__cont
+                .footer__cover
+                    span © 2019 «Ua-development».Всі права захищені.
+                .footer__logo32x32    
+                    include ../module/_logo32x32.pug
+
+    include ../module/_up.pug
+
+//= End footer =

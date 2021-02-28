@@ -1,0 +1,91 @@
+include vars/_variable.pug
+
+= '\n'
+//= Tab =
+.tab
+    .tab__menu.tab__menu--3
+        ul.tab__menu-list
+            li.tab__menu-item
+                a.tab__menu-link(href='#shop')
+                    span.tab__menu-link-text Акції магазинів
+
+            li.tab__menu-item
+                a.tab__menu-link(href='#sc')
+                    span.tab__menu-link-text Акції ТЦ
+
+            li.tab__menu-item
+                a.tab__menu-link(href='javascript:void(0);')
+                    span.tab__menu-link-text Програма лояльності
+
+
+    #shop.tab__content
+        = '\n'
+        //= Share page =
+        .share-page
+            .share-page__section
+                .share-page__section-title Акції магазинів
+
+                .share-page__section-content
+                    each val in sharePage
+                        .share-page__item
+                            .share-page__inner
+                                .share-page__logo
+                                    img(src='data/share/' + val.logo + '.png' alt='')
+
+                                a.share-page__image(href='#')
+                                    img(src='data/share/' + val.image + '.jpg' alt='' style="height: 283px")
+
+                                .share-page__content
+                                    .share-page__title
+                                        a.share-page__link(href='#')= val.title
+
+                                    .share-page__description= val.description
+
+                                .share-page__date
+                                    .share-page__date-title Акція діє:
+                                    .share-page__date-value= val.date
+        //= End share page =
+        = '\n'
+
+        //= Pagination =
+        .pagination
+            button.pagination__button Дивитись ще
+        //= End pagination =
+        = '\n'
+
+    #sc.tab__content
+        = '\n'
+        //= Share page =
+        .share-page
+            .share-page__section
+                .share-page__section-title Акції ТЦ
+
+                .share-page__section-content
+                    each val in sharePage
+                        .share-page__item
+                            .share-page__inner
+                                .share-page__logo
+                                    img(src='data/share/' + val.logo + '.png' alt='')
+
+                                a.share-page__image(href='#')
+                                    img(src='data/share/' + val.image + '.jpg' alt='' style="height: 283px")
+
+                                .share-page__content
+                                    .share-page__title
+                                        a.share-page__link(href='#')= val.title
+
+                                    .share-page__description= val.description
+
+                                .share-page__date
+                                    .share-page__date-title Акція діє:
+                                    .share-page__date-value= val.date
+        //= End share page =
+        = '\n'
+
+        //= Pagination =
+        .pagination
+            button.pagination__button Дивитись ще
+        //= End pagination =
+        = '\n'
+//= Tab =
+= '\n'

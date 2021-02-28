@@ -1,0 +1,68 @@
+.appearance {
+	&--payment {
+		display: block;
+		padding: 0;
+		label.control-label {
+			font-weight: 500;
+			font-size: $fontSizeLarge;
+			line-height: 28px;
+			color: $grayDark;
+			margin-bottom: 23px;
+
+			+ div {
+
+				label {
+					letter-spacing: -1px;
+					padding-right: 15px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	input[type='radio'] {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 24px;
+		height: 24px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: 1px solid $grayLighter;
+		border-radius: 50%;
+		cursor: pointer;
+		padding: 0;
+		background-color: $grayLighter;
+
+		&:checked {
+			&:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				background: $brandPrimary;
+			}
+		}
+	}
+	//768px
+	@media (min-width: $screenSmMin) {
+		&--payment {
+
+			label.control-label {
+				+ div {
+					label {
+						padding-right: 44px;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+	}
+}

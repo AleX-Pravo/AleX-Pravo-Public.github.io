@@ -1,0 +1,96 @@
+-
+    var recipePictureList = ['1', '2', '3']
+    var recipeTableFields = [
+        {
+            name: 'Брюссельская капуста',
+            value: '600 г'
+        },
+        {
+            name: 'Картофель',
+            value: '600 г'
+        },
+        {
+            name: 'Говядина',
+            value: '500 г'
+        },
+        {
+            name: 'Лук',
+            value: '2 шт.'
+        },
+        {
+            name: 'Чеснок',
+            value: '2 зубчика'
+        },
+        {
+            name: 'Морковь',
+            value: '2 шт.'
+        },
+        {
+            name: 'Растительное масло',
+            value: '3 ст. л.'
+        },
+        {
+            name: 'Мясной бульон',
+            value: '500 мл'
+        },
+        {
+            name: 'Специи',
+            value: 'лавровый лист, майоран, петрушка'
+        },
+    ]
+= '\n'
+//= Recipe =
+.recipe(itemscope itemtype='http://schema.org/Recipe')
+    h1.breadcrumbs__name(itemprop='headline name') Густой суп из брюссельской капусты
+
+    meta(itemprop='author' content='Freshmart')
+    meta(itemprop='datePublished' content='2017-01-21')
+
+    .recipe__info
+        .recipe__category 21.01 Рецепты
+        .recipe__views 15
+        .recipe__comments 2
+        .recipe__tags
+            a.recipe__tags-link(href='#') Итальянская кухня
+
+        +headerSocnet('socnet--article')
+
+    .recipe__media
+        .recipe__slider
+            ul.recipe__picture#slider_recipe
+                li
+                    img.recipe__image(src='data/recipe/1.png' alt='' itemprop='image')
+                li
+                    img.recipe__image(src='data/recipe/1.png' alt='' itemprop='image')
+                li
+                    img.recipe__image(src='data/recipe/1.png' alt='' itemprop='image')
+
+        .recipe__table
+            .recipe__table-name Ингридиенты
+            each field in recipeTableFields
+                .recipe__field(itemprop='recipeIngredient')
+                    .recipe__name= field.name
+                    .recipe__value= field.value
+
+    .recipe__content(itemprop='description')
+        h2 Способ приготовления:
+        ol(itemprop='recipeInstructions')
+            li.
+                Брюссельскую капусту выложить в дуршлаг, промыть холодной водой и при необходимости почистить. Рекомендуется кочанчики разрезать пополам. Картофель очистить от кожуры, нарезать тонкими ломтиками. Мясо вымыть и нарезать небольшими кусочками. Репчатый лук и чеснок очистить, мелко порубить. Морковь вымыть, очистить и нарезать тонкими кружками.
+            li.
+                Разогреть растительное масло в сотейнике и обжарить в нем мясо. Положить лук с чесноком и влить бульон.
+            li.
+                Добавить брюссельскую капусту, морковь, картофель и лавровый лист. Довести до кипения и варить на слабом огне, накрыв крышкой, 40 мин. Готовый суп приправить специями: майораном и петрушкой. Можно добавить несколько горошин душистого перца по вкусу. Разлить по тарелкам и подать горячим.
+
+    //= Section =
+    .section#recipe_popular
+        .section__title Рекомендуемые товары
+        +catalogCarousel(popularGoods)
+
+    //= End section =
+    = '\n'
+
+    include _comments.pug
+
+//= End recipe =
+= '\n'

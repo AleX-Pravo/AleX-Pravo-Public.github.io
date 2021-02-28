@@ -1,0 +1,75 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $grayLighter;
+    margin: 40px 0 0;
+
+    li {
+        position: relative;
+        padding: 0 20px 0 0;
+        font-size: $fontSizeSmall;
+        color: $gray;
+        text-decoration: none;
+        line-height: 25px;
+        transition: all .3s;
+
+        &:not(:first-child) {
+            padding: 0 20px 0 0;
+            border-left-color: transparent;
+        }
+
+        &:first-child {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0 20px;
+
+            a {
+                color: $brandPrimary;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 48%;
+                width: 14px;
+                height: 10px;
+                transform: translateY(-50%) rotate(90deg);
+                background: url(../images/icons/arrow.svg) no-repeat;
+                background-size: contain;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: calc(100% - 12px);
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            transform: translateY(-50%);
+            z-index: 1;
+            border-radius: 50%;
+            background: #73737C;
+        }
+
+        &.active {
+            cursor: default;
+            text-decoration: underline;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        a {
+            display: block;
+            line-height: 25px;
+            cursor: pointer;
+            white-space: nowrap;
+            text-decoration: none;
+            color: $gray;
+            font-family: $fontFamilyBase;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+/* Container */
+.container {
+	width: 100%;
+	max-width: $containerMaxWidth;
+	margin: auto;
+	padding: 0 $containerPadding;
+		
+	&--fluit {
+		max-width: 100%;
+		padding: 0;
+	}
+}

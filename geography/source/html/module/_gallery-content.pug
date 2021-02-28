@@ -1,0 +1,11 @@
+= '\n'
+//= gallery-content =
+//- (source/assets/css/module/_gallery-content.scss)
+.gallery-content
+    .layout-box__photos
+        each item in photosGallery
+            a.layout-box__photos-link(href='gallery-inner.html')
+                img(src='data/photo/' + item.img + '.png', alt='')
+                p= item.text
+//= End gallery-content =
+= '\n'

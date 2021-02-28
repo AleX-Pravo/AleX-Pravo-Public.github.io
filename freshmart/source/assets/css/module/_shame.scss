@@ -1,0 +1,264 @@
+.order-delivery-item--disabled .order-delivery-link {
+    color: #b42c2c !important;
+    background: #ffdada !important;
+}
+
+.basket__count {
+    font-size: 13px;
+    line-height: 1.92308;
+    position: absolute;
+    top: 6px;
+    right: -8px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: #96c93d;
+}
+
+.social__item--telegram {
+    margin-left: 24px;
+}
+
+.social__item--telegram .social__link {
+    background-position: -239px 0;
+}
+
+.social__item--telegram .social__link:after {
+    background-position: -202px 0;
+}
+
+.social__item--youtube {
+    margin-left: 34px;
+}
+
+.social__item--youtube .social__link{
+    background-position: -312px 0;
+}
+
+.social__item--youtube .social__link:after {
+    background-position: -275px 0;
+}
+
+.footer .socnet__link--youtube {
+    width: 20px;
+    height: 14px;
+}
+
+.footer .socnet__link--youtube:before {
+    background-position: -58px 0;
+}
+
+.footer .socnet__link--youtube:after {
+    background-position: -58px -15px;
+}
+
+.socnet__link--youtube {
+    width: 20px;
+    height: 14px;
+}
+
+.socnet__link--youtube:before {
+    background-position: -58px 0;
+}
+
+.socnet__link--youtube:after {
+    background-position: -58px -15px;
+}
+
+@media (min-width:1023px) {
+    .on-mobile {
+        display: none;
+    }
+}
+
+.productVideo {
+    position: relative;
+    margin: 15px 0;
+    padding-top: 55.952380%;
+}
+
+.productVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.order-delivery-time-error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/content/icon/order.png) -40px -80px no-repeat;
+}
+
+.message__text--fancy {
+    font-family: Natilus, Roboto, Arial, sans-serif;
+    font-size: 24px;
+    margin: 15px -10px 23px;
+    text-align: center;
+    color: #534746;
+}
+
+.message__text--fancy h2 {
+    font-size: 24px;
+}
+
+.vote-hover {
+    height: 33px !important;
+}
+
+.contacts__field--calendar:before {
+    background-position: -509px 50% !important;
+}
+
+input:invalid, input:-moz-ui-invalid {
+    border: 1px solid #e5e5e5;
+    outline:none;
+    box-shadow:none;
+}
+
+.section .invoice {
+    width: 40%;
+}
+
+.product__info {
+    .vote-hover {
+        height: auto!important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .section .invoice {
+        width: 60%;
+    }
+}
+
+@media (max-width: 799px) {
+    .section .invoice {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+.goods-day__title {
+    min-height: 63px;
+}
+
+.invoice {
+    &__stamp {
+        width: 50%;
+        float: right;
+        display: inline-block;
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (max-width: 1104px) {
+    .invoice {
+        &__stamp {
+            margin-top: 18px;
+        }
+    }
+}
+
+
+@media (max-width:1022px) {
+    .invoice {
+        &__stamp {
+            width: 100%;
+            display: block;
+            margin: 20px 0 20px 0;
+            padding-left: 30px;
+        }
+
+        &__thanks {
+            width: 100% !important;
+        }
+    }
+}
+
+
+.promotional__slider {
+    .bx__pager-item {
+        &--megafon {
+            &:before {
+                background-position: -407px 0;
+                width: 70px;
+                height: 54px;
+            }
+        }
+
+        &--eye {
+            &:before {
+                background-position: -477px 0;
+                width: 70px;
+                height: 54px
+            }
+        }
+
+        &--youtube {
+            &:before {
+                background-position: -550px 0;
+                width: 55px;
+                height: 54px;
+            }
+        }
+    }
+}
+
+.rewiews__answer {
+    .rewiews__user {
+        &.simple {
+            &--user {
+                padding-left: 30px;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 21px;
+                    height: 21px;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    background: #fff url('../images/content/icon/user.png') 50% 50% no-repeat;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+
+    .rewiews__item {
+        padding-bottom: 10px;
+    }
+}
+
+
+
+.invoice {
+    margin: 0 auto;
+    width: 42%;
+}
+
+.navigation .primary-menu__link--mushrooms:before {
+    //background-position: 0 -250px;
+}
+
+@media (min-width: 1024px) {
+    .navigation .primary-menu__link--mushrooms:before {
+        //background-position: 0 -505px;
+    }
+}
+

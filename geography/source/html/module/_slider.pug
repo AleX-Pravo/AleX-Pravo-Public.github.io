@@ -1,0 +1,23 @@
+= '\n'
+//= slider =
+//- (source/assets/css/module/_slider.scss)
+.slider
+    .swiper-container.gallery-top
+        .swiper-wrapper
+            each val in catalogCarouselBig
+
+                - modifier = (val.micromarkingImg) ? itempropInnerImage : false
+                
+                .swiper-slide
+                    a(class=val.class href=val.href)
+                        img(src="data/slider/big/" + val.image, alt="" itemprop= modifier)
+    .swiper-button-next.swiper-button-white
+    .swiper-button-prev.swiper-button-white
+
+    .swiper-container.gallery-thumbs
+        .swiper-wrapper
+            each item in sliderItems
+                .swiper-slide
+                    img(src="data/slider/small/" + item, alt="")
+//= End slider =
+= '\n'

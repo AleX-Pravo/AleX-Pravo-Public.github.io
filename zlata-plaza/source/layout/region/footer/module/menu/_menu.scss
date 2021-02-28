@@ -1,0 +1,28 @@
+@import 'vars/_variable.scss';
+
+.menu {
+    font-size: $menu__textFontSize;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+
+    &__list {
+        position: relative;
+    }
+
+    &__item {
+        position: relative;
+        margin: 0 0 8px;
+    }
+
+    &__link {
+        transition: all .2s linear;
+        text-decoration: none;
+        color: $menu__textColor;
+
+        &:hover {
+            color: $menu__textColor--active;
+        }
+    }
+}

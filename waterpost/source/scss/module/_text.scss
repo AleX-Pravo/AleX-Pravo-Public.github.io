@@ -1,0 +1,115 @@
+.text {
+    background: $base;
+    border-radius: 0 0 14px 14px;
+    padding: 0 24px 32px;
+    font-size: $fontSizeSmall;
+    line-height: 23px;
+    font-weight: 500;
+
+    h1 {
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: $fontSizeH3;
+        line-height: 24px;
+        margin: 32px 0 0;
+    }
+
+    p {
+        font-size: inherit;
+        line-height: inherit;
+        color: $brandDimGray;
+    }
+
+    > ul {
+        position: relative;
+        font-size: inherit;
+        line-height: inherit;
+        color: $brandDimGray;
+        margin: 16px 0 32px;
+
+        li {
+            position: relative;
+            padding: 0 0 0 12px;
+            margin: 0 0 4px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                left: 0;
+                top: 10px;
+                background: $brandPrimary;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    ol {
+        position: relative;
+        list-style-type: none;
+        counter-reset: num;
+        font-size: inherit;
+        line-height: inherit;
+        color: $brandDimGray;
+        margin: 16px 0 32px;
+
+        li {
+            position: relative;
+            padding: 0 0 0 17px;
+            margin: 0 0 4px;
+
+            &:before {
+                position: absolute;
+                content: counter(num)'.';
+                counter-increment: num;
+                left: 0;
+                top: 0;
+                line-height: 26px;
+                color: $brandPrimary;
+                font-weight: 700;
+                font-size: $fontSizeBase;
+            }
+        }
+    }
+
+    blockquote {
+        padding: 48px 24px 20px;
+        margin: 48px 0 0;
+        position: relative;
+        font-weight: 500;
+        background: $brandUltralightBlue;
+        font-size: inherit;
+        line-height: inherit;
+        color: $brandDimGray;
+        border-radius: 14px;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 64px;
+            height: 64px;
+            left: 24px;
+            top: -24px;
+            background: url(../images/icons/quote.png) no-repeat;
+        }
+
+        cite {
+            display: block;
+            text-align: right;
+            font-size: $fontSizeLarge;
+            color: $brandDarkBlack;
+            line-height: 26px;
+            margin: 16px 0 0;
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+        font-size: $fontSizeBase;
+        line-height: 26px;
+    }
+}

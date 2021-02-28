@@ -1,0 +1,14 @@
+= '\n'
+//= Copyright =
+-
+    micromarking = true
+    itemscope = (micromarking) ? true : false
+    itemtype                    = (micromarking) ? 'http://schema.org/CreativeWork' : false
+    itempropInner               = (micromarking) ? 'copyrightHolder' : false
+    typeOfInner                 = (micromarking) ? 'FreshMart' : false
+
+.copyright(itemscope= itemscope itemtype= itemtype itemprop= itempropInner typeof= typeOfInner) © 2011–2017 FreshMart
+
+- micromarking = false
+//= End copyright =
+= '\n'

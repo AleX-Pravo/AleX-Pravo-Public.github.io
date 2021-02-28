@@ -1,0 +1,29 @@
+.date {
+    display: flex;
+    align-items: center;
+    margin: 0 0 11px 0;
+    padding-top: 15px;
+
+    p {
+        font-weight: 600;
+        font-size: $fontSize16;
+        color: $grayDark;
+        padding-left: 9px;
+    }
+
+    span {
+        font-weight: normal;
+    }
+
+    u {
+        text-decoration: none;
+        padding: 0 9px;
+    }
+
+    i {
+        font-style: normal;
+        font-size: $fontSize16;
+        color: $grayDark;
+        padding-left: 10px;
+    }
+}

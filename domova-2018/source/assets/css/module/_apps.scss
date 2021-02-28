@@ -1,0 +1,175 @@
+.apps {
+    margin-top: 30px;
+    margin: 0;//SS
+
+    &__item {
+        width: 100%;
+        transition: all 0.2s ease-out;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+
+            .apps__button {
+                width: calc(100% - 45px);//ss
+                float: left;//ss
+            }
+        }
+    }
+
+    &__button {
+        display: block;
+        border: 1px solid $base;
+        border-radius: 4px;
+        height: 60px;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+        background: $brandPrimary;
+        font-size: 0;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 0;
+            height: 58px;
+        }
+
+        &-wrapper {
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        &:hover {
+            background: $base;
+            border-color: $brandPrimary;
+
+            .apps {
+                &__icon {
+                    &:before {
+                        opacity: 1;
+                    }
+
+                    &:after {
+                        opacity: 0;
+                    }
+                }
+
+                &__text {
+                    color: $brandPrimary;
+                }
+            }
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        vertical-align: middle;
+        color: $base;
+        transition: all 0.2s ease-out;
+        line-height: 1;
+        text-align: left;
+    }
+
+    &__line {
+        line-height: 1;
+        display: block;
+        font-size: $fontSizeH7;
+
+        &--name {
+            font-size: $fontSizeLarge;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../images/footer/apps.png') 100px 100px no-repeat;
+            transition: opacity 0.2s ease-out;
+        }
+
+        &:before {
+            opacity: 0;
+        }
+
+        &:after {
+            opacity: 1;
+        }
+
+        &.gp {
+            &:before {
+                background-position: 0 -28px;
+            }
+
+            &:after {
+                background-position: 0 0;
+            }
+        }
+
+        &.ap {
+            &:before {
+                background-position: -28px -28px;
+            }
+
+            &:after {
+                background-position: -28px 0;
+            }
+        }
+
+        &.fb {
+            &:before {
+                background-position: -56px -28px;
+            }
+
+            &:after {
+                background-position: -56px 0;
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        margin: 0 -5px;
+        @include clearfix;
+
+        &__item {
+            width: 60%;
+            //float: left;
+            padding: 0 5px;
+            margin-bottom: 0;
+            //float: none;//SS
+            margin: auto;//SS
+            //width: 50%;
+        }
+
+        &__button {
+            //float: left;//ss
+            //width: 85%;//ss
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        &__button {
+            //float: left;//ss
+            //width: 93%;//ss
+        }
+    }
+}

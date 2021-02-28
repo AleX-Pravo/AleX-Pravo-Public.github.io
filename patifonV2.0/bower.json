@@ -1,0 +1,14 @@
+{
+    "name": "patifonv2",
+    "version": "1.0.0",
+    "description": "Patifon v2.0 layout project",
+    "authors": [
+        "Roman Krasinskiy <rk@32x32.com.ua>"
+    ],
+    "license": "ISC",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}

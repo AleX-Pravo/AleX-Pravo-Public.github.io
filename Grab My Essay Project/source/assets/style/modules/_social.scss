@@ -1,0 +1,33 @@
+/* Social */
+.social {
+	display: flex;
+
+	&__item {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		text-decoration: none;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px solid transparent;
+
+		&:hover {
+			border-color: $secongaryColor;
+		}
+
+		&--facebook {
+			background: $backgroundColor_blue url('../img/facebook.svg') 50% 50% no-repeat;
+		}
+
+		&--twitter {
+			background: $backgroundColor_blue url('../img/twitter.svg') 50% 50% no-repeat;
+		}
+	}
+}

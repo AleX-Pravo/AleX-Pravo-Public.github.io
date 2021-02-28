@@ -1,0 +1,277 @@
+.cart {
+
+    &__header,
+    &-item {
+        display: flex;
+        border-bottom: 1px solid $grayLighter;
+    }
+
+    &__adaptive {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 460px;
+        width: 100%;
+    }
+
+    &__header {
+        .cart {
+            &__cell {
+                &--quantity {
+                    display: none;
+                }
+                &--remove {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__cell {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;//
+        padding: 16px 0;
+        color: $gray;
+        font-family: $fontFamilyBase;
+        font-size: $fontSizeBase;
+
+        &--name {
+
+            max-width: 775px;
+            width: 100%;
+
+            flex-wrap: wrap;//
+
+
+            a {
+                font-family: $fontFamilyBase;
+                font-weight: 500;
+                font-size: $fontSizeSmall;
+                color: $grayBase;
+                text-align: center;
+            }
+        }
+
+        &--price,
+        &--quantity,
+        &--sum {
+            padding: 10px;
+            max-width: 230px;
+            //min-width: 180px;
+            width: 100%;
+
+            span {
+                color: $grayBase;
+                font-weight: 500;
+                font-size: $fontSizeLarge;
+            }
+        }
+
+        &--remove {
+            max-width: none;
+            position: relative;
+            span {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 100%;
+
+                &:before {
+                    content: '';
+                    background: url(../images/icons/exit.svg) no-repeat;
+                    background-position-x: -14px;
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    &:before {
+                        background-position-x: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__picture {
+        display: block;
+        max-width: 140px;
+        max-height: 77px;
+        width: 100%;
+        //height: 100%;
+        overflow: hidden;
+    }
+
+    &__total {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+
+        &--continue {
+
+            a {
+                min-width: 204px;
+                max-width: 204px;
+                display: block;
+                background: $bodyColor;
+                border: 1px solid $grayLight;
+                border-radius: 50px;
+                position: relative;
+                max-height: 42px;
+                padding: 10px 0;
+                text-align: center;
+                color: $gray;
+                font-size: $fontSizeBase;
+                font-family: $fontFamilyOswald;
+                text-decoration: none;
+                flex-shrink: 0;
+                margin: 0 0 10px 0;
+
+                &:before {
+                    content: '';
+                    width: 7px;
+                    height: 11px;
+                    position: absolute;
+                    background: url(../images/icons/keep-arrow.svg)no-repeat;
+                    background-position-x: -8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 30px;
+                }
+
+                &:hover {
+                    background: $brandPrimary;
+                    color: $base;
+
+                    &:before {
+                        background-position-x: 0;
+                    }
+                }
+            }
+        }
+
+        .button {
+            max-width: 204px;
+            max-height: 42px;
+            border-radius: 50px;
+            margin: 5px 0;
+        }
+    }
+
+    &__bill {
+
+        font-family: $fontFamilyBase;
+        font-size: $fontSizeLarge;
+        color: $grayBase;
+        line-height: 25px;
+
+        span {
+            display: block;
+            font-weight: 700;
+            font-size: 28px;
+        }
+    }
+
+    @media (min-width: $screenXXsMin) {
+        &__header {
+            .cart {
+                &__cell {
+                    &--remove {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &__cell {
+
+            &--remove {
+                max-width: 30px;
+                width: 100%;
+                span {
+                    position: static;
+                }
+            }
+
+            &--name {
+                a {
+                    text-align: left;
+                    font-size: $fontSizeBase;
+                }
+            }
+        }
+
+        &__picture {
+            margin-right: 15px;
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+
+        &__cell {
+            &--price {
+                min-width: 110px;
+            }
+        }
+
+        &__total {
+            .button {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (min-width: $screenSmMin) {//840
+        &__header {
+            .cart {
+                &__cell {
+                    &--quantity {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        &__adaptive {
+            flex-wrap: nowrap;
+        }
+
+        &__cell {
+            justify-content: flex-start; //
+        }
+
+        &__total {
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            &--continue {
+                flex-grow: 1;
+
+                a {
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+
+        &__bill {
+            margin: 0 0 0 60px;
+        }
+    }
+
+    @media (min-width: $screenSMd) {
+        &__cell {
+            &--name {
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}

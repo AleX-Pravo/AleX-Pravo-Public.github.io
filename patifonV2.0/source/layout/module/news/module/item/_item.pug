@@ -1,0 +1,32 @@
+include vars/_variable.pug
+
+if ('type' in val && val.type == 'Cтатья')
+    - newsItemCategory = 'article'
+
+if ('type' in val && val.type == 'Новость')
+    - newsItemCategory = 'news'
+
+= '\n'
+//= Item =
+.news__item
+    a.news__itemImage(href='#')
+        img(src='data/news/' + val.image + '.jpg' alt= val.title)
+
+    if ('date' in val && 'text' in val)
+        .news__itemContent
+            .news__itemContentTop
+                .news__itemCategory(class='news__itemCategory--' + newsItemCategory)= val.type
+                .news__itemDate= val.date
+
+            .news__itemTitle
+                a.news__itemTitleLink(href='#')= val.title
+
+            .news__itemText= val.text
+
+    else
+        .news__itemCategory(class='news__itemCategory--' + newsItemCategory)= val.type
+
+        .news__itemTitle
+            a.news__itemTitleLink(href='#')= val.title
+//= End item =
+= '\n'

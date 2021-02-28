@@ -1,0 +1,16 @@
+= '\n'
+//= Popular =
+
+.popular
+    .popular__wrapper
+        a.popular__image(href='hotel-rooms.html')
+            img(src='data/photo/' + item.img + '.png', alt='')
+        .popular__info
+            .popular__info-title= item.title
+            .popular__info-box
+                a.popular__info-price(href='javascript:void(0)')= item.price
+                    span= item.curr
+                a.pin(href='hotel-rooms.html') Забронювати
+
+//= End popular =
+= '\n'

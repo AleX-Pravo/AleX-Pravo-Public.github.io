@@ -1,0 +1,12 @@
+include vars/_variable.pug
+
+//= Socnet =
+.socnet Мы в социальных сетях
+    ul.socnet__list
+
+        each val in socnet
+            li.socnet__item
+                a.socnet__link(href='#' class='socnet__link--' + val)
+
+//= End socnet =
+= '\n'

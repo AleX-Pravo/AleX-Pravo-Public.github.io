@@ -1,0 +1,16 @@
+= '\n'
+//= Mobile menu =
+
+.mobile-menu.hide-screen-l-min
+    .mobile-menu__drop.mobile-sidebar
+        .mobile-menu__wrapper
+            a.mobile-menu__close.close(href='javascript:void(0);') &times;
+            .mobile-menu__content
+                .mobile-menu__primary-menu
+                    - primaryMenu = primaryMenuHeader
+                    include ../module/_primaryMenu.pug
+                .mobile-menu__contacts-info
+                    include ../module/_info.pug
+
+//= End mobile menu =
+= '\n'

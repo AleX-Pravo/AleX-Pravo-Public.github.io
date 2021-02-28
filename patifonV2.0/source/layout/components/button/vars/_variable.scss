@@ -1,0 +1,10 @@
+//- BUTTON
+//------------------------------------------------
+
+$button__textColor:                 $base !default;
+$button__backgroundColor:           $brandPrimary !default;
+$button__backgroundColor--active:   $brandSecondary !default;
+
+$button__defaultBorderColor:        $brandPrimary !default;
+
+$button__backgroundGradientColor:   #f9c12b, #f7a304 !default;

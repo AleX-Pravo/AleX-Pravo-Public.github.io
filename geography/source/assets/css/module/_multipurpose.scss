@@ -1,0 +1,25 @@
+.multipurpose {
+	ul {
+		padding: 30px 0 13px;
+
+		li {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 18px;
+
+			span {
+				font-weight: 500;
+				font-size: $fontSizeBase;
+				line-height: 21px;
+				color: $grayDark;
+
+				&:nth-child(2) {
+					flex-grow: 1;
+					border-bottom: 2px dotted $grayLighter;
+					margin: 0 5px 3px 5px;
+					align-self: flex-end;
+				}
+			}
+		}
+	}
+}

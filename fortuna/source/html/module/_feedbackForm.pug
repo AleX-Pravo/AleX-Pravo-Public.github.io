@@ -1,0 +1,45 @@
+-
+    var orderingInitialsFormItem = [
+        {
+            placeholder: 'Ваше ім\'я*',
+            error: true
+        },
+        {
+            placeholder: 'E-mail*'
+        }
+    ]
+='\n'
+// = feedbackForm =
+//- =(module/_feedbackForm.scss)=
+form.feedbackForm(method='')
+    .feedbackForm__title Додати відгук
+    .feedbackForm__main
+        .feedbackForm__container
+            each item in orderingInitialsFormItem
+                if item.error
+                    .form-group.has-error
+                        input.form-control(type='text' placeholder= item.placeholder)
+                        .help-block
+                        a.help-block__close(href='javascript: void(0);')
+                else
+                    .form-group
+                        input.form-control(type='text' placeholder= item.placeholder)
+                        .help-block
+                        a.help-block__close(href='javascript: void(0);')
+        .feedbackForm__textarea
+            .form-group
+                textarea.form-control(cols='30' rows='5' placeholder='Відгук')
+    .feedbackForm__next
+
+        //- =(module/_rating4.scss)=
+        .rating4
+            .rating__title Ваша оцінка:
+            ul.rating__list
+                li.rating__item
+                li.rating__item
+                li.rating__item
+                li.rating__item
+                li.rating__item
+        button.feedbackForm__button(type='button') Додати відгук
+// = End feedbackForm =
+='\n'

@@ -1,0 +1,219 @@
+include vars/_variable.pug
+
+= '\n'
+//= Settings packages =
+.settingsPackages
+    table.settingsPackages__table.hide-sm-max
+        thead.settingsPackages__head
+            tr.settingsPackages__row
+                td.settingsPackages__item Программы
+
+                td.settingsPackages__item Базовый
+                td.settingsPackages__item Стандартный
+                td.settingsPackages__item Родительский
+                td.settingsPackages__item Детский
+                td.settingsPackages__item Максимальный
+
+        tbody.settingsPackages__body
+
+            each val in settingsPackeges
+                tr.settingsPackages__row
+                    td.settingsPackages__item
+                        .settingsPackages__title
+                            .settingsPackages__image
+                                img(src='data/settingsPackages/' + val.image + '.png' alt='')
+
+                            = val.name
+
+                    td.settingsPackages__item
+
+                        if ('base' in val)
+
+                            if (val.base)
+                                i.settingsPackages__status.settingsPackages__status--yes
+
+                            else
+                                i.settingsPackages__status.settingsPackages__status--no
+
+                    td.settingsPackages__item
+
+                        if ('standard' in val)
+
+                            if (val.standard)
+                                i.settingsPackages__status.settingsPackages__status--yes
+
+                            else
+                                i.settingsPackages__status.settingsPackages__status--no
+
+                    td.settingsPackages__item
+
+                        if ('parental' in val)
+
+                            if (val.parental)
+                                i.settingsPackages__status.settingsPackages__status--yes
+
+                            else
+                                i.settingsPackages__status.settingsPackages__status--no
+
+                    td.settingsPackages__item
+
+                        if ('children' in val)
+
+                            if (val.children)
+                                i.settingsPackages__status.settingsPackages__status--yes
+
+                            else
+                                i.settingsPackages__status.settingsPackages__status--no
+
+                    td.settingsPackages__item
+
+                        if ('maximum' in val)
+
+                            if (val.maximum)
+                                i.settingsPackages__status.settingsPackages__status--yes
+
+                            else
+                                i.settingsPackages__status.settingsPackages__status--no
+
+        tfoot.settingsPackages__foot
+            tr.settingsPackages__row
+                td.settingsPackages__item Стоимость пакета:
+
+                td.settingsPackages__item
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 100 грн
+
+                td.settingsPackages__item
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 120 грн
+
+                td.settingsPackages__item
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 140 грн
+
+                td.settingsPackages__item
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 160 грн
+
+                td.settingsPackages__item
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 180 грн
+
+    ul.settingsPackages__list
+        li.settingsPackages__listItem
+            a.settingsPackages__listLink(href='javascript:void(0);') Базовый пакет
+                .settingsPackages__listArrow
+
+            .settingsPackages__listDrop
+                ul.settingsPackages__listDropList
+
+                    each val in settingsPackeges
+
+                        if (val.base)
+                            li.settingsPackages__listDropItem
+                                .settingsPackages__listDropContent
+                                    .settingsPackages__image
+                                        img(src='data/settingsPackages/' + val.image + '.png' alt='')
+
+                                    = val.name
+
+                .settingsPackages__listBox
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 100 грн
+
+        li.settingsPackages__listItem
+            a.settingsPackages__listLink(href='javascript:void(0);') Стандартный пакет
+                .settingsPackages__listArrow
+
+            .settingsPackages__listDrop
+                ul.settingsPackages__listDropList
+
+                    each val in settingsPackeges
+
+                        if (val.standard)
+                            li.settingsPackages__listDropItem
+                                .settingsPackages__listDropContent
+                                    .settingsPackages__image
+                                        img(src='data/settingsPackages/' + val.image + '.png' alt='')
+
+                                    = val.name
+
+                .settingsPackages__listBox
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 120 грн
+
+        li.settingsPackages__listItem
+            a.settingsPackages__listLink(href='javascript:void(0);') Родительский пакет
+                .settingsPackages__listArrow
+
+            .settingsPackages__listDrop
+                ul.settingsPackages__listDropList
+
+                    each val in settingsPackeges
+
+                        if (val.parental)
+                            li.settingsPackages__listDropItem
+                                .settingsPackages__listDropContent
+                                    .settingsPackages__image
+                                        img(src='data/settingsPackages/' + val.image + '.png' alt='')
+
+                                    = val.name
+
+                .settingsPackages__listBox
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 140 грн
+
+        li.settingsPackages__listItem
+            a.settingsPackages__listLink(href='javascript:void(0);') Детский пакет
+                .settingsPackages__listArrow
+
+            .settingsPackages__listDrop
+                ul.settingsPackages__listDropList
+
+                    each val in settingsPackeges
+
+                        if (val.children)
+                            li.settingsPackages__listDropItem
+                                .settingsPackages__listDropContent
+                                    .settingsPackages__image
+                                        img(src='data/settingsPackages/' + val.image + '.png' alt='')
+
+                                    = val.name
+
+                .settingsPackages__listBox
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 160 грн
+
+        li.settingsPackages__listItem
+            a.settingsPackages__listLink(href='javascript:void(0);') Максимальный пакет
+                .settingsPackages__listArrow
+
+            .settingsPackages__listDrop
+                ul.settingsPackages__listDropList
+
+                    each val in settingsPackeges
+
+                        if (val.maximum)
+                            li.settingsPackages__listDropItem
+                                .settingsPackages__listDropContent
+                                    .settingsPackages__image
+                                        img(src='data/settingsPackages/' + val.image + '.png' alt='')
+
+                                    = val.name
+
+                .settingsPackages__listBox
+                    a.settingsPackages__link
+                        i.settingsPackages__icon
+                        | 180 грн
+
+//= End settings packages =
+= '\n'

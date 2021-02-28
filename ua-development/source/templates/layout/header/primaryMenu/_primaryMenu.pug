@@ -1,0 +1,16 @@
+= '\n'
+//= primaryMenu =
+//-=(/layout/header/primaryMenu/_primaryMenu.scss)=
+.primary-menu
+    ul.primary-menu__inner
+        each val in primaryMenu
+            //-if (val.name === pageTitle)
+            if (val.name === nameTitle && header)
+                li.active
+                    a(href=val.href)= val.name
+            else
+                li
+                    a(href=val.href)= val.name
+
+//= End primaryMenu =
+= '\n'

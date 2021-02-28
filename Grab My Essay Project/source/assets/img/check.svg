@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>checkbox</title>
+    <g id="Home-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1_Home-page" transform="translate(-1232.000000, -4303.000000)" fill-rule="nonzero">
+            <g id="Txt" transform="translate(402.000000, 4132.000000)">
+                <g id="Choose-Us" transform="translate(795.000000, 5.000000)">
+                    <g id="Items" transform="translate(35.000000, 162.000000)">
+                        <g id="checkbox" transform="translate(0.000000, 4.000000)">
+                            <path d="M10,1.33333333 C12.3933,1.33333333 14.5599688,2.30334641 16.1283112,3.87168881 C17.6966536,5.44003121 18.6666667,7.6067 18.6666667,10 C18.6666667,12.3933 17.6966536,14.5599688 16.1283112,16.1283112 C14.5599688,17.6966536 12.3933,18.6666667 10,18.6666667 C7.6067,18.6666667 5.44003121,17.6966536 3.87168881,16.1283112 C2.30334641,14.5599688 1.33333333,12.3933 1.33333333,10 C1.33333333,7.6067 2.30334641,5.44003121 3.87168881,3.87168881 C5.44003121,2.30334641 7.6067,1.33333333 10,1.33333333 Z" id="Path" stroke="#000000" fill="#FFFFFF"></path>
+                            <polygon id="Path" fill="#000000" points="9.08608333 13.6666667 15.5669167 7.18491667 14.27075 5.88875 9.08608333 11.0743333 6.49283333 8.48108333 5.19666667 9.77725"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

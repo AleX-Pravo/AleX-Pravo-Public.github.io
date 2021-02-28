@@ -1,0 +1,68 @@
+//- Utility
+include utils/_variable.pug
+
+
+- pageTitle = 'objects'
+- nameTitle = 'Обєкти'
+- subTitle = 'Міста'
+
+//-_topBlock.pug_breadcrumbs.pug
+//- var about = 'about'
+
+- store = true // задаем хедеру класс .store через модификатор (_header.pug)
+
+//-js
+-
+    select2 = true
+    //select2filters = true
+    perfectScrollbar = true
+
+//- selectric = true
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header.pug
+            include layout/_header-device.pug
+
+            //= Main =
+            - modifierMain = (pageTitle!='main') ? 'main--inner' : ''
+            main#main.main(class= modifierMain)
+                .container
+
+                    include module/_breadcrumb.pug
+
+                    h1.topBlock__title= nameTitle
+                    .strainer
+                        -
+                            categories = true
+                            areaCityright = true
+                        include module/_filters.pug
+
+                    include module/_places.pug
+
+                    .catalog
+                        //- (source/assets/css/module/_object.scss)
+                        .object__wrapper
+                            - for(var i = 0; i < 12; i++)
+                                include module/_objects.pug
+
+                        include module/_pagination.pug
+                -
+                    categories = true
+                    areaCity = true
+                include module/_dwelling-filter.pug
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        //include module/_pageUp.pug
+        include layout/_scripts.pug

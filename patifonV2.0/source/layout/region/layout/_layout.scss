@@ -1,0 +1,359 @@
+.layout {
+
+    &--promo {
+
+        &#layout {
+            height: 100%;
+            overflow: visible;
+            margin: 0;
+        }
+
+        #main {
+            height: 100%;
+            margin: 0;
+        }
+    }
+
+    &__price {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 710px;
+        padding: 15px 15px 0;
+
+        &-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+    
+            > a {
+                font-size: $fontSizeH6;
+                font-weight: bold;
+                text-decoration: none;
+                color: $grayBase;
+                position: relative;
+                display: block;
+                white-space: nowrap;
+                margin: 4px 0 0;
+    
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -36px;
+                    width: 29px;
+                    height: 29px;
+                    background: url('../images/header/icon/phone.svg') no-repeat;
+                }
+            }
+        } 
+        
+        &-logo {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 0 17px 14px 0;
+
+            .logo {
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -17px;
+                    width: 1px;
+                    height: 100%;
+                    background: $borderColor;
+                }
+
+                &__link {
+                    display: block;
+                }
+            }
+
+            span {
+                height: 100%;
+                width: 100%;
+                max-width: 150px;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                padding: 0 17px;
+                margin: 0 -17px;
+            }
+        }
+
+        .separator {
+            width: 100%;
+            height: 18px;
+            background: $borderColor;
+            opacity: 0.5;
+            margin: 17px 0 0;
+            position: relative;
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                right: 100%;
+                top: 0;
+                height: 100%;
+                width: 9999px;
+                background: inherit;
+            }
+
+            &:after {
+                left: 100%;
+            }
+        }
+
+        .button {
+            margin: 40px 0 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            &__text {
+                padding: 7px 25px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__promo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 2;
+        background: $brandPrimary;
+        visibility: hidden;
+        transition: all .3s;
+        opacity: 0;
+
+        &.fixed {
+            position: fixed;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1560px;
+            padding: 5px 15px;
+            margin: 0 auto;
+        } 
+
+        &-phone {
+            font-size: $fontSizeH6;
+            font-weight: bold;
+            text-decoration: none;
+            color: $grayBase;
+            position: relative;
+            display: block;
+            white-space: nowrap;
+            margin: 4px 0 0;
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -36px;
+                width: 29px;
+                height: 29px;
+                background: url('../images/header/icon/phone.svg') no-repeat;
+            }
+        }
+        
+        &-logo {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 0 17px 0 0;
+
+            .logo {
+                position: relative;
+                max-width: 110px;
+                flex-shrink: 0;
+
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -17px;
+                    width: 1px;
+                    height: 100%;
+                    background: $base;
+                }
+
+                &__link {
+                    display: block;
+                }
+            }
+
+            span {
+                height: 100%;
+                width: 100%;
+                max-width: 450px;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                padding: 0 17px;
+                margin: 0 -17px;
+                font-size: 20px;
+                font-weight: bold;
+                //color: $base;
+            }
+        }
+
+        &-buy {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            > span {
+                font-weight: bold;
+                margin: 0 0 7px 0;
+            }
+        }
+
+        &-price {
+            display: none;
+            margin: 0 17px 0 10px;
+            font-weight: bold;
+            font-size: $fontSizeLarge;
+            color: $grayBase;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            &--buy {
+                &:before {
+                    background: linear-gradient(to bottom, #fff, $brandInfo);
+                }
+
+                &:after {
+                    background: linear-gradient(to top, #fff, $brandInfo);
+                }
+            }
+
+            &__text {
+                padding: 7px 25px;
+                font-size: 14px;
+                color: $grayDark;
+            }
+        }
+    }
+    
+    @media (min-width: 480px) {
+        &__price {    
+            &-wrapper {        
+                > a {
+                    &:before {
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        &__promo {    
+            &-wrapper {     
+                align-items: center;
+            }
+
+            &-logo {
+                flex-shrink: 0;
+            }
+
+            &-phone {
+                padding: 0 0 0 17px;
+                margin: 0 0 0 17px;
+            }
+
+            &-buy {
+                flex-direction: row;
+                align-items: center;
+
+                > span {
+                    margin: 0 7px 0 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__price {
+            &-wrapper {
+                align-items: center;
+            }
+
+            &-logo {
+                align-items: center;
+                flex-direction: row;
+                padding: 0 17px 0 0;
+
+                span {
+                    margin: 0 17px;
+                }
+
+                .logo {    
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        &__promo {
+            &-wrapper {
+                align-items: center;
+            }
+
+            &-logo {
+                align-items: center;
+                flex-direction: row;
+                padding: 0 17px 0 0;
+
+                span {
+                    margin: 0 17px;
+                }
+
+                .logo {    
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenSmMin) {
+        &__promo {
+            &-price {
+                display: block;
+            }
+
+            &-phone {
+                margin: 0 0 0 67px;
+                padding: 0;
+                
+                &:before {
+                    content: '';
+                }
+            }
+        }
+    }
+}

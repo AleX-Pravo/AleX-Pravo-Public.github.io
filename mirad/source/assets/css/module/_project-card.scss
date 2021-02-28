@@ -1,0 +1,50 @@
+.project-card {
+    width: 50%;
+    text-decoration: none;
+    padding: 5px;
+    &__wrap {
+        display: block;
+        border: 1px solid $footerBackground;
+        padding: 10px;
+    }
+    &__image {
+        img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 490px;
+            width: 100%;
+            max-height: 310;
+        }
+    }
+    h2 {
+        color: $brandPrimary;
+        font-family: $HouschkaProMedium;
+        font-size: $fontSizeBase;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        padding: 10px 0;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:before {
+           content:'';
+           width: 20px;
+           height: 2px;
+           position: absolute;
+           background: $brandPrimary;
+           bottom: 0;
+           left: 50%;
+           transform: translateX(-50%);
+        }
+    }
+    &__address {
+        color: $brandWarning;
+        font-size: $fontSizeBase;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        width: 33.33334%;
+    }
+}

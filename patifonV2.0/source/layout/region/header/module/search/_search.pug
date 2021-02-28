@@ -1,0 +1,19 @@
+include vars/_variable.pug
+
+= '\n'
+//= Search =
+.search
+    .search__content
+        .search__contentInner
+            form.form(action='#' method='post')
+                a.search__sections(href='javascript:void(0);') Разделы
+
+                .form-group
+                    input.form-control(type='text' placeholder='Поиск')
+
+                .form-group.search__button
+                    button.button.button--search
+
+    a.search__deviceButton.hide-md-min(href='javascript:void(0);')
+//= End search =
+= '\n'

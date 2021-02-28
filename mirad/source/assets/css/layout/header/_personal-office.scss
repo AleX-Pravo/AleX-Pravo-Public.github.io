@@ -1,0 +1,31 @@
+.personal-office {
+    color: $brandPrimary;
+    position: relative;
+    display: none;
+    font-size: $fontSizeBase;
+    font-weight: normal;
+    flex-grow: 1;
+    justify-content: center;
+    a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 28px;
+            position: absolute;
+            background: url(../images/header/1.svg);
+            top: 50%;
+            transform: translateY(-50%);
+            left: -35px;
+            fill: blue;
+        }
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 0;
+    }
+}

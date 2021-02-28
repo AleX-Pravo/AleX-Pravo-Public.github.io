@@ -1,0 +1,132 @@
+.blog-page {
+    .title-block {
+        margin: 15px 0 15px 0;
+        font-size: $fontSizeH1;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .blog-news {
+            max-width: 570px;
+            width: 99%;
+            &__image {
+                max-width: 570px;
+                max-height: 265px;
+            }
+            h2 {
+                font-size: $fontSizeBase;
+            }
+        }
+    }
+    &__main {
+        width: 100%;
+        .pagin {
+            ul {
+                li {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    &__aside {
+        width: 100%;
+        padding-top: 0;
+        margin-left: 10px;
+        display: flex;
+        position: relative;
+        >a {
+            position: absolute;
+            top: -15px;
+            font-size: $fontSizeSmall;
+        }
+        .product-card {
+            width: 100%;
+            padding: 0;
+        }
+        .product-bottom__slider {
+            margin-top: 10px;
+            width: 50%;
+            .product-card {
+                width: 50%;
+            }
+            .slick-list {
+                height: 100%;
+            }
+        }
+    }
+    &__wrap {
+        .title-block {
+            margin: 0;
+        }
+    }
+    @media (min-width: 480px) {
+        .product-bottom__slider {
+            width: 100%;
+        }
+        &__wrapper {
+            flex-wrap: nowrap;
+        }
+        &__main {
+            width: 65%;
+        }
+        &__aside {
+            width: 35%;
+            flex-direction: column;
+            >a {
+                font-size: $fontSizeBase;
+            }
+            &--inner {
+                top: 120px;
+            }
+        }
+        &__block {
+            .blog-news {
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: 840px) {
+        &__main {
+            width: (1170px * 100%) / 1530px;
+            .pagin {
+                ul {
+                    li {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        &__aside {
+            width: 240px;
+        }
+        &__block {
+            flex-wrap: nowrap;
+            .blog-news {
+                width: 49%;
+            }
+        }
+        &__wrap {
+            .title-block {
+                margin: 15px 0 15px 0;
+            }
+        }
+    }
+    @media (min-width: 1024px) {
+        &__block {
+            .blog-news {
+                width: 49%;
+                h2 {
+                    font-size: $fontSizeH1;
+                }
+            }
+        }
+    }
+}

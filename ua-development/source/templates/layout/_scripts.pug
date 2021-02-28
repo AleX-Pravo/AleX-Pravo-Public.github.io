@@ -1,0 +1,613 @@
+= '\n'
+//= Scripts =
+script(src=bowerDir + 'jquery/dist/jquery.min.js')
+
+if (magnificPopup)
+    script(src=bowerDir + 'magnific-popup/dist/jquery.magnific-popup.min.js')
+
+if (modaal)
+    script(src=bowerDir + 'modaal/dist/js/modaal.min.js')
+
+if (ionRangeSlider)
+    script(src=bowerDir + 'ion.rangeslider/js/ion.rangeSlider.js')
+
+if (select2)
+    script(src=bowerDir + 'select2/dist/js/select2.full.min.js')
+
+if (swiper)
+    script(src=bowerDir + 'swiper/dist/js/swiper.min.js')
+
+if (slick)
+    script(src=bowerDir + 'slick-carousel/slick/slick.min.js')
+
+if (countdown)
+    script(src=bowerDir + 'kineticjs/kinetic.min.js')
+    script(src='js/jquery.final-countdown' + minSuffix + '.js')
+
+if (perfectScrollBar)
+    script(src=bowerDir + 'perfect-scrollbar/js/perfect-scrollbar.jquery.min.js')
+
+if (mCustomScrollbar)
+    script(src=bowerDir + 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')
+
+if (map)
+    script(src="https://maps.googleapis.com/maps/api/js?key=")
+
+script(src='js/main' + minSuffix + '.js')
+if (innerSwiperCatalogue)
+    script.
+        $(document).ready(function(){
+
+        });
+
+if (tab)
+    script.
+        $(document).ready(function () {
+            function innerSwiperCatalogue() {
+
+                var swiperCatalogue = [];
+
+                //-$('.swiper-object .swiper-container').each(function(index, element) {
+                $('.swiper-container').each(function(index, element) {
+                    let $element = $(element);
+                    let $next = $element.find('.swiper-button-next');
+                    let $prev = $element.find('.swiper-button-prev');
+                    let $swslide = $element.find('.swiper-slide');
+
+                    if (!$element.hasClass(`swiper${index}`)) {
+                        $element.addClass(`swiper${index}`);
+                        $prev.addClass(`prev${index}`);
+                        $next.addClass(`next${index}`);
+                    }
+
+                    if (!$(`.swiper${index}:visible`).length) {
+                        return;
+                    }
+
+                    if($swslide.length == 1) {
+                        $('.swiper-wrapper').addClass( "disabled" );
+                        $('.swiper-button-prev').addClass( "disabled" );
+                        $('.swiper-button-next').addClass( "disabled" );
+                    }
+
+                    swiperCatalogue[index] = new Swiper(`.swiper${index}`, {
+                        navigation: {
+                            nextEl: `.next${index}`,
+                            prevEl: `.prev${index}`,
+                        }
+                    });
+                });
+            }
+
+            setTimeout(() => {
+                innerSwiperCatalogue();
+            }, 0);
+            $('.tab-menu').tab(
+                //innerSwiperCatalogue()
+            )
+            $('.tab-link').click(function(){
+                setTimeout(() => {
+                    innerSwiperCatalogue();
+                }, 0);
+            });
+        });
+
+if (rating)
+    script.
+        $(document).ready(function () {
+            $('.rating').rating({
+                max: 5
+            });
+        });
+
+if (magnificPopupInline)
+    script.
+        $(document).ready(function () {
+            $('.test-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupGallery)
+    script.
+        $(document).ready(function () {
+            $('.gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    tCounter: '%curr% of %total%'
+                },
+            });
+        });
+
+if (modaalInline)
+    script.
+        $(document).ready(function () {
+            $('.modaal-inline').modaal({
+                custom_class: 'modaal-inline--modifier'
+            });
+        });
+
+if (modaalVideo)
+    script.
+        $(document).ready(function () {
+            $('.modaal-play').modaal({
+                custom_class: 'modaal-iframe--modifier',
+                type: 'iframe',
+                width: 1024,
+                height: 768
+
+            });
+        });
+
+if (ionRangeSlider)
+    script.
+        $(document).ready(function () {
+
+            $('#range').ionRangeSlider({
+                type: 'double',
+                min: 0,
+                max: 20000,
+                drag_interval: true,
+                hide_min_max: true,
+                hide_from_to: true
+            });
+        });
+
+if (select2)
+    script.
+        $(document).ready(function () {
+            $('select.form-control').select2();
+        });
+
+if (countdown)
+    script.
+        $(document).ready(function () {
+            $('.countdown').final_countdown();
+        });
+
+//- for perfectScrollBar in select2
+if (perfectScrollBar && select2)
+    script.
+        $(document).ready(function () {
+            $('select.form-control').on("select2:open", function () {
+                $('.select2-results__options').perfectScrollbar();
+            });
+        });
+
+//- only for perfectScrollBar. set class .perfect-scroll for block you want ot improve
+if (perfectScrollBar)
+    script.
+        $(document).ready(function () {
+            $('.perfect-scroll').perfectScrollbar();
+        });
+
+//-if (easeSwiper)
+    script.
+        $(document).ready(function(){
+            new Swiper ('.swiper-container', {
+                on: {
+                    init: function() {
+                        var data = $(this.el).data(),
+                            breakpoints = ('breakpoints' in data) ? data.breakpoints : void(0);
+
+                        this.params = Object.assign({}, this.params, data);
+
+
+                        // Set current slidesPerView
+                        if (typeof breakpoints !== 'undefined') {
+                            let slidesPerView = 1;
+                            for (let i in breakpoints) {
+                                if ('slidesPerView' in breakpoints[i] && $(window).width() < i) {
+                                    slidesPerView = breakpoints[i].slidesPerView;
+                                }
+                            }
+                            this.params.slidesPerView = slidesPerView;
+                        }
+
+                        this.slides.css('width', '');
+
+                        this.update();
+                    },
+                },
+                // Optional parameters
+                //spaceBetween: 15,
+                //loop: true,
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        });
+
+if (innerSwiper)
+    script.
+        $(document).ready(function(){
+            const swiperInstances = [];
+
+            function getCurrentBullet (bullets) {
+                let current = 1;
+
+                bullets.each((index, element) => {
+                    if ($(element).hasClass('swiper-pagination-bullet-active')) {
+                    current = index + 1;
+                    }
+                });
+
+                return current;
+            }
+
+            function initSwiper($elements, name, options) {
+                //-$('.swiper-object .swiper-container').each(function(index, element) {
+                $elements.each(function(index, element) {
+                    const $element = $(element);
+                    const $next = $element.next().find('.swiper-button-next');
+                    const $prev = $element.next().find('.swiper-button-prev');
+                    const $pagination = $element.next().find('.swiper-pagination');
+                    const $numbersWrapper = $element.next().find('.swiper-fraction');
+                    const $numberCurrent = $('[data-el="swiper-current"]', $numbersWrapper);
+                    const $numberTotal = $('[data-el="swiper-total"]', $numbersWrapper);
+                    const $swslide = $element.find('.swiper-slide');
+
+                    $element.addClass(`${name}-${index}`);
+                    $prev.addClass(`${name}-prev-${index}`);
+                    $next.addClass(`${name}-next-${index}`);
+                    $pagination.addClass(`${name}-pagination-${index}`);
+
+                    if($swslide.length == 1) {
+                        $('.swiper-wrapper').addClass( "disabled" );
+                        $('.swiper-button-prev').addClass( "disabled" );
+                        $('.swiper-button-next').addClass( "disabled" );
+                        $('.index-convoy__block').addClass( "disabled" );
+                        $('.swiper-slider__block').addClass( "disabled" );
+                        $('.investment-card__block').addClass( "disabled" );
+
+                    }
+
+                    swiperInstances[index] = new Swiper(`.${name}-${index}`, {
+                        ...options,
+                        navigation: {
+                            nextEl: `.${name}-next-${index}`,
+                            prevEl: `.${name}-prev-${index}`,
+                        },
+                        pagination: {
+                            el: `.${name}-pagination-${index}`,
+                            clickable: true,
+                            dynamicBullets: options.dynamicBullets || false,
+                        },
+                        on: {
+                            init: function () {
+                                setTimeout(() => {
+                                    if ($numberCurrent.length && $numberTotal.length) {
+                                        const bullets = this.pagination.bullets;
+                                        const total = bullets.length;
+
+                                        const current = getCurrentBullet(bullets) || 1;
+
+                                        $numberCurrent.html(current < 10 ? `0${current}` : current);
+                                        $numberTotal.html(total < 10 ? `0${total}` : total);
+                                    }
+                                }, 0);
+                            },
+                            slideChange: function () {
+                                setTimeout(() => {
+                                    if ($numberCurrent.length && $numberTotal.length) {
+                                        const bullets = this.pagination.bullets;
+                                        const current = getCurrentBullet(bullets) || 1;
+
+                                        $numberCurrent.html(current < 10 ? `0${current}` : current);
+                                    }
+                                }, 0);
+                            },
+                        },
+                    });
+
+                });
+
+                return swiperInstances;
+            }
+
+            initSwiper(
+                $('.swiper-object .swiper-container'),
+                'swiper',
+                {
+                    //loop: true,
+                    //slidesPerView: 'auto',
+                    //clickable: true,
+                    dynamicBullets: true,
+                    //dynamicMainBullets: 1
+                }
+            );
+            //-https://jsfiddle.net/dm5L0bue/
+            initSwiper(
+                $('.index-slider .swiper-container'),
+                'index-swiper',
+                {
+                    autoplay: {
+                        delay: 15000,
+                        //delay: 1700000000000000,
+                    },
+                    loop: true,
+                    slidesPerView: 'auto',
+                    loopedSlides: 0,
+                    //slidesPerView: 1,
+                    //type: 'bullets',
+                    //clickable: true,
+                    dynamicBullets: true
+                    //dynamicMainBullets: 1
+                }
+            );
+
+            let customGallerySwiper = undefined;
+
+            $('#course-of-construction').on('openedCustomGallery', (event) => {
+                const { $popup } = event;
+                const windowWidth = window.innerWidth;
+                const slidesCount = $('.zoom-gallery', $popup).length;
+
+                const amountElements = $('.custom-popup .swiper-slide').length,
+                    widthWrapper = $('.custom-popup .gallery').width(),
+                    swiperSliderWidth = (widthWrapper / amountElements) - 4;
+
+                if ((windowWidth <= 360 && slidesCount > 2)
+                    || (windowWidth <= 480 && slidesCount > 4)
+                    || (windowWidth <= 600 && slidesCount > 6)
+                    || (windowWidth <= 860 && slidesCount > 8)
+                    || (windowWidth <= 1024 && slidesCount > 10)
+                    || (windowWidth > 1024 && slidesCount > 12)) {
+                    initCustomGallerySwiper($popup);
+
+                } else {
+                    $('.swiper-wrapper').addClass( "disabled" );
+                    $('.swiper-slider__block').addClass( "disabled" );
+                    $('.custom-popup .swiper-slide').css('width', swiperSliderWidth);
+                }
+            });
+
+            $('#course-of-construction').on('closedCustomGallery', (event) => {
+                const { $popup } = event;
+                if (customGallerySwiper !== undefined) {
+                    customGallerySwiper.destroy();
+                }
+            });
+
+            function initCustomGallerySwiper($popup) {
+
+                customGallerySwiper = initSwiper(
+                    $('.swiper-container', $popup),
+                    'gallery-swiper',
+                    {
+                        slidesPerGroup: 6,
+                        slidesPerView: 6,
+                        //slidesPerColumn: 2,
+                        spaceBetween: 4,
+                        // Responsive breakpoints
+                        breakpoints: {
+                            // when window width is <= 360px
+                            360: {
+                                slidesPerGroup: 1,
+                                slidesPerView: 1
+                            },
+                            // when window width is <= 480px
+                            480: {
+                                slidesPerGroup: 2,
+                                slidesPerView: 2
+                            },
+                            // when window width is <= 600px
+                            600: {
+                                slidesPerGroup: 3,
+                                slidesPerView: 3
+                            },
+                            // when window width is <= 860px
+                            860: {
+                                slidesPerGroup: 4,
+                                slidesPerView: 4
+                            },
+                            // when window width is <= 1024px
+                            1024: {
+                                slidesPerGroup: 5,
+                                slidesPerView: 5
+                            }
+                        }
+                    }
+                )[0];
+            }
+        });
+
+
+//-index
+//-if (innerSwiperCatalogue)
+    script.
+        $(document).ready(function(){
+            function innerSwiperCatalogue() {
+
+                var swiperCatalogue = [];
+
+                //-$('.swiper-object .swiper-container').each(function(index, element) {
+                $('.swiper-container').each(function(index, element) {
+                    let $element = $(element);
+                    let $next = $element.find('.swiper-button-next');
+                    let $prev = $element.find('.swiper-button-prev');
+
+                    $element.addClass(`swiper${index}`);
+                    $prev.addClass(`prev${index}`);
+                    $next.addClass(`next${index}`);
+
+                    swiperCatalogue[index] = new Swiper(`.swiper${index}`, {
+                        navigation: {
+                            nextEl: `.next${index}`,
+                            prevEl: `.prev${index}`,
+                        }
+                    });
+                });
+            }
+        });
+
+if (mCustomScrollbar)
+    script.
+        $(document).ready(function () {
+            $(".mCustomScrollbar").mCustomScrollbar({
+            });
+        });
+
+if (map)
+    script.
+        $(document).ready(function() {
+            function initMap() {
+                let centerLatLng = new google.maps.LatLng(50.616698, 26.279484),
+                    mapOptions = {
+                        center: centerLatLng,
+                        zoom: 17
+                    },
+
+                    map = new google.maps.Map(document.getElementById("map"), mapOptions),
+                    marker = new google.maps.Marker({
+                        position: centerLatLng,
+                        map: map,
+                        icon: "../../images/marker.svg"
+                    });
+            }
+            initMap();
+        });
+
+if (magnificPopupOrdercall)
+    script.
+        $(document).ready(function () {
+            $('.ordercall-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupAttractinvestors)
+    script.
+        $(document).ready(function () {
+            $('.attractinvestors-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupInvest)
+    script.
+        $(document).ready(function () {
+            $('.invest-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupMessage)
+    script.
+        $(document).ready(function() {
+            $('.message').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificModalProgressconstr)
+    script.
+        $(document).ready(function () {
+
+            //- let swiper = new Swiper('.modal .swiper-container', {
+            //-     slidesPerView: 6,
+            //-     slidesPerColumn: 2,
+            //-     spaceBetween: 4
+            //- });
+
+            $('.button-white  .cart').click(function(){
+                let swiperInstancesModal = [];
+
+                function getCurrentBullet (bullets) {
+                    let current = 1;
+
+                    bullets.each((index, element) => {
+                        if ($(element).hasClass('swiper-pagination-bullet-active')) {
+                            current = index + 1;
+                        }
+                    });
+
+                    return current;
+                }
+
+                $('.modal .swiper-container').each(function(index, element) {
+                    let $element = $(element);
+                    let $next = $element.next().find('.swiper-button-next');
+                    let $prev = $element.next().find('.swiper-button-prev');
+                    let $pagination = $element.next().find('.swiper-pagination');
+                    let $numbersWrapper = $element.next().find('.swiper-fraction');
+                    let $numberCurrent = $('[data-el="swiper-current"]', $numbersWrapper);
+                    let $numberTotal = $('[data-el="swiper-total"]', $numbersWrapper);
+
+                    $element.addClass(`swiper${index}`);
+                    $prev.addClass(`prev${index}`);
+                    $next.addClass(`next${index}`);
+                    $pagination.addClass(`pagination${index}`);
+
+                    swiperInstancesModal[index] = new Swiper(`.swiper${index}`, {
+                        navigation: {
+                            nextEl: `.next${index}`,
+                            prevEl: `.prev${index}`,
+                        },
+
+                        pagination: {
+                            el: `.pagination${index}`,
+                            clickable: true,
+                        },
+
+                        slidesPerView: 6,
+                        slidesPerColumn: 2,
+                        spaceBetween: 4,
+
+                        on: {
+                            init: function () {
+                                setTimeout(() => {
+                                    if ($numberCurrent.length && $numberTotal.length) {
+                                        let bullets = this.pagination.bullets;
+                                        let total = bullets.length;
+
+                                        let current = getCurrentBullet(bullets) || 1;
+
+                                        $numberCurrent.html(current < 10 ? `0${current}` : current);
+                                        $numberTotal.html(total < 10 ? `0${total}` : total);
+                                    }
+                                }, 0);
+                            },
+                            slideChange: function () {
+                                setTimeout(() => {
+                                    if ($numberCurrent.length && $numberTotal.length) {
+                                        let bullets = this.pagination.bullets;
+                                        let current = getCurrentBullet(bullets) || 1;
+
+                                        $numberCurrent.html(current < 10 ? `0${current}` : current);
+                                    }
+                                }, 0);
+                            },
+                        },
+                    });
+                });
+            });
+
+            $('.zoom-gallery').click(function(){
+                $('.gallery').each(function() {
+
+                    $(this).magnificPopup({
+
+                        delegate: 'a',
+                        //delegate: '.slick-slide:not(.slick-cloned) a',
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        },
+                        //- removalDelay: 300,
+                        //- mainClass: 'mfp-fade'
+                    });
+                });
+            });
+        });
+
+//= End scripts =
+= '\n'

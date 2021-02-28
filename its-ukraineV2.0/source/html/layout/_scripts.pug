@@ -1,0 +1,442 @@
+= '\n'
+//= Scripts =
+script(src=bowerDir + 'jquery/dist/jquery.min.js')
+
+if (magnificPopup)
+    script(src=bowerDir + 'magnific-popup/dist/jquery.magnific-popup.min.js')
+
+if (select2)
+    script(src=bowerDir + 'select2/dist/js/select2.full.min.js')
+
+if (selectric)
+    script(src=bowerDir + 'jquery-selectric/public/jquery.selectric.min.js')
+
+if (swiper)
+    script(src=bowerDir + 'swiper/dist/js/swiper.min.js')
+
+if (perfectScrollbar)
+    script(src=bowerDir + 'perfect-scrollbar/js/perfect-scrollbar.jquery.min.js')
+
+if (mCustomScrollbar)
+    script(src=bowerDir + 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')
+
+if (scrollmagic)
+    script(src=bowerDir + 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js')
+
+if (debugscrollmagic)
+    script(src=bowerDir + 'scrollmagic/dev/src/plugins/debug.addIndicators.js')
+
+if (tweenmax)
+    script(src=bowerDir + 'greensock/src/minified/TweenMax.min.js')
+    script(src=bowerDir + 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js')
+
+if (ionRangeSlider)
+    script(src=bowerDir + 'ion.rangeslider/js/ion.rangeSlider.min.js')
+
+script(src='assets/js/main' + minSuffix + '.js')
+
+
+if (tab)
+    script.
+        $(document).ready(function () {
+            $('.tab-menu').tab('');
+        });
+
+if (rating)
+    script.
+        $(document).ready(function () {
+            $('.rating').rating({
+                max: 5
+            });
+        });
+
+if (magnificPopupInline)
+    script.
+        $(document).ready(function () {
+            $('.test-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupGallery)
+    script.
+        $(document).ready(function () {
+            $('.gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    tCounter: '%curr% of %total%'
+                },
+            });
+        });
+
+if (ionRangeSlider)
+    script.
+        $(document).ready(function () {
+
+            $('.range').ionRangeSlider({
+                type: 'double',
+                min: 0,
+                max: 12000,
+                drag_interval: true,
+                //hide_min_max: true,
+                //hide_from_to: true,
+                from: 0,
+                to: 12000
+            });
+        });
+
+if (select2)
+    script.
+        $(document).ready(function () {
+            $('select.form-control').select2();
+        });
+
+if (selectric)
+    script.
+        $(document).ready(function () {
+
+            $(function() {
+                $('.js-example-basic-single').selectric({
+                    arrowButtonMarkup: '<b class="button"></b>',
+                });
+            });
+        });
+
+if (select2filters)
+    script.
+        $(document).ready(function () {
+            $('.js-example-basic-single').select2({
+                minimumResultsForSearch: -1, // убрать поиск
+                dropdownAutoWidth : true,
+                width: 'auto'
+            });
+        });
+
+//-if (indexSwiper)
+    //- script.
+    //-     $(document).ready(function(){
+    //-         $('.swiper-object .swiper-container').each(function(index, value) {
+
+    //-             //var menu = ['Slide 1', 'Slide 2', 'Slide 3']
+
+    //-             var mySwiper = new Swiper(value, {
+    //-                 slidesPerView: 3,
+    //-                 loop: true,
+    //-                 //mousewheel: true,
+    //-                 spaceBetween: 32,
+
+    //-                 navigation: {
+    //-                     nextEl: '.swiper-button-next',
+    //-                     prevEl: '.swiper-button-prev',
+    //-                 },
+
+    //-                 breakpoints: {
+    //-                     // when window width is <= 840px
+    //-                     //- 840: {
+    //-                     //-     slidesPerView: 1,
+    //-                     //- },
+    //-                     // when window width is <= 1080px
+    //-                     1080: {
+    //-                         slidesPerView: 1,
+    //-                     }
+    //-                 },
+    //-                 on: {
+    //-                     init() {
+    //-                         setTimeout(() => {
+    //-                         window.dispatchEvent(new Event("resize"))
+    //-                         }, 200)
+    //-                     },
+    //-                 },
+    //-             });
+    //-         });
+    //-     });
+
+//-Oleg's Swiper
+if (easeSwiper)
+    script.
+        $(document).ready(function(){
+            
+            var mySwiper = new Swiper ('.swiper-container', {
+                on: {
+                    init: function() {
+                        var data = $(this.el).data(),
+                            breakpoints = ('breakpoints' in data) ? data.breakpoints : void(0);
+
+                        this.params = Object.assign({}, this.params, data);
+
+
+                        // Set current slidesPerView
+                        if (typeof breakpoints !== 'undefined') {
+                            let slidesPerView = 1;
+                            for (let i in breakpoints) {
+                                if ('slidesPerView' in breakpoints[i] && $(window).width() < i) {
+                                    slidesPerView = breakpoints[i].slidesPerView;
+                                }
+                            }
+                            this.params.slidesPerView = slidesPerView;
+                        }
+
+                        this.slides.css('width', '');
+
+                        this.update();
+                    },
+                },
+                // Optional parameters
+                spaceBetween: 10,
+                //loop: true,
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+
+            if($('.bigboard .swiper-slide').length  == 1) {
+                $('.bigboard .swiper-wrapper').addClass( "disabled" );
+                $('.bigboard .swiper-button-prev').addClass( "disabled" );
+                $('.bigboard .swiper-button-next').addClass( "disabled" );
+            }
+
+            $('.carousel').each(function(i) {
+                if($('.swiper-slide', this).length  <= 3) {
+                    $('.swiper-wrapper', this).addClass( "disabled" );
+                    $('.swiper-button-prev', this).addClass( "disabled" );
+                    $('.swiper-button-next', this).addClass( "disabled" );
+                }
+            });
+        });
+
+if (indexScrollMagic)
+    script.
+
+        if ($('#gsapContainer').length > 0) {
+            TweenLite.set('#gsapSlider', {
+                perspective: 1300
+            });
+
+            let $sections = $('section'),
+                tl = new TimelineLite({
+                    paused: true
+                });
+
+            function setActiveClass(lead, slave) {
+                $(lead).addClass('active').siblings().removeClass('active');
+                $(slave).removeClass('active').eq($(lead).index()).addClass('active');
+            }
+
+            for(let i = 0; i < $sections.length; i++) {
+
+                if(i != 0) {
+                    tl.addPause('dot' + i);
+                };
+
+                if(i != $sections.length - 1) {
+                    tl.to($sections[i], 0.2, {scale:.8})
+                    .to($sections[i], 0.3, {xPercent:-100, rotationY:80}, 'label'+i)
+                    .from($sections[i+1], 0.3, {xPercent:100, rotationY:-80}, 'label'+i)
+                    .from($sections[i+1], 0.2, {scale:.8})
+                    .addPause();
+                };
+            };
+
+            $('.dot').on('click', function() {
+                tl.seek($(this).attr('id')).pause()
+                setActiveClass($(this), $('#gsapSlider').find('section'));
+            });
+
+
+            let lastAnimation = 0,
+                quietPeriod = 650,
+                dots = $('#dots').find('.dot'),
+                xDown = null,
+                yDown = null;
+
+            $('section').on('touchstart', function(e) {
+                const firstTouch = e.touches[0] || e.originalEvent.touches[0];
+
+                xDown = firstTouch.clientX;
+                yDown = firstTouch.clientY;
+            });
+
+            $('section').on('touchmove', function(e) {
+                if (!xDown || !yDown) return false;
+
+                let xUp = e.touches[0].clientX,
+                    yUp = e.touches[0].clientY,
+                    xDiff = xDown - xUp,
+                    yDiff = yDown - yUp,
+
+                    self = $(this),
+                    prev = self.prev(),
+                    next = self.next();
+
+                if (Math.abs(xDiff) > Math.abs(yDiff)) {
+                    if (xDiff > 0) {
+                        tl.play();
+                        if (next.length) setActiveClass(next, dots);
+                    } else {
+                        tl.reverse();
+                        if (prev.length) setActiveClass(prev, dots);
+                    }
+                }
+                xDown = null;
+                yDown = null;
+            });
+
+            $('section').on('mousewheel DOMMouseScroll', function(e) {
+
+                let timeNow = new Date().getTime(),
+                    self = $(this),
+                    prev = self.prev(),
+                    next = self.next();
+
+                if (timeNow - lastAnimation < quietPeriod) {
+                    e.preventDefault();
+                } else {
+                    if (e.originalEvent.wheelDelta < 0 && next.length) {
+                        tl.play();
+                        setActiveClass(next, dots);
+                    } else if (e.originalEvent.wheelDelta > 0 && prev.length) {
+                        tl.reverse();
+                        setActiveClass(prev, dots);
+                    }
+                    lastAnimation = timeNow;
+                }
+            });
+        };
+
+if (select2)
+    script.
+        $(document).ready(function () {
+            $('select.form-control').select2({
+                minimumResultsForSearch: Infinity,
+                dropdownAutoWidth : true,
+                width: 'auto'
+            });
+        });
+
+if (perfectScrollbar && select2)
+    script.
+        $(document).ready(function () {
+            $('select.form-control').on("select2:open", function () {
+                setTimeout(() => {
+                    $('.select2-results__options').perfectScrollbar();
+                }, 0);
+            });
+        });
+
+if (perfectScrollbar)
+    script.
+        $(document).ready(function () {
+            $('.select2-results__options').perfectScrollbar();
+        });
+
+if (perfectScrollbarModal)
+    script.
+        $(document).ready(function () {
+            $('.perfect-scrollbar-modal').perfectScrollbar();
+        });
+
+
+if (sliderThumbs)
+    script.
+        $(document).ready(function () {
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 5,
+                freeMode: true,
+                watchSlidesVisibility: false,
+                watchSlidesProgress: true,
+                breakpointsInverse: true,
+            });
+
+            var galleryTop = new Swiper('.gallery-top', {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                },
+            });
+        });
+
+if (magnificPopupInline)
+    script.
+        $(document).ready(function () {
+            $('.ware-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupadmission)
+    script.
+        $(document).ready(function () {
+            $('.admission-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupregistration)
+    script.
+        $(document).ready(function () {
+            $('.registration-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificPopupInline2)
+    script.
+        $(document).ready(function () {
+            $('.leave-review-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+        });
+
+if (magnificResponseimg)
+    script.
+        $(document).ready(function () {
+            $('.responsive-img').magnificPopup({
+                type: 'inline',
+                preloader: false,
+                callbacks: {
+                    open: function() {
+                        $('.tab-item-foto a').trigger('click');
+                    },
+                }
+            });
+        });
+
+if (magnificResponsevideo)
+    script.
+        $(document).ready(function () {
+            $('.responsive-video').magnificPopup({
+                type: 'inline',
+                preloader: false,
+                callbacks: {
+                    open: function() {
+                        $('.tab-item-video a').trigger('click');
+                    },
+                }
+         });
+        });
+
+if (mCustomScrollbar)
+    script.
+        $(document).ready(function () {
+            $(".photomCustomScrollbar").mCustomScrollbar({
+                axis:"x", // horizontal scrollbar
+                autoExpandScrollbar:true,
+                advanced:{autoExpandHorizontalScroll:true}
+            });
+        });
+
+//= End scripts =
+= '\n'

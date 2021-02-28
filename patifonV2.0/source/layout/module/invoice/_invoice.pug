@@ -1,0 +1,132 @@
+include vars/_variable.pug
+
+.invoice
+    .invoice__note Заказ оформлен.
+        br
+        | Cохраните счет-фактуру, наш менеджер свяжется с вами.
+    a.invoice__print.hide-sm-max(href='#') Версия для печати
+
+    .invoice__info
+        .invoice__item
+            .invoice__name Поставщик:
+            .invoice__value Крутой Игорь Борисович
+                br
+                | Інд. код. 3208323135
+                br
+                | Р/р 28456168574555694 в ПАТ КБ Приватбанк м. Рівне МФО 333387
+
+        .invoice__item
+            .invoice__name Инд. Код:
+            .invoice__value 57846548725
+
+        .invoice__item
+            .invoice__name Покупатель:
+            .invoice__value Пётр Никитич Второй, регион: Ивано-Франковск
+
+        .invoice__item
+            .invoice__name Плательщик:
+            .invoice__value Тот же
+
+    .invoice__title Рахунок-фактура №5140
+        br
+        | від 14.03.2015 р.
+
+    table.invoice__table.hide-mb-max
+        thead.invoice__thead
+            tr.invoice__tr
+                th.invoice__td.invoice__td--number №
+                th.invoice__td Товар
+                th.invoice__td.invoice__td--narrow К-сть
+                th.invoice__td.invoice__td--narrow Ціна
+                th.invoice__td.invoice__td--narrow Сума
+
+        tbody.invoice__tbody
+            tr.invoice__tr
+                td.invoice__td 1
+                td.invoice__td Lenovo
+                td.invoice__td 2
+                td.invoice__td 900
+                td.invoice__td 1800
+
+
+            tr.invoice__tr
+                td.invoice__td 2
+                td.invoice__td Lenovo novo
+                td.invoice__td 2
+                td.invoice__td 900
+                td.invoice__td 1800
+
+
+            tr.invoice__tr
+                td.invoice__td 3
+                td.invoice__td Lenovo nenovo
+                td.invoice__td 2
+                td.invoice__td 900
+                td.invoice__td 1800
+
+    ul.invoice__list.hide-xs-min
+        li.invoice__listItem
+            .invoice__string
+                .invoice__name №
+                .invoice__value 1
+
+            .invoice__string
+                .invoice__name Товар
+                .invoice__value Lenovo
+
+            .invoice__string
+                .invoice__name К-сть
+                .invoice__value 2
+
+            .invoice__string
+                .invoice__name Ціна
+                .invoice__value 900
+
+            .invoice__string
+                .invoice__name Сума
+                .invoice__value 1800
+
+        li.invoice__listItem
+            .invoice__string
+                .invoice__name №
+                .invoice__value 1
+
+            .invoice__string
+                .invoice__name Товар
+                .invoice__value Lenovo
+
+            .invoice__string
+                .invoice__name К-сть
+                .invoice__value 2
+
+            .invoice__string
+                .invoice__name Ціна
+                .invoice__value 900
+
+            .invoice__string
+                .invoice__name Сума
+                .invoice__value 1800
+
+        li.invoice__listItem
+            .invoice__string
+                .invoice__name №
+                .invoice__value 1
+
+            .invoice__string
+                .invoice__name Товар
+                .invoice__value Lenovo
+
+            .invoice__string
+                .invoice__name К-сть
+                .invoice__value 2
+
+            .invoice__string
+                .invoice__name Ціна
+                .invoice__value 900
+
+            .invoice__string
+                .invoice__name Сума
+                .invoice__value 1800
+
+    .invoice__total Итого: 2840
+    .invoice__totalText Разом за товар 2840 грн (две тысячи восемсот сорок гревень, 00 коп)

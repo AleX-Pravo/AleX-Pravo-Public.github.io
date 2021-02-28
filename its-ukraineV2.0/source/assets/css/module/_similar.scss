@@ -1,0 +1,60 @@
+.similar {
+    margin-bottom: 48px;
+
+    &__wrapper {
+        display: flex;
+        //justify-content: center;
+        //width: calc(100% + 10px);
+
+         .routes__item {
+            width: (100 / 1)*1%;
+            transition: all .3s;
+            border-radius: 5px;
+            flex-shrink: 1;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 10px;
+
+            &:hover {
+                box-shadow: 0px 8px 16px rgba(153, 153, 153, 0.16);
+            }
+        }
+    }
+
+    // @media (min-width: 600px) {
+    //     &__wrapper {
+    //          .routes__item {
+    //             width: calc(50% - 8px);
+    //             margin: 0 4px 10px;
+    //             max-width: none;
+    //         }
+    //     }
+    // }
+
+    // @media (min-width: 768px) {
+    //     &__wrapper {
+    //          .routes__item {
+    //             width: calc(33.3333% - 8px);
+    //         }
+    //     }
+    // }
+
+    // @media (min-width: 1024px) {
+    //     &__wrapper {
+    //          .routes__item {
+    //             width: calc(25% - 8px);
+    //         }
+    //     }
+    // }
+
+    // @media (min-width: 1200px) {
+
+    //     &__wrapper{
+
+    //          .routes__item {
+    //             width: calc(20% - 8px);
+    //             max-width: 300px;
+    //         }
+    //     }
+    // }
+}

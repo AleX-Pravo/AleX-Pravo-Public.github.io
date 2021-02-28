@@ -1,0 +1,153 @@
+.why {
+    margin: 30px 0 60px 0;
+    transition: all 0.2s ease-out;
+
+    &__wrapper {
+        margin: 0;
+        position: relative;
+        transition: all 0.2s ease-out;
+    }
+
+    &__box {
+        font-size: 0;
+        width: 100%;
+
+        &-inner {
+            padding: 0 0 0 20px;
+            transition: all 0.2s ease-out;
+        }
+
+        &.decorate {
+            position: absolute;
+            width: 108px;
+            top: -50px;
+            z-index: -1;
+            right: -32px;
+            transition: all 0.2s ease-out;
+            display: none;
+
+            @media (min-width: 480px) {
+                display: block;
+            }
+        }
+    }
+
+    &__item {
+        height: 120px;
+        transition: all 0.2s ease-out;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: inherit;
+            width: 0;
+        }
+
+        &-inner {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__picture {
+        display: inline-block;
+        vertical-align: middle;
+        width: 80px;
+        margin-right: -80px;
+    }
+
+    &__data {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        padding-left: 105px;
+    }
+
+    &__icon {
+        width: 100%;
+        max-width: 125px
+    }
+
+    &__title {
+        font-size: $fontSizeH7;
+        line-height: (52px / 20px);
+        font-weight: 800;
+        color: $whyTitle;
+        transition: all 0.2s ease-out;
+    }
+
+    &__text {
+        font-size: $fontSizeSmall;
+        color: $whyText;
+        transition: all 0.2s ease-out;
+    }
+
+    @media (min-width: 768px) {
+        margin: 90px 0 120px 0;
+
+        &__wrapper {
+            margin: 0 -15px;
+            @include clearfix;
+            position: relative;
+        }
+
+        &__picture {
+            width: (125px / 360px) * 100%;
+            margin-right: -(125px / 360px) * 100%;
+        }
+
+        &__data {
+            padding-left: (165px / 360px) * 100%;
+        }
+
+        &__box {
+            width: 33.3333334%;
+            padding: 0 15px;
+
+            &.first {
+                float: left;
+            }
+
+            &.last {
+                float: right;
+            }
+
+            &.decorate {
+                width: 33.3333334%;
+                left: 33.333334%;
+                top: 0;
+                bottom: 0;
+                right: auto;
+            }
+
+            &-inner {
+                padding: 0;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        margin: 175px 0;
+
+        &__item {
+            height: 186px;
+        }
+
+        &__title {
+            font-size: $fontSizeH4;
+        }
+
+        &__text {
+            font-size: $fontSizeLarge;
+        }
+    }
+}

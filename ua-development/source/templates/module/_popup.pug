@@ -1,0 +1,64 @@
+= '\n'
+//= popup =
+//- (source/assets/css/layout/_popup.scss)
+
+form.popup(action='#' method='post')
+    //-if (ware)
+        .popup__wrapper
+            .popup__img
+                img(src='assets/images/icons/success.svg' alt='')
+            p Товар додано до кошика
+    if (ordercall)
+        .popup__wrapper.popup--inner
+            h2 Замовити дзвінок
+            .form-group.has-error.required
+                input.form-control(type='text' name='name'  placeholder='Введіть ім’я')
+                .help-block
+            .form-group
+                input.form-control(type='text' name='phone' placeholder='Введіть Ваш телефон')
+                .help-block
+            .form-group
+                textarea.form-control(name='message' rows='3' placeholder='Введіть коментар')
+                .help-block
+            .form-group.popup__button
+                button.button-white(type='button' disabled) Надіслати
+                    .button-white__triangle-one
+                    .button-white__triangle-two
+
+    if (attractinvestors)
+        .popup__wrapper.popup--inner
+            h2 Залучити інвесторів
+            .form-group.has-error.required
+                input.form-control(type='text' name='name'  placeholder='Введіть ім’я')
+                .help-block
+            .form-group
+                input.form-control(type='text' name='phone' placeholder='Введіть Ваш телефон')
+                .help-block
+            .form-group
+                textarea.form-control(name='message' rows='3' placeholder='Повідомлення')
+                .help-block
+            .form-group.popup__button
+                button.button-white(type='button' disabled) Передзвоніть мені
+                    .button-white__triangle-one
+                    .button-white__triangle-two
+
+    if (invest)
+        .popup__wrapper.popup--inner
+            h2 Інвестувати
+            .form-group.has-error.required
+                input.form-control(type='text' name='name'  placeholder='Введіть ім’я')
+                .help-block
+            .form-group
+                input.form-control(type='text' name='phone' placeholder='Введіть Ваш телефон')
+                .help-block
+            .form-group
+                textarea.form-control(name='message' rows='3' placeholder='Повідомлення')
+                .help-block
+            .form-group.popup__button
+                button.button-white(type='button' disabled) Передзвоніть мені
+                    .button-white__triangle-one
+                    .button-white__triangle-two
+
+
+//= End popup =
+= '\n'

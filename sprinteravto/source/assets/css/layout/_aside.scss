@@ -1,0 +1,277 @@
+.aside {
+    position: relative;
+    height: 100%;
+
+    .ps__scrollbar-y {
+        width: 2px !important;
+    }
+
+    &__button {
+        width: 45px;
+        height: 70px;
+        border-radius: 0px 50px 50px 0px;
+        background: $grayBase url(../images/logo/logo_small.svg) 35% no-repeat;
+        position: absolute;
+        left: 100%;
+        //top: 50%;
+        top: 40%;
+        transform: translateY(-50%);
+        transition: all .2s;
+    }
+
+    &__drop {
+        background: $grayBase;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: -242px;
+        width: 242px;
+        height: 100%;
+        transition: left .3s ease-out;
+
+        &.move {
+            left: 0;
+
+            .aside {
+                &__close {
+                    left: calc(100% - 1px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        left: calc(100% - 40px);
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background: $grayBase url(../images/icons/close.svg) center center no-repeat;
+        cursor: pointer;
+        transition: all .4s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__wrapper {
+        position: relative;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__logo {
+        position: relative;
+        border-bottom: 1px solid #323236;
+        height: 100px;
+        padding: 18px 21px 0;
+        overflow: hidden;
+        display: block;
+        text-decoration: none;
+    }
+
+    &__search {
+        position: relative;
+        margin: 23px 0 0;
+    }
+
+    &__menu {
+        position: relative;
+        margin: 50px 0;
+        overflow: hidden;
+        transition: all .1s;
+        transition-delay: .1s;
+    }
+
+    &__callback {
+        position: relative;
+        margin: 0 0 28px 0;
+    }
+
+    &__test-drive {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 21px;
+        transition: all .4s;
+        margin: 0 auto;
+        width: 180px;
+        height: 42px;
+        background: $brandPrimary;
+
+        span {
+            position: relative;
+            white-space: nowrap;
+            min-width: 18px;
+            transition: all .3s;
+            font-family: $fontFamilyOswald;
+            color: $white;
+            font-size: $fontSizeBase;
+            padding: 0 0 0 28px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                background: url(../images/icons/test-drive.svg) no-repeat;
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+
+        &__button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 46%;
+            width: 14px;
+            height: 30px;
+            background: $grayBase url(../images/icons/menu_button.svg) center no-repeat;
+            cursor: pointer;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .1s;
+            transition-delay: .1s;
+        }
+
+        &__drop {
+            left: 0;
+            width: 70px;
+            transition: width .3s ease-out;
+        }
+
+        &__test-drive {
+            width: 18px;
+            height: 42px;
+            background: transparent;
+
+            span {
+                font-size: 0;
+                padding: 0;
+            }
+        }
+
+        &__menu {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+
+        &--open {
+            .aside {
+
+                &__drop {
+                    width: 242px;
+                }
+
+                &__close {
+                    left: calc(100% - 1px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                &__menu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                &__test-drive {
+                    width: 180px;
+                    height: 42px;
+                    background: $brandPrimary;
+
+                    span {
+                        font-size: $fontSizeBase;
+                        padding: 0 0 0 28px;
+                    }
+                }
+
+                &__button {
+                    left: -50%;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+
+            .logo {
+                width: 200px;
+
+                &__image {
+                    img {
+                        opacity: 1;
+                    }
+
+                    &:before {
+                        border-right-width: 0;
+                        border-top-width: 0;
+                    }
+                }
+            }
+
+            .search {
+
+                &__link {
+                    right: 21px;
+                    transform: translateY(-50%);
+                }
+
+                form {
+                    width: 100%;
+                    opacity: 1;
+
+                    .search {
+                        &__input {
+                            &::placeholder {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .callback {
+                &__phone {
+                    width: auto;
+                    color: $white;
+                }
+
+                &__request {
+                    width: auto;
+                    height: auto;
+                    color: $white;
+                    overflow: visible;
+
+                    &:before {
+                        left: -28px;
+                    }
+                }
+            }
+
+            .languages {
+                border-top: 1px solid #323236;
+
+                &__item {
+                    &-link {
+                        font-size: $fontSizeBase;
+                        color: $white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,458 @@
+.modal {
+    width: 100%;
+    background: $base;
+    max-width: 915px;
+    border-radius: 4px;
+    margin: 15px auto;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    transition: all 0.2s ease-out;
+
+    &--middle {
+        max-width: 720px;
+    }
+
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        transition: all 0.2s ease-out;
+        width: 16px;
+        height: 16px;
+        text-decoration: none;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../images/content/close.png') 50px 50px no-repeat;
+            transition: opacity 0.2s ease-out;
+        }
+
+        &:before {
+            opacity: 0;
+            background-position: -16px 0;
+        }
+
+        &:after {
+            opacity: 1;
+            background-position: 0 0;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 765px;
+        margin: auto;
+    }
+
+    &__text {
+        font-size: $fontSizeLarge;
+        line-height: (25px / $fontSizeLarge);
+        color: $grayLight;
+        margin: auto auto 30px auto;
+        max-width: 550px;
+    }
+
+    &__review {
+        margin-bottom: 40px;
+
+        &-container {
+            margin: 0;
+            transition: all 0.2s ease-out;
+        }
+
+        &-field {
+            padding: 0;
+            width: 100%;
+            transition: all 0.2s ease-out;
+
+            &:first-child {
+                margin-bottom: 22px;
+            }
+        }
+
+        &-textarea,
+        &-input {
+            background: $backgroundLight;
+            outline: none;
+            border: 1px solid $borderLight;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+            font-size: $fontSizeH8;
+            text-transform: uppercase;
+            color: $modalInputColor;
+            transition: all 0.2s ease-out;
+
+            &.error {
+                border-color: $brandDanger !important;
+                color: $brandDanger !important;
+            }
+
+            &:focus {
+                border-color: $brandPrimary;
+            }
+
+            &::placeholder {
+                color: $grayDarker;
+            }
+
+            &::-moz-placeholder {
+                color: $grayDarker;
+            }
+
+            &:-moz-placeholder {
+                color: $grayDarker;
+            }
+       }
+
+        &-textarea {
+            padding: 35px 40px;
+            min-height: 120px;
+            resize: none;
+        }
+
+        &-input {
+            height: 62px;
+            line-height: (60px / $fontSizeH8);
+            padding: 0 27px;
+            margin-bottom: 22px;
+        }
+
+        &-submit {
+            background: $brandPrimary;
+            color: $base;
+            outline: none;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            font-size: $fontSizeH8;
+            line-height: (58px / $fontSizeH8);
+            height: 62px;
+            display: block;
+            border: 2px solid $brandPrimary;
+            padding: 0;
+            width: 100%;
+            transition: all 0.2s ease-out;
+
+            &:hover {
+                background: $base;
+                color: $brandPrimary;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding: 40px;
+
+        &__close {
+            top: 40px;
+            right: 40px;
+        }
+
+        &__review {
+            &-container {
+                @include clearfix;
+                margin: 0 -15px;
+            }
+
+            &-field {
+                padding: 0 15px;
+
+                &:first-child {
+                    width: (470px / 765px) * 100%;
+                    float: right;
+                    margin-bottom: 0;
+                }
+
+                &:last-child {
+                    width: (295px / 765px) * 100%;
+                    overflow: hidden;
+                }
+            }
+
+            &-textarea {
+                min-height: 230px;
+            }
+        }
+    }
+}
+
+.popup-modal {
+    outline: none;
+}
+
+.popup-ss {
+    max-width: 400px;
+
+    &-740 {
+        max-width: 740px;
+    }
+
+    .modal__review-submit {
+        text-transform: uppercase;
+    }
+
+    .modal__review-button {
+        font-size: 15px;
+        color: #0D49B2;
+        margin-top: 20px;
+
+        .registration-button {
+            float: left;
+            text-decoration: none;
+            display: block;
+            position: relative;
+
+            &:after {
+                content: '';
+                border-bottom: 1px dashed #0D49B2;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 87%;
+            }
+
+            &:hover:after {
+                border: 0;
+            }
+        }
+
+        .reflections-button {
+            float: right;
+            text-decoration: none;
+            display: block;
+            position: relative;
+
+            &:after {
+                content: '';
+                border-bottom: 1px dashed #0D49B2;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 87%;
+            }
+
+            &:hover:after {
+                border: 0;
+            }
+        }
+    }
+
+    .modal__review-checkbox {
+        clear: both;
+
+        @media (max-width: 767px) {
+            margin-top: 22px;
+        }
+    }
+
+    .registration__checkbox {
+        position: relative;
+        display: inline-block;
+        margin: 0 0 6px;
+        padding: 0 0 0 35px;
+
+        &-input {
+            position: absolute !important;
+            left: 0;
+            opacity: 0;
+            outline: none;
+            width: 100%;
+            height: 100%;
+
+            &:checked + .registration__checkbox-checker {
+                box-shadow: none;
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-checker {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            border: 1px solid #dde9ff;
+            background: #f7fafd;
+            border-radius: 1px;
+            /*box-shadow: inset 4px 4px 5px rgba(0,0,0, .06);*/
+
+            &:before {
+                position: absolute;
+                top: 4px;
+                left: 3px;
+                opacity: 0;
+                width: 14px;
+                height: 11px;
+                content: '';
+                background: $base;
+                background: url('../images/content/gal.png') no-repeat;
+                transition: opacity 0.2s ease-out;
+            }
+        }
+
+        &-link {
+            font-size: 15px;
+            color: #0D49B2;
+            position: relative;
+            text-decoration: none;
+            display: block;
+            position: relative;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .modal__review-field {
+            width: 50%;
+
+            &:first-child {
+                //width: 50%;
+                float: left;
+                margin-bottom: 0;
+            }
+
+            &:nth-child(2) {
+                overflow: hidden;
+
+            }
+        }
+    }
+
+    .ss {
+        @include clearfix;
+    }
+}
+
+.popup-ssNew {
+    max-width: 520px;
+
+    .modal__title {
+        font-size: 40px;
+        font-family: $fontFamilyBase;
+        color: $input;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+
+        &.modal__marg {
+            margin: 50px 0 5px;
+        }
+    }
+
+    .modal__text {
+
+        p  {
+            font-size: 18px;
+            font-family: $fontFamilyBase;
+            color: $brandPrimary;
+            font-weight: bold;
+            text-align: center;
+            margin: 5px 0 0;
+        }
+    }
+
+    .modal__review {
+       margin-bottom: 0;
+
+    }
+
+    .modal__submit {
+        display: flex;
+    }
+
+    .modal__review-50 {
+        //width: 49%;
+        width: 50%;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-left: 10px;
+        }
+    }
+
+    .modal__review-submit-bottom {
+        margin-bottom: 20px;
+    }
+
+    .modal__review-submit-inversion {
+        background: $base;
+        color: $brandPrimary;
+
+        &:hover {
+            background: $brandPrimary;
+            color: $base;
+        }
+    }
+
+    .selectric-wrapper {
+        height: 62px;
+        line-height: 6;
+        padding: 0 0 0 27px;
+        margin-bottom: 22px;
+        background: $backgroundLight;
+        outline: none;
+        border: 1px solid $borderLight;
+    }
+
+    .selectric-label {
+        font-size: 10px;
+        line-height: 62px;
+        color: $input;
+        height: 62px;
+        text-transform: uppercase;
+        position: relative;
+        margin: 0;
+
+        &:after {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .selectric-items {
+        font-size: 10px;
+        text-transform: uppercase;
+        border: 1px solid $borderLight;
+        border-radius: 4px;
+        left: -2px;
+        min-width: calc(100% + 4px);
+
+        li {
+            height: 50px;
+            padding: 0 0 0 27px;
+            line-height: 50px;
+        }
+    }
+}

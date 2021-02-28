@@ -1,0 +1,23 @@
+= '\n'
+//= Rating =
+-
+    micromarking = true
+
+    itemscope = (micromarking) ? true : false
+    itemprop = (micromarking) ? 'reviewRating' : false
+    itemtype = (micromarking) ? 'http://schema.org/Rating' : false
+
+.rating(data-value='4' itemscope= itemscope itemprop= itemprop itemtype= itemtype)
+        -
+            itempropInnerValue   = 'ratingValue'
+            itempropInnerWorst   = 'worstRating'
+            itempropInnerBest    = 'bestRating'
+        meta(itemprop= itempropInnerWorst content="1")
+        meta(itemprop= itempropInnerValue content="5")
+        meta(itemprop= itempropInnerBest content="5")
+
+
+
+- micromarking = false
+//= End rating =
+= '\n'

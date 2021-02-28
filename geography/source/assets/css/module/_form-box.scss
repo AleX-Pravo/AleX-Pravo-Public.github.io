@@ -1,0 +1,44 @@
+.form-box {
+
+	&__filling {
+		font-size: $fontSizeSmall;
+		line-height: 19px;
+		color: $grayDark;
+		padding: 44px 0 19px;
+
+		a {
+			color: $brandPrimary;
+			padding-right: 3px;
+
+			&:hover {
+				text-decoration: none;
+				transition: all .2s ease;
+			}
+		}
+	}
+
+	&__wrap {
+		margin: 0 -8px;
+		display: flex;
+		flex-flow: row wrap;
+
+		.form-group {
+			margin: 0;
+		}
+	}
+
+	&__inner {
+		padding: 0 8px 14px;
+		width: 100%;
+		margin: 0;
+	}
+
+	//480px
+	@media (min-width: $screenXsMin) {
+
+		&__inner {
+			width: 50%;
+		}
+
+	}
+}

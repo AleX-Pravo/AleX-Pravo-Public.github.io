@@ -1,0 +1,12 @@
+= '\n'
+//= reviews-content =
+//- (source/assets/css/module/_reviews-content.scss)
+.reviews-content
+    a(data-href='#form' href='javascript:void(0)').reviews-content__link Залишити відгук
+    - for (var i = 0; i < 2; i++)
+        each item in reviewItems
+            include _review.pug
+    include _pagination.pug
+    include _form.pug
+//= End reviews-content =
+= '\n'

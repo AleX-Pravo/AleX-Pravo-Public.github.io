@@ -1,0 +1,187 @@
+.other-collections {
+    margin-bottom: 30px;
+    .title-block {
+        white-space: pre-wrap;
+        font-size: $fontSizeH2;
+    }
+
+    &__slider {
+        .collection-block {
+            &__bottom {
+                padding: 5px;
+                height: auto;
+                flex-wrap: wrap;
+            }
+            &__name {
+                flex-wrap: wrap;
+            }
+        }
+        .slick {
+            &-track {
+                margin-left: 0;
+            }
+            &-prev,
+            &-next {
+                position: absolute;
+                //top: -65px;//on
+                top: 50%;
+                transform: translateY(-50%);
+                //right: 0;
+                background: $brandPrimary;
+                font-size: 0;
+                width: 30px;
+                height: 30px;
+                border: none;
+                z-index: 1;
+                &:before {
+                    content: '';
+                    width: 10px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &-prev {
+                left: 10px;
+                border-radius: 50% 50% 0 50%;
+
+                &:before {
+                    background: url(../images/arrow-left.svg)no-repeat;
+                }
+            }
+
+            &-next {
+                right: 10px;
+                border-radius: 50% 50% 50% 0;
+                &:before {
+                    background: url(../images/arrow-right.svg)no-repeat;
+                }
+            }
+            &-disabled {
+                background: $brandWarning;
+            }
+        }
+        .collection-block {
+            max-width: 490px;
+            width: 100%;
+            img {
+                max-height: 335px;
+            }
+        }
+    }
+    .collections {
+        margin-bottom: 20px;
+        #tabTwo,
+        #tabThree,
+        #tabFour,
+        #tabFive,
+        #tabSix {
+            display: none;
+        }
+        &__tab {
+            display: flex;
+            flex-wrap: wrap;
+            //justify-content: space-between;
+        }
+    }
+    .registration {
+        text-decoration: none;
+        font-size: $fontSizeSmall;
+        max-width: 260px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+    @media (min-width: 480px) {
+        .collection-block {
+            &__bottom {
+                padding: 10px;
+            }
+        }
+    }
+    @media (min-width: 600px) {
+        .collections {
+            &__tab {
+                &:after {
+                    content: "";
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .title-block {
+            white-space: nowrap;
+            font-size: $fontSizeH3;
+        }
+        &__slider {
+            .slick {
+                &-prev,
+                &-next {
+                    top: -40px;
+                }
+
+                &-prev {
+                    right: 60px;
+                    left: auto;
+                }
+
+                &-next {
+                    right: 25px;
+                }
+            }
+        }
+        .collections {
+            &-block {
+                &__bottom {
+                    padding: 26px;
+                }
+            }
+            &__menu {
+                li {
+                    margin: 0 15px 10px 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1320px) {
+        .collections {
+
+            .product-card {
+                width: 16%;
+            }
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .collections {
+
+            .product-card {
+                width: 20%;
+            }
+        }
+    }
+    @media (min-width: 1560px) {
+
+        .collections {
+            .product-card {
+                margin: 0 12px 12px 12px;
+            }
+
+            &__menu {
+                li {
+                    margin: 0 15px 0 0;
+                }
+            }
+        }
+    }
+}

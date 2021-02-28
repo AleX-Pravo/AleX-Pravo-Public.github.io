@@ -1,0 +1,18 @@
+form.move {
+    text-align: left;
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    display: block;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding: 20px;
+    z-index: 20;
+
+    p {
+        &.active {
+            background-color: #307FB5;
+        }
+    }
+}

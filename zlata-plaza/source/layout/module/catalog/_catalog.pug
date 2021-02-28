@@ -1,0 +1,31 @@
+include vars/_variable.pug
+
+= '\n'
+//= Catalog =
+.catalog
+    .row
+        - for (var i = 0; i < 4; i++)
+            each val in catalog
+                .catalog__item
+                    .catalog__inner
+                        a.catalog__image(href='#')
+                            img(src='data/catalog/' + val.image + '.png' alt='')
+
+                        .catalog__description= val.description
+
+                        .catalog__feature
+                            each feature in val.feature
+                                .catalog__feature-item(class='catalog__feature-item--' + feature.class)
+                                    if (feature.class == 'type')
+                                        - var featureTextCount = 0
+
+                                        each text in feature.text
+                                            if (featureTextCount > 0)
+                                                | ,
+                                            a.catalog__feature-link(href='#')= text
+
+                                            - featureTextCount++
+                                    else
+                                        = feature.text
+//= End atalog =
+= '\n'

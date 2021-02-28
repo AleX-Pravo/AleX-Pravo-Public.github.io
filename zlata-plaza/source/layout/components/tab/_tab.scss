@@ -1,0 +1,242 @@
+@import 'vars/_variable.scss';
+
+.tab {
+    position: relative;
+
+    &__menu {
+        font-size: $tab__menuTextFontSize;
+        line-height: 1;
+        position: fixed;
+        z-index: 98;
+        right: 0;
+        text-align: center;
+
+        &-list {
+            position: relative;
+
+            @include clearfix;
+        }
+
+        &-item {
+            position: relative;
+            float: left;
+        }
+
+        &-link {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            color: $tab__menuTextColor;
+
+            &:hover,
+            &--active {
+                color: $tab__menuTextColor--active;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: none;
+    }
+
+    @media (max-width: $screenSmMax) {
+
+        padding: 50px 0 0;
+
+        &__menu {
+            top: 50px;
+            left: 0;
+            height: 40px;
+            background: $tab__menuBackgroundColor;
+
+            &:before {
+                position: absolute;
+                top: -1px;
+                right: 0;
+                left: 0;
+                display: block;
+                height: 2px;
+                content: '';
+                background: $tab__menuBackgroundColor;
+            }
+
+            &--3 {
+                .tab {
+                    &__menu {
+                        &-item {
+                            width: 33.333334%;
+                        }
+                    }
+                }
+            }
+
+            &-item {
+                width: 50%;
+
+                &:first-child {
+                    .tab {
+                        &__menu {
+                            &-link {
+                                &:after {
+                                    right: 100%;
+                                    left: 0;
+                                }
+
+                                &:hover,
+                                &--active {
+                                    &:after {
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    .tab {
+                        &__menu {
+                            &-link {
+                                &:after {
+                                    right: 0;
+                                    left: 100%;
+                                }
+
+                                &:hover,
+                                &--active {
+                                    &:after {
+                                        left: 0;
+                                    }
+                                }
+
+                                &[href*='javascript'] {
+                                    &:hover {
+                                        &:after {
+                                            left: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-link {
+                font-size: 0;
+                height: 40px;
+                padding: 0 10px;
+                color: $tab__menuTextColor--active;
+
+                &:before {
+                    position: relative;
+                    display: inline-block;
+                    width: 0;
+                    height: 100%;
+                    content: '';
+                    vertical-align: middle;
+                }
+
+                &:after {
+                    position: absolute;
+                    right: 50%;
+                    bottom: 0;
+                    left: 50%;
+                    height: 2px;
+                    content: '';
+                    transition: all .2s linear;
+                    background: $tab__menuTextColor--active;
+                }
+
+                &:hover,
+                &--active {
+                    &:after {
+                        right: 0;
+                        left: 0;
+                    }
+                }
+
+                &-text {
+                    font-size: 14px;
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: $screenMdMin) {
+
+        &__menu {
+            position: relative;
+            z-index: 1;
+            top: 20px;
+            float: right;
+
+            &--tenants {
+                font-size: 24px;
+                line-height: (45px / 24px);
+                top: 0;
+                float: none;
+
+                .tab {
+                    &__menu {
+                        &-item {
+                            margin: 0 0 -1px;
+
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
+
+                        &-link {
+                            display: block;
+                            height: 46px;
+                            padding: 0 50px;
+                            color: #e6007e;
+                            border: 1px solid;
+                            border-bottom: none;
+                            border-radius: 25px 25px 0 0;
+
+                            &:hover,
+                            &--active {
+                                color: $base;
+                                border-color: transparent;
+                                background: #e6007e;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.hide-md-min {
+                ~ .tab {
+                    &__content {
+                        display: block;
+                    }
+                }
+            }
+
+            &-item {
+                margin: 0 10px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &-link {
+                transition: all .2s linear;
+                border-bottom: 1px dotted;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,324 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'Main page'
+
+    tab = true
+    rating = true
+    slick = true
+    slickCatalog = true
+    owlCarousel = true
+
+    pageRatingInit = true
+    pageTabInit = true
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body(id='top')
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+
+                    = '\n'
+                    //= Section =
+                    section.section
+                        .row
+                            .section__container.section__container--primaryMenu
+
+                                = '\n'
+                                //= Nav =
+                                nav.nav.nav--page
+                                    include region/nav/module/primaryMenu/module/drop/_drop.pug
+
+                                //= End nav =
+                                = '\n'
+
+                            .section__container.section__container--primaryMenuFixed
+                                .section__containerInner
+
+                                    include module/slider/_slider.pug
+
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    section.section
+
+                        include module/benefit/_benefit.pug
+
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    section.section
+
+                        - tabList = tabLeadersOfSells
+                        - catalog = catalogMain
+                        - catalogOwlCarousel = true
+
+                        .section__top
+                            h1.section__title Лидеры продаж
+                            //-.row
+                                .section__container.section__container--left
+                                    
+
+                                .section__container.section__container--tab
+
+                                    = '\n'
+                                    //= Tab =
+                                    .tab
+                                        .tab-menu.tab-menu--main
+                                            ul.tab-list
+
+                                                each val in tabList
+                                                    li.tab-item
+                                                        a.tab-link(href='#' + val.id)= val.title
+
+                                    //= End tab =
+                                    = '\n'
+
+                        = '\n'
+                        //= Catalog =
+                        .catalog.catalog--main
+                            .row
+                                //.catalog__owlCarousel.owl-carousel
+                                //
+                                //     - for (i = 0; i < 2; i++)
+                                //
+                                //         each val in catalog
+                                //
+                                //             include module/catalog/module/item/_item.pug
+
+                                     = '\n'
+
+                                .catalog__slider.slick-carousel
+                                    - for (i = 0; i < 8; i++)
+
+                                        each val in catalog
+
+                                            include module/catalog/module/item/_item.pug
+                        //= End catalog =
+                        = '\n'
+
+
+                        //-= '\n'
+                        //-= Tab =
+                        //-.tab
+                            .tab-content
+                                #quadrocopters.tab-box
+
+                                    = '\n'
+                                    //= Section =
+                                    .section
+
+                                        = '\n'
+                                        //= Catalog =
+                                        .catalog
+                                            .row
+                                                .catalog__owlCarousel.owl-carousel
+
+                                                    - for (i = 0; i < 2; i++)
+
+                                                        each val in catalog
+
+                                                            include module/catalog/module/item/_item.pug
+
+                                                    = '\n'
+
+                                        //= End catalog =
+                                        = '\n'
+
+                                    //= End section =
+                                    = '\n'
+
+                                #smartphones.tab-box
+
+                                    = '\n'
+                                    //= Section =
+                                    .section
+
+                                        = '\n'
+                                        //= Catalog =
+                                        .catalog
+                                            .row
+                                                .catalog__owlCarousel.owl-carousel
+
+                                                    - for (i = 0; i < 2; i++)
+
+                                                        each val in catalog
+
+                                                            include module/catalog/module/item/_item.pug
+
+                                                    = '\n'
+
+                                        //= End catalog =
+                                        = '\n'
+
+                                    //= End section =
+                                    = '\n'
+
+                                #clock.tab-box
+
+                                    = '\n'
+                                    //= Section =
+                                    .section
+
+                                        = '\n'
+                                        //= Catalog =
+                                        .catalog
+                                            .row
+                                                .catalog__owlCarousel.owl-carousel
+
+                                                    - for (i = 0; i < 2; i++)
+
+                                                        each val in catalog
+
+                                                            include module/catalog/module/item/_item.pug
+
+                                                    = '\n'
+
+                                        //= End catalog =
+                                        = '\n'
+
+                                    //= End section =
+                                    = '\n'
+
+                        //-= End tab =
+                        //-= '\n'
+
+                    //-= End section =
+                    //-= '\n'
+
+                    //= Section =
+                    section.section
+
+                        - catalog = catalogAccessories
+
+                        - accessoriesOwlCarousel = true
+
+                        .section__top
+                            h1.section__title Аксессуары
+
+                        = '\n'
+                        //= Catalog =
+                        .catalog
+                            .row
+                                #accessories__owlCarousel.owl-carousel
+
+                                    - for (i = 0; i < 3; i++)
+
+                                        each val in catalog
+
+                                            include module/catalog/module/item/_item.pug
+
+                                    = '\n'
+
+                        //= End catalog =
+                        = '\n'
+
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    section.section
+
+                        - tabList = tabNewsAndArticles
+
+                        .section__top
+                            .row
+                                .section__container.section__container--left
+                                    h1.section__title Новости и статьи
+
+                                .section__container.section__container--tab
+
+                                    = '\n'
+                                    //= Tab =
+                                    .tab
+                                        .tab-menu.tab-menu--main
+                                            ul.tab-list
+
+                                                each val in tabList
+                                                    li.tab-item
+                                                        a.tab-link(href='#' + val.id)= val.title
+
+                                    //= End tab =
+                                    = '\n'
+
+                        = '\n'
+                        //= Tab =
+                        .tab
+                            .tab-content
+                                #news.tab-box
+
+                                    = '\n'
+                                    //= Section =
+                                    .section
+
+                                        = '\n'
+                                        //= News =
+                                        .news.news--latest
+                                            .row
+
+                                                - for (i = 0; i < 2; i++)
+
+                                                    each val in news
+
+                                                        include module/news/module/item/_item.pug
+
+                                                = '\n'
+
+                                        //= End news =
+                                        = '\n'
+
+                                    //= End section =
+                                    = '\n'
+
+                                #articles.tab-box
+
+                                    = '\n'
+                                    //= Section =
+                                    .section
+
+                                        = '\n'
+                                        //= News =
+                                        .news.news--latest
+                                            .row
+
+                                                - for (i = 0; i < 2; i++)
+
+                                                    each val in news
+
+                                                        include module/news/module/item/_item.pug
+
+                                        //= End news =
+                                        = '\n'
+
+                                    //= End section =
+                                    = '\n'
+
+                        //= End tab =
+                        = '\n'
+
+                    //= End section =
+                    = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+
+        include core/_script.pug
+

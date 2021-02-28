@@ -1,0 +1,212 @@
+.basket {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin: -20px 0 0;
+    transition: all .2s ease-out;
+
+    &--fixed {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        padding: 6px;
+        background: $basketBg;
+        border: 1px solid $basketBorder;
+        width: auto;
+        z-index: 100;
+        margin: 0;
+    }
+
+    &__drop {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100%;
+        transition: all .2s ease-out;
+        background: $base;
+
+        &-wrapper {
+            height: 100%;
+            padding-top: 30px;
+        }
+
+        &-content {
+            overflow: auto;
+            height: 100%;
+            padding: 15px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+        top: 4px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        background: url('../images/header/icon/close.png') no-repeat;
+    }
+
+    &__link {
+        display: block;
+        float: right;
+        height: 40px;
+        text-decoration: none;
+        background: url('../images/header/icon/cart.png') no-repeat;
+        width: 45px;
+    }
+
+    &__title {
+        font-size: $fontSizeLarge;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $brandPrimary;
+        display: none;
+    }
+
+    &__price {
+        font-size: $fontSizeSmall;
+        line-height: 1;
+        margin-top: 4px;
+        color: $grayDark;
+        display: none;
+    }
+
+    &__number {
+        font-size: $fontSizeH4;
+        font-weight: bold;
+    }
+
+    &__count {
+        font-size: $fontSizeH9;
+        line-height: (25px / $fontSizeH9);
+        position: absolute;
+        top: 6px;
+        right: -8px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: $base;
+        border-radius: 50%;
+        background: $brandPrimary;
+    }
+
+    &__wrapper {
+        float: right;
+    }
+
+    &__order {
+        font-size: $fontSizeLarge;
+        line-height: (40px / $fontSizeLarge);
+        position: relative;
+        display: inline-block;
+        height: 40px;
+        padding: 0 20px;
+        cursor: pointer;
+        transition: all .2s ease-out;
+        white-space: nowrap;
+        color: $base;
+        border: none;
+        border-bottom: 3px solid $brandSuccess;
+        border-radius: 5px;
+        outline: none;
+        background: $brandPrimary;
+        text-shadow: 0 2px 0 rgba(0,0,0, .1);
+        text-decoration: none;
+        display: none;
+
+        &--absent {
+            font-size: $fontSizeBase;
+            font-weight: bold;
+            padding: 0 7px 0 59px;
+            color: $catalogAbsent;
+            border-bottom: 3px solid $catalogAbsent;
+            background: $catalogAbsentBg!important;
+            text-shadow: none;
+
+            &:before,
+            &:after {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                width: 39px;
+                height: 18px;
+                margin-top: -9px;
+                content: '';
+                background: url('../images/content/icon/absent-btn.png') 0 -18px no-repeat;
+            }
+
+            &:after {
+                background-position: 0 0;
+            }
+
+            &:hover {
+                color: $catalogAbsentHover;
+
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &:hover {
+            background: $brandPrimaryDark;
+        }
+
+    }
+
+
+    @media (min-width: $screenMdMin) {
+        position: relative;
+        float: right;
+        width: (270 / 1170 * 100%);
+        margin-top: 29px;
+
+        &--fixed {
+            position: fixed;
+            width: auto;
+            float: none;
+            right: 15px;
+            margin: 0;
+            padding: 11px 12px;
+        }
+
+        &:hover {
+            .basket {
+                &__link {
+                    display: none;
+                }
+                &__order {
+                    display: inline-block;
+                }
+            }
+        }
+
+        &__title {
+            display: block;
+        }
+
+        &__price {
+            display: block;
+        }
+
+        &__link {
+            padding: 0 0 0 56px;
+            width: auto;
+        }
+
+        &__count {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screenLgMin) {
+        &--fixed {
+            float: none;
+            right: 50%;
+            margin: 0 -585px;
+        }
+    }
+}

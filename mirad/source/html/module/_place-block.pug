@@ -1,0 +1,11 @@
+= '\n'
+//= place-block =
+//- (source/assets/css/module/_place-block.scss)
+.place-block
+    each item in placeBlock
+        .place-block__item
+            .place-block__image
+                img(src="data/place/" + item.image, alt="")
+            span= item.name
+//= End place-block =
+= '\n'

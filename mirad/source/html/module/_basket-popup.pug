@@ -1,0 +1,29 @@
+= '\n'
+//= _basket-popup =
+//- (source/assets/css/layout/_basket-popup.scss)
+.basket-popup
+    h2 Кошик
+    .basket-popup__wrapper
+        - for (var i = 0; i < 2; i++ )
+            .basket-popup__item
+                .basket-popup__image
+                    img(src="data/popup/basket/1.png", alt="")
+                .basket-popup__content
+                    a(href='#') Плитка 60*60 I Classici Bardiglio  Naturale Zrxmc8R
+                    .basket-popup__price
+                        span.basket-popup__old 550грн
+                        span.basket-popup__current 370 грн. /м<sup>2</sup>
+                .basket-popup__delete
+    .basket-popup__sum
+        span До оплати
+        span 680грн.
+    a.enter(href='ordering-form.html') оформити замовлення
+    a.continue(href='#') продовжити покупки
+
+    .basket-popup__empty
+        img(src="data/popup/basket/empty.png", alt="")
+        h2 Кошик порожній!
+    a.enter(href='#') повернутись до покупок
+
+//= End _basket-popup =
+= '\n'

@@ -1,0 +1,63 @@
+.confirm
+	p.confirm__title Підтвердження бронювання
+		span Номер бронювання: #[b 19548]
+
+	- classTitle = 'caption--large'
+	- nameTitle = 'Номер'
+	include _caption
+
+	.confirm__room
+
+		.confirm__image
+			img(src='data/profile/DSC_3650.png' alt='')
+
+		.confirm__wrapper
+			.confirm__box
+				div
+					h4 Двомісний стандарт з одним ліжком
+					span Гостей: 1
+				ul
+					each val in historyEnter
+						li= val.event
+							span= val.date
+
+			p TV, одна кімната, нові сучасні меблі, комфортне двоспальне або два односпальні ліжка, кондиціонер та телефон. Ванна кімната укомплектовканадушовою кабіною, новою брендовою сантехнікою та необхідною косметикою.
+
+			.confirm__services.confirm__services--room
+				ul
+					each item in serviceComfort
+						li.check= item
+	- classTitle = 'caption--large'
+	- nameTitle = 'Додаткові послуги'
+	include _caption
+
+	.confirm__services
+		ul
+			each item in confirmComfort
+				li.check= item
+
+	.confirm__info
+		.confirm__block
+			- classTitle = 'caption--large'
+			- nameTitle = 'Інформація гостя'
+			include _caption
+
+			- multipurpose = guestInfo
+			include _multipurpose
+
+		.confirm__block
+			- classTitle = 'caption--large'
+			- nameTitle = 'Оплата'
+			include _caption
+
+			- multipurpose = payment
+			include _multipurpose
+
+			p Всього: #[span 1041.50 #[i грн]]
+
+	.confirm__buttons
+		button.cancel(type='button') Відмінити
+
+		.confirm__group
+			button.pin.pin--white(type='button') Редагувати #[span]
+			button.pin(type='button') Підтвердити #[span]

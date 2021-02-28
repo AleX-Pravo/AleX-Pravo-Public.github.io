@@ -1,0 +1,16 @@
+= '\n'
+//= parts =
+//- (source/assets/css/module/_parts.scss)
+.parts
+    .swiper-parts(data-breakpoints='{"9999":{"slidesPerView":4}, "768":{"slidesPerView":3}, "600":{"slidesPerView":2}, "375":{"slidesPerView":1}}')
+        .swiper-wrapper
+            each item in partsItems
+                a.swiper-slide.parts__item(href='javascript:void(0)')
+                    span= item.name
+                    span
+                        img(src='data/parts/' + item.image, alt="")
+    .swiper-button-next
+    .swiper-button-prev
+
+//= End parts =
+= '\n'

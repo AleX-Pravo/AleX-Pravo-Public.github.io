@@ -1,0 +1,96 @@
+@import 'vars/_variable.scss';
+
+.contacts {
+    font-size: $contacts__textFontSize;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    color: $contacts__textColor;
+
+    & a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin: 0 0 6px;
+
+        &:before {
+            position: relative;
+            display: inline-block;
+            content: '';
+        }
+
+        &--address {
+            &:before {
+                top: 2px;
+                width: 14px;
+                height: 22px;
+                margin: -9px 11px 0 4px;
+                background: url('../images/footer/icon/address.png') no-repeat;
+            }
+        }
+
+        &--email {
+            &:before {
+                top: 4px;
+                width: 21px;
+                height: 15px;
+                margin: 0 8px 0 0;
+                background: url('../images/footer/icon/email.png') no-repeat;
+            }
+        }
+
+        &--phone {
+            text-decoration: none;
+            &:before {
+                top: 3px;
+                width: 17px;
+                height: 17px;
+                margin: -2px 10px 0 2px;
+                background: url('../images/footer/icon/phone.png') no-repeat;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $contacts__textColor;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__box {
+        position: relative;
+        margin: 20px 0 0;
+
+        &-title {
+            position: relative;
+            color: $contacts__titleTextColor;
+        }
+
+        &-text {
+            position: relative;
+        }
+
+        a {
+            //text-decoration: none;
+            color: $contacts__textColor;
+
+            //&:hover {
+            //    text-decoration: underline;
+            //}
+        }
+    }
+}

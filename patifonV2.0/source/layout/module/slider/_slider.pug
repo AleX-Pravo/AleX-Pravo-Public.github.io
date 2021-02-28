@@ -1,0 +1,36 @@
+include vars/_variable.pug
+
+- sliderSlickInit = true
+
+= '\n'
+//= Slider =
+.slider
+    .row
+        .slider__container.slider__container--content
+            #slider__slick.slick
+
+                - for (i = 0; i < 3; i++)
+                    .slick-item
+                        a.slider__link(href='#')
+                            img(src='data/slider/image.jpg' alt='')
+
+        .slider__container.slider__container--side.hide-md-max
+            .row
+                .slider__item
+                    .slider__inner
+                        a.slider__link(href='#')
+                            img(src='data/slider/xiomi.png' alt='')
+
+                .slider__container.slider__container--bottom
+                    .row
+                        .slider__item
+                            .slider__inner
+                                a.slider__link(href='#')
+                                    img(src='data/slider/accessories.png' alt='')
+
+                        .slider__item
+                            .slider__inner
+                                a.slider__link(href='#')
+                                    img(src='data/slider/protectiveGlass.png' alt='')
+//= End slider =
+= '\n'

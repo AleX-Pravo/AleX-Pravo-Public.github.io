@@ -1,0 +1,21 @@
+= '\n'
+//= Sitemap =
+.sitemap
+    .sitemap__header
+        - var title = [{modifier: '', elem: 'h1', icon: 'data/search/search.png', text: 'НАВІГАЦІЯ', name: 'Карта сайту'}]
+        include _title.pug
+
+    .sitemap__content
+
+        each item in sitemap
+            .sitemap__box
+                .sitemap__title
+                    a.sitemap__title-link(href='#')= item.name
+
+                if (item.list)
+                    ul.sitemap__list
+                        each val in item.list
+                            li.sitemap__item
+                                a.sitemap__link(href='#')= val
+//= End sitemap =
+= '\n'

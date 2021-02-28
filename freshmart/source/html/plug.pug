@@ -1,0 +1,41 @@
+-
+    pageTitle = 'plug'
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+
+            //= Main =
+            main#main.main.main--notfound
+                = '\n'
+                //= Not found =
+                - modifierNotfound = (pageTitle == 'plug') ? 'notfound--plug' : ''
+                .notfound(class= modifierNotfound)
+                    .notfound__inner
+                        .notfound__logo
+                            include layout/header/_logo.pug
+                        .notfound__text
+                            |Сейчас мы улучшаем наш сайт :)
+                            br
+                            |Скоро вернемся!
+                            -
+                                var socialList = [
+                                    {
+                                        title: 'Пишите нам:',
+                                        items: ['instagram', 'facebook', 'viber', 'youtube', 'telegram']
+                                    }
+                                ]
+                        include module/_social.pug
+                //= End not found =
+                = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        //-include layout/_scripts.pug

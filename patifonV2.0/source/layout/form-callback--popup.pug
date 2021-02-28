@@ -1,0 +1,69 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'form-callback--popup'
+
+    tab = true
+    rating = true
+    slick = true
+    owlCarousel = true
+
+    pageRatingInit = true
+    pageTabInit = true
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    a.popup__callback(href='#test-modal') popup__callback
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+
+        = '\n'
+        //= Modal =
+        .modal.white-popup-block.mfp-hide#test-modal
+
+            .modal__content
+                - callBackItem = true
+                - formRequest = formCallbackRequest
+
+                include module/details/module/form/_form.pug
+
+        //= End modal =
+        = '\n'
+
+        include core/_script.pug
+
+        script(src=bowerDir + 'magnific-popup/dist/jquery.magnific-popup.js')
+        script.
+            $(document).ready(function () {
+
+                $('.popup__callback').magnificPopup({
+                    type: 'inline',
+                    preloader: false,
+                    modal: true
+                });
+
+                $(document).on('click', '.form__close', function (e) {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                });
+            });

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Base Project</title>
+    <link rel="stylesheet" href="assets/vendor/css/nanoscroller.css">
+    <link rel="stylesheet" href="assets/vendor/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="assets/vendor/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <!-- layout-->
+    <div class="layout">
+      <div class="layout__header">
+
+        <!-- header-->
+        <header class="header">
+          <div class="header__wrapper container container--fluit">
+            <div class="header__logo">
+
+              <!-- logo-->
+              <div class="logo"><img src="assets/img/logo.svg" alt="logo">
+              </div>
+              <!-- end logo-->
+
+            </div>
+            <div class="header__nav header__nav--close">
+
+              <!-- navigation-->
+              <div class="navigation">
+                <ul class="navigation__list">
+                                <li><a class="navigation__link" href="#">Prices</a></li>
+                                <li><a class="navigation__link" href="#">Samples</a></li>
+                                <li><a class="navigation__link" href="#">Discounts</a></li>
+                                <li class="drop_list"><i class="more"></i><a class="more" href="#">More</a>
+                                  <ul>
+                                                  <li><a class="navigation__link" href="#">Extras</a></li>
+                                                  <li><a class="navigation__link" href="#">Testimonials</a></li>
+                                                  <li><a class="navigation__link" href="#">Blog</a></li>
+                                                  <li><a class="navigation__link" href="#">FAQ</a></li>
+                                                  <li><a class="navigation__link" href="#">Contact us</a></li>
+                                  </ul>
+                                </li>
+                </ul>
+              </div>
+              <!-- end navigation-->
+
+            </div>
+            <div class="header__relations">
+
+              <!-- relations-->
+              <div class="relations">
+                <div class="relations__item relations__item--chat"><a class="relations__link fz14" href="#">Live Chat</a></div>
+                <div class="relations__item relations__item--phone"><a class="relations__link" href="tel:18665157710">1-866-515-7710</a></div>
+              </div>
+              <!-- end relations-->
+
+            </div>
+            <div class="header__cabinet" style="display: none;">
+
+              <!-- cabinet-->
+              <div class="cabinet">
+                <div class="cabinet__item">
+                  <div class="cabinet__user"><a class="cabinet__user-link" href="#">Francis Gonzalez</a>
+                    <ul class="cabinet__user-drop">
+                      <li><a href="#">New Order</a></li>
+                      <li><a href="#">My Orders</a></li>
+                      <li><a href="#">My Discounts</a></li>
+                      <li><a href="#">Settings</a></li>
+                      <li><a href="#">My Balance</a></li>
+                      <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                  </div>
+                  <div class="cabinet__messages"><a class="cabinet__messages-link" href="#"><span class="cabinet__messages-count">7</span></a>
+                    <div class="cabinet__messages-drop"></div>
+                  </div>
+                </div>
+                <div class="cabinet__item"><a class="cabinet__link" href="#">Log Out</a></div>
+                <!--.cabinet__itema.cabinet__link(href='#') Login
+                -->
+                <!--.cabinet__item.cabinet__button.button.button--tiny New Order-->
+              </div>
+              <!-- end cabinet-->
+
+            </div>
+            <div class="header__enter">
+
+              <!--= enter =-->
+              <div class="enter">
+                <div class="enter__item"><a class="enter__login" href="#">Login</a></div>
+                <div class="enter__item"><a class="enter__order" href="#">New Order</a></div>
+              </div>
+              <!--= End enter =-->
+
+            </div><a class="header__button" href="#"><span class="header__button-line"></span></a>
+          </div>
+        </header>
+        <!-- end header-->
+
+      </div>
+      <div class="layout__body">
+        <div class="layout__content">
+          <main class="layout__main">
+
+            <!-- calculator-->
+            <section class="calculator">
+              <div class="container">
+                <div class="calculator__wrapper">
+                  <div class="calculator__caption">
+                    <h2 class="calculator__title">Brief and to the Point</h2>
+                    <h6 class="calculator__subtitle">The best essay writing company on the market</h6>
+                    <div class="calculator__img" style="background: url(../../assets/img/calculator.png) no-repeat top right;"></div>
+                  </div>
+                  <form class="calculator__form">
+                    <div class="calculator__box">
+                      <div class="calculator__checkbox">
+                        <input class="calculator__input" type="checkbox" id="new_member_discount" checked="checked">
+                        <label class="calculator__check" for="new_member_discount"></label>
+                        <label class="calculator__text" for="new_member_discount">I’m a new customer <span>(15% OFF)</span></label>
+                      </div>
+                    </div>
+                    <div class="calculator__box">
+                      <div class="calculator__field f_group currency">
+                        <label class="calculator__label">Select currency</label>
+                        <div class="calculator__item currency_check clearfix">
+                          <input type="radio" name="currency" id="currency_USD" checked="checked">
+                          <label for="currency_USD">USD</label>
+                          <input type="radio" name="currency" id="currency_GBP">
+                          <label for="currency_GBP">GBP</label>
+                          <input type="radio" name="currency" id="currency_EUR">
+                          <label for="currency_EUR">EUR</label>
+                          <input type="radio" name="currency" id="currency_CAD">
+                          <label for="currency_CAD">CAD</label>
+                          <input type="radio" name="currency" id="currency_AUD">
+                          <label for="currency_AUD">AUD</label>
+                        </div>
+                      </div>
+                      <div class="calculator__field f_group">
+                        <label class="calculator__label f_label">Type of paper</label>
+                        <div class="calculator__item f_select">
+                          <select>
+                            <option>Essay</option>
+                            <option>Essay</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="calculator__field f_group">
+                        <label class="calculator__label f_label">Type of service</label>
+                        <div class="calculator__item f_select">
+                          <select>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                            <option>Academic paper writing</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="calculator__field f_group">
+                        <label class="calculator__label f_label">Academic level</label>
+                        <div class="calculator__item f_select">
+                          <select>
+                            <option>Hight school</option>
+                            <option>Hight school</option>
+                            <option>Hight school</option>
+                            <option>Hight school</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="calculator__field f_group pages">
+                        <label class="calculator__label">Pages *825 words</label>
+                        <div class="calculator__item spin_edit_wrapper">
+                          <input type="text">
+                        </div>
+                      </div>
+                      <div class="calculator__field f_group">
+                        <label class="calculator__label f_label">Urgency</label>
+                        <div class="calculator__item f_select">
+                          <select>
+                            <option>14 days</option>
+                            <option>14 days</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calculator__box">
+                      <div class="calculator__field">
+                        <button class="calculator__button button">Proceed to Order</button>
+                      </div>
+                      <div class="calculator__field">
+                        <div class="calculator__label">Total price</div>
+                        <div class="calculator__item">
+                          <div class="calculator__total"><span class="symbol" id="symbol">$</span><span class="white" id="total">12</span><span class="cent" id="cent">.99</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <!-- end calculator-->
+
+
+            <!-- advantages-->
+            <section class="advantages">
+              <div class="container">
+                <div class="advantages__wrap">
+                  <div class="advantages__side">
+                    <div class="advantages__label bg-blue">our advantages over competitors</div>
+                    <div class="advantages__list">
+                      <div class="advantages__item">Say “NO” to plagiarism – FREE plagiarism report as an addition to your paper.</div>
+                      <div class="advantages__item">The lowest prices that fit excellent quality – we do not believe that decent papers can be cheap.</div>
+                      <div class="advantages__item">Authorship – you are the one who possess the paper. We DO NOT re-sale or re-use any of them.</div>
+                    </div>
+                  </div>
+                  <div class="advantages__content">
+                    <h1 class="advantages__title">Welcome to <br> writing service Grabmyessay</h1>
+                    <div class="advantages__label label-icon bg-pink">the best essay writing service provider</div>
+                    <div class="advantages__text">
+                      <p>
+                        You are now at the premier site for essay writing services. If you are looking for the most professional Company that confidentially produces the highest quality research and writing, we are your perfect source. You may have been let down by other online writing companies that offer essay writing services, but here you will receive professionally produced and original writing of practically any variety.<br>
+                        Our reputation is immaculate and verified.
+                      </p>
+                    </div>
+                    <div class="advantages__button button button--dark">Proceed to Order</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end advantages-->
+
+
+            <!-- step-->
+            <section class="step">
+              <div class="container">
+                <div class="step__wrap">
+                  <div class="step__side">
+                    <h2 class="step__title">How it Works</h2>
+                  </div>
+                  <div class="step__content">
+                    <div class="step__item" data-step="1.">Submit<br> information</div>
+                    <div class="step__item" data-step="2.">Make<br> a payment</div>
+                    <div class="step__item" data-step="3.">Get a writer<br> assigned</div>
+                    <div class="step__item" data-step="4.">Approve<br> and download</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end step-->
+
+
+            <!-- sample-->
+            <section class="sample">
+              <div class="container">
+                <h2 class="sample__title">our sample works</h2>
+                <div class="sample__subtitle">
+                  <h3 class="sample__subtitle-item bg-pink">grabmyessay.com offers to evaluate samples of various types of papers</h3>
+                </div>
+                <div class="sample__list">
+                  <div class="sample__item"><a class="sample__link">
+                      <div class="sample__info">
+                        <div class="sample__info-text">Essay・5 pages・MLA</div>
+                        <div class="sample__info-eye"></div>
+                      </div>
+                      <div class="sample__label">Hamlet</div>
+                      <div class="sample__description">Shakespeare wrote Hamlet after the death of his only son in 1601. Literary scholars assume that the death of his son inspired his authorship, twhile some critics’ point is that the loss…</div>
+                      <div class="sample__author">
+                        <div class="sample__author-logo"><img class="sample__author-img" src="assets/img/autor1.svg" alt="Hester Pratt"></div>
+                        <div class="sample__author-data">
+                          <div class="sample__author-name">Hester Pratt</div>
+                          <div class="sample__author-value">653 Completed orders</div>
+                        </div>
+                      </div></a></div>
+                  <div class="sample__item"><a class="sample__link">
+                      <div class="sample__info">
+                        <div class="sample__info-text">Research paper・14 pages・APA</div>
+                        <div class="sample__info-eye"></div>
+                      </div>
+                      <div class="sample__label">Global Terrorism</div>
+                      <div class="sample__description">Terrorists use different methods to achieve their objectives. The major strategies that they employ include: attrition, spoiling, provocation, intimidation, and outbidding…</div>
+                      <div class="sample__author">
+                        <div class="sample__author-logo"><img class="sample__author-img" src="assets/img/autor2.svg" alt="Marvin Ballard"></div>
+                        <div class="sample__author-data">
+                          <div class="sample__author-name">Marvin Ballard</div>
+                          <div class="sample__author-value">12 Completed orders</div>
+                        </div>
+                      </div></a></div>
+                  <div class="sample__item"><a class="sample__link">
+                      <div class="sample__info">
+                        <div class="sample__info-text">Essay・14 pages・Harvard</div>
+                        <div class="sample__info-eye"></div>
+                      </div>
+                      <div class="sample__label">Gulf View Inc, Sales</div>
+                      <div class="sample__description">Location (Gulf view or no Gulf view) of a condominium and property listing prices are very essential part of number of days it takes to sell a property and real estate sales price…</div>
+                      <div class="sample__author">
+                        <div class="sample__author-logo"><img class="sample__author-img" src="assets/img/autor3.svg" alt="Josie Lambert"></div>
+                        <div class="sample__author-data">
+                          <div class="sample__author-name">Josie Lambert</div>
+                          <div class="sample__author-value">331 Completed orders</div>
+                        </div>
+                      </div></a></div>
+                  <div class="sample__item"><a class="sample__link">
+                      <div class="sample__info">
+                        <div class="sample__info-text">Thesis・15 pages・Chicago</div>
+                        <div class="sample__info-eye"></div>
+                      </div>
+                      <div class="sample__label">Barefoot Running</div>
+                      <div class="sample__description">When it comes to barefoot running, there are usually two opposing views among people. The first group of people finds it is good for health, while the second is trying to deny it, by all means…</div>
+                      <div class="sample__author">
+                        <div class="sample__author-logo"><img class="sample__author-img" src="assets/img/autor4.svg" alt="Mina Todd"></div>
+                        <div class="sample__author-data">
+                          <div class="sample__author-name">Mina Todd</div>
+                          <div class="sample__author-value">19543 Completed orders</div>
+                        </div>
+                      </div></a></div>
+                </div>
+                <div class="sample__more">
+                  <div class="sample__button button button--light">View all Samples</div>
+                </div>
+              </div>
+            </section>
+            <!-- end sample-->
+
+
+            <!-- section-->
+            <section class="section always">
+              <div class="section__wrap">
+                <div class="section__content">
+                  <h3 class="section__title">we always <br> meet customer needs</h3>
+                  <hr>
+                  <div class="section__text">
+                    <p>Most people think that online writing websites offer only academic paper and essay writing. Indeed, we produce overwhelming significant amount of this writing. If you have a unique or rare writing need that may not be listed below, please contact us – we know we can help you. We provide a comprehensive array of writing services including:</p>
+                    <ul>
+                      <li>High School  and college essays</li>
+                      <li>Research papers from the High School  through graduate school levels</li>
+                      <li>Theses and Dissertations – either in part or whole</li>
+                      <li>Business reports, presentations, and marketing materials, profiles</li>
+                      <li>Resumes and CVs</li>
+                      <li>Articles, blogs, and website content</li>
+                      <li>Proofreading, editing, re-writing</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="section__side">
+
+                  <!-- features-->
+                  <div class="features">
+                    <h5 class="features__title">free features</h5>
+                    <div class="features__text">
+                      <ul>
+                        <li>Revision upon request</li>
+                        <li>Reference page</li>
+                        <li>Title page</li>
+                        <li>Table of contents</li>
+                        <li>Originality check</li>
+                        <li>24/7 custom support</li>
+                      </ul>
+                    </div>
+                    <div class="features__footer">
+                      <div class="features__total">
+                        <div class="features__total-label">Total savings:</div><sup class="features__total-symbol">$</sup>
+                        <div class="features__total-price">85</div>
+                      </div>
+                      <div class="features__field">
+                        <div class="features__button button button--dark">Proceed to Order</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end features-->
+
+                </div>
+              </div>
+            </section>
+            <!-- end section-->
+
+
+            <!-- testimonials-->
+            <section class="testimonials">
+              <h3 class="testimonials__title">what clients say about us</h3>
+              <div class="testimonials__rating"><span>Our Customers Rated Us <b>Great</span>
+
+                <!-- rate-->
+                <div class="rate">
+                  <div class="rate__item active"></div>
+                  <div class="rate__item active"></div>
+                  <div class="rate__item active"></div>
+                  <div class="rate__item active"></div>
+                  <div class="rate__item"></div>
+                </div>
+                <!-- end rate-->
+<span>5.0</b> Out of 5 Based on <em>106 Reviews</em></span>
+              </div>
+              <div class="testimonials__content">
+                <div class="testimonials__arrows">
+                  <div class="testimonials__arrow testimonials__arrow--prev"></div>
+                  <div class="testimonials__arrow testimonials__arrow--next"></div>
+                </div>
+                <div class="testimonials__list">
+                  <div class="testimonials__item">
+                    <div class="testimonials__wrap">
+                      <div class="testimonials__top">
+                        <div class="testimonials__quote"></div>
+                        <div class="testimonials__ratio">
+
+                          <!-- ratio-->
+                          <div class="ratio">
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item"></div>
+                          </div>
+                          <!-- end ratio-->
+
+                        </div>
+                      </div>
+                      <div class="testimonials__text">My GPA is 4.0 and I’ve always been doing everything myself, but there is a class which I was about to fail thus my GPA would decrease first time in so many years. I ordered few assignments to be completed with GrabMyEssay.com and you did a great job! Thanks to you I still remain one of the best students on campus.</div>
+                      <div class="testimonials__bottom"><span>Rosalinda, Mexico</span> Essay・Politics・8 pages・5 days・Junior</div>
+                    </div>
+                  </div>
+                  <div class="testimonials__item">
+                    <div class="testimonials__wrap">
+                      <div class="testimonials__top">
+                        <div class="testimonials__quote"></div>
+                        <div class="testimonials__ratio">
+
+                          <!-- ratio-->
+                          <div class="ratio">
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item"></div>
+                          </div>
+                          <!-- end ratio-->
+
+                        </div>
+                      </div>
+                      <div class="testimonials__text">My GPA is 4.0 and I’ve always been doing everything myself, but there is a class which I was about to fail thus my GPA would decrease first time in so many years. I ordered few assignments to be completed with GrabMyEssay.com and you did a great job! Thanks to you I still remain one of the best students on campus.</div>
+                      <div class="testimonials__bottom"><span>Rosalinda, Mexico</span> Essay・Politics・8 pages・5 days・Junior</div>
+                    </div>
+                  </div>
+                  <div class="testimonials__item">
+                    <div class="testimonials__wrap">
+                      <div class="testimonials__top">
+                        <div class="testimonials__quote"></div>
+                        <div class="testimonials__ratio">
+
+                          <!-- ratio-->
+                          <div class="ratio">
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item active"></div>
+                            <div class="ratio__item"></div>
+                          </div>
+                          <!-- end ratio-->
+
+                        </div>
+                      </div>
+                      <div class="testimonials__text">My GPA is 4.0 and I’ve always been doing everything myself, but there is a class which I was about to fail thus my GPA would decrease first time in so many years. I ordered few assignments to be completed with GrabMyEssay.com and you did a great job! Thanks to you I still remain one of the best students on campus.</div>
+                      <div class="testimonials__bottom"><span>Rosalinda, Mexico</span> Essay・Politics・8 pages・5 days・Junior</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonials__nav"></div>
+              </div>
+              <div class="testimonials__field">
+                <div class="testimonials__button button button--light">View all Testimonials</div>
+              </div>
+            </section>
+            <!-- end testimonials-->
+
+
+            <!-- need-->
+            <section class="need">
+              <h2 class="need__title">Do not know exactly what you need?</h2>
+              <div class="need__field">
+                <div class="need__button button button--dark">Get a Free Quote</div>
+              </div>
+            </section>
+            <!-- end need-->
+
+
+            <!-- section-->
+            <section class="section">
+              <div class="section__wrap">
+                <div class="section__content">
+                  <h4 class="section__title">Services Matter</h4>
+                  <div class="section__text">
+                    <p>
+                      Not all essay writing services are created equal. Yes, all of them have paper and essay writers, and many of them offer a wide array of products and services. What you get Grab My Essay.com, however, is more than someone writing an essay for you.<br>
+                      Consider the following:
+                    </p>
+                    <ol>
+                      <li>Our aim is to have complete Customer satisfaction</li>
+                      <li>Our essay writers have academic backgrounds that cannot be matched anywhere else</li>
+                      <li>We employ Customer Service available 24 hours a day</li>
+                      <li>Business reports, presentations, and marketing materials, profiles</li>
+                      <li>Complete confidentiality – your personal information will never be shared</li>
+                      <li>Guarantee of originality – all writing is subjected to a sophisticated plagiarism detector</li>
+                      <li>We are committed to transparency and open communication</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="section__side">
+
+                  <!-- choose-->
+                  <div class="choose">
+                    <h5 class="choose__title">why choose us</h5>
+                    <div class="choose__text">
+                      <ol>
+                        <li>Years of writing experience</li>
+                        <li>Satisfaction rate over 93%</li>
+                        <li>3-hour delivery option</li>
+                        <li>Free revisions</li>
+                        <li>Communication with your writer</li>
+                        <li>Wide range of services</li>
+                        <li>24/7 Customer Support</li>
+                        <li>Guaranteed original product</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <!-- end choose-->
+
+                </div>
+              </div>
+            </section>
+            <!-- end section-->
+
+
+            <!-- section-->
+            <section class="section">
+              <div class="section__wrap">
+                <div class="section__content">
+                  <h4 class="section__title">“Sweeten the pot”  Discounts</h4>
+                  <div class="section__text">
+                    <p>Our liberal discount policies and promotions make using our service far simpler than one might expect. You will always fit into at least one of our discount categories and you will always be eligible to participate in our regular promotional pricing benefits for GrabMyEssay.com essay writing service. In general, you can expect the following:</p>
+                    <ul>
+                      <li>Regular and seasonal promotional discounts, up to 15% in most instances.</li>
+                      <li>First-time Customers always receive a 15% “New Customer” discount</li>
+                      <li>We reward loyalty with progressive discounts based upon number of orders placed</li>
+                      <li>Lifetime discounts are given to the Customers who, through the number</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="section__side">
+
+                  <!-- prices-->
+                  <div class="prices">
+                    <h5 class="prices__title">Prices that do not hit in your pocket</h5>
+                    <div class="prices__data">
+                      <div class="prices__text">
+                        <p>
+                          Prices that are easy on your
+                          wallet  Our experts are ready to do
+                          an excellent job starting
+                          at <span>$14.99</span> per page
+                        </p>
+                      </div>
+                      <div class="prices__field">
+                        <div class="prices__button button button--dark">Continue</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end prices-->
+
+                </div>
+              </div>
+            </section>
+            <!-- end section-->
+
+
+
+            <!-- faq-->
+            <section class="faq">
+              <h2 class="faq__title">Frequently Asked Questions</h2>
+              <div class="faq__subtitle">
+                <h3 class="faq__subtitle-item bg-pink">grabmyessay.com offers to evaluate samples of various types of papers</h3>
+              </div>
+              <div class="faq__content">
+                <div class="faq__item">
+                  <div class="faq__name">
+                    <h4 class="faq__name-title">What is GrabMyEssay.com?</h4><span class="faq__name-icon"></span>
+                  </div>
+                  <div class="faq__value" style="display: none">
+                    <p>
+                      It is a professional writing service that specializes in all types of academic writing,
+                      for students from high school through graduate study. Such writing may include essays, research papers,
+                      analyses, case studies, lab reports, book reviews, presentations, research projects, literature reviews,
+                      theses, dissertations, and admissions/scholarship essays. It is our mission to promote academic success
+                      by providing students with superior research and writing, produced by exceptional writers and editors,
+                      each of whom has specific academic credentials related to the content fields in which they write.
+                    </p>
+                    <p>
+                      In addition to academic writing, provides a wide variety of other writing – resumes, CV’s, articles,
+                      blog posts, website copy, and a full range of business-related products – proposals, presentations,
+                      and reports. Anyone whois concerned about their own writing skills should contact us for exceptional assistance.
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__name">
+                    <h4 class="faq__name-title">What if I am not satisfied with the final draft I receive?</h4><span class="faq__name-icon"></span>
+                  </div>
+                  <div class="faq__value" style="display: none">
+                    <p>text</p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__name">
+                    <h4 class="faq__name-title">Can I speak directly with my writer?</h4><span class="faq__name-icon"></span>
+                  </div>
+                  <div class="faq__value" style="display: none">
+                    <p>text</p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__name">
+                    <h4 class="faq__name-title">What if I am not satisfied with the final draft I receive?</h4><span class="faq__name-icon"></span>
+                  </div>
+                  <div class="faq__value" style="display: none">
+                    <p>text</p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__name">
+                    <h4 class="faq__name-title">What is GrabMyEssay.com?</h4><span class="faq__name-icon"></span>
+                  </div>
+                  <div class="faq__value" style="display: none">
+                    <p>text</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end faq-->
+
+
+            <!-- safe-->
+            <section class="safe">
+              <div class="safe__wrapper">
+                <p class="safe__text">
+                  <b>We at GrabMyEssay.com</b> <br>
+                  work according to the General Data Protection Regulation (GDPR), which means you have the control over your personal data.<br>
+                  All payment transactions go through a secure online payment system, thus your Billing information is not stored, saved or available to the Company in any way.<br>
+                  Additionally, we guarantee confidentiality and anonymity all throughout your cooperation with our Company.
+                </p>
+              </div>
+            </section>
+            <!-- end safe-->
+
+          </main>
+        </div>
+      </div>
+      <div class="layout__footer">
+
+        <!-- footer-->
+        <footer class="footer">
+          <div class="footer__top">
+            <div class="container">
+              <div class="footer__logo">
+
+                <!-- logo-->
+                <div class="logo"><img src="assets/img/logo.svg" alt="logo">
+                </div>
+                <!-- end logo-->
+
+              </div>
+              <div class="footer__contact">
+                <div class="footer__contact-title">Contact Info</div><a class="footer__contact-link" href="tel:18889801257">1-888-980-1257</a><a class="footer__contact-link" href="mailto:support@grabmyessay.com">support@grabmyessay.com</a>
+                <div class="footer__social">
+
+                  <!-- social-->
+                  <ul class="social">
+                    <li class="social__item"><a class="social__link social__link--facebook" href="#"></a></li>
+                    <li class="social__item"><a class="social__link social__link--twitter" href="#"></a></li>
+                  </ul>
+                  <!-- end social-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__center">
+            <div class="container">
+              <div class="footer__menu">
+                <div class="footer__wrap">
+                  <div class="footer__inner"><a class="footer__title" href="#">Terms and Conditions</a></div>
+                  <div class="footer__inner"><a class="footer__title" href="#">Money Back Guarantee</a></div>
+                  <div class="footer__inner"><a class="footer__title" href="#">Cookie Policy</a></div>
+                  <div class="footer__inner"><a class="footer__title" href="#">Privacy Policy</a></div>
+                </div>
+                <div class="footer__submenu">
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__link" href="#">Essay Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Essay Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Essay Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Type My Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Research Paper Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Essay Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Essay For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Paper For Money</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Research Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Research Paper Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Research Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Do My Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Term Paper For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy College Papers Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Research Paper For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Term Paper Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order Research Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">College Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional College Paper Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Term Paper Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Term Paper Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">College Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Term Paper</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Term Paper Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">College Papers For Sale</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Order College Papers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Results Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Thesis Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Dissertation Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Discussion Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Thesis Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Thesis Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Proposal Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Thesis Proposal</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Dissertation</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Introduction Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Phd Thesis Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Dissertation Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Dissertation Abstract Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Pay For Thesis</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Coursework Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Coursework</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Book Report Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Narrative Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Coursework</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Case Study Writing Service</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Writers Case Study Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Process Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Coursework Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Descriptive Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Argumentative Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Coursework</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Custom Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Definition Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Critical Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Professional Coursework Writers</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Case Study Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Compare And Contrast Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Expository Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Coursework Help</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Cheap Case Study</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Cause And Effect Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Persuasive Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Literature Review</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Lab Report</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Write My Admission Essay</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Lab Report Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Admission Essay Online</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Buy Personal Statement Online</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="container">
+              <div class="footer__box">
+                <div class="footer__copyright">© GrabMyEssay.com, 2019</div>
+                <div class="footer__payment">
+
+                  <!-- payment-->
+                  <div class="payment">
+                    <div class="payment__item"><img class="payment__image" src="assets/img/paypal.svg" alt="PayPal"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/visa.svg" alt="Visa"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/mastercard.svg" alt="MasterCard"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/americanexpress.svg" alt="American Express"></div>
+                    <div class="payment__item"><img class="payment__image" src="assets/img/discover.svg" alt="Discover Network"></div>
+                  </div>
+                  <!-- end payment-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- end footer-->
+
+
+        <!-- promo-->
+        <div class="promo">
+          <div class="promo__wrapper">
+            <div class="promo__info">
+              <p>Try our service with <b>15% Discount</b> for your first order!</p>
+            </div><a class="promo__button" href="#">Order Now</a><a class="promo__close" href="javascript: void(0)"></a>
+          </div>
+        </div>
+        <!-- end promo-->
+
+      </div>
+    </div>
+    <!-- end layout-->
+
+
+    <!--= Up =--><a class="up" href="#"><img src="../../assets/img/arrows.svg" alt=""></a>
+    <!--= End up =-->
+
+
+    <!--= Cookies =-->
+    <div class="cookies --hide">
+      <div class="cookies__wrapper"><img src="../../assets/img/cookies.png" alt="">
+        <p>We use cookies to personalize your experience. By counting to visit this website you agree to our use of cookis.<a class="cookies__link" href="javascript:void(0);">Read More</a></p><a class="cookies__button button button--dark">Agree</a>
+      </div>
+    </div>
+    <!--= End cookies =-->
+
+    <script src="assets/vendor/js/jquery.min.js"></script>
+    <script src="assets/vendor/js/jquery.nanoscroller.js"></script>
+    <script src="assets/vendor/js/jquery.formstyler.js"></script>
+    <script src="assets/vendor/js/bootstrap-spinedit.js"></script>
+    <script src="assets/vendor/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

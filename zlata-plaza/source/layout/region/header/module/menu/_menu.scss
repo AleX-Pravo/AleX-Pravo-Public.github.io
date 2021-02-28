@@ -1,0 +1,61 @@
+@import 'vars/_variable.scss';
+
+.menu {
+    position: relative;
+    margin: 0 0 19px;
+
+    .greeting & {
+        &__link {
+            color: $menu__greetingLinkColor;
+        }
+    }
+
+    &__list {
+        font-size: 0;
+        position: relative;
+    }
+
+    &__item {
+        font-size: ($menu__baseFontSize + 2px);
+        position: relative;
+    }
+
+    &__link {
+        transition: all .2s linear;
+        text-decoration: none;
+        color: $menu__linkColor;
+
+        &:hover {
+            color: $menu__linkColor--active;
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+
+        &__item {
+            margin: 10px 0;
+        }
+
+    }
+
+    @media (min-width: $screenMdMin) {
+
+        &__list {
+            text-align: justify;
+
+            &:after {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 0;
+                content: '';
+            }
+        }
+
+        &__item {
+            font-size: $menu__baseFontSize;
+            display: inline-block;
+        }
+
+    }
+}

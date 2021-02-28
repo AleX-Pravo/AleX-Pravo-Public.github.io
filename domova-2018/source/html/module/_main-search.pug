@@ -1,0 +1,22 @@
+= '\n'
+//= Main-search =
+form.main-search(method='post' action='')
+    // Класс .open открывает меню
+    .main-search__category
+        input#search_category(type='hidden' name='category' value='')
+        .main-search__category-title Всі категорії
+        .main-search__category-drop
+            .main-search__category-inner
+                a.main-search__category-item.active(href='javascript:void(0)' data-search-id='0') Всі категорії
+                a.main-search__category-item(href='javascript:void(0)' data-search-id='1') Категорія 1
+                a.main-search__category-item(href='javascript:void(0)' data-search-id='2') Категорія 2
+                a.main-search__category-item(href='javascript:void(0)' data-search-id='3') Категорія 3
+
+    .main-search__field
+        button.main-search__submit(type='submit')
+        input.main-search__input(type='text' name='' placeholder='Введіть назву послуги')
+
+    include _drop.pug
+
+//= End main-search =
+= '\n'

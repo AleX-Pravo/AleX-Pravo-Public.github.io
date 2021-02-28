@@ -1,0 +1,59 @@
+= '\n'
+//= ordering-form =
+//- (source/assets/css/layout/_ordering-form.scss)
+.ordering-form
+    .container
+        - var titleInfo = 'Оформлення замовлення'
+        include _title-block.pug
+        .ordering-form__wrapper
+            .ordering-form__block
+                form(id='form' action='#' method='post')
+                    .ordering-form__data
+                        h2 Контактні дані
+                        .form-group
+                            label Введіть Ваше ім`я*
+                            input.shadow.form-control(type='text', placeholder='Олексій')
+                        .form-group
+                            label Введіть Ваш телефон*
+                            input.shadow.form-control(type='text', placeholder='+38(___)___-__-__')
+                        .form-group
+                            label Введіть Ваш email*
+                            input.shadow.form-control(type='text', placeholder='mirad@gmail.com')
+                    .ordering-form__data
+                        h2 Доставка
+                        .div
+                            label
+                                input(type='radio' name='delivery' value='0' id='post' checked)
+                                | Нова пошта
+                            label
+                                input(type='radio' name='delivery' id='self' value='1')
+                                | Самовивіз
+                        .ordering-form__post
+                            .form-group
+                                label Введіть область*
+                                input.shadow.form-control(type='text', placeholder='Рівненська')
+                            .form-group
+                                label Введіть місто*
+                                input.shadow.form-control(type='text', placeholder='Рівне')
+                            .form-group
+                                label Виберіть № віділення*
+                                select.form-control.new-post
+                                    each val in adressPoints
+                                        option(value='0')= val
+
+                        .ordering-form__checkout
+                            .block
+                                h3 Адреса магазину
+                                span м. Рівне, вул. Дубенська, 3
+                            .block
+                                h3 Графік роботи магазину
+                                span Пн-Пт: 9:00-18:00 Сб: 9:00-18:00 Нд: вихідний
+                    .ordering-form__data
+                        h2 Коментар до замовлення
+                        .form-group
+                            label.comment Коментар
+                            textarea.shadow.form-control(type='text', placeholder='', rows = '5')
+                        p * Обов`язково для заповнення
+            include _your-order.pug
+//= End ordering-form =
+= '\n'

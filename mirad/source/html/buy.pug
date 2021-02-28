@@ -1,0 +1,125 @@
+//- Utility
+include utils/_variable.pug
+- var pageTitle = 'Де купити'
+
+//-breadcrumbs.pug
+- var breadcrumbs = ['Головна', pageTitle]
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+            //= Main =
+            main#main.main
+                include module/_breadcrumbs.pug
+                include module/_office-drop.pug
+                include module/_contacts.pug
+
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+
+
+        script(src=bowerDir + 'magnific-popup/dist/jquery.magnific-popup.min.js')
+        script(src=bowerDir + 'perfect-scrollbar/js/perfect-scrollbar.jquery.min.js')
+        script(src=bowerDir + 'select2/dist/js/select2.min.js')
+        script(src="https://maps.googleapis.com/maps/api/js?key=")
+        script.
+            $(document).ready(function(){
+                $('.new-post').select2();
+                $('.buy-form__contacts').perfectScrollbar({
+                    useBothWheelAxes: false,
+                    suppressScrollX: true
+                });
+                function initMap(){
+                    var centerLatLng = new google.maps.LatLng(50.622683, 26.229054);
+                    var styles = [
+                        {
+                                "stylers": [
+                                    {
+                                        "hue": "#2c77bb"
+                                    },
+                                    {
+                                        "saturation": 250
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "lightness": 50
+                                    },
+                                    {
+                                        "visibility": "simplified"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "labels",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            }
+                    ]
+                    var mapOptions = {
+                        center: centerLatLng,
+                        zoom: 13
+                    };
+                    // Создаем карту внутри элемента #map
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                    var contentString = '<div class="infowindow">' +
+                                            '<h3>Салон-магазин «Атіта»</h3>' +
+                                            '<p><b>Адреса:</b> м. Рівне, вул. Крейдяна, 9</p>' +
+                                            '<p><b>Телефони:</b><span><a href="tel:0631757606">+380 (63) 175 76 06</a><a href="tel:0503751399">+380 (50) 375 13 99</a><a href="tel:0974148038">+380 (97) 414 80 38</a></span></p>'
+                                        '</div>';
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+                    var marker = new google.maps.Marker({
+                        position: centerLatLng,
+                        map: map,
+                        title: "",
+                        icon: "assets/images/marker.svg"
+                    });
+                    var marker1 = new google.maps.Marker({
+                        position: new google.maps.LatLng(50.630539, 26.256973),
+                        map: map,
+                        title: "",
+                        icon: "assets/images/marker1.svg"
+                    });
+                    var marker2 = new google.maps.Marker({
+                        position: new google.maps.LatLng(50.605827, 26.271903),
+                        map: map,
+                        title: "",
+                        icon: "assets/images/marker1.svg"
+                    });
+                    // Отслеживаем клик по нашему маркеру
+                    google.maps.event.addListener(marker1, "click", function() {
+                        infoWindow.open(map, marker1);
+                    });
+                    // Отслеживаем клик в любом месте карты
+                    google.maps.event.addListener(map, "click", function() {
+                        // infoWindow.close - закрываем информационное окно.
+                        infoWindow.close();
+                    });
+                    map.setOptions({styles: styles});
+                }
+            google.maps.event.addDomListener(window, "load", initMap);
+
+            });

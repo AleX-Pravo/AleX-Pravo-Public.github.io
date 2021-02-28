@@ -1,0 +1,39 @@
+.main-slider {
+    .slick {
+        &-dots {
+            display: flex;
+            justify-content: center;
+            li {
+                button {
+                    margin: 5px 10px;
+                    padding: 0;
+                    width: 12px;
+                    height: 12px;
+                    border: 1px solid $brandPrimary;
+                    border-radius: 50%;
+                    font-size: 0;
+                    background: transparent;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        &-active {
+            button {
+                position: relative;
+                transform: scale(1.8);
+                &:before {
+                   content:'';
+                   width: 4px;
+                   height: 4px;
+                   position: absolute;
+                   background: $brandPrimary;
+                   border-radius: 50%;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%,-50%);
+                }
+            }
+        }
+    }
+}

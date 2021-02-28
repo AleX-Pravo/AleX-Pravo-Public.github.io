@@ -1,0 +1,57 @@
+.brands {
+    margin-bottom: 10px;
+    .title-block {
+        text-align: left;
+    }
+    &__wrapper {
+        position: relative;
+        .slick-prev,
+        .slick-next {
+            position: absolute;
+            font-size: 0;
+            width: 10px;
+            height: 16px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        .slick {
+            &-prev {
+                background: url(../images/blue-arrow.svg)no-repeat;
+                left: 0;
+            }
+            &-disabled {
+                background: url(../images/arrow-disabled.svg)no-repeat;
+            }
+        }
+        .slick {
+            &-next {
+                background: url(../images/blue-arrow.svg)no-repeat;
+                transform: translateY(-50%) rotate(180deg);
+                right: 0;
+            }
+            &-disabled {
+                background: url(../images/arrow-disabled.svg)no-repeat;
+            }
+        }
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__logo {
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img {
+            filter: invert(77%) sepia(24%) saturate(259%) hue-rotate(168deg) brightness(89%) contrast(87%);
+        }
+    }
+    @media (min-width: 1024px) {
+        margin-bottom: 60px;
+    }
+}

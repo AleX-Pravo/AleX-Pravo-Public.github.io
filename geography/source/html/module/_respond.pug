@@ -1,0 +1,26 @@
+= '\n'
+//= form-respond =
+//-=(source/assets/css/layout/form/_form-respond.scss)=
+//-=(source/assets/css/module/_respond.scss)=
+//-=(source/assets/css/layout/form/_appearance.scss)=
+form.form-respond(action='' method='')
+	h1 Залиште відгук про готель
+
+	.respond
+
+		.respond__info
+			include _form-content.pug
+
+		.respond__effect
+
+			- nameTitle = 'Ваші враження'
+			- classTitle = 'caption--base'
+			include _caption.pug
+
+			include _smile.pug
+
+	.form-group.button-pin
+		button.form-control.pin(type='submit' disabled) Залишити відгук
+
+//= End form-respond =
+= '\n'

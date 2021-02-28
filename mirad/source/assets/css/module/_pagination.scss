@@ -1,0 +1,73 @@
+.pagin {
+    width: 100%;
+    padding: 30px;
+    ul {
+        display: flex;
+        justify-content: center;
+        font-size:$fontSizeBase;
+        li {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            &.active {
+                background: $brandPrimary;
+                border-radius: 50% 50% 50% 0;
+                a {
+                    color: $base;
+                }
+            }
+
+            &.prev,
+            &.next {
+                position: relative;
+                border: none;
+                &:hover {
+                    cursor: pointer;
+                }
+                &:before{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    content: '';
+                    width: 9px;
+                    height: 15px;
+                    background: url(../images/pagination/pagin-right.png)no-repeat;
+                    transform: translate(-50%, -50%) rotate(0);
+                }
+                &.disabled {
+                    &:before {
+                        //background: url(../images/pagination/arrow-disabled.png)no-repeat;
+                        //transform: translate(-50%, -50%) rotate(0deg);
+                    }
+                }
+            }
+            &.next {
+                &:before {
+                    background: url(../images/pagination/pagin-right.png)no-repeat;
+                    transform: translate(-50%, -50%) rotate(180deg);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $grayDarker;
+            }
+        }
+    }
+    @media (min-width: 480px) {
+        ul {
+            li {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

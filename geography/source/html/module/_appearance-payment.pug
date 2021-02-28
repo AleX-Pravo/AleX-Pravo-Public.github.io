@@ -1,0 +1,21 @@
+= '\n'
+//=  =
+//-=(source/assets/css/module/_appearance-payment.scss)=
+.form-group.appearance.appearance--payment
+	if (pageTitle == 'order')
+		label.control-label Оплата:
+
+	if (pageTitle == 'order')
+		div
+			label Карткою на сайті
+				input(type='radio' name='radio' checked)
+			label При заселенні
+				input(type='radio' name='radio')
+	else
+		div
+			label Так
+				input(type='radio' name='radio' checked)
+			label Ні
+				input(type='radio' name='radio')
+//= End  =
+= '\n'

@@ -1,0 +1,26 @@
+= '\n'
+//= Header =
+
+- dots = true
+
+header.header
+    .container
+        .header__wrapper
+            .header__menu
+                include ../module/_logo
+                include _nav
+
+            .header__languages
+                include ../module/_languages
+
+    = '\n'
+    //= Mobile menu => button =
+
+    .mobile-menu.hide-screen-l-min
+        a.mobile-menu__button.call-aside(href='javascript:void(0);' data-trigger='mobile-drop')
+
+    //= End mobile menu => button =
+    = '\n'
+
+//= End header =
+= '\n'

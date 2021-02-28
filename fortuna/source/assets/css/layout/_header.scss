@@ -1,0 +1,93 @@
+.header {
+    position: relative;
+    height: 95px;
+    z-index: 1;
+
+    &.innerPage {
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+        margin-top: 3px;
+        height: auto;
+
+        .header__main {
+
+            @media (min-width: 720px) {
+                margin-right: 0;
+            }
+        }
+
+        &.fixed .header__nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: auto;
+            width: 100%;
+            z-index: 99;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+            background: $base;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width: 720px) {
+            margin-right: 47px;
+        }
+    }
+
+    &__logo {
+
+        @media (min-width: 1320px) {
+            flex-grow: 1;
+        }
+    }
+
+    &__aside {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+        flex-shrink: 0;
+
+        .primaryMenu {
+            display: none;
+
+            @media (min-width: 1320px) {
+                display: block;
+            }
+        }
+
+        .headerPhone {
+            display: none;
+
+            @media (min-width: 800px) {
+                display: block;
+            }
+        }
+    }
+
+    &__nav {
+        position: relative;
+    }
+
+    &__secondMenu {
+        display: none;
+
+        @media (min-width: 1320px) {
+            display: block;
+        }
+    }
+
+    &__thirdMenu {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: -1px;
+        display: none;
+
+        @media (min-width: 1320px) {
+            display: block;
+        }
+    }
+}

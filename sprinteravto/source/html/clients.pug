@@ -1,0 +1,47 @@
+//- Utility
+include utils/_variable.pug
+
+-
+    pageTitle = 'clients'
+    magnificPopup = true
+    breadcrumbs = [{name: 'На головну'},{name: 'Наші клієнти', active: true}]
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+
+            include layout/_aside.pug
+
+            //= Main =
+            main#main.main
+                include layout/_navigation.pug
+
+                .container
+                    .layout__box
+                        include module/_breadcrumb.pug
+
+                        section
+                            h1 Наші клієнти
+                            include module/_clients.pug
+                            .text
+                                blockquote
+                                    h4 Зосереджуйтесь на розвитку Вашого бізнесу,
+                                    span а питання щодо транспортних засобів покладіть на Sprinter-avto!
+
+            //= End main =
+
+            #shadow
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+
+
+

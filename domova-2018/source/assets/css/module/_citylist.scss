@@ -1,0 +1,93 @@
+
+.citylistHeader {
+    border: 0;
+    cursor: pointer;
+    //margin: 0 20px 0 0;
+    font-size: 15px;
+    //line-height: 29px;
+    color: #0d49b2;
+    //height: 29px;
+    outline: 0;
+    //width: 95px;
+    //margin-left: -10px;
+    position: relative;
+
+    &__Button {
+
+        p {
+            cursor: pointer;
+            margin: 0 20px 0 0;
+            font-size: 15px;
+            line-height: 29px;
+            color: #0d49b2;
+            height: 29px;
+
+            &:after {
+                display: inline-block;
+                vertical-align: middle;
+                content: '';
+                width: 5px;
+                height: 3px;
+                background: url(../images/header/list-arrow.png) no-repeat;
+                transition: transform 0.2s ease-out;
+                margin-left: 9px;
+            }
+        }
+    }
+
+    &__city {
+        display: none;
+        //width: 190px;
+        border: 1px solid #0a3682;
+        background-color: $base;
+        font-family: $fontFamilyBase;
+        font-size: 16px;
+        color: $grayLight;
+        position: absolute;
+        top: 100%;
+        height: 190px;
+        overflow-y: scroll;
+        z-index: 1;
+
+        li {
+            display: block;
+            padding: 10px;
+            color: #2f2f2f;
+            cursor: pointer;
+
+            &:last-child {
+                border: 0;
+            }
+
+            &.active {
+                background-color: #0d49b2;
+                color: #fff;
+
+                &:hover {
+                    background-color: #0d49b2;
+                }
+
+                a {
+                    color: #fff;
+                }
+            }
+
+            &:hover {
+                background-color: #f7fafd;
+            }
+
+            a {
+                text-decoration: none;
+                width: 100%;
+                display: block;
+                color: #2f2f2f;
+                font-size: 12px;
+            }
+        }
+
+        &--show{
+            display: block;
+        }
+    }
+}
+

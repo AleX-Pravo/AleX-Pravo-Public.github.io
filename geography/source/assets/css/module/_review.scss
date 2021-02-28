@@ -1,0 +1,51 @@
+.review {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    //max-width: 404px;
+    padding: 0 17px;
+    margin: 17px 0 10px 0;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        margin: 0 0 20px 0;
+
+        &-photo {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            margin: 0 20px 0 0;
+
+            img {
+                position: absolute;
+            }
+        }
+
+        &-box {
+            position: relative;
+        }
+
+        &-name {
+            font-size: $fontSizeLarge;
+            color: $grayBase;
+            font-weight: 500;
+            line-height: 1;
+            margin: 0 0 15px 0;
+        }
+
+        &-date {
+            color: $grayDark;
+            font-size: $fontSizeSmall;
+            opacity: 0.5;
+        }
+    }
+
+    &__text {
+        font-size: $fontSizeSmall;
+        color: $grayLight;
+    }
+}

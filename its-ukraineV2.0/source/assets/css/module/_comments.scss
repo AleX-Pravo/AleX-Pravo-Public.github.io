@@ -1,0 +1,258 @@
+.comments {
+    h2 {
+        font-size: $checkboxSize;
+        color: $grayDarker;
+
+        span {
+            color: $brandPrimary;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+    }
+
+    .tab {
+        padding-top: 65px;
+
+        &-menu {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        &-list {
+            display: flex;
+            border: 1px solid $grayLight;
+            border-radius: 5px;
+        }
+
+        &-item {
+
+            margin: 0;
+            &:not(:last-child) {
+                border-right: 1px solid $grayLight;
+            }
+
+            &.active {
+                background: $brandPrimary;
+
+                a {
+                    color: $base;
+                }
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            font-size: $fontSizeMedium;
+            color: $grayLighter;
+            font-family: $fontFamilyMuseoSansCyrl_lt2;
+            display: block;
+            padding: 8px 15px;
+        }
+
+        &-box {
+            display: none;
+            width: 100%;
+
+            &.active {
+                display: block;
+            }
+
+            // Стили для модуля _review.pug
+            .review {
+                &__title {
+                    &-photo {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+
+                &__date {
+                    span {
+                        font-size: $fontSizeBase;
+                    }
+                }
+            }
+
+            // Стили для модуля _photo-list.pug
+            .photo-list {
+                &--comments .photomCustomScrollbar {
+                    //padding-left: 75px;
+                    a {
+                        //min-width: 25%;
+                    }
+                }
+            }
+        }
+
+        // Стили для подкоментов
+        &-subcomment {
+            padding-left: 20px;
+
+            .answer {
+                &__wrapper {
+                    button {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        // Стили для обводки избранного
+        &-favorite {
+            border: 2px dashed $brandPrimary;
+            border-radius: 5px;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            margin-bottom: 20px;
+
+            padding: 20px 5px 5px 5px;
+
+        }
+
+        &-content {
+            max-width: 1040px;
+            width: 100%;
+
+            &--response {
+
+                .response {
+                    max-width: none;
+                    margin: 0 0 30px;
+                }
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap-reverse;
+        }
+
+        &-aside {
+            max-width: 458px;
+            width: 100%;
+            padding-top: 37px;
+            margin: 0 auto 20px; //отключить
+        }
+    }
+
+
+    @media (min-width: 480px) {
+        h2 {
+            font-size: $fontSizeH2;
+        }
+
+        .tab {
+            &-box {
+
+                // Стили для модуля _photo-list.pug
+                .photo-list {
+                    margin-left: 75px;
+                    &--comments {
+
+                    }
+                }
+
+                h2 {
+                    display: inline-block;
+                }
+            }
+
+            &-favorite {
+                width: 95%;
+                padding: 20px 0 0 0;
+                border: none;
+
+                // обводка целого блока
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border: 2px dashed $brandPrimary;
+                    top: 0;
+                    left: 30px;
+                    border-radius: 5px;
+                    z-index: -1;
+                }
+
+                // обводка полукругом
+                .review {
+                    &__title {
+                        &-photo {
+                            position: relative;
+
+                            &:before {
+                                content: '';
+                                width: 80px;
+                                height: 80px;
+                                position: absolute;
+                                border-left: 2px dashed $brandPrimary;
+                                border-right: 2px solid white;
+                                border-top: 2px dashed $brandPrimary;
+                                border-bottom: 2px solid white;
+                                border-radius: 50%;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%) rotate(-45deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-content {
+
+                &--response {
+                    padding-left: 75px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        .tab {
+            &-subcomment {
+                padding-left: 75px;
+            }
+        }
+    }
+
+    @media (min-width: 1320px) {
+        .tab {
+
+            &-box {
+                margin-top: -75px;
+
+                .photo-list {
+
+                    &--comments .photomCustomScrollbar {
+                        a {
+                            min-width: 153px;
+                            max-width: 153px;
+                            height: 100%;
+                            max-height: 136px;
+                            flex-shrink: 0;
+                        }
+                    }
+                }
+            }
+
+            &-favorite {
+                width: 100%;
+            }
+
+            &-wrapper {
+                flex-wrap: nowrap;
+            }
+
+            &-aside {
+                margin: 0 0 20px 10px;
+            }
+        }
+    }
+}

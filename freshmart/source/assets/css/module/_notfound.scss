@@ -1,0 +1,113 @@
+.notfound {
+    font-size: 0;
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+    padding: 25px 15px;
+    text-align: center;
+    background: url('../images/content/back.png') bottom center repeat-x;
+
+    &--plug {
+        background: url('../images/content/back-plug.png') center repeat-x;
+
+        .notfound {
+
+            &__inner {
+                max-width: none;
+                vertical-align: inherit;
+                top: 91px;
+                width: 100%;
+            }
+
+            &__logo {
+                margin: 0 0 40px;
+
+                .logo {
+                    max-width: 290px;
+                    margin: auto;
+                }
+            }
+
+            &__text {
+                font-size: 28px;
+                line-height: 60px;
+                margin: 0 0 50px;
+            }
+        }
+    }
+
+    &:before {
+        position: relative;
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+    }
+
+    &__inner {
+        font-size: $fontSizeBase;
+        position: relative;
+        display: inline-block;
+        max-width: 650px;
+        vertical-align: middle;
+    }
+
+    &__picture {
+        max-width: 441px;
+        margin: 40px auto 35px;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__text {
+        font-size: $notfoundText;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: $gray;
+    }
+
+    &__link {
+        margin-bottom: 0;
+        padding: 0 80px;
+    }
+
+    @media (max-width: $screenMbMax) {
+        &__logo {
+            margin-top: 0;
+        }
+        &__text {
+            font-size: $fontSizeH2;
+        }
+    }
+
+    @media (min-width: 600px) {
+
+        &--plug {
+            background: url('../images/content/back-plug.png') center repeat-x;
+
+            .notfound {
+
+                &__inner {
+                    max-width: 650px;
+                }
+
+                &__logo {
+
+                    .logo {
+                        max-width: 335px;
+                        margin: auto;
+                    }
+                }
+
+                &__text {
+                    font-size: 36px;
+                    line-height: 60px;
+                    margin: 0 0 50px;
+                }
+            }
+        }
+    }
+}

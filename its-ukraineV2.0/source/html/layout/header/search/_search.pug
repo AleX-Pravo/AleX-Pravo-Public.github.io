@@ -1,0 +1,39 @@
+= '\n'
+//= Search =
+//-=(/layout/header/search/_search.scss)=
+.search#search
+    if (pageTitle =='user-blogs')
+    form.box(action='#' method='post')
+
+        input.input-text(type='text' placeholder='Введіть запит для пошуку...')
+
+        .input-btn.icon-zoom
+            input.input-button(type="submit")
+
+        a.searchButton__close(href='javascript:void(0);')
+
+        .drop(style='display: none;')
+            ul.drop-search
+                each val in searchDropList
+                    li.drop-search-item
+                        ul.drop-search-item__inner
+                            each drop in val.drop
+                                li
+                                    a.title(href="#")= drop.title
+                                    ul
+                                        each link in drop.link
+                                            li.drop-search-item__list
+                                                a(href="#")= link
+                    li.drop-search-info
+                        .title Об’єкти
+                        ul
+                            each inner in val.inner
+                                li
+                                    a(href="#")
+                                        img(src='data/search/' + inner.img + '.png' alt='')
+                                        p= inner.name
+
+//= End search =
+= '\n'
+
+

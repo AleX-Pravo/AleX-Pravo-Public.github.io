@@ -1,0 +1,324 @@
+.confirm {
+
+	&__title {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		border-bottom: 1px solid $grayLighter;
+		padding: 16px 0;
+		font-size: $fontSizeBase;
+		font-weight: 700;
+		color: $grayDark;
+
+		span {
+			font-size: $fontSizeSmall;
+			font-weight: 400;
+
+			b {
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__services {
+
+		padding: 24px 0;
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				width: 100%;
+				white-space: nowrap;
+				margin: 0 0 5px 0;
+				padding: 0 0 0 35px;
+
+				&.check {
+
+					&:before{
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__room {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 16px 0;
+	}
+
+
+	&__wrapper {
+
+		p {
+			color: $grayText;
+			font-size: $fontSizeSmall;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		border-bottom: 1px solid $grayLighter;
+
+		h4 {
+			margin: 0;
+			font-size: $fontSizeLarge;
+			font-weight: 500;
+			color: $grayDark;
+		}
+
+		ul {
+
+			li {
+				font-size: $fontSizeSmall;
+				line-height: 1.5;
+				color: $grayDark;
+				font-weight: 700;
+
+				span {
+					font-weight: 400;
+					position: relative;
+					padding: 0 15px 0;
+
+					&:before{
+						content: '/';
+						position: absolute;
+						top: -2px;
+						left: 0;
+						color: $brandPrimary;
+						font-size: $fontSizeSmall;
+					}
+				}
+			}
+		}
+	}
+
+	&__image {
+		max-width: 397px;
+		width: 100%;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: 0 0 40px;
+		border-bottom: 1px solid $grayLighter;
+
+		.multipurpose {
+
+			ul {
+				padding: 30px 0 0;
+
+				li {
+					span {
+						&:first-child {
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__block {
+		width: 100%;
+
+		p {
+			font-size: $fontSizeBase;
+			font-weight: 500;
+			color: $grayDark;
+			margin: 0;
+			text-align: right;
+
+			span {
+				font-weight: 700;
+				font-size: $fontSizeLarge;
+
+				i {
+					font-style: normal;
+					font-weight: 500;
+					font-size: $fontSizeBase;
+				}
+			}
+		}
+	}
+
+	&__buttons {
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 24px 0 0;
+
+
+
+		.pin {
+			min-height: 50px;
+			margin: 0;
+			box-shadow: none;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-content: center;
+
+			span {
+				width: 32px;
+				height: 8px;
+				display: block;
+				background: center url("../images/form/arrow-white.svg")no-repeat;
+				margin: 0 0 0 8px;
+			}
+
+			&--white {
+
+				span {
+					background: center url("../images/form/arrow-left-d.svg")no-repeat;
+					order: -1;
+					margin: 0 8px 0 0;
+				}
+			}
+		}
+	}
+
+	&__group {
+		flex-shrink: 0;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 15px 0 0;
+	}
+
+	@media (min-width: $screenXsMin) {
+
+		&__services {
+
+			ul {
+
+				li {
+					width: 49%;
+					//margin: 0 27px 5px 0;
+				}
+			}
+		}
+
+		&__buttons {
+
+			align-items: center;
+			flex-direction: row;
+			justify-content: space-between;
+
+			.pin {
+				margin: 0 0 0 24px;
+				width: auto;
+				justify-content: flex-start;
+			}
+		}
+
+		&__group {
+			flex-wrap: nowrap;
+			margin: 0;
+		}
+	}
+
+
+
+	@media (min-width: 600px) {
+
+		&__services {
+
+			ul {
+
+				li {
+					width: 33%;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screenSmMin) {
+
+		&__room {
+			flex-direction: row;
+			align-items: flex-start;
+			padding: 16px 0 40px 0;
+		}
+
+		&__image {
+			margin: 0 24px 0 0;
+		}
+
+		&__info {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__block {
+			max-width: 569px;
+
+			&:first-child {
+				margin: 0 31px 0 0;
+			}
+		}
+	}
+
+
+	@media (min-width: $screenLgMin) {
+
+		margin: 0 0 80px;
+
+		&__title {
+			font-size: $fontSizeH6;
+			line-height: 40px;
+
+			span {
+				font-size: $fontSizeLarge;
+			}
+		}
+
+		&__services {
+
+			ul {
+
+				li {
+					width: (100% / 6);
+					//margin: 0 27px 5px 0;
+				}
+			}
+
+			&--room {
+
+				ul {
+					li {
+						width: (100% / 4);
+					}
+				}
+			}
+		}
+
+		&__box {
+
+			justify-content: space-between;
+			flex-direction: row;
+			align-items: center;
+			padding: 16px 0;
+
+			ul {
+
+				li {
+					font-size: $fontSizeBase;
+				}
+			}
+		}
+	}
+}

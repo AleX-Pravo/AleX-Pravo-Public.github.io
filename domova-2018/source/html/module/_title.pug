@@ -1,0 +1,30 @@
+= '\n'
+//= Title =
+each item in title
+    - var modifier = (item.modifier) ? item.modifier : '';
+
+    if (item.second)
+        .title(class= modifier)
+
+            if (item.elem)
+                #{item.elem}.title__name
+                    if (item.icon)
+                        img.title__icon(src= item.icon alt='')
+                    | #{item.name}
+            else
+                h1.title__name= item.name
+
+            if (item.text)
+                .title__text!= item.text
+    else
+        .title(class= modifier)
+            if (item.icon)
+                img.title__icon(src= item.icon alt='')
+            if (item.text)
+                .title__text!= item.text
+            if (item.elem)
+                #{item.elem}.title__name= item.name
+            else
+                h1.title__name= item.name
+//= End title =
+= '\n'

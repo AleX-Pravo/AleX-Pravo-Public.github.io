@@ -1,0 +1,26 @@
+= '\n'
+//= Header =
+
+header.header
+    .header__wrapper
+        include ../module/_search.pug
+        include ../module/_logo.pug
+        a.city.modaal-inline(href="#search") Івано-Франківськ
+            +icon('icon-pointer')
+        .header__menu
+            include _nav.pug
+            include ../module/_languages.pug
+
+
+    = '\n'
+    //= Mobile menu => button =
+
+    .mobile-menu.hide-screen-l-min
+        a.mobile-menu__button.call-aside(href='javascript:void(0);' data-trigger='mobile-drop')
+            +icon('icon-button')
+
+    //= End mobile menu => button =
+    = '\n'
+
+//= End header =
+= '\n'

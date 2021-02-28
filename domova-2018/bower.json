@@ -1,0 +1,14 @@
+{
+    "name": "domova",
+    "version": "1.0.0",
+    "description": "domova",
+    "authors": [
+        "Kozachuk Oleksandr <css3@ukr.net>"
+    ],
+    "license": "ISC",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}

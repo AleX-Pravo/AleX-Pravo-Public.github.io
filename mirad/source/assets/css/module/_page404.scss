@@ -1,0 +1,25 @@
+.page404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+        font-size: $fontSizeH1;
+        color: $grayDarker;
+        margin: 0;
+        font-weight: 800;
+        font-family: $HouschkaProBold;
+    }
+    p {
+        font-size: $fontSizeBase;
+        color: $grayDarker;
+        a {
+            padding-left: 3px;
+        }
+    }
+    @media (min-width: 1024px) {
+        h1 {
+            font-size: $fontSizeH3;
+        }
+    }
+}

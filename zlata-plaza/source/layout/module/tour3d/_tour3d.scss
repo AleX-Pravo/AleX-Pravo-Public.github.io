@@ -1,0 +1,31 @@
+@import 'vars/_variable.scss';
+
+.tour3d {
+    position: fixed;
+    bottom: 15px;
+
+    &__link {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    @media (max-width: $screenSmMax) {
+        right: 15px;
+        border-radius: 50%;
+        background: #fff url('../images/content/icon/3d-device.png') center no-repeat;
+        box-shadow: 0 5px 10px rgba(156, 53, 127, 0.4);
+    }
+
+    @media (min-width: $screenMdMin) {
+        left: 15px;
+
+        &__link {
+            width: 66px;
+            height: 66px;
+            background: url('../images/content/icon/3d.png') no-repeat;
+        }
+    }
+}

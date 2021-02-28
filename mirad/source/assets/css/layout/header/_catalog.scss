@@ -1,0 +1,188 @@
+.catalog {
+    background: $brandPrimary;
+    max-width: 260px;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    &__list {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        font-size: $fontSizeH1;
+        padding: 10px 0 10px 30px;
+        position: relative;
+        a {
+            color: $base;
+            text-decoration: none;
+        }
+        &:not(:first-child) {
+            display: none;
+            &:hover {
+                background: $base;
+                a {
+                    color: $brandPrimary;
+                }
+                ul {
+                    li {
+                        a {
+                            color: $grayDark;
+                        }
+                    }
+                }
+                .catalog {
+                    &__image {
+                        path {
+                            fill: $brandPrimary;
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            position: absolute;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+            background: $base;
+            padding: 15px;
+            top: 0;
+            left: 260px;
+            column-count: 3;
+            z-index: 1;
+            display: none;
+
+            li {
+                flex-basis: 33%;
+                padding: 5px;
+                white-space: nowrap;
+                &:not(:first-child) {
+                    display: flex;
+                }
+
+                a {
+                    color: $grayDark;
+                    font-size: $fontSizeSmall;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &__image {
+        position: relative;
+        margin: 0 15px 0 0;
+        max-width: 25px;
+        width: 100%;
+        height: 23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        path {
+            fill: #fff;
+        }
+        svg {
+            fill: #fff;
+            overflow: visible;
+        }
+    }
+
+    #matrix[data-name= matrix] {
+        circle {
+            &:first-child {
+                transform: translate3d(5px, 5px, 0) scale(1.2);
+                transition: all .4s ease;
+            }
+            &:last-child {
+                transform: translate3d(-5px, -5px, 0) scale(1.2);
+                transition: all .4s ease;
+            }
+            &:nth-child(n+2):nth-child(-n+8) {
+                transition: all .4s ease;
+            }
+            &:nth-child(2) {
+                transform: translate3d(0px, -20px, 0);
+            }
+            &:nth-child(3) {
+                transform: translate3d(20px, -20px, 0);
+            }
+            &:nth-child(4) {
+                transform: translate3d(-50px, 0px, 0);
+            }
+            &:nth-child(5) {
+                opacity: 0;
+            }
+            &:nth-child(6) {
+                transform: translate3d(215px, 0px, 0);
+            }
+            &:nth-child(7) {
+                transform: translate3d(-40px, 40px, 0);
+            }
+            &:nth-child(8) {
+               transform: translate3d(0px, 40px, 0);
+               opacity: 0;
+            }
+        }
+    }
+
+    &--mobile {
+        position: relative;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        li {
+            padding: 10px 0 10px 0;
+            border-bottom: 1px solid $footerBackground;
+            flex-direction: column;
+            &:first-child {
+                border: none;
+            }
+            &:not(:first-child) {
+                display: none;
+            }
+            .catalog {
+                &__image {
+                    margin: 0 10px 0 0;
+                    svg {
+                        fill: $brandPrimary;
+                    }
+                    path {
+                        fill: $brandPrimary;
+                    }
+                }
+            }
+            ul {
+                position: relative;
+                flex-direction: column;
+                left: 0;
+                column-count: auto;
+                box-shadow: none;
+                padding: 15px 0 15px 20px;
+                width: 100%;
+                li {
+                    align-items: flex-start;
+                    border: none;
+                    &:not(:first-child) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+
+
+        li {
+            a {
+                color: $brandPrimary;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+

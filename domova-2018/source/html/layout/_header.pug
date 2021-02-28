@@ -1,0 +1,143 @@
+= '\n'
+//= Header =
+header.header#header
+
+    .header__top
+        .container
+            .header__top-wrapper
+                .header__logo-720
+                    a.header__logo(href='#')
+                        img.header__logo-image(src='assets/images/header/logo-new.svg' alt='')
+
+                //-include header/_mobile-menu.pug
+
+                = '\n'
+                //= Mobile menu =
+                .mobile-menu
+                    a.mobile-menu__button(href="#")
+                        span.mobile-menu__button-text МЕНЮ
+                        span.mobile-menu__button-icon
+
+                //= End mobile menu =
+                = '\n'
+
+                ul.header__nav
+                    each item in headerNav
+                        li.header__nav-item
+                            if (item.active)
+                                a.header__nav-link.active(href='#')= item.name
+                            else
+                                a.header__nav-link(href='#')= item.name
+
+                ul.header__menu
+                    li.header__menu-item
+                        //-include ../module/_social.pug
+
+                        .header__info-item.header__info-item--place.header__info-item--dropper
+                            .header__info-data
+                                .header__info-name Ваш регіон:
+                                //-&nbsp;
+                                .header__info-value
+                                    //-include ../module/_citylist.pug
+                                    include ../module/_citylist2.pug
+
+                    li.header__menu-item
+                        include ../module/_language.pug
+
+                    //-li.header__menu-item
+                        //-include ../module/_usersoc.pug
+
+    .header__bottom
+        #menus
+            .container
+                .header__wrapper
+                    .header__left
+                        a.header__logo(href='#')
+                            img.header__logo-image(src='assets/images/header/logo-new.svg' alt='')
+
+                    .header__content
+
+                        .header__info
+                            //- .header__info-item.header__info-item--place.header__info-item--dropper
+                            //-     .header__info-data
+                            //-         .header__info-name В якому ви місті?
+                            //-         //-&nbsp;
+                            //-         .header__info-value
+                            //-             //-include ../module/_citylist.pug
+                            //-             include ../module/_citylist2.pug
+
+                            .header__info-item.header__info-item--clock
+                                .header__info-data
+                                    .header__info-name Щоденно:
+                                    .header__info-value 07:00 - 21:00
+
+                            .header__info-item.header__info-item--place.header__info-item--dropper
+                                .header__info-data
+                                    .header__info-name Ваш регіон:
+                                    //-&nbsp;
+                                    .header__info-value
+
+                                        include ../module/_citylist2.pug
+
+                            //- .header__info-item.header__info-item--phone.header__info-item--dropper
+                            //-     .header__info-data
+                            //-         .header__info-name Багатоканальний:
+                            //-         .header__info-value.dropping 0 (800) 505-505
+                            //-             .header__info-drop
+                            //-                 .header__info-drop-inner
+                            //-                     a(href='tel:+380800505505') 0 (800) 505-505
+                            //-                     a(href='tel:+380800505505') 0 (800) 505-505
+                            //-                     a(href='tel:+380800505505') 0 (800) 505-505
+
+                            //- .header__info-item.header__info-item--phone.header__info-item--dropper.show-number
+                            //-     .header__info-data
+                            //-         .header__info-name показати номер
+
+                            //-     .header__info-drop
+                            //-         .header__info-drop-inner
+                            //-             a(href='tel:+380800505505') 0 (800) 505-505
+                            //-             a(href='tel:+380800505505') 0 (800) 505-505
+                            //-             a(href='tel:+380800505505') 0 (800) 505-505
+
+                            .header__info-item.header__info-item--phoneNew
+                                .header__info-item--phoneNew-name Зателефонувати
+
+                                .header__info-item--phoneNew-drop
+                                    .header__info-item--phoneNew-inner
+                                        a(href='tel:+380352425303') 0352 42 53 03
+                                        a(href='tel:+380676960303') 067 696 03 03
+                                    .header__info-item--phoneNew-inner
+                                        a(href='tel:+380936050303') 093 605 03 03
+                                        a(href='tel:+380996050303') 099 605 03 03
+
+                        .header__callbackNew
+                            a.header__callbackNew-button(href='#' data-content-1='Викликати майстра' data-content-2='Викликати майстра')
+
+                        .header__callback
+                            a.header__callback-button(href='#' data-content-1='Отримати консультацію' data-content-2='Отримати консультацію')
+
+                        //!!!!!!! data-content-2='викликати майстра' будет появляться при екране меньше 1024рх а выше 1024 data-content-1='Отримати консультацію'
+                        .header__buttonMenu
+                            a.mobile-menu__button(href='#')
+                                span.mobile-menu__button-text МЕНЮ
+                                span.mobile-menu__button-icon
+
+                    //-include ../module/_searchfix.pug
+
+        .header__line
+            .container
+                .header__line-content
+                    //-a.mobile-menu__button(href="#")
+                        span.mobile-menu__button-icon
+
+                    include ../module/_headerSearch.pug
+
+                    .header__callback-desk
+                        a.header__callback-button(href='#' data-content-1='Викликати майстра' data-content-2='Викликати майстра')
+
+                    .header__callback
+                        a.header__callback-button(href='#' data-content-1='Отримати консультацію' data-content-2='Отримати консультацію')
+
+
+//= End header =
+= '\n'

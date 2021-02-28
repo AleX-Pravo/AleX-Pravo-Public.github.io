@@ -1,0 +1,54 @@
+-
+    searchDropList = [
+        {
+            class1: 'active',
+            class2: 'search-selected',
+            title: 'Промивання великого теплообмінника газової колонки'
+        },
+        {
+            class1: '',
+            class2: '',
+            title: 'Встановлення пластикового бачка унітазу'
+        },
+        {
+            class1: '',
+            class2: '',
+            title: 'Встановлення керамічного бачка унітазу'
+        },
+        {
+            class1: '',
+            class2: '',
+            title: 'Встановлення вбудованого бачка унітазу (інсталяції)'
+        }
+    ]
+
+= '\n'
+//= header__search =
+.header__search
+    //-.container
+    = '\n'
+    //= Main-search =
+    //- (module/_main-search.scss)
+    form.main-search(method='post' action='')
+        .main-search__field
+            button.main-search__submit(type='submit' data-content='Пошук')
+            input.main-search__input(type='text' name='' placeholder='Шукайте, наприклад, ремонт крану')
+            label.cursors
+        = '\n'
+        //= Search -> drop =
+        //- (module/_drop.scss)
+        .search__drop.search__drop--result
+
+            each val, index in searchDropList
+                .search__dropItem
+                    if (index == 0)
+                        a.search__dropTitleLink(class=val.class1 class=val.class2 href='#')= val.title
+                    else
+                        a.search__dropTitleLink(href='#')= val.title
+
+        //= End search -> drop =
+        = '\n'
+    //= End main-search =
+    = '\n'
+//= End header__search =
+= '\n'

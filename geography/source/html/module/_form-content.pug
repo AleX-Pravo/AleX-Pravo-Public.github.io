@@ -1,0 +1,28 @@
+= '\n'
+//= form-content =
+//-=(source/assets/css/layout/form/_form-respond.scss)=
+.form-content
+	- nameTitle = 'Інформація про вас'
+	- classTitle = 'caption--base'
+	include _caption.pug
+
+	- formBox = formBoxRespond
+	include _form-box.pug
+
+	- nameTitle = 'Чи будете ви рекомендувати наш готель колегам, друзям?'
+	- classTitle = 'caption--base'
+	include _caption.pug
+
+	include _appearance-payment.pug
+
+	p Опишіть що вам не сподобалось, щоб ми могли це виправити.
+	include _textarea.pug
+
+	- nameTitle = 'Щоб ви порадили для покращення нашого сервісу?'
+	- classTitle = 'caption--base'
+	include _caption.pug
+
+	include _textarea.pug
+
+//= End form-content =
+= '\n'

@@ -1,0 +1,83 @@
+-
+    var profileUserinfoList = [
+        {
+            id: 'Продукти на ужин',
+            date: '28.03.2019',
+            text: 'еще 2 дати',
+            type: true,
+            subitem: [{
+                    image: 'order-1',
+                    title: 'Капуста белокочанная',
+                    price: '239.00 грн/кг',
+                    weight: '25 кг',
+                    total: '1 500 грн'
+                },
+                {
+                    image: 'order-2',
+                    title: 'Масло «Golden Kings of Ukraine» льняное 100 мл',
+                    price: '289.00 грн/кг',
+                    weight: '100 мл',
+                    total: '34 грн'
+                }
+
+            ]
+        },
+        {
+            id: 'Фрукти на офис',
+            date: 'Доставка по',
+            week: 'ПН',
+            text: 'еще 2 дати',
+            unsubscribe: true,
+            subitem: [{
+                    image: 'order-3',
+                    title: 'Помидор черри',
+                    price: '239.00 грн/кг',
+                    weight: '110 кг',
+                    total: '1 500 грн'
+                },
+                {
+                    image: 'order-4',
+                    title: 'Питахая красная с красной мякотью',
+                    price: '289.00 грн/кг',
+                    weight: '13 кг',
+                    total: '786 грн'
+                }
+            ]
+        }
+    ]
+= '\n'
+//= Account order =
+//- (source/assets/css/layout/_profile-subscriptions.scss)
+.profile-subscriptions#profile
+    each item in profileUserinfoList
+        .profile-subscriptions__item
+            .profile-subscriptions__header.profile-header
+                .profile-subscriptions__id= item.id
+                .profile-subscriptions__datetime
+                    a.profile-subscriptions__date(href='#')= item.date
+                        if (item.week)
+                            i= item.week
+                    span.profile-subscriptions__text= item.text
+                if (item.type)
+                    .profile-subscriptions__type
+                        - for(var i = 0; i < 5; i++)
+                            img.profile-subscriptions__type-image(src='data/order/type-1.png' alt='')
+                        span.profile-subscriptions__type-text еще 10 товаров
+                if (subscribe && item.unsubscribe)
+                    .profile-subscriptions__unsubscribe
+                        button(type="button")= subscribe
+            if (item.subitem)
+                .profile-content.profile-subscriptions__content(style='display: none')
+                    each subitem in item.subitem
+                        .profile-subscriptions__content-item
+                            .profile-subscriptions__content-left
+                                a.profile-subscriptions__content-picture(href='#')
+                                    img.profile-subscriptions__content-image(src='data/order/' + subitem.image + '.png' alt='')
+                                a.profile-subscriptions__content-title(href='#')= subitem.title
+                            .profile-subscriptions__content-right
+                                .profile-subscriptions__content-price= subitem.price
+                                .profile-subscriptions__content-weight= subitem.weight
+                                .profile-subscriptions__content-total= subitem.total
+
+//= End account order =
+= '\n'

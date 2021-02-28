@@ -1,0 +1,13 @@
+= '\n'
+//= topBlock
+//-=(module/_topBlock.scss)=
+.topBlock
+    .container
+        .topBlock__item
+            include _breadcrumbs.pug
+        if (topBlocktitle)
+            - var titleInfo = subTitle
+            include __title.pug
+//= End topBlock =
+= '\n'
+

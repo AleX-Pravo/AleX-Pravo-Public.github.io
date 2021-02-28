@@ -1,0 +1,125 @@
+doctype html
+html(lang='ru')
+    head
+        include partials/_head.pug
+        title Write a review
+        include partials/_styles.pug
+
+    body
+        = '\n'
+        // layout
+        .layout
+            .layout__header
+                include modules/_header.pug
+
+            .layout__body
+                .layout__content
+                    main.layout__main
+
+                        = '\n'
+                        // box
+                        .box
+                            .box__content
+
+                                -
+                                    let comments = [
+                                        {
+                                            text: 'My GPA is 4.0 and I’ve always been doing everything myself, but there is a class which I was about to fail thus my GPA would decrease first time in so many years. I ordered few assignments to be completed with GrabMyEssay.com and you did a great job! Thanks to you I still remain one of the best students on campus.',
+                                            name: 'Rosalinda, Mexico',
+                                            info: 'Essay・Politics・8 pages・5 days・Junior'
+                                        },
+                                        {
+                                            text: 'First time when I placed an order with you, I just lacked time to do all the homework and it was a lot going on in my family. But today I’m doing it sometimes just for fun – I really enjoy communicating with your Customer Support members and just letting myself being a bit lazy.',
+                                            name: 'Yuong Lo Mui, China',
+                                            info: 'Literature review・IT・17 pages・4 days・Mater\'s'
+                                        },
+                                        {
+                                            text: 'I am on my maternity leave now, so I spend a lot of time at home taking care of my little son. I’ve decided to get one more higher education degree while I’m spending so much time at home and applied for distance learning in one online college. But caring a baby takes even more time then I excepted so I’m the way too busy to write the complicated masters level research works, but GrabMyEssay.com is so-so-so cool! Thank you for that you exist! I don’t know what I would do without you all!',
+                                            name: 'Karen, USA',
+                                            info: 'Essay・Education・15 pages・8 days・Mater\'s'
+                                        },
+                                        {
+                                            text: 'I ordered my dissertation on this website as I had really no time to write it myself. The topic was not easy and the paper was delivered with small delay, but quality was great. Deep research and proper formatting - I am happy with this service, thanks a lot.',
+                                            name: 'Lily, Qatar',
+                                            info: 'Dissertation・HR Management・56 pages・14 days・PhD'
+                                        },
+                                        {
+                                            text: 'I am not used to such services and I usually write all the papers by myself. But this time I got in a very difficult situation and had to order my paper on this website. To my surprise it appeared to be quite good. Thank you, it is really nice service. Think I\'ll get back to you soon!',
+                                            name: 'Jeremy, USA',
+                                            info: 'Thesis・Management・34 pages・14 days・Master’s'
+                                        },
+                                        {
+                                            text: 'Your support team is the best! They are quick, friendly and very helpful. Apart from this, the papers you provide are also of good quality. I will recommend this service to all my friends!',
+                                            name: 'Joseph, Hungary',
+                                            info: 'Book Review・Sociology・7 pages・10 days・Junior'
+                                        },
+                                        {
+                                            text: 'I am studying and working at the same time and it is difficult to cope with university assignments as I am very tired after the work day. You service is a salvation for me as it helps to do everything on time. I am really happy about it. Wish you everything the best! Especially my lovely writer 109!',
+                                            name: 'Desmond, USA',
+                                            info: 'Coursework・Religion・11 pages・7 days・Master\'s'
+                                        },
+                                        {
+                                            text: 'I was in the bad mood as I had problems in my personal life and did not want to do anything. My friend advised me to use this service and I agreed. After receiving my coursepaper my mood extremely changed: the work was so great that I could not stay sad. Great job, thanks!',
+                                            name: 'Betty, Canada',
+                                            info: 'Coursework・World History・13 pages・18 hours・Senior'
+                                        },
+                                        {
+                                            text: 'You know, there are such situations when you totally forget something and it comes to your mind only when the deadline is near. When I found myself in such situation I decided to order my assignment here and did not regret it: it was done even before the deadline and it did not affect its quality: it was more than just good. Thank you.',
+                                            name: 'Lucy, USA',
+                                            info: 'Lag report・Physics・11 pages・3 days・Master’s'
+                                        }
+
+                                    ]
+                                = '\n'
+                                // comments
+                                .comments
+                                    .comments__header
+                                        .comments__title Testimonials
+                                        .comments__label customers would like to know what other people think about GrabMyEssay.com
+                                        .comments__text.
+                                            This page presents feedbacks from customers who at least once used our service. Take a look what people, just like you, think about services we offer. All feedbacks are 100% authentic. Feel free to share your thoughts as well.
+
+                                        .comments__form
+                                            .comments__line
+                                                .comments__appellation Write a review
+                                                .comments__rating
+                                                    include modules/_ratio.pug
+                                            .comments__field.f_group
+                                                .comments__block.f_textarea
+                                                    textarea.comments__textarea Write your review
+
+                                        .comments__action
+                                            a.comments__button.button.button--dark(href='#') Send
+
+                                    .comments__list
+                                        each item in comments
+                                            .comments__item
+                                                .comments__top
+                                                    .comments__quote
+                                                    .comments__ratio
+                                                        include modules/_ratio.pug
+                                                .comments__message= item.text
+                                                .comments__name= item.name
+                                                .comments__info= item.info
+                                    .comments__paginator
+                                        include modules/_paginator.pug
+                                // end comments
+                                = '\n'
+
+                            .box__side
+                                .box__item
+                                    include modules/_getaprice.pug
+                        // end box
+                        = '\n'
+
+                        include modules/_safe.pug
+
+            .layout__footer
+                include modules/_footer.pug
+                include modules/_promo.pug
+
+        // end layout
+        = '\n'
+        include modules/_up.pug
+        include modules/_cookies.pug
+        include partials/_scripts.pug

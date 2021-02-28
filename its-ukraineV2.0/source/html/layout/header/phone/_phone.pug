@@ -1,0 +1,32 @@
+= '\n'
+//= headerPhone =
+//-=(/layout/header/phone/_phone.scss)=
+.headerPhone
+    -
+        var headerPhone = [
+            {
+                name: 'tel',
+                text: '<span>(044)</span> 222-71-41'
+            },
+            {
+                name: 'life',
+                text: '<span>(093)</span> 450-2222'
+            },
+            {
+                name: 'ks',
+                text: '<span>(097)</span> 700-36-36'
+            },
+            {
+                name: 'mts',
+                text: '<span>(066)</span> 823-30-30'
+            }
+        ]
+    ul.headerPhone__list
+        each val in headerPhone
+            li.headerPhone__item
+                .phones-image
+                    img(src='../assets/images/header/'+ val.name +'.png' alt='')
+                .phones-text!= val.text
+
+//= End headerPhone =
+= '\n'

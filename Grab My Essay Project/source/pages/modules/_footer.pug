@@ -1,0 +1,183 @@
+= '\n'
+// footer
+-
+    footerMenu = [
+        {
+            title: 'Terms and Conditions',
+        },
+        {
+            title: 'Money Back Guarantee',
+        },
+        {
+            title: 'Cookie Policy',
+        },
+        {
+            title: 'Privacy Policy',
+        }
+    ]
+
+    footerSubMenu = [
+        'Essay Writing Service',
+        'Professional Essay Writers',
+        'Paper Writing Service',
+        'Write My Research Paper',
+        'Write My Essay',
+        'Essay Help',
+        'Write My Paper',
+        'Custom Research Paper',
+        'Custom Essay',
+        'Do My Essay',
+        'Paper Help',
+        'Pay For Research Paper',
+
+        'Pay For Essay',
+        'Type My Essay',
+        'Do My Paper',
+        'Buy Research Paper Online',
+
+        'Buy Essay Online',
+        'Essay For Sale',
+        'Paper For Money',
+        'Cheap Research Paper',
+
+        'Cheap Essay',
+        'Order Essay',
+        'Research Paper Writing Service',
+        'Professional Research Paper Writers',
+
+
+
+        'Research Paper Help',
+        'Custom Term Paper',
+        'Do My Term Paper',
+        'Pay For College Papers',
+
+        'Do My Research Paper',
+        'Pay For Term Paper',
+        'Term Paper For Sale',
+        'Buy College Papers Online',
+
+        'Research Paper For Sale',
+        'Buy Term Paper Online',
+        'Order Term Paper',
+        'Cheap College Papers',
+
+        'Order Research Paper',
+        'Cheap Term Paper',
+        'College Paper Writing Service',
+        'Professional College Paper Writers',
+
+        'Term Paper Writing Service',
+        'Professional Term Paper Writers',
+        'Write My College Papers',
+        'College Paper Help',
+
+        'Write My Term Paper',
+        'Term Paper Help',
+        'Custom College Papers',
+        'College Papers For Sale',
+
+
+        'Order College Papers',
+        'Cheap Dissertation',
+        'Dissertation Results Help',
+        'Buy Thesis Online',
+
+        'Dissertation Writing Service',
+        'Professional Dissertation Writers',
+        'Dissertation Discussion Help',
+        'Cheap Thesis',
+
+        'Write My Dissertation',
+        'Dissertation Help',
+        'Thesis Writing Service',
+        'Thesis Help',
+
+        'Custom Dissertation',
+        'Dissertation Proposal Help',
+        'Write My Thesis',
+        'Thesis Proposal',
+
+        'Pay For Dissertation',
+        'Dissertation Introduction Help',
+        'Custom Thesis',
+        'Phd Thesis Writers',
+
+        'Buy Dissertation Online',
+        'Dissertation Abstract Help',
+        'Pay For Thesis',
+        'Coursework Writing Service',
+
+
+        'Write My Coursework',
+        'Book Report Help',
+        'Professional Case Study',
+        'Buy Narrative Essay',
+
+        'Custom Coursework',
+        'Case Study Writing Service',
+        'Writers Case Study Help',
+        'Buy Process Essay',
+
+        'Buy Coursework Online',
+        'Write My Case Study',
+        'Buy Descriptive Essay',
+        'Buy Argumentative Essay',
+
+        'Cheap Coursework',
+        'Custom Case Study',
+        'Buy Definition Essay',
+        'Buy Critical Essay',
+
+        'Professional Coursework Writers',
+        'Buy Case Study Online',
+        'Buy Compare And Contrast Essay',
+        'Buy Expository Essay',
+
+        'Coursework Help',
+        'Cheap Case Study',
+        'Buy Cause And Effect Essay',
+        'Buy Persuasive Essay',
+
+        'Buy Literature Review',
+        'Write My Lab Report',
+        'Write My Admission Essay',
+
+        'Buy Lab Report Online',
+        'Buy Admission Essay Online',
+        'Buy Personal Statement Online'
+    ]
+footer.footer
+    .footer__top
+        .container
+            .footer__logo
+                include _logo.pug
+            .footer__contact
+                .footer__contact-title Contact Info
+                a.footer__contact-link(href='tel:18889801257') 1-888-980-1257
+                a.footer__contact-link(href='mailto:support@grabmyessay.com') support@grabmyessay.com
+                .footer__social
+                    include _social.pug
+
+    .footer__center
+        .container
+            .footer__menu
+                .footer__wrap
+                    each item in footerMenu
+                        .footer__inner
+                            a.footer__title(href='#')= item.title
+
+                .footer__submenu
+                    ul.footer__list
+                        each val in footerSubMenu
+                            li.footer__item
+                                a.footer__link(href='#')= val
+
+    .footer__bottom
+        .container
+            .footer__box
+                .footer__copyright © GrabMyEssay.com, 2019
+                .footer__payment
+                    include _payment.pug
+// end footer
+= '\n'

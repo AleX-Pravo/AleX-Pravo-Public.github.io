@@ -1,0 +1,67 @@
+.breadcrumbs {
+    background: $breadcrumbsBg;
+    padding: 18px 0px;
+    line-height: 1.4;
+    display: none;
+
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 6px;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 5px;
+            height: 5px;
+            background: url('../images/content/breadcrumbs-arrow.png') no-repeat;
+            margin-left: 6px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+        color: $breadcrumbsLinkColor;
+        font-size: $fontSizeBase;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__current {
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: $fontSizeBase;
+        color: $brandPrimary;
+        transition: all 0.2s ease-out;
+    }
+
+    @media (min-width: 600px) {
+        &__link {
+            font-size: $fontSizeH5;
+        }
+
+        &__current {
+            font-size: $fontSizeH5;
+        }
+    }
+
+    @media (min-width: 720px) {
+        display: block;
+    }
+}
+

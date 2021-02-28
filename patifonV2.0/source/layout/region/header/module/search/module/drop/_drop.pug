@@ -1,0 +1,29 @@
+include vars/_variable.pug
+
+= '\n'
+//= Search -> drop =
+.search__drop.search__drop--list
+    ul.search__dropList
+
+        each val in searchDropList
+            li.search__dropListItem
+                a.search__dropListLink(href='#')= val
+
+.search__drop.search__drop--result
+
+    - for (i = 0; i < 2; i++)
+        .search__dropItem
+            a.search__dropImage
+                img(src='data/search/image.jpg' alt='')
+
+            .search__dropContent
+                .search__dropTitle
+                    a.search__dropTitleLink(href='#') LeEco (LeTv) Cool1 3/32GB (Silver)
+
+                .search__dropCategory Смартфоны
+                .search__dropPrice 3 750 грн
+
+    .search__dropResult
+        a.search__dropResultLink(href='#') Все результаты поиска
+//= End search -> drop =
+= '\n'

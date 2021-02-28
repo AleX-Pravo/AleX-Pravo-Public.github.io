@@ -1,0 +1,28 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'News page'
+    breadcrumbs = ['Главная', 'Новости и статьи']
+
+    tab = true
+
+    tabList = tabNewsAndArticles
+    news = newsFull
+
+    pageTabInit = true
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include module/page404/_page404.pug
+
+        //= End layout =
+        include core/_script.pug

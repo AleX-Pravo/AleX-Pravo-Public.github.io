@@ -1,0 +1,65 @@
+= '\n'
+//= characteristics =
+//- (source/assets/css/module/_characteristics.scss)
+-
+    micromarking = true
+
+    itemscope = (micromarking) ? true : false
+    itemtype = (micromarking) ? 'http://schema.org/Product' : false
+
+.characteristics(itemscope= itemscope itemtype= itemtype)
+    -
+        itempropInnerName       = (micromarking) ? 'name' : false
+        itempropInnerSku        = (micromarking) ? 'sku' : false
+        itempropInnerImage      = (micromarking) ? 'image' : false
+
+        itempropBrand           = (micromarking) ? 'brand' : false
+        itempropBrandContent    = (micromarking) ? 'it\'s Ukraine' : false
+
+    p(itemprop= itempropInnerSku) Koд: 19793
+    h3(itemprop= itempropInnerName) Футболка базова чорна
+    meta(itemprop= itempropBrand content= itempropBrandContent)
+
+    -
+        itemprop = (micromarking) ? 'offers' : false
+        itemtype = (micromarking) ? 'http://schema.org/Offer' : false
+
+    .characteristics__content(itemprop= itemprop itemscope= itemscope itemtype= itemtype)
+        -
+            itempropPrice = (micromarking) ? 'price' : false
+            itempropPriceContent = (micromarking) ? '1866' : false
+
+            itempropCurr = (micromarking) ? 'priceCurrency' : false
+            itempropCurrContent = (micromarking) ? 'UAH' : false
+
+        link(itemprop='availability' href='http://schema.org/InStock')
+        meta(itemprop="url" content="https://it's-ukraine.com/")
+
+        .price(itemprop= itempropPrice content= itempropPriceContent) 1500
+            span(itemprop= itempropCurr content= itempropCurrContent) ₴
+
+        p <b>Особливості фасону:</b> круглий виріз горловини, приталений крій виробу та посилені плечові шви.
+        p <b>Склад:</b> 100% бавовна
+
+        span <b>Розмір:</b>
+        .characteristics__sizes
+            each val, index in boxSize
+                .size
+                    - modifier = (index == 3) ? true : false
+                    input(type='radio' name='size' checked= modifier)
+                    label(for='size')= val
+
+        p <b>Колір:</b>
+        .characteristics__color
+            each val, index in colorPanel
+                .color
+                    - modifier = (index == 2) ? true : false
+                    input(type='radio' name='color' checked= modifier)
+                    label(for='color' style=val)
+        .characteristics__panel
+            include _quantity.pug
+            button.button Додати в кошик
+
+- micromarking = false
+//= End characteristics =
+= '\n'

@@ -1,0 +1,15 @@
+include vars/_variable.pug
+
+//= Gallery =
+.gallery
+    each val in gallery
+        .gallery__item
+            .gallery__inner
+                a.gallery__image(href='#')
+                    img(src='data/share/' + val.image + '.jpg' alt='')
+
+                .gallery__content
+                    .gallery__title
+                        a.gallery__link(href='#')= val.title
+//= End gallery =
+= '\n'

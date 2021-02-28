@@ -1,0 +1,41 @@
+-
+    var mobileMenu = true
+
+= '\n'
+//= Mobile menu =
+.mobile-menu
+    //- a.mobile-menu__button(href="#")
+    //-     span.mobile-menu__button-text МЕНЮ
+    //-     span.mobile-menu__button-icon
+
+        //-span.mobile-menu__line
+
+    .mobile-menu__drop
+
+        a.mobile-menu__close(href="#")
+        //-.mobile-menu__dropTop
+
+        = '\n'
+        //= Language =
+        .language.language--dropper
+            .language__inner
+                a.language__link.language__link--ua.active(href='javascript: void(0);') УКР
+            .language__inner
+                a.language__link.language__link--ru(href='javascript: void(0);') Рус
+        //= End language =
+        = '\n'
+
+        .mobile-menu__dropContent
+            .mobile-menu__wrapper
+                ul.mobile-menu__list
+                    each item in headerNav
+                        li.mobile-menu__item
+                            if (item.active)
+                                a.mobile-menu__link.mobile-menu__link--active(href='#')= item.name
+                            else
+                                a.mobile-menu__link(href='#')= item.name
+
+//= End mobile menu =
+= '\n'
+
+- var mobileMenu = false

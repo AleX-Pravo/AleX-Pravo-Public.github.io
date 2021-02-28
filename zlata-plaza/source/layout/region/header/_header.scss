@@ -1,0 +1,222 @@
+@import 'vars/_variable.scss';
+
+.header {
+    margin: 0 0 50px;
+
+    &__device {
+        position: fixed;
+        z-index: 102;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        background: transparentize(#ebebeb, .15);
+
+        &-menu {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            margin: -10px 0 0;
+
+            &--open {
+                .header {
+                    &__device {
+                        &-menu {
+                            &-button {
+                                &:before {
+                                    top: 9px;
+                                    transform: rotate(135deg);
+                                }
+
+                                &:after {
+                                    bottom: 9px;
+                                    transform: rotate(-135deg);
+                                }
+
+                                &-line {
+                                    left: -21px;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-button {
+                position: relative;
+                z-index: 102;
+                display: block;
+                width: 32px;
+                height: 20px;
+                padding: 9px 0 8px;
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    display: block;
+                    height: 2px;
+                    content: '';
+                    transition: all .2s linear;
+                }
+
+                &:before {
+                    top: 0;
+                    background: #e6007e;
+                }
+
+                &:after {
+                    bottom: 0;
+                    background: #b24493;
+                }
+
+                &-line {
+                    position: relative;
+                    left: 0;
+                    display: block;
+                    height: 2px;
+                    transition: all .2s linear;
+                    background: #d2072a;
+                }
+            }
+
+            &-drop {
+                position: fixed;
+                z-index: 101;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 320px;
+                padding: 50px 0 0;
+                transition: all .2s linear;
+                transform: translateX(-320px);
+                background: $header__deviceDropBackgroundColor;
+
+                &-top {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    display: block;
+                    height: 50px;
+                    padding: 0 15px;
+                    background: transparentize(#ebebeb, .15);
+                }
+
+                &-content {
+                    position: relative;
+                    overflow: auto;
+                    max-height: 100%;
+                    padding: 15px 30px 30px;
+                }
+
+                .greeting & {
+                    .lang {
+                        &__link {
+                            color: $grayDark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: 3px;
+        content: '';
+        background: url('../images/header/bg/line.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .greeting & {
+        background: none;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin: -14px 0 0;
+
+        &-inner {
+            position: relative;
+            overflow: hidden;
+            max-width: 650px;
+            margin: 0 0 0 auto;
+        }
+
+        &-left {
+            position: relative;
+            z-index: 1;
+            float: left;
+            margin: 0 40px 0 0;
+        }
+    }
+
+    @import 'module/contacts/_contacts.scss';
+    @import 'module/lang/_lang.scss';
+    @import 'module/logo/_logo.scss';
+    @import 'module/menu/_menu.scss';
+    @import 'module/search/_search.scss';
+    @import 'module/socnet/_socnet.scss';
+
+    &__device {
+        &-menu {
+            &-drop {
+                .greeting & {
+                    .lang {
+                        margin-top: 7px;
+
+                        &__item {
+                            font-size: 16px;
+
+                            &--active {
+                                .lang {
+                                    &__link {
+                                        cursor: default;
+                                        color: $lang__linkColor--active;
+                                    }
+                                }
+                            }
+                        }
+
+                        &__link {
+                            color: $lang__linkColor;
+
+                            &:hover {
+                                color: $lang__linkColor--active;
+                            }
+                        }
+                    }
+
+                    .menu {
+                        &__link {
+                            color: $menu__linkColor;
+
+                            &:hover {
+                                color: $menu__linkColor--active;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+
+        margin-bottom: 4px;
+        padding: 20px 0;
+
+    }
+}

@@ -1,0 +1,20 @@
+//- SECONDARY MENU
+//------------------------------------------------
+
+$secondaryMenu__linkFontSize:             $fontSizeH2 !default;
+$secondaryMenu__linkColor:                $base !default;
+
+$secondaryMenu__sublinkFontSize:          $fontSizeH2 !default;
+$secondaryMenu__sublinkColor:             $base !default;
+
+$secondaryMenu__shopBgColor:              #f72498 !default;
+$secondaryMenu__shopMaskBgColor:          transparentize($secondaryMenu__shopBgColor, .45) !default;
+
+$secondaryMenu__foodBgColor:              #b14191 !default;
+$secondaryMenu__foodMaskBgColor:          transparentize($secondaryMenu__foodBgColor, .45) !default;
+
+$secondaryMenu__serviceBgColor:           #ed6939 !default;
+$secondaryMenu__serviceMaskBgColor:       transparentize($secondaryMenu__serviceBgColor, .45) !default;
+
+$secondaryMenu__entertainmentBgColor:     #f7a600 !default;
+$secondaryMenu__entertainmentMaskBgColor: transparentize($secondaryMenu__entertainmentBgColor, .45) !default;

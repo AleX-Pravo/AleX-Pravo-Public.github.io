@@ -1,0 +1,383 @@
+include vars/_variable.pug
+
+if (cartEdit == true)
+    - cartRowClass = 'cart__row--edit'
+
+else
+    - cartRowClass = ''
+
+= '\n'
+//= Cart =
+.cart
+    .cart__item
+        .cart__itemRow
+            .cart__itemContainer.cart__itemContainer--left
+                a.cart__image(href='#')
+                    img(src='data/cart/image.jpg' alt='')
+
+            .cart__itemContainer.cart__itemContainer--fixedLeft
+                .cart__itemContainerInner
+                    .cart__row.cart__row--main(class= cartRowClass)
+                        .cart__itemRow
+                            .cart__itemContainer.cart__itemContainer--right
+                                .cart__content.cart__content--amount
+                                    .cart__contentInner
+                                        .cart__amount
+                                            if (cartEdit == true)
+                                                .cart__amountInner
+                                                    input.cart__amountInput(type='text' value='2')
+
+                                                    a.cart__amountLink.cart__amountLink--minus(href='javascript:void(0);')
+                                                    a.cart__amountLink.cart__amountLink--plus(href='javascript:void(0);')
+
+                                            else
+                                                span.cart__amountText Количество:
+                                                span.cart__amountValue 1
+
+                                .cart__content.cart__content--left.cart__content--price
+                                    .cart__contentInner
+                                        .cart__price
+                                            .cart__priceOld 2 500 грн
+                                            | 2 300 грн
+
+                                if (cartEdit == true)
+                                    .cart__content.cart__content--left.cart__content--remove
+                                        .cart__contentInner
+                                            a.cart__remove(href='javascript:void(0);')
+                                                span.hide-mb-max Удалить
+
+                            .cart__itemContainer.cart__itemContainer--fixedRight
+                                .cart__content
+                                    .cart__contentInner
+                                        .cart__title
+                                            a.cart__titleLink(href='#') Samsung J710H Galaxy J7 (Black)
+
+
+                    .cart__row.cart__row--options(class= cartRowClass)
+                        .cart__itemRow
+                            .cart__itemContainer.cart__itemContainer--right
+                                .cart__content.cart__content--amount
+                                    .cart__contentInner
+                                        .cart__amount Количество:
+                                            span.cart__amountValue 1
+
+                                .cart__content.cart__content--left.cart__content--price
+                                    .cart__contentInner
+                                        .cart__price 140 грн
+
+                                if (cartEdit == true)
+                                    .cart__content.cart__content--left.cart__content--remove
+                                        .cart__contentInner
+                                            a.cart__remove(href='javascript:void(0);')
+                                                span.hide-mb-max Удалить
+
+                            .cart__itemContainer.cart__itemContainer--fixedRight
+                                .cart__content
+                                    .cart__contentInner
+                                        .cart__options
+                                            .cart__optionsImage
+                                                img(src='images/content/icon/options.png' alt='')
+
+                                            .cart__optionsTitle Гарантия
+
+                                            //-.cart__select
+                                                .select
+                                                    .select-button(href='javascript:void(0);')= cartSelectGuarantee[0].title
+
+                                                    .select-drop
+                                                        ul.select-list
+
+                                                            each val, index in cartSelectGuarantee
+
+                                                                if (index == 0)
+
+                                                                    if ('image' in val)
+                                                                        li.select-item.image.active= val.title
+                                                                            .select-image
+                                                                                img(src='data/product/select/' + val.image + '.jpg')
+
+                                                                    else
+                                                                        li.select-item.active= val.title
+
+                                                                else
+
+                                                                    if ('image' in val)
+                                                                        li.select-item.image= val.title
+                                                                            .select-image
+                                                                                img(src='data/product/select/' + val.image + '.jpg')
+
+                                                                    else
+                                                                        li.select-item= val.title
+
+                    .cart__row.cart__row--options(class= cartRowClass)
+                        .cart__itemRow
+                            .cart__itemContainer.cart__itemContainer--right
+                                .cart__content.cart__content--amount
+                                    .cart__contentInner
+                                        .cart__amount Количество:
+                                            span.cart__amountValue 1
+
+                                .cart__content.cart__content--left.cart__content--price
+                                    .cart__contentInner
+                                        .cart__price 140 грн
+
+                                if (cartEdit == true)
+                                    .cart__content.cart__content--left.cart__content--remove
+                                        .cart__contentInner
+                                            a.cart__remove(href='javascript:void(0);')
+                                                span.hide-mb-max Удалить
+
+                            .cart__itemContainer.cart__itemContainer--fixedRight
+                                .cart__content
+                                    .cart__contentInner
+                                        .cart__options
+                                            .cart__optionsImage
+                                                img(src='images/content/icon/options.png' alt='')
+
+                                            .cart__optionsTitle Программы
+
+                                            //-.cart__select
+                                                .select
+                                                    .select-button(href='javascript:void(0);')= cartSelectProgramm[0].title
+
+                                                    .select-drop
+                                                        ul.select-list
+
+                                                            each val, index in cartSelectProgramm
+
+                                                                if (index == 0)
+
+                                                                    if ('image' in val)
+                                                                        li.select-item.image.active= val.title
+                                                                            .select-image
+                                                                                img(src='data/product/select/' + val.image + '.jpg')
+
+                                                                    else
+                                                                        li.select-item.active= val.title
+
+                                                                else
+
+                                                                    if ('image' in val)
+                                                                        li.select-item.image= val.title
+                                                                            .select-image
+                                                                                img(src='data/product/select/' + val.image + '.jpg')
+
+                                                                    else
+                                                                        li.select-item= val.title
+
+                    .cart__row.cart__row--options(class= cartRowClass)
+                        .cart__itemRow
+                            .cart__itemContainer.cart__itemContainer--right
+                                .cart__content.cart__content--amount
+                                    .cart__contentInner
+                                        .cart__amount Количество:
+                                            span.cart__amountValue 1
+
+                                .cart__content.cart__content--left.cart__content--price
+                                    .cart__contentInner
+                                        .cart__price 140 грн
+
+                                if (cartEdit == true)
+                                    .cart__content.cart__content--left.cart__content--remove
+                                        .cart__contentInner
+                                            a.cart__remove(href='javascript:void(0);')
+                                                span.hide-mb-max Удалить
+
+                            .cart__itemContainer.cart__itemContainer--fixedRight
+                                .cart__content
+                                    .cart__contentInner
+                                        .cart__options
+                                            .cart__optionsImage
+                                                img(src='data/product/select/image.jpg' alt='')
+
+                                            .cart__optionsTitle Чехол
+
+                                            //-.cart__select
+                                                .select
+                                                    .select-button(href='javascript:void(0);')= cartSelectCase[0].title
+
+                                                    .select-drop
+                                                        ul.select-list
+
+                                                            each val, index in cartSelectCase
+
+                                                                if (index == 0)
+
+                                                                    if ('image' in val)
+                                                                        li.select-item.image.active= val.title
+                                                                            .select-image
+                                                                                img(src='data/product/select/' + val.image + '.jpg')
+
+                                                                    else
+                                                                        li.select-item.active= val.title
+
+                                                                else
+
+                                                                    if ('image' in val)
+                                                                        li.select-item.image= val.title
+                                                                            .select-image
+                                                                                img(src='data/product/select/' + val.image + '.jpg')
+
+                                                                    else
+                                                                        li.select-item= val.title
+
+    .cart__item
+        .cart__itemRow
+            .cart__itemContainer.cart__itemContainer--left
+                a.cart__image(href='#')
+                    img(src='data/cart/image.jpg' alt='')
+
+            .cart__itemContainer.cart__itemContainer--fixedLeft
+                .cart__itemContainerInner
+                    .cart__row.cart__row--main(class= cartRowClass)
+                        .cart__itemRow
+                            .cart__itemContainer.cart__itemContainer--right
+                                .cart__content.cart__content--amount
+                                    .cart__contentInner
+                                        .cart__amount
+                                            if (cartEdit == true)
+                                                .cart__amountInner
+                                                    input.cart__amountInput(type='text' value='2')
+
+                                                    a.cart__amountLink.cart__amountLink--minus(href='javascript:void(0);')
+                                                    a.cart__amountLink.cart__amountLink--plus(href='javascript:void(0);')
+
+                                            else
+                                                span.cart__amountText Количество:
+                                                span.cart__amountValue 1
+
+                                .cart__content.cart__content--left.cart__content--price
+                                    .cart__contentInner
+                                        .cart__price
+                                            .cart__priceOld 2 500 грн
+                                            | 2 300 грн
+
+                                if (cartEdit == true)
+                                    .cart__content.cart__content--left.cart__content--remove
+                                        .cart__contentInner
+                                            a.cart__remove(href='javascript:void(0);')
+                                                span.hide-mb-max Удалить
+
+                            .cart__itemContainer.cart__itemContainer--fixedRight
+                                .cart__content
+                                    .cart__contentInner
+                                        .cart__title
+                                            a.cart__titleLink(href='#') Samsung J710H Galaxy J7 (Black)
+
+    if (pageTitle != 'account')
+        .cart__share
+            .cart__shareTitle
+                .cart__shareTitleInner Акционное предложение
+
+            .cart__item
+                .cart__itemRow
+                    .cart__itemContainer.cart__itemContainer--left
+                        a.cart__image(href='#')
+                            img(src='data/cart/image2.jpg' alt='')
+
+                    .cart__itemContainer.cart__itemContainer--fixedLeft
+                        .cart__itemContainerInner
+                            .cart__row.cart__row--main
+                                .cart__itemRow
+                                    .cart__itemContainer.cart__itemContainer--right
+                                        .cart__content.cart__content--amount
+                                            .cart__contentInner
+                                                .cart__amount
+                                                    .cart__amountInner
+                                                        input.cart__amountInput(type='text' value='2')
+
+                                                        a.cart__amountLink.cart__amountLink--minus(href='javascript:void(0);')
+                                                        a.cart__amountLink.cart__amountLink--plus(href='javascript:void(0);')
+
+                                        .cart__content.cart__content--left.cart__content--price
+                                            .cart__contentInner
+                                                .cart__price
+                                                    .cart__priceOld 2 500 грн
+                                                    | 2 300 грн
+
+                                    .cart__itemContainer.cart__itemContainer--fixedRight
+                                        .cart__content
+                                            .cart__contentInner
+                                                .cart__title
+                                                    a.cart__titleLink(href='#') Монопод для селфи Monopod Mini 48СМ AUX
+
+                                                .cart__code код товара:
+                                                    strong 2039
+
+            .cart__item
+                .cart__itemRow
+                    .cart__itemContainer.cart__itemContainer--left
+                        a.cart__image(href='#')
+                            img(src='data/cart/image.jpg' alt='')
+
+                    .cart__itemContainer.cart__itemContainer--fixedLeft
+                        .cart__itemContainerInner
+                            .cart__row.cart__row--main
+                                .cart__itemRow
+                                    .cart__itemContainer.cart__itemContainer--right
+                                        .cart__content.cart__content--amount
+                                            .cart__contentInner
+                                                .cart__amount
+                                                    .cart__amountInner
+                                                        input.cart__amountInput(type='text' value='2')
+
+                                                        a.cart__amountLink.cart__amountLink--minus(href='javascript:void(0);')
+                                                        a.cart__amountLink.cart__amountLink--plus(href='javascript:void(0);')
+
+                                        .cart__content.cart__content--left.cart__content--price
+                                            .cart__contentInner
+                                                .cart__price 200 грн
+
+                                    .cart__itemContainer.cart__itemContainer--fixedRight
+                                        .cart__content
+                                            .cart__contentInner
+                                                .cart__title
+                                                    a.cart__titleLink(href='#') Защитное стекло Apple iPhone 7
+
+                                                .cart__code код товара:
+                                                    strong 2039
+
+            .cart__row.cart__row--bottom.cart__row--edit
+                .cart__itemContainer.cart__itemContainer--right
+                    .cart__content.cart__content--amount
+                        .cart__contentInner
+                            .cart__amount
+                                .cart__amountInner
+                                    input.cart__amountInput(type='text' value='2')
+
+                                    a.cart__amountLink.cart__amountLink--minus(href='javascript:void(0);')
+                                    a.cart__amountLink.cart__amountLink--plus(href='javascript:void(0);')
+
+                    .cart__content.cart__content--left.cart__content--price
+                        .cart__contentInner
+                            .cart__price 2 500 грн
+
+                    .cart__content.cart__content--remove
+                        .cart__contentInner
+                            a.cart__remove(href='javascript:void(0);')
+                                span.hide-mb-max Удалить
+
+                .cart__itemContainer.cart__itemContainer--fixedRight
+                    .cart__content
+                        .cart__contentInner
+                            .cart__title Стоимость этого комплекта
+
+        if (pageCart == true)
+            .cart__priceDelivery Доставка:
+                strong 50 грн
+
+        .cart__priceTotal Итого:
+            span.cart__priceTotalSum 6 050 грн
+
+        if (cartEdit == true)
+            .cart__itemRow
+                .cart__itemContainer.cart__itemContainer--back
+                    a.button.button--default.cart__buttonBack(href='#')
+                        i.button__icon
+                        | Продолжить покупки
+
+                .cart__itemContainer.cart__itemContainer--order
+                    a.button.button--buy(href='#')
+                        .button__text Оформить заказ
+//= End cart =
+= '\n'

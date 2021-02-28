@@ -1,0 +1,16 @@
+= '\n'
+//= report-item =
+//- (source/assets/css/layout/_report-item.scss)
+.report-item
+    each item in report
+        include _review.pug
+    a.report-item__link(href='javascript:void(0)')
+        .report-item__image
+            img(src="data/route/report.png", alt="")
+        p Запорізька січ — місце де зародилась демократія
+    .report-item__comments
+        a(href="javascript:void(0)") 1079
+        a(href="javascript:void(0)") 1079
+        span.report-item__date 13.30.2019
+//= End report-item =
+= '\n'

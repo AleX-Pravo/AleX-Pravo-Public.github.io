@@ -1,0 +1,28 @@
+= '\n'
+//= Contacts =
+.contacts
+    .contacts__wrapper
+        .contacts__box
+
+            .contacts__city
+                .contacts__city-name Виберіть ваше місто:
+                .contacts__city-value
+                    - selectricBorder = true
+                    include _citylist.pug
+
+            .contacts__map
+                img(src='data/map.png' alt='' style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; max-width: none;")
+
+        .contacts__decorate
+            img.contacts__decorate-image(src='data/domovik/contacts.png' alt='')
+
+    .contacts__info
+        each item in contactsInfo
+            .contacts__info-item
+                .contacts__info-wrapper
+                    .contacts__info-title.subtitle= item.title
+                    each val in item.list
+                        .contacts__info-field!= val
+
+//= End contacts =
+= '\n'

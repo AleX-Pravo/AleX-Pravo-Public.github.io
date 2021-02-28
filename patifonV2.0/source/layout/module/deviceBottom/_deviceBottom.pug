@@ -1,0 +1,16 @@
+include vars/_variable.pug
+
+= '\n'
+//= Device Bottom =
+.deviceBottom.hide-md-min
+    .deviceBottom__content
+
+        each val in deviceBottom
+            .deviceBottom__item
+                if val.target
+                    span.deviceBottom__link(data-target= val.target)= val.title
+                else 
+                    a.deviceBottom__link(href= val.link)= val.title
+
+//= End device Bottom =
+= '\n'

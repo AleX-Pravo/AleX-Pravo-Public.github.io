@@ -1,0 +1,30 @@
+-
+    var citiesItems = [
+        {
+            link: '#',
+            name: 'Киев'
+        },
+        {
+            link: '#',
+            name: 'Одесса'
+        },
+        // {
+        //     link: '#',
+        //     name: 'en'
+        // }
+    ]
+='\n'
+//=cities=
+//- (source/assets/css/layout/header/_language.scss)
+.cities
+    .cities__wrapper
+        .cities__box
+            .cities__box-item Киев
+        .cities__drop
+            ul.cities__list
+                each item in citiesItems
+                    li.cities__list-item
+                        a.cities__list-link(href= item.link)= item.name
+
+//=End cities=
+='\n'

@@ -1,0 +1,135 @@
+.ordering {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .title {
+        font-weight: normal;
+    }
+
+    &__field {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+
+        .form-group {
+            width: 100%;
+            margin: 0 15px 15px 0;
+            display: flex;
+            align-items: flex-end;
+            .help-block {
+                display: none;
+                font-size: 0;
+            }
+            &.required {
+                .control-label {
+                    position: relative;
+
+                    &:after {
+                        content: '*';
+                        display: inline;
+                        vertical-align: super;
+                        color: red;
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+            }
+            &.has-error {
+
+                input,
+                textarea {
+                    border: 1px solid red;
+                }
+            }
+            input {
+                width: 100%;
+                border: 1px solid $grayLight;
+                border-radius: 5px;
+                font-size: $fontSizeMedium;
+                color: $grayLighter;
+                line-height: 36px;
+                padding: 0 8px;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                input[type=checkbox] {
+                    order: -1;
+                    margin-right: 8px;
+                    &:checked {
+                        background: $brandPrimary;
+
+                        &:after {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__note {
+        width: 100%;
+        max-width: 750px;
+
+        .form-group {
+            textarea {
+                width: 100%;
+                border: 1px solid $grayLight;
+                border-radius: 5px;
+                font-size: $fontSizeMedium;
+                color: $grayLighter;
+                padding: 8px;
+                resize: none;
+            }
+        }
+    }
+    @media (min-width: 480px) {
+
+        flex-wrap: nowrap;
+
+        &__field {
+            .form-group {
+                margin: 0 15px 15px 15px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__field {
+            .form-group {
+                width: 40%;
+            }
+        }
+    }
+
+    @media (min-width: 1320px) {
+        &__field {
+            .form-group {
+                width: 45%;
+
+                &:nth-child(5),
+                &:nth-child(6) {
+                    margin-top: 32px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1560px) {
+        &__field {
+            .form-group {
+                width: 100%;
+                max-width: 360px;
+            }
+        }
+    }
+
+}

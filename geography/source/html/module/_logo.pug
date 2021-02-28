@@ -1,0 +1,13 @@
+= '\n'
+//= Logo =
+
+.logo
+    if (pageTitle == 'main')
+        img.logo__image(src='data/header/logo.svg', alt='')
+    else
+        a.logo__link(href='index.html')
+            - modifier = (footer) ? 'logo' : 'logo2'
+            img.logo__image(src='data/header/' + modifier + '.svg', alt='')
+
+//= End logo =
+= '\n'

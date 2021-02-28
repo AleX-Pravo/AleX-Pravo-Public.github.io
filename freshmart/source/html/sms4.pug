@@ -1,0 +1,33 @@
+-
+    var pageTitle = 'sms1'
+
+
+doctype html
+html(lang="ru")
+    include layout/_head.pug
+
+    body(itemscope itemtype='http://schema.org/WebPage')
+        = '\n'
+        //= Layout =
+        #layout
+
+            //= Main =
+            main#main.main
+
+                ='\n'
+                //= smsBlock =
+                //- =(module/_smsBlock.scss)=
+                .smsBlock-thank
+                    .smsBlock-thank__logo
+                        img(src='data/new-logo-freshmart.png' alt='')
+                    .smsBlock-thank__title Спасибо за Вашу оценку!
+                //= End smsBlock =
+                ='\n'
+
+            //= End main =
+
+            = '\n'
+        //= End layout =
+
+        include layout/_scripts.pug
+        script(src='assets/js/rating.min.js')

@@ -1,0 +1,72 @@
+@import 'vars/_variable.scss';
+
+.primaryMenu {
+    position: relative;
+    z-index: 98;
+
+    &:hover {
+        z-index: 101;
+    }
+
+    &__flyout {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        padding: 15px 0 0;
+        //z-index: 101;
+
+        &:hover {
+            display: block;
+        }
+    }
+
+    &__button {
+        line-height: (46px / $primaryMenu__baseFontSize);
+        position: relative;
+        display: block;
+        width: 210px;
+        padding: 0 20px;
+        transition: background .2s linear;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: inherit;
+        background: $primaryMenu__buttonBackgroundColor;
+
+        &:before {
+            position: relative;
+            display: inline-block;
+            width: 19px;
+            height: 10px;
+            margin: 0 10px 0 0;
+            content: '';
+            background: url('../images/nav/icon/primaryMenu.png') no-repeat;
+        }
+
+        &:hover {
+            + .primaryMenu {
+                &__flyout {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @import 'module/drop/_drop.scss';
+
+    @media (min-width: 1200px) {
+        &__button {
+            width: 245px;
+        }
+    }
+}
+
+a {
+    &.primaryMenu {
+        &__button {
+            &:hover {
+                background: $primaryMenu__buttonBackgroundColor--active;
+            }
+        }
+    }
+}

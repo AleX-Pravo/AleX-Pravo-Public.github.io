@@ -1,0 +1,40 @@
+.caption {
+	min-height: 57px;
+	width: 100%;
+	background: $brandSuccess;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--small {
+		h3 {
+			font-size: $fontSizeSmall;
+			line-height: 19px;
+			font-weight: bold;
+		}
+	}
+
+	&--base {
+		h3 {
+			font-size: $fontSizeBase;
+			line-height: 22px;
+			font-weight: bold;
+		}
+	}
+
+	&--large {
+		min-height: 64px;
+
+		h3 {
+			font-size: $fontSizeLarge;
+			line-height: 24px;
+			font-weight: 500;
+		}
+	}
+
+	h3 {
+		color: $grayDark;
+		margin: 0;
+		padding: 10px 15px;
+	}
+}

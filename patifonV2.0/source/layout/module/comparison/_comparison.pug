@@ -1,0 +1,62 @@
+include vars/_variable.pug
+
+-
+    comparisonOwlCarouselInit = true
+
+.comparison.comparison--block
+    .comparison__side
+        .comparison__tabs
+            ul.comparison__tabsList
+                li.comparison__tabsItem.comparison__tabsItem--active
+                    a.comparison__tabsLink(href='#') Все параметры
+
+                li.comparison__tabsItem
+                    a.comparison__tabsLink(href='#') Только отличия
+
+        .comparison__content.hide-sm-max
+            ul.comparison__list.comparison__list--main
+                each val in comparisonСharacteristicsTitle
+                    li.comparison__item
+                        .comparison__title= val.title
+
+    .comparison__container
+        .comparison__containerInner
+            ul.comparison__list.comparison__list--hide
+                each val in comparisonСharacteristicsTitle
+                    li.comparison__item(class='comparison__item--' + val.class)
+                        .comparison__title.hide-md-min= val.title
+
+            #comparison__owlCarousel.comparison__owlCarousel.owl-carousel
+                - for (var i = 0; i < 3; i++)
+                    each val in comparisonProduct
+                        .comparison__col
+                            .comparison__product
+                                .comparison__productTop
+                                    a.comparison__productImage(href='#')
+                                        img(src='data/comparison/' + val.image + '.jpg' alt='')
+
+                                    .comparison__productTitle
+                                        a.comparison__productTitleLink(href='#')= val.title
+
+                                .comparison__productPrice= val.price
+
+                                .comparison__productMenu
+                                    ul.comparison__productMenuList
+                                        li.comparison__productMenuItem
+                                            a.comparison__productMenuLink.comparison__productMenuLink--myFavorites(href='#')
+
+                                        li.comparison__productMenuItem
+                                            a.comparison__productMenuLink.comparison__productMenuLink--buy(href='#')
+
+                                a.comparison__productRemove(href='#')
+
+                            .comparison__content
+                                ul.comparison__list
+                                    each characteristics in val.characteristics
+                                        li.comparison__item(class='comparison__item--' + characteristics.class)
+                                            .comparison__title
+                                                if (characteristics.title == '')
+                                                    | &nbsp;
+                                                else
+                                                    = characteristics.title
+

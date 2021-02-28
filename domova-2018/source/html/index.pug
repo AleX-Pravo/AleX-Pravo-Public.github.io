@@ -1,0 +1,123 @@
+-
+    pageTitle = 'Головна'
+//- Utility
+include utils/_variable.pug
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/header/_mobile-menu.pug
+            //= Main =
+            main#main.main
+                .container
+                    include module/_presentation.pug
+                    include module/_services.pug
+                    include module/_work.pug
+                    include module/_why.pug
+                    include module/_speak.pug
+                    include module/_question.pug
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include module/_call-btn.pug
+
+        include module/_call-wizard.pug
+        //-include module/_Call-Map.pug
+        include layout/_footer.pug
+        include layout/_scripts.pug
+        script(src=bowerDir + 'slick-carousel/slick/slick.min.js')
+        script(src='assets/js/jquery.selectric' + minSuffix + '.js')
+        script(src=bowerDir + 'dimsemenov/magnific-popup/dist/jquery.magnific-popup.js')
+        script.
+            $(document).ready(function () {
+
+                $('.slider__list').slick({
+                    dots: true,
+                    arrows: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    appendDots: '.slider__steps',
+                    prevArrow: '.slider__arrow--prev',
+                    nextArrow: '.slider__arrow--next',
+                });
+
+
+                //-$('.languagelist, .citylist').selectric();
+                $('.languagelist').selectric();
+
+                var mainSearchBox = $('.main-search__category');
+
+                // Search "category" drop menu
+                mainSearchBox
+                    .on('click', '.main-search__category-title', function (e) {
+                        mainSearchBox.toggleClass('open');
+                    })
+                    .on('click', '.main-search__category-item', function (e) {
+                        var text = $(this).text(),
+                            dataId = $(this).attr('data-search-id');
+
+                        $('.main-search__category-title').text(text);
+                        $('#search_category').val(dataId);
+                        mainSearchBox.removeClass('open');
+                    });
+
+                // Close drop block
+                $(document).on('click', function (e) {
+                    var target = $(e.target);
+
+                    if (mainSearchBox.length) {
+
+                        if (mainSearchBox.hasClass('open') && !mainSearchBox.has(target).length) {
+                            mainSearchBox.removeClass('open');
+                        }
+                    }
+                });
+
+                // Cataloglist show more
+                $('.catalog__item').on('click', '.catalog__more', function () {
+                    $(this)
+                        .toggleClass('active')
+                        .prev('.catalog__list')
+                            .toggleClass('open');
+                });
+
+                // Opening work block
+                $('.main').on('click', '.work__button', function () {
+                    $(this).toggleClass('active');
+                });
+
+                /* Call btn */
+                //- $('#phone_hunters').hover(
+                //-     function () {
+                //-         $(this)
+                //-             .toggleClass('phone-hunter-static')
+                //-             .toggleClass('phone-hunter-hover')
+                //-             .toggleClass('phone-hunter-active');
+                //-     },
+                //-     function () {
+                //-         $(this)
+                //-             .toggleClass('phone-hunter-static')
+                //-             .toggleClass('phone-hunter-hover')
+                //-             .toggleClass('phone-hunter-active');
+                //-     }
+                //- );
+
+                 // .call-btn
+                //- $('.call-btn').on('click', '.phone-hunter-ph-img-circle', function(e) {
+                //-     $(this).closest('.call_btn-inner').next('.communications').toggleClass('open');
+                //- });
+
+            });

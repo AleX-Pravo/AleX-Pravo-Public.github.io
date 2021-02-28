@@ -1,0 +1,18 @@
+= '\n'
+//= menu =
+//- (source/assets/css/layout/footer/_menu.scss)
+
+each item in footerMenu
+    .menu
+        h3= item.name
+        ul
+            if item.product
+                each val in item.product
+                    li
+                        - link = (val.href) ? val.href : '#0'
+                        - name = (val.name) ? val.name : val
+                        a(href= link)= name
+
+
+//= End menu =
+= '\n'

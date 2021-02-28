@@ -1,0 +1,35 @@
+mixin phone(className)
+
+    -
+        var phone = [
+            {
+                link: '+380443315163',
+                number: '+38 (044) 331-51-63',
+                //itempropTel: 'telephone'
+            },
+            {
+                link: '+380677379979',
+                number: '+38 (067) 737-99-79'
+                //itempropTel: 'telephone'
+            },
+            {
+                link: '+380501748337',
+                number: '+38 (050) 174-83-37'
+                //itempropTel: 'telephone'
+            }
+        ]
+
+    if (className != '')
+        - var name = className
+    else
+        - var name = ''
+
+    = '\n'
+    //= Phone =
+    .phone(class=name)
+        each val in phone
+            .phone__item
+                a.phone__link(href='tel:' + val.link)= val.number
+                meta(itemprop= 'telephone' content= val.link)
+    //= End phone =
+    = '\n'

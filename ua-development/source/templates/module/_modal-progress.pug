@@ -1,0 +1,67 @@
+= '\n'
+//= modal__wrapper =
+//- (source/scss/module/_modal.scss)
+.custom-popup-wrapper
+    button.custom-popup-close ×
+    h2 Хід будівництва
+
+    = '\n'
+    //= swiper =
+    //- (source/assets/css/module/_swiper-slider.scss)
+    .swiper-container
+        .swiper-wrapper.gallery
+
+            - for(var i = 0; i < 4; i++)
+                .swiper-slide
+                    a.zoom-gallery.slide1(href='data/investment/1.jpg')
+                        //proportions and the maximum size of images 190x150
+                        img(src='data/investment-inner/1.jpg', alt="")
+                    a.zoom-gallery.slide2(href='data/investment/1.jpg')
+                        //proportions and the maximum size of images 190x150
+                        img(src='data/investment-inner/1.jpg', alt="")
+
+    .swiper-slider__block
+        .swiper-fraction
+            span.swiper-current(data-el="swiper-current")
+            span.swiper-total(data-el="swiper-total")
+        .swiper-pagination
+        .swiper-button-prev
+            +icon('icon-swiper-button-prev')
+        .swiper-button-next
+            +icon('icon-swiper-button-next')
+    //= End swiper =
+    = '\n'
+//= End modal__wrapper =
+= '\n'
+
+//- = '\n'
+//- //= modal__wrapper =
+//- //- (source/scss/module/_modal.scss)
+//- .custom-popup-wrapper
+//-     button.custom-popup-close ×
+//-     h2 Хід будівництва
+
+//-     = '\n'
+//-     //= swiper =
+//-     //- (source/assets/css/module/_swiper-slider.scss)
+//-     .swiper-container
+//-         .swiper-wrapper.gallery
+//-             - for(var i = 0; i < 25; i++)
+//-                 .swiper-slide
+//-                     a.zoom-gallery(href='data/investment/1.jpg')
+//-                         //proportions and the maximum size of images 190x150
+//-                         img(src='data/investment-inner/1.jpg', alt="")
+
+//-     .swiper-slider__block
+//-         .swiper-fraction
+//-             span.swiper-current(data-el="swiper-current")
+//-             span.swiper-total(data-el="swiper-total")
+//-         .swiper-pagination
+//-         .swiper-button-prev
+//-             +icon('icon-swiper-button-prev')
+//-         .swiper-button-next
+//-             +icon('icon-swiper-button-next')
+//-     //= End swiper =
+//-     = '\n'
+//- //= End modal__wrapper =
+//- = '\n'

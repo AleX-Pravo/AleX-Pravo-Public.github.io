@@ -1,0 +1,52 @@
+.mail-send {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    input {
+        width: 100%;
+        border-radius: 25px;
+        border: 1px solid $footerBackground;
+        padding: 8px 10px;
+        outline: none;
+    }
+
+    button {
+        @include radius;
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5px;
+        border: none;
+        &[disabled] {
+            background: $grayLighter;
+            opacity: 0.5;
+            &:hover {
+                cursor: not-allowed;
+                background: $grayLighter;
+            }
+        }
+        &:hover {
+            background: $brandSuccess;
+            cursor: pointer;
+        }
+
+        &:before {
+            content: '';
+            width: 16px;
+            height: 13px;
+            position: absolute;
+            background: url(../images/check.svg)no-repeat;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    @media (min-width: 480px) {
+        input {
+            padding: 8px 20px;
+        }
+    }
+}

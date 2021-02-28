@@ -1,0 +1,56 @@
+-
+    var secondMenu = [
+        {
+            href: 'catalog-pools.html',
+            name: 'Басейни'
+        },
+        {
+            href: 'catalog-cover.html',
+            name: 'Накриття'
+        },
+        {
+            href: 'catalog-terrace.html',
+            name: 'Терасна система'
+        },
+        {
+            href: 'catalog-comPools.html',
+            name: 'Композитні басейни'
+        },
+        {
+            href: 'catalog-furnaces.html',
+            name: 'Печі для саун'
+        },
+        {
+            href: 'catalog-cabs.html',
+            name: 'ІЧ-кабіни'
+        },
+        {
+            href: 'catalog-attractions.html',
+            name: 'Атракціони'
+        },
+        {
+            href: 'catalog-careForwater.html',
+            name: 'Догляд за водою'
+        },
+        {
+            href: 'catalog-stations.html',
+            name: 'Навісні фільтраційні станції Desjoyaux'
+        }
+    ]
+
+= '\n'
+//= secondMenu =
+//-=(/layout/header/primaryMenu/_secondMenu.scss)=
+
+.secondMenu
+    ul.secondMenu__inner
+        each val in secondMenu
+            if (val.name === subTitle)
+                li.active
+                    a(href=val.href)= val.name
+            else
+                li
+                    a(href=val.href)= val.name
+
+//= End secondMenu =
+= '\n'

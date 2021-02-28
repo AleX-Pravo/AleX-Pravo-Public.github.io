@@ -1,0 +1,24 @@
+.social {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__icon {
+        margin-right: 20px;
+        svg {
+            fill: $grayDarker;
+        }
+        &:hover {
+            cursor: pointer;
+            svg {
+                fill: $brandPrimary;
+            }
+        }
+    }
+    @media (min-width: 480px) {
+        &__wrapper {
+            justify-content: flex-start;
+        }
+    }
+}

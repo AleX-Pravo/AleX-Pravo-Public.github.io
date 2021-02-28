@@ -1,0 +1,21 @@
+= '\n'
+//= Checkbox =
+//-(source/assets/css/module/_checkbox.scss)
+.checkbox
+    ul.checkbox__list
+        each item in checkboxData
+            li.checkbox__item
+                label.checkbox__link
+                    if (item.active)
+                        input.checkbox__input(type='checkbox' checked='checked')
+                    else
+
+                        if (item.disabled)
+                            input.checkbox__input(type='checkbox' disabled)
+                        else
+                            input.checkbox__input(type='checkbox')
+                    span.checkbox__checker
+                    span.checkbox__text= item.title
+
+//= End checkbox =
+= '\n'

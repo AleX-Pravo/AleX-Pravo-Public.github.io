@@ -1,0 +1,43 @@
+.mention {
+    //margin-bottom: 10px;
+
+    &__item {
+        margin-bottom: 32px;
+        border-bottom: 1px solid rgba(51, 53, 56, 0.1);
+        padding-bottom: 14px;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-family: $fontFamilyGilroy_SmBd;
+        line-height: 18px;
+        font-size: 18px;
+        color: $grayDark;
+        margin-bottom: 10px;
+    }
+
+    &__data {
+        display: inline-block;
+        font-family: $fontFamilyBase;
+        font-weight: 500;
+        line-height: 18px;
+        font-size: 18px;
+        color: rgba(51, 53, 56, 0.25);
+        margin-bottom: 10px;
+
+        span {
+            padding-left: 5px;
+        }
+    }
+
+    &__text {
+        font-family: $fontFamilyBase;
+        line-height: 24px;
+        font-size: 16px;
+        color: $grayDark;
+        margin-bottom: 10px;
+    }
+}

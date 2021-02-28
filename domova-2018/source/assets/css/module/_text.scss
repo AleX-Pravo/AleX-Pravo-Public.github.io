@@ -1,0 +1,21 @@
+.text {
+    font-size: $fontSizeBase;
+    line-height: (24px / $fontSizeBase);
+    color: $grayLight;
+    font-weight: normal;
+    margin: auto;
+    margin-bottom: 63px;
+    transition: all 0.2s ease-out;
+
+    &--container {
+        max-width: 780px;
+        width: 100%;
+    }
+
+    @media (min-width: 600px) {
+        margin-bottom: 80px;
+        font-size: $fontSizeLarge;
+        line-height: (30px / $fontSizeLarge);
+    }
+
+}

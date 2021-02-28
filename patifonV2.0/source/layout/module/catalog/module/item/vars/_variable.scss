@@ -1,0 +1,43 @@
+//- ITEM
+//------------------------------------------------
+
+$catalogItem__baseFontSize:                         $fontSizeBase !default;
+
+$catalogItem__borderColor:                          $borderColor !default;
+$catalogItem__backgroundColor:                      $base !default;
+$catalogItem__shadowColor:                          transparentize($grayLight, .8) !default;
+
+$catalogItem__categoryTextColor--active:            $brandPrimary !default;
+
+$catalogItem__specialTextFontSize:                  $fontSizeSmall !default;
+$catalogItem__specialTextColor:                     $base !default;
+
+$catalogItem__specialDiscountBackgroundColor:       #e30613 !default;
+
+$catalogItem__specialRecommendedBackgroundColor:    #57a5fe !default;
+
+$catalogItem__specialNewBackgroundColor:            #f9b732 !default;
+
+$catalogItem__specialActionBackgroundColor:         $brandSuccess !default;
+
+$catalogItem__specialHitBackgroundColor:            #6b53fd !default;
+
+$catalogItem__colorBorderColor:                     #bcbcbc !default;
+$catalogItem__colorContentBorderColor:              #d3d1d1 !default;
+
+$catalogItem__titleBackgroundGradientColor:         $catalogItem__backgroundColor, transparentize($catalogItem__backgroundColor, 1) !default;
+
+$catalogItem__reviewLinkTextColor:                  $grayExtraLight !default;
+
+$catalogItem__inStockYesTextColor:                  $brandSuccess !default;
+
+$catalogItem__menuBackgroundColor:                  $brandInfo !default;
+$catalogItem__menuBackgroundColor--active:          #ffebec !default;
+
+$catalogItem__benefitDropTextColor:                 $grayExtraLight !default;
+$catalogItem__benefitDropStrongTextColor:           $grayDark !default;
+$catalogItem__benefitDropBackgroundColor:           $catalogItem__backgroundColor !default;
+$catalogItem__benefitDropshadowColor:               transparentize($grayLight, .64) !default;
+
+$catalogItem__priceTextFontSize:                    $fontSizeLarge !default;
+$catalogItem__priceOldTextColor:                    $grayLighter !default;

@@ -1,0 +1,149 @@
+.form-visitor {
+	position: relative;
+
+	.form-box {
+		border-bottom: 1px solid $grayLighter;
+		padding: 0 40px 17px;
+	}
+
+	.form-group {
+
+		&.has-error {
+			border: 1px solid red;
+			//border-radius: 4px;
+		}
+
+		&.appearance--payment {
+			padding: 32px 40px 31px;
+		}
+	}
+
+	.control-label {
+		display: block;
+		line-height: 1;
+		width: 100%;
+	}
+
+	.select2 {
+		flex-basis: 50%;
+	}
+
+	.form-control {
+		position: relative;
+		height: $formControlHeight;
+		padding: 0 15px;
+		width: 100%;
+		//border-radius: 4px;
+		transition: all .3s;
+
+		font-size: 16px;
+		line-height: 19px;
+		color: $grayDark;
+
+		&::placeholder {
+			transition: all .3s;
+		}
+
+		&:focus {
+			&::placeholder {
+				opacity: 0;
+			}
+		}
+	}
+
+	.help-block {
+		display: none;
+	}
+
+	input,
+	textarea {
+		border: 1px solid $borderColor;
+		background: transparent;
+	}
+
+	.textarea {
+		padding: 23px 40px;
+	}
+
+	.button-group {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 40px 40px;
+
+		.button {
+
+			&__back,
+			&__next {
+				.button {
+					position: relative;
+					font-weight: bold;
+					font-size: $fontSizeBase;
+					line-height: 22px;
+					text-decoration: underline;
+					color: $brandPrimary;
+					background: transparent;
+					border: 0;
+					cursor: pointer;
+
+					&:disabled,
+					&[disabled],
+					&.disabled,
+					&:hover {
+						color: $grayText;
+					}
+
+					&::before {
+						content: '';
+						position: absolute;
+						width: 24px;
+						height: 7px;
+						transform: translateY(-50%);
+						top: 50%;
+					}
+				}
+			}
+
+			&__back {
+				.button {
+					padding: 0 0 0 31px;
+
+					&::before {
+						left: 0;
+						background: url(../images/form/arrow-left.svg) no-repeat;
+					}
+
+					&:disabled,
+					&[disabled],
+					&.disabled,
+					&:hover {
+						&::before {
+							background: url(../images/form/arrow-left-d.svg) no-repeat;
+						}
+					}
+				}
+			}
+
+			&__next {
+				.button {
+					padding: 0 31px 0 0;
+
+					&::before {
+						right: 0;
+						background: url(../images/form/arrow-right.svg) no-repeat;
+					}
+
+
+					&:disabled,
+					&[disabled],
+					&.disabled,
+					&:hover {
+						&::before {
+							background: url(../images/form/arrow-right-d.svg) no-repeat;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

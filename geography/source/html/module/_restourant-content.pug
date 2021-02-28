@@ -1,0 +1,25 @@
+= '\n'
+//= restourant-content =
+//- (source/assets/css/module/_restourant-content.scss)
+.restourant-content
+    - var titleHead = 'Ресторан'
+    include _title-head.pug
+    span На території готелю розташований ресторан з смачною, авторською кухнею без ГМО та помірними цінами. Справжні кулінарні шедеври тільки найкращої якості та зі свіжих продуктів від майстрів своєї справи. Ресторан працює цілодобово та здійснює обслуговування номерів.
+    .restourant-content__menu
+        a(href='#0')
+            img(src="data/restourant/links/union.svg", alt="")
+            p Меню ресторану
+        a(href='#0')
+            img(src="data/restourant/links/2.svg", alt="")
+            p Меню бару
+    include _slider.pug
+
+.restourant-content
+    ul.restourant-content__character
+        each elem in advertBlock
+            li
+                img(src="data/restourant/image/" + elem.image, alt="")
+                p= elem.text
+    span  На території готелю розташований ресторан з смачною, авторською кухнею без ГМО та помірними цінами. Справжні кулінарні шедеври тільки найкращої якості та зі свіжих продуктів від майстрів своєї справи. Ресторан працює цілодобово та здійснює обслуговування номерів. Готель не бере додатковоїї плати з гостей за дітей, якщо для цього не потрібно окреме спальне місце. Для інших випадків в наявності є сімейні номери з трьома спальними місцями.
+//= End restourant-content =
+= '\n'

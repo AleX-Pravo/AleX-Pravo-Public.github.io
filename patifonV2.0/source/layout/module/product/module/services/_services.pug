@@ -1,0 +1,51 @@
+='\n'
+//= services =
+.services
+
+	= '\n'
+	//= Tab =
+	.tab.tab--services
+		.tab-menu
+			ul.tab-list
+				each val in servicesList
+					//.applied
+					//.disabled
+					li.tab-item(class= val.class)
+
+						a.tab-link(href='#' + val.id)= val.title
+			a.tab-menu__show(href='javascript:void(0)') Показати всі налаштування
+
+		.tab-content
+			#optimal.tab-box
+				.tab-box__image
+					img(src='data/services/smartphone.svg' alt='')
+
+				.tab-box__text
+					h2 Премиум настройки смартфона
+					p Не витрачай час! Ми налаштуємо твій гаджет швидко та якісно. Додатково встановимо блокувальник реклами+антивірус, а також протягом 6 міс. безкоштовно відремонтуємо розбитий екран
+					.tab-box__price
+						span 599грн
+						button.button.button--buy.--applied(type='submit')
+							span.button__text Додати
+			#standart.tab-box
+				.tab-box__text
+					h2 Стандарт
+			#premium.tab-box
+				.tab-box__text
+					h2 Премиум
+			#youtube.tab-box
+				.tab-box__text
+					h2 Youtube премиум, без рекламы
+			#vip.tab-box
+				.tab-box__text
+					h2 VIP
+			#base.tab-box
+				.tab-box__text
+					h2 Базовый
+			#antivir.tab-box
+				.tab-box__text
+					h2 Антивирус Eset mobile
+	//= End tab =
+	= '\n'
+//= End services =
+= '\n'

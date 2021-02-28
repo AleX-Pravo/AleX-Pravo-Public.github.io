@@ -1,0 +1,20 @@
+= '\n'
+//= Search =
+.search
+    .search__header
+        - var title = [{modifier: '', elem: 'div', icon: 'data/search/search.png', text: 'РЕЗУЛЬТАТИ ЗАПИТУ:', name: 'Встановлення'}]
+        include _title.pug
+
+    .search__text
+        span.search__text-name Знайдено:
+        span.search__text-value 4 послуги
+
+    .search__content
+        .search__list
+            each item in searchResults
+                .search__item
+                    a.search__link(href='#')
+                        span.search__link-icon
+                        span.search__link-text= item
+//= End search =
+= '\n'

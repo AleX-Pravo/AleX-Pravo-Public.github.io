@@ -1,0 +1,18 @@
+= '\n'
+//= your-order =
+//- (source/assets/css/module/_your-order.scss)
+.your-order
+    h2 Ваше замовлення
+    ul
+        each item in orderItems
+            li
+                span= item.name
+                span.your-order__line
+                span= item.number
+    p Загальна сума
+        span 2100 грн.
+    .your-order__bottom
+        a(href="javascript:void(0)") Редагувати
+        button.confirm Підтвердити замовлення
+//= End your-order =
+= '\n'

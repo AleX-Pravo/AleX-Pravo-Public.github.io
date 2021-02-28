@@ -1,0 +1,18 @@
+= '\n'
+//= Cooperation =
+.cooperation
+    .cooperation__wrapper
+        .cooperation__picture
+            img.cooperation__image(src='data/cooperation/1.png' alt='')
+
+
+        .cooperation__data
+            .cooperation__header
+                - var title = [{modifier: 'title--left', elem: 'h1', icon: '', text: 'працюйте разом з нами', name: 'Заявка на співпрацю'}]
+                include _title.pug
+
+            .cooperation__text.
+                Домова служба - це великий колектив вільних, професійних майстрів. У нас завжди є робота для людей, які люблять допомагати людям і вміють це роботи професійно. Але в нас є певні принципи відбору і умови при дотриманні яких ви зможете співпрацювати з Домовою службою. Заповніть заявку, ми з вами зв'яжемось і відправимо на електронну пошту ці умови.
+            a.cooperation__button(href='#') Відправити
+//= End cooperation =
+= '\n'

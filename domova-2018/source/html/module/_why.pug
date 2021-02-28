@@ -1,0 +1,51 @@
+= '\n'
+//= Why =
+.why
+    - var title = [{modifier: '', elem: 'h2', icon: '', text: 'НАШІ ПЕРЕВАГИ', name: 'Чому обирають нас'}]
+    include _title.pug
+
+    .why__wrapper
+        .why__box.first
+            .why__box-inner
+                .why__item
+                    .why__item-inner
+                        .why__picture
+                            img.why__icon(src='data/why/1.png' alt='')
+                        .why__data
+                            .why__title Універсальність
+                            .why__text На кожну побутову проблему у нас є майстер
+
+                .why__item
+                    .why__item-inner
+                        .why__picture
+                            img.why__icon(src='data/why/2.png' alt='')
+                        .why__data
+                            .why__title Доброзичливість
+                            .why__text Уважно відносимось до кожної проблеми
+
+        .why__box.last
+            .why__box-inner
+                .why__item
+                    .why__item-inner
+                        .why__picture
+                            img.why__icon(src='data/why/3.png' alt='')
+                        .why__data
+                            .why__title Професійність
+                            .why__text Якість кожної послуги письмово гарантуємо
+
+                .why__item
+                    .why__item-inner
+                        .why__picture
+                            img.why__icon(src='data/why/4.png' alt='')
+                        .why__data
+                            .why__title Лояльність
+                            .why__text З нами завжди можна домовитись
+
+
+        .why__box.decorate
+            .why__box-inner
+                .why__item
+                    .why__item-inner
+                        img.why__image(src='data/why/5.png' alt='')
+
+//= End why =

@@ -1,0 +1,20 @@
+= '\n'
+//= account-info =
+//- (source/assets/css/layout/_account-info.scss)
+.account-info
+    .account-info__tab#selfInfo
+        - var titleInfo = 'Особиста інформація'
+        include _title-block.pug
+        include _info-form.pug
+    .account-info__tab#myOrders
+        - var titleInfo = 'Мої замовлення'
+        include _title-block.pug
+        include _my-orders.pug
+    .account-info__tab#wishList
+        - var titleInfo = 'Список бажань'
+        include _title-block.pug
+        .collections__tab
+            - for (var i = 0; i < 5; i++)
+                include _product-card.pug
+//= End account-info =
+= '\n'

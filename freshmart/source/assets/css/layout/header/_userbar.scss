@@ -1,0 +1,160 @@
+.userbar {
+    position: relative;
+    float: left;
+
+    &__link {
+        display: inline-block;
+        margin: 0 20px 0 0;
+        transition: all .2s ease-out;
+        text-decoration: none;
+        color: $gray;
+        border-bottom: 1px dashed transparent;
+
+        &:hover,
+        &--active {
+            text-decoration: none;
+            color: $brandPrimary;
+            border-bottom-color: $brandPrimary;
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__link {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.userbarNew {
+    position: relative;
+    float: left;
+
+    ul  {
+        list-style: none;
+    }
+
+    &__box {
+        margin-right: 19px;
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+            .userbarNew {
+                &__drop {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin: 0 20px 0 0;
+
+        &-people {
+            background: url(../images/header/icon/people1.png) 0 0 no-repeat;
+            width: 20px;
+            height: 20px;
+            display: block;
+
+            &:hover {
+                background: url(../images/header/icon/people.png) 0 0 no-repeat;
+            }
+        }
+
+        &-percent {
+            background: url(../images/header/icon/percent.png) 0 0 no-repeat;
+            width: 18px;
+            height: 19px;
+            display: block;
+
+            &:hover {
+                background: url(../images/header/icon/percent1.png) 0 0 no-repeat;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $brandPrimary;
+            border-bottom-color: $brandPrimary;
+        }
+    }
+
+    &__drop {
+        display: none;
+        position: absolute;
+        top: 30px;
+        cursor: pointer;
+        z-index: 5;
+        background-color: $base;
+        border: 1px solid $grayLight;
+        padding: 0 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        //width: 160px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: url(../images/header/icon/triangle.png) 0 0 no-repeat;
+            width: 16px;
+            height: 11px;
+            bottom: calc(100% - 1px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            //background: $base;
+            height: 50px;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &:hover {
+            display: block;
+
+        }
+    }
+
+    &__list {
+
+        &-item {
+            display: block;
+            text-align: center;
+            position: relative;
+            padding: 10px 10px 9px 10px;
+            border-bottom: 1px solid $grayLight;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            font-size: 14px;
+            color: $lightText;
+            line-height: 1.714;
+            text-align: center;
+            white-space: nowrap;
+
+            &:hover{
+                color: $brandPrimary;
+            }
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__link {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

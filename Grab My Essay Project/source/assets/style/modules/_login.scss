@@ -1,0 +1,96 @@
+/* Login */
+.login {
+	text-align: center;
+	padding: 69px 15px 80px;
+	background: #FDFAF6;
+
+	&__wrapper {
+		width: 100%;
+		max-width: 330px;
+		margin: auto;
+	}
+
+	&__title {
+		font-size: 34px;
+		line-height: 59px;
+		color: #000615;
+		font-family: $headingFont;
+		margin-bottom: 35px;
+	}
+
+	&__label {
+		font-size: 13px;
+		line-height: 1;
+		color: #999999;
+		text-align: left;
+		margin-bottom: 8px;
+	}
+
+	&__item {
+	}
+
+	&__field {
+
+	}
+
+	&__input {
+		font-size: 15px;
+		color: #696969;
+	}
+
+	&__forgot {
+		font-size: 14px;
+		font-style: italic;
+		text-align: right;
+		margin-top: 15px;
+
+		&-password {
+			color: #40AC60;
+			text-decoration: none;
+		}
+	}
+
+	&__action {
+	}
+
+	&__button {
+		margin-bottom: 35px;
+		max-width: 260px;
+		width: 100%;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 25px;
+		color: #2C2C2C;
+		position: relative;
+
+		padding-top: 25px;
+
+		&:before {
+			content: '';
+			width: 200px;
+			height: 1px;
+			background: #D9D9D9;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__link {
+		font-size: 15px;
+		line-height: 25px;
+		color: #40AC60;
+		text-decoration: none;
+	}
+
+	//768px
+	@media (min-width: $screen_M_Min) {
+
+		&__title {
+			font-size: 44px;
+		}
+	}
+}

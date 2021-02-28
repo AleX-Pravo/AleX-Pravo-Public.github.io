@@ -1,0 +1,25 @@
+include vars/_variable.pug
+
+= '\n'
+//= Photo =
+
+if (!photoFull)
+    .photo.photo--preview
+        .row
+
+            each val in photo
+                .photo__item
+                    a.photo__link(href='#')
+                        img(src='data/details/' + val + '.jpg' alt='')
+
+else
+    .photo.photo--full
+        .row
+
+            each val in photo2
+                .photo__item
+                    a.photo__link(href='#')
+                        img(src='data/details/' + val + '.jpg' alt='')
+
+//= End photo =
+= '\n'

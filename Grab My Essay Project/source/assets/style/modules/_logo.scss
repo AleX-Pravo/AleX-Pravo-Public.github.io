@@ -1,0 +1,13 @@
+.logo {
+	img {
+		width: 86px;
+	}
+
+	//768px
+	@media (min-width: $screen_M_Min) {
+
+		img {
+			width: auto;
+		}
+	}
+}

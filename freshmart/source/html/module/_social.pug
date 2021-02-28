@@ -1,0 +1,13 @@
+
+= '\n'
+//= Social =
+- modifierSocial = (pageTitle === 'plug') ? 'social--plug' : ''
+.social(class= modifierSocial)
+    each social in socialList
+        .social__title= social.title
+        ul.social__list
+            each val in social.items
+                li.social__item(class='social__item--' + val)
+                    a.social__link(href='#')
+//= End social =
+= '\n'

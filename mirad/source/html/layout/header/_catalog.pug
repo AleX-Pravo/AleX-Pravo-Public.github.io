@@ -1,0 +1,19 @@
+= '\n'
+//= catalog =
+//- (source/assets/css/layout/header/_catalog.scss)
+- modifier = (mobile) ? ('catalog--mobile') : ''
+ul.catalog(class=modifier)
+    each item in navigationCatalog
+        li.catalog__item
+            .catalog__list
+                .catalog__image!= item.image
+                a(href='javascript:void(0)')= item.menu
+            if item.submenu
+                ul
+                    each val in item.submenu
+                        li
+                            a(href='#0')= val
+- mobile = false
+//= End catalog =
+= '\n'
+

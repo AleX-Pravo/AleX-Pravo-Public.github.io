@@ -1,0 +1,44 @@
+.viewed {
+    position: relative;
+    margin: 40px 0 0 0;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -9px;
+
+        &-item {
+            position: relative;
+            padding: 0 9px;
+
+            a {
+                color: $grayDark;
+                text-decoration: none;
+                transition: all .2s;
+
+                span {
+                    margin: 0 0 0 9px;
+                    color: $grayLight;
+                }
+
+                &:hover {
+                    color: $brandActive;
+
+                    span {
+                        color: $grayLight;
+                    }
+                }
+            }
+
+            &.active {
+                a {
+                    color: $brandActive;
+                }
+            }
+        }
+    }
+
+    .catalog {
+        padding: 30px 0 0;
+    }
+}

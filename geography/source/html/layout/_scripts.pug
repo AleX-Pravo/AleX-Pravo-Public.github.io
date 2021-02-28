@@ -1,0 +1,19 @@
+= '\n'
+//= Scripts =
+script(src=bowerDir + 'jquery/dist/jquery.min.js')
+script(src='assets/js/main' + minSuffix + '.js')
+
+if (select2)
+	script(src=bowerDir + 'select2/dist/js/select2.full.min.js')
+
+
+if (select2)
+	script.
+		$(document).ready(function () {
+			$('select.form-control').select2({
+				minimumResultsForSearch: Infinity
+			});
+		});
+
+//= End scripts =
+= '\n'

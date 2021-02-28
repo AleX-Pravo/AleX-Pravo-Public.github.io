@@ -1,0 +1,25 @@
+= '\n'
+//= footer-menu =
+//- (source/assets/css/layout/footer/_menu.scss)
+
+each item, i in footerMenu
+    .footer-menu
+        h3= item.name
+        ul
+            if item.product
+                each val, j in item.product
+                    -
+                        link = (val.href) ? val.href : 'javascript:void(0)'
+                        name = (val.name) ? val.name : val
+                        
+                        modifier = (i == 0 && j == 0) ? '--active' : ''
+
+                    li(class= modifier)
+
+                        - target = (val.target) ? '_blank' : false
+                        
+                        a(href= link target= target)= name
+
+
+//= End footer-menu =
+= '\n'

@@ -1,0 +1,49 @@
+= '\n'
+//= primary menu =
+//- = (layout/nav/_primary-menu.scss) =
+- modifierMenu = (pageTitle!= 'main' && pageTitle!= 'store' && pageTitle!='404') ? 'primary-menu--light' : ''
+.primary-menu(class= modifierMenu)
+    ul.list
+        each val in primaryMenu
+            - parrentClass = ('drop' in val) ? 'parent' : ''
+            - active = (val.name === subTitle) ? 'active' : ''
+
+            li.item(class=parrentClass class=active)
+                a.link(href=val.href class=val.class)= val.name
+                    if (val.image)
+                        img(src="data/mobile/" + val.image, alt="")
+                if ('drop' in val)
+                    span
+                if ('drop' in val)
+                    .drop
+                        .drop-menu
+                            .drop-menu__top
+                                .drop-menu__title= val.title
+                                a.drop-menu__link(href="#")= val.button
+
+                            ul.drop-list
+                                each drop in val.drop
+                                    li.drop-item
+                                        each col in drop.col
+                                            ul.submenu
+                                                each title in col.title
+                                                    li.subitem
+                                                        a.sublink(href='#')= title
+                                    li.drop-info
+                                        ul.internalmenu
+                                            each inner in drop.inner
+                                                li.internalitem
+                                                    each les in inner.les
+                                                        a.internallink(href='#')
+                                                                img(src='data/header/' + les.img +'.png' alt='')
+                                                                .internaltext
+                                                                    p= les.titleinner
+                                                                    ul.internallist
+                                                                        li= les.li1
+                                                                        li= les.li2
+                                                                        li= les.li3
+        if (!card && primaryMenuForMobile)
+            li.item
+                a.link(href='store.html') Магазин
+//= End primary menu =
+= '\n'

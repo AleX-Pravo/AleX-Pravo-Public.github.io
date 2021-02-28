@@ -1,0 +1,18 @@
+= '\n'
+//= Footer =
+- footer = true
+- pageTitle = 'main'
+- primaryMenu = primaryMenuForApp
+- modifierFooter = (pageTitleindex === 'main') ? 'footer--main' : ''
+footer#footer.footer(class= modifierFooter)
+    .container
+
+        .footer__main
+            .footer__logo
+                include header/logo/_logo.pug
+            .footer__menu
+                include _primary-menu.pug
+            .footer__logo32x32
+                include footer/logo32x32/_logo32x32.pug
+    include ../module/_up.pug
+//= End footer =

@@ -1,0 +1,31 @@
+.irs {
+    height: 4px;
+
+    &-line {
+        height: 4px;
+        border-radius: 2px;
+        background: $grayLighter;
+    }
+
+    &-bar {
+        top: 0;
+        height: 4px;
+        background: $gray;
+    }
+
+    &-slider {
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        //box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.3);
+        border-radius: 50%;
+        background: $grayLight;
+        position: absolute;
+        top: -12px;
+
+        &.from,
+        &.to {
+            cursor: pointer;
+        }
+    }
+}

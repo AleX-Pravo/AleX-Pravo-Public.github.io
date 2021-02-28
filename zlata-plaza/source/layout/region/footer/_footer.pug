@@ -1,0 +1,31 @@
+include vars/_variable.pug
+
+= '\n'
+//= Footer =
+footer#footer.footer
+    .container
+        .row
+            .footer__box
+                .footer__title Контакти
+
+                include module/contacts/_contacts.pug
+
+            .footer__box
+                .footer__title Графік роботи
+
+                include module/workTime/_workTime.pug
+
+            .footer__box.hide-sm-max
+                .footer__title Інформація
+
+                include module/menu/_menu.pug
+
+            .footer__box
+                .footer__title НОВИНИ
+
+                include module/subscribe/_subscribe.pug
+                include module/socnet/_socnet.pug
+
+        include module/copyright/_copyright.pug
+        include module/32x32/_32x32.pug
+//= End footer =

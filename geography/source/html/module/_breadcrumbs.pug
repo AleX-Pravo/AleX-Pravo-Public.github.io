@@ -1,0 +1,32 @@
+= '\n'
+//= Breadcrumbs
+//-=(module/_breadcrumbs.scss)=
+
+-
+    itemtype = (micromarking) ? 'http://schema.org/BreadcrumbList' : false
+
+.breadcrumbs
+    ul.breadcrumb(itemscope= itemscope itemtype= itemtype)
+        -
+            itemtype = (micromarking) ? 'http://schema.org/ListItem' : false
+            itemprop = (micromarking) ? 'itemListElement' : false
+
+            itempropItem = (micromarking) ? 'item' : false
+
+        - for (let i = 0; i < breadcrumbs.length; i++)
+            - content = i + 1
+
+            if (i < breadcrumbs.length - 1)
+                li(itemscope= itemscope itemtype= itemtype itemprop= itemprop)
+                    a(href='#0' itemprop= itempropItem)= breadcrumbs[i]
+                    meta(itemprop='name' content= breadcrumbs[i])
+                    meta(itemprop='position' content= content)
+            else
+                li.active(itemscope= itemscope itemtype= itemtype itemprop= itemprop)= breadcrumbs[i]
+                    link(itemprop="item" href='#0')
+                    // Ссилка на цю саму сторінку
+                    meta(itemprop='name' content= breadcrumbs[i])
+                    meta(itemprop='position' content= content)
+
+//= End breadcrumbs
+= '\n'

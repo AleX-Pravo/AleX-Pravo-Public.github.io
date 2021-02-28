@@ -1,0 +1,40 @@
+= '\n'
+//= reserve =
+//- (source/assets/css/module/_reserve.scss)
+.reserve.mfp-hide#reserve
+    form(id='form' action='#' method='post')
+        .form-group.has-error.face
+            label Ім’я
+            input.form-control.face(type='text', placeholder='Гембаровський Олександр')
+            .help-block
+        .form-group.phone
+            label Номер
+            input.form-control.phone(type='text', placeholder='+38 (___) __ __ ___')
+        include _menology
+        //.reserve__calendar
+        //    .form-group.calendar
+        //        label В’їзд
+        //        input.form-control.calendar(type='text', placeholder='22.05.2018')
+        //    .form-group.calendar
+        //        label Виїзд
+        //        input.form-control.calendar(type='text', placeholder='22.05.2018')
+        .reserve__number.arrow Номер
+            .reserve__wrapper
+                .room Люкс
+                .price 2200 грн.
+        ul.reserve__list
+            each item in reserveItems
+                li
+                    .reserve__wrapper
+                        .room= item.name
+                        .price= item.price
+                    ul
+                        if item.submenu
+                            each val in item.submenu
+                                li
+                                    .reserve__wrapper
+                                        .room= val.name
+                                        .price= val.price
+        include _reserve-btn.pug
+//= End reserve =
+= '\n'

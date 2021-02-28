@@ -1,0 +1,18 @@
+@import 'vars/_variable.scss';
+
+.copyright {
+    font-size: $copyright__textFontSize;
+    line-height: 1;
+    position: relative;
+    color: $copyright__textColor;
+
+    @media (min-width: $screenXsMin) {
+        @media (max-width: 719px) {
+            max-width: 280px;
+        }
+    }
+
+    @media (min-width: 720px) {
+        margin: 12px 0 0;
+    }
+}

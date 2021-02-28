@@ -1,0 +1,83 @@
+//== BASE
+// --------------------------------------------------
+
+//== Colors
+
+$base:                  #fff !default; //*SS
+$grayBase:              #000 !default; //*SS
+$grayDarker:            #121212 !default; //*SS
+$grayDark:              #333 !default;
+$gray:                  #555 !default;
+$grayLight:             #E5E5E5 !default; //Oleg
+$grayLighter:           #999 !default; //*SS
+
+
+
+$brandPrimary:          #5FB46E!default; //*SS
+$brandSuccess:          #E8E8E8 !default; //*SS
+$brandInfo:             #B2B2B2 !default; //*SS
+$brandWarning:          #000 !default;
+$brandDanger:           #d33242 !default;
+
+
+//== Reset
+
+$bodyBg:                $base !default;           //source/assets/css/base/_reset.scss
+$textColor:             $grayDark !default;       //source/assets/css/base/_reset.scss
+$linkColor:             $brandPrimary !default;
+
+$borderColor:           $grayLighter !default;
+
+
+//== Typography
+$fontFamilySansSerif:                   'Arial', sans-serif !default;
+$fontFamilyCyrillicold_Bd:              'CyrillicOld', sans-serif !default;             //*SS
+$fontFamilyMuseoSansCyrl_lt:            'Museo Sans Cyrl 100', sans-serif !default;     //*SS
+$fontFamilyMuseoSansCyrl_lt2:           'Museo Sans Cyrl 300', sans-serif !default;     //*SS
+$fontFamilyMuseoSansCyrl_Rg:            'Museo Sans Cyrl 500', sans-serif !default;     //*SS
+$fontFamilyMuseoSansCyrl_Rg2:           'Museo Sans Cyrl 700', sans-serif !default;     //*SS
+$fontFamilyMuseoSansCyrl_Bd:            'Museo Sans Cyrl 900', sans-serif !default;     //*SS
+
+$fontFamilyBase:       $fontFamilyMuseoSansCyrl_Rg, $fontFamilySansSerif !default;    //source/assets/css/base/_reset.scss
+
+$fontSizeBase:          14px !default;
+$fontSizeLarge:         18px !default;
+$fontSizeSmall:         12px !default;
+$fontSizeExtraSmall:    10px !default;
+$fontSizeMedium:        16px !default;
+
+$fontSizeH1:            20px !default;
+$fontSizeH2:            36px !default;
+$fontSizeH3:            24px !default;
+
+$formControlHeight:     40px !default;
+$checkboxSize:          26px !default;
+
+$lineHeightBase:        1.428571429 !default; // 20/14
+
+
+//== MODULE
+// --------------------------------------------------
+
+
+//== Components
+
+
+//== Grid system
+
+$gridMaxWidth:          1560px !default;
+$gridColumns:           12 !default;
+$gridGutterWidth:       30px !default;
+
+
+//== Media queries breakpoints
+
+$screenXsMin:           600px !default;
+$screenSmMin:           768px !default;
+$screenMdMin:           1024px !default;
+$screenLgMin:           1200px !default;
+
+$screenMbMax:           ($screenXsMin - 1) !default;
+$screenXsMax:           ($screenSmMin - 1) !default;
+$screenSmMax:           ($screenMdMin - 1) !default;
+$screenMdMax:           ($screenLgMin - 1) !default;

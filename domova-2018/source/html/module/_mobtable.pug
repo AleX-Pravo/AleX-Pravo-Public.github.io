@@ -1,0 +1,9 @@
+= '\n'
+//= Mobtable =
+.mobtable
+    each item in mobtable
+        .mobtable__field
+            .mobtable__name= item.name
+            .mobtable__value!= item.value
+//= End mobtable =
+= '\n'

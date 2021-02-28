@@ -1,0 +1,81 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'account'
+
+    tab = true
+    pageTabInit = true
+    rating = true
+    pageRatingInit = true
+    magnificPopup = true
+    cartEdit = true
+    croppie = true
+
+    catalog = catalogMainDrop
+    tabList = tabAccountPage
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+
+                    = '\n'
+                    //= Section =
+
+                    section.section
+                        include module/account/_account.pug
+
+                    //= End section =
+                    = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+
+        = '\n'
+        //= Modal =
+
+        #move.mfp-hide.modal.modal--wishes
+            h2 Перемещение товара в список:
+            form
+                .form-group
+                    label.control-label
+                    div.radio
+                        label Список 1
+                            input.radio-input(type='radio' name='wishes')
+                            i.radio-icon
+                        label Список 2
+                            input.radio-input(type='radio' name='wishes')
+                            i.radio-icon
+                .form-group
+                    button.button.button--buy
+                        span.button__text Переместить
+
+        #crop.mfp-hide.modal.modal--crop
+            .croppie
+                #croppie
+                .croppie__links
+                    a.button.button--buy(href='javascript:void(0);') 
+                        span.button__text Применить
+                    a.button.button--buy.mfp-close(href='javascript:void(0);') Отмена 
+
+        //= End modal =
+        = '\n'
+
+        include core/_script.pug

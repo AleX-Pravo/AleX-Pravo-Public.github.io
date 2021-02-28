@@ -1,0 +1,17 @@
+.personal {
+    &__info {
+        font-size: $fontSizeBase;
+        line-height: 1;
+        margin-top: -5px;
+        margin-bottom: 13px;
+        color: $lightText;
+    }
+
+    @media (min-width: $screenMdMin) {
+        display: inline-block;
+        width: 50%;
+        margin-right: -4px;
+        padding-right: 15px;
+        vertical-align: top;
+    }
+}

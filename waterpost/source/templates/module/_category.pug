@@ -1,0 +1,11 @@
+= '\n'
+//= Category =
+
+ul.category
+    - for(let i = 0; i < 5; i++)
+        each prop in categoryListItem
+            li.category__item 
+                a(href='javascript:void(0);')= prop
+
+//= End category =
+= '\n'

@@ -1,0 +1,88 @@
+.product-slider {
+    margin-bottom: 30px;
+    display: flex;
+    &__slide {
+        position: relative;
+
+        .favorites {
+            bottom: auto;
+            top: 10px;
+        }
+    }
+    &--small {
+        max-width: 230px;
+        width: 100%;
+        margin-right: 30px;
+        display: none;
+        .slick {
+            &-list {
+                max-height: 670px;
+            }
+            &-slide {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &--big {
+        //float: right;
+        max-width: 1270px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .slick {
+            &-prev,
+            &-next {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 0;
+                width: 40px;
+                height: 60px;
+                background: $grayDarker;
+                border: none;
+                outline: none;
+                &:before {
+                    content: '';
+                    width: 10px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &-prev {
+                left: 0;
+                &:before {
+                   background: url(../images/arrow-left.svg)no-repeat;
+                }
+            }
+            &-next {
+                right: 0;
+                &:before {
+                    background: url(../images/arrow-right.svg)no-repeat;
+                }
+            }
+            &-disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+    @media (min-width: 1024px) {
+        &--small {
+            display: block;
+        }
+        &--big {
+            max-width: 80%;
+        }
+    }
+    @media (min-width: 1560px) {
+        &--big {
+            max-width: 1270px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.aboutCompany,
+.catalog-attractions,
+.catalog-cabs,
+.catalog-terrace,
+.feedback {
+    position: relative;
+    margin: 0 auto 42px;
+    width: 100%;
+    padding: 0 15px;
+
+    @media (min-width: 840px) {
+        width: 810px;
+        padding: 0;
+    }
+}

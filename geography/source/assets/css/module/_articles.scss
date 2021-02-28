@@ -1,0 +1,56 @@
+.articles {
+
+    &__hash {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 0 60px 0;
+
+        a {
+            text-decoration: none;
+            color: $grayDark;
+            font-size: $fontSizeLarge;
+            margin: 0 20px;
+            transition: all .3s;
+
+            &.active,
+            &:hover {
+                color: $brandPrimary;
+            }
+        }
+    }
+
+    &__block {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;    
+
+        .list-view {
+            display: flex;
+            flex-wrap: wrap;
+
+            > div {
+                display: flex;
+            }
+        }
+    }
+
+    .pagin {
+        .pagination {
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__block {
+    
+            .list-view {
+    
+                > div {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+

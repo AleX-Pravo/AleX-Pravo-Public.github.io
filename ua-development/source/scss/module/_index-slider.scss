@@ -1,0 +1,59 @@
+.index-slider {
+    margin-bottom: 27px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 30;
+
+    &__swiper {
+        margin: 0;
+        width: 100%;
+    }
+
+    &__second-menu {
+        width: 5%;
+        display: none;
+        background: $base;
+
+        .second-menu {
+            top: auto;
+            right: auto;
+        }
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+        margin-bottom: 67px;
+    }
+
+    //1024px
+    @media (min-width: $screen_L_Min) {
+        height: 750px;
+
+        &__swiper {
+            width: 95%;
+            margin: 0;
+        }
+
+        &__second-menu {
+            display: flex;
+            justify-content: center;
+            height: 750px;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            &.fixed {
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+
+            &.bottom {
+                position: fixed;
+                top: auto;
+                right: 0;
+            }
+        }
+    }
+}

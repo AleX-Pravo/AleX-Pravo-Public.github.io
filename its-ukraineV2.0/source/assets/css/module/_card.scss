@@ -1,0 +1,89 @@
+.card {
+    position: relative;
+    width: 48%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 5px 3px;
+
+    &:before {
+        content:'';
+        position: absolute;
+        background: linear-gradient(0deg, rgba(18, 18, 18, 0.25) 0%, rgba(18, 18, 18, 0) 100%);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    > a {
+        position: relative;
+    }
+    &__info {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 16px;
+        text-align: center;
+
+        h3 {
+            font-size: $fontSizeH3;
+            color: $base;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .button {
+            line-height: 40px;
+            vertical-align: middle;
+            border-radius: 5px;
+            max-width: 125px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+    &__price {
+        color: $base;
+        font-size: 22px;
+        font-family: $fontFamilyMuseoSansCyrl_Rg2;
+        text-align: center;
+        line-height: 40px;
+        padding: 0 12px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid $base;
+        border-radius: 5px;
+
+        display: inline-block;
+        max-height: 40px;
+        vertical-align: middle;
+        max-width: 125px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+
+    @media (min-width: 768px) {
+        width: 32%;
+    }
+
+    @media (min-width: 1200px) {
+        width: 24%;
+
+        &__info {
+            .button {
+                border-radius: 0 5px 5px 0;
+
+            }
+        }
+
+        &__price {
+            border-radius: 5px 0 0 5px;
+            border-right: none;
+
+        }
+    }
+
+    @media (min-width: 1560px) {
+        width: 100%;
+        max-width: 360px;
+        margin: 20px 13px;
+    }
+}

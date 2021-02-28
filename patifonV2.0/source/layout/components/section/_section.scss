@@ -1,0 +1,236 @@
+@import 'vars/_variable.scss';
+
+.section {
+    position: relative;
+    margin: 60px 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__top {
+        position: relative;
+        margin: -5px 0 26px;
+    }
+
+    &__title {
+        font-size: $section__titleTextFontSize;
+        font-weight: 700;
+        line-height: 1;
+        position: relative;
+        margin: 0;
+
+        &--code {
+            float: left;
+            margin: 0 5px 0 0;
+            padding: 0 0 5px 0;
+        }
+
+        &Result {
+            color: $section__titleResultTextColor;
+        }
+    }
+
+    &__subtitle {
+        font-size: $section__subtitleTextFontSize;
+        font-weight: 700;
+        line-height: 1;
+        position: relative;
+        margin: 0 0 -15px;
+    }
+
+    &__code {
+        position: relative;
+        top: -1px;
+        float: left;
+        color: $section__codeTextColor;
+    }
+
+    &__container {
+        position: relative;
+        padding: 0 15px;
+    }
+
+    &__device {
+        &Content {
+            position: relative;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        margin: 26px 0 0;
+    }
+
+    &__glossary {
+
+        &-wrapper {
+            margin: 25px 0 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            &__title {
+                margin: -15px 0 0 0;
+            }
+        }
+    }
+
+    @media (min-width: $screenSmMin) {
+        &__glossary {
+
+            &-wrapper {
+                flex-direction: row;
+            }
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__container {
+            &--tab {
+                clear: both;
+                padding-top: 10px;
+            }
+
+            &--sidebar {
+                position: fixed;
+                z-index: 101;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                //width: 320px;
+                width: 100%;
+                padding: 46px 0 0;
+                transition: all .2s linear;
+                transform: translateX(-100%);
+                background: $section__backgroundColor;
+            }
+
+            &--sort {
+                position: fixed;
+                z-index: 101;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 320px;
+                padding: 46px 0 0;
+                transition: all .2s linear;
+                transform: translateX(100%);
+                background: $section__backgroundColor;
+            }
+        }
+
+        &__device {
+            &Top {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                height: 46px;
+                background: $section__topBackgroundColor;
+            }
+
+            &Close {
+                position: absolute;
+                top: 50%;
+                width: 16px;
+                height: 16px;
+                margin: -8px 0 0 0;
+                background: url('../images/nav/icon/close.png') no-repeat;
+
+                &--right {
+                    right: 15px;
+                }
+
+                &--left {
+                    left: 15px;
+                }
+            }
+
+            &Content {
+                overflow: auto;
+                height: 100%;
+                padding: 15px 30px 30px 30px;
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__container {
+            &--left {
+                float: left;
+
+                &Fixed {
+                    padding-left: 340px;
+                }
+            }
+
+            &--right {
+                float: right;
+
+                &Fixed {
+                    padding-right: 325px;
+                }
+            }
+
+            &--content {
+                overflow: hidden;
+            }
+
+            &--primaryMenu {
+                float: left;
+                width: 325px;
+
+                &Fixed {
+                    padding-left: 325px;
+                }
+            }
+
+            &--tab {
+                overflow: hidden;
+            }
+
+            &--sidebar {
+                float: left;
+                width: 325px;
+
+                &Fixed {
+                    padding-left: 340px;
+                }
+            }
+
+            &--sort {
+                float: right;
+            }
+
+            &Inner {
+                position: relative;
+                float: left;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        &__container {
+            &--col6 {
+                float: left;
+                width: 50%;
+            }
+
+            &--order {
+                float: left;
+                width: 490px;
+
+                &Fixed{
+                    padding-left: 535px;
+                }
+            }
+        }
+    }
+}

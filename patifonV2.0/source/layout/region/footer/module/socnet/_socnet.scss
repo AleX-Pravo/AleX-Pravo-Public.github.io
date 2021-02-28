@@ -1,0 +1,109 @@
+@import 'vars/_variable.scss';
+
+.socnet {
+    font-weight: 700;
+    position: relative;
+    color: $socnet__textColor;
+
+    &__list {
+        position: relative;
+        margin: 15px 0 0;
+
+        @include clearfix;
+    }
+
+    &__item {
+        position: relative;
+        margin: 0 15px 0 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        height: 24px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            transition: all .2s linear;
+            background: url('../images/footer/icon/socnet.png') no-repeat;
+        }
+
+        &:after {
+            opacity: 0;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 0;
+            }
+
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &--facebook {
+            width: 13px;
+
+            &:before {
+                background-position: 0 0;
+            }
+
+            &:after {
+                background-position: 0 -25px;
+            }
+        }
+
+        &--youtube {
+            width: 27px;
+
+            &:before {
+                background-position: -14px 0;
+            }
+
+            &:after {
+                background-position: -14px -25px;
+            }
+        }
+
+        &--instagram {
+            width: 27px;
+
+            &:before {
+                background-position: -42px 0;
+            }
+
+            &:after {
+                background-position: -42px -25px;
+            }
+        }
+    }
+
+    @media (max-width: $screenMbMax) {
+        &__list {
+            font-size: 0;
+        }
+
+        &__item {
+            font-size: 14px;
+            display: inline-block;
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__item {
+            float: left;
+        }
+    }
+}

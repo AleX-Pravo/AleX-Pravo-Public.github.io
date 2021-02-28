@@ -1,0 +1,123 @@
+@import 'vars/_variable.scss';
+
+.write {
+    position: relative;
+
+    &__rate {
+        position: relative;
+        margin: 0 0 6px;
+    }
+
+    &__row {
+        position: relative;
+        margin: 20px -10px;
+
+        @include clearfix;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .write {
+        &__row {
+            &--add {
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+
+                .form-group {
+                    margin-bottom: 0;
+
+                    .control-label {
+                        margin: 0;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                }
+
+                img {
+                    margin: 0 14px 0 0;
+                }
+            }
+
+            &--photos {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    &__container {
+        position: relative;
+        min-height: 1px;
+        padding: 0 10px;
+    }
+
+    .rating {
+        margin-bottom: 32px;
+
+        &-item {
+            width: 40px;
+            height: 37px;
+            margin-right: 19px;
+
+            &:before,
+            &:after {
+                background-image: url('../images/content/icon/write__ratingStar.png');
+            }
+
+            &:after {
+                background-position: 0 -38px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &-name {
+            left: -15px;
+            right: -15px;
+        }
+    }
+
+    @media (min-width: 360px) {
+        .rating {
+            &-item {
+                margin-right: 24px;
+            }
+        }
+    }
+
+    @media (max-width: $screenMbMax) {
+        &__container {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (min-width: $screenXsMin) {
+        &__container {
+            float: left;
+            width: 50%;
+        }
+    }
+
+    .form {
+        &-group {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

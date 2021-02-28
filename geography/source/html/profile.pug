@@ -1,0 +1,40 @@
+//- Utility
+- var pageTitle = 'profile'
+
+
+include utils/_variable.pug
+- var breadcrumbs = ['Головна', pageTitle]
+doctype html
+html
+	include layout/_head.pug
+
+	body
+
+		= '\n'
+		//= Layout =
+		#layout
+			include layout/_header.pug
+
+			//= Main =
+			main#main.main
+				.container
+					include module/_breadcrumbs.pug
+					.layout-box__profile
+
+						include module/_profile-photo
+						section
+							include module/_form-info
+							include module/_history
+
+
+
+
+			//= End main =
+			= '\n'
+
+		//= End layout =
+
+		include layout/_footer.pug
+		include layout/_scripts.pug
+
+		script(src=bowerDir + 'magnific-popup/dist/jquery.magnific-popup.js')

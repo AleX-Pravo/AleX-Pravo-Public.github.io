@@ -1,0 +1,75 @@
+include vars/_variable.pug
+
+= '\n'
+//= Drop =
+.primaryMenu__drop
+    ul.primaryMenu__dropList
+
+        each val in primaryMenuDrop
+            li.primaryMenu__dropItem
+                a.primaryMenu__dropLink(href='javascript:void(0);')
+
+                    if ('image' in val)
+                        span.primaryMenu__dropImage
+                            img(src='data/primaryMenu/' + val.image + '.png' alt= val.title)
+
+                    span.primaryMenu__dropTitle= val.title
+
+                if ('drop' in val && val.drop)
+                    .primaryMenu__subdrop.hide-sm-max
+                        .primaryMenu__subdropInner
+                            //-ul.primaryMenu__sublist
+
+                                each drop, index in primaryMenuSubDrop
+                                    li.primaryMenu__subitem
+
+                                        //-if (index == 0)
+                                            a.primaryMenu__sublink(href='#' data-id='menu1')
+                                                span.primaryMenu__subtitle= drop
+
+                                        //-else if (index == 1)
+                                            a.primaryMenu__sublink(href='#' data-id='menu2')
+                                                span.primaryMenu__subtitle= drop
+
+                                        //-else
+                                        a.primaryMenu__sublink(href='javascript:void(0);')
+                                            span.primaryMenu__subtitle= drop
+
+                            .primaryMenu__thirddrop
+                                .primaryMenu__thirddropContainer
+
+                                    each subdrop, index in primaryMenuThirdDrop
+                                        //-.primaryMenu__thirddropCol.primaryMenu__thirddropCol--3
+                                        ul.primaryMenu__thirdlist
+                                            li.primaryMenu__thirdtitle
+                                                a.primaryMenu__thirdlink(href='')= subdrop.title
+                                            each list in subdrop.list
+                                                li.primaryMenu__thirditem
+                                                    a.primaryMenu__thirdlink(href='')= list
+
+                                        //-if (index == (primaryMenuThirdDrop.length - 1))
+                                            a.primaryMenu__allCategory(href='#') Все категории
+
+                                    //-.primaryMenu__slider.hide-md-max
+                                        a.primaryMenu__sliderLink(href='javascript:void(0);')
+                                            img(src='data/slider/xiomi.png' alt='')
+
+                                //-#menu2.primaryMenu__thirddropContainer
+
+                                    each subdrop, index in primaryMenuThirdDrop
+                                        .primaryMenu__thirddropCol.primaryMenu__thirddropCol--3
+                                            ul.primaryMenu__thirdlist
+
+                                                each list in subdrop.list
+                                                    li.primaryMenu__thirditem
+                                                        a.primaryMenu__thirdlink(href='')= list
+
+                                            if (index == (primaryMenuThirdDrop.length - 1))
+                                                a.primaryMenu__allCategory(href='#') Все категории
+
+                                    .primaryMenu__slider.hide-md-max
+                                        a.primaryMenu__sliderLink(href='#')
+                                            img(src='data/slider/xiomi.png' alt='')
+
+//= End drop =
+= '\n'

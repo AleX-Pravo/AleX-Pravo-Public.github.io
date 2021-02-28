@@ -1,0 +1,45 @@
+@import 'vars/_variable.scss';
+
+.pswp__zoom-wrap {
+    text-align: center;
+
+    &:before {
+        display: inline-block;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+    }
+
+    .wrapper {
+        line-height: 0;
+        position: relative;
+        z-index: 1045;
+        display: inline-block;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 25px;
+        padding-bottom: 56.25%; /* 16:9 */
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    video {
+        width: 100% !important;
+        height: auto !important;
+    }
+}

@@ -1,0 +1,44 @@
+mixin footerMenu(className)
+
+    -
+        var footerMenu = [
+            {
+                name: 'О наc',
+            },
+            {
+                name: 'Блог'
+            },
+            {
+                name: 'Оплата и доставка'
+            },
+            {
+                name: 'Оптовым покупателям'
+            },
+            {
+                name: 'Выгодное соседство'
+            },
+            {
+                name: 'Контакты'
+            },
+            {
+                name: 'Карта сайта'
+            }
+        ]
+
+    if (className != '')
+        - var name = className
+    else
+        - var name = ''
+
+    = '\n'
+    //= Menu =
+    ul.menu(class=name)
+        each val in footerMenu
+            if (val.active == true)
+                li.menu__item
+                    a.menu__link.menu__link--active(href='#')= val.name
+            else
+                li.menu__item
+                    a.menu__link(href='#')= val.name
+    //= End menu =
+    = '\n'

@@ -1,0 +1,44 @@
+.range {
+    margin: 22px 0 0 0;
+
+    &__toddler {
+        position: relative;
+        padding: 0 4px;
+    }
+
+    &__controls {
+        position: relative;
+        margin: 0 -11px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        padding-bottom: 15px;
+
+        &-input {
+            position: relative;
+            width: 100%;
+            max-width: 74px;
+            height: 32px;
+            text-align: center;
+            border: 1px solid $grayLighter;
+            color: $grayLighter;
+            font-size: $fontSizeBase;
+            outline: none;
+            background: none;
+            -moz-appearance: textfield;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        &-text {
+            position: relative;
+            margin: 0 11px;
+            color: $grayLight;
+            font-size: $fontSizeBase;
+        }
+    }
+}

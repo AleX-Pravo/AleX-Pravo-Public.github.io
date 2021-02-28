@@ -1,0 +1,84 @@
+.career-inner {
+    position: relative;
+    padding: 0 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+
+    h1 {
+        color: $brandPrimary;
+        font-size: $fontSizeLarge;
+        margin: 0 0 24px;
+        text-transform: none;
+    }
+
+    b {
+        color: $brandDarkBlue;
+        line-height: 1;
+        font-size: $fontSizeH5;
+        margin: 0 0 6px;
+        display: inline-block;
+
+        &:nth-of-type(n+2) {
+            margin: 25px 0 6px;
+        }
+    }
+
+    ul {
+        color: $brandDarkBlue;
+        font-size: $fontSizeH5;
+
+        li {
+            line-height: 18px;
+
+            &:nth-last-child(n+2) {
+                margin: 0 0 3px;
+            }
+        }
+
+        a {
+            color: $brandDarkBlue;
+            word-wrap: break-word;
+            line-height: 18px;
+        }
+    }
+
+    .button {
+        margin: 23px 0 35px -18px;
+        align-self: center;
+    }
+
+    @media (min-width: $screen_L_Min) {
+        margin: 0 0 0 -4px;
+
+        h1 {
+            font-size: $fontSizeH4;
+            margin: 0 0 42px;
+        }
+
+        b {
+            font-size: $fontSizeSmall;
+
+            &:nth-of-type(n+2) {
+                margin: 34px 0 11px;
+            }
+        }
+
+        ul {
+            font-size: $fontSizeSmall;
+
+            li {
+                line-height: 1;
+
+                &:nth-last-child(n+2) {
+                    margin: 0 0 10px;
+                }
+            }
+        }
+
+        .button {
+            margin: 44px 0 42px;
+            align-self: flex-start;
+        }
+    }
+}

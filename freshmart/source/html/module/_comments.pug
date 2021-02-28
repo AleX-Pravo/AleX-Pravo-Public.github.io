@@ -1,0 +1,41 @@
+-
+    var commentsList = [
+        {
+            image: 'avatar',
+            name: 'Марина',
+            text: 'Очень вкусный фрукт. Мякоть гранадиллы сочная и приятная , напоминает вкус дыни . Семена находятся внутри желеобразной мякоти, их сложно отделить, но они мягкие и съедобные.',
+            date: '09 января 2017',
+            datetime: '2017-01-09',
+            likes: 5,
+            dislikes: 2
+        }
+    ]
+//= Comments =
+.comments
+    .comments__title Комментарии
+    .comments__content
+        each val in commentsList
+            .comments__item(itemprop='comment' itemscope itemtype='http://schema.org/Comment')
+                .comments__picture
+                    img.comments__image(src='data/blog/' + val.image +'.png' alt='')
+                .comments__data
+                    .comments__name(itemprop='author')= val.name
+                    .comments__info
+                        time.comments__date(datetime= val.datetime)= val.date
+                        meta(itemprop='datePublished' content='2017-01-09')
+                        //
+                            .---
+                                Лайки и дизлайки могут принимать дополнительные классы соответствующие своему состоянию:
+                                    .comments__likes--active - активное
+                                    .comments__likes--disabled - не активное
+                                    .comments__dislikes--active - активное
+                                    .comments__dislikes--disabled - не активное
+                            .---
+                        a.comments__likes(href='#')= val.likes
+                        a.comments__dislikes(href='#')= val.dislikes
+                    .comments__text(itemprop='text')= val.text
+                    a.comments__complaint(href='#') Пожаловатся на отзыв
+    .comments__form
+        +write('comment')
+//= End comments =
+= '\n'

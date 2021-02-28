@@ -1,0 +1,68 @@
+.quantity {
+    font-size: $fontSizeBase;
+    font-weight: 700;
+    line-height: 1;
+
+    &-postfix {
+        font-size: $fontSizeSmall;
+    }
+
+    &-output {
+        font-size: $fontSizeBase;
+        font-weight: 700;
+        line-height: (26px / $fontSizeBase);
+        display: inline-block;
+        width: 55px;
+        min-height: 26px;
+        text-align: center;
+        color: $grayDark;
+        border: 1px solid $borderQuantity;
+        outline: none;
+    }
+
+    &-arrow {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 22px;
+        margin: 0 5px;
+        vertical-align: middle;
+        background: url('../images/content/icon/order.png') 50px 50px no-repeat;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            transition: all .2s ease-out;
+            opacity: 0;
+            background: url('../images/content/icon/order.png') 50px 50px no-repeat;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &--minus {
+            background-position: 0 0;
+            &:after {
+                background-position: -19px 0;
+            }
+        }
+
+        &--plus {
+            background-position: 0 -22px;
+            &:after {
+                background-position: -20px -22px;
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        font-size: $fontSizeLarge;
+    }
+}

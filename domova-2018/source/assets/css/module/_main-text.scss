@@ -1,0 +1,125 @@
+.main-text {
+    width: 100%;
+    max-width: 728px;
+    margin: 70px auto 85px;
+
+    &__content {
+        h2 {
+            font-size: $fontSizeH6;
+            line-height: (25px / $fontSizeH6);
+            color: $grayBase;
+            text-decoration: none;
+            transition: all 0.2s ease-out;
+        }
+
+        p {
+            font-size: $fontSizeH6;
+            line-height: (25px / $fontSizeH6);
+            color: $grayLight;
+            margin-bottom: 1.5em;
+            transition: all 0.2s ease-out;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            outline: none;
+            color: $brandPrimary;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        ol,
+        ul {
+            margin-bottom: 36px;
+        }
+
+        li {
+            font-size: $fontSizeH6;
+            line-height: (25px / $fontSizeH6);
+            color: $grayLight;
+            position: relative;
+            margin-bottom: 10px;
+            transition: all 0.2s ease-out;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -25px;
+                display: none;
+            }
+        }
+
+        ol {
+            list-style: none;
+            counter-reset: num;
+
+            li {
+                &:before {
+                    content: counter(num) '. ';
+                    counter-increment: num;
+                    font-weight: bold;
+                    color: $brandPrimary;
+                    line-height: 1;
+                    top: 7px;
+                    display: block;
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                &:before {
+                    top: 14px;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: $brandPrimary;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        &__content {
+            h2 {
+                font-size: $fontSizeH5;
+                line-height: (30px / $fontSizeH5);
+            }
+
+            p {
+                font-size: $fontSizeH5;
+                line-height: (30px / $fontSizeH5);
+            }
+
+            li {
+                font-size: $fontSizeH5;
+                line-height: (30px / $fontSizeH5);
+            }
+        }
+    }
+
+    @media (min-width: 800px) {
+        &__content {
+            h2 {
+                font-size: $fontSizeLarge;
+                line-height: (30px / $fontSizeLarge);
+            }
+
+            p {
+                font-size: $fontSizeLarge;
+                line-height: (30px / $fontSizeLarge);
+            }
+
+            li {
+                font-size: $fontSizeLarge;
+                line-height: (30px / $fontSizeLarge);
+            }
+        }
+    }
+}

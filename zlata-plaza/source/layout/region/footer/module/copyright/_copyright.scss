@@ -1,0 +1,14 @@
+@import 'vars/_variable.scss';
+
+.copyright {
+    font-size: $copyright__textFontSize;
+    position: relative;
+    color: $copyright__textColor;
+
+    @media (min-width: $screenXsMin) {
+
+        float: left;
+        margin-top: 39px;
+
+    }
+}

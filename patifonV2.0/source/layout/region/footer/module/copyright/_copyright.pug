@@ -1,0 +1,17 @@
+include vars/_variable.pug
+
+= '\n'
+//= Copyright =
+-
+	micromarking                    = true
+	itemscope                       = (micromarking) ? true : false
+	itemtype                    = (micromarking) ? 'http://schema.org/CreativeWork' : false
+	itempropInner               = (micromarking) ? 'copyrightHolder' : false
+	typeOfInner                 = (micromarking) ? 'Organization' : false
+div(itemscope= itemscope itemtype= itemtype)
+	span(itemprop= itempropInner typeof= typeOfInner) © 2013-2018 Интернет-магазин «PATIFON» — patifon.com.ua
+.copyright © 2013-2018 Интернет-магазин «PATIFON» — patifon.com.ua
+//= End copyright =
+= '\n'
+-
+	micromarking                    = false

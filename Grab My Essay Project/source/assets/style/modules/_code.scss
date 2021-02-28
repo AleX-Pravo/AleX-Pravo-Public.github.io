@@ -1,0 +1,62 @@
+/* Code */
+.code {
+	background: #FEF1EC;
+	padding: 12px 20px;
+	position: relative;
+	width: 100%;
+	border-radius: 3px;
+
+	&:before {
+		content: '';
+		width: 65px;
+		height: 55px;
+		background: url(../img/prices.svg) 50% 50% no-repeat;
+		position: absolute;
+		top: -9px;
+		right: 20px;
+	}
+
+	&__title {
+		color: #000615;
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: bold;
+		margin-bottom: 13px;
+		margin-right: 14px;
+
+		span {
+			color: #40AC60;
+		}
+	}
+
+	&__label {
+		text-transform: uppercase;
+		color: #fff;
+		background: #212223;
+		padding: 6px 9px;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 13px;
+
+		&:before {
+			background: url(../img/best-icon-w.svg) 50% 50% no-repeat;
+			top: 3px;
+			margin-right: 4px;
+		}
+	}
+
+	@media (min-width: 550px) {
+		padding: 12px 20px;
+
+		&__title {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+
+	//1024px
+	@media (min-width: $screen_L_Min) {
+		max-width: 546px;
+	}
+
+}

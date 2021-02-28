@@ -1,0 +1,13 @@
+//- FORM
+//------------------------------------------------
+
+$form__controlRequireTextColor:             #da0000 !default;
+$form__controlPlaceholderTextColor:         $grayLighter !default;
+$form__controlBorderColor:                  $borderColor !default;
+$form__controlBorderColor--active:          $brandPrimary !default;
+$form__controlBackgroundColor:              $base !default;
+
+$form__reviewsControlTextFontSize:          $fontSizeH6 !default;
+$form__reviewsButtonTextFontSize:           $fontSizeH6 !default;
+
+$form__reviewsControlBackgroundColor:       $brandInfo !default;

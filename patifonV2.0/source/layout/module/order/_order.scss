@@ -1,0 +1,91 @@
+@import 'vars/_variable.scss';
+
+.order {
+    position: relative;
+    padding: 15px;
+    background: $order__backgroundColor;
+
+    &__container {
+        position: relative;
+        margin: 0 0 30px;
+    }
+
+    &__title {
+        font-size: $order__titleTextFontSize;
+        font-weight: 700;
+        line-height: 1;
+        position: relative;
+        margin: 0 0 9px;
+        padding: 0 0 0 50px;
+        color: $order__titleTextColor;
+
+        &:before {
+            font-size: $order__titleCountTextFontSize;
+            line-height: (38px / $order__titleCountTextFontSize);
+            position: relative;
+            top: -1px;
+            display: block;
+            float: left;
+            width: 40px;
+            height: 40px;
+            margin: 0 10px 0 -50px;
+            content: attr(data-count);
+            text-align: center;
+            vertical-align: middle;
+            color: $order__titleCountTextColor;
+            border: 1px solid $order__titleCountBorderColor;
+            border-radius: 50%;
+            background: $order__titleCountBackgroundColor;
+        }
+
+        &Text {
+            position: relative;
+            display: table-cell;
+            height: 40px;
+            vertical-align: middle;
+        }
+    }
+
+    &__required {
+        font-size: $order__requiredTextFontSize;
+        line-height: 1;
+        position: relative;
+        top: -2px;
+        margin: -10px 0 0;
+        color: $order__requiredTextColor;
+    }
+
+    &__box {
+        position: relative;
+        display: none;
+        margin: 0 0 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .form {
+        &-group {
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .button {
+        font-size: $order__buttonTextFontSize;
+        width: 100%;
+        height: 50px;
+    }
+
+    @media (min-width: $screenXsMin) {
+        padding: 30px;
+    }
+
+    @media (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
+}

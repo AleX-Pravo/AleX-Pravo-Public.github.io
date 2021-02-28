@@ -1,0 +1,90 @@
+
+.device-bottom {
+    width: 100%;
+    min-height: 1px;
+    //margin-top: 40px;
+
+    .selectric-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 8px;
+
+        .selectric {
+            text-align: center;
+        }
+
+        .selectric-items {
+            right: 0;
+            bottom: 41px;
+            left: 0;
+            width: auto !important;
+            margin: -1px;
+            box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        z-index: 51;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+
+        //border-radius: 40px;
+        opacity: 0.85;
+
+        @include clearfix;
+    }
+
+    &__item {
+        float: left;
+        width: 50%;
+        height: inherit;
+        text-align: center;
+        position: relative;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &__link {
+        //font-size: $deviceBottom__item;
+        font-weight: 700;
+        display: inline-block;
+        width: 100%;
+        height: inherit;
+        transition: all .2s ease-out;
+        vertical-align: middle;
+        text-decoration: none;
+        line-height: 38px;
+
+        background: $base;
+        border: 1px solid $brandPrimary;
+        border-radius: 5px;
+        //box-shadow: 0 -2px 2px rgba(0, 0, 0, .2);
+
+        &:hover {
+            color: $brandPrimary;
+        }
+    }
+
+    &__title {
+        //font-size: $deviceBottom__item;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    &__select {
+        top: -17px;
+    }
+
+    @media (min-width: $screenMdMin) {
+        display: none;
+    }
+}

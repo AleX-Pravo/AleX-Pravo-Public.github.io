@@ -1,0 +1,16 @@
+= '\n'
+//= hotel-rooms =
+//- (source/assets/css/module/_hotel-rooms.scss)
+.hotel-rooms
+    include _slider.pug
+
+    - var titleHead = 'Опис'
+    include _title-head.pug
+
+    p(itemprop='description') Одна кімната, Нові сучасні меблі, комфортне ліжко, кондиціонер та телефон. Ванна кімната укомплектовкана душовою кабіною, новою брендовою сантехнікою та необхідною косметикою.TV, одна кімната, нові сучасні меблі, комфортне ліжко, кондиціонер та телефон. Ванна кімната укомплектовкана душовою кабіною, новою брендовою сантехнікою та необхідною косметикою.
+    
+    ul
+        each item in hotelComfort
+            li.check= item
+//= End hotel-rooms =
+= '\n'

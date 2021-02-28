@@ -1,0 +1,81 @@
+-
+    pageTitle = 'Відгуки про нас'
+//- Utility
+include utils/_variable.pug
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+
+            //= Main =
+            main#main.main
+                - var breadcrumbs = ['Головна сторінка', 'Відгуки про нас']
+                include module/_breadcrumbs.pug
+
+                .container
+
+
+                    //-
+                        = '\n'
+                        //= Speak =
+                        .speak.speak--reverse
+                            .speak__wrapper
+                                .speak__list
+                                    .speak__item.decorate
+                                        img.speak__logo(src='data/speak/1.png' alt='')
+
+                                    - for (var i = 0; i < 3; i++)
+                                        each item in speakSection
+                                            .speak__item
+                                                .speak__inner
+                                                    .speak__date= item.date
+                                                    .speak__text= item.text
+                                                    .speak__author
+                                                        .speak__author-picture
+                                                            img.speak__author-image(src='data/speak/' + item.image + '.png' alt='')
+                                                        .speak__author-name= item.name
+
+                                .speak__field
+                                    a.speak__button(href='#') ЗАВАНТАЖИТИ ВСІ
+                                    a.speak__button(href='#') НАПИСАТИ ВІДГУК
+                        //= End speak =
+
+                    = '\n'
+                    //= Speak =
+                    .speak
+                        - var title = [{modifier: '', elem: 'h1', icon: '', text: 'Що говорять наші клієнти', name: 'Відгуки про нас'}]
+                        include module/_title.pug
+
+                        .speak__list
+                            .speak__item.decorate
+                                img.speak__image(src='data/speak/1.png' alt='')
+
+                            - for (var j = 0; j < 5; j++)
+                                - for (var i = 1; i < speakSection.length; i++)
+                                    .speak__item
+                                        .speak__date= speakSection[i].date
+                                        .speak__text= speakSection[i].text
+                                        .speak__author
+                                            .speak__author-picture
+                                                img.speak__author-image(src='data/speak/' + speakSection[i].image + '.png' alt='')
+                                            .speak__author-name= speakSection[i].name
+
+                        .speak__field
+                            a.speak__button(href='#') ЗАВАНТАЖИТИ ВСІ
+                            a.speak__button(href='#') НАПИСАТИ ВІДГУК
+                    //= End speak =
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug

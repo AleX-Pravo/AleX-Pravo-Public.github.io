@@ -1,0 +1,80 @@
+.select2 {
+
+	width: 100%!important;
+
+	&-container {
+
+		&--default {
+			border: none;
+
+			.select2 {
+
+				&-selection {
+
+					&--single {
+						border: none;
+						height: 100%;
+						background: transparent;
+						padding: 19px 0 0;
+
+
+						&:focus {
+							outline: none;
+						}
+
+						.select2 {
+							&-selection {
+								&__rendered {
+									line-height: 20px;
+									padding-left: 0;
+
+								}
+
+								&__arrow {
+									height: 100%;
+									right: 3px;
+
+									b {
+										transition: all .3s;
+										border: none;
+										margin: 0;
+										width: 12px;
+										height: 6px;
+										transform: translate(-50%, -50%);
+										background: url(../images/popup/arrow.png) no-repeat;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.select2-container--open {
+				.select2-dropdown {
+					//left: -51px;
+				}
+
+				.select2-selection--single {
+					.select2-selection__arrow {
+						b {
+							transform: translate(-50%, -50%) rotate(180deg);
+						}
+					}
+				}
+			}
+
+			.select2-results__option--highlighted[aria-selected] {
+				background: $brandPrimary;
+			}
+
+		}
+	}
+
+	&-results {
+
+		&__option {
+			padding: 6px 6px 6px 12px;
+		}
+	}
+}

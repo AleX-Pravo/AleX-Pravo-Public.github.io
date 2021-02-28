@@ -1,0 +1,8 @@
+mixin tags(data)
+    //= Tags =
+    ul.tags
+        each item in data
+            li.tags__item
+                a.tags__link(href='#')= item
+    //= End Tags =
+    = '\n'

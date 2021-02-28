@@ -1,0 +1,31 @@
+//- FORM
+//------------------------------------------------
+
+$form__baseFontSize:                        $fontSizeBase !default;
+
+$form__inputBorderColor:                    $grayDark !default; // $base !default;
+$form__greetingInputBorderColor:            $base !default;
+
+
+$mainForm__titleTextFontSize:               $fontSizeH4 !default;
+$mainForm__titleTextColor:                  $grayDark !default;
+
+$mainForm__textTextFontSize:                $fontSizeH4 !default;
+$mainForm__textTextColor:                   #7a7a7a !default;
+$mainForm__textLinkColor:                   #e6007e !default;
+$mainForm__textBorderColor:                 #dcdbdb !default;
+
+$mainForm__inputPlaceholderColor:           #7a7a7a !default;
+
+$mainForm__uploadTextFontSize:              $fontSizeH4 !default;
+$mainForm__uploadTextColor:                 #e6007e !default;
+$mainForm__uploadBorderColor:               #dcdbdb !default;
+$mainForm__uploadBackgroundColor:           #f9f9f9 !default;
+
+$mainForm__checkboxBorderColor:             #dcdbdb !default;
+$mainForm__checkboxBackgroundColor:         #f9f9f9 !default;
+
+$mainForm__buttonTextFontSize:              $fontSizeH4 !default;
+$mainForm__buttonTextColor:                 #e6007e !default;
+$mainForm__buttonTextColor--active:         $base !default;
+$mainForm__buttonBackgroundColor--active:   #e6007e !default;

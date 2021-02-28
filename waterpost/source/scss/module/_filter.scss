@@ -1,0 +1,298 @@
+.filter {
+    padding: 0 17px 17px;
+    width: 320px;
+    height: 100%;
+    margin: 0;
+    box-shadow: 0px 18px 40px rgba(152, 160, 176, 0.35);
+    background: $base;
+    flex-shrink: 0;
+    position: fixed;
+    transition: all .3s;
+    z-index: 58;
+    left: -370px;
+    top: 0;
+    overflow-y: auto;
+
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__container {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    &.form {
+        border-radius: 0;
+    }
+
+    &__close {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        display: flex;
+        padding: 11px;
+
+        svg {
+            width: 17px;
+            height: 17px;
+            fill: #2A6AF0;
+        }
+    }
+
+    .logo {
+        border-bottom: 1px solid $brandUltralightBlue;
+        height: 100px;
+        width: 100%;
+
+        span {
+            display: none;
+        }
+    }
+
+    &__switch {
+        max-width: 304px;
+        width: 100%;
+        border-radius: 60px;
+        border: 1px solid $brandLightBlue;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin: 40px auto 0;
+        height: 60px;
+        position: relative;
+
+        input {
+            display: none;
+
+            &:checked {
+                + div {
+
+                    &:before {
+                        transform: translateX(100%);
+                        border-radius: 0 34px 34px 0;
+                    }
+
+                    span {
+                        &:first-of-type {
+                            color: $brandDarkBlack;
+                        }
+
+                        &:last-of-type {
+                            color: $base;
+                        }
+                    }
+                }
+            }
+        }
+
+        > div {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: all .4s;
+            border-radius: 34px;
+            display: flex;
+            align-items: center;
+
+            &:before {
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 50%;
+                left: 0;
+                top: 0;
+                background-color: $brandPrimary;
+                border-radius: 34px 0 0 34px;
+                transition: all .4s;
+                z-index: -1;
+            }
+
+            span {
+                font-size: $fontSizeBase;
+                font-weight: 600;
+                color: $brandDarkBlack;
+                text-decoration: none;
+                height: 60px;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .2s;
+                padding: 0 18px;
+
+                &:first-of-type {
+                    color: $base;
+                }
+
+                &:last-of-type {
+                    color: $brandDarkBlack;
+                }
+            }
+        }
+    }
+
+    &__section {
+        padding: 40px 0 35px;
+        width: 100%;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $brandLightBlue;
+        }
+
+        &-title {
+            font-weight: bold;
+            color: $brandDarkBlack;
+            position: relative;
+            text-transform: uppercase;
+            font-size: $fontSizeLarge;
+            letter-spacing: 0.1em;
+            margin: 0 0 5px;
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 21px;
+            height: 21px;
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:before,
+            &:after {
+               content:'';
+               width: 10px;
+               height: 2px;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               background: $brandDarkBlack;
+               transition: all .3s;
+            }
+
+            &.rotate {
+                &:before {
+                    transform: translate(-50%,-50%) rotate(180deg);
+                }
+
+                &:after {
+                    transform: translate(-50%,-50%) rotate(270deg);
+                 }
+            }
+        }
+
+        &-block {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow: hidden;
+
+            label {
+                padding-left: 42px;
+                color: $brandDarkBlack;
+                line-height: 38px;
+                white-space: nowrap;
+                font-size: $fontSizeBase;
+                font-weight: 500;
+
+                &.disabled {
+                    color: lighten($brandDarkBlack, 75%);
+
+                    input {
+                        border-color: lighten($brandLightBlue, 10%);
+                        background: lighten($brandLightGray, 1%);
+                    }
+                }
+            }
+        }
+
+        &-counter {
+            color: $brandDarkBlack;
+            padding: 0 0 0 5px;
+        }
+
+        &.minimized {
+            .filter {
+                &__section {
+                    &-block {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        max-width: 304px;
+        width: 100%;
+        border-radius: 60px;
+        border: 1px solid $brandLightBlue;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin: 40px auto 0;
+        height: 60px;
+
+        a {
+            font-size: $fontSizeBase;
+            font-weight: 600;
+            color: $brandDarkBlack;
+            text-decoration: none;
+            height: 60px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 18px;
+
+
+            &.active {
+                background: $brandPrimary;
+                color: $base;
+            }
+        }
+    }
+
+    @media (min-width: 400px) {
+        padding: 0 34px 34px;
+        width: 400px;
+        left: -450px;
+        transition: all .4s;
+
+        &__close {
+            right: 23px;
+            top: 23px;
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+        left: 0;
+        top: 0;
+        z-index: 56;
+
+        .logo {
+            span {
+                display: inline;
+            }
+        }
+
+        &__close {
+            display: none;
+        }
+
+        &__container {
+            padding: 0 0 100px;
+        }
+    }
+}

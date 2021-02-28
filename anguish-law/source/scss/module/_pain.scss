@@ -1,0 +1,93 @@
+.pain {
+    &__box {
+        padding: 35px 0 0;
+    }
+
+    &__main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 0 22px;
+    }
+
+    &__wrap {
+        width: 100%;
+        transition: all .3s;
+        margin: 0 0 35px;
+    }
+
+    &__image {
+        text-align: center;
+        position: relative;
+        margin: 0 0 25px;
+
+        &.animate {
+            animation: spinner .6s ease;
+            transform-origin: center bottom;
+        }
+
+        .jowl {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    p {
+        margin: 0;
+        text-align: center;
+        font-size: $fontSize16;
+        color: $grayBase;
+        line-height: 22px;
+        transition: all .2s ease;
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+
+        &__wrap {
+            cursor: pointer;
+            width: calc(100%/2);
+        }
+
+        p {
+            font-size: $fontSize18;
+            line-height: 25px;
+        }
+    }
+    //1080px
+    @media (min-width: $screen_L_Min) {
+
+        &__wrap {
+            cursor: pointer;
+            width: calc(100%/3);
+
+            p {
+                font-size: $fontSize20;
+                line-height: 30px;
+            }
+
+            &:hover {
+                
+                .pain__image {
+                    animation: spinner .6s ease;
+                    transform-origin: center center;
+                }
+
+                p {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}

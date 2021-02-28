@@ -1,0 +1,69 @@
+//- Utility
+
+include utils/_variable
+
+-
+    pageTitle = 'career'
+    tab = true
+
+doctype html
+html
+    include layout/_head
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+
+            - dots = true
+            include layout/_header
+
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+                        section.section.section--title.stretch
+                            h1 career
+                        section.section.section--career
+                            .tab
+                                .tab-menu
+                                    ul.tab-list
+                                        each obj in tabMenuListItems
+                                            li.tab-item
+                                                a.tab-link(href=`#${obj.id}`)= obj.value
+                                .tab-content
+                                    each el in tabContentListItems
+                                        .tab-box(id= el.id)
+                                            each item, i in el.list
+                                                .tab-box__inner
+                                                    .tab-box__title= item.value
+                                                        +icon('icon-play')
+                                                    each prop, j in item.vacancies
+                                                        .tab-box__inner-item(class = (i === 0 && j === 2) ? 'active show' : '')
+                                                            .tab-box__inner-link
+                                                                +icon('icon-triangle')
+                                                                a(href='career-inner.html')= prop
+                                                            .tab-box__inner-drop
+                                                                include module/_career-inner
+
+
+
+
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        -
+            mascot = true
+            dots = false
+
+
+        include layout/_footer
+        include module/_mobile-menu
+
+        include layout/_sprite
+        include layout/_scripts

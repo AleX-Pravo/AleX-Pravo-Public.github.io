@@ -1,0 +1,15 @@
+= '\n'
+//= News =
+
+.news
+    a.news__image.decoration(href='news-inner.html')
+        img(src=`data/news/${prop.image}.jpg` alt='')
+    .news__info
+        a.news__info-title(href='news-inner.html')!= prop.title
+        .news__info-date= prop.date
+        .news__info-text
+            p= prop.text
+        a.button.button--pinch(href='news-inner.html') read more
+
+//= End news =
+= '\n'

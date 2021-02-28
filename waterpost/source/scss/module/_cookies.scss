@@ -1,0 +1,122 @@
+.cookies {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    max-width: 447px;
+    width: 100%;
+    transition: all .6s;
+    z-index: 60;
+    background: $brandPrimary;
+    border-radius: 6px;
+    display: flex;
+    max-width: 300px;
+
+    justify-content: space-between;
+
+    &__close {
+        overflow: hidden;
+        text-indent: 100%;
+        width: 12px;
+        overflow: hidden;
+        text-indent: 100%;
+        position: absolute;
+        top: 9px;
+        height: 12px;
+        right: 9px;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            position: absolute;
+            display: block;
+            width: 12px;
+            height: 12px;
+            content: '';
+            transition: all .2s linear;
+            background: url('../images/icons/exit.svg')no-repeat;
+        }
+    }
+
+    &__image {
+        background: url(../images/cookies/cookies.svg)no-repeat;
+        width: 90px;
+        height: 90px;
+        flex-shrink: 0;
+        display: none;
+        align-self: flex-end;
+    }
+
+    h2 {
+        font-size: $fontSizeBase;
+        text-transform: uppercase;
+        color: $base;
+        margin: 8px 0;
+        font-weight: 600;
+    }
+    p {
+        font-family: $fontFamilyBase;
+        font-size: $fontSizeSmall;
+        color: $base;
+        margin: 0 0 14px 0;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        margin: 0 -17px;
+
+        &-item {
+            margin: 0 17px;
+            color: $brandPrimary;
+            border-radius: 16px;
+            text-decoration: none;
+            padding: 13px 26px;
+            font-size: $fontSizeSmall;
+            text-transform: uppercase;
+            background: $base;
+            font-weight: 700;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s;
+    }
+
+    @media (min-width: $screen_L_Min) { //1080
+
+        bottom: 64px;
+        right: 64px;
+        left: auto;
+        transform: none;
+        padding: 16px;
+        max-width: 447px;
+
+        &__image {
+            display: block;
+        }
+
+        h2 {
+            font-size: $fontSizeH3;
+        }
+
+        p {
+            font-size: $fontSizeBase;
+            max-width: 298px;
+            width: 100%;
+        }
+
+        &__link {
+            &-item {
+                padding: 9px 12px;
+                font-size: $fontSizeSmall;
+            }
+        }
+    }
+}

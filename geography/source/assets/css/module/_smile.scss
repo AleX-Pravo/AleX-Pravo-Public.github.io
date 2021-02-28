@@ -1,0 +1,156 @@
+.smile {
+	max-width: 490px;
+	margin: 40px auto 0;
+
+	&__wrap {
+		display: flex;
+		margin-bottom: 24px;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	&__title {
+		flex-basis: 100%;
+		text-align: center;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 16px;
+		color: $grayDark;
+		margin-bottom: 15px;
+	}
+
+	&__img {
+		flex-basis: 100%;
+		text-align: center;
+
+		.smile {
+			// position: relative;
+			// display: inline-flex;
+
+			&__list {
+				padding: 0;
+				list-style: none;
+				display: inline-flex;
+
+				&:after {
+					display: table;
+					clear: both;
+					content: '';
+				}
+
+				&:hover {
+					.smile__item a {
+						&.disregard {
+							background: url(../images/smile/disregard-o.svg) no-repeat;
+						}
+
+						&.confused {
+							background: url(../images/smile/confused-o.svg) no-repeat;
+						}
+
+						&.neutral {
+							background: url(../images/smile/neutral-o.svg) no-repeat;
+						}
+
+						&.joy {
+							background: url(../images/smile/joy-o.svg) no-repeat;
+						}
+
+						&.happy {
+							background: url(../images/smile/happy-o.svg) no-repeat;
+						}
+					}
+				}
+			}
+
+			&__item {
+				width: 32px;
+				height: 32px;
+				margin: 0 4px;
+				//float: left;
+				cursor: pointer;
+				position: relative;
+
+				a:hover,
+				a.active {
+					&.disregard {
+						background: url(../images/smile/disregard-g.svg) no-repeat !important;
+					}
+
+					&.confused {
+						background: url(../images/smile/confused-g.svg) no-repeat !important;
+					}
+
+					&.neutral {
+						background: url(../images/smile/neutral-g.svg) no-repeat !important;
+					}
+
+					&.joy {
+						background: url(../images/smile/joy-g.svg) no-repeat !important;
+					}
+
+					&.happy {
+						background: url(../images/smile/happy-g.svg) no-repeat !important;
+					}
+				}
+
+				a {
+					&.disregard,
+					&.confused,
+					&.neutral,
+					&.joy,
+					&.happy {
+						width: 32px;
+						height: 32px;
+						position: relative;
+						display: block;
+					}
+
+					&.disregard {
+						background: url(../images/smile/disregard.svg) no-repeat;
+					}
+
+					&.confused {
+						background: url(../images/smile/confused.svg) no-repeat;
+					}
+
+					&.neutral {
+						background: url(../images/smile/neutral.svg) no-repeat;
+					}
+
+					&.joy {
+						background: url(../images/smile/joy.svg) no-repeat;
+					}
+
+					&.happy {
+						background: url(../images/smile/happy.svg) no-repeat;
+					}
+				}
+			}
+		}
+	}
+
+	//480px
+	@media (min-width: $screenXsMin) {
+		&__wrap {
+			flex-flow: row nowrap;
+		}
+
+		&__title {
+			text-align: right;
+			flex-basis: calc(100% - 200px);
+			padding-right: 12px;
+			margin: 0;
+		}
+
+		&__img {
+			flex-basis: 200px;
+		}
+	}
+
+	//1024px
+	@media (min-width: $screenMdMin) {
+		max-width: none;
+
+	}
+}

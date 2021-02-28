@@ -1,0 +1,62 @@
+//- Helpers
+@import 'helpers/clearfix/_clearfix.scss';
+
+.tab {
+    position: relative;
+
+    &-menu {
+        position: relative;
+    }
+
+    &-list {
+        position: relative;
+
+        @include clearfix;
+    }
+
+    &-item {
+        position: relative;
+        float: left;
+    }
+
+    &-content {
+        position: relative;
+    }
+
+    &-box {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+    
+    &--banks {
+        border-radius: 15px;
+        width: 100%;
+        max-width: 960px;
+        overflow: hidden;
+
+        .tab {
+            &-item {
+                &.active {
+                    .tab {
+                        &-link {
+                            background: white;
+                        }
+                    }
+                }
+            }
+
+            &-link {
+                height: 60px;
+                line-height: 60px;
+                padding: 0 30px;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                background: #dfdfdf;
+            }
+        }
+    }
+}

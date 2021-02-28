@@ -1,0 +1,404 @@
+.cart {
+    z-index: 3;
+
+    &--fixed {
+        position: fixed;
+        top: 0;
+    }
+
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 270px;
+
+    &__drop-title {
+        display: none;
+    }
+
+    &__header {
+        position: relative;
+        padding: 8px 0;
+        border: 1px solid $grayLight;
+        background: $base;
+
+        @include clearfix;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            width: 25px;
+            height: 25px;
+            margin-top: -12px;
+            content: '';
+            background: url('../images/content/icon/cart.png') 0 0 no-repeat;
+        }
+
+        .cart {
+            &__close {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                margin-top: -10px;
+            }
+        }
+    }
+    &__list {
+        overflow: auto;
+    }
+
+    &__title {
+        font-size: $fontSizeH4;
+        margin-left: 45px;
+        color: $gray;
+    }
+
+    &__close {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        content: '';
+        text-decoration: none;
+        background: $grayLighter url('../images/content/icon/cart.png') 0 -45px no-repeat;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            transition: all .2s ease-out;
+            opacity: 0;
+            background: $base url('../images/content/icon/cart.png') -20px -45px no-repeat;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__edit {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        content: '';
+        text-decoration: none;
+        background: $grayLighter url('../images/content/icon/cart.png') 0 -25px no-repeat;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            transition: all .2s ease-out;
+            opacity: 0;
+            background: $base url('../images/content/icon/cart.png')  -20px -25px no-repeat;
+        }
+
+        &--active,
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__arrow {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        background: url('../images/content/icon/cart.png') 50px 50px no-repeat;
+
+        &--min {
+            background-position: 0 -85px;
+
+            &:hover {
+                background-position: -20px -85px;
+            }
+        }
+
+        &--max {
+            background-position: 0 -65px;
+
+            &:hover {
+                background-position: -20px -65px;
+            }
+        }
+    }
+
+    &__content {
+        .cart {
+            &__close {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__section {
+        margin-top: -1px;
+        padding: 15px 15px 10px 15px;
+        border: 1px solid $grayLight;
+        background: $base;
+    }
+
+    &__controls {
+        text-align: right;
+    }
+
+    &__product {
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 4px;
+        text-decoration: underline;
+        color: $gray;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__product-edit {
+        display: none;
+    }
+
+    &__save {
+        text-align: right;
+    }
+
+    &__link {
+        font-size: $fontSizeBase;
+        text-decoration: none;
+        color: $brandPrimary;
+        border-bottom: 1px dashed $brandPrimary;
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+
+    &__info {
+        font-size: $fontSizeBase;
+        margin-top: 11px;
+        margin-left: -5px;
+        color: $lightText;
+    }
+
+    &__output {
+        font-size: $fontSizeBase;
+        display: inline-block;
+        width: 40px;
+        margin-top: 11px;
+        margin-left: -5px;
+        text-align: center;
+        color: $lightText;
+        border: none;
+        outline: none;
+    }
+
+    &__price {
+        font-size: $fontSizeBase;
+        font-weight: 700;
+        margin-left: 13px;
+        color: $brandPrimary;
+    }
+
+    &__textarea {
+        display: inline-block;
+        width: 100%;
+        min-height: 46px;
+        margin-top: 13px;
+        resize: none;
+        transition: all .2s ease-out;
+        border: 1px solid $grayLight;
+        outline: none;
+        background: $grayLighter;
+
+        &:focus {
+            border-color: $brandPrimary;
+        }
+    }
+
+    &__delivery {
+        margin-top: -1px;
+        padding: 10px 15px;
+        border: 1px solid $grayLight;
+        background: $grayLighter;
+
+        &-field {
+            font-size: $fontSizeBase;
+            margin-bottom: 6px;
+            color: $gray;
+
+            @include clearfix;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-name {
+            float: left;
+            width: 50%;
+        }
+
+        &-value {
+            font-weight: 700;
+            float: right;
+            width: 50%;
+            text-align: right;
+        }
+    }
+
+    &__bonuses {
+        font-size: $fontSizeBase;
+        margin-top: -1px;
+        padding: 10px 15px;
+        text-align: center;
+        color: $gray;
+        border: 1px solid $grayLight;
+        background: $cartBonusesBg;
+
+        &-title {
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        &-item {
+            margin-bottom: 2px;
+            text-align: left;
+            display: block;
+            position: relative;
+            padding-left: 40px;
+
+            &:before {
+                //display: inline-block;
+                width: 20px;
+                height: 20px;
+                //margin: 0 10px;
+                //margin-right: -40px;
+                content: '';
+                //vertical-align: top;
+                background: url('../images/content/icon/cart.png') 0 -105px no-repeat;
+                position: absolute;
+                top: 0;
+                left: 10px;
+            }
+
+            &-span {
+                display: block;
+            }
+        }
+
+        &-text {
+            margin-top: 8px;
+        }
+
+        &-info {
+            font-size: $fontSizeSmall;
+            margin-top: 11px;
+            color: $grayMiddle;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        padding: 0!important;
+        text-align: center;
+    }
+
+    @media (min-width: $screenMdMin) {
+        &--info {
+            display: block;
+        }
+
+        &__title {
+            font-size: $fontSizeLarge;
+        }
+
+        &__link {
+            font-size: $fontSizeH4;
+        }
+
+        &__info {
+            font-size: $fontSizeH4;
+        }
+
+        &__price {
+            font-size: $fontSizeH4;
+        }
+
+        &__delivery {
+            &-field {
+                font-size: $fontSizeH4;
+            }
+        }
+
+        &__bonuses {
+            font-size: $fontSizeH4;
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__drop {
+            position: fixed;
+            z-index: 56;
+            top: 0;
+            right: -280px;
+            width: 280px;
+            height: 100%;
+            transition: all .2s ease-out;
+            background: $base;
+        }
+
+        &__drop-title {
+            font-size: $fontSizeH3;
+            font-weight: 700;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: block;
+            height: 40px;
+            padding: 4px 15px 0 45px;
+            color: $gray;
+            border-left: 1px solid $grayLight;
+            background: $grayLighter;
+        }
+
+        &__drop-close {
+            position: absolute;
+            z-index: 1;
+            top: 7px;
+            left: 10px;
+            width: 25px;
+            height: 25px;
+            background: url('../images/header/icon/close.png') no-repeat;
+        }
+
+        &__drop-wrapper {
+            height: 100%;
+            padding-top: 40px;
+        }
+
+        &__drop-content {
+            overflow: auto;
+            height: 100%;
+        }
+
+        &__button {
+            display: block!important;
+            width: 90%;
+            margin: 15px auto 20px!important;
+            padding: 0!important;
+            text-align: center;
+        }
+    }
+}

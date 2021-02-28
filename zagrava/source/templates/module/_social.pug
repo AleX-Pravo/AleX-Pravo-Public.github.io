@@ -1,0 +1,10 @@
+= '\n'
+//= Social =
+
+.social
+    each value in socialListItems
+        a.social__item(href='javascript:void(0);' class=`social__items--${value}`)
+            +icon(`icon-${value}`)
+
+//= End social =
+= '\n'

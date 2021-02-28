@@ -1,0 +1,55 @@
+.rating {
+    margin-left: -7px;
+
+    &--view {
+        .vote {
+            &-hover {
+                cursor: default;
+            }
+        }
+    }
+}
+
+.vote {
+    &-wrap {
+        overflow: hidden;
+    }
+
+    &-block {
+        position: relative;
+        display: inline-block;
+    }
+
+    &-hover {
+        float: left;
+        cursor: pointer;
+    }
+
+    &-stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &-active {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &-result {
+        font-size: $fontSizeBase;
+        margin-top: 14px;
+        padding-left: 155px;
+        color: $gray;
+        margin-left: -14px;
+    }
+
+    &-success {
+        font-size: $fontSizeBase;
+        display: none;
+        clear: both;
+        margin: 10px 0 0 10px;
+        color: $rating;
+    }
+}

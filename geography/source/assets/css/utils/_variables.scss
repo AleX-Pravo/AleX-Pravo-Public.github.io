@@ -1,0 +1,87 @@
+//== BASE
+// --------------------------------------------------
+
+//== Colors
+
+$base:                  #fff !default;
+$grayBase:              #000 !default;
+//$grayDarker:            #111 !default;
+
+$grayDark:              #332A1C !default;
+$grayText:              #857F77 !default;
+$grayLight:             rgba(51, 42, 28, 0.6)!default;
+$headerBg:              #030102 !default;
+$grayBg:              	#F0F0F0 !default;
+$grayProfile:           #F5F5F5 !default;
+$brandSuccess:          #EBDECC !default;
+$brandWarning:          #DE2C2C !default;
+
+
+
+//$gray:                  #555 !default;
+// $grayLight:             #777 !default;
+$grayLighter:           #E0DFDD !default; //ss
+
+$brandPrimary:          #C5A26D !default;
+$brandSuccess:          #EBDECC !default;
+
+// $brandInfo:             #000 !default;
+// $brandWarning:          #000 !default;
+// $brandDanger:           #000 !default;
+
+//== Reset
+
+$bodyBg:                $base !default;
+$textColor:             $grayDark !default;
+$linkColor:             $brandPrimary !default;
+
+//== Typography
+
+$fontFamilySansSerif:   'Arial', sans-serif !default;
+$fontFamilyGilroy:      'Gilroy', $fontFamilySansSerif !default;
+
+$fontFamilyBase:        $fontFamilyGilroy !default;
+
+$fontSizeBase:          18px !default;
+$fontSizeLarge:         24px !default;
+$fontSizeSmall:         16px !default;
+$fontSizeExtraSmall:    14px !default;
+
+
+$fontSizeH1:            56px !default;
+$fontSizeH2:            48px !default;
+$fontSizeH3:            40px !default;
+$fontSizeH4:            36px !default;
+$fontSizeH5:            12px !default;
+$fontSizeH6:            32px !default;
+
+$lineHeightBase:        1.428571429 !default; // 20/14
+
+$formControlHeight:     48px !default;
+$borderColor:           $grayLighter;
+$checkboxSize:          20px !default;
+//== MODULE
+// --------------------------------------------------
+
+
+//== Components
+
+
+//== Grid system
+
+$gridMaxWidth:          1200px !default;
+$gridColumns:           12 !default;
+$gridGutterWidth:       30px !default;
+
+
+//== Media queries breakpoints
+
+$screenXsMin:           480px !default;
+$screenSmMin:           768px !default;
+$screenMdMin:           1024px !default;
+$screenLgMin:           1200px !default;
+
+$screenMbMax:           ($screenXsMin - 1) !default;
+$screenXsMax:           ($screenSmMin - 1) !default;
+$screenSmMax:           ($screenMdMin - 1) !default;
+$screenMdMax:           ($screenLgMin - 1) !default;

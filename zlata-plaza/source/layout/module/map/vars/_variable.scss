@@ -1,0 +1,40 @@
+//- MAP
+//------------------------------------------------
+
+$map__baseFontSize:                         $fontSizeBase !default;
+
+$map__baseFillColor:                        #fdf2f6 !default;
+$map__baseStrokeColor:                      #ececec !default;
+$map__baseShadowFillColor:                  #eda4d3 !default;
+
+$map__shopStrokeColor:                      $base !default;
+$map__shopFillColor:                        #efabcc !default;
+$map__shopFillColorType1:                   #f955af !default;
+$map__shopFillColorType2:                   #c560a8 !default;
+$map__shopFillColorType3:                   #f18c68 !default;
+$map__shopFillColorType4:                   #fbb017 !default;
+$map__shopShadowFillColor--active:          #7c084d !default;
+
+$map__iconFillColor:                        #9c9c9a !default;
+
+$map__textFontFamily:                       'Times New Roman', $fontFamilySansSerif !default;
+$map__textFontSize:                         $fontSizeLarge !default;
+$map__textFillColor:                        $grayDark !default;
+
+$map__controlsTextFontSize:                 24px !default;
+$map__controlsTextColor:                    $base !default;
+$map__controlsBackgroundColor:              #b24493 !default;
+$map__controlsBackgroundColor--active:      lighten(#b24493, 10%) !default;
+
+$map__infoTextFontSize:                     $fontSizeLarge !default;
+$map__infoTextColor:                        #f955af !default;
+$map__infoFloorTextColor:                   #a2a2a2 !default;
+$map__infoBorderColor:                      rgba(220, 220, 220, .8) !default;
+$map__infoBackgroundColor:                  rgba(255, 255, 255, .8) !default;
+
+$map__noteTextColor:                        $base !default;
+$map__noteBackgroundColor:                  rgba(79, 79, 91, .95) !default;
+
+$map__floorPaginationTextFontSize:          $fontSizeH4 !default;
+$map__floorPaginationNumberTextFontSize:    34px !default;
+$map__floorPaginationNumberTextColor:       #c560a8 !default;

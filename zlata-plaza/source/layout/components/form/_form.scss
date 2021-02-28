@@ -1,0 +1,465 @@
+@import 'vars/_variable.scss';
+
+.form {
+    position: relative;
+    display: block;
+
+    &__field {
+        position: relative;
+        height: 100%;
+    }
+
+    &__text {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0 14px;
+        color: $form__inputBorderColor;
+        border: 1px solid;
+        border-radius: 14px;
+        outline: none;
+        background: none;
+    }
+
+    &__button {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+    }
+
+    @media (min-width: $screenMdMin) {
+        .greeting & {
+            &__text {
+                color: $form__greetingInputBorderColor;
+            }
+        }
+    }
+}
+
+.main-form {
+    position: relative;
+    display: block;
+    margin: 0 0 30px;
+
+    &__content {
+        position: relative;
+
+        @include clearfix;
+    }
+
+    &__box {
+        position: relative;
+        padding: 0 15px;
+    }
+
+    &__field {
+        position: relative;
+        margin: 0 0 24px;
+
+        &-text {
+            font-size: $mainForm__textTextFontSize;
+            line-height: (34px / $mainForm__textTextFontSize);
+            position: relative;
+            float: left;
+            margin: 0 10px;
+            color: $mainForm__textTextColor;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__title {
+        font-size: $mainForm__titleTextFontSize;
+        line-height: 1;
+        position: relative;
+        margin: 0 0 7px;
+    }
+
+    &__row {
+        font-size: 0;
+        position: relative;
+        margin: -10px 0 0;
+        text-align: justify;
+
+        &:after {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            content: '';
+        }
+
+        .main-form {
+            &__text {
+                font-size: $form__baseFontSize;
+                position: relative;
+                float: left;
+            }
+        }
+    }
+
+    &__col {
+        position: relative;
+        display: inline-block;
+        margin: 10px 0 0;
+        vertical-align: top;
+
+        @include clearfix;
+    }
+
+    &__text {
+        font-size: $mainForm__textTextFontSize;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 0 14px;
+        transition: all .2s linear;
+        border: 1px solid $mainForm__textBorderColor;
+        border-radius: 17px;
+        outline: none;
+        background: none;
+
+        &::placeholder {
+            transition: all .2s linear;
+            color: $mainForm__inputPlaceholderColor;
+        }
+
+        &::-moz-placeholder {
+            transition: all .2s linear;
+            color: $mainForm__inputPlaceholderColor;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: transparent;
+            }
+
+            &::-moz-placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    &__textarea {
+        font-size: $mainForm__textTextFontSize;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 115px;
+        padding: 5px 14px;
+        resize: none;
+        transition: all .2s linear;
+        border: 1px solid $mainForm__textBorderColor;
+        border-radius: 17px;
+        outline: none;
+        background: none;
+
+        &--small {
+            height: 82px;
+        }
+
+        &::placeholder {
+            transition: all .2s linear;
+            color: $mainForm__inputPlaceholderColor;
+        }
+
+        &::-moz-placeholder {
+            transition: all .2s linear;
+            color: $mainForm__inputPlaceholderColor;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: transparent;
+            }
+
+            &::-moz-placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    &__upload {
+        font-size: $mainForm__uploadTextFontSize;
+        position: relative;
+
+        @include clearfix;
+
+        label {
+            position: relative;
+            display: block;
+            float: left;
+        }
+
+        &-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &-button {
+            line-height: (32px / $mainForm__uploadTextFontSize);
+            position: relative;
+            display: block;
+            float: left;
+            height: 34px;
+            padding: 0 14px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $mainForm__uploadTextColor;
+            border: 1px solid $mainForm__uploadBorderColor;
+            border-radius: 17px;
+            background: $mainForm__uploadBackgroundColor;
+        }
+
+        &-text {
+            line-height: (34px / $mainForm__uploadTextFontSize);
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 15px;
+            color: $mainForm__uploadTextColor;
+        }
+    }
+
+    &__checkbox {
+        font-size: $mainForm__titleTextFontSize;
+        line-height: (20px / $mainForm__titleTextFontSize);
+        position: relative;
+        padding: 7px 0;
+        color: $mainForm__textTextColor;
+
+        &-row {
+            position: relative;
+        }
+
+        &-item {
+            position: relative;
+            margin: 0 0 10px;
+
+            &--input {
+                clear: both;
+                padding: 10px 0 0;
+
+                label {
+                    z-index: 1;
+                    float: left;
+                }
+            }
+        }
+
+        label {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 30px;
+        }
+
+        &-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            opacity: 0;
+
+            &:checked {
+                 + .main-form {
+                    &__checkbox {
+                        &-icon {
+                            &:before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-icon {
+            position: relative;
+            display: block;
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 0 -30px;
+            border: 1px solid $mainForm__checkboxBorderColor;
+            background: $mainForm__checkboxBackgroundColor;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                content: '';
+                transition: all .2s linear;
+                opacity: 0;
+                background: url('../images/content/icon/checkbox.png') center no-repeat;
+            }
+        }
+
+        &-text {
+            position: relative;
+        }
+
+        &-link {
+            white-space: nowrap;
+            color: $mainForm__textLinkColor;
+        }
+
+        &-input-text {
+            position: relative;
+            margin: -8px 0 0;
+            padding: 0 0 0 72px;
+        }
+
+        .main-form {
+            &__text {
+                background: $mainForm__checkboxBackgroundColor;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__note {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        color: $mainForm__textTextColor;
+    }
+
+    &__button {
+        font-size: $mainForm__buttonTextFontSize;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 2px 0 0;
+        cursor: pointer;
+        transition: all .2s linear;
+        text-transform: uppercase;
+        color: $mainForm__buttonTextColor;
+        border: 1px solid;
+        border-radius: 17px;
+        outline: none;
+        background: transparent;
+
+        &:hover {
+            color: $mainForm__buttonTextColor--active;
+            border-color: transparent;
+            background-color: $mainForm__buttonBackgroundColor--active;
+        }
+    }
+
+    &__error {
+        font-size: $form__baseFontSize;
+        position: relative;
+        color: #f00;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 1;
+        position: relative;
+        display: inline-block;
+        padding: 0 0 0 43px;
+        color: $mainForm__textLinkColor;
+
+        &--pdf {
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 28px;
+                height: 32px;
+                margin: (-32px / 2) 0 0;
+                content: '';
+                background: url('../images/content/icon/pdf.png') no-repeat;
+            }
+        }
+
+        &--video {
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 32px;
+                height: 32px;
+                margin: (-32px / 2) 0 0;
+                content: '';
+                background: url('../images/content/icon/video.png') no-repeat;
+            }
+        }
+
+        &-name {
+            white-space: nowrap;
+        }
+
+        &:hover {
+            color: $mainForm__textLinkColor;
+        }
+    }
+
+    &__contacts {
+        font-size: $mainForm__titleTextFontSize;
+        position: relative;
+
+        &Link {
+            color: $mainForm__textLinkColor;
+        }
+
+        &Phone {
+            text-decoration: none;
+            color: $grayDark;
+        }
+    }
+
+    @media (min-width: 400px) {
+        &__checkbox {
+            &-row {
+                float: left;
+                width: 50%;
+                padding: 0 15px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:nth-child(2) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenSmMin) {
+        &__box {
+            float: left;
+            width: 50%;
+
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+    }
+}

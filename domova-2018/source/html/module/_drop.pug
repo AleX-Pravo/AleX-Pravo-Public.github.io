@@ -1,0 +1,36 @@
+
+-
+    searchDropList = [
+        {
+            class1: 'active',
+            title: 'Промивання великого теплообмінника газової колонки'
+        },
+        {
+            class1: '',
+            title: 'Встановлення пластикового бачка унітазу'
+        },
+        {
+            class1: '',
+            title: 'Встановлення керамічного бачка унітазу'
+        },
+        {
+            class1: '',
+            title: 'Встановлення вбудованого бачка унітазу (інсталяції)'
+        }
+    ]
+
+= '\n'
+//= Search -> drop =
+.search__drop.search__drop--result
+
+    each val, index in searchDropList
+        .search__dropItem
+            .search__dropContent
+                .search__dropTitle
+                    if (index == 0)
+                        a.search__dropTitleLink(class=val.class1 href='#')= val.title
+                    else
+                        a.search__dropTitleLink(href='#')= val.title
+
+//= End search -> drop =
+= '\n'

@@ -1,0 +1,106 @@
+//- Utility
+include utils/_variable.pug
+
+-
+    pageTitle = 'main'
+    pageTitleindex = 'main'
+    main = true // для _logo.pug
+
+
+    scrollmagic = true
+    debugscrollmagic = true
+    tweenmax = true
+    indexScrollMagic = true
+
+    swiper = true
+    easeSwiper = true
+
+    perfectScrollbar = true
+
+    magnificPopup = true
+    magnificPopupadmission = true
+    magnificPopupregistration = true
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout.layout--scrollmagic
+            include layout/_header.pug
+            include layout/_header-device.pug
+            //= Main =
+            main#main.main
+                #gsapContainer
+                    #dots
+                        // TODO-SS: Незабуть сделать
+                        .dot#dot0.active
+                            span 1
+                        .dot#dot1
+                            span 2
+                        .dot#dot2
+                            span 3
+                        .dot#dot3
+                            span 4
+                        .dot#dot4
+                            span 5
+                    #gsapSlider
+                        section.panel.active
+                            .parallax#parallax
+                                img.parallax__forward(src='data/parallax/4.png')
+                                img.parallax__back(src='data/parallax/3.png')
+                                img.parallax__forward(src='data/parallax/2.png')
+                                img.parallax__back(src='data/parallax/1.png')
+                            include module/_main-text.pug
+                        each val in panelBox
+                            section.panel
+                                include module/_panel-box.pug
+
+
+            //= End main =
+            = '\n'
+
+            //= End layout =
+        include layout/_footer.pug
+        include layout/_scripts.pug
+        include module/_cookies.pug
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.white-popup-block.mfp-hide#admission-drive
+
+            .modal__content
+                - admission = true
+                include module/_popup.pug
+
+        //= End modal =
+        = '\n'
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.white-popup-block.mfp-hide#registration-drive
+
+            .modal__content
+                - registration = true
+                - admission = false
+                include module/_popup.pug
+
+        //= End modal =
+        = '\n'
+
+        script.
+            $('.main').on('click', '.favorite-icon', function () {
+                $(this).toggleClass('active');
+                //e.preventDefault();
+            });
+
+            $('.carousel').on('click', '.swiper-button', function () {
+                let self = $(this),
+                    image = self.closest('.carousel').find('.swiper-slide-active').find('.__bg').data('src');
+
+                self.closest('.panel-box').css('background-image', 'url('+ image +')');
+
+            })

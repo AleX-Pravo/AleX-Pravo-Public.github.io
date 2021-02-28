@@ -1,0 +1,60 @@
+= '\n'
+//= indexSwiperCatalog =
+//- (source/assets/css/module/_indexSwiperCatalog.scss)
+.swiper-object
+    .swiper-container
+        .swiper-wrapper
+            each val in indexSwiperCatalog
+                .swiper-slide
+                    .swiper-slide__top
+                        img(src='data/indexBlock/icon/' + val.imgtop + '.png' alt='')
+                        a.swiper-slide__top-name(href='#')= val.name
+                    //proportions and the maximum size of images 360x380, 410x270,
+                    img(src='data/indexBlock/' + val.img + '.png')
+                    .swiper-slide__info
+
+                        if (val.infotopTitle)
+                            .swiper-slide__info-top
+                                .swiper-slide__info-top-column
+                                    a.swiper-slide__title(href='#')= val.infotopTitle
+                                    a.swiper-slide__town(href='#')= val.town
+                                .swiper-slide__rating 7.9
+                                    p
+                                        a(href="#")
+                                            i 27
+                                            span оцінок
+
+                        if (val.title)
+                            a.swiper-slide__title(href='#')= val.title
+
+                        if (val.li1 && val.li2 && val.li3)
+                            ul
+                                li
+                                    a(href='#')= val.li1
+                                li
+                                    a(href='#')= val.li2
+                                li
+                                    a(href='#')= val.li3
+                        if (val.city)
+                            a.swiper-slide__city(href='#')= val.city
+
+                        if (val.price && val.oldprice)
+                            .swiper-slide__info-bottom
+                                .swiper-slide__price= val.price
+                                    .swiper-slide__oldprice= val.oldprice
+                                .swiper-slide__like
+                                    img(src='assets/images/container/favorite-icon.svg' alt='')
+                                    img.favorite-icon(src='assets/images/container/favorite-icon-active.svg' alt='')
+                        if (val.watch && val.report && val.date)
+                            .swiper-slide__info-bottom
+                                .swiper-slide__watch-report
+                                    span= val.watch
+                                    i= val.report
+                                .swiper-slide__date= val.date
+
+    .swiper-button-next
+    .swiper-button-prev
+    if (swiper__recommended)
+        .swiper__recommended= swiper__recommended
+//= End indexSwiperCatalog =
+= '\n'

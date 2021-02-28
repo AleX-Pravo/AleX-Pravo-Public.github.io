@@ -1,0 +1,130 @@
+.search {
+    display: none;
+    &__wrapper {
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 800px;
+        width: 100%;
+
+        ul {
+            margin: 24px auto 0;
+            position: relative;
+            max-width: 770px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 585px;
+
+            li {
+                margin: 7px 10px 7px 0;
+                line-height: 1;
+                width: 50%;
+
+                a {
+                    color: $brandDarkBlack;
+                    font-size: $fontSizeSmall;
+                    line-height: 1;
+                    text-decoration: none;
+                    font-weight: 500;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                strong {
+                    a {
+                        line-height: 1;
+                        font-weight: 700;
+                        font-size: $fontSizeBase;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: $brandPrimary;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+
+            .form-group {
+                width: 100%;
+
+                .button {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 2;
+                    cursor: pointer;
+                    padding: 0 25px;
+                }
+            }
+        }
+    }
+
+
+    @media (min-width: $screen_XS_Min) {//480
+
+        &__inner {
+            .form {
+                .form-group {
+                    .button {
+                        padding: 0 40px;
+                    }
+                }
+
+                .search {
+                    &__input {
+                        padding: 0 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_S_Min) {//480
+
+        &__inner {
+            ul {
+                height: 420px;
+
+                li {
+                    width: auto;
+
+                    a {
+                        font-size: $fontSizeLarge;
+                    }
+
+                    strong {
+                        a {
+                            font-size: $fontSizeH3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+        height: 100%;
+
+        &__inner {
+            //margin: -89px 0 0;
+        }
+    }
+}

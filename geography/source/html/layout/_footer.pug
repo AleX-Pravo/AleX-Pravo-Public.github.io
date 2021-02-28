@@ -1,0 +1,24 @@
+= '\n'
+//= Footer =
+
+footer#footer.footer
+    .footer__wrapper
+        .footer__logo
+            -
+                footer = true
+                dark = false
+            include ../module/_logo.pug
+        .footer__address
+            -
+                address = 'Рівненська обл., с. Вересневе,<br>вул. 7 серпня, буд. 1 (траса Київ-Чоп)'
+                pointer = true
+            include ../module/_address.pug
+        .footer__callback
+            include ../module/_callback.pug
+        .footer__social
+            include ../module/_social.pug
+        .footer__logo32x32
+            include ../module/_logo32x32.pug
+    include ../module/_top-button.pug
+
+//= End footer =

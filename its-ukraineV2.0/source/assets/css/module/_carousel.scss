@@ -1,0 +1,118 @@
+.carousel {
+    .swiper {
+        &-container {
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            z-index: 1;
+        }
+    
+        &-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            align-items: flex-end;
+        }
+    
+    
+        &-button {
+    
+            &-next,
+            &-prev {
+
+                cursor: pointer;
+                outline: none;
+                width: 60px;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.25);
+                border-radius: 50%;
+                position: relative;
+                order: 3;
+                transition: all .3s;
+                top: calc(100% + 33px);
+    
+                &:hover {
+                    background: rgba(255, 255, 255, 0.5);
+                }
+    
+                &:before {
+                    content: '';
+                    width: 6px;
+                    height: 12px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    background-size: 6px 12px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                }
+            }
+    
+            &-next {
+                &:before {
+                    background: url(../images/container/swiper-button.svg) -6px 0 no-repeat;
+                }
+            }
+    
+            &-prev {
+                &:before {
+                    background: url(../images/container/swiper-button.svg) 0 0 no-repeat;
+                }
+            }
+        }
+    
+        &__recommended {
+            font-family: $fontFamilyBase;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 36px;
+            color: $base;
+            position: absolute;
+            left: 180px;
+            top: calc(100% + 44px);
+        }
+
+        &-slide {
+            &-active {
+                width: 115%;
+            }
+        }
+    }
+
+    .routes__item,
+    .dwellings__item,
+    .state__item,
+    .catalog__item,
+    .blogs__item {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    @media (min-width: 1024px) {
+        .swiper {
+            &-button {
+
+                &-next,
+                &-prev {
+                    position: absolute;
+                    bottom: auto;
+                }
+
+                &-next {
+                    left: 84px;
+                }
+
+                &-prev {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+

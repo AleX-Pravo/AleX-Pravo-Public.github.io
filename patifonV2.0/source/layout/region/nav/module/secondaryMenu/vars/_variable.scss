@@ -1,0 +1,8 @@
+//- SECONDARY MENU
+//------------------------------------------------
+
+$secondaryMenu__baseFontSize:           $fontSizeBase !default;
+
+$secondaryMenu__dropBorderColor:        $borderColor !default;
+$secondaryMenu__dropBackgroundColor:    $base !default;
+$secondaryMenu__dropShadowColor:        transparentize($grayBase, .8) !default;
