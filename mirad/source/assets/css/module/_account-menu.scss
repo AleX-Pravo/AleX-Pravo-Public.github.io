@@ -1,0 +1,66 @@
+.account-menu {
+    background: $brandPrimary;
+    width: 100%;
+    max-width: 260px;
+    height: 100%;
+    color: $base;
+    padding: 30px 0;
+    p {
+        text-align: center;
+        font-size: $fontSizeH1;
+        font-family: $HouschkaProDemiBold;
+    }
+    &__image {
+        background: $brandWarning;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin: auto;
+    }
+    &__tabs {
+        li {
+            display: flex;
+            line-height: 3;
+            align-items: center;
+            padding: 0 30px;
+            &.active {
+                background: $base;
+                a {
+                    color: $brandPrimary;
+                }
+                path {
+                    fill: $brandPrimary;
+                }
+            }
+            &:hover {
+                background: $base;
+
+                a {
+                    color: $brandPrimary;
+                }
+                path {
+                    fill: $brandPrimary;
+                }
+            }
+            a {
+                color: $base;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    @media (min-width: 600px) {
+        margin-right: 20px;
+    }
+    @media (min-width: 1200px) {
+        //-width: (260px * 100%) / 1530px;
+    }
+}

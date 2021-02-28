@@ -1,0 +1,131 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'News page'
+    breadcrumbs = ['Главная', 'Новости и статьи']
+
+    tab = true
+
+    tabList = tabNewsAndArticles
+    news = newsFull
+
+    pageTabInit = true
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+
+                    = '\n'
+                    //= Section =
+                    section.section
+
+                        .section__top
+
+                            include module/breadcrumbs/_breadcrumbs.pug
+
+                            .row
+                                .section__container.section__container--left
+                                    h1.section__title Новости и статьи
+
+                                .section__container.section__container--tab
+
+                                    = '\n'
+                                    //= Tab =
+                                    .tab
+                                        .tab-menu.tab-menu--main
+                                            ul.tab-list
+
+                                                each val in tabList
+                                                    li.tab-item
+                                                        a.tab-link(href='#' + val.id)= val.title
+
+                                    //= End tab =
+                                    = '\n'
+
+                        = '\n'
+                        //= Tab =
+                        .tab
+                            .tab-content
+                                #news.tab-box
+
+                                    = '\n'
+                                    //= Section =
+                                    .section
+
+                                        = '\n'
+                                        //= News =
+                                        .news.news--grid
+                                            .row
+
+                                                - for (i = 0; i < 4; i++)
+
+                                                    each val in news
+
+                                                        include module/news/module/item/_item.pug
+
+                                                = '\n'
+
+                                        //= End news =
+                                        = '\n'
+
+                                        .section__bottom
+
+                                            include module/pagination/_pagination.pug
+
+                                    //= End section =
+                                    = '\n'
+
+                                #articles.tab-box
+
+                                    = '\n'
+                                    //= Section =
+                                    .section
+
+                                        = '\n'
+                                        //= News =
+                                        .news.news--grid
+                                            .row
+
+                                                - for (i = 0; i < 4; i++)
+
+                                                    each val in news
+
+                                                        include module/news/module/item/_item.pug
+
+                                        //= End news =
+                                        = '\n'
+
+                                        .section__bottom
+
+                                            include module/pagination/_pagination.pug
+
+                                    //= End section =
+                                    = '\n'
+
+                        //= End tab =
+                        = '\n'
+
+                    //= End section =
+                    = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+        include core/_script.pug

@@ -1,0 +1,173 @@
+.my-orders {
+
+    &__area {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    &__header,
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__header {
+        padding: 10px 0px 10px 20px;
+        border-bottom: 1px solid $footerBackground;
+        margin-bottom: 10px;
+        display: none;
+    }
+    &__list {
+        border: 1px solid $footerBackground;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    &__head,
+    &__body {
+        display: flex;
+        padding: 10px 0px 10px 20px;
+    }
+    &__head {
+        .my-orders__cell--date,
+        .my-orders__cell--status {
+            display: none;
+        }
+        &.arrow {
+            &:hover {
+                cursor: pointer;
+            }
+            &:before {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 20px;
+                right: auto;
+            }
+        }
+        .my-orders {
+            &__adaptive {
+                display: flex;
+            }
+        }
+    }
+    &__body {
+        justify-content: space-between;
+        display: none;
+        &:first-child {
+            border-top: 1px solid $footerBackground;
+        }
+    }
+    &__adaptive {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+    &__cell {
+        flex-basis: 33%;
+        color: $brandWarning;
+        margin: 0 5px;
+        text-align: left;
+        span {
+            color: $grayDark;
+        }
+        &--name {
+            display: flex;
+            flex-basis: 25%;
+            a {
+                margin-left: 20px;
+                border-bottom: 1px dashed $brandPrimary;
+                text-decoration: none;
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+        }
+        &--sum {
+            white-space: nowrap;
+        }
+        &--status {
+            span {
+                padding-left: 20px;
+            }
+        }
+    }
+    &__body {
+        .my-orders__cell--name {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 45%;
+            .basket-table__links {
+                text-align: left;
+                text-decoration: underline;
+            }
+            a {
+                margin: 0;
+                text-decoration-style: solid;
+                border: none;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &__body {
+            .basket-table__links {
+                text-align: left;
+                align-items: flex-start;
+                align-self: flex-start;
+            }
+            .my-orders__cell--name {
+                flex-basis: 25%;
+            }
+        }
+    }
+    @media (min-width: 960px) {
+        padding: 0 5px;
+        &__header {
+            display: flex;
+        }
+        &__body {
+            flex-direction: row;
+            align-items: center;
+            .my-orders__cell--name {
+                a {
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+        &__head {
+            .my-orders__cell--date,
+            .my-orders__cell--status {
+                display: block;
+            }
+        }
+        &__cell {
+            flex-basis: 25%;
+            text-align: left;
+            &--status {
+                flex-basis: 40%;
+            }
+        }
+        &__adaptive {
+            display: flex;
+            flex-basis: auto;
+            flex-grow: auto;
+        }
+    }
+    @media (min-width: 1368px) {
+        &__body {
+            .my-orders__cell--name {
+                flex-direction: row;
+                flex-basis: 25%;
+                a {
+                    margin: 0 10px 0 0;
+                    justify-content: flex-start;
+                }
+                .basket-table__links {
+                    text-align: left;
+                    align-items: flex-start;
+                    align-self: center;
+                }
+            }
+        }
+        &__cell {
+            &--name {
+                flex-basis: 25%;
+            }
+        }
+    }
+}

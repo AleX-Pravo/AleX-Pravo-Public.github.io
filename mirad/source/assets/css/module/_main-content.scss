@@ -1,0 +1,12 @@
+.main-content {
+    .title-block {
+        text-align: center;
+        margin: 0;
+        font-size: $fontSizeH2;
+    }
+    @media (min-width: 1024px) {
+        .title-block {
+            font-size: $fontSizeH3;
+        }
+    }
+}

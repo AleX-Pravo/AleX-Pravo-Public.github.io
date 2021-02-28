@@ -1,0 +1,114 @@
+include vars/_variable.pug
+
+= '\n'
+//= Account =
+
+.account
+
+    = '\n'
+    //= Tab =
+    .tab--account
+        .tab-menu.tab-menu--account
+        
+            .account__photo
+                .account__photo-image.default
+                    img(src='data/account/faces/face7.svg', alt='')
+                .account__photo-title Korchun Greg
+                a.account__photo-edit.account__photo-edit--add(href='#crop')
+                    img(src='data/account/add.svg', alt='')
+                a.account__photo-edit.account__photo-edit--remove(href='javascript:void(0);')
+                    img(src='data/account/remove.svg', alt='')
+            
+            ul.tab-list
+
+                each item in tabList
+                    li.tab-item(class='tab-item--' + item.id)
+                        a.tab-link(href='#' + item.id)
+                            .tab-image
+                            = item.name
+                            if 'counter' in item
+                                span= item.counter
+
+        .tab-content
+            #info.tab-box
+                .account__title Личная информация
+                .account__description Здесь вы можете редактировать личные данные, а также изменить пароль.
+
+                include module/info/_info.pug
+
+            #wishes.tab-box
+                .account__title Список желаний
+                .account__description Здесь находится список товаров которые вы отметили как «избранные».
+
+                include module/wishes/_wishes.pug
+
+            #cart.tab-box
+                .account__title Корзина
+                .account__cart
+                    .account__cart-box
+                        a.account__cart-link(href='javascript:void(0);') Продолжить покупки
+                        a.account__cart-link.account__cart-link--clear(href='javascript:void(0);') Очистить корзину
+
+                    include ../../module/cart/_cart.pug
+                    
+                    .account__checkout
+                        p В вашей корзине
+                            span 7 товаров
+                            |на сумму:
+                            span.account__checkout-sum 35 270 грн
+                        button.button.button--buy 
+                            span.button__text Оформить заказ
+
+            #subscribe.tab-box
+                .account__title Подписки на рассылки
+                .account__description Здесь можете выбрать способы оповещения о новых акция и распродажах
+
+                include module/subscribe/_subscribe.pug
+
+            #comments.tab-box
+                .account__title Коментарии
+                .account__comments
+                    .account__comments-item
+                        a.account__comments-rollup(href='javascript:void(0);')
+                            span свернуть
+                            span развернуть
+                        .account__comments-image
+                            img(src='data/cart/image.jpg', alt='')
+                            
+                        .details
+                            .account__comments-title Samsung J710H Galaxy J7 (Black)
+
+                            include ../../module/details/module/reviews/_reviews.pug
+
+                    .account__comments-item.hidden
+                        a.account__comments-rollup(href='javascript:void(0);')
+                            span свернуть
+                            span развернуть
+                        .account__comments-image
+                            img(src='data/cart/image.jpg', alt='')
+                            
+                        .details
+                            .account__comments-title Samsung J710H Galaxy J7 (Black)
+
+                            include ../../module/details/module/reviews/_reviews.pug
+
+            #viewed.tab-box
+                .account__title Просмотренные товары
+                
+                include module/viewed/_viewed.pug
+
+            #orders.tab-box
+                .account__title Мои заказы
+                .account__description История всех ваших покупок на сайте 
+                    a(href='javascript:void(0);') patifon.ua
+
+                include module/orders/_orders.pug
+                
+                - cartEdit = false
+                include module/order-inner/_order-inner.pug
+
+    //-#page
+        #demo-basic
+
+//= End account =
+= '\n'

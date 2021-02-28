@@ -1,0 +1,34 @@
+@import 'vars/_variable.scss';
+
+.extendedFilter {
+    margin-top: 17px;
+    background: #fdbf00;
+    border-radius: 9px;
+    padding: 9px 0;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+    outline: none;
+
+    &__text {
+        position: relative;
+        padding-left: 30px;
+        color: #000;
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: url(../images/content/icon/funnel.svg) no-repeat;
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        display: block;
+    }
+}

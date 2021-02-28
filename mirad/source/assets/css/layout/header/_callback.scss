@@ -1,0 +1,48 @@
+.callback {
+    position: relative;
+    margin-right: 10px;
+    display: none;
+        &:before {
+            content: '';
+            width: 20px;
+            height: 33px;
+            position: absolute;
+            background: url(../images/header/phone.svg)no-repeat;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -30px;
+        }
+    a {
+        display: block;
+        position: relative;
+        &:first-child {
+            font-size: $fontSizeSmall;
+            color: $brandPrimary;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        &:last-child {
+            font-size: $fontSizeSmall;
+            color: $brandWarning;
+        }
+    }
+    @media (min-width: 600px) {
+        display: block;
+    }
+
+    @media (min-width: 840px) {
+        margin-right: 20px;
+    }
+
+    @media (min-width: 1024px) {
+        a {
+            &:first-child {
+                font-size: $fontSizeH1;
+            }
+        }
+    }
+
+    @media (min-width: 1440px) {
+        margin-right: 40px;
+    }
+}

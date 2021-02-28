@@ -1,0 +1,258 @@
+include vars/_variable.pug
+
+= '\n'
+//= Item =
+.catalog__item
+
+    if ('category' in val)
+        .catalog__itemCategory
+            a.catalog__itemCategoryLink(href='#')= val.category
+
+    if ('drop' in val)
+        .catalog__itemInner
+            if wishes
+                .catalog__itemAction
+                    label 
+                        input(type='checkbox')
+                    a(href='javascript:void(0);') ×
+            .catalog__itemBox
+                include ../delivery/_delivery.pug
+                .catalog__itemImage
+                    a.catalog__itemImageLink(href='#')
+                        img(src='data/catalog/' + val.image + '.jpg' alt= val.title)
+
+                    .catalog__itemSpecial
+                        ul.catalog__itemSpecialList
+
+                            each special in val.special
+                                li.catalog__itemSpecialItem
+                                    .catalog__itemSpecialContent(class='catalog__itemSpecialContent--' + special.class)= special.title
+
+                    if ('color' in val)
+                        .catalog__itemColor
+                            ul.catalog__itemColorList.catalog__itemColorList--perfectScroll
+
+                                each color in val.color
+
+                                    if ('active' in color && color.active)
+                                        li.catalog__itemColorItem
+                                            if (color.value == '#fff')
+                                                a.catalog__itemColorLink.catalog__itemColorLink--active(href='#')
+                                                    span.catalog__itemColorContent.catalog__itemColorContent--border(style='background: ' + color.value)
+
+                                            else
+                                                a.catalog__itemColorLink.catalog__itemColorLink--active(href='#')
+                                                    span.catalog__itemColorContent(style='background: ' + color.value)
+
+                                    else
+                                        li.catalog__itemColorItem
+
+                                            if (color.value == '#fff')
+                                                a.catalog__itemColorLink.catalog__itemColorLink--not-available(href='#')
+                                                    span.catalog__itemColorContent.catalog__itemColorContent--border(style='background: ' + color.value)
+
+                                            else
+                                                a.catalog__itemColorLink.catalog__itemColorLink--not-available(href='#')
+                                                    span.catalog__itemColorContent(style='background: ' + color.value)
+
+                .catalog__itemContent
+                    .catalog__itemTitle
+                        a.catalog__itemTitleLink(href='#')= val.title
+
+                    if (val.accessories)
+                        .catalog__itemSection
+                            .catalog__itemContainer.catalog__itemContainer--left
+                                .catalog__itemReview
+                                    a.catalog__itemReviewLink(href='#')= val.review
+
+
+                            .catalog__itemContainer.catalog__itemContainer--right
+                                .catalog__itemRating.rating.ratingInit
+                                    input(type='hidden' value= val.rating)
+
+                    else
+                        .catalog__itemSection
+                            .catalog__itemContainer.catalog__itemContainer--left
+                                .catalog__itemReview
+                                    a.catalog__itemReviewLink(href='#')= val.review
+
+                                .catalog__itemRating.rating.ratingInit
+                                    input(type='hidden' value= val.rating)
+
+
+                            .catalog__itemContainer.catalog__itemContainer--right
+                                .catalog__itemInStock(class='catalog__itemInStock--' + val.inStock.status)= val.inStock.title
+
+                    .catalog__itemSection
+                        .catalog__itemContainer.catalog__itemContainer--left
+                            .catalog__itemMenu
+                                ul.catalog__itemMenuList
+
+                                    each menu in val.menu
+
+                                        if ('active' in menu && menu.active)
+                                            li.catalog__itemMenuItem.active
+                                                a.catalog__itemMenuLink(href='#' class='catalog__itemMenuLink--' + menu.class)
+
+                                        else
+                                            li.catalog__itemMenuItem
+                                                a.catalog__itemMenuLink(href='#' class='catalog__itemMenuLink--' + menu.class)
+
+                        .catalog__itemContainer.catalog__itemContainer--right
+                            .catalog__itemBenefit
+                                ul.catalog__itemBenefitList
+
+                                    each benefit in val.benefit
+                                        li.catalog__itemBenefitItem
+                                            .catalog__itemBenefitContent(class='catalog__itemBenefitContent--' + benefit.class)
+
+                                                if ('text' in benefit)
+                                                    .catalog__itemBenefitDrop!= benefit.text
+
+                    if (val.accessories)
+                        .catalog__itemSection
+                            .catalog__itemInStock(class='catalog__itemInStock--' + val.inStock.status)= val.inStock.title
+
+                    .catalog__itemSection
+                        .catalog__itemContainer.catalog__itemContainer--left
+
+                            if ('priceOld' in val)
+                                .catalog__itemPriceOld= val.priceOld
+
+                            .catalog__itemPrice= val.price
+
+                        .catalog__itemContainer.catalog__itemContainer--right
+                            button.button.button--buy
+                                span.button__text В корзину
+
+            .catalog__itemDrop
+                .catalog__itemDropInner
+
+                    if ('gallery' in val)
+                        .catalog__itemGallery
+
+                            each gallery in val.gallery
+                                .catalog__itemGalleryItem
+                                    a.catalog__itemGalleryLink(href='#')
+                                        img(src='data/catalog/gallery/' + gallery + '.jpg' alt='')
+
+                if ('feature' in val)
+                    .catalog__itemDropContent
+                        .catalog__itemFeature
+                            each feature in val.feature
+                                .featureItem
+                                    span.featureItem__item(class='featureItem__item--' + feature.class)= feature.text
+
+    else
+        .catalog__itemInner.catalog__itemInner--hover
+            .catalog__itemBox
+                include ../delivery/_delivery.pug
+                .catalog__itemImage
+                    a.catalog__itemImageLink(href='#')
+                        img(src='data/catalog/' + val.image + '.jpg' alt= val.title)
+
+                    .catalog__itemSpecial
+                        ul.catalog__itemSpecialList
+
+                            each special in val.special
+                                li.catalog__itemSpecialItem
+                                    .catalog__itemSpecialContent(class='catalog__itemSpecialContent--' + special.class)= special.title
+
+                    if ('color' in val)
+                        .catalog__itemColor
+                            ul.catalog__itemColorList.catalog__itemColorList--perfectScroll
+
+                                each color in val.color
+
+                                    if ('active' in color && color.active)
+                                        li.catalog__itemColorItem
+                                            if (color.value == '#fff')
+                                                a.catalog__itemColorLink.catalog__itemColorLink--active(href='#')
+                                                    span.catalog__itemColorContent.catalog__itemColorContent--border(style='background: ' + color.value)
+
+                                            else
+                                                a.catalog__itemColorLink.catalog__itemColorLink--active(href='#')
+                                                    span.catalog__itemColorContent(style='background: ' + color.value)
+
+                                    else
+                                        li.catalog__itemColorItem
+
+                                            if (color.value == '#fff')
+                                                a.catalog__itemColorLink(href='#')
+                                                    span.catalog__itemColorContent.catalog__itemColorContent--border(style='background: ' + color.value)
+
+                                            else
+                                                a.catalog__itemColorLink(href='#')
+                                                    span.catalog__itemColorContent(style='background: ' + color.value)
+
+                .catalog__itemContent
+                    .catalog__itemTitle
+                        a.catalog__itemTitleLink(href='#')= val.title
+
+                    if (val.accessories)
+                        .catalog__itemSection
+                            .catalog__itemContainer.catalog__itemContainer--left
+                                .catalog__itemReview
+                                    a.catalog__itemReviewLink(href='#')= val.review
+
+
+                            .catalog__itemContainer.catalog__itemContainer--right
+                                .catalog__itemRating.rating.ratingInit
+                                    input(type='hidden' value= val.rating)
+
+                    else
+                        .catalog__itemSection
+                            .catalog__itemContainer.catalog__itemContainer--left
+                                .catalog__itemReview
+                                    a.catalog__itemReviewLink(href='#')= val.review
+
+                                .catalog__itemRating.rating.ratingInit
+                                    input(type='hidden' value= val.rating)
+
+
+                            .catalog__itemContainer.catalog__itemContainer--right
+                                .catalog__itemInStock(class='catalog__itemInStock--' + val.inStock.status)= val.inStock.title
+
+                    .catalog__itemSection
+                        .catalog__itemContainer.catalog__itemContainer--left
+                            .catalog__itemMenu
+                                ul.catalog__itemMenuList
+
+                                    each menu in val.menu
+
+                                        if ('active' in menu && menu.active)
+                                            li.catalog__itemMenuItem.active
+                                                a.catalog__itemMenuLink(href='#' class='catalog__itemMenuLink--' + menu.class)
+
+                                        else
+                                            li.catalog__itemMenuItem
+                                                a.catalog__itemMenuLink(href='#' class='catalog__itemMenuLink--' + menu.class)
+
+                        .catalog__itemContainer.catalog__itemContainer--right
+                            .catalog__itemBenefit
+                                ul.catalog__itemBenefitList
+
+                                    each benefit in val.benefit
+                                        li.catalog__itemBenefitItem
+                                            .catalog__itemBenefitContent(class='catalog__itemBenefitContent--' + benefit.class)
+
+                                                if ('text' in benefit)
+                                                    .catalog__itemBenefitDrop!= benefit.text
+
+                    if (val.accessories)
+                        .catalog__itemSection
+                            .catalog__itemInStock(class='catalog__itemInStock--' + val.inStock.status)= val.inStock.title
+
+                    .catalog__itemSection
+                        .catalog__itemContainer.catalog__itemContainer--left
+
+                            if ('priceOld' in val)
+                                .catalog__itemPriceOld= val.priceOld
+
+                            .catalog__itemPrice= val.price
+
+                        .catalog__itemContainer.catalog__itemContainer--right
+                            button.button.button--buy
+                                span.button__text В корзину
+
+//= End item =

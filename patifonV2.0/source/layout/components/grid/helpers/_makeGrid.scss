@@ -1,0 +1,7 @@
+@mixin makeGrid($class) {
+    @include floatGridColumns($class);
+    @include loopGridColumns($gridColumns, $class, width);
+    @include loopGridColumns($gridColumns, $class, pull);
+    @include loopGridColumns($gridColumns, $class, push);
+    @include loopGridColumns($gridColumns, $class, offset);
+}

@@ -1,0 +1,66 @@
+//- BASE
+//------------------------------------------------
+
+//- Colors
+
+$base:                  #fff !default;
+$grayBase:              #000 !default;
+$grayDarker:            #111 !default;
+$grayDark:              #2a2a29 !default;
+$gray:                  #555 !default;
+$grayLight:             #7a7a7a !default;
+$grayExtraLight:        #999 !default;
+$grayLighter:           #b1b0b0 !default;
+
+$brandPrimary:          #fdcd39 !default;
+$brandSecondary:        #fdbf00 !default;
+$brandSuccess:          #3bd14e !default;
+$brandInfo:             #f5f5f5 !default;
+$brandActive:           #0f61a7 !default;
+$brandWarning:          #000 !default;
+$brandDanger:           #e30613 !default;
+
+$borderColor:           #dbdbdb !default;
+
+//- Reset
+
+$bodyBg:                $base !default;
+$textColor:             $grayDark !default;
+$linkColor:             $brandPrimary !default;
+
+
+//- Typography
+
+$fontFamilySansSerif:   'Open Sans', 'Arial', sans-serif !default;
+
+$fontFamilyBase:        $fontFamilySansSerif !default;
+
+$fontSizeBase:          14px !default;
+$fontSizeLarge:         18px !default;
+$fontSizeSmall:         12px !default;
+
+$fontSizeH1:            32px !default;
+$fontSizeH2:            30px !default;
+$fontSizeH3:            26px !default;
+$fontSizeH4:            24px !default;
+$fontSizeH5:            20px !default;
+$fontSizeH6:            16px !default;
+$fontSizeH7:            10px !default;
+$fontSizeH8:            8px !default;
+
+$lineHeightBase:        1.5 !default; // 21/14
+
+
+//- Media queries breakpoints
+
+$screenXsMin:           600px !default;
+$screenSmMin:           840px !default;
+$screenMdMin:           1080px !default;
+$screenLgMin:           1320px !default;
+$screenXlMin:           1560px !default;
+
+$screenMbMax:           ($screenXsMin - 1) !default;
+$screenXsMax:           ($screenSmMin - 1) !default;
+$screenSmMax:           ($screenMdMin - 1) !default;
+$screenMdMax:           ($screenLgMin - 1) !default;
+$screenLgMax:           ($screenXlMin - 1) !default;

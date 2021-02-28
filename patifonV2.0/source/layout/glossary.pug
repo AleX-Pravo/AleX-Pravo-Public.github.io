@@ -1,0 +1,48 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'Glossary'
+    breadcrumbs = ['Мобильные телефоны', 'Телефоны, MP3, GPS', 'Смартфоны', 'Словарь терминов']
+
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    
+                    = '\n'
+                    //= Section =
+                    section.section
+                        .section__glossary
+                            h1.section__title Словарь терминов
+                            .section__glossary-wrapper
+                                .section__glossary-item
+                                    include module/breadcrumbs/_breadcrumbs.pug
+                                
+                                .section__glossary-item
+                                    include module/glossary/_glossary.pug
+
+                    //= End section =
+                    = '\n'
+                    
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug        
+        include core/_script.pug

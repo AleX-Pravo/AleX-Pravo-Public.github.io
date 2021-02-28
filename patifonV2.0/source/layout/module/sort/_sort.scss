@@ -1,0 +1,98 @@
+@import 'vars/_variable.scss';
+
+.sort {
+    position: relative;
+    margin: 4px 0 0;
+    white-space: nowrap;
+
+    @include clearfix;
+
+    &__title {
+        position: relative;
+        float: left;
+        margin: 0 12px 0 0;
+    }
+
+    &__container {
+        position: relative;
+        float: left;
+        padding: 0 45px 0 0;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            width: 15px;
+            height: 8px;
+            margin: -3px 0 0;
+            content: '';
+            transition: all .2s linear;
+            background: url('../images/content/icon/arrow.png') no-repeat;
+        }
+    }
+
+    &__drop {
+        position: relative;
+    }
+
+    &__list {
+        position: relative;
+        margin: -6px 0 -5px;
+    }
+
+    &__item {
+        position: relative;
+        margin: 0 0 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--active {
+            .sort {
+                &__link {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    &__link {
+        transition: all .2s linear;
+        text-decoration: none;
+        color: $sort__linkTextColor;
+        
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    &.active {
+        .sort { 
+            &__container {        
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__drop {
+            position: absolute;
+            z-index: 2;
+            top: 100%;
+            right: 0;
+            display: none;
+            min-width: 100%;
+            margin: 5px 0 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: $sort__dropBackgrodunColor;
+        }
+
+        &__item {
+            margin-bottom: 5px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+//- DEVICE BOTTOM
+//------------------------------------------------
+
+$deviceBottom__textFontSize:    $fontSizeH5 !default;
+$deviceBottom__borderColor:     $borderColor !default;
+$deviceBottom__backgroundColor: $base !default;
+$deviceBottom__shadowColor:     transparentize($grayLight, .1) !default;

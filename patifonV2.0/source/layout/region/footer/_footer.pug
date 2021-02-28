@@ -1,0 +1,50 @@
+include vars/_variable.pug
+
+= '\n'
+//= Footer =
+footer#footer.footer
+    .container
+        include ../../module/up/_up.pug
+        .row
+            .footer__container.footer__container--left
+
+                include module/logo/_logo.pug
+                include module/socnet/_socnet.pug
+
+            .footer__container.footer__container--right.footer__container--fixed.hide-mb-max
+                .footer__title
+                    .footer__titleInner Контакты
+
+                include module/phone/_phone.pug
+
+            .footer__container.footer__container--content.hide-sm-max
+                .row
+                    .footer__container.footer__container--left.footer__container--col7
+
+                        - menu = menu1
+
+                        .footer__title
+                            .footer__titleInner Каталог товаров
+
+                        include module/menu/_menu.pug
+
+                    .footer__container.footer__container--left.footer__container--col5
+
+                        - menu = menu2
+
+                        .footer__title
+                            .footer__titleInner Клиентам
+
+                        include module/menu/_menu.pug
+
+        .footer__bottom
+            .row
+                .footer__container.footer__container--left
+
+                    include module/copyright/_copyright.pug
+
+                .footer__container.footer__container--right.footer__container--fixed
+
+                    include module/logo32x32/_logo32x32.pug
+
+//= End footer =

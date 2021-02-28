@@ -1,0 +1,25 @@
+include vars/_variable.pug
+
+= '\n'
+//= Sort =
+.sort
+    .sort__title.hide-sm-max Сортировка:
+
+    .sort__container
+        a.sort__link.sort__button.hide-sm-max(href='javascript:void(0);') дешевых к дорогим
+
+        .sort__drop
+            ul.sort__list
+
+                each val, index in sort
+
+                    if (index == 0)
+                        li.sort__item.sort__item--active
+                            a.sort__link(href='#')= val
+
+                    else
+                        li.sort__item
+                            a.sort__link(href='#')= val
+
+//= End sort =
+= '\n'

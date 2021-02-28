@@ -1,0 +1,62 @@
+//- PRODUCT
+//------------------------------------------------
+
+$product__baseFontSize:                         $fontSizeBase !default;
+
+$product__borderColor:                          $borderColor !default;
+$product__borderColor--active:                  $brandPrimary !default;
+$product__backgroundColor:                      $base !default;
+
+$product__buyBackgroundColor:                   #ffffcd !default;
+
+$product__inStockYesTextColor:                  $brandSuccess !default;
+
+$product__priceTextFontSize:                    $fontSizeH1 !default;
+$product__priceOldTextColor:                    $grayExtraLight !default;
+
+$product__paymentInInstallmentsTextColor:       $grayExtraLight !default;
+$product__paymentInInstallmentsSumTextColor:    $grayDark !default;
+
+$product__creditTextFontSize:                   $fontSizeH6 !default;
+$product__creditTextColor:                      #51d256 !default;
+
+$product__optionsMoreTextColor:                 #51d256 !default;
+
+$product__oneClickTextTextColor:                $grayExtraLight !default;
+$product__oneClickTextBorderColor:              $borderColor !default;
+$product__oneClickTextBorderColor--active:      $brandPrimary !default;
+
+$product__colorTitleTextColor:                  $grayExtraLight !default;
+$product__colorTitleBorderColor:                $borderColor !default;
+$product__colorLinkBorderColor:                 #f7aa0d !default;
+
+$product__colorDropBackgroundColor:             $base !default;
+$product__colorDropShadowColor:                 transparentize($grayBase, .8) !default;
+$product__colorDropColorBorderColor:            #f7aa0d !default;
+$product__colorDropPriceFontSize:               $fontSizeLarge !default;
+
+$product__sizeTitleTextColor:                   $grayExtraLight !default;
+$product__sizeTextColor:                        $grayExtraLight !default;
+$product__sizeTextColor--active:                $base !default;
+$product__sizeBorderColor:                      $borderColor !default;
+$product__sizeBackgroundColor--active:          $brandPrimary !default;
+
+$product__sizeDropBackgroundColor:              $base !default;
+$product__sizeDropShadowColor:                  transparentize($grayBase, .8) !default;
+$product__sizeDropColorBorderColor:             #f7aa0d !default;
+$product__sizeDropTitleColor:                   $grayExtraLight !default;
+$product__sizeDropTitleColor--active:           $base !default;
+$product__sizeDropBackgorundColor--active:      $brandPrimary !default;
+$product__sizeDropPriceFontSize:                $fontSizeLarge !default;
+
+$product__featureTextColor:                     $grayExtraLight !default;
+$product__featureTextColor--active:             $grayDark !default;
+
+$product__menuTextColor:                        $grayExtraLight !default;
+$product__menuTextColor--active:                #0f61a7 !default;
+
+$product__infoTextFontSize:                     $fontSizeSmall !default;
+
+$product__buttonTextFontSize:                   $fontSizeH4 !default;
+
+$product__slickDotsColor:                       $brandPrimary !default;

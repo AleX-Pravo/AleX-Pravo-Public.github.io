@@ -1,0 +1,21 @@
+//- PRODUCT BAR
+//------------------------------------------------
+
+$productBar__baseFontSize:                  $fontSizeBase !default;
+$productBar__baseBackgroundColor:           $base !default;
+
+$productBar__titleTextFontSize:             $fontSizeH4 !default;
+
+$productBar__contentBackgroundColor:        $brandInfo !default;
+
+$productBar__priceTextFontSize:             $fontSizeLarge !default;
+$productBar__priceTextColor:                $brandPrimary !default;
+
+$productBar__menuBackgroundColor:           $brandInfo !default;
+$productBar__menuBackgroundColor--active:   #ffebec !default;
+
+$productBar__benefitBorderColor:            $borderColor !default;
+$productBar__benefitDropTextColor:          $grayExtraLight !default;
+$productBar__benefitDropStrongTextColor:    $grayDark !default;
+$productBar__benefitDropBackgroundColor:    $base !default;
+$productBar__benefitDropshadowColor:        transparentize($grayLight, .64) !default;

@@ -1,0 +1,193 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'Catalog page'
+    breadcrumbs = ['Главная', 'Каталог товаров', 'Xiaomi']
+
+    rating = true
+    catalog = catalogMainDrop
+    deviceBottom = [
+        {
+            title: 'Сортировка',
+            link: '#sort-modal'
+        },
+        {
+            title: 'Вид',
+            link: '#view-modal'
+        },
+        {
+            title: 'Фильтр',
+            target: 'sidebar',
+            link: 'javascript:void(0);'
+        }
+    ]
+
+    ionRangeSlider = true
+    pageRatingInit = true
+
+    //perfectScrollBar = true
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+
+                    = '\n'
+                    //= Section =
+                    section.section
+                        .section__top
+
+                            include module/breadcrumbs/_breadcrumbs.pug
+
+                            .row
+                                .section__container.section__container--left
+                                    h1.section__title Цифровые развлечения
+
+                                #sort.section__container.section__container--sort
+                                    .section__deviceTop.hide-md-min
+                                        a.section__deviceClose.section__deviceClose--left(href='javascript:void(0);')
+
+                                    .section__deviceContent
+
+                                        include module/sort/_sort.pug
+
+
+                            = '\n'
+                            //= Filter =
+                            .filter.hide-sm-max
+                                .filter__selected
+                                    a.filter__selectedLink.filter__selectedLink--remove(href='javascript:void(0)') LeEco
+                                    a.filter__selectedLink(href='javascript:void(0);') Сбросить все фильтра
+                            //= End filter =
+                            = '\n'
+
+                        .row
+                            #sidebar.section__container.section__container--sidebar
+                                .section__deviceTop.hide-md-min
+                                    a.section__deviceClose.section__deviceClose--right(href='javascript:void(0);')
+
+                                .section__deviceContent
+
+                                    include module/filter/_filter.pug
+
+                                    include module/extendedFilter/_extendedFilter.pug
+
+                            .section__container.section__container--sidebarFixed
+                                .section__containerInner
+
+                                    include module/catalog/_catalog.pug
+
+                                    .section__bottom
+
+                                        include module/pagination/_pagination.pug
+
+                    //= End section =
+                    = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        
+
+        include region/footer/_footer.pug
+        //-include module/deviceBottom/_deviceBottom.pug
+
+        = '\n'
+        //= Modal =
+        .modal.white-popup-block.mfp-hide#test-modal
+
+            .modal__content
+                - var filterPopup = true
+                include module/filter/_filter.pug
+
+        //= End modal =
+        = '\n'
+
+        = '\n'
+        //= Modal =
+        .modal.white-popup-block.mfp-hide#view-modal
+            .mfp-close
+            .modal__content
+                include module/catalog/module/view/_view.pug
+
+        //= End modal =
+        = '\n'
+
+        = '\n'
+        //= Modal =
+        .modal.white-popup-block.mfp-hide#sort-modal
+            .mfp-close
+            .modal__content
+                include module/catalog/module/sorting/_sorting.pug
+
+        //= End modal =
+        = '\n'
+        
+        include core/_script.pug
+
+        script(src=bowerDir + 'magnific-popup/dist/jquery.magnific-popup.js')
+        script.
+            $(document).ready(function () {
+
+                $('.extendedFilter').magnificPopup({
+                    type: 'inline',
+                    preloader: false,
+                    modal: true
+                });
+
+                $('a.deviceBottom__link').magnificPopup({
+                    type: 'inline',
+                    preloader: false,
+                    modal: true
+                });
+
+                $(document).on('click', '.filter__close', function (e) {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                });
+
+                var viewCatalogFilter = $('.deviceBottom'),
+                    scrolling = false,
+                    previousTop = 0,
+                    currentTop = 0,
+                    scrollDelta = 1,
+                    scrollOffset = 200,
+                    filterPosition = viewCatalogFilter.offset().top;
+                
+                function autoMoveCatalogFilter() {
+                    var currentTop = $(window).scrollTop();
+
+                    if (filterPosition >= currentTop) {
+                        viewCatalogFilter.removeClass('fixed');
+                    } else if(currentTop - previousTop > scrollDelta && currentTop >= scrollOffset) {
+                        viewCatalogFilter.addClass('fixed');
+                    }
+
+                    previousTop = currentTop;
+                    scrolling = false;
+                }
+
+                $(window).on('scroll', function(){
+                    if(!scrolling && $(window).width() < 1080) {
+                        scrolling = true;
+                        (!window.requestAnimationFrame)
+                            ? setTimeout(autoMoveCatalogFilter, 250)
+                            : requestAnimationFrame(autoMoveCatalogFilter);
+                    }
+                });
+            });

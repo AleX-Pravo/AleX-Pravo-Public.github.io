@@ -1,0 +1,135 @@
+.accessories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 17px;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 250px;
+        text-decoration: none;
+        position: relative;
+        border: 1px solid transparent;
+        border-bottom-color: $borderColor;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            height: 2px;
+            background: $brandSecondary;
+            opacity: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 0 15px rgba(219,219,219,1);
+            
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 15px;
+        font-size: $fontSizeH6;
+        color: $grayDark;
+        max-width: 145px;
+    }
+
+    @media (min-width: 375px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        &__box {
+            width: 170px;
+            height: 200px;
+
+            &:nth-child(even) {
+                border-left-color: $borderColor;
+            }
+        }
+    }
+
+    @media (min-width: 480px) {
+        &__box {
+            width: 220px;
+            height: 250px;
+        }
+    }
+
+
+    @media (min-width: 690px) {
+
+        &__box {
+            &:nth-child(n) {
+                border-left-color: $borderColor;
+            }
+
+            &:nth-child(3n+1) {
+                border-left-color: transparent;
+            }
+        }
+    }
+
+
+    @media (min-width: 910px) {
+
+        &__box {
+
+            &:nth-child(n) {
+                border-left-color: $borderColor;
+            }
+
+            &:nth-child(4n+1) {
+                border-left-color: transparent;
+            }
+        }
+    }
+
+    @media (min-width: 1130px) {
+
+        &__box {
+            width: 218px;
+
+            &:nth-child(n) {
+                border-left-color: $borderColor;
+            }
+
+            &:nth-child(5n+1) {
+                border-left-color: transparent;
+            }
+        }
+    }
+
+    @media (min-width: 1338px) {
+        &__box {
+            &:nth-child(n) {
+                border-left-color: $borderColor;
+            }
+
+            &:nth-child(6n+1) {
+                border-left-color: transparent;
+            }
+        }
+    }
+
+    @media (min-width: 1556px) {
+        &__box {
+            &:nth-child(n) {
+                border-left-color: $borderColor;
+            }
+
+            &:nth-child(7n+1) {
+                border-left-color: transparent;
+            }
+        }
+    }
+}

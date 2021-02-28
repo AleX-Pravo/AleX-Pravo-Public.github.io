@@ -1,0 +1,66 @@
+include vars/_variable.pug
+- mobileMenu = true
+= '\n'
+//= mobile-menu =
+.mobile-menu
+
+    .mobile-menu__drop
+        a.mobile-menu__close(href='#')
+
+        .mobile-menu__wrapper
+            img.mobile-menu__logo(src='images/header/logo.png' alt='Patifon')
+            .mobile-menu__content
+                .mobile-menu__main
+                    ul.mobile-menu__list
+                        each item, index in mobileMenuDrop
+                            if item.dropbox
+                                li.mobile-menu__list-item.mobile-menu__list-item--checkbox
+                                    - var indexItem = index
+                                    - var nameMenu = 'menu-' + ++indexItem
+                                    .mobile-menu__box
+                                        span.mobile-menu__image
+                                            img.mobile-menu__image-picture(src='data/primaryMenu/' + item.image + '.png' alt= item.title)
+                                        a.mobile-menu__list-link.mobile-menu__list-link--main(href='#')= item.title
+                                    input.mobile-menu__checkbox(type='checkbox' id= nameMenu name= nameMenu)
+
+                                    .mobile-menu__submenu
+                                        label.mobile-menu__toggle(for= nameMenu) Category
+                                        ul.mobile-menu__list
+                                            each elem, index in item.dropbox
+                                                if elem.sublist
+                                                    li.mobile-menu__list-item.mobile-menu__list-item--checkbox
+                                                        - var indexItem = index
+                                                        - var nameSubMenu = nameMenu + '-' + ++indexItem
+                                                        .mobile-menu__box
+                                                            a.mobile-menu__list-link(href='#')= elem.submenu
+                                                        input.mobile-menu__checkbox(type='checkbox' id= nameSubMenu name= nameSubMenu)
+
+                                                        .mobile-menu__submenu
+                                                            label.mobile-menu__toggle(for= nameSubMenu) Category
+                                                            ul.mobile-menu__list
+
+                                                                each val in elem.sublist
+                                                                    li.mobile-menu__list-item
+                                                                        a.mobile-menu__list-link(href='#')= val
+
+                                                else
+                                                    li.mobile-menu__list-item
+                                                        a.mobile-menu__list-link(href='#')= elem.submenu
+
+                            else
+                                li.mobile-menu__list-item
+                                    a.mobile-menu__list-link.mobile-menu__list-link--paddingNon(href='#')
+
+                                        if item.image
+                                            span.mobile-menu__image
+                                                img.mobile-menu__image-picture(src='data/primaryMenu/' + item.image + '.png' alt= item.title)
+                                        span.mobile-menu__title= item.title
+
+                    - var secondaryMenuNav = true
+                    include ../../../nav/module/secondaryMenu/_secondaryMenu.pug
+                    include ../../../header/module/phone/_phone.pug
+                        include ../../../header/module/phone/module/drop/_drop.pug
+
+
+//= End mobile-menu =
+= '\n'

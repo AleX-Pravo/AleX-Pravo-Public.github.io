@@ -1,0 +1,22 @@
+include vars/_variable.pug
+
+= '\n'
+//= Viewed =
+
+.viewed
+    ul.viewed__list
+        each item in viewedListItems
+            - activeClass = ('active' in item) ? 'active' : ''
+
+            li.viewed__list-item(class= activeClass)
+                a(href='javascript:void(0);')= item.name
+                    span= item.counter
+    .catalog.catalog--grid
+        .row
+            - for (i = 0; i < 4; i++)
+                each val in catalog
+                    include ../../../catalog/module/item/_item.pug
+
+
+//= End viewed =
+= '\n'

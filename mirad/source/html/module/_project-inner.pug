@@ -1,0 +1,39 @@
+= '\n'
+//= project-inner =
+//- (source/assets/css/layout/_project-inner.scss)
+.project-inner
+    .container
+        - var titleInfo = 'ЖК «Французький квартал 2»'
+        include _title-block.pug
+        .project-inner__wrapper
+            = '\n'
+            //= product-slider =
+            .product-slider.catalog-carousel
+                .product-slider--small
+                    - for(var i = 0; i < 8; i++)
+                        .product-slider__small
+                            img(src='data/project/1.png' alt='')
+                .product-slider--big.popup-gallery
+                    - for(var i = 0; i < 4; i++)
+                        each val in projectCarouselBig
+                            .product-slider__slide
+                                a(class=val.class href=val.href)
+                                    img(src='data/project/' + val.image  alt='')
+            //= End product-slider =
+            = '\n'
+            .project-inner__info
+                .project-inner__image
+                    img(src="data/project/vector.png", alt="")
+                h2 Інформація по проекту
+                ul
+                    each item in projectInfo
+                        li
+                            if item.link
+                                span= item.name
+                                a(href='javascript:void(0)')= item.value
+                            else
+                                span= item.name
+                                span= item.value
+
+//= End project-inner =
+= '\n'

@@ -1,0 +1,47 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'Invoice page'
+    breadcrumbs = ['Главная', 'Оформление заказа']
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+
+                    = '\n'
+                    //= Section =
+                    section.section
+                        .section__top
+
+                            include module/breadcrumbs/_breadcrumbs.pug
+
+                            .row
+                                .section__container.section__container--left
+                                    h1.section__title Счет-фактура
+
+                        include module/invoice/_invoice.pug
+
+                    //= End section =
+                    = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+        include core/_script.pug

@@ -1,0 +1,15 @@
+= '\n'
+//= account-menu =
+//- (source/assets/css/module/_account-menu.scss)
+.account-menu
+    .account-menu__image
+        img(src="data/account/photo.png", alt="")
+    p Alex 1996
+    ul.account-menu__tabs
+        each item in accountItems
+            li(class= item.class)
+                .account-menu__icon!= item.image
+                a(href=item.id class= item.class)=item.name
+
+//= End account-menu =
+= '\n'

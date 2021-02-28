@@ -1,0 +1,284 @@
+@import 'vars/_variable.scss';
+
+.productBar {
+    position: relative;
+    width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    background: $productBar__contentBackgroundColor;
+
+    &__content {
+        position: relative;
+        padding: 15px;
+        border-radius: 10px;
+        background: $productBar__baseBackgroundColor;
+    }
+
+    &__image {
+        font-size: 0;
+        position: relative;
+        margin: 0 0 9px;
+        text-align: center;
+
+        &:before {
+            position: relative;
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            content: '';
+            vertical-align: middle;
+        }
+
+        img {
+            font-size: $productBar__baseFontSize;
+            max-height: 100%;
+        }
+    }
+
+    &__title {
+        position: relative;
+        margin: 0 0 10px;
+    }
+
+    &__price {
+        font-size: $productBar__priceTextFontSize;
+        font-weight: 700;
+        line-height: (36px / $productBar__priceTextFontSize);
+        position: relative;
+        color: $productBar__priceTextColor;
+    }
+
+    &__section {
+        position: relative;
+        margin: 0 0 15px;
+
+        @include clearfix;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__container {
+        position: relative;
+
+        &--left {
+            float: left;
+        }
+
+        &--right {
+            float: right;
+        }
+    }
+
+    &__menu {
+        position: relative;
+
+        &List {
+            position: relative;
+
+            @include clearfix;
+        }
+
+        &Item {
+            position: relative;
+            float: left;
+            margin: 0 15px 0 0;
+
+            &--active {
+                .productBar {
+                    &__menu {
+                        &Link {
+                            background: $productBar__menuBackgroundColor--active;
+
+                            &:before {
+                                opacity: 0;
+                            }
+
+                            &:after {
+                                opacity: 1;
+                            }
+
+                            &:hover {
+                                background: $productBar__menuBackgroundColor;
+
+                                &:before {
+                                    opacity: 1;
+                                }
+
+                                &:after {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &Link {
+            position: relative;
+            display: block;
+            width: 36px;
+            height: 36px;
+            transition: all .2s linear;
+            border-radius: 4px;
+            background: $productBar__menuBackgroundColor;
+
+            &:before,
+            &:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                content: '';
+                transition: all .2s linear;
+                background: url('../images/content/icon/catalogItemMenu.png') no-repeat;
+            }
+
+            &:after {
+                opacity: 0;
+            }
+
+            &:hover {
+                background: $productBar__menuBackgroundColor--active;
+
+                &:before {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &--myFavorites {
+                &:before {
+                    background-position: 0 0;
+                }
+
+                &:after {
+                    background-position: 0 -37px;
+                }
+            }
+
+            &--comparison {
+                &:before {
+                    background-position: -37px 0;
+                }
+
+                &:after {
+                    background-position: -37px -37px;
+                }
+            }
+        }
+    }
+
+    &__benefit {
+        position: relative;
+        margin: 7px 0 0;
+
+        &List {
+            position: relative;
+
+            @include clearfix;
+        }
+
+        &Item {
+            position: relative;
+            float: left;
+            padding: 0 15px;
+            border-right: 1px solid $productBar__benefitBorderColor;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+
+        &Content {
+            position: relative;
+            height: 22px;
+
+            &:hover {
+                .productBar {
+                    &__benefit {
+                        &Drop {
+                            visibility: visible;
+                            transition: visibility 0s step-end .2s, opacity .2s linear .2s;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &--guarantee {
+                width: 19px;
+                background: url('../images/content/icon/guarantee.png') no-repeat;
+            }
+
+            &--paymentInInstallments {
+                width: 24px;
+                background: url('../images/content/icon/paymentInInstallments.png') no-repeat;
+            }
+        }
+
+        &Drop {
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            visibility: hidden;
+            width: 180px;
+            margin: 0 0 11px -90px;
+            padding: 9px 10px 10px;
+            transition: visibility 0s step-end .2s, opacity .2s linear;
+            text-align: center;
+            opacity: 0;
+            color: $productBar__benefitDropTextColor;
+            border-radius: 4px;
+            background: $productBar__benefitDropBackgroundColor;
+            box-shadow: 0 0 7px $productBar__benefitDropshadowColor;
+
+            &:before {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 20px;
+                height: 11px;
+                margin: 0 0 0 -10px;
+                content: '';
+                background: url('../images/content/bg/catalog__benefitArrow.png') no-repeat;
+            }
+
+            strong {
+                color: $productBar__benefitDropStrongTextColor;
+            }
+        }
+    }
+
+    button {
+        width: 100px;
+        height: 36px;
+
+        &[disabled] {
+            width: 120px;
+        }
+
+        .button {
+            &__text {
+                font-size: 13.5px;
+            }
+        }
+    }
+}

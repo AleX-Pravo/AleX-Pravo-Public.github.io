@@ -1,0 +1,33 @@
+= '\n'
+//= product-description =
+//- (source/assets/css/module/_product-description.scss)
+.product-description
+    .product-description__head
+        .product-description__article Артикул
+            span 181475
+        .product-description__logo
+            img(src="data/product/description/1.png", alt="")
+    .product-description__name
+        h1 Керамогранит Cersanit Ріверстоун
+            span Sale
+        .product-card__side
+            span
+                img(src="data/product-card/1.png", alt="")
+                span Підлога
+            span
+                img(src="data/product-card/2.png", alt="")
+                span Підлога
+    .product-description__bottom
+        .basket-popup__price
+            span.basket-popup__old 550грн.
+            span.basket-popup__current 370 грн. /м<sup>2</sup>
+        include _quantity.pug
+        .product-description__area Реальна площа 1.08 м2
+            .product-description__hint
+                span i
+                .hint З урахуванням розміру кожної плитки
+        include _basket-button.pug
+    include _product-content.pug
+
+//= End product-description =
+= '\n'

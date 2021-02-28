@@ -1,0 +1,165 @@
+include vars/_variable.pug
+
+if (reviewsFull)
+    - reviewsClass = 'reviews--full'
+
+= '\n'
+//= Reviews =
+.reviews(class= reviewsClass)
+    img.reviews__empty.disabled(src='data/details/noreviews.png' alt= '')
+    .reviews__item
+        .reviews__top
+            .row
+                .reviews__container.reviews__container--left
+                    .reviews__name Иван
+
+                .reviews__container.reviews__container--right
+                    .reviews__rating.rating.ratingInit
+                        input(type='hidden' value='3')
+
+                    .reviews__date 
+                        |09 января 2018
+                        a.reviews__date-anchor(href='javascript:void(0);')
+
+                    .reviews__vote
+                        a.reviews__voteItem.reviews__voteItem--like(href='javascript:void(0);') 5
+                        a.reviews__voteItem.reviews__voteItem--dislike(href='javascript:void(0);') 2
+
+        .reviews__content Здравствуйте, заказ в этом магазине делаю уже не первый раз, продавцы приятные, все четко объясняют, предлагают, оперативно выполняют свою работу, деньги перевела все и сразу, и была доставка товара выполнена на отлично, заказывала телефон, чехол и повербанку, не пришла только повербанка, но продавцы в течение двух дней все исправили. Большое спасибо магазину за добросовестное отношение к покупателям и своей работы.
+
+        .reviews__photos
+            include ../addphoto/_addphoto.pug
+
+        a.reviews__reply(href='javascript:void(0);') Ответить на отзыв
+
+        .reviews__answer
+            .reviews__item
+                .reviews__top
+                    .row
+                        .reviews__container.reviews__container--left
+                            .reviews__name Марина
+
+                        .reviews__container.reviews__container--right
+                            .reviews__rating.rating.ratingInit
+                                input(type='hidden' value='3')
+
+                            .reviews__date 09 января 2018
+
+                            .reviews__vote
+                                a.reviews__voteItem.reviews__voteItem--like(href='javascript:void(0);') 5
+                                a.reviews__voteItem.reviews__voteItem--dislike(href='javascript:void(0);') 2
+
+                .reviews__content Порадовали минимальные цены. Купил два телефона, молодцы сработали оперативно, учитывая предновогоднюю нагрузку. Несмотря на то что заказ делал после семи вечера, перезвонили в течении получаса, что приятно удивило. Пока все нормально, аппаратами доволен, будем надеятся что прослужат долго.
+                
+                .reviews__photos
+                    include ../addphoto/_addphoto.pug
+
+                a.reviews__reply(href='javascript:void(0);') Ответить на отзыв
+    .reviews__item
+        .reviews__top
+            .row
+                .reviews__container.reviews__container--left
+                    .reviews__name Иван
+
+                .reviews__container.reviews__container--right
+                    .reviews__rating.rating.ratingInit
+                        input(type='hidden' value='3')
+
+                    .reviews__date 09 января 2018
+
+                    .reviews__vote
+                        a.reviews__voteItem.reviews__voteItem--like(href='javascript:void(0);') 5
+                        a.reviews__voteItem.reviews__voteItem--dislike(href='javascript:void(0);') 2
+
+        .reviews__content Добрый день! Вопрос к менеджерам и владельцам китайской версии 3/32: какая тут версия экрана, Boe или Ebbg?
+
+        a.reviews__reply(href='javascript:void(0);') Ответить на отзыв
+
+        //-.reviews__answer
+            .reviews__item
+                .reviews__top
+                    .row
+                        .reviews__container.reviews__container--left
+                            .reviews__name Марина
+
+                        .reviews__container.reviews__container--right
+                            .reviews__rating.rating.ratingInit
+                                input(type='hidden' value='3')
+
+                            .reviews__date 09 января 2018
+
+                            .reviews__vote
+                                a.reviews__voteItem.reviews__voteItem--like(href='javascript:void(0);') 5
+                                a.reviews__voteItem.reviews__voteItem--dislike(href='javascript:void(0);') 2
+
+                .reviews__content Порадовали минимальные цены. Купил два телефона, молодцы сработали оперативно, учитывая предновогоднюю нагрузку. Несмотря на то что заказ делал после семи вечера, перезвонили в течении получаса, что приятно удивило. Пока все нормально, аппаратами доволен, будем надеятся что прослужат долго.
+
+                a.reviews__reply(href='javascript:void(0);') Ответить на отзыв
+    if (pageTitle != 'account')
+        .reviews__item
+            .reviews__top
+                .row
+                    .reviews__container.reviews__container--left
+                        .reviews__name Иван
+
+                    .reviews__container.reviews__container--right
+                        .reviews__rating.rating.ratingInit
+                            input(type='hidden' value='3')
+
+                        .reviews__date 09 января 2018
+
+                        .reviews__vote
+                            a.reviews__voteItem.reviews__voteItem--like(href='javascript:void(0);') 5
+                            a.reviews__voteItem.reviews__voteItem--dislike(href='javascript:void(0);') 2
+
+            .reviews__content Добрый день! Вопрос к менеджерам и владельцам китайской версии 3/32: какая тут версия экрана, Boe или Ebbg?
+
+            a.reviews__reply(href='javascript:void(0);') Ответить на отзыв
+
+            .reviews__answer
+                .reviews__item
+                    .reviews__top
+                        .row
+                            .reviews__container.reviews__container--left
+                                .reviews__name Марина
+
+                            .reviews__container.reviews__container--right
+                                .reviews__rating.rating.ratingInit
+                                    input(type='hidden' value='3')
+
+                                .reviews__date 09 января 2018
+
+                                .reviews__vote
+                                    a.reviews__voteItem.reviews__voteItem--like(href='javascript:void(0);') 5
+                                    a.reviews__voteItem.reviews__voteItem--dislike(href='javascript:void(0);') 2
+
+                    .reviews__content Порадовали минимальные цены. Купил два телефона, молодцы сработали оперативно, учитывая предновогоднюю нагрузку. Несмотря на то что заказ делал после семи вечера, перезвонили в течении получаса, что приятно удивило. Пока все нормально, аппаратами доволен, будем надеятся что прослужат долго.
+
+                    a.reviews__reply(href='javascript:void(0);') Ответить на отзыв
+        .reviews__item
+            .reviews__top
+                .row
+                    .reviews__container.reviews__container--left
+                        .reviews__name Иван
+
+                    .reviews__container.reviews__container--right
+                        .reviews__rating.rating.ratingInit
+                            input(type='hidden' value='3')
+
+                        .reviews__date 09 января 2018
+
+                        .reviews__vote
+                            a.reviews__voteItem.reviews__voteItem--like(href='javascript:void(0);') 5
+                            a.reviews__voteItem.reviews__voteItem--dislike(href='javascript:void(0);') 2
+
+            .reviews__content Добрый день! Вопрос к менеджерам и владельцам китайской версии 3/32: какая тут версия экрана, Boe или Ebbg?
+
+            a.reviews__reply(href='javascript:void(0);') Ответить на отзыв
+
+        if (!reviewsFull)
+            a.reviews__all(href='#') Смотреть все отзывы
+    .reviews__write
+        include ../write/_write.pug
+
+//= End reviews =
+= '\n'

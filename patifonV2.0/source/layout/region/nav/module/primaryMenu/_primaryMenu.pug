@@ -1,0 +1,18 @@
+include vars/_variable.pug
+
+= '\n'
+//= Primary menu =
+.primaryMenu.hide-sm-max
+
+    if (pageTitle != 'Main page')
+        a.primaryMenu__button(href='javascript:void(0);') Каталог товоров
+
+        .primaryMenu__flyout
+
+            include module/drop/_drop.pug
+
+    else
+        .primaryMenu__button Каталог товоров
+
+//= End primary menu =
+= '\n'

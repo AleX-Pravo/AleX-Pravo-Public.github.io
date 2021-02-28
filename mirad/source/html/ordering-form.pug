@@ -1,0 +1,68 @@
+//- Utility
+include utils/_variable.pug
+- var pageTitle = 'Оформлення замовлення'
+//-breadcrumbs.pug
+- var breadcrumbs = ['Головна', pageTitle]
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+            //= Main =
+            main#main.main
+                include module/_breadcrumbs.pug
+                include module/_office-drop.pug
+                include module/_ordering-form.pug
+                include module/_popup-success.pug
+                a.popup-success__link(href="#popup-success") Замовлення сформовано
+
+
+
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+
+        script(src=bowerDir + 'perfect-scrollbar/js/perfect-scrollbar.jquery.min.js')
+        script(src=bowerDir + 'select2/dist/js/select2.min.js')
+        script(src=bowerDir + 'magnific-popup/dist/jquery.magnific-popup.js')
+        script.
+            var name = ".your-order";
+            var menuYloc = null;
+            var headerHeight = $('.header').outerHeight();
+            $(document).ready(function() {
+                $('.popup-success__link').magnificPopup();
+                $('.new-post').select2();
+                $('.new-post').on("select2:open", function () {
+                    $('.select2-results__options').perfectScrollbar();
+                });
+                // Скрипт для прилипания к верху блока - Оформлення замовлення
+                function sticky() {
+                    if ($(window).width() < 768) {
+                        return;
+                    }
+
+                    if($(window).scrollTop() > 120){
+                        $('.your-order').css({
+                            'position': 'fixed',
+                            'top': headerHeight + 10 + 'px',
+                            'right': ($(window).width() -$('.container').width())/2
+                        });
+                    } else {
+                        $('.your-order').removeAttr('style');
+                    }
+                };
+
+                $(window).scroll(sticky);
+                $(window).resize(sticky);
+            });

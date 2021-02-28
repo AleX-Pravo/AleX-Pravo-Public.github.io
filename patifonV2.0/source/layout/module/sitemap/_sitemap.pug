@@ -1,0 +1,78 @@
+include vars/_variable.pug
+
+= '\n'
+//= Sitemap =
+.sitemap
+    .row
+        each val in sitemap
+            .sitemap__container.sitemap__container--col3
+                ul.sitemap__list
+                    each list in val.list
+                        li.sitemap__item
+                            if ('title' in list)
+                                .sitemap__title= list.title
+
+                            if ('sublist' in list)
+                                ul.sitemap__sublist
+                                    each sublist in list.sublist
+                                        li.sitemap__subitem
+                                            a.sitemap__sublink(href='#')= sublist.title
+
+                                            if ('thirdlist' in sublist)
+                                                ul.sitemap__thirdlist
+                                                    each thirdlist in sublist.thirdlist
+                                                        li.sitemap__thirditem
+                                                            a.sitemap__thirdlink(href='#')= thirdlist.title
+
+                                                            if ('thirdlist2' in thirdlist)
+                                                                ul.sitemap__thirdlist
+                                                                    each thirdlist2 in thirdlist.thirdlist2
+                                                                        li.sitemap__thirditem
+                                                                            a.sitemap__thirdlink(href='#')= thirdlist2.title
+
+                            if ('thirdlist' in list)
+                                ul.sitemap__thirdlist
+                                    each thirdlist in list.thirdlist
+                                        li.sitemap__thirditem
+                                            a.sitemap__thirdlink(href='#')= thirdlist.title
+
+                                            if ('thirdlist2' in thirdlist)
+                                                ul.sitemap__thirdlist
+                                                    each thirdlist2 in thirdlist.thirdlist2
+                                                        li.sitemap__thirditem
+                                                            a.sitemap__thirdlink(href='#')= thirdlist2.title
+
+
+
+                        //- ul.sitemap__sublist
+                        //-     li.subitem__subitem
+                        //-         a.subitem__sublink(href='#') Продукция XIAOMI
+
+                        //-         ul.sitemap__thirdlist
+                        //-             li.sitemap__thirditem
+                        //-                 a.sitemap__thirdlink(href='#') Смартфоны Xiaomi
+
+                        //-             li.sitemap__thirditem
+                        //-                 a.sitemap__thirdlink(href='#') Наушники Xiaomi
+
+                        //-                 ul.sitemap__thirdlist
+                        //-                     li.sitemap__thirditem
+                        //-                         a.sitemap__thirdlink(href='#') Наушники Xiaomi EP-21 HD Earphone
+
+                        //-                     li.sitemap__thirditem
+                        //-                         a.sitemap__thirdlink(href='#') Наушники Xiaomi EP-51 Bluetooth Sports Earphone (Blue)
+
+                        //-                     li.sitemap__thirditem
+                        //-                         a.sitemap__thirdlink(href='#') Наушники Xiaomi EP-51 Bluetooth Sports Earphone (Green)
+
+                        //-             li.sitemap__thirditem
+                        //-                 a.sitemap__thirdlink(href='#') Акустика Xiaomi
+
+                        //-             li.sitemap__thirditem
+                        //-                 a.sitemap__thirdlink(href='#') Смарт-часы Xiaomi
+
+                        //-             li.sitemap__thirditem
+                        //-                 a.sitemap__thirdlink(href='#') Портативные батареи Xiaomi
+
+//= End sitemap =
+= '\n'

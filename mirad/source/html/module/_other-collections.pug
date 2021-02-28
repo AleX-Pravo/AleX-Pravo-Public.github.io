@@ -1,0 +1,13 @@
+= '\n'
+//= other-collections =
+//- (source/assets/css/module/_other-collections.scss)
+.other-collections
+    .container
+        include _collections.pug
+        a.registration(href='#') більше товарів
+        - var titleInfo = 'Схожі колекції'
+        include _title-block.pug
+        .other-collections__slider
+            - for (var i = 0; i < 4; i++)
+                include _collection-block.pug
+= '\n'

@@ -1,0 +1,19 @@
+include vars/_variable.pug
+
+= '\n'
+//= view =
+.view
+    ul.view__list
+
+        each item, index in view
+
+            if (index == 0)
+                li.view__list-item.active
+                    a.view__list-link(href='javascript:void(0);' data-class= item.attr)= item.name
+
+            else
+                li.view__list-item
+                    a.view__list-link(href='javascript:void(0);' data-class= item.attr)= item.name
+
+//= End view =
+= '\n'

@@ -1,0 +1,154 @@
+@import 'vars/_variable.scss';
+
+.phone {
+    line-height: (18px / $phone__baseFontSize);
+    position: absolute;
+    z-index: 5;
+    min-height: 36px;
+    margin: 10px 0;
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 29px;
+        height: 29px;
+        margin: (-29px / 2) 0 0;
+        content: '';
+        background: url('../images/header/icon/phone.svg') no-repeat;
+    }
+
+    &--active {
+        .phone {
+            &__content {
+                padding: 0 0 0 40px;
+        
+                .phone {
+                    &__dropOperator {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            &__button {
+                &:after {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            &__link {
+                &--callback {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+    
+    &__box {
+        position: relative;
+
+        .phone {
+            &__dropOperator {
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s;
+            }
+
+            &__link {        
+                &--callback {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        padding: 0 0 0 40px;
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &--callback {
+            text-decoration: underline;
+            color: $phone__callbackTextColor;
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: all .3s;
+            white-space: nowrap;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__button {
+        font-size: $phone__buttonTextFontSize;
+        font-weight: 700;
+        line-height: (18px / $phone__buttonTextFontSize);
+        position: relative;
+        display: block;
+        margin: 0 0 1px;
+        color: inherit;
+    }
+
+    &__device {
+        &Button {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 29px;
+        }
+    }
+
+    @import 'module/drop/_drop.scss';
+
+    @media (max-width: $screenMbMax) {
+        top: 20px;
+        left: 15px;
+    }
+
+    @media (min-width: $screenXsMin) {
+        position: relative;
+    }
+
+    @media (max-width: $screenSmMax) {
+        width: 29px;
+
+        &__content {
+            top: 0;
+            left: 40px;
+            visibility: hidden;
+            white-space: nowrap;
+            opacity: 0;
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+
+        &__content {
+            position: relative;
+        }
+
+        &__button {
+            &:after {
+                position: relative;
+                top: -2px;
+                display: inline-block;
+                width: 15px;
+                height: 8px;
+                margin: 0 0 0 5px;
+                content: '';
+                transition: all .1s linear;
+                background: url('../images/header/icon/arrow.png') no-repeat;
+            }
+        }
+    }
+}

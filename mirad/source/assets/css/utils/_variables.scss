@@ -1,0 +1,75 @@
+//== BASE
+// --------------------------------------------------
+
+//== Colors
+
+$base:                  #fff !default;
+$grayBase:              #000 !default;
+$grayDarker:            #364859 !default;
+$grayDark:              #5b748b !default;
+$gray:                  #555 !default;
+$grayLight:             #777 !default;
+$grayLighter:           #999 !default;
+
+$linkBackground:        #d8f3ff !default;
+$footerBackground:      #eaedf1 !default;
+$brandPrimary:          #2c77bb !default;
+$brandSuccess:          #0090ff !default;
+$brandInfo:             #39bfff !default;
+$brandWarning:          #9db2c6 !default;
+$brandDanger:           #000 !default;
+
+//== Reset
+
+$bodyBg:                $base !default;
+$textColor:             $grayDark !default;
+$linkColor:             $brandPrimary !default;
+
+
+//== Typography
+
+$fontFamilySansSerif:   'Arial', sans-serif !default;
+$HouschkaProBold:       'HouschkaPro-Bold', sans-serif !default;
+$HouschkaProDemiBold:   'HouschkaPro-DemiBold', sans-serif !default;
+$HouschkaProMedium:     'HouschkaPro-Medium', sans-serif !default;
+
+
+$fontFamilyBase:        $HouschkaProMedium !default;
+
+$fontSizeBase:          16px !default;
+$fontSizeLarge:         18px !default;
+$fontSizeSmall:         14px !default;
+$fontSizeExtraSmall:    12px !default;
+
+$fontSizeH1:            20px !default;
+$fontSizeH2:            30px !default;
+$fontSizeH3:            40px !default;
+
+$lineHeightBase:        1.428571429 !default; // 20/14
+
+
+//== MODULE
+// --------------------------------------------------
+
+
+//== Components
+
+
+//== Grid system
+
+$gridMaxWidth:          1560px !default;
+$gridColumns:           12 !default;
+$gridGutterWidth:       30px !default;
+
+
+//== Media queries breakpoints
+
+$screenXsMin:           600px !default;
+$screenSmMin:           800px !default;
+$screenMdMin:           1024px !default;
+$screenLgMin:           1200px !default;
+
+$screenMbMax:           ($screenXsMin - 1) !default;
+$screenXsMax:           ($screenSmMin - 1) !default;
+$screenSmMax:           ($screenMdMin - 1) !default;
+$screenMdMax:           ($screenLgMin - 1) !default;

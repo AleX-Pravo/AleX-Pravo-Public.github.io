@@ -1,0 +1,38 @@
+@import 'vars/_variable.scss';
+
+&__item {
+    margin: 0 0 17px 0;
+}
+
+&__char {
+    text-transform: uppercase;
+    color: $brandSecondary;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+&__box {
+
+    &-item {
+        margin: 0 0 17px 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &-title {
+        font-size: $fontSizeLarge;
+        line-height: 24px;
+        font-weight: bold;
+        margin: 0 0 7px 0;
+    }
+
+    &-description {
+
+        p {
+            font-size: $fontSizeH6;
+            margin: 0;
+        }
+    }
+}

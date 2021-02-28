@@ -1,0 +1,16 @@
+include vars/_variable.pug
+
+= '\n'
+//= Catalog =
+.catalog.catalog--grid
+    include ../deviceBottom/_deviceBottom.pug
+    .row
+
+        - for (i = 0; i < 3; i++)
+
+            each val in catalog
+
+                include module/item/_item.pug
+
+//= End catalog =
+= '\n'

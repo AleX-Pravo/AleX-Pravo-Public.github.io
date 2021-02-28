@@ -1,0 +1,42 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'Accessories'
+
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    
+                    = '\n'
+                    //= Section =
+                    section.section
+
+                        h1.section__title Аксессуары
+                        include module/accessories/_accessories.pug
+
+                    //= End section =
+                    = '\n'
+                    
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug        
+        include core/_script.pug

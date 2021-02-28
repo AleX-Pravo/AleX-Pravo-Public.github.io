@@ -1,0 +1,29 @@
+.basket {
+    position: relative;
+    background: url(../images/header/shopping.svg) $brandPrimary no-repeat center center;
+    width: 60px;
+    height: 80px;
+    display: block;
+    span {
+        position: absolute;
+        background: $brandInfo;
+        font-size: $fontSizeExtraSmall;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        top: 20px;
+        right: 5px;
+        color: #fff;
+
+        &:empty {
+            display: none;
+        }
+    }
+    @media (min-width: 375px) {
+        width: 80px;
+        span {
+            right: 15px;
+        }
+    }
+}

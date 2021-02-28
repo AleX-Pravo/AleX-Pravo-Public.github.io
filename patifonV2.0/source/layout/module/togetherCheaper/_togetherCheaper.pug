@@ -1,0 +1,75 @@
+include vars/_variable.pug
+
+-
+    togetherCheaperSlickInit = true
+
+if (togetherCheaperLarge)
+    - togetherCheaperItemClass = 'togetherCheaper__item--large'
+
+else
+    - togetherCheaperItemClass = ''
+
+= '\n'
+//= Together cheaper =
+.togetherCheaper
+    #togetherCheaper__slick.slick
+
+        - for (i = 0; i < 3; i++)
+            .slick-item
+                .togetherCheaper__container
+                    .togetherCheaper__containerInner
+                        .togetherCheaper__item(class= togetherCheaperItemClass)
+                            .togetherCheaper__itemInner
+                                a.togetherCheaper__image(href='#')
+                                    img(src='data/togetherCheaper/image.jpg' alt='')
+
+                                .togetherCheaper__content
+                                    .togetherCheaper__contentInner
+                                        .togetherCheaper__title
+                                            a.togetherCheaper__titleLink(href='#') Huawei Honor 9 4/64Gb (Black)
+
+                                        .togetherCheaper__price
+                                            span.togetherCheaper__priceOld 22 300 грн
+                                            | 19 000 грн
+
+                        i.togetherCheaper__plus
+
+                        .togetherCheaper__item(class= togetherCheaperItemClass)
+                            .togetherCheaper__itemInner
+                                a.togetherCheaper__image(href='#')
+                                    img(src='data/togetherCheaper/image2.jpg' alt='')
+
+                                    .togetherCheaper__special
+                                        ul.togetherCheaper__specialList
+                                            li.togetherCheaper__specialItem
+                                                .togetherCheaper__specialContent.togetherCheaper__specialContent--discount - 10%
+
+                                .togetherCheaper__content
+                                    .togetherCheaper__contentInner
+                                        .togetherCheaper__title
+                                            a.togetherCheaper__titleLink(href='#') Монопод для селфи Monopod Mini 48СМ AUX
+
+                                        .togetherCheaper__price
+                                            span.togetherCheaper__priceOld 250 грн
+                                            | 200 грн
+
+                        i.togetherCheaper__equals
+
+                        .togetherCheaper__total
+
+                            if (togetherCheaperLarge)
+                                .togetherCheaper__totalText Цена за комплект:
+
+                            else
+                                .togetherCheaper__totalText Все вместе:
+
+                            .togetherCheaper__totalPrice
+                                span.togetherCheaper__totalSum 19 200
+                                |  грн
+
+                            button.button.button--buy
+                                .button__text Купить комплект
+
+    #togetherCheaper__slickDots.togetherCheaper__slickDots
+//= End together cheaper =
+= '\n'

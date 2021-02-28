@@ -1,0 +1,34 @@
+include vars/_variable.pug
+
+- modifier = (pageTitle == 'Glossary') ? 'breadcrumbs--glossary' : ''
+
+='\n'
+//= Breadcrumbs =
+ul.breadcrumbs(class= modifier)
+
+    each val, index in breadcrumbs
+
+        if (index == (breadcrumbs.length - 1))
+            li.active
+                span.breadcrumbs__text= val
+
+            .breadcrumbs__drop
+
+                - for (i = 0; i < 13; i++)
+                    .breadcrumbs__item
+                        a.breadcrumbs__image(href='#')
+                            img(src='data/breadcrumbs/image.jpg' alt='')
+
+                        .breadcrumbs__title
+                            a.breadcrumbs__titleLink(href='#') Xiaomi Redmi 4A
+
+                        .breadcrumbs__price 2 480 грн
+
+                a.breadcrumbs__more(href='#') Вся серия
+
+        else
+            li
+                a(href='#')= val
+
+//= End breadcrumbs =
+='\n'

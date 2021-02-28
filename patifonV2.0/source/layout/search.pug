@@ -1,0 +1,193 @@
+include vars/_variable.pug
+
+-
+    pageTitle = 'Catalog page'
+    breadcrumbs = ['Главная', 'Каталог товаров', 'Xiaomi']
+
+    rating = true
+
+    catalog = catalogMainDrop
+    deviceBottom = [
+        {
+            title: 'Фильтр',
+            target: 'sidebar'
+        }
+    ]
+
+    ionRangeSlider = true
+    pageRatingInit = true
+
+doctype html
+html
+
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+
+            include region/header/_header.pug
+            include region/nav/_nav.pug
+
+            //= Main =
+            main#main.main
+                .container
+
+                    = '\n'
+                    //= Section =
+                    section.section
+                        .section__top
+
+                            include module/breadcrumbs/_breadcrumbs.pug
+
+                            .row
+                                .section__container.section__container--left
+                                    h1.section__title Результаты поиска
+                                        span.section__titleResult «xiaomi»
+
+                                #sort.section__container.section__container--sort
+                                    .section__deviceTop.hide-md-min
+                                        a.section__deviceClose.section__deviceClose--left(href='javascript:void(0);')
+
+                            = '\n'
+                            //= Filter =
+                            .filter.filter--top.hiden
+                                .filter__item.filter__item--open
+                                    .filter__title Смартфоны, ТВ и электроника
+
+                                    -
+                                        searchFilter = [
+                                            {
+                                                title: 'Мобильные телефоны',
+                                                value: '20'
+                                            },
+                                            {
+                                                title: 'Blu-ray/DVD/HD/-медиаплееры',
+                                                value: '40'
+                                            },
+                                            {
+                                                title: 'Чехлы для мобильных телефонов',
+                                                value: '100'
+                                            },
+                                            {
+                                                title: 'Мобильные телефоны',
+                                                value: '20'
+                                            },
+                                            {
+                                                title: 'Blu-ray/DVD/HD/-медиаплееры',
+                                                value: '40'
+                                            },
+                                            {
+                                                title: 'Чехлы для мобильных телефонов',
+                                                value: '100'
+                                            }
+                                        ]
+
+                                    .filter__container(style='display: block;')
+                                        ul.filter__menu
+                                            each val in searchFilter
+                                                li.filter__menuItem
+                                                    a.filter__menuLink(href='#')
+                                                        span.filter__menuTitle= val.title
+                                                        span.filter__menuNum= '(' + val.value + ')'
+
+
+                                        a.filter__more(href='#0') 
+                                            span Еще
+                                            span Свернуть
+                                //= Filter =
+                                = '\n'
+
+
+                        .row
+                            #sidebar.section__container.section__container--sidebar
+                                .section__deviceTop.hide-md-min
+                                    a.section__deviceClose.section__deviceClose--right(href='javascript:void(0);')
+
+                                .section__deviceContent
+
+                                    = '\n'
+                                    //= Filter =
+                                    .filter.filter--main
+                                        .filter__item.filter__item--open
+                                            .filter__title Смартфоны, ТВ и электроника
+
+                                            -
+                                                searchFilter = [
+                                                    {
+                                                        title: 'Мобильные телефоны',
+                                                        value: '20'
+                                                    },
+                                                    {
+                                                        title: 'Blu-ray/DVD/HD/-медиаплееры',
+                                                        value: '40'
+                                                    },
+                                                    {
+                                                        title: 'Чехлы для мобильных телефонов',
+                                                        value: '100'
+                                                    },
+                                                    {
+                                                        title: 'Защитные стекла',
+                                                        value: '50'
+                                                    },
+                                                    {
+                                                        title: 'Аксессуары для смарт-часов и трекеров',
+                                                        value: '10'
+                                                    },
+                                                    {
+                                                        title: 'Универсальные мобильные батареи',
+                                                        value: '15'
+                                                    },
+                                                    {
+                                                        title: 'Зарядные устройства',
+                                                        value: '5'
+                                                    }
+                                                ]
+
+                                            .filter__container(style='display: block;')
+                                                ul.filter__menu
+                                                    each val in searchFilter
+                                                        li.filter__menuItem
+                                                            a.filter__menuLink(href='#')
+                                                                span.filter__menuTitle= val.title
+                                                                span.filter__menuNum= '(' + val.value + ')'
+
+
+                                                a.filter__more(href='#0') Еще
+                                        //= Filter =
+                                        = '\n'
+
+                            .section__container.section__container--sidebarFixed
+                                .section__containerInner
+
+                                    include module/catalog/_catalog.pug
+
+                                    .section__bottom
+
+                                        include module/pagination/_pagination.pug
+
+                    //= End section =
+                    = '\n'
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+
+        = '\n'
+        //= Device Bottom =
+        //-.deviceBottom.hide-md-min
+            .deviceBottom__content
+
+                each val in deviceBottom
+                    .deviceBottom__item
+                        a.deviceBottom__link(href='javascript:void(0);' data-target= val.target)= val.title
+
+        //= End device Bottom =
+        = '\n'
+
+        include core/_script.pug

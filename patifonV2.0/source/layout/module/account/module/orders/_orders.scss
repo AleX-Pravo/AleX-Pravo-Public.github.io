@@ -1,0 +1,232 @@
+.orders {
+    position: relative;
+    margin: -15px 0 35px 0;
+
+    &__table {
+        position: relative;
+        border-collapse: collapse;
+
+        tbody {
+            position: relative;
+
+            &:before {
+                content: '-';
+                display: block;
+                line-height: 11px;
+                color: transparent;
+                background: transparent;
+            }
+
+            &.top {
+                &:before {
+                    display: none;
+                }
+            }
+
+            &.hide {
+
+                .orders {
+                    &__table {
+                        &-row {
+                            box-shadow: none;
+                        }
+
+                        &-drop {
+                            border-color: transparent;
+                        }
+                    }
+
+                    &__drop {
+                        box-shadow: none;
+                    }
+
+                    &__number {
+                        span {
+                            &:after {
+                                transform: translateY(-50%) rotate(0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                .orders {
+                    &__drop {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        th {
+            text-transform: none;
+            color: $grayExtraLight;
+            font-weight: normal;
+            text-align: center;
+            padding: 20px 0 20px 10px;
+
+            &:nth-child(n+2):nth-child(-n+3) {
+                display: none;
+            }
+        }
+
+        &-row {
+            transition: all .2s;
+
+            td {
+                padding: 20px 0 20px 10px;
+                text-align: center;
+                white-space: nowrap;
+                border-top: 1px solid $borderColor;
+                border-bottom: 1px solid $borderColor;
+
+                &:first-child {
+                    padding: 20px 17px 20px 10px;
+                    border-left: 1px solid $borderColor;
+                }
+
+                &:nth-child(n+2):nth-child(-n+3) {
+                    display: none;
+                }
+
+                &:last-child {
+                    border-right: 1px solid $borderColor;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 15px $borderColor;
+            }
+        }
+
+        &-drop {
+            border: 1px solid $borderColor;
+            transition: box-shadow .4s;
+
+            td {
+                padding: 0;
+            }
+        }
+    }
+
+    &__number {
+        position: relative;
+
+        a {
+            line-height: 1;
+            color: $brandActive;
+            text-decoration: none;
+            border-bottom: 1px dashed;
+            transition: all .3s;
+
+            &:hover {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+
+    &__status {
+        position: relative;
+
+        span {
+            position: relative;
+            padding: 0 0 0 23px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url(../images/account/order-sprite.svg) no-repeat;
+            }
+        }
+
+        &--done {
+            span {
+                color: $brandSuccess;
+
+                &:before {
+                    width: 15px;
+                    height: 11px;
+                }
+            }
+        }
+
+        &--canceled {
+            span {
+                color: $brandDanger;
+
+                &:before {
+                    width: 12px;
+                    height: 12px;
+                    background-position-x: -16px;
+                }
+            }
+        }
+
+        &--processed {
+            span {
+                color: $brandActive;
+
+                &:before {
+                    width: 13px;
+                    height: 13px;
+                    background-position-x: -29px;
+
+                    animation: 1.2s linear infinite running rotation;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        &__table {
+
+            th {    
+                &:nth-child(n+2):nth-child(-n+3) {
+                    display: table-cell;
+                }
+            }
+
+            &-row {
+                td {
+                    &:nth-child(n+2):nth-child(-n+3) {
+                        display: table-cell;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1440px) {
+
+        &__table {
+            th {
+                text-align: left;
+                padding: 20px 0 20px 20px;
+            }
+
+            &-row {
+                td {
+                    text-align: left;
+                    padding: 20px 0 20px 20px;
+
+                    &:first-child {
+                        padding: 20px 0 20px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}

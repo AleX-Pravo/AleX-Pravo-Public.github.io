@@ -1,0 +1,41 @@
+.place-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        span {
+            display: block;
+            padding: 0 10px;
+            font-size: $fontSizeBase;
+            color: $brandPrimary;
+        }
+    }
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    @media (min-width: 375px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__item {
+            flex-basis: 50%;
+        }
+    }
+    @media (min-width: 768px) {
+        flex-direction: row;
+        &__item {
+            flex-basis: auto;
+        }
+    }
+    @media (min-width: 1200px) {
+        &__item {
+            margin-right: 25px;
+        }
+    }
+}

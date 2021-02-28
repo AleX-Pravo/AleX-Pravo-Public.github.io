@@ -1,0 +1,22 @@
+@import 'vars/_variable.scss';
+
+.logo {
+    position: relative;
+
+    &__link {
+        position: relative;
+        display: inline-block;
+    }
+
+    &--valentine {
+        margin: -13.5px 0;
+    }
+
+    @media (max-width: $screenMbMax) {
+        text-align: center;
+    }
+
+    @media (min-width: $screenLgMin) {
+        min-width: 230px;
+    }
+}

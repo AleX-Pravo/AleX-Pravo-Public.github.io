@@ -1,0 +1,289 @@
+@import 'vars/_variable.scss';
+
+.characteristics {
+    position: relative;
+
+    &__menu {
+        font-weight: 700;
+        line-height: (32px / $characteristics__baseFontSize);
+        position: relative;
+
+        &List {
+            position: relative;
+
+            @include clearfix;
+        }
+
+        &Item {
+            position: relative;
+            float: left;
+
+            &--active {
+                .characteristics {
+                    &__menu {
+                        &Link {
+                            &:before {
+                                right: -1px;
+                                left: -1px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                .characteristics {
+                    &__menu {
+                        &Link {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &Link {
+            position: relative;
+            display: block;
+            margin-left: -1px;
+            padding: 0 15px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid $characteristics__borderColor;
+            border-radius: 6px 6px 0 0;
+
+            &:before {
+                position: absolute;
+                top: -1px;
+                right: 50%;
+                left: 50%;
+                display: block;
+                height: 3px;
+                content: '';
+                transition: all .2s linear;
+                border-radius: 6px 6px 0 0;
+                background: $characteristics__borderColor--active;
+            }
+
+            &:hover {
+                &:before {
+                    right: -1px;
+                    left: -1px;
+                }
+            }
+        }
+    }
+
+    &__container {
+        position: relative;
+
+        &Table {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid $characteristics__borderColor;
+            border-radius: 10px;
+        }
+
+        .characteristics {
+            &__name,
+            &__value {
+                position: relative;
+                float: left;
+                width: 50%;
+            }
+
+            &__name {
+                &:before {
+                    position: relative;
+                    top: 2px;
+                    display: inline-block;
+                    width: 13px;
+                    height: 15px;
+                    margin: 0 10px 0 0;
+                    content: '';
+                    background: url('../images/content/icon/detail__feature.png') 0 15px no-repeat;
+                }
+            }
+
+            &__value {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__list {
+        line-height: (50px / $characteristics__baseFontSize);
+        position: relative;
+
+        .characteristics {
+            &__name {
+                background: transparent;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        border-bottom: 1px solid $characteristics__borderColor;
+
+        @include clearfix;
+
+        &--resolution {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 0;
+                    }
+                }
+            }
+        }
+
+        &--cpu {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -16px;
+                    }
+                }
+            }
+        }
+
+        &--memory {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -32px;
+                    }
+                }
+            }
+        }
+
+        &--ram {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -48px;
+                    }
+                }
+            }
+        }
+
+        &--camera {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -64px;
+                    }
+                }
+            }
+        }
+
+        &--battery {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -80px;
+                    }
+                }
+            }
+        }
+
+        &--sim {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -96px;
+                    }
+                }
+            }
+        }
+
+        &--sim2 {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -112px;
+                    }
+                }
+            }
+        }
+
+        &--os {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -128px;
+                    }
+                }
+            }
+        }
+
+        &--threeG {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -144px;
+                    }
+                }
+            }
+        }
+
+        &--hybrid {
+            .characteristics {
+                &__name {
+                    &:before {
+                        background-position: 0 -112px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__table {
+        position: relative;
+
+        td {
+            height: 40px;
+            padding: 0 15px;
+        }
+    }
+
+    &__title {
+        td {
+            font-weight: 700;
+            background: $characteristics__tableTitleBackgroundColor;
+        }
+    }
+
+    &__row {
+        border-bottom: 1px solid $characteristics__borderColor;
+    }
+
+    &__name {
+        background: $characteristics__tableRowBackgroundColor;
+        width: 35%;
+        
+        &-info {
+            display: inline-flex;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #dfdfdf;
+            font-size: 11px;
+            color: lighten($grayDark, 10%);
+            margin: 0 0 0 7px;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover,
+            &.active {
+                border-color: $brandPrimary;
+                color: $brandPrimary;
+            }
+        }
+    }
+}

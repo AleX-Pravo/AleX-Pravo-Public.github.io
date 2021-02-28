@@ -1,0 +1,111 @@
+@import 'vars/_variable.scss';
+
+.select2 {
+    &-container {
+        &--default {
+            .select2 {
+                &-selection {
+                    &--single {
+                        position: relative;
+                        height: 40px;
+                        border: 1px solid $select2__borderColor;
+                        border-radius: (40px / 2);
+                        outline: none;
+                        background: $select2__backgroundColor;
+
+                        .select2 {
+                            &-selection {
+                                &__rendered {
+                                    line-height: (38px / $select2__baseFontSize);
+                                    height: 100%;
+                                    padding: 0 45px 0 15px;
+                                    color: inherit;
+                                }
+
+                                &__arrow {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 20px;
+                                    overflow: hidden;
+                                    width: 15px;
+                                    height: 8px;
+                                    margin: -4px 0 0;
+                                    background: url('../images/content/icon/arrow.png') no-repeat;
+
+                                    b {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-search {
+                    &--dropdown {
+                        .select2 {
+                            &-search {
+                                &__field {
+                                    border-color: $select2__borderColor;
+
+                                    &:hover {
+                                        border-color: $select2__borderColor--active;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-results {
+                    &__option {
+                        &[aria-selected=true] {
+                            background-color: $brandSecondary;
+                        }
+
+                        &--highlighted {
+                            &[aria-selected] {
+                                background-color: $brandPrimary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--open {
+            .select2 {
+                &-dropdown {
+                    &--below {
+                        border-bottom-right-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-dropdown {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid $select2__borderColor;
+        border-radius: (40px / 2);
+        background: $select2__backgroundColor;
+    }
+
+    &-search {
+        &--dropdown {
+            .select2 {
+                &-search {
+                    &__field {
+                        position: relative;
+                        height: 40px;
+                        padding: 0 15px;
+                        border-radius: (40px / 2);
+                        outline: none;
+                        background: $select2__backgroundColor;
+                    }
+                }
+            }
+        }
+    }
+}

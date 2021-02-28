@@ -1,0 +1,75 @@
+//- Utility
+include utils/_variable.pug
+- var pageTitle = ''
+//-breadcrumbs.pug
+- var breadcrumbs = ['Головна', pageTitle]
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_navigation.pug
+            //= Main =
+            main#main.main
+                include module/_breadcrumbs.pug
+                include module/_office-drop.pug
+                include module/_basket-table.pug
+                include module/_bottom-slider.pug
+
+
+
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+
+        script(src=bowerDir + 'slick-carousel/slick/slick.min.js')
+        script.
+            $(document).ready(function() {
+                $('.product-bottom__slider').slick({
+                    centerMode: false,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    fade: false,
+                    autoplay:false,
+                    speed: 200,
+                    infinite: false,
+                    responsive: [
+                        {
+                          breakpoint: 1320,
+                          settings: {
+                            slidesToShow: 5,
+                          }
+                        },
+                        {
+                          breakpoint: 960,
+                          settings: {
+                            slidesToShow: 4,
+                          }
+                        },
+                        {
+                          breakpoint: 740,
+                          settings: {
+                            slidesToShow: 3,
+                          }
+                        },
+                        {
+                          breakpoint: 600,
+                          settings: {
+                            slidesToShow: 2,
+                          }
+                        },
+                    ]
+                });
+            });

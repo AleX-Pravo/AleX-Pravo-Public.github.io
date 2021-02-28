@@ -1,0 +1,49 @@
+include vars/_variable.pug
+
+- writeRatingInit = true
+
+= '\n'
+//= Write =
+.write
+    .write__rate Оценка товара:
+
+    #writeRating.rating
+        ul.rating-list
+            li.rating-item
+                .rating-name Плохой
+            li.rating-item
+                .rating-name Так себе
+            li.rating-item
+                .rating-name Нормальный
+            li.rating-item
+                .rating-name Хороший
+            li.rating-item
+                .rating-name Отличный
+
+    form.form.form--reviews(action='' method='post')
+        .write__row
+            .write__container
+                .form-gorup
+                    input.form-control(type='text' placeholder='Введите Ваше имя')
+
+            .write__container
+                .form-group
+                    input.form-control(type='text' placeholder='Введите Ваш телефон')
+
+        .form-group
+            textarea.form-control(type='text' placeholder='Введите Ваш комментарий')
+        .write__row.write__row--photos
+
+            include ../addphoto/_addphoto.pug
+            
+        .write__row.write__row--add
+            .form-group
+                label.control-label(for='image')
+                    img(src='data/forms/add.png', alt='')
+                    |Добавить фото
+                input.form-control(type='file' id='image' style='display:none;')
+
+            button.button.button--buy
+                span.button__text Оставить отзыв
+//= End write =
+= '\n'

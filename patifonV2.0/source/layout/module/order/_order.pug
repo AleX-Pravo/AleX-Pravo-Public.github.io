@@ -1,0 +1,245 @@
+include vars/_variable.pug
+
+-
+    orderSelect2Init = true
+
+= '\n'
+//= Order =
+.order
+    form.form.form--order(action='#' method='post')
+        .order__container
+            .order__title(data-count='1')
+                .order__titleText Контактные данные
+
+            each val in orderFormContacts
+
+                if ('require' in val && val.require)
+                    .form-group.required
+                        label.control-label= val.title
+                        input.form-control(type='text' placeholder=val.placeholder)
+
+                else
+                    .form-group
+                        label.control-label= val.title
+                        input.form-control(type='text' placeholder=val.placeholder)
+
+        .order__container
+            .order__title(data-count='2')
+                .order__titleText Выбор способов доставки и оплаты
+
+            each val in orderFormPay
+
+                if ('tabs' in val && val.tabs)
+                    if ('active' in val && val.active)
+                        .order__box(style='display:block')
+
+                            if ('require' in val && val.require)
+                                .form-group.required
+
+                                    if ('text' in val)
+                                        .form-text= val.text
+
+                                    else
+                                        label.control-label= val.title
+
+                                        if ('radio' in val)
+                                            .form-radio
+
+                                                each radio in val.radio
+                                                    .radio.radio--small
+                                                        label
+
+                                                            if ('checked' in radio && radio.checked)
+                                                                input.radio-input(type='radio' name= radio.name checked)
+
+                                                            else
+                                                                input.radio-input(type='radio' name= radio.name)
+
+                                                            i.radio-icon
+                                                            .radio-title= radio.text
+
+                                        else if ('textarea' in val && val.textarea)
+                                            textarea.form-control(cols='30' rows='5' placeholder=val.placeholder)
+
+                                        else if ('select' in val && val.select)
+                                            select.form-control(style='width: 100%')
+                                                - for (i = 0; i < 10; i++)
+                                                    option(value='')= val.placeholder
+
+                                        else
+                                            input.form-control(type='text' placeholder= val.placeholder)
+
+                            else
+                                .form-group
+                                    if ('text' in val)
+                                        .form-text= val.text
+
+                                    else
+                                        label.control-label= val.title
+
+                                        if ('radio' in val)
+                                            .form-radio
+
+                                                each radio in val.radio
+                                                    .radio.radio--small
+                                                        label
+
+                                                            if ('checked' in radio && radio.checked)
+                                                                input.radio-input(type='radio' name= radio.name checked)
+
+                                                            else
+                                                                input.radio-input(type='radio' name= radio.name)
+
+                                                            i.radio-icon
+                                                            .radio-title= radio.text
+
+                                        else if ('textarea' in val && val.textarea)
+                                            textarea.form-control(cols='30' rows='5' placeholder=val.placeholder)
+
+                                        else if ('select' in val && val.select)
+                                            select.form-control
+                                                option
+
+                                                - for (i = 0; i < 10; i++)
+                                                    option(value= i + 1)= val.placeholder
+
+                                        else
+                                            input.form-control(type='text' placeholder=val.placeholder)
+                    else
+                        .order__box
+
+                            if ('require' in val && val.require)
+                                .form-group.required
+                                    if ('text' in val)
+                                        .form-text= val.text
+
+                                    else
+                                        label.control-label= val.title
+
+                                        if ('radio' in val)
+                                            .form-radio
+
+                                                each radio in val.radio
+                                                    .radio.radio--small
+                                                        label
+
+                                                            if ('checked' in radio && radio.checked)
+                                                                input.radio-input(type='radio' name= radio.name checked)
+
+                                                            else
+                                                                input.radio-input(type='radio' name= radio.name)
+
+                                                            i.radio-icon
+                                                            .radio-title= radio.text
+
+                                        else if ('textarea' in val && val.textarea)
+                                            textarea.form-control(cols='30' rows='5' placeholder=val.placeholder)
+
+                                        else
+                                            input.form-control(type='text' placeholder=val.placeholder)
+
+                            else
+                                .form-group
+                                    if ('text' in val)
+                                        .form-text= val.text
+
+                                    else
+                                        label.control-label= val.title
+
+                                        if ('radio' in val)
+                                            .form-radio
+
+                                                each radio in val.radio
+                                                    .radio.radio--small
+                                                        label
+
+                                                            if ('checked' in radio && radio.checked)
+                                                                input.radio-input(type='radio' name= radio.name checked)
+
+                                                            else
+                                                                input.radio-input(type='radio' name= radio.name)
+
+                                                            i.radio-icon
+                                                            .radio-title= radio.text
+
+                                        else if ('textarea' in val && val.textarea)
+                                            textarea.form-control(cols='30' rows='5' placeholder=val.placeholder)
+
+                                        else
+                                            input.form-control(type='text' placeholder=val.placeholder)
+
+                else
+                    if ('require' in val && val.require)
+                        .form-group.required
+                            if ('text' in val)
+                                .form-text= val.text
+
+                            else
+                                label.control-label= val.title
+
+                                if ('radio' in val)
+                                    .form-radio
+
+                                        each radio in val.radio
+                                            .radio.radio--small
+                                                label
+
+                                                    if ('checked' in radio && radio.checked)
+                                                        input.radio-input(type='radio' name= radio.name checked)
+
+                                                    else
+                                                        input.radio-input(type='radio' name= radio.name)
+
+                                                    i.radio-icon
+                                                    .radio-title= radio.text
+
+                                else if ('textarea' in val && val.textarea)
+                                    textarea.form-control(cols='30' rows='5' placeholder=val.placeholder)
+
+                                else
+                                    input.form-control(type='text' placeholder=val.placeholder)
+
+                    else
+                        .form-group
+                            if ('text' in val)
+                                .form-text= val.text
+
+                            else
+                                label.control-label= val.title
+
+                                if ('radio' in val)
+                                    .form-radio
+
+                                        each radio in val.radio
+                                            .radio.radio--small
+                                                label
+
+                                                    if ('checked' in radio && radio.checked)
+                                                        input.radio-input(type='radio' name= radio.name checked)
+
+                                                    else
+                                                        input.radio-input(type='radio' name= radio.name)
+
+                                                    i.radio-icon
+                                                    .radio-title= radio.text
+
+                                else if ('textarea' in val && val.textarea)
+                                    textarea.form-control(cols='30' rows='5' placeholder=val.placeholder)
+
+                                else
+                                    input.form-control(type='text' placeholder=val.placeholder)
+
+            .form-group.required
+                .checkbox.checkbox--small
+                    label
+                        input.checkbox-input(type='checkbox')
+                        i.checkbox-icon
+                        .checkbox-title Соглашаюсь с
+                            a.checkbox-link(href='#') условиями использования
+
+            .order__required * поля обязательные к заполнению
+
+        button.button.button--buy
+            .button__text Оформить заказ
+//= End order =
+= '\n'

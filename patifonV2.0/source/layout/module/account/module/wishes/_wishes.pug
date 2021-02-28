@@ -1,0 +1,92 @@
+include vars/_variable.pug
+
+= '\n'
+//= Wishes =
+
+.wishes
+    .wishes__add
+        .wishes__add-button Новый список
+        .wishes__add-wrapper
+            .wishes__add-form
+                form(action='' method='')
+                    .form-group
+                        label.control-label
+                        input.form-control(type='text' value='Мой список желаний')
+                        .help-block test
+                    .form-group
+                        button.form-control.button.button--buy(type='submit')
+                            span.button__text Cохранить
+                a(href='javascript:void(0);') Отмена
+            span Ваш список желаний пока пуст
+    .wishes__list
+        a.wishes__list-delete(href='javascript:void(0);') Удалить список
+        .wishes__header
+            .wishes__header-box
+                input.wishes__header-input(type='text' value='Мой список желаний')
+                .wishes__header-buffer
+                a.wishes__header-edit(href='javascript:void(0);')
+            span Список по умолчанию
+        .wishes__sort
+            .wishes__sort-title
+                .wishes__sort-counter
+                    span 16 
+                    |товаров на сумму
+                    span.wishes__sort-sum 23 810 
+                    |грн.
+                a.button.button--buy(href='javascript:void(0);')
+                    span.button__text Kупить
+                .wishes__action
+                    .modalContainer
+                        a(href='#move') Переместить
+                    a(href='javascript:void(0);') Удалить
+            .wishes__sort-box.hide-sm-max
+
+                include ../../../../module/sort/_sort.pug
+
+        .wishes__box
+            - wishes = true
+            .catalog.catalog--grid.catalog--wishes
+                .row
+                    //- for (i = 0; i < 4; i++)
+                    each val in catalog
+                        include ../../../catalog/module/item/_item.pug
+
+            - wishes = false
+
+    .wishes__list
+        a.wishes__list-delete(href='javascript:void(0);') Удалить список
+        .wishes__header
+            .wishes__header-box
+                input.wishes__header-input(type='text' value='Мой список желаний')
+                .wishes__header-buffer
+                a.wishes__header-edit(href='javascript:void(0);')
+            span Список по умолчанию
+        .wishes__sort
+            .wishes__sort-title
+                .wishes__sort-counter
+                    span 16 
+                    |товаров на сумму
+                    span.wishes__sort-sum 23 810 
+                    |грн.
+                a.button.button--buy(href='javascript:void(0);')
+                    span.button__text Kупить
+                .wishes__action
+                    .modalContainer
+                        a(href='#move') Переместить
+                    a(href='javascript:void(0);') Удалить
+            .wishes__sort-box.hide-sm-max
+
+                include ../../../../module/sort/_sort.pug
+
+        .wishes__box
+            - wishes = true
+            .catalog.catalog--grid.catalog--wishes
+                .row
+                    //- for (i = 0; i < 4; i++)
+                    each val in catalog
+                        include ../../../catalog/module/item/_item.pug
+
+            - wishes = false
+
+//= End wishes =
+= '\n'

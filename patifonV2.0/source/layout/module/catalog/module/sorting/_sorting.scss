@@ -1,0 +1,41 @@
+.sorting {
+    padding: 10px;
+    border-radius: 10px;
+    margin: -10px;
+    position: relative;
+    min-width: 250px;
+
+    &__list {
+        position: relative;
+
+        &-item {
+            position: relative;
+            margin: 0 0 10px;
+            font-size: $fontSizeLarge;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+    
+            &.active {
+                .sorting {
+                    &__list {
+                        &-link {
+                            color: #171616;
+                        }
+                    }
+                }
+            }
+        }
+    
+        &-link {
+            transition: all .2s linear;
+            text-decoration: none;
+            color: $brandActive;
+            
+            &:hover {
+                color: $brandPrimary;
+            }
+        }
+    }
+}
