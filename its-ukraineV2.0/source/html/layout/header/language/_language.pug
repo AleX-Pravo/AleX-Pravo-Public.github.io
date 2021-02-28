@@ -1,0 +1,19 @@
+='\n'
+//=Language=
+//- (source/assets/css/layout/header/_language.scss)
+.language
+    .language__wrapper
+        .language__box
+            //-.language__box-arrow
+            .language__box-item
+        .language__drop
+            ul.language__list
+                each item, index in languageItems
+                    if (index == 0)
+                        li.language__list-item.active
+                            a.language__list-link(href= item.link)= item.name
+                    else
+                        li.language__list-item
+                            a.language__list-link(href= item.link)= item.name
+//=End language=
+='\n'

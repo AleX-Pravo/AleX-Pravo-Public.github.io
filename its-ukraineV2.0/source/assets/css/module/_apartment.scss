@@ -1,0 +1,49 @@
+.apartment {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__inner {
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin: 20px 0;
+        width: (100% / 2);
+
+        img {
+            margin: 0;
+            width: 32px;
+        }
+
+        p {
+            font-size: $fontSizeBase;
+            color: $grayBase;
+            margin: 0 5px 0 5px;
+            line-height: 15px;
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        &__inner {
+            width: (100% / 3);
+
+            p {
+                font-size: $fontSizeMedium;
+                margin: 0 0 0 14px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__inner {
+            width: (100% / 4);
+        }
+    }
+}
+

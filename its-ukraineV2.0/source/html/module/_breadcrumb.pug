@@ -1,0 +1,35 @@
+= '\n'
+//= Breadcrumbs
+//-=(module/_breadcrumb.scss)=
+- breadcrumbs = ['home', nameTitle]
+
+-
+    micromarking                    = true
+    itemscope                       = (micromarking) ? true : false
+    itemtype                        = (micromarking) ? 'http://schema.org/BreadcrumbList' : false
+ul.breadcrumb(itemscope= itemscope itemtype= itemtype)
+
+    -
+        itemtype                    = (micromarking) ? 'http://schema.org/ListItem' : false
+        itemprop                    = (micromarking) ? 'itemListElement' : false
+
+        itemPropItem                = (micromarking) ? 'item' : false
+        content                     = (micromarking) ? 'content' : false
+
+    - for (let i = 0; i < breadcrumbs.length; i++)
+        if (i == 0)
+            li
+                a(href='index.html')
+                    img(src='assets/images/container/' + breadcrumbs[i] +'.svg', alt="")
+        else if (i < breadcrumbs.length - 1)
+            li(itemscope itemtype= itemtype itemprop= itemprop)
+                a(href='https://example.com/dresses' itemprop= itemPropItem)= breadcrumbs[i]
+                meta(itemprop='name' content= item.name)
+                meta(itemprop='position' content= content)
+        else
+            li.active(itemscope= itemscope itemtype= itemtype itemprop= itemprop)
+                span(itemprop="name")= breadcrumbs[i]
+                link(itemprop="item" href='https://example.com/dresses')
+                meta(itemprop='position' content= content)
+//= End breadcrumbs
+= '\n'

@@ -1,0 +1,29 @@
+.logo {
+    position: relative;
+    margin: 20px 0;
+
+    &__desk {
+        display: block;
+        width: 119px;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            width: auto;
+        }
+
+        &-sea {
+            display: block;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+        }
+    }
+
+    @media (min-width: 768px) {
+        margin: 29px 0;
+
+        &__desk {
+            width: auto;
+        }
+    }
+}

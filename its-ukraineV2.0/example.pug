@@ -1,0 +1,180 @@
+//- Utility
+include utils/_variable.pug
+
+-
+    pageTitle = 'example'
+    
+    tab = true // инициализируем tab.js в _scripts.pug
+    rating = true // инициализируем rating.js в _scripts.pug
+
+    magnificPopup = true // подключаем стили и скрипты magnificPopup в _head.pug
+    magnificPopupInline = true // инициализируем magnificPopup.js если блок в _scripts.pug
+    magnificPopupGallery = true // инициализируем magnificPopup.js если галерея в _scripts.pug
+    ionRangeSlider = true // подключаем и инициализируем ionRangeSlider.js в _scripts.pug
+    select2 = true // подключаем стили, скрипты и инициализируем ionRangeSlider.js в _scripts.pug
+
+    breadcrumbItems = breadcrumbExampleItems // передаем данные в _breadcrumb.pug з utils/_variable.pug
+
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header.pug
+            //-include layout/_navigation.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    .layout__box.layout__box--example
+                        .layout__box-aside
+
+                            include module/_filter.pug
+
+                        .layout__box-content
+
+                            hr
+                            
+                            include module/_breadcrumb.pug
+
+                            p below you'll find tab-box with most necessary features
+
+                            hr
+
+                            = '\n'
+                            //= Tab =
+
+                            //- tab'ы лучше юзать не отдельным модулем, а подобным скелетом. т.о. можно легко менять вложения и добавлять модификаторы, там где это необходимо. настраиваем в _tab.scss
+
+                            .tab
+                                .tab-menu
+                                    ul.tab-list
+                                        li.tab-item
+                                            a.tab-link(href='#one') common-nested-list
+                                        li.tab-item
+                                            a.tab-link(href='#two') star-rating
+                                        li.tab-item
+                                            a.tab-link(href='#three') magnific-popup inline
+                                        li.tab-item
+                                            a.tab-link(href='#four') magnific-popup gallery
+                                        li.tab-item
+                                            a.tab-link(href='#five') form template
+
+                                .tab-content
+
+                                    hr
+
+                                    #one.tab-box
+
+                                        //- nested recursive list for example =
+                                        include module/_nested-list.pug
+
+                                        hr
+
+                                        include module/_pagination.pug
+
+                                    #two.tab-box
+
+                                        //- star-rating
+                                        include module/_rating.pug
+
+                                    #three.tab-box 
+
+                                        a.test-modal(href='#test-modal') magnific-popup init
+
+                                    #four.tab-box
+                                        p галерея с magnific-popup type: 'image'
+                                        //- галерея с подключением magnificPopup. для инициализации блоков нужно добавлять класс .gallery к ссылке для вызова .magnific-popup
+
+                                        div
+                                            a.gallery(href='data/example/1.png')
+                                                img(src='data/example/1.png', alt='')
+                                            a.gallery(href='data/example/2.png')
+                                                img(src='data/example/2.png', alt='')
+                                            a.gallery(href='data/example/3.png')
+                                                img(src='data/example/3.png', alt='')
+                                            a.gallery(href='data/example/4.png')
+                                                img(src='data/example/4.png', alt='')
+                                            a.gallery(href='data/example/5.png')
+                                                img(src='data/example/5.png', alt='')
+                                            a.gallery(href='data/example/6.png')
+                                                img(src='data/example/6.png', alt='')
+
+                                    #five.tab-box
+                                        form.form(action='' method='')
+                                            .form-group.has-error
+                                                label.control-label Телфон
+                                                input.form-control(type='text' placeholder='+38(___)___-__-__')
+                                                .help-block
+                                            .form-group
+                                                label.control-label Пароль
+                                                input.form-control(type='password' placeholder='Пароль')
+                                                .help-block
+                                            .form-group
+                                                label.control-label Имя
+                                                input.form-control(type='text' placeholder='ФИО')
+                                            .form-group
+                                                label.control-label Комментарий
+                                                textarea.form-control(type='text' placeholder='Комментарий')
+                                                .help-block
+                                            .form-group
+                                                label.control-label Область:
+                                                select.form-control
+                                                    option(value='1') 1
+                                                    option(value='1') 2
+                                                .help-block
+                                            .form-group
+                                                label.control-label Город:
+                                                select.form-control
+                                                    option(value='1') 1
+                                                    option(value='1') 2
+                                                .help-block
+                                            .form-group.appearance
+                                                label.control-label Куда доставлять
+                                                div
+                                                    label на службу
+                                                        input(type='radio' name='radio' checked)
+                                                    label на наш склад
+                                                        input(type='radio' name='radio')
+                                                    label к подъезду
+                                                        input(type='radio' name='radio')
+                                                .help-block
+                                            .form-group.appearance
+                                                label                            
+                                                    input.form-control(type='checkbox' checked) 
+                                                    | На все согласен(на)
+                                                .help-block
+                                            .form-group
+                                                button.form-control.button(type='submit' disabled) disabled
+
+                            //= End tab
+                            = '\n'
+
+                            hr                    
+
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        include layout/_footer.pug
+
+        = '\n'
+        //= Modal =
+        .modal.modal--example.white-popup-block.mfp-hide#test-modal
+
+            .modal__content
+
+                div я модал
+
+        //= End modal =
+        = '\n'
+
+        include layout/_scripts.pug

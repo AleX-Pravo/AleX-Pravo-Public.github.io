@@ -1,0 +1,31 @@
+//- Utility
+include utils/_variable.pug
+
+- pageTitle = '404'
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout(style='background: url(data/404/karpatu.png) no-repeat center top/cover;')
+            .header-404
+                include layout/header/logo/_logo.pug
+
+            //= Main =
+            main#main.main
+                .block-404
+                    img(src='data/404/404.png' alt='')
+
+                    p Cторінку яку ви шукаєте не знайдено
+                    a.contactForm__button.button(href="index.html") Головна
+                    .menu-404
+                        - primaryMenu = primaryMenuFooter
+                        include layout/_primary-menu.pug
+            //= End main =
+            = '\n'
+
+        //= End layout =

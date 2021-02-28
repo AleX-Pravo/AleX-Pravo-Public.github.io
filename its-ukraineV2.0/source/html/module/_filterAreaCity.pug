@@ -1,0 +1,95 @@
+-
+    filters = [
+        {
+            label: 'Область',
+            select: [
+                {
+                    name: 'Івано-Франківська',
+                    value: '1',
+                    selected: true
+                },
+                {
+                    name: 'Вінницька',
+                    value: '2'
+                },
+                {
+                    name: 'Волинська',
+                    value: '3'
+                },
+                {
+                    name: 'Дніпропетровська',
+                    value: '4'
+                },
+                {
+                    name: 'Донецька',
+                    value: '5'
+                },
+                {
+                    name: 'Житомирська',
+                    value: '6'
+                },
+                {
+                    name: 'Закарпатська',
+                    value: '7'
+                }
+            ]
+        },
+        {
+            label: 'Місто',
+            select: [
+                {
+                    name: 'Івано-франківськ',
+                    value: '1',
+                    selected: true
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '2'
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '3'
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '4'
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '5'
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '1',
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '2'
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '3'
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '4'
+                },
+                {
+                    name: 'Івано-франківськ',
+                    value: '5'
+                }
+            ]
+        }
+    ]
+
+each item in filters
+    .form-group
+        label.control-label= item.label
+
+        select.form-control.js-example-basic-single
+            each val in item.select
+                if val.selected
+                    option(value= val.value selected)= val.name
+                else
+                    option(value= val.value)= val.name
+        .help-block

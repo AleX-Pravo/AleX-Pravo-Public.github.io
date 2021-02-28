@@ -1,0 +1,54 @@
+= '\n'
+//= description-aside =
+//- (source/assets/css/module/_.scss)
+- modifier = (pageTitle == 'textual') ? 'textual' : '';
+.description-aside(class= modifier)
+    if (pageTitle =='route')
+        include _remuneration.pug
+
+        .description-aside__wrapper
+            a.description-aside__navigator(href='javascipt:void(0)')
+                p 48.4504892, 24.56251139999995
+                p Відкрити в навігаторі
+
+            .description-aside__map
+                img(src="data/route/map.png", alt="")
+            a.button(href="javascript:void(0)") Розгорнути мапу
+
+        include _list.pug
+
+    if (pageTitle =='apartment')
+        .description-aside__apartment
+            .description-aside__wrapper
+                .description-aside__map
+                    img(src="data/route/map.png", alt="")
+                a.button(href="javascript:void(0)") Розгорнути мапу
+            .description-aside__text
+                p <strong>Як до нас доїхати</strong> поодаль від центру Яремче розташована одна з найвищих вершин тутешніх місць – гора Маковиця (984.5 м).
+                span Так звані «флішеві виходи» здалеку нагадують велетенського слона. Можна підійти ближче, спустившись від центру міста до річки. Тут силует ссавця зникає, проте зблизька можна роздивитись кам’янисту структуру цієї частини Українських Карпат, зручно влаштувавшись на одній з кількох просторих зелених галявин.
+
+                a.description-aside__navigator(href='javascipt:void(0)')
+                    p 48.4504892, 24.56251139999995
+                    p Відкрити в навігаторі
+
+    if (pageTitle =='guide')
+        include _list.pug
+        a.button(href="javascript:void(0)") Зв’язатися
+        .hashtags
+            each item in hashTag
+                a(href="javascript:void(0)")= item
+
+    if (pageTitle =='textual')
+        .description-aside__wrapper
+            a.description-aside__navigator(href='javascipt:void(0)')
+                p 48.4504892, 24.56251139999995
+                p Відкрити в навігаторі
+
+            .description-aside__map
+                img(src="data/route/map.png", alt="")
+            a.button(href="javascript:void(0)") Розгорнути мапу
+        .hashtags
+            each item in hashTag
+                a(href="javascript:void(0)")= item
+//= End _description-aside =
+= '\n'

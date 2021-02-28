@@ -1,0 +1,23 @@
+= '\n'
+//= thumbs-slider =
+//- (source/assets/css/module/_thumbs-slider.scss)
+.thumbs-slider
+    .swiper-container.gallery-top
+        .swiper-wrapper
+            each val in catalogCarouselBig
+                .swiper-slide
+                    a.gallery(class=val.class href=val.href)
+                        img(src="data/slider/big/" + val.image, alt="" )
+        .swiper-button-prev.bigboard-button-prev
+        .swiper-button-next.bigboard-button-next
+
+    .swiper-container.gallery-thumbs
+        .swiper-wrapper
+            each item in catalogCarouselBig
+                .swiper-slide
+                    img(src="data/slider/big/" + item.image, alt="")
+
+    p *Відтінок товару на фото може відрізнятися від реального через відмінностей налаштувань на моніторах!
+
+//= End thumbs-slider =
+= '\n'

@@ -1,0 +1,34 @@
+= '\n'
+//= Footer menu =
+//-=(/assets/css/layout/_footerMenu.scss)=
+.footerMenu
+    -
+        var footerMenu = [
+            {
+                html: 'index.html',
+                title: 'Головна'
+            },
+            {
+                html: 'blog.html',
+                title: 'Блог'
+            },
+            {
+                html: 'dwelling.html',
+                title: 'Каталог житла'
+            },
+            {
+                html: 'questions.html',
+                title: 'FAQ'
+            },
+            {
+                html: 'contacts.html',
+                title: 'Контакти'
+            }
+        ]
+    ul.footerMenu__list
+
+        each val in footerMenu
+            li.footerMenu__item
+                a.footerMenu__link(href=val.html)= val.title
+//= End Footer menu =
+= '\n'

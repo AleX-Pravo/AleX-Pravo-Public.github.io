@@ -1,0 +1,13 @@
+= '\n'
+//= similar =
+//- (source/assets/css/module/_similar.scss)
+.similar
+    .container
+        h1 Схожі маршрути
+        .similar__container.swiper-container(data-breakpoints='{"9999":{"slidesPerView":5},"1024":{"slidesPerView":4},"960":{"slidesPerView":3},"720":{"slidesPerView":2},"480":{"slidesPerView":1}}')
+            .similar__wrapper.swiper-wrapper
+                - for(var i = 0; i < 5; i++)
+                    .swiper-slide
+                        include _routes.pug
+//= End similar =
+= '\n'

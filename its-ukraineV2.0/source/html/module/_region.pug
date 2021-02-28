@@ -1,0 +1,13 @@
+= '\n'
+//= region =
+//- (source/assets/css/module/_region.scss)
+.region
+    .container
+        h1 Житло в цьому районі
+        .swiper-container(data-breakpoints='{"9999":{"slidesPerView":4}, "1025":{"slidesPerView":3}, "768":{"slidesPerView":2},"600":{"slidesPerView":1}}')
+            .region__wrapper.swiper-wrapper
+                - for(var i = 0; i < 4; i++)
+                    .swiper-slide
+                        include _dwellings.pug
+//= End region =
+= '\n'

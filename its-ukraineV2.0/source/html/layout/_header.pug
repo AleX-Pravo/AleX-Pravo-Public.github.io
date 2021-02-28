@@ -1,0 +1,54 @@
+= '\n'
+//= Header =
+//-=(/assets/css/layout/_header.scss)=
+- modifierHeader = (pageTitle!='main' && pageTitle!='store') ? 'header--light' : ''
+- modifierStore = (store) ? 'header--store' : ''
+- modifierScroll = (pageTitle!= 'main') ? '__scroll' : ''
+.header(class = innerPage class = Fake3D class= modifierHeader class = modifierStore class = modifierScroll)
+
+    .container.header__container
+
+        .header__main
+
+            //-layout/header/device/_device.scss
+            .header-device.hide-md-min
+                - var deviceFlag = true
+
+                a.header-button(href='javascript:void(0);')
+                    i.button-line
+
+            .header__logo
+                include header/logo/_logo.pug
+
+            .header__menu
+                include _primary-menu.pug
+
+            .header__rightBlock
+                if card
+                    .header__searchButton.header__searchButton--none
+                        a.searchButton(href='javascript:void(0);')
+
+                    .header__language
+                        include header/language/_language.pug
+
+                    .header__person
+                        include header/person/_person.pug
+
+
+                    a.header__cart(href='javascript:void(0)')
+                        span.quantity 12
+                        span.sum 1823 грн.
+                else
+                    .header__searchButton
+                        a.searchButton(href='javascript:void(0);')
+
+                    .header__language
+                        include header/language/_language.pug
+
+                    .header__person
+                        include header/person/_person.pug
+
+            include header/search/_search.pug
+//= End header =
+= '\n'
+

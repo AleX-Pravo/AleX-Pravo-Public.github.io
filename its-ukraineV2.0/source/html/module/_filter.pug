@@ -1,0 +1,323 @@
+-
+    filterContainerItems = [
+        {
+            img: '1',
+            name: 'Приватний'
+        },
+        {
+            img: '2',
+            name: 'Готель'
+        },
+        {
+            img: '3',
+            name: 'Кемпінг'
+        },
+        {
+            img: '4',
+            name: 'Котедж'
+        },
+        {
+            img: '5',
+            name: 'Хостел'
+        },
+        {
+            img: '6',
+            name: 'Квартира'
+        }
+    ]
+
+    filterListItems = [
+        {
+            //class: 'verticalCenter',
+            title: 'Кількість гостей',
+            overflow: 'overflow',
+            list: [
+                {
+                    name: 'до 6',
+                    //counter: '(14)',
+                    checked: true,
+                    disabled: false
+                },
+                {
+                    name: 'від 6 до 10',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Більше 10',
+                    //counter: '(0)',
+                    disabled: true,
+                    checked: false
+                }
+            ]
+        },
+        {
+            title: 'Сервіс',
+            overflow: 'overflow',
+            list: [
+                {
+                    name: 'Відкритий басейн',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Кондиціонер в номері',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Пральна машина',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Домашні тварини',
+                    //counter: '(14)',
+                    checked: true,
+                    disabled: false
+                },
+                {
+                    name: 'Закритий басейн',
+                    //counter: '(0)',
+                    disabled: true,
+                    checked: false
+                },
+                {
+                    name: 'Дозволено палити',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Конферент-зал',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Праска',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Паркінг',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Послуги няні',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Дозволено палити',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Паркінг',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Проведення вечірок',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Баня/сауна',
+                    //counter: '(14)',
+                    checked: true,
+                    disabled: false
+                },
+                {
+                    name: 'Паркінг',
+                    //counter: '(0)',
+                    disabled: true,
+                    checked: false
+                }
+            ]
+        },
+        {
+            title: 'Послуги',
+            overflow: 'overflow',
+            list: [
+                {
+                    name: 'Банкомат',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Продаж квітів',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Трансфер',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Приватний пляж',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Обмін валют',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'WI-FI',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Сейф',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Екскурсії',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                }
+            ]
+        },
+        {
+            title: 'Послуги',
+            overflow: 'overflow',
+            list: [
+                {
+                    name: 'Фітнес-центр',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'SPA-центр',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Ігрова кімната',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Камера схову багажу',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Продаж квитків',
+                    //counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Сніданок враховано',
+                    //counter: '(5)',
+                    checked: false,
+                    disabled: false
+                }
+            ]
+        }
+    ]
+= '\n'
+//= filter =
+//-=(/assets/css/layout/_filter.scss)=
+.filter#filter
+
+    .filter__left
+        .filter__container.price
+            .filter__title Ціна грн.
+                //-a.filter__button.rotate(href='javascript:void(0);')
+            .filter__box
+                //-=(source/assets/css/components/_ionRangeSlider.scss)=
+                .filter__range
+                    .filter__range-toddler
+                        input.range(type='text' name='range' value='')
+                    .filter__range-controls
+                        input.filter__range-input(type='text' value='120' maxlength='7')
+                        input.filter__range-input(type='text' value='12 000' maxlength='7')
+        .filter__container.type
+            .filter__title Тип житла:
+            .filter__top-box.overflow
+                each val, index in filterContainerItems
+                    if (index == 0)
+                        .filter__top-inner.active
+                            .filter__top-img
+                                img(src='data/dwelling/a' + val.img + '.svg' alt='')
+                                p= val.name
+                    else
+                        .filter__top-inner
+                            .filter__top-img
+                                img(src='data/dwelling/a' + val.img +'.svg' alt='')
+
+                                p= val.name
+        if (areaCity)
+            .filter__container.placing
+                .filter__title Розміщення
+                .filter__box
+                    include _filterAreaCity.pug
+
+        if (priceMob)
+            .filter__container.cost
+                .filter__title сортування по вартості
+                ul.filter__box.overflow
+                    li.filter__list-item
+                        label.filter__item Від дешевих до дорогих
+                            input(type='checkbox')
+                    li.filter__list-item
+                        label.filter__item Від дорогих до дешевих
+                            input(type='checkbox')
+                    li.filter__list-item
+                        label.filter__item З найвищим рейтингом
+                            input(type='checkbox')
+
+    .filter__right
+        each item in filterListItems
+            .filter__container(class= item.class)
+                .filter__title= item.title
+                    //-a.filter__button.rotate(href='javascript:void(0);' class= item.rotate)
+                //-ul.filter__box(class= item.overflow class= item.class)
+                    each list in item.list
+                        li.filter__box-item
+                            ul.filter__list
+                                each col in list.col
+                                    li.filter__list-item
+                                        - disabledClass = (col.disabled) ? 'disabled' : ''
+                                        label.filter__item(class= disabledClass)= col.name
+                                            input(type='checkbox' checked= col.checked disabled= col.disabled)
+
+                ul.filter__box(class= item.overflow)
+                    each list in item.list
+                        li.filter__list-item
+                            - disabledClass = (list.disabled) ? 'disabled' : ''
+                            label.filter__item(class= disabledClass)= list.name
+                                input(type='checkbox' checked= list.checked disabled= list.disabled)
+
+//= End filter =
+= '\n'

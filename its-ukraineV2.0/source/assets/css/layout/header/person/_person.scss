@@ -1,0 +1,127 @@
+.person {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+
+    &-name {
+        line-height: 24px;
+        font-size: 18px;
+        margin-right: 10px;
+        color: rgba(18, 18, 18, 0.75);
+    }
+
+    &-img {
+        background: url('../images/header/person2.svg') 0 0 no-repeat;
+        height: 18px;
+        width: 18px;
+    }
+
+    &-arrow {
+        background: url('../images/header/arrow-down1.png') 0 0 no-repeat;
+        width: 12px;
+        height: 6px;
+        margin-left: 10px;
+
+        &.rotate {
+            transform: rotate(180deg);
+        }
+    }
+
+    &-drop {
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        display: none;
+        top: calc(100% + 15px);
+        border-radius: 2px;
+
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 7px 7px 7px;
+            border-color: transparent transparent rgba(18, 18, 18, 0.75) transparent;
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            margin-left: -4px;
+        }
+
+        &--show {
+            display: block;
+            border: 2px solid rgba(18, 18, 18, 0.75);
+            animation: fadeIn .2s;
+            background: $base;
+            padding: 13px 20px 13px;
+        }
+
+        li {
+            padding: 0 40px 11px 0;
+
+            &:last-child {
+                padding: 0;
+                text-align: center;
+                border-top: 1px solid rgba(18, 18, 18, 0.75);
+                padding-top: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgba(18, 18, 18, 0.75);
+                white-space: nowrap;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        justify-content: flex-end;
+
+        &-name {
+            color: $base;
+        }
+
+        &-img {
+            background: url('../images/header/person1.svg') 0 0 no-repeat;
+            height: 24px;
+            width: 20px;
+        }
+
+        &-arrow {
+            background: url('../images/header/arrow-down.svg') 0 0 no-repeat;
+        }
+
+        &-drop {
+            width: 100%;
+
+            &:before {
+                border-color: transparent transparent #fff transparent;
+            }
+
+            &--show {
+                background: rgba(255, 255, 255, .89);
+                border: 2px solid $base;
+            }
+
+            li {
+                padding: 0 0 10px;
+
+                &:last-child {
+                    border-top: 1px solid $base;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}

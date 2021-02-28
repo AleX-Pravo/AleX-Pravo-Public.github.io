@@ -1,0 +1,82 @@
+//- Utility
+include utils/_variable.pug
+
+
+- pageTitle = 'routes'
+- nameTitle = 'Маршрути'
+- subTitle = 'Маршрути'
+
+//-_topBlock.pug_breadcrumbs.pug
+//- var about = 'about'
+//- var breadcrumbs = ['Головна', pageTitle]
+
+- store = true // задаем хедеру класс .store через модификатор (_header.pug)
+
+//-js
+-
+    select2 = true
+    //select2filters = true
+    perfectScrollbar = true
+
+//- selectric = true
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header.pug
+            include layout/_header-device.pug
+
+            //= Main =
+            - modifierMain = (pageTitle!='main') ? 'main--inner' : ''
+            main#main.main(class= modifierMain)
+                .container
+
+                    include module/_breadcrumb.pug
+
+                    h1.topBlock__title= nameTitle
+                    .strainer
+                        -
+                            areaCity = true
+                            blockCenter = true
+                            popularity = true
+                        include module/_filters.pug
+
+                    .catalog
+                        //- (source/assets/css/module/_route.scss)
+                        .route__wrapper
+                            - for(var j = 0; j < 3; j++)
+                                - for(var i = 0; i < 6; i++)
+                                    include module/_routes.pug
+
+                        include module/_pagination.pug
+
+                -
+                    areaCity = true
+                    blockCenter = true
+                    popularity = true
+                include module/_dwelling-filter.pug
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        //include module/_pageUp.pug
+        include layout/_scripts.pug
+
+        script.
+        script.
+            $(document).ready(function() {
+
+                // Добавляем класс active сердечку
+                $(document).on('click', '.like-green', function(){
+                    $(this).toggleClass('active');
+                });
+
+            });

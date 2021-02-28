@@ -1,0 +1,33 @@
+= '\n'
+//= indexBlock =
+//-=(/assets/css/module/_panel-box.scss)=
+.panel-box(id=val.name class=val.name style=val.banner)
+    .panel-box__container
+        .panel-box__wrap
+            .panel-box__Left
+                .panel-box__title
+                    h2= val.title
+                    a(href="#")= val.title
+                if (val.text)
+                    .panel-box__text
+                        p= val.text
+                if (val.info)
+                    ul.panel-box__info
+                        li
+                            a(href='#') 156 об’єктів
+                        li
+                            a(href='#') 864 маршрути
+                        li
+                            a(href='#') 327 готелів
+
+                .panel-box__button
+                    span
+                    a(href='#')= val.link
+
+            .panel-box__Right
+                //-include _indexSwiperCatalog.pug
+                include _carousel.pug
+                
+//= End indexBlock =
+= '\n'
+

@@ -1,0 +1,56 @@
+.main-text {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+
+    h1 {
+        font-family: $fontFamilyCyrillicold_Bd;
+        line-height: 1;
+        font-size: 50px;
+        text-align: center;
+        color: $base;
+        margin: 0 0 20px;
+
+        @media (min-width: 840px) {
+            font-size: 80px;
+            line-height: 100px;
+            margin: 0 0 5px;
+        }
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 12px;
+        text-align: center;
+        color: $base;
+
+        @media (min-width: 840px) {
+            font-size: 18px;
+            line-height: 36px;
+        }
+    }
+
+    @media (min-width: 720px) {
+        width: 100%;
+
+        h1 {
+            line-height: 70px;
+        }
+
+        p {
+            line-height: 30px;
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 840px) {
+        p {
+            font-size: 18px;
+            line-height: 36px;
+        }
+    }
+}
+
+

@@ -1,0 +1,121 @@
+
+.load {
+    display: flex;
+    justify-content: center;
+    font-size: $fontSizeLarge;
+    color: $brandPrimary;
+    margin-top: 32px;
+    text-decoration: none;
+    margin: 0 auto;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.pagination {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 15px 0;
+
+
+    li {
+        position: relative;
+
+        &:first-child {
+            margin: 0 20px 0 0;
+        }
+
+        &:last-child {
+            margin: 0 0 0 20px;
+        }
+        &:nth-child(2) {
+            a {
+                border-radius: 5px 0 0 5px;
+            }
+        }
+        &:nth-last-child(2) {
+            a {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+        &:not(:nth-last-child(2)) {
+            a {
+                border-right: none;
+            }
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: $grayLighter;
+            cursor: pointer;
+            border: 1px solid $brandSuccess;
+
+            background: transparent;
+            width: 42px;
+            height: 38px;
+            text-align: center;
+            line-height: 40px;
+            font-size: $fontSizeLarge;
+        }
+
+        &:hover,
+        &.active {
+
+            a {
+                color: $base;
+                background: $brandPrimary;
+                border-color: $grayLight;
+            }
+        }
+
+        &.prev,
+        &.next {
+            font-size: 0;
+
+            span,
+            a {
+                display: block;
+                width: 9px;
+                height: 18px;
+                text-decoration: none;
+                background: url(../images/pagin-sprite.svg) no-repeat;
+                background-position-y: -20px;
+                cursor: pointer;
+                border-color: transparent;
+                font-size: 0;
+            }
+
+            span {
+                display: none;
+                background-position-y: 0;
+            }
+
+            &.disabled {
+                span {
+                    display: block;
+                }
+
+                a {
+                    display: none;
+                }
+            }
+        }
+
+        &.next {
+            span,
+            a {
+                background-position-x: -12px;
+            }
+        }
+        &.dots {
+            a {
+                background: url(../images/arrow-curved.svg)no-repeat center center;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.description {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        max-width: 1040px;
+        width: 100%;
+        color: $grayDarker;
+
+        h3 {
+            font-size: $fontSizeLarge;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        p {
+            display: block;
+            font-size: $fontSizeLarge;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        &__content {
+
+            h3 {
+                font-size: 28px;
+                line-height: 44px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding: 50px 0 0 0;
+    }
+
+    @media (min-width: 1200px) {
+        &__wrapper {
+            flex-wrap: nowrap;
+        }
+    }
+}

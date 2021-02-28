@@ -1,0 +1,80 @@
+.form {
+    position: relative;
+
+    .form-group {
+        display: flex;
+        align-items: flex-start;
+        margin: 7px 0;
+
+        &.has-error {
+
+        }
+    }
+
+    .control-label {
+        line-height: 1;
+        margin: 0 7px 0 0;
+        flex-basis: 50%;
+
+        + div {
+            flex-basis: 50%;
+            margin: -7px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            label {
+                margin: 7px 0;
+            }
+        }
+    }
+
+    .select2 {
+        flex-basis: 50%;
+    }
+
+    .form-control {
+        position: relative;
+        height: $formControlHeight;
+        padding: 0 17px;
+        flex-basis: 50%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all .3s;
+
+        &::placeholder {
+            transition: all .3s;
+        }
+
+        &:focus {
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+    }
+
+    .help-block {
+        display: none;
+    }
+
+    input,
+    textarea {
+        border: 1px solid $borderColor;
+        background: transparent;
+    }
+
+    textarea {
+        &.form-control {
+            padding: 17px;
+            height: 160px;
+            resize: none;
+        }
+    }
+
+    button {
+        &.form-control {
+            flex-basis: auto;
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+= '\n'
+//= basket =
+//- (source/assets/css/module/_basket.scss)
+.cart
+    .cart__header
+        .cart__cell.cart__cell--remove
+        .cart__cell.cart__cell--name Назва
+        .cart__adaptive
+            .cart__cell.cart__cell--size Розмір
+            .cart__cell.cart__cell--color Колір
+        .cart__cell.cart__cell--quantity Кількість
+        .cart__cell.cart__cell--price Ціна
+
+    .cart__list
+        - for (var i = 0; i < 3; i++)
+            include _cart-item.pug
+//= End basket =
+= '\n'
