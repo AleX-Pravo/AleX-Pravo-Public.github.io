@@ -3,7 +3,7 @@
 ## PROJECTS
 
 1. ![Image](https://alex-pravo.github.io/32x32_site/source/favicon.ico)   
-   [The site of the company](https://alex-pravo.github.io/32x32_site/prod/)
+   [site of the company](https://alex-pravo.github.io/32x32_site/prod/)
 
 2. ![Image](https://alex-pravo.github.io/anguish-law/production/icon.ico)
    [anguish law](https://alex-pravo.github.io/anguish-law/production/)
