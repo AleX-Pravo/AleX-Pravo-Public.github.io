@@ -1,0 +1,65 @@
+//- Utility
+
+include utils/_variable
+
+-
+    pageTitle = 'home'
+    select2 = true
+    main = true
+
+doctype html
+html
+    include layout/_head
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header
+            include module/_join
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+
+                        section.section.section--benefits
+                            - buttonText = 'learn more'
+                            span.stretch
+                            each prop in benefitsItem
+                                include module/_benefit
+                        section.section.section--resume.stretch
+                            - title = 'Отправьте свое резюме'
+
+                            include layout/_form
+
+                        section.section.section--games.stretch
+                            -
+                                pinch = true
+                                buttonText = 'Read more'
+
+                            h2 our games
+                            div
+                                each prop in gamesMainItems
+                                    include module/_game
+                            a.button.button--fill(href='catalog.html') all games
+
+                        section.section.section--mission
+                            h2 our mission
+                            p Від найпершого свого дня ми будували свою роботу на двох китах: команді та якості. Без хорошої команди професіоналів-однодумців будь-яка ідея лишається всього лише набором слів, а ІТ-компанія перетворюється на склад комп’ютерів. Саме люди роблять мрії матеріальними, оживляють їх, приносячи в цей світ трохи магії.
+                            p Ми дуже намагалися створити компанію «сімейного» типу, а не чергову ІТ-галеру. Саме тому «Заграва Геймз» – це в першу чергу комфортне для роботи місце. Ми цінуємо неформальну дружню атмосферу, довіру та взаємовиручку.
+                            a.button.button--pinch(href='about.html') read more
+
+
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        include layout/_footer
+        include module/_mobile-menu
+
+        include layout/_sprite
+        include layout/_scripts

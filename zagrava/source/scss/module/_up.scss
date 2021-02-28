@@ -1,0 +1,20 @@
+.up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 5;
+    box-shadow: 0 0 10px 	
+    rgba(255,255,255,0.5);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    transition: bottom .3s;
+    background: gray;
+    border-radius: 50%;
+
+    &.absolute {
+        position: absolute;
+        top: -16px;
+    }
+}

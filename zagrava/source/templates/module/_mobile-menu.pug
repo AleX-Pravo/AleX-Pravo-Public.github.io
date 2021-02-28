@@ -1,0 +1,18 @@
+= '\n'
+//= Mobile menu =
+- logoWhite = true
+
+.mobile-menu.hide-screen-l-min
+    #mobile-drop.mobile-menu__drop
+        .mobile-menu__wrapper
+            .mobile-menu__head
+                include _logo.pug
+                a.mobile-menu__close.close-aside(href='javascript:void(0);')
+            .mobile-menu__content
+                include _languages.pug
+                include ../layout/_nav.pug
+                include _contacts.pug
+
+//= End mobile menu =
+= '\n'
+

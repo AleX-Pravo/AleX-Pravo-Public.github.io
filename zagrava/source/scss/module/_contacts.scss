@@ -1,0 +1,52 @@
+.contacts {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    a {
+        position: relative;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .3s;
+        line-height: 1;
+        white-space: nowrap;
+
+        &:hover {
+            color: $brandLightBlue;
+        }
+    }
+
+    &__phone,
+    &__mail {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+    }
+
+    &__phone {
+        position: relative;
+        margin: 0 0 4px;
+
+        a {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+
+    &__mail {
+        position: relative;
+
+        a {
+            font-size: $fontSizeSmall;
+        }
+    }
+
+    @media (min-width: $screen_XXL_Min) {
+        &__phone {
+            a {
+                font-size: $fontSizeH4;
+            }
+        }
+    }
+}

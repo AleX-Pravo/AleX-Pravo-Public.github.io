@@ -1,0 +1,40 @@
+= '\n'
+//= Footer =
+-
+    micromarking                    = true
+    itemscope                       = (micromarking) ? true : false
+    itemprop                        = (micromarking) ? 'organization' : false
+    itemtype                        = (micromarking) ? 'http://schema.org/Organization' : false
+
+    itempropEmail                   = (micromarking) ? 'email' : false
+    itempropTel                     = (micromarking) ? 'telephone' : false
+
+    itempropBrand                   = (micromarking) ? 'brand' : false
+    itempropBrandContent            = (micromarking) ? '' : false
+footer#footer.footer
+    -
+        mascot = true
+        dots = false
+
+    include ../module/_play
+
+    .footer__inner
+        .footer__decoration
+            .footer__decoration-inner
+        .container
+            .footer__wrapper(itemscope= itemscope itemprop= itemprop itemtype= itemtype)
+                meta(itemprop= itempropBrand content= itempropBrandContent)
+                .footer__menu
+                    include ../module/_logo
+                    include _nav
+                    include ../module/_contacts
+                -
+                    itemtype                    = (micromarking) ? 'http://schema.org/CreativeWork' : false
+                    itempropInner               = (micromarking) ? 'copyrightHolder' : false
+                    typeOfInner                 = (micromarking) ? 'Organization' : false
+                .footer__social(itemscope= itemscope itemtype= itemtype)
+                    p(itemprop= itempropInner typeof= typeOfInner) © 2019 Zagrava games. All rights reserved
+                    include ../module/_social
+                    include ../module/_privacy
+- micromarking = false
+//= End footer =

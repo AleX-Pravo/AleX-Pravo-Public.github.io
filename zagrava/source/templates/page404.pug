@@ -1,0 +1,44 @@
+//- Utility
+
+include utils/_variable
+
+-
+    pageTitle = 'page404'
+
+
+doctype html
+html
+    include layout/_head
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+
+            - dots = true
+            include layout/_header
+
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+                        include module/_page404
+
+
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        -
+            mascot = true
+            dots = false
+
+        include layout/_footer
+        include module/_mobile-menu
+
+        include layout/_sprite
+        include layout/_scripts

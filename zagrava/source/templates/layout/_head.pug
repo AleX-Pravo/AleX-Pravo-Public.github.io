@@ -1,0 +1,28 @@
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    meta(property='og:url' content='')
+    meta(property='og:type' content='')
+    meta(property='og:title' content='')
+    meta(property='og:description' content='')
+    meta(property='og:image' content='')
+
+    title Project | #{pageTitle}
+
+    link(rel='icon' href='favicon.png' sizes='16x16' type="image/png")
+
+    if (magnificPopup)
+        link(rel='stylesheet' href=bowerDir + 'magnific-popup/dist/magnific-popup.css')
+
+    if (modaal)
+        link(rel='stylesheet' href=bowerDir + 'modaal/dist/css/modaal.min.css')
+
+    if (ionRangeSlider)
+        link(rel='stylesheet' href=bowerDir + 'ion.rangeslider/css/ion.rangeSlider.css')
+
+    if (select2)
+        link(rel='stylesheet' href=bowerDir + 'select2/dist/css/select2.min.css')
+
+    link(rel='stylesheet' href='css/main' + minSuffix + '.css')
+= '\n'

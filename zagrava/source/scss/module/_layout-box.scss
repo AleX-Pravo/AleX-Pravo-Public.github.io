@@ -1,0 +1,56 @@
+.layout-box {
+    position: relative;
+
+    &--career-inner {
+        .section {
+            &--title {
+                h1 {
+                    color: $brandPrimary;
+                }
+            }
+        }
+    }
+
+    &--text {
+        .section {
+            &--title {
+                flex-direction: column;
+                justify-content: center;
+                padding: 17px 0;
+                margin-bottom: 36px;
+
+                h1 {
+                    font-size: $fontSizeLarge;
+                    line-height: 30px;
+                    padding: 0 7px;
+                    margin: 0 0 10px;
+                }
+
+                > span {
+                    color: $lineColor;
+                    font-size: $fontSizeSmall;
+                }
+            }
+        }
+
+        .text {
+            width: 100%;
+            max-width: 1010px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+
+        &--text {
+            .section {
+                &--title {
+                    h1 {
+                        font-size: $fontSizeH3;
+                        padding: 35px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

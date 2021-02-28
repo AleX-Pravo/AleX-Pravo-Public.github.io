@@ -1,0 +1,32 @@
+/* Arimo */
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo/regular/arimo.woff2') format('woff2'),
+    url('../fonts/arimo/regular/arimo.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo/bold/arimo.woff2') format('woff2'),
+    url('../fonts/arimo/bold/arimo.woff') format('woff');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo/italic/arimo.woff2') format('woff2'),
+    url('../fonts/arimo/italic/arimo.woff') format('woff');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo/bold_italic/arimo.woff2') format('woff2'),
+    url('../fonts/arimo/bold_italic/arimo.woff') format('woff');
+    font-style: italic;
+    font-weight: bold;
+}

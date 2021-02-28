@@ -1,0 +1,56 @@
+//- Utility
+
+include utils/_variable
+
+-
+    pageTitle = 'news-inner'
+
+doctype html
+html
+    include layout/_head
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+
+            - dots = true
+            include layout/_header
+
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box.layout-box--text
+                        section.section.section--title.stretch
+                            h1 Zagrava games is open. lets get started
+                            span 08/14/2019
+                        .text
+                            p Our history originates from 2003 when the very first game development studio “Friends Games” had been founded in the Western Ukraine. Those self-taught enthusiasts managed to make something new and attracted attention of that time game industry giant Oberon Media. By the end of 2007 the M&A process had been completed and the small Rivne Company became an internal development studio of Oberon Media / I-Play.
+                            img(src=`data/news/news-1.jpg` alt='')
+                            b In 2009 Oberon Media continued staking on PC Downloadable games while the smartphones started to sweep the market. By the end of that year all the Eastern European studios (Saint Petersburg, Kyiv, Rivne and Bucharest) had been closed.
+                            p After the Rivne studio closing in December 2009 some of our guys joined other gamedev companies, but we managed to keep the core team and self-assembled into an independent company Zagrava Games (from the Ukrainian “zagrava” – distant lightning).
+                            p We decided to start with the game outsource. Having an excellent team and solid reputation we easily found our first clients, some of them keep working with us till now. Within the next 2 years our studio grew from 10 to 40 people. Since 2010 we have participated in +50.
+                            p In 2009 Oberon Media continued staking on PC Downloadable games while the smartphones started to sweep the market. By the end of that year all the Eastern European studios (Saint Petersburg, Kyiv, Rivne and Bucharest) had been closed.
+                            b After the Rivne studio closing in December 2009 some of our guys joined other gamedev companies, but we managed to keep the core team and self-assembled into an independent company Zagrava Games (from the Ukrainian “zagrava” – distant lightning).
+                            img(src=`data/news/news-2.jpg` alt='')
+                            p We decided to start with the game outsource. Having an excellent team and solid reputation we easily found our first clients, some of them keep working with us till now. Within the next 2 years our studio grew from 10 to 40 people. Since 2010 we have participated in +50 games and created 6 our own.
+
+
+
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        -
+            mascot = true
+            dots = false
+
+        include layout/_footer
+        include module/_mobile-menu
+
+        include layout/_sprite
+        include layout/_scripts

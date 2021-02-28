@@ -1,0 +1,53 @@
+.info-mask {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: $fontSizeLarge;
+        font-weight: bold;
+        line-height: 1;
+        cursor: default;
+        text-align: center;
+        transition: all .3s;
+    }
+
+    &__text {
+        cursor: default;
+        max-height: 180px;
+        overflow: hidden;
+
+        p {
+            margin: 0;
+            line-height: 20px;
+            font-size: $fontSizeH5;
+            text-align: center;
+            cursor: default;
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+
+
+        &__title {
+            font-size: $fontSizeLarge;
+        }
+
+        &__text {
+            p {
+                font-size: $fontSizeSmall;
+                line-height: 26px;
+            }
+        }
+    }
+}

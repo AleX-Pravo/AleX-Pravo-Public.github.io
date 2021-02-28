@@ -1,0 +1,19 @@
+= '\n'
+//= membership =
+//- (source/assets/css/module/_membership.scss)
+.membership.stretch
+    .membership__wrapper
+        .membership__text
+            p Have a good time!
+            p Become a part of our team member!
+
+        a(href="javascript:void(0)").button become a member
+
+    .membership__photo
+        each val in photoMembership
+            .membership__image
+                img(src="data/about/members/" + val, alt="")
+//= End membership =
+= '\n'
+
+
