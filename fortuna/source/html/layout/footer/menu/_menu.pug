@@ -1,0 +1,30 @@
+= '\n'
+//= Footer menu =
+//-=(/assets/css/layout/_footerMenu.scss)=
+.footerMenu
+    -
+        var footerMenu = [
+            {
+                html: 'catalog.html',
+                title: 'Каталог'
+            },
+            {
+                html: 'aboutCompany.html',
+                title: 'Про компанію'
+            },
+            {
+                html: 'feedback.html',
+                title: 'Відгуки'
+            },
+            {
+                html: 'contacts.html',
+                title: 'Контакти'
+            }
+        ]
+    ul.footerMenu__list
+
+        each val in footerMenu
+            li.footerMenu__item
+                a.footerMenu__link(href=val.html)= val.title
+//= End Footer menu =
+= '\n'

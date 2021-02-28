@@ -1,0 +1,19 @@
+= '\n'
+//= Vacancy =
+.vacancy
+    .vacancy__place
+        .vacancy__place-name Виберіть ваше місто:
+        .vacancy__place-value
+            - selectricBorder = true
+            include _citylist.pug
+
+    .vacancy__list
+        each item in vacancyList
+            .vacancy__item
+                .vacancy__name.subtitle= item.name
+                .vacancy__employment= item.employment
+                .vacancy__text= item.text
+                .vacancy__salary= item.salary + ' грн.'
+
+//= End vacancy =
+= '\n'

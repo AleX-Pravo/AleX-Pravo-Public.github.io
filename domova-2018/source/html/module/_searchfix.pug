@@ -1,0 +1,43 @@
+= '\n'
+//= search =
+//- (module/_searchfix.scss)
+.searchfix#searchfix
+
+    form.box(action='#' method='post')
+
+        input.input-text(type='text' placeholder='Пошук')
+
+        .input-btn.icon-zoom
+            input.input-button#searchButton(type="submit")
+
+        -
+            searchDropListfix = [
+                {
+                    class1: 'active',
+                    title: 'Промивання великого теплообмінника газової колонки'
+                },
+                {
+                    class1: '',
+                    title: 'Встановлення пластикового бачка унітазу'
+                },
+                {
+                    class1: '',
+                    title: 'Встановлення керамічного бачка унітазу'
+                },
+                {
+                    class1: '',
+                    title: 'Встановлення вбудованого бачка унітазу'
+                }
+            ]
+
+        .search__drop.search__drop--result(style='display: none;')
+            each val, index in searchDropListfix
+                .search__dropItem
+                    .search__dropContent
+                        .search__dropTitle
+                            if (index == 0)
+                                a.search__dropTitleLink(class=val.class1 href='#')= val.title
+                            else
+                                a.search__dropTitleLink(href='#')= val.title
+//= End search =
+= '\n'

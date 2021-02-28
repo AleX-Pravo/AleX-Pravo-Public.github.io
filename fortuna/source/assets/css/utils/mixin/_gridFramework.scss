@@ -1,0 +1,84 @@
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+@mixin makeGridColumns($i: 1, $list: ".col-mb-#{$i}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+    @for $i from (1 + 1) through $gridColumns {
+        $list: "#{$list}, .col-mb-#{$i}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+    }
+
+    #{$list} {
+        position: relative;
+        min-height: 1px;
+        padding-right: floor(($gridGutterWidth / 2));
+        padding-left:  ceil(($gridGutterWidth / 2));
+    }
+}
+
+
+@mixin floatGridColumns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+    @for $i from (1 + 1) through $gridColumns {
+        $list: "#{$list}, .col-#{$class}-#{$i}";
+    }
+
+    #{$list} {
+        float: left;
+    }
+}
+
+
+@mixin calcGridColumn($index, $class, $type) {
+    @if ($type == width) and ($index > 0) {
+        .col-#{$class}-#{$index} {
+            width: percentage(($index / $gridColumns));
+        }
+    }
+
+    @if ($type == push) and ($index > 0) {
+        .col-#{$class}-push-#{$index} {
+            left: percentage(($index / $gridColumns));
+        }
+    }
+
+    @if ($type == push) and ($index == 0) {
+      .col-#{$class}-push-0 {
+            left: auto;
+      }
+    }
+
+    @if ($type == pull) and ($index > 0) {
+        .col-#{$class}-pull-#{$index} {
+            right: percentage(($index / $gridColumns));
+        }
+    }
+
+    @if ($type == pull) and ($index == 0) {
+        .col-#{$class}-pull-0 {
+            right: auto;
+        }
+    }
+
+    @if ($type == offset) {
+        .col-#{$class}-offset-#{$index} {
+            margin-left: percentage(($index / $gridColumns));
+        }
+    }
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin loopGridColumns($columns, $class, $type) {
+    @for $i from 0 through $columns {
+        @include calcGridColumn($i, $class, $type);
+    }
+}
+
+
+// Create grid for specific class
+@mixin makeGrid($class) {
+    @include floatGridColumns($class);
+    @include loopGridColumns($gridColumns, $class, width);
+    @include loopGridColumns($gridColumns, $class, pull);
+    @include loopGridColumns($gridColumns, $class, push);
+    @include loopGridColumns($gridColumns, $class, offset);
+}

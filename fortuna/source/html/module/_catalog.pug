@@ -1,0 +1,152 @@
+= '\n'
+//= catalog =
+//- (source/assets/css/module/_catalog.scss)
+- catalogMain = (pageTitle == 'Main page') ? 'catalog--main' : ''
+.catalog(class= catalogMain)
+    each val, index in catalog
+        if (stone)
+            .catalog__item
+                //proportions and the maximum size of images 650x400
+                a.catalog__img(href= val.href)
+                    //-.catalog__img-pic(style!= val.image)
+                    img(src=val.src alt='')
+
+                .catalog__info
+                    if (val.title)
+                        a.catalog__title(href= val.href)= val.title
+                    if (val.subtitle)
+                        a.catalog__subtitle(href= val.href)= val.subtitle
+                    if (val.price)
+                        .catalog__price= val.price
+
+                    .catalog__text
+                        .catalog__size
+                            .catalog__sizeWidth
+                                p Ширина
+                                p= val.width
+
+                            .catalog__pic
+                                img(src='assets/images/container/X.png' alt='')
+
+                            .catalog__sizeHeight
+                                p Висота
+                                p= val.height
+
+                            .catalog__pic
+                                img(src='assets/images/container/X.png' alt='')
+
+                            .catalog__sizeDepth
+                                p Глибина
+                                p= val.depth
+
+                        .catalog__volumeWeight
+                            p Камінь –
+                                span= val.volume
+                            if (val.whiskerBoard)
+                                p Квадратура –
+                                    span= val.weight
+        else if (pageTitle == 'Main page')
+            if (index == 1)
+                .catalog__item
+                    .catalog__slogan
+                        .catalog__caption Топ 5
+                        .catalog__tagline
+                            |басейнів
+                            br
+                            |котрі в нас
+                            br
+                            |замовляють
+            else
+                .catalog__item
+                    //proportions and the maximum size of images 650x400
+                    a.catalog__img(href= val.href)
+                        //-.catalog__img-pic(style!= val.image)
+                        img(src=val.src alt='')
+
+                    .catalog__info
+                        if (val.title)
+                            a.catalog__title(href= val.href)= val.title
+                        if (val.subtitle)
+                            a.catalog__subtitle(href= val.href)= val.subtitle
+                        if (val.price)
+                            .catalog__price= val.price
+
+                        .catalog__text
+                            .catalog__size
+                                .catalog__sizeWidth
+                                    p Ширина
+                                    p= val.width
+
+                                .catalog__pic
+                                    img(src='assets/images/container/X.png' alt='')
+
+                                .catalog__sizeHeight
+                                    p Висота
+                                    p= val.height
+
+                                .catalog__pic
+                                    img(src='assets/images/container/X.png' alt='')
+
+                                .catalog__sizeDepth
+                                    p Глибина
+                                    p= val.depth
+
+                            .catalog__volumeWeight
+                                p Об'єм води –
+                                    span= val.volume
+                                if (val.whiskerBoard)
+                                    p Висота борта –
+                                        span= val.weight
+        else
+            .catalog__item
+                //-a.maska(href= val.href)
+                //proportions and the maximum size of images 650x400
+                a.catalog__img(href= val.href)
+                    //-.catalog__img-pic(style!= val.image)
+                    img(src=val.src alt='')
+                .catalog__info
+                    if (val.title)
+                        a.catalog__title(href= val.href)= val.title
+                    if (val.subtitle)
+                        a.catalog__subtitle(href= val.href)= val.subtitle
+                    if (val.price)
+                        .catalog__price
+                            |Ціна –
+                            span= val.price
+
+                    if (val.text)
+                        .catalog__text
+                            p!= val.text
+                    else
+                        .catalog__text
+                            .catalog__size
+                                .catalog__sizeWidth
+                                    p Ширина
+                                    p= val.width
+
+                                .catalog__pic
+                                    img(src='assets/images/container/X.png' alt='')
+
+                                .catalog__sizeHeight
+                                    p Висота
+                                    p= val.height
+
+                                .catalog__pic
+                                    img(src='assets/images/container/X.png' alt='')
+
+                                .catalog__sizeDepth
+                                    p Глибина
+                                    p= val.depth
+
+                            .catalog__volumeWeight
+                                p Об'єм води –
+                                    span= val.volume
+                                if (val.whiskerBoard)
+                                    p Висота борта –
+                                        span= val.weight
+                                else
+                                    p Вага –
+                                        span= val.weight
+
+//= End catalog =
+= '\n'

@@ -1,0 +1,249 @@
+.catalog {
+    padding-top: 0;
+    transition: all 0.2s ease-out;
+
+    &__wrapper {
+        margin: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    &__item {
+        width: 100%;
+        transition: all 0.2s ease-out;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__picture {
+        font-size: 0;
+        text-align: center;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: inherit;
+            vertical-align: bottom;
+        }
+    }
+
+    &__image {
+        display: inline-block;
+        vertical-align: bottom;
+        max-height: 100%;
+    }
+
+    &__title {
+        font-size: $fontSizeH4;
+        line-height: (29px / $fontSizeH4);
+        color: $catalogTitleColor;
+        font-weight: 700;
+        margin: 45px 0 30px 0;
+        transition: all 0.2s ease-out;
+
+        &-link {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__content {
+        display: inline-block;
+        text-align: left;
+    }
+
+    &__list {
+
+        &-item {
+            margin-bottom: 21px;
+            display: none;
+
+            &:nth-child(-n+4) {
+                display: block;
+            }
+        }
+
+        &.open {
+            .catalog {
+                &__list {
+                    &-item {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        padding-left: 47px;
+
+        &-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid $catalogIconBorder;
+            background-color: $base;
+            transition: all 0.2s ease-out;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: transparent url('../images/content/catalog-arrows.png') 50px 50px no-repeat;
+                transition: opacity 0.2s ease-out;
+            }
+
+            &:before {
+                opacity: 0;
+                background-position: -28px 0;
+            }
+
+            &:after {
+                opacity: 1;
+                background-position: 0 0;
+            }
+        }
+
+        &-text {
+            color: $brandPrimaryDark;
+            border-bottom: 1px dashed $brandPrimaryDark;
+            font-size: $fontSizeH6;
+            line-height: (24px / $fontSizeH6);
+            display: inline;
+            transition: all 0.2s ease-out;
+        }
+
+        &:hover {
+            .catalog {
+                &__link {
+                    &-icon {
+                        background-color: $brandPrimaryDark;
+                        border-color: $brandPrimaryDark;
+
+                        &:before {
+                            opacity: 1;
+                        }
+
+                        &:after {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__more {
+        font-size: $fontSizeH8;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $brandPrimary;
+        text-decoration: none;
+        position: relative;
+        padding-right: 26px;
+        margin-top: 17px;
+        display: inline-block;
+
+        &:before {
+            content: attr(data-more-show);
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(0);
+            width: 5px;
+            height: 3px;
+            background: url('../images/header/list-arrow.png') no-repeat;
+            transition: transform 0.2s ease-out;
+        }
+
+        &.active {
+
+            &:before {
+                content: attr(data-more-hide);
+            }
+
+            &:after {
+                will-change: transform;
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 27px;
+
+        &__picture {
+            //height: 275px;ss
+            height: 150px;
+        }
+
+        &__wrapper {
+            margin: 0 -15px;
+            @include clearfix;
+        }
+
+        &__item {
+            width: 50%;
+            float: left;
+            padding: 0 15px;
+            margin-bottom: 40px;
+
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+
+        &__link {
+            &-text {
+                font-size: $fontSizeLarge;
+                line-height: (30px / $fontSizeLarge);
+            }
+        }
+
+        &__title {
+            font-size: $fontSizeH12;
+            line-height: (29px / $fontSizeH12);
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        &__picture {
+            //text-align: left;ss
+            text-align: center;
+        }
+
+        &__item {
+            width: 33.333334%;
+
+            &:nth-child(2n+1) {
+                clear: none;
+            }
+
+            &:nth-child(3n+1) {
+                clear: both;
+            }
+        }
+    }
+}

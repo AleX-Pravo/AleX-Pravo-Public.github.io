@@ -1,0 +1,10 @@
+= '\n'
+//= Languagelist =
+select.languagelist
+    each item in languageList
+        if (item.active)
+            option.languagelist__option(selected)= item.name
+        else
+            option.languagelist__option= item.name
+//= End languagelist =
+= '\n'

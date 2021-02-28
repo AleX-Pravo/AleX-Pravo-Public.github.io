@@ -1,0 +1,538 @@
+
+.call-btn {
+    width: 60px;
+    height: 60px;
+    position: fixed!important;
+    z-index: 200000!important;
+    right: 0px;
+    bottom: 45px;
+    transition: all 0.2s ease-out;
+    display: none;
+
+    @media (max-width: 1023px) {
+        display: block;
+    }
+
+    .communications {
+        background-color: $base;
+        position: absolute;
+        display: none;
+        padding: 15px;
+        border: 1px solid #DDE9FF;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: calc(100% + 20px);
+
+        @media (max-width: 800px) {
+            left: 0;
+        }
+
+        &:after {
+            content: '';
+            background: url(../images/triangle.png);
+            position: absolute;
+            width: 27px;
+            height: 19px;
+            top: 100%;
+            left: 18px;
+        }
+
+        &.open {
+            display: block;
+        }
+
+        a {
+            font-size: 16px;
+            font-family: $fontFamilyBase;
+            color: $brandPrimary;
+            line-height: $lineHeightBase;
+            position: relative;
+            //padding-left: 31px;
+            display: block;
+            text-decoration: none;
+
+            &:before {
+                content: '';
+                background: url('../images/form.png') no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        a.phone {
+            padding-bottom: 10px;
+
+            &:last-child {
+                padding: 0;
+            }
+
+            &:before {
+                background-position: 0 0;
+                width: 22px;
+                height: 21px;
+                top: 1px;
+            }
+        }
+    }
+}
+
+.call_btn-inner {
+    position: absolute;
+    //top: -50px;
+    //left: -50px;
+    z-index: 1000;
+    position: absolute;
+    background: url(../images/header/phone-anim1.svg) 0 0 no-repeat;
+    background-size: 100%;
+    width: inherit;
+    height: inherit;
+    animation: bgimage 2s infinite step-end;
+    //width: 35px;//SS
+    //height: 36px;//SS
+}
+
+.call-wizard {
+    width: 110px;
+    height: 110px;
+    position: fixed!important;
+    z-index: 200000!important;
+    right: 30px;
+    bottom: 50px;
+    transition: all 0.2s ease-out;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+
+    @media (min-width: 1400px) {
+        right: 197px;
+        bottom: 86px;
+        bottom: 120px;//ss
+    }
+}
+
+.phone-hunter-phone {
+    visibility: hidden;
+    width: 110px!important;
+    height: 110px!important;
+    cursor: pointer!important;
+    transition: visibility .5s ease 0s!important;
+    background-color: transparent!important;
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .call-btn {
+        right: 45px;
+        bottom: 45px;
+        transform: scale(0.8);
+    }
+}
+@media (max-width: 800px) {
+    .call-btn {
+        right: 0;
+        //bottom: 100px;
+        bottom: 30px;
+        transform: scale(0.7);
+    }
+}
+
+.phone-hunter-phone.phone-hunter-show {visibility: visible;}
+.phone-hunter-phone.phone-hunter-static {opacity: .6!important;}
+.phone-hunter-phone.phone-hunter-hover {opacity: 1!important;}
+.phone-hunter-ph-circle {
+    position: absolute;
+    top: 0;
+    left: 0!important;
+
+    width: 160px!important;
+    height: 160px!important;
+
+    transition: all .5s ease 0s!important;
+    transform-origin: 50% 50% 0!important;
+          animation-name: phone-hunter-circle-anim!important;
+          animation-duration: 1.2s!important;
+          animation-timing-function: ease-in-out!important;
+          animation-iteration-count: infinite!important;
+    opacity: .1!important;
+    border: 2px solid rgba(0,154,43,.4)!important;
+    border-radius: 100%!important;
+    background-color: transparent!important;
+}
+.phone-hunter-phone.phone-hunter-active .phone-hunter-ph-circle {
+          animation-name: phone-hunter-circle-anim!important;
+          animation-duration: 1.1s!important;
+          animation-timing-function: ease-in-out!important;
+          animation-iteration-count: infinite!important;
+}
+.phone-hunter-phone.phone-hunter-static .phone-hunter-ph-circle {
+          animation-name: phone-hunter-circle-anim!important;
+          animation-duration: 2.2s!important;
+          animation-timing-function: ease-in-out!important;
+          animation-iteration-count: infinite!important;
+}
+.phone-hunter-phone.phone-hunter-hover .phone-hunter-ph-circle {
+    opacity: .5!important;
+    border-color: rgba(0,175,242,1)!important;
+}
+.phone-hunter-phone.phone-hunter-green.phone-hunter-hover .phone-hunter-ph-circle {
+    opacity: .5!important;
+    background-color: #11c849!important;
+}
+.phone-hunter-phone.phone-hunter-gray.phone-hunter-hover .phone-hunter-ph-circle {
+    opacity: .5!important;
+    border-color: rgba(204,204,204,1)!important;
+}
+.phone-hunter-phone.phone-hunter-gray .phone-hunter-ph-circle {
+    opacity: .5!important;
+    background-color: #11c849!important;
+}
+.phone-hunter-ph-circle-fill {
+    position: absolute!important;
+    //top: 30px!important; //SS
+    //left: 30px!important; //SS
+    //width: 100px!important;  //SS
+    //height: 100px!important;  //SS
+    transition: all .5s ease 0s!important;
+    transform-origin: 50% 50% 0!important;
+          animation-name: phone-hunter-circle-fill-anim!important;
+          animation-duration: 2.3s!important;
+          animation-timing-function: ease-in-out!important;
+          animation-iteration-count: infinite!important;
+    //opacity: .1!important;
+    border: 2px solid transparent!important;
+    border-radius: 100%!important;
+    //background-color: #000!important; //SS
+//SS
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}
+.phone-hunter-phone.phone-hunter-active .phone-hunter-ph-circle-fill {
+          animation-name: phone-hunter-circle-fill-anim!important;
+          animation-duration: 1.7s!important;
+          animation-timing-function: ease-in-out!important;
+          animation-iteration-count: infinite!important;
+}
+.phone-hunter-phone.phone-hunter-static .phone-hunter-ph-circle-fill {
+          animation-name: phone-hunter-circle-fill-anim!important;
+          animation-duration: 2.3s!important;
+          animation-timing-function: ease-in-out!important;
+          animation-iteration-count: infinite!important;
+    opacity: 0!important;
+}
+//ss
+/* .phone-hunter-phone.phone-hunter-hover .phone-hunter-ph-circle-fill {
+    opacity: .75!important;
+    background-color: #11c849!important;
+} */
+//ss
+.phone-hunter-phone.phone-hunter-hover .phone-hunter-ph-circle-fill {
+    opacity: .2!important;
+    background-color: rgb(13, 73, 178)!important;
+}
+
+.phone-hunter-phone.phone-hunter-green.phone-hunter-hover .phone-hunter-ph-circle-fill {
+    opacity: .75!important;
+    background-color: #11c849!important;
+}
+.phone-hunter-phone.phone-hunter-green .phone-hunter-ph-circle-fill {
+    opacity: .75!important;
+    background-color: #11c849!important;
+}
+.phone-hunter-phone.phone-hunter-blue .phone-hunter-ph-circle-fill {
+    opacity: 1!important;
+    background-color: rgb(13, 73, 178)!important;
+}
+.phone-hunter-phone.phone-hunter-gray .phone-hunter-ph-circle-fill {
+    opacity: .75!important;
+    background-color: #11c849!important;
+}
+.phone-hunter-ph-img-circle {
+    position: absolute!important;
+    //top: 50px!important; //SS
+    //left: 50px!important; //SS
+    //width: 60px!important;  //SS
+    //height: 60px!important;  //SS
+    //transform-origin: 50% 50% 0!important;  //SS
+    //opacity: .9!important;  //SS
+    //border: 2px solid transparent!important;  //SS
+    //border-radius: 100%!important; //SS
+    //background-color: rgba(30,30,30,.1)!important; //SS
+    //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NURGQTFBNTczMTFCMTFFNTlDODk5MUNGQzg1RkUwRjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NURGQTFBNTgzMTFCMTFFNTlDODk5MUNGQzg1RkUwRjMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1REZBMUE1NTMxMUIxMUU1OUM4OTkxQ0ZDODVGRTBGMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1REZBMUE1NjMxMUIxMUU1OUM4OTkxQ0ZDODVGRTBGMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkPsIDIAAAKrSURBVHja7JpPSBVRFMbnqRkqD0MUtCiFoELIFoqLMBVCSMoiiWgTQeAibKNtVNBFQhRoQeLGTBAX5VLRTdBCoZXYIis1iWjVH0VESFHf8/YdvELJm5l7Z+Y+j4/3wW8398z73p177zlnJiSEsBJBKVaCKGkkEYykgdMg9aAayQANYArMgsespoR2LQVugg/if0XAJcXxxnG7IBe8Evb6BvK4GzkFPgp3veZsJAfMCnXd3W8jdov9ITijsdS6Na8PXKEYKUoBmAdhzVgToAZscdl+czyYIFWBVk7nyDbtyh7jtYMLnIyEPMajU//5fpz6sYysgCUfMdO5zMgv8NljvAVwC0S55FpfPMQaB5VghlPS+EYzTi+4Cn5yOkdI+WAOZCvEGAN1XNN4+mcnFWNMWgzkVI8MKcY4z8FIyKGLkgU+gUKXGBFQDd5xnZE/oE/xEHzk4xCNS6n7AvxWiEPb7h3ORhZBl2KsJ+AYxzWyq0wwrVhvjIB6ma+x66KsgQeK8a6BNs5dFGJAseyl7sptbl2UfzkCFhTNbINGzR9TCzpBsWkjRDlY12hK9INshbjUH9uSY5ZBg2kjxD2hpxlw0SHeSbBk02bKN2nEko+AjuhR6wNFe+LQbE07jPsOrpg0QrwU+loEHeCsfEzfKo7rAlmmjKSCYeFNUQ9jpkCZCSPEYTAo4qc10CTvG6iRXZ6K+KpFtWWqq2bQEsfUZNVLrqWjyzL1P2rQxA+Z9636ffXm1kmpkHW8KT2LNSMm85/7NgedH30FYRO7lhsn5HkTDchIvantVydHo5Rj04eJHqd7BL3Y3XROlsQ3wHGNcWNyzIafCtGEwvJ9ynVQCkpsmhcR2cWk9y7rfktd0zoEiqydjxDK5U5KbIJR8D6omv1AKPlRTdKIIf0VYADgI8f6mCJcdAAAAABJRU5ErkJggg==)!important;  //SS
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+
+    //ss
+    border-radius: 50%;
+    background-color: #0D49B2;
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0E9CB2;
+
+    p {
+        font-size: 12px;
+        color: $base;
+        text-transform: uppercase;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+}
+
+.phone-hunter-phone.phone-hunter-active .phone-hunter-ph-img-circle {
+    //-webkit-animation-name: phone-hunter-circle-img-anim!important;
+          animation-name: phone-hunter-circle-img-anim!important;
+    //-webkit-animation-duration: 1s!important;
+          animation-duration: 1s!important;
+    //-webkit-animation-timing-function: ease-in-out!important;
+          animation-timing-function: ease-in-out!important;
+    //-webkit-animation-iteration-count: infinite!important;
+          animation-iteration-count: infinite!important;
+}
+.phone-hunter-phone.phone-hunter-green.phone-hunter-hover .phone-hunter-ph-img-circle {background-color: #11c849!important;}
+//SS
+/* .phone-hunter-phone.phone-hunter-green .phone-hunter-ph-img-circle {background-color: #11c849!important;} */
+//SS
+.phone-hunter-phone.phone-hunter-green .phone-hunter-ph-img-circle {background-color: rgb(13, 73, 178)!important;}
+
+/* .communications {
+    background-color: $base;
+    box-shadow: 0px 0px 10px 0px rgba(36, 23, 16, 0.2);
+    position: absolute;
+    width: 190px;
+    top: -162px;
+    right: 18px;
+    display: none;
+    padding: 15px;
+
+    &:after {
+        content: '';
+        background: url(../images/triangle.png);
+        position: absolute;
+        width: 27px;
+        height: 19px;
+        top: 100%;
+        left: 18px;
+    }
+
+    &.open {
+        display: block;
+    }
+
+    a {
+        font-size: 20px;
+        font-family: $fontFamilyBase;
+        color: $brandPrimary;
+        line-height: $lineHeightBase;
+        position: relative;
+        //padding-left: 31px;
+        display: block;
+        text-decoration: none;
+
+        &:before {
+            content: '';
+            background: url('../images/form.png') no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    a.phone {
+        padding-bottom: 20px;
+
+        &:last-child {
+            padding: 0;
+        }
+
+        &:before {
+            background-position: 0 0;
+            width: 22px;
+            height: 21px;
+            top: 1px;
+        }
+    }
+} */
+
+
+@keyframes bgimage {
+
+    50% { background: url(../images/header/phone-anim.svg) 0 0 no-repeat; background-size: 100%;}
+
+}
+
+
+@keyframes phone-hunter-circle-anim {
+  0% {
+    transform: rotate(0deg) scale(.5) skew(1deg);
+    opacity: .1;
+  }
+  30% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: .6;
+  }
+}
+
+@keyframes phone-hunter-circle-anim {
+  0% {
+    transform: rotate(0deg) scale(.5) skew(1deg);
+    opacity: .1;
+  }
+  30% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: .1;
+  }
+}
+
+@keyframes phone-hunter-circle-fill-anim {
+  0% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: 1;
+  }
+  50% {opacity: 1;}
+  100% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: 1;
+  }
+}
+
+@keyframes phone-hunter-circle-fill-anim {
+  0% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: 1;//ss
+  }
+  50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: 1;//ss
+  }
+  100% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: 1;//ss
+  }
+}
+
+@keyframes phone-hunter-circle-img-anim {
+  0% {transform: rotate(0deg) scale(1) skew(1deg);}
+  10% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  20% {transform: rotate(25deg) scale(1) skew(1deg);}
+  30% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  40% {transform: rotate(25deg) scale(1) skew(1deg);}
+  50% {transform: rotate(0deg) scale(1) skew(1deg);}
+  100% {transform: rotate(0deg) scale(1) skew(1deg);}
+}
+
+@keyframes phone-hunter-circle-img-anim {
+  0% {transform: rotate(0deg) scale(1) skew(1deg);}
+  10% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  20% {transform: rotate(25deg) scale(1) skew(1deg);}
+  30% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  40% {transform: rotate(25deg) scale(1) skew(1deg);}
+  50% {transform: rotate(0deg) scale(1) skew(1deg);}
+  100% {transform: rotate(0deg) scale(1) skew(1deg);}
+}
+/*
+@-webkit-keyframes phone-hunter-circle-anim {
+  0% {
+    transform: rotate(0deg) scale(.5) skew(1deg);
+    opacity: .1;
+  }
+  30% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: .6;
+  }
+}
+
+@-webkit-keyframes phone-hunter-circle-anim {
+  0% {
+    transform: rotate(0deg) scale(.5) skew(1deg);
+    opacity: .1;
+  }
+  30% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: .1;
+  }
+}
+
+@-webkit-keyframes phone-hunter-circle-fill-anim {
+  0% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .2;
+  }
+  50% {opacity: .2;}
+  100% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .2;
+  }
+}
+
+@-webkit-keyframes phone-hunter-circle-fill-anim {
+  0% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .2;
+  }
+  50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: .2;
+  }
+  100% {
+    transform: rotate(0deg) scale(.7) skew(1deg);
+    opacity: .2;
+  }
+}
+
+@-webkit-keyframes phone-hunter-circle-img-anim {
+  0% {transform: rotate(0deg) scale(1) skew(1deg);}
+  10% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  20% {transform: rotate(25deg) scale(1) skew(1deg);}
+  30% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  40% {transform: rotate(25deg) scale(1) skew(1deg);}
+  50% {transform: rotate(0deg) scale(1) skew(1deg);}
+  100% {transform: rotate(0deg) scale(1) skew(1deg);}
+}
+
+@-webkit-keyframes phone-hunter-circle-img-anim {
+  0% {transform: rotate(0deg) scale(1) skew(1deg);}
+  10% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  20% {transform: rotate(25deg) scale(1) skew(1deg);}
+  30% {transform: rotate(-25deg) scale(1) skew(1deg);}
+  40% {transform: rotate(25deg) scale(1) skew(1deg);}
+  50% {transform: rotate(0deg) scale(1) skew(1deg);}
+  100% {transform: rotate(0deg) scale(1) skew(1deg);}
+}
+*/

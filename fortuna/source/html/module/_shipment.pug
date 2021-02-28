@@ -1,0 +1,43 @@
+= '\n'
+//= shipment =
+//-=(module/_shipment.scss)=
+.shipment
+    .container
+        .shipment__filter
+            .shipment__wrap
+
+                .shipment__item
+
+                    .shipment__header
+                        .shipment__title Розміри
+                    .shipment__content
+                        -
+                            var checkboxData = filterData.manufacturers;
+                        include _checkbox.pug
+
+                .shipment__item
+
+                    .shipment__header
+                        .shipment__title Конструкція
+                    .shipment__content
+                        -
+                            var checkboxData = filterData.availability;
+                        include _checkbox.pug
+
+                .shipment__item
+
+                    .shipment__header
+                        .shipment__title Спа
+                    .shipment__content
+                        -
+                            var checkboxData = filterData.goods;
+                        include _checkbox.pug
+
+            //- .shipment__info
+            //-     a.clearFilter(href='#') Clear Filter
+            //-     p
+            //-         |Ни одна позиция не соответствует критериям Вашего поиска. Попробуйте осуществить поиск среди
+
+            //-         a(href='#') полного ассортимента
+//= End shipment =
+= '\n'

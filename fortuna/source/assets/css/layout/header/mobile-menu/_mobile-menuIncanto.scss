@@ -1,0 +1,248 @@
+.mobile-menu {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transition: top .4s ease-out;
+
+    &__drop {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100%;
+        transition: left .3s ease-out;
+        border-right: 1px solid $grayLight;
+        background: $base;
+    }
+
+    &__wrapper {
+        height: 100%;
+    }
+
+    &__content {
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        position: relative;
+        min-height: 1510px;
+        min-height: 600px;
+    }
+
+    &__arrow {
+        position: relative;
+        display: flex;
+        width: 20px;
+        height: 20px;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            left: 50%;
+            width: 11px;
+            height: 6px;
+            background: url(../images/arrow.png) no-repeat;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: transform .5s;
+        //position: relative;
+        form {
+            transition: transform .5s;
+        }
+
+        &-item {
+            padding: 13px 0;
+            border-bottom: 1px solid #e1e1e1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &.has-children {
+                > a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+
+            &.go-back {
+                > a {
+                    position: relative;
+
+                    &:before {
+                        left: 20px;
+                        transform: translateY(-50%) rotate(90deg);
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        //transform: translateY(-50%) rotate(-90deg);
+                        //right: 20px;
+                        width: 11px;
+                        height: 6px;
+                        background: url(../images/arrow.png) no-repeat;
+                    }
+                }
+            }
+
+            &.main,
+            &.go-back {
+                text-align: center;
+
+                > a {
+                    font-weight: 300;
+                }
+
+            }
+
+            &.search {
+                margin: 0 20px;
+                border-color: transparent;
+
+                form {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        width: 23px;
+                        height: 23px;
+                        background: transparent url(../images/search.png) no-repeat;
+                        background-size: 80%;
+                        position: absolute;
+                        right: 7px;
+                        top: 10px;
+                    }
+                }
+
+                input[type=text] {
+                    width: 100%;
+                    height: 40px;
+                    color: $brandPrimary;
+                    border: 1px solid $grayLight;
+                    padding-left: 15px;
+                    padding-right: 35px;
+                }
+
+                input[type=submit] {
+                    border: none;
+                    background: none;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    z-index: 2;
+                }
+            }
+
+            &.links {
+                border-color: transparent;
+                margin: 0 20px;
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                    width: 48%;
+                    display: inline-block;
+                    text-align: center;
+                    padding: 10px 0 8px;
+                    border: 1px solid #e5e5e5;
+
+                    span {
+                        text-transform: none;
+                        position: relative;
+                        padding: 0 0 0 25px;
+
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            transform: translateY(-50%);
+                            top: 62%;
+                            left: 0;
+                            width: 22px;
+                            height: 24px;
+                            background: url(../images/user.png) no-repeat;
+                            background-size: 80%;
+                        }
+                    }
+
+                    &:last-child {
+                        span {
+                            &:before {
+                                width: 24px;
+                                height: 23px;
+                                background: url(../images/like.png) no-repeat;
+                                background-size: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.about {
+                border-bottom-color: transparent;
+
+                a {
+                    line-height: 37px;
+                    text-transform: none;
+                }
+            }
+        }
+
+        &-link {
+            display: block;
+            padding: 0;
+            transition: all .8s;
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #b91f1d;
+            font-size: 15px;
+            flex: 1 1 100%;
+        }
+
+        .image {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        &.is-hidden {
+            transform: translateX(100%);
+
+            a {
+                padding-left: 10px;
+            }
+        }
+
+        &.move-out {
+            > li {
+                > a {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+            }
+
+            form {
+                transition: all .8s;
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    }
+}

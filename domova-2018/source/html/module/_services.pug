@@ -1,0 +1,14 @@
+= '\n'
+//= Services =
+.services
+    - var title = [{modifier: '', elem: 'h2', icon: '', text: '15 ПОПУЛЯРНИХ ПОСЛУГ', name: 'Популярні послуги'}]
+    include _title.pug
+
+    .services__content
+        .services__list
+            each item in popularList
+                .services__item
+                    a.services__link(href='#')
+                        .services__link-icon
+                        .services__link-text= item
+//= End services =

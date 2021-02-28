@@ -1,0 +1,15 @@
+= '\n'
+//= Breadcrumbs
+.breadcrumbs
+    .container
+        ul.breadcrumbs__list
+            - for (let i = 0; i < breadcrumbs.length; i++)
+                if (i < breadcrumbs.length - 1)
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href='#')= breadcrumbs[i]
+                else
+                    li.breadcrumbs__item
+                        span.breadcrumbs__current= breadcrumbs[i]
+
+//= End breadcrumbs
+= '\n'

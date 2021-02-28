@@ -1,0 +1,55 @@
+.notfound {
+    &__wrapper {
+        margin: 70px 0;
+        transition: all 0.2s ease-out;
+    }
+
+    &__picture {
+        transition: all 0.2s ease-out;
+        display: none;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__code {
+        font-size: 131px;
+        line-height: 1;
+        font-weight: 900;
+        color: $brandPrimary;
+        letter-spacing: 10px;
+    }
+
+    &__text {
+        font-size: $fontSizeH5;
+        line-height: (27px / $fontSizeH5);
+        color: $notfound;
+    }
+
+    @media (min-width: 768px) {
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 100px 0;
+        }
+
+        &__picture {
+            width: 400px;
+            display: inline-block;
+        }
+
+        &__info {
+            padding: 0 60px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__picture {
+            width: 524px;
+        }
+    }
+
+}

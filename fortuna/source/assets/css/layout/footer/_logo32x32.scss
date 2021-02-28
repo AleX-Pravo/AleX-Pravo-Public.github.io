@@ -1,0 +1,48 @@
+
+.logo32x32 {
+    font-family: $fontFamilyBase;
+    font-size: 10px;
+    line-height: 12px;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    white-space: nowrap;
+    color: $base;
+    display: flex;
+    align-items: center;
+
+    &__image {
+        position: relative;
+        width: 92px;
+        height: 22px;
+        margin: 0 5px 0 0;
+
+        svg {
+            padding-left: 1px;
+            shape-rendering: auto;
+
+            path {
+                fill: $base;
+            }
+        }
+    }
+
+    &__text {
+
+    }
+
+    &__link {
+        color: $base;
+        padding-left: 3px;
+    }
+
+    @media (max-width: $screenSmMax) {
+        &__link {
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 1080px) {
+        margin: 29px 0;
+    }
+}

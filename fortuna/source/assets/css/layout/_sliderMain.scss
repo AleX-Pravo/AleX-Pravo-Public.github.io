@@ -1,0 +1,272 @@
+.sliderBig {
+    position: relative;
+    top: -95px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 200px;
+        background: linear-gradient(180deg, #333538 0%, rgba(196, 196, 196, 0) 100%);
+    }
+}
+
+.sliderMain {
+
+    .slider {
+
+        &__img {
+            text-align: center;
+            height: 550px;
+            background: no-repeat center top/cover;
+
+            @media (min-width: 720px) {
+                height: 1000px;
+            }
+
+            img {
+                height: 1000px;
+                z-index: 1;
+            }
+        }
+
+        &__block {
+            width: 100%;
+            position: relative;
+        }
+
+        &__inner {
+
+            &.second {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                h1 {
+                    font-size: 30px;
+                    //font-family: $fontFamilyProximaN_Ex_Con_Rg;
+                    color: $base;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    text-shadow: 0px 2px 0px #00000033;
+                    margin: 0 0 -9px 0;
+
+                    @media (min-width: 1024px) {
+                        font-size: 60px;
+                    }
+
+                    @media (max-width: 480px) {
+                        display: none;
+                    }
+                }
+
+                p {
+                    background-color: $brandSuccess;
+                    font-size: 18px;
+                    //font-family: $fontFamilyProximaN_Ex_Con_Rg;
+                    color: $base;
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                    padding: 15px;
+
+                    @media (min-width: 1024px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width: 720px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__title {
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        @media (min-width: 480px) {
+            top: 100px;
+        }
+
+        @media (min-width: 800px) {
+            left: 15px;
+            transform: none;
+        }
+
+        @media (min-width: 720px) {
+            top: 290px;
+        }
+
+        @media (min-width: 960px) {
+            top: 250px;
+        }
+
+        @media (min-width: 1320px) {
+            top: 480px;
+        }
+
+        @media (min-width: 1580px) {
+            left: 0;
+        }
+
+        h1 {
+            width: 290px;
+            font-family: $fontFamilyGilroy_Bd;
+            font-size: 38px;
+            color: $base;
+            margin: 0;
+            line-height: 1.2;
+
+            @media (min-width: 480px) {
+                font-size: 48px;
+                width: 380px;
+            }
+
+            @media (min-width: 960px) {
+                font-size: 72px;
+                width: 555px;
+            }
+        }
+    }
+
+    &__image {
+
+        .slide {
+
+            &__img {
+                background: no-repeat center top/cover;
+                position: absolute;
+                display: none;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 550px;
+
+                @media (min-width: 720px) {
+                    height: 1000px;
+                }
+            }
+        }
+
+        img {
+            display: none;
+            position: absolute;
+        }
+
+        .show img{
+            display: block;
+        }
+    }
+
+    &__square {
+        position: absolute;
+        //left: calc(100% - 647px);
+        top: 240px;
+        width: 300px;
+        height: 300px;
+        right: 12px;
+
+        @media (min-width: 720px) {
+            width: 400px;
+            height: 400px;
+            right: 62px;
+            top: 540px;
+        }
+
+        @media (min-width: 800px) {
+            top: 198px;
+            width: 600px;
+            height: 600px;
+        }
+
+        &Text {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 5px solid $base;
+            transition: all .3s;
+            cursor: pointer;
+
+            @media (min-width: 720px) {
+                width: 200px;
+                height: 200px;
+            }
+
+            @media (min-width: 800px) {
+                width: 300px;
+                height: 300px;
+            }
+
+            &--lido {
+                right: 0;
+
+                &:hover {
+                    border: 5px solid $brandPrimary;
+                    background: $brandPrimary;
+                    box-shadow: 0px 0px 45px $brandPrimary;
+                    z-index: 1;
+                }
+            }
+
+            &--saunas {
+                top: 147px;
+                left: 3px;
+
+                @media (min-width: 720px) {
+                    top: 197px;
+                }
+
+                @media (min-width: 800px) {
+                    top: 297px;
+                }
+
+                &:hover {
+                    border: 5px solid $brandSuccess;
+                    background: $brandSuccess;
+                    box-shadow: 0px 0px 45px $brandSuccess;
+                    z-index: 1;
+                }
+            }
+
+            h3 {
+                font-family: $fontFamilyGilroy_Rg;
+                font-size: 24px;
+                color: $base;
+                margin: 0;
+                position: absolute;
+                left: 18px;
+
+                @media (min-width: 720px) {
+                    font-size: 36px;
+                }
+
+                @media (min-width: 800px) {
+                    font-size: 48px;
+                }
+
+                &.lido {
+
+                }
+
+                &.saunas {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

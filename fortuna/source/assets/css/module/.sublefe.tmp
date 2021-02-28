@@ -1,0 +1,92 @@
+.pageUp {
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 80px;
+    display: none;
+    width: 90px;
+    height: 90px;
+    background: rgba(41, 101, 204, 0.5);
+    border-radius: 50%;
+
+    @media (min-width: 1080px) {
+        right: 31px;
+        bottom: 139px;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        width: 70px;
+        height: 70px;
+        //background: $brandSuccess;
+        background: $brandPrimary;
+        opacity: .8;
+        transition: opacity .2s;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            //transition: all .2s linear;
+            //opacity: 1;
+            background: url('../images/container/arrow-top.png') center no-repeat;
+        }
+
+        &:hover {
+            opacity: 1;
+
+            &:before {
+                //opacity: .8;
+                //box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.2);
+            }
+        }
+    }
+}
+
+
+.up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 5;
+    box-shadow: 0 0 10px rgba(41, 101, 204, 0.5);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    transition: bottom .3s;
+    background: $brandPrimary;
+    border-radius: 50%;
+    text-align: center;
+
+    &:after {
+        width: 45px;
+        height: 45px;
+        background: rgba(41, 101, 204, 0.5);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        z-index: -1;
+    }
+
+    &.absolute {
+        position: absolute;
+        top: -16px;
+    }
+
+    img {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,17 @@
+= '\n'
+//= feedback =
+//-=(source/assets/css/module/_aboutCompany.scss)=
+
+.feedback
+    - var titleInfo = subTitle
+    include __title.pug
+
+    include _feedbackForm.pug
+    include _mention.pug
+    include _pagination.pug
+
+    //-проверка всего текста для редактора
+    //-include _text-audit.pug
+
+//= End feedback =
+= '\n'

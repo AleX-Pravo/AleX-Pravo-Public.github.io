@@ -1,0 +1,168 @@
+.slider {
+    &__wrapper {
+        position: relative;
+    }
+
+    &__arrows {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        width: 100%;
+    }
+
+    &__controls {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        //margin-top: -22px;
+    }
+
+    &__arrow {
+        width: 14px;
+        height: 27px;
+        display: inline-block;
+        vertical-align: middle;
+        //border-radius: 4px;
+        //background: $brandPrimary;
+        text-decoration: none;
+        outline: none;
+        transition: all 0.2s ease-out;
+        //border: 2px solid $brandPrimary;
+        cursor: pointer;
+        overflow: hidden;
+        margin-right: 6px;
+        position: relative;
+
+        @media (min-width: 600px) {
+            transform: scale(1.5);
+        }
+
+        //&:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../images/content/sliderarrown.png') no-repeat;
+            transition: opacity 0.2s ease-out;
+        }
+        /*
+        &:before {
+            opacity: 1;
+        }
+
+        &:after {
+            opacity: 0;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 0;
+            }
+
+            &:after {
+                opacity: 1;
+            }
+        }
+        */
+        &:last-child {
+            margin-right: 0;
+        }
+        /*
+        &:hover {
+            background: $base;
+        }
+        */
+        &--prev {
+            /*
+            &:before {
+                background-position: -2px -2px;
+            }
+            */
+            &:after {
+                background-position: 0 0;
+            }
+
+            &:hover {
+
+                &:after {
+                    background-position: -14px 0;
+                }
+            }
+
+            @media (min-width: 600px) {
+                left: 4px;
+            }
+        }
+
+        &--next {
+            position: absolute;
+            right: 0;
+            top: 0;
+            /*
+            &:before {
+                background-position: -47px -2px;
+            }
+            */
+            &:after {
+                background-position: -42px 0;
+            }
+
+            &:hover {
+
+                &:after {
+                    background-position: -28px 0;
+                }
+            }
+
+            @media (min-width: 600px) {
+                right: 4px;
+            }
+        }
+    }
+
+    &__steps {
+        display: none;
+    }
+
+    &__step {
+
+    }
+
+    &__list {
+        margin: 0 -15px;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            width: 15px;
+            background: $base;
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+
+    &__item {}
+    &__image {
+        width: 100%;
+        max-width: 100%;
+    }
+}

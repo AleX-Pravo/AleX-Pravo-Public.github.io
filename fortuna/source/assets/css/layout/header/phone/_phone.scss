@@ -1,0 +1,147 @@
+
+.innerPage {
+    .headerPhone__data {
+        border: 1px solid $grayDark;
+
+        &--show {
+            border-bottom: 1px solid transparent;
+        }
+
+        a {
+            color: $grayDark;
+        }
+    }
+
+    .headerPhone__drop--show {
+        border: 1px solid $grayDark;
+        border-top: 1px solid transparent;
+        background-color: $base;
+    }
+
+    .headerPhone__drop li a {
+        color: $grayDark;
+    }
+
+    .headerPhone__button:before {
+        background: url('../images/header/arrow-triangle-black.png') center center no-repeat;
+    }
+}
+
+.headerPhone {
+    position: relative;
+
+    &__item {
+        font-weight: 500;
+        color: $grayBase;
+        width: 210px;
+        position: relative;
+        @media (min-width: 800px) {
+            color: $base;
+            width: auto;
+        }
+    }
+
+    &__data {
+        position: relative;
+        padding: 11px 40px 11px 0;
+        border: 1px solid $base;
+
+        @media (min-width: 800px) {
+            padding: 11px 40px 11px 20px;
+        }
+
+        &--show {
+            border-bottom: 1px solid transparent;
+        }
+
+        a {
+            text-decoration: none;
+            color: $grayBase;
+
+            @media (min-width: 800px) {
+                color: $base;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        width: 52px;
+        height: 48px;
+        top: 1px;
+        right: 1px;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            height: 8px;
+            background: url('../images/header/arrow-triangle-black.png') center center no-repeat;
+
+            @media (min-width: 800px) {
+                background: url('../images/header/arrow-triangle.png') center center no-repeat;
+            }
+        }
+
+        &.rotate {
+
+            &:before {
+                top: 47%;
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+    }
+
+    &__drop {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        display: none;
+        top: calc(100% - 2px);
+
+        &--show {
+            display: block;
+            border: 1px solid $base;
+            border-top: 1px solid transparent;
+            animation: fadeIn .2s;
+            background: $base;
+
+            @media (min-width: 800px) {
+                padding: 0 40px 11px 20px;
+                background: none;
+            }
+        }
+
+        li {
+            padding: 0 40px 11px 0;
+
+            @media (min-width: 800px) {
+                padding: 0 0 11px;
+            }
+
+            &:last-child {
+                padding: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: $grayBase;
+                white-space: nowrap;
+
+                @media (min-width: 800px) {
+                    color: $base;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}

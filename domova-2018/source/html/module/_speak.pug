@@ -1,0 +1,43 @@
+//-
+    = '\n'
+    //= Speak =
+    .speak
+        .speak__wrapper
+            - var title = [{modifier: '', elem: 'h2', icon: '', text: 'ВІДГУКИ', name: 'Що говорять клієнти'}]
+            include _title.pug
+
+            .speak__list
+                each item in speakSection
+                    .speak__item
+                        .speak__inner
+                            .speak__date= item.date
+                            .speak__text= item.text
+                            .speak__author
+                                .speak__author-picture
+                                    img.speak__author-image(src='data/speak/' + item.image + '.png' alt='')
+                                .speak__author-name= item.name
+
+            .speak__field
+                a.speak__button(href='#') ПЕРЕГЛЯНУТИ УСІ ВІДГУКИ
+    //= End speak =
+
+
+//= Speak =
+.speak.speak--fill
+    - var title = [{modifier: '', elem: 'h2', icon: '', text: 'ВІДГУКИ', name: 'Що говорять клієнти'}]
+    include _title.pug
+
+    .speak__list
+        - for (var i = 0; i < speakSection.length; i++)
+            .speak__item
+                .speak__date= speakSection[i].date
+                .speak__text= speakSection[i].text
+                .speak__author
+                    .speak__author-picture
+                        img.speak__author-image(src='data/speak/' + speakSection[i].image + '.png' alt='')
+                    .speak__author-name= speakSection[i].name
+
+    .speak__field
+        a.speak__button(href='#') ПЕРЕГЛЯНУТИ УСІ ВІДГУКИ
+        a.speak__button(href='#') НАПИСАТИ ВІДГУК
+//= End speak =

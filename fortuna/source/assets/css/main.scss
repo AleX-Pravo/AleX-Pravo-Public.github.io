@@ -1,0 +1,89 @@
+// Utility
+@import 'utils/variables';
+@import 'utils/mixin';
+
+
+// Vendor
+
+
+// Base
+@import 'base/reset';
+@import 'base/fonts';
+
+// Components
+//@import 'components/selectric';
+
+// Layout
+@import 'layout/grid';
+@import 'layout/layout'; //all style
+@import 'layout/header';
+@import 'layout/navigation';
+//@import 'layout/nav';
+@import 'layout/footer';
+@import 'layout/form';
+@import 'layout/sliderMain';
+
+// header
+@import 'layout/header/primaryMenu/primaryMenu';
+@import 'layout/header/logo/logo';
+@import 'layout/header/phone/phone';
+@import 'layout/header/device/device';
+@import 'layout/nav/deviceMenu/deviceMenu';
+
+// footer
+@import 'layout/footer/footerMenu';
+@import 'layout/footer/footerInfo';
+@import 'layout/footer/footerLogo';
+@import 'layout/footer/logo32x32';
+
+
+// Module
+@import 'module/slick';
+// @import 'module/infoBlock';
+@import 'module/breadcrumbs';
+@import 'module/text';
+@import 'module/topBlock';
+@import 'module/pageUp';
+@import 'module/title';
+
+
+//Page
+//index
+@import 'module/aboutUs';
+@import 'module/installation';
+@import 'module/engage';
+@import 'module/catalog';
+@import 'module/recall';
+
+// catalog-pools
+@import 'module/catalog-pools';
+@import 'module/tabs';
+@import 'module/popup';
+@import 'module/goods';
+@import 'module/bill';
+
+     //filter
+@import 'module/shipment';
+@import 'module/filters';
+@import 'module/checkbox';
+
+//aboutCompany
+@import 'module/aboutCompany';
+
+//catalog-terrace
+@import 'module/small-Slider';
+
+//feedback
+//@import 'module/form';
+@import 'module/feedbackForm';
+@import 'module/rating4';
+@import 'module/mention';
+@import 'module/pagination';
+
+//contacts
+@import 'module/contact';
+// @import 'module/descript';
+// @import 'module/assortColl';
+
+// catalog-inner
+@import 'module/catalog-inner';

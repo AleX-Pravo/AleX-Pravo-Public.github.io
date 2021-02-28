@@ -1,0 +1,25 @@
+= '\n'
+//= headerPhone =
+//-=(/layout/header/phone/_phone.scss)=
+.headerPhone
+    -
+        var headerPhone = [
+            {
+                text: '+38(095)629-07-00'
+            },
+            {
+                text: '+38(095)629-07-00'
+            }
+        ]
+    .headerPhone__item
+        .headerPhone__data
+            a(href='tel:+380956290700') +38(095)629-07-00
+        .headerPhone__button
+        ul.headerPhone__drop
+            each val in headerPhone
+                li
+                    a(href='tel:+380956290700')= val.text
+
+
+//= End headerPhone =
+= '\n'

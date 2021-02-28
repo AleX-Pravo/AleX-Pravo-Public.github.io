@@ -1,0 +1,270 @@
+.article {
+    margin: 60px 0 100px;
+    transition: all 0.2s ease-out;
+
+    &__info {
+        display: block;
+
+        &--header {
+            display: none;
+
+            .article {
+                &__info {
+
+                    &-item {
+                        display: inline-block;
+                        color: $base;
+                        margin: 0 20px;
+
+                        &:after {
+                            display: block;
+                        }
+
+                        &:last-child {
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        &--calendar {
+                            &:before {
+                                background-position: 0 -16px;
+                            }
+                        }
+
+                        &--tag {
+                            &:before {
+                                background-position: -16px -16px;
+                            }
+                        }
+
+                        &--user {
+                            &:before {
+                                background-position: -32px -16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-item {
+            font-size: $fontSizeSmall;
+            line-height: 1;
+            color: #aab1bd;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: block;
+            vertical-align: middle;
+            padding-left: 27px;
+            position: relative;
+            margin: 0 0 14px 0;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+
+            &:after {
+                width: 1px;
+                height: 25px;
+                right: -20px;
+                background: #8fa7ce;
+                display: none;
+            }
+
+            &:before {
+                width: 16px;
+                height: 16px;
+                left: 0;
+                background: url('../images/content/blog.png') 50px 50px no-repeat;
+            }
+
+            &--calendar {
+                &:before {
+                    background-position: 0 0;
+                }
+            }
+
+            &--tag {
+                &:before {
+                    background-position: -16px 0;
+                }
+            }
+
+            &--user {
+                &:before {
+                    background-position: -32px 0;
+                }
+            }
+        }
+    }
+
+    &__header {
+        position: relative;
+        text-align: center;
+        min-height: 195px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 35px 0 60px;
+        margin-bottom: 50px;
+        transition: all 0.2s ease-out;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(13, 73, 178, 0.5);
+        }
+
+        &-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        font-size: $fontSizeLarge;
+        line-height: (24px / $fontSizeLarge);
+        color: $base;
+        font-weight: 900;
+        margin: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    &__social {
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &-item {
+            display: inline-block;
+            vertical-align: middle;
+            width: 14px;
+            height: 14px;
+            position: relative;
+            margin: 0 8px;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('../images/content/social-article.png') 50px 50px no-repeat;
+            }
+
+            &.vk {
+                &:before {
+                    background-position: 0 0;
+                }
+            }
+
+            &.fb {
+                &:before {
+                    background-position: -14px 0;
+                }
+            }
+
+            &.gp {
+                &:before {
+                    background-position: -28px 0;
+                }
+            }
+        }
+    }
+
+    &__content {
+        @include clearfix;
+        padding: 0;
+        transition: all 0.2s ease-out;
+
+        p,
+        h2 {
+            font-size: $fontSizeBase;
+            line-height: (27px / $fontSizeBase);
+            transition: all 0.2s ease-out;
+        }
+
+        p {
+            color: #979797;
+        }
+
+        h2 {
+            color: $grayBase;
+        }
+
+        img {
+            padding: 0 0 20px;
+            transition: all 0.2s ease-out;
+        }
+
+        blockquote {
+            display: block;
+            width: 100%;
+            border: 2px solid $blockquoteBorder;
+            display: block;
+            text-align: center;
+            font-size: $fontSizeH5;
+            line-height: (25px / $fontSizeH5);
+            margin: 50px 0;
+            float: left;
+            clear: both;
+            padding: 3.5% 7%;
+            transition: all 0.2s ease-out;
+        }
+    }
+
+    @media (min-width: 600px) {
+        &__title {
+            font-size: $fontSizeH2;
+            line-height: (52px / $fontSizeH2);
+        }
+
+        &__header {
+            min-height: 400px;
+        }
+
+        &__content {
+            padding: 0 (100px / 1140px) * 100%;
+
+            img {
+                padding: 0 20px 20px;
+            }
+
+            p,
+            h2 {
+                font-size: $fontSizeH5;
+                line-height: (27px / $fontSizeH5);
+            }
+
+            blockquote {
+                font-size: $fontSizeLarge;
+                line-height: (30px / $fontSizeLarge);
+            }
+        }
+
+        &__info {
+            display: none;
+
+            &--header {
+                display: block;
+            }
+        }
+    }
+}

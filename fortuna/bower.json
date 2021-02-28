@@ -1,0 +1,14 @@
+{
+    "name": "fortuna",
+    "version": "1.0.0",
+    "description": "fortuna",
+    "authors": [
+        "ALex Pravo <ss911.varan@gmail.com>"
+    ],
+    "license": "ISC",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}

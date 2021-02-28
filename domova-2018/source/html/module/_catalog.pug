@@ -1,0 +1,28 @@
+= '\n'
+//= Catalog =
+.catalog
+    .catalog__wrapper
+
+        - for (let i = 0; i < 2; i++)
+            each item in catalog
+                .catalog__item
+                    .catalog__item-wrapper
+                        .catalog__picture
+                            img.catalog__image(src='data/catalog/00' + item.image + '.png' alt='')
+
+                        .catalog__title
+                            a.catalog__title-link(href='#')= item.title
+                        .catalog__content
+                            ul.catalog__list
+
+                                - for (let i = 0; i < 2; i++)
+                                    each val in item.list
+                                        li.catalog__list-item
+                                            a.catalog__link(href='#')
+                                                span.catalog__link-icon
+                                                span.catalog__link-text= val
+
+                            // .active класс для активации блока .catalog__more
+                            a.catalog__more(href='javascript: void(0)' data-more-show='Показати ще' data-more-hide='Приховати')
+//= End catalog =
+= '\n'

@@ -1,0 +1,29 @@
+= '\n'
+//= Question =
+.question
+    .question__wrapper
+        .question__box
+            - var title = [{modifier: 'title--left', elem: 'h2', icon: '', text: 'ФОРМА ЗВОРОТНЬОГО ЗВ’ЯЗКУ', name: 'Залишились запитання?'}]
+            include _title.pug
+
+            .question__content
+                .question__field
+                    .question__item
+                        input.question__input.error(type='text' placeholder="Ім'я")
+                    .question__item
+                        input.question__input(type='text' placeholder='Номер телефонА')
+
+                .question__field
+                    .question__item.double
+                        textarea.question__textarea(placeholder='Введіть ваше запитання')
+
+                .question__field
+                    .question__item
+                        button.question__button(type='submit') ВІДІСЛАТИ ЗАПИТАННЯ
+                    .question__item
+                        button.question__button(type='submit') ЧАСТІ ЗАПИТАННЯ
+
+        .question__box
+            img.question__image(src='data/question/1.png' alt='')
+//= End question =
+= '\n'

@@ -1,0 +1,24 @@
+= '\n'
+//= CommentSend =
+.commentSend
+    .commentSend__title
+        - var title = [{modifier: '', elem: 'h2', icon: '', text: 'ФОРМА ДЛЯ ВІДГУКІВ', name: 'Напишіть ваш відгук'}]
+        include _title.pug
+    .commentSend__content
+        .commentSend__box.commentSend__box--message
+            textarea.commentSend__textarea(placeholder='НАПИШІТЬ ВАШ ВІДГУК')
+        .commentSend__box.commentSend__box--fields
+            .commentSend__field
+                input.commentSend__input.error(type='input' placeholder="Введіть ваше ім'я")
+            .commentSend__field
+                input.commentSend__input(type='input' placeholder='Введіть ваш EMAIL')
+            .commentSend__field
+                input.commentSend__input(type='input' placeholder='Введіть ваш телефон')
+            .commentSend__field
+                input.commentSend__input(type='input' placeholder='Введіть ваше місто')
+
+            button.commentSend__submit(type='submit') НАДІСЛАТИ ВІДГУК
+        button.commentSend__submit.commentSend__submit--mobile(type='submit') НАДІСЛАТИ ВІДГУК
+
+//= End commentSend =
+= '\n'

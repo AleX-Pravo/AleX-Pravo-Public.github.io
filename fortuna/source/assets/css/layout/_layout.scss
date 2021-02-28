@@ -1,0 +1,136 @@
+#layout {
+    position: relative;
+    overflow: hidden;
+    min-width: 320px;
+    min-height: 100%;
+}
+
+#footer {
+    position: relative;
+    //overflow: hidden;
+    min-width: 320px;
+}
+
+//========== BASE PROJECT STYLE ==========//
+// Remove them before layout
+
+body {
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+a,
+button {
+    outline: none;
+}
+
+p {
+    margin: 0;
+}
+
+%flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.maska {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    outline: none;
+    outline-color: transparent;
+    text-decoration-color: transparent;
+    color: #fff;
+}
+
+.parallax-window {
+    min-height: 850px;
+    background: transparent;
+}
+
+/*
+.clear {
+    @include clearfix;
+}
+
+%title {
+    font-size: 44px;
+    font-family: $fontFamilyProximaN_Ex_Con_B;
+    color: $brandPrimary;
+    //font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+%text {
+    font-size: 14px;
+    font-family: $fontFamilyOpenSans_R;
+    color: $grayLighter;
+    line-height: $lineHeightBase;
+}
+
+//@extend %button;
+%button {
+    background-color: $brandPrimary;
+    //box-shadow: inset 0px -3px 0px 0px rgba(29, 29, 28, 0.26);
+    width: 100%;
+    color: $base;
+    font-family: $fontFamilyproximanova_Rg;
+    text-transform: uppercase;
+    height: 44px;
+    border: 0;
+    border-bottom: 3px solid $brandSecond;
+    text-align: center;
+    outline: 0;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+
+    &:hover {
+        background: #88B445;
+    }
+
+    span {
+        text-decoration: none;
+        line-height: 44px;
+        text-transform: inherit;
+    }
+}
+
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    color: #1d1d1d;
+
+    img {
+        position: relative;
+        top: -5px;
+        margin: 0 10px;
+    }
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    color: #1d1d1d;
+}
+ */

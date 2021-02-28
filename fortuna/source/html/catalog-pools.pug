@@ -1,0 +1,126 @@
+//- Utility
+include utils/_variable.pug
+
+- pageTitle = 'Каталог'
+- nameTitle = 'catalog-pools'
+- subTitle = 'Басейни'
+
+//-source/html/layout/_header.pug
+- var innerPage = 'innerPage'
+- var secondMenu = true
+
+//-_topBlock.pug_breadcrumbs.pug
+- var breadcrumbs = ['Головна']
+
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+            include layout/_header-device.pug
+            //-include layout/_navigation.pug
+
+            //= Main =
+            main#main.main
+                - topBlocktitle = true
+                include module/_topBlock.pug
+                - bill = '3'
+                include module/_bill.pug
+
+                //Filter
+                include module/_shipment.pug
+                include module/_shipment-filter.pug
+                //End Filter
+
+                include module/_catalog-pools.pug
+                - bill = '1'
+                include module/_bill.pug
+                include module/_tabs.pug
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include module/_catalog-modal.pug
+        include layout/_scripts.pug
+
+        script.
+            $(document).ready(function () {
+
+                $('.catalog-modal').magnificPopup({
+                    type: 'inline',
+                    preloader: false,
+                    modal: true,
+                    callbacks: {
+                        open: function() {
+                             $('.catalog-carousel--big').slick('setPosition');
+                             $('.catalog-carousel--small').slick('setPosition');
+                        }
+                    }
+                });
+
+                $(document).on('click', '.popup__close', function (e) {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                });
+
+                //magnific-popup
+                $('.gallery-carousel').each(function() {
+                    $(this).magnificPopup({
+                        delegate: '.slick-slide:not(.slick-cloned) a',
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        },
+                        removalDelay: 300,
+                        mainClass: 'mfp-fade'
+                    });
+                });
+
+                //$('.catalog-carousel--big').slick('setPosition');
+
+                $('.catalog-carousel--big').slick({
+                    //infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false, //отключил стрелки
+                    //fade: true,
+                    rows: 0,
+                    asNavFor: '.catalog-carousel--small',
+                    //prevArrow: '<button type="button" class="slick-prev has-icon"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+                    //nextArrow: '<button type="button" class="slick-next has-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+                });
+
+                //$('.catalog-carousel--small').slick('setPosition');
+
+                $('.catalog-carousel--small').slick({
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    asNavFor: '.catalog-carousel--big',
+                    focusOnSelect: true,
+                    arrows: false,
+                    rows: 0,
+                    responsive: [
+                    {
+                      breakpoint: 600,
+                      settings: {
+                        slidesToShow: 3,
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 2,
+                      }
+                    }
+                    ]
+                });
+
+            });

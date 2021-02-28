@@ -1,0 +1,75 @@
+
+-
+    var catalog = [
+        {
+            href: 'catalog-inner.html',
+            image: 'background-image: url(data/catalog/comPools/a1.png);',
+            src: 'data/catalog/comPools/a1.png',
+            title: 'Fun 74',
+            //subtitle: 'Павільйон BASIC («Основний»)',
+            price: '11 600 eur',
+            //text: 'Найбільш популярним і економічно привабливим є павільйон типу Basic - основний. Простий і елегантний зовнішній вигляд, з можливістю бокового входу!'
+            width: '3,68м',
+            height: '7,47м',
+            depth: '1,50м',
+            volume: '33 м3',
+            //whiskerBoard: true,
+            weight: '920 кг'
+        },
+        {
+            href: 'catalog-inner.html',
+            image: 'background-image: url(data/catalog/comPools/a2.png);',
+            src: 'data/catalog/comPools/a2.png',
+            title: 'Fun 80',
+            //subtitle: 'Павільйон CHEMPION («Чемпіон»)',
+            price: '12 900 eur',
+            //text: 'Найбільш популярним і економічно привабливим є павільйон типу Basic - основний. Простий і елегантний зовнішній вигляд, з можливістю бокового входу!'
+            width: '3,76м',
+            height: '8,02м',
+            depth: '1,51м',
+            volume: '36 м3',
+            //whiskerBoard: true,
+            weight: '960 кг'
+        },
+        {
+            href: 'catalog-inner.html',
+            image: 'background-image: url(data/catalog/comPools/a3.png);',
+            src: 'data/catalog/comPools/a3.png',
+            title: 'Fun 83',
+            //subtitle: 'Павільйон TROPIK («Тропік»)',
+            price: '14 000 eur',
+            //text: 'Найбільш популярним і економічно привабливим є павільйон типу Basic - основний. Простий і елегантний зовнішній вигляд, з можливістю бокового входу!'
+            width: '3,78м',
+            height: '8,30м',
+            depth: '1,51м',
+            volume: '37 м3',
+            //whiskerBoard: true,
+            weight: '1100 кг'
+        },
+        {
+            href: 'catalog-inner.html',
+            image: 'background-image: url(data/catalog/comPools/a4.png);',
+            src: 'data/catalog/comPools/a4.png',
+            title: 'Fun 100',
+            //subtitle: 'Павільйон MYSTIC («Магія»)',
+            price: '15 000 eur',
+            //text: 'Найбільш популярним і економічно привабливим є павільйон типу Basic - основний. Простий і елегантний зовнішній вигляд, з можливістю бокового входу!'
+            width: '4,04м',
+            height: '10,04м',
+            depth: '1,51м',
+            volume: '45 м3',
+            //whiskerBoard: true,
+            weight: '1250 кг'
+        }
+    ]
+
+= '\n'
+//= catalog-comPools =
+//- (source/assets/css/module/_catalog-pools.scss)
+.catalog-comPools
+    .container
+        - var titleInfo = thirdTitle
+        include __title.pug
+        include _catalog.pug
+//= End catalog-comPools =
+= '\n'

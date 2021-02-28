@@ -1,0 +1,280 @@
+.goods {
+	margin: 40px 0 23px;
+
+	&__wrap {
+		display: flex;
+		flex-flow: column wrap;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+
+		@media (min-width: 1080px) {
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: stretch;
+		}
+
+        .picture {
+            background: no-repeat center top/cover;
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+    }
+
+	&__slider {
+
+		&.catalog {
+
+			&-carousel {
+				width: 100%;
+
+                @media (min-width: 720px) {
+                    width: 80%;
+                }
+
+                @media (min-width: 1080px) {
+                    width: (665 / 1215) * 100%;
+                }
+
+				.catalog-carousel--big {
+					margin: 0 !important;
+					border: 0;
+					width: 100%;
+
+                    .slick-slider {
+                        background: $base;
+                    }
+
+					.sl__slide {
+						position: relative;
+						width: 470px;
+						background: $base;
+                        height: auto;
+
+						img {
+							margin: 0 auto;
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+
+		.catalog-carousel--small {
+			margin: 0 auto;
+            padding: 40px 60px 30px;
+            background: rgba(255, 255, 255, 0.8);
+
+			@media (max-width: 480px) {
+				width: 100%;
+                padding: 40px 20px 30px;
+			}
+
+			.slick-slider {
+				margin: 0 -20px;
+				position: relative;
+				display: block;
+				box-sizing: border-box;
+				padding: 0 13px;
+				user-select: none;
+				touch-action: pan-y;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+            .slick-current {
+
+                img {
+                    border-bottom: 5px solid $brandPrimary;
+                    padding-bottom: 4px;
+                }
+            }
+
+			.sl__slide {
+				text-align: center;
+                height: auto;
+
+				img {
+					cursor: pointer;
+					max-width: 100px;
+					height: auto;
+					height: auto;
+					margin: 1px;
+
+
+					@media (max-width: 480px) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	&__infoBlock {
+		width: 100%;
+		padding-top: 35px;
+        background: $base;
+
+        @media (min-width: 720px) {
+            width: 80%;
+        }
+
+		@media (min-width: 1080px) {
+			width: (550 / 1215) * 100%;
+            height: 641px;
+            overflow: hidden;
+		}
+
+		&__header {
+			margin: 0 15px 16px;
+
+            @media (min-width: 480px) {
+                margin: 0 0 16px 40px;
+            }
+
+			h1 {
+                font-family: $fontFamilyGilroy_SmBd;
+                font-size: 36px;
+                color: $grayDark;
+                margin: 0 0 6px;
+            }
+
+            .price {
+                font-family: $fontFamilyGilroy_Bd;
+                font-size: 24px;
+                color: $brandSuccess;
+
+                span {
+                    padding-left: 6px;
+                }
+            }
+		}
+
+        &__wrap {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+            border: 1px solid rgba(51, 53, 56, 0.1);
+            border-left: 0;
+            border-right: 0;
+        }
+
+        &__size {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            margin: 0 (20 / 503) * 100% 2px (20 / 503) * 100%;
+            border-bottom: 3px solid rgba(51, 53, 56, 0.1);
+
+            @media (min-width: 480px) {
+                width: 60%;
+                padding: 21px (20 / 550) * 100% 15px (40 / 550) * 100%;
+                margin: 0;
+                justify-content: space-between;
+                border: 0;
+            }
+
+            @media (min-width: 720px) {
+                width: (307 / 550) * 100%;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                border-bottom: 1px solid $base;
+                width: 100%;
+                top: 100%;
+                left: 0;
+
+                @media (min-width: 480px) {
+                    border-right: 1px solid rgba(51, 53, 56, 0.1);
+                    height: 100%;
+                    top: 0;
+                    left: 100%;
+                    width: auto;
+                }
+            }
+
+            p {
+                color: $grayDark;
+                margin: 0;
+
+                &:nth-child(1) {
+                    font-size: 16px;
+
+                }
+
+                &:nth-child(2) {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__volumeWeight {
+            width: 100%;
+            padding-left: (20 / 550) * 100%;
+            text-align: center;
+
+            @media (min-width: 480px) {
+                width: 40%;
+                padding-left: (20 / 550) * 100%;
+                text-align: left;
+            }
+
+            @media (min-width: 720px) {
+                width: (243 / 550) * 100%;
+            }
+
+            p {
+                color: $grayDark;
+                font-size: 16px;
+                margin: 0;
+
+                &:first-child {
+                    margin-bottom: 2px;
+                }
+
+                span {
+                    padding-left: (5 / 215) * 100%;
+                }
+            }
+        }
+
+        &__text {
+            padding: 26px 15px 0;
+
+            @media (min-width: 480px) {
+                padding: 26px 0 0 40px;
+            }
+
+            p {
+                font-family: $fontFamilyBase;
+                line-height: 24px;
+                font-size: 16px;
+                color: $grayDark;
+                padding: 0 (20 / 503) * 100%;
+            }
+
+            ul {
+                li {
+                    font-size: 16px;
+
+                    &:before {
+                        content: '—';
+                        display: block;
+                        position: absolute;
+                        top: 13px;
+                        left: 0;
+                        color: #2965CC;
+                    }
+                }
+            }
+        }
+	}
+}

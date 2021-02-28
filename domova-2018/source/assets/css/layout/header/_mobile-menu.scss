@@ -1,0 +1,209 @@
+.mobile-menu {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -10px;
+    text-align: left;
+
+    &__button {
+        position: relative;
+        display: block;
+        float: right;
+        text-decoration: none;
+
+        &-icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 17px;
+            height: 12px;
+            border: 2px solid $brandPrimary;
+            border-right: none;
+            border-left: none;
+            position: relative;
+            overflow: hidden;
+            //margin-right: 5px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                height: 2px;
+                left: 0;
+                right: 0;
+                background: $brandPrimary;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: $fontSizeH8;
+            color: $gray;
+            text-transform: uppercase;
+            line-height: 1;
+            font-weight: bold;
+            letter-spacing: 1.6px;
+        }
+    }
+
+    &__drop {
+        position: fixed;
+        z-index: 151;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100%;
+        transition: left .3s ease-out;
+        border-right: 1px solid $border;
+        background: $base;
+
+        &Top {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: block;
+            height: 65px;
+            background: linear-gradient(to bottom, $base 75%, transparentize($base, 1));
+        }
+
+        &Content {
+            position: relative;
+            overflow: auto;
+            height: 100%;
+            padding: 20px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right: 20px;
+        overflow: hidden;
+        width: 25px;
+        height: 25px;
+        text-indent: -100em;
+        background: url('../images/header/close.png') no-repeat;
+    }
+
+    &__list {
+        padding: 4px 10px;
+    }
+
+    &__item {
+        border-bottom: 1px solid $border;
+    }
+
+    &__link {
+        font-size: $fontSizeSmall;
+        display: block;
+        padding: 12px 0 9px;
+        transition: all .2s ease-out;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $gray;
+
+        &:hover {
+            color: $brandPrimary;
+        }
+    }
+
+    @media (min-width: 960px) {
+        //display: none;
+    }
+
+    .language {
+        position: relative;
+        margin: 12px 10px 0 30px;
+        display: block;
+
+        @media (min-width: 480px) {
+            display: none;
+        }
+
+        &--dropper {
+            .language {
+                &__title {
+                    padding-right: 16px;
+
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__inner {
+            background: $base;
+            display: inline-block;
+        }
+
+        &__link {
+            display: block;
+            position: relative;
+            color: $gray;
+            text-decoration: none;
+            font-size: $fontSizeH8;
+            letter-spacing: 1px;
+            line-height: 1;
+            transition: all 0.2s ease-out;
+            text-transform: uppercase;
+            padding: 15px 15px 15px 35px;
+
+            &:hover,
+            &.active {
+                color: $brandPrimary;
+                background-color: $backgroundLight;
+            }
+
+            &--ua,
+            &--ru {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    transform: translateY(-50%);
+                    background: url('../images/header/languages.png') 20px 20px no-repeat;
+                }
+            }
+
+            &--ua {
+                &:before {
+                    background-position: 0 0;
+                }
+            }
+
+            &--ru {
+                &:before {
+                    background-position: -10px 0;
+                }
+            }
+        }
+
+        &:hover {
+            .language {
+                &__drop {
+                    display: block!important;
+                }
+
+                &__title {
+                    color: $brandPrimary;
+
+                    &:after {
+                        transform: translateY(-50%) rotate(-180deg);
+                        will-change: transform;
+                    }
+                }
+            }
+        }
+    }
+}
