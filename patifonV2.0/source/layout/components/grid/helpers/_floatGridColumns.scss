@@ -1,9 +1,0 @@
-@mixin floatGridColumns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
-    @for $i from (1 + 1) through $gridColumns {
-        $list: "#{$list}, .col-#{$class}-#{$i}";
-    }
-
-    #{$list} {
-        float: left;
-    }
-}

@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'CyrillicOld';
-    src: url('CyrillicOld.woff2') format('woff2'),
-        url('CyrillicOld.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
