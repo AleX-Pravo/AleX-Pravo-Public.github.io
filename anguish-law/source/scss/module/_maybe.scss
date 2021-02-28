@@ -1,0 +1,108 @@
+.maybe {
+    background: url(../images/maybe-block.png) fixed no-repeat center top/cover;
+    //height: 520px;
+
+    .title__block {
+        text-transform: uppercase;
+        padding: 48px 0 39px;
+    }
+
+    &__main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0 -15px;
+        padding-bottom: 50px;
+    }
+
+    &__wrap {
+        width: 100%;
+        position: relative;
+        padding: 0 15px 30px;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+            .maybe {
+                &__text {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    &__inner {
+        width: 350px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__image {
+        text-align: center;
+    }
+
+    &__text {
+        position: absolute;
+        //width: calc(100% - 30px);
+        width: 100%;
+        bottom: 50px;
+        //left: 15px;
+        background: rgba(255, 255, 255, 0.67);
+        height: 100%;
+        top: calc(100% - 50px);
+        //padding: 0 10px 6px;
+        padding: 0 10px;
+        transition: all .5s ease;
+
+        h4 {
+            margin: 0;
+            text-align: center;
+            color: $grayBase;
+            font-size: $fontSize18;
+            line-height: 23px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 6px;
+        }
+
+        p {
+            margin: 0;
+            color: $grayBase;
+            font-size: $fontSize16;
+            line-height: 23px;
+            text-align: center;
+        }
+    }
+
+    &__inner--text {
+        height: calc(100% - 50px);
+        display: flex;
+        align-items: center;
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+
+        &__wrap {
+            width: calc(100%/2);
+            padding: 0 15px 30px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    //1080px
+    @media (min-width: $screen_L_Min) {
+        &__main {
+            padding-bottom: 90px;
+        }
+
+        &__wrap {
+            width: calc(100%/4);
+            padding: 0 15px;
+        }
+    }
+}

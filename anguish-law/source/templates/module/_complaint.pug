@@ -1,0 +1,62 @@
+= '\n'
+//= complaint =
+//- (source\scss\module\_complaint.scss)
+.complaint#complaint
+    .container
+        .complaint__main
+            .complaint__title
+                h2.title__block !{titleInfo}
+                p Ми гарантуємо анонімність ваших данних
+                span Чим раніше Ви звернетесь тім швидше буде результат
+            
+            .complaint__wrap
+                .complaint__icon
+                    +icon('icon-24hours')
+                    +icon('icon-charity')
+                    +icon('icon-charityb')
+
+                .complaint__form
+
+                    = '\n'
+                    //= Form =
+
+                    //- (source\scss\layout\form\_form.scss)
+                    form.form(action='' method='')
+                        .form__wrapper
+                            .form__inner
+                                .form-group.has-error.required
+                                    input.form-control(type='text' name='name'  placeholder='Прізвище, ім\'я, по батькові*')
+                                    .help-block Обов'язково заповніть поле
+                                .form-group.required
+                                    input.form-control(type='text' name='phone' placeholder='Номер телефону*')
+                                    .help-block Обов'язково заповніть поле
+                                .form-group
+                                    input.form-control(type='text' name='email' placeholder='Електронна пошта')
+                                    //.help-block
+                                .form-group
+                                    input.form-control(type='text' name='doctor' placeholder='ПІБ лукуючого лікаря')
+                                    //.help-block
+                                .form-group
+                                    input.form-control(type='text' name='medical' placeholder='Назва медичної установи')
+                                    //.help-block
+
+                            .form__inner
+                                .form-group
+                                    textarea.form-control(name='message' rows='3' placeholder='Опис проблемної ситуації')
+                                    //.help-block
+                        .form__bottom 
+                            .form__inner
+                                span.field * - обов'язково заповнені поля
+                                .form-group.popup__button
+                                    button.button-purple(type='button') 
+                                        i.button__icon
+                                        span Відправити
+                                    // а это когда отправлено сообщение
+                                    //button.button-purple.active(type='button' disabled) 
+                                        i.button__icon
+                                        span Відправити
+                        
+                    //= End form =
+                    = '\n'
+//= End complaint =
+= '\n'

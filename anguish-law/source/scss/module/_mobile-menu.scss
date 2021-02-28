@@ -1,0 +1,151 @@
+.mobile-menu {
+    transition: top .3s ease-out;
+    position: relative;
+
+    &__button {
+        //position: relative;
+        display: block;
+        width: 30px;
+        padding: 10px 0 12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:before,
+        &:after {
+            position: absolute;
+            right: 0;
+            left: 0;
+            display: block;
+            height: 2px;
+            content: '';
+            background: $base;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+            right: 7px;
+        }
+
+        .button-line {
+            position: absolute;
+            display: block;
+            height: 2px;
+            background: $base;
+            left: 0;
+            right: 0;
+        }
+    }
+
+
+    &__drop {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: -320px;
+        width: 320px;
+        height: 100%;
+        transition: left .3s ease-out;
+        background: $base;
+        overflow-y: auto;
+
+        &.move {
+            left: 0;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        text-align: center;
+        font-size: 50px;
+        text-decoration: none;
+        line-height: 30px;
+        color: $brandSuccess;
+    }
+
+    &__wrapper {
+        height: 100%;
+        position: relative;
+        padding: 66px 0 0 0;
+    }
+
+    &__content {
+        position: relative;
+        height: 100%;
+    }
+
+    &__primary-menu {
+        margin-bottom: 30px;
+        padding: 0 15px 0 30px;
+
+        .primary-menu {
+            margin: 0;
+
+            &__inner {
+                display: block !important;
+
+                li {
+                    margin: 0 0 15px !important;
+
+                    a {
+                        line-height: 19px !important;
+                        font-size: $fontSize16 !important;
+                        color: $brandPrimary !important;
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            display: none !important;
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__contacts-info {
+        margin-bottom: 30px;
+        padding: 0 15px 0 30px;
+
+        .info {
+
+            li {
+
+                .icon-adress,
+                .icon-phone,
+                .icon-mail {
+                    fill: $brandSuccess;
+                }
+
+                a,
+                p,
+                span {
+                    padding-left: 30px;
+                    font-size: $fontSize16;
+                    color: $brandPrimary;
+                    margin-bottom: 1px;
+                    line-height: 20px;
+                    display: block;
+                }
+
+                a {
+
+                    &:hover {
+                        color: $brandSuccess;
+                    }
+                }
+            }
+        }
+    }
+}

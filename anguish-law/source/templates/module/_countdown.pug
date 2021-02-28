@@ -1,0 +1,35 @@
+= '\n'
+//= Countdown =
+
+-
+    countdownClockItems = [
+        {
+            class: 'days',
+            text: 'дней'
+        },
+        {
+            class: 'hours',
+            text: 'часов'
+        },
+        {
+            class: 'minutes',
+            text: 'минут'
+        },
+        {
+            class: 'seconds',
+            text: 'секунд'
+        }
+    ]
+
+.countdown(data-border-color='#8d26bd' data-start='' data-end='' data-now='' data-set-start='05-28-2019' data-set-end='2019-06-28')
+    .countdown__clock.clock
+        each item in countdownClockItems
+            .countdown__clock-item(class='clock-' + item.class)
+                .countdown__clock-inner
+                    .clock-canvas(id='canvas-' + item.class)
+                    .countdown__text
+                        p.val 0
+                p.countdown__item= item.text
+
+//= End countdown =
+= '\n'

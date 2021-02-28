@@ -1,0 +1,10 @@
+= '\n'
+//= primaryMenu =
+//-=(source\scss\module\_primaryMenu.scss)=
+.primary-menu
+    ul.primary-menu__inner
+        each val in primaryMenu
+            li
+                a(href=val.href)= val.name
+//= End primaryMenu =
+= '\n'

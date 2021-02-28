@@ -1,0 +1,19 @@
+= '\n'
+//= maybe =
+//- (source\scss\module\_maybe.scss)
+.maybe#maybe
+    .container
+        h2.title__block !{titleInfo}
+        .maybe__main
+            each val in maybe
+                .maybe__wrap
+                    .maybe__inner
+                        .maybe__image
+                            img(src='images/maybe/' + val.image + '.png', alt="")
+                        .maybe__text
+                            h4!= val.title
+                            .maybe__inner--text
+                                p!= val.text
+      
+//= End maybe =
+= '\n'

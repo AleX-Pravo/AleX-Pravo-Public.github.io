@@ -1,0 +1,83 @@
+.header {
+    position: relative;
+    background: $brandPrimary;
+    //height: 120px;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+    }
+
+    &__logo {
+        //@errorflex-grow: 1;
+    }
+
+    &__menu {
+        //flex-grow: 1;
+    }
+
+    &__button {
+        position: relative;
+
+        a {
+            text-decoration: none;
+            font-size: $fontSize12;
+            text-transform: uppercase;
+            background: $brandSuccess;
+            padding: 6px 10px 2px;
+            transition: all .2s ease-out;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:hover {
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+
+    &__info {
+        //flex-shrink: 0;
+    }
+
+    //768px
+    @media (min-width: $screen_M_Min) {
+        .header {
+
+            &__main {
+                padding: 10px 0 6px;
+            }
+
+            &__button {
+                a {
+                    font-size: $fontSize14;
+                    padding: 8px 15px 4px;
+                }
+            }
+        }
+    }
+
+    //1080px
+    @media (min-width: $screen_L_Min) {
+        .header {
+
+            &__main {
+                padding: 10px 0 6px;
+            }
+
+            &__button {
+                a {
+                    position: relative;
+                    right: auto;
+                    top: auto;
+                    transform: none;
+                    padding: 15px 27px 9px 28px;
+                    font-size: $fontSize16;
+                }
+            }
+        }
+    }
+}
