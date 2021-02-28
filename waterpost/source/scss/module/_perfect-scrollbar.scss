@@ -1,0 +1,17 @@
+.ps:hover > .ps__scrollbar-y-rail:hover {
+    width: 8px;
+}
+
+.ps > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y, .ps > .ps__scrollbar-y-rail:active > .ps__scrollbar-y {
+    width: 4px;
+}
+
+.ps > .ps__scrollbar-y-rail {
+    width: 8px;
+    opacity: 1;
+}
+
+.ps > .ps__scrollbar-y-rail > .ps__scrollbar-y {
+    width: 4px;
+    background-color: $brandLightBlue;
+}

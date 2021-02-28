@@ -1,0 +1,42 @@
+//- Utility
+
+include utils/_variable.pug
+
+-
+    pageTitle = 'main'
+
+    searchList = true
+    main = true
+
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout.layout--minimal
+            include layout/_header.pug
+
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+                        include module/_dummy.pug
+
+
+
+
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        include module/_mobile-menu.pug
+        include layout/_sprite.pug
+        include layout/_scripts.pug
+        include module/_cookies.pug

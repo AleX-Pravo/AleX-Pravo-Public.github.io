@@ -1,0 +1,18 @@
+//
+// Grid system
+// --------------------------------------------------
+
+.container {
+    max-width: $gridMaxWidth;
+    height: 100%;
+
+    @include containerFixed;
+}
+
+.container-fixed {
+    width: $gridMaxWidth;
+
+    @include containerFixed;
+}
+
+

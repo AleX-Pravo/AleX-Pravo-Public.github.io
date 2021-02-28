@@ -1,0 +1,19 @@
+.city {
+    position: relative;
+    align-self: center;
+    margin: 0 auto 0 15px;
+    padding: 0 0 0 25px;
+    text-decoration: none;
+    color: $brandDarkBlack;
+    transition: all .3s;
+
+    &:hover {
+        color: $brandPrimary;
+    }
+
+    svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

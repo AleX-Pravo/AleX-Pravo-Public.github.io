@@ -1,0 +1,144 @@
+.layout-box {
+    position: relative;
+    height: 100%;
+
+    &__news {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        margin: 16px -15px -16px;
+        position: relative;
+
+        h2 {
+            margin: 0 0 8px 15px;
+        }
+
+        &-inner {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .news {
+            margin: 16px 15px;
+
+            &__image {
+                border-radius: 14px;
+                margin: 0 0 15px;
+            }
+
+            &__info {
+                background: transparent;
+                margin: 0 0 10px;
+                padding: 0;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin: 16px 0 0;
+        position: relative;
+
+        > section {
+            width: 100%;
+        }
+
+        .layout-box {
+            &__news {
+                .news {
+                    padding: 0 0 36px;
+                }
+            }
+        }
+    }
+
+    &__catalog {
+        position: relative;
+
+        h1 {
+            margin: 0 0 8px;
+        }
+    }
+
+    @media (min-width: $screen_S_Min) {
+        &__news {
+            .news {
+                width: calc(50% - 32px);
+            }
+        }
+    }
+
+    @media (min-width: 960px) {
+        &__news {
+            .news {
+                width: calc(33.333334% - 32px);
+            }
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+        &__text {
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 0 0 80px;
+
+            > section {
+                padding: 0 348px 0 0;
+            }
+
+            .layout-box {
+                &__news {
+                    width: 300px;
+                    flex-direction: column;
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    &.fixed {
+                        position: fixed;
+                        right: auto;
+                        top: 94px;
+                    }
+
+                    &.bottom {
+                        top: auto;
+                        bottom: 0;
+                    }
+
+                    section {
+                        width: 300px;
+                    }
+
+                    h2 {
+                        margin: 0 0 16px;
+                    }
+
+                    &-inner {
+                        flex-direction: column;
+                    }
+
+                    .news {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &__catalog {
+            display: flex;
+
+            h1 {
+                margin: -8px 0 16px;
+            }
+
+            section {
+                flex-grow: 1;
+                padding: 0 0 0 430px;
+            }
+        }
+    }
+}

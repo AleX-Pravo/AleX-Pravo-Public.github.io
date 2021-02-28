@@ -1,0 +1,29 @@
+.modaal {
+
+    &-inline {
+        &--modifier {
+            .modaal {
+                &-content {
+                    &-container {
+                        padding: 70px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-close {
+        &:hover {
+            &:before,
+            &:after {
+                background: $brandPrimary;
+            }
+        }
+    }
+
+    &-fullscreen {
+        .modaal-close {
+            background: $brandLightBlue;
+        }
+    }
+}

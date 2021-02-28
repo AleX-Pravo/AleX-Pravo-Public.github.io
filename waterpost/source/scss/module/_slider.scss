@@ -1,0 +1,115 @@
+.slider {
+    position: relative;
+    margin: 32px 0 37px;
+
+    &__image {
+        &:nth-child(n+2) {
+            display: none;
+        }
+    }
+
+    .slick {
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0;
+            border: none;
+            z-index: 1;
+            cursor: pointer;
+            background: transparent;
+            width: 16px;
+            height: 27px;
+            padding: 0;
+
+            &:before {
+                content:'';
+                width: 16px;
+                height: 27px;
+                position: absolute;
+                background: url(../images/icons/arrow.svg) no-repeat;
+                background-size: cover;
+                top: 0;
+                left: 0;
+            }
+
+            &.slick-disabled {
+                opacity: .5;
+            }
+        }
+
+        &-prev {
+            left: -24px;
+            transform: translateY(-50%) rotate(-180deg);
+
+            &:before {
+            }
+        }
+
+        &-next {
+            right: -24px;
+        }
+
+        &-dots {
+            width: auto;
+            height: 8px;
+            text-align: left;
+            display: flex;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: calc(100% + 12px);
+
+            li {
+                display: flex;
+                margin: 0 12px 0 0;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.slick {
+                    &-active {
+                        button {
+                            background: $brandPrimary;
+                        }
+                    }
+                }
+            }
+
+            button {
+                border: none;
+                position: relative;
+                width: 8px;
+                height: 8px;
+                padding: 0;
+                border-radius: 50%;
+                outline: none;
+                background: $brandLightBlue;
+                overflow: hidden;
+                cursor: pointer;
+                transition: all .3s;
+                text-indent: -200em;
+
+                &:hover {
+                    background: $brandPrimary;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen_L_Min) {
+        margin: 32px 28px 37px;
+
+        .slick {
+            &-prev {
+                left: -28px;
+            }
+
+            &-next {
+                right: -28px;
+            }
+        }
+    }
+}

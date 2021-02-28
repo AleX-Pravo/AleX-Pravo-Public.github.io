@@ -1,0 +1,28 @@
+.logo {
+    align-items: center;
+    display: inline-flex;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    span {
+        width: 100%;
+        max-width: 140px;
+        padding: 0 0 0 18px;
+        margin: 0 0 0 16px;
+        border-left: 2px solid $brandLightBlue;
+        font-size: $fontSizeSmall;
+        color: $brandDarkBlack;
+        line-height: 18px;
+        display: none;
+    }
+
+    @media (min-width: $screen_S_Min) {
+        span {
+            display: inline;
+        }
+    }
+}
