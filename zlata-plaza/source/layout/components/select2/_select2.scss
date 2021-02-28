@@ -1,0 +1,139 @@
+@import 'vars/_variable.scss';
+
+.select2 {
+    font-size: $select2__textFontSize;
+    line-height: (32px / $select2__textFontSize);
+    position: relative;
+    display: block;
+    height: 34px;
+
+    &-hidden-accessible {
+        display: none;
+    }
+
+    &-container {
+        &--open {
+            .select2 {
+                &-selection {
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    &.select2 {
+        &-container {
+            &--open {
+                z-index: 10000;
+            }
+        }
+    }
+
+    .selection {
+        position: relative;
+        display: block;
+        height: 34px;
+    }
+
+    &-selection {
+        position: relative;
+        display: block;
+        height: 34px;
+        padding: 0 28px 0 14px;
+        cursor: pointer;
+        border: 1px solid $select2__borderColor;
+        border-radius: 17px;
+        outline: none;
+        background: $select2__backgroundColor;
+
+        &__rendered {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            height: 32px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &__placeholder {
+            color: $select2__textPlaceholderColor;
+        }
+
+        &__arrow {
+            position: absolute;
+            top: 50%;
+            right: 14px;
+            width: 21px;
+            height: 12px;
+            margin: -6px 0 0;
+            background: url('../images/content/icon/category.png') no-repeat;
+        }
+    }
+
+    &-dropdown {
+        font-size: $select2__textFontSize;
+        position: relative;
+        z-index: 9999;
+        display: block;
+        margin: -17px 0 0;
+        padding: 17px 0 0;
+        border: 1px solid $select2__borderColor;
+        border-radius: 0 0 17px 17px;
+        background: $select2__backgroundColor;
+
+        &--above {
+            margin: 17px 0 0;
+            padding: 0 0 17px;
+            border-radius: 17px 17px 0 0;
+        }
+    }
+
+    &-search {
+        position: relative;
+        display: block;
+        padding: 14px;
+
+        &--hide {
+            display: none;
+        }
+
+        &__field {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 0 14px;
+            border: 1px solid $select2__borderColor;
+            border-radius: 17px;
+            outline: none;
+            background: none;
+        }
+    }
+
+    &-results {
+        line-height: 1;
+        position: relative;
+        display: block;
+
+        &__options {
+            position: relative;
+            overflow: auto;
+            max-height: 320px;
+        }
+
+        &__option {
+            position: relative;
+            padding: 8px 0 8px 14px;
+            cursor: pointer;
+            transition: all .2s linear;
+
+            &:last-child {
+                border-radius: 0 0 17px 17px;
+            }
+
+            &:hover {
+                color: $select2__textColor--active;
+            }
+        }
+    }
+}

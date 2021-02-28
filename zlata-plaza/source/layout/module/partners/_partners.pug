@@ -1,0 +1,14 @@
+include vars/_variable.pug
+
+- var partnersOwlCarouselInit = true
+
+= '\n'
+//= Partners =
+.partners
+    #partners_owl.owl-carousel
+        each val in partners
+            .owl-carousel-item
+                a.partners__link(href='#')
+                    img(src='data/partners/' + val + '.png' alt= val)
+//= End partners =
+= '\n'

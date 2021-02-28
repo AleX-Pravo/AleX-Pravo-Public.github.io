@@ -1,0 +1,118 @@
+@import 'vars/_variable.scss';
+
+.nav {
+    &-side {
+        position: fixed;
+        z-index: 10;
+        top: 18%;
+        left: 0;
+    }
+
+    &--device {
+        position: absolute;
+        right: (15 / 320 * 100%);
+        bottom: 0;
+        left: (15 / 320 * 100%);
+    }
+
+    @import 'module/primaryMenu/_primaryMenu.scss';
+    @import 'module/secondaryMenu/_secondaryMenu.scss';
+
+    &--device {
+        .primary-menu {
+            margin: 0;
+            padding: 0;
+            border-bottom: none;
+            text-align: justify;
+
+            &__list {
+                font-size: 0;
+
+                &:after {
+                    position: relative;
+                    width: 100%;
+                    height: 0;
+                    display: inline-block;
+                }
+            }
+
+            &__item {
+                display: inline-block;
+                text-align: center;
+            }
+
+            &__box {
+                &--shop {
+                    .primary-menu {
+                        &__link {
+                            color: $primaryMenu__shopBgColor;
+
+                            &:before {
+                                width: 60px;
+                                height: 60px;
+                                background-color: $primaryMenu__shopBgColor;
+                                background-image: url('../images/nav/icon/shop.png');
+                            }
+                        }
+                    }
+                }
+
+                &--food {
+                    .primary-menu {
+                        &__link {
+                            color: $primaryMenu__foodBgColor;
+
+                            &:before {
+                                background-color: $primaryMenu__foodBgColor;
+                                background-image: url('../images/nav/icon/food.png');
+                            }
+                        }
+                    }
+                }
+
+                &--service {
+                    .primary-menu {
+                        &__link {
+                            color: $primaryMenu__serviceBgColor;
+
+                            &:before {
+                                background-color: $primaryMenu__serviceBgColor;
+                                background-image: url('../images/nav/icon/service.png');
+                            }
+                        }
+                    }
+                }
+
+                &--entertainment {
+                    .primary-menu {
+                        &__link {
+                            color: $primaryMenu__entertainmentBgColor;
+
+                            &:before {
+                                background-color: $primaryMenu__entertainmentBgColor;
+                                background-image: url('../images/nav/icon/entertainment.png');
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__link {
+                font-size: 14px;
+                font-weight: 700;
+                padding: 10px 0;
+                color: $base;
+                text-shadow: 0 0 10px rgba(255, 255, 255, .7);
+
+                &:before {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto 10px;
+                    border-radius: 50%;
+                    background-position: center;
+                }
+            }
+        }
+    }
+}

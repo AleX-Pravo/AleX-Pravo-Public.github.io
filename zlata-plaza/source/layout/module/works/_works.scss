@@ -1,0 +1,15 @@
+@import 'vars/_variable.scss';
+
+.works {
+    position: relative;
+    max-width: 860px;
+    margin: 0 -15px;
+
+    &__description {
+        font-size: $works__descriptionTextFontSize;
+        position: relative;
+        margin: 0 0 20px;
+        padding: 0 15px;
+        color: $works__descriptionTextColor;
+    }
+}

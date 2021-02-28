@@ -1,0 +1,51 @@
+@import 'vars/_variable.scss';
+
+.ownbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow-x: auto;
+    overflow-y: scroll;
+
+    &-lock {
+        overflow: hidden !important;
+    }
+
+    &-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 44px;
+        height: 44px;
+        margin: 0 auto;
+        margin: -17px 0 0 -17px;
+        padding: 10px;
+        border-radius: 2px;
+        background: $ownbox__loaderBgColor;
+    }
+
+    &-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: .7;
+        background: $ownbox__bgColor;
+    }
+
+    &-box {
+        position: relative;
+        min-height: 100%;
+        padding: 50px 15px;
+    }
+
+    &-content {
+        position: relative;
+        margin: 0 auto;
+    }
+}

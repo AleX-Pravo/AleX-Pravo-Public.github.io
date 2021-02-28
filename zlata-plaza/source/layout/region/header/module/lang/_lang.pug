@@ -1,0 +1,19 @@
+include vars/_variable.pug
+
+//= Lang =
+.lang
+    ul.lang__list
+        each val in lang
+            if (searchDrop)
+                if (!val.active)
+                    li.lang__item
+                        a.lang__link(href='#')= val.name
+            else
+                if ('active' in val && val.active)
+                    li.lang__item.lang__item--active
+                        a.lang__link(href='#')= val.name
+                else
+                    li.lang__item
+                        a.lang__link(href='#')= val.name
+//= End lang =
+= '\n'

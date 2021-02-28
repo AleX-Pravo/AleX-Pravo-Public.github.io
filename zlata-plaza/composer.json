@@ -1,0 +1,27 @@
+{
+    "name": "studio32x32/layout/zlata-plaza",
+    "description": "Zlata plaza layout project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Krasinskiy",
+            "email": "rk@32x32.com.ua"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bower-asset/jquery": "3.x",
+        "bower-asset/owl.carousel": "^2.2",
+        "bower-asset/slick-carousel": "^1.8",
+        "bower-asset/jquery.panzoom": "^3.2",
+        "bower-asset/select2": "^4.0",
+        "bower-asset/photoswipe": "^4.1"
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "npm",
+            "bower-asset-library": "bower"
+        }
+    }
+}

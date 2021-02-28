@@ -1,0 +1,33 @@
+@import 'vars/_variable.scss';
+
+.logo32x32 {
+    font-family: $l32x32__textFontFamily;
+    font-size: $l32x32__textFontSize;
+    line-height: (13px / $l32x32__textFontSize);
+    position: relative;
+    display: inline-block;
+    margin: 30px 0 0;
+    white-space: nowrap;
+    text-align: left;
+    color: $l32x32__textColor;
+
+    &__image {
+        position: relative;
+        display: block;
+        float: left;
+        width: 90px;
+        height: 22px;
+        margin: 2px 5px 0 0;
+    }
+
+    &__link {
+        color: $l32x32__linkColor;
+    }
+
+    @media (min-width: $screenXsMin) {
+
+        display: block;
+        float: right;
+
+    }
+}

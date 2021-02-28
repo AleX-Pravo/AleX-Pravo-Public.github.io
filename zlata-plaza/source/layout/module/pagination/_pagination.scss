@@ -1,0 +1,131 @@
+@import 'vars/_variable.scss';
+
+.pagination {
+    position: relative;
+    margin: 0 0 47px;
+
+    &__button {
+        position: relative;
+        display: block;
+        max-width: 260px;
+        width: 100%;
+        height: 38px;
+        margin: 0 auto 30px;
+        cursor: pointer;
+        transition: all .2s linear;
+        text-transform: uppercase;
+        color: $pagination__buttonTextColor;
+        border: 1px solid $pagination__buttonBorderColor;
+        border-radius: (38px / 2);
+        outline-color: none;
+        background: $pagination__buttonBackgroundColor;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    &__list {
+        font-size: 0;
+        position: relative;
+        text-align: center;
+        color: $pagination__listTextColor;
+    }
+
+    &__item {
+        font-size: $pagination__listTextFontSize;
+        line-height: (30px / $pagination__listTextFontSize);
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        margin: 0 10px;
+        vertical-align: top;
+
+        &--selected {
+            cursor: default;
+            color: $pagination__listTextColor--active;
+            background: $pagination__listBackgroundColor--active;
+        }
+
+        &--ellipsis {
+            cursor: default;
+        }
+    }
+
+    &__link {
+        display: block;
+        height: 30px;
+        transition: all .2s linear;
+        text-decoration: none;
+        color: $pagination__listTextColor;
+
+        &:hover {
+            color: $pagination__listTextColor--active;
+            background: $pagination__listBackgroundColor--active;
+        }
+
+        &--prev,
+        &--next {
+            &:before,
+            &:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                content: '';
+                transition: all .2s linear;
+                background: url('../images/content/icon/pagination.png') no-repeat;
+            }
+
+            &:after {
+                opacity: 0;
+            }
+
+            &:hover {
+                &:before {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &--prev {
+            &:before {
+                background-position: 0 0;
+            }
+
+            &:after {
+                background-position: 0 -31px;
+            }
+        }
+
+        &--next {
+            &:before {
+                background-position: -31px 0;
+            }
+
+            &:after {
+                background-position: -31px -31px;
+            }
+        }
+
+        &--disabled {
+            cursor: default;
+            opacity: .5;
+            background: transparent;
+
+            &:before {
+                opacity: 1;
+            }
+
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+}

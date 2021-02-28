@@ -1,0 +1,14 @@
+include vars/_variable.pug
+
+//= Category =
+.category
+    a.category__button(href='javascript:vodi(0);' data-title='Всі категорії')
+
+    .category__drop
+        ul.category__list
+            each val in category
+                li.category__item
+                    a.category__link(href='#' class='category__link--' + val.class)= val.title
+                        span.category__link-count= val.count
+//= End category =
+= '\n'

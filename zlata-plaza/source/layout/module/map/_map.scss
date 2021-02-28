@@ -1,0 +1,526 @@
+@import 'vars/_variable.scss';
+
+.map {
+    position: relative;
+    margin: 0 0 40px;
+
+    &__inner {
+        position: relative;
+        overflow: hidden;
+        padding: (711 / 870 * 100%) 0 0;
+        margin: 0 0 10px;
+    }
+
+    &__floor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: none;
+        visibility: hidden;
+        height: 100%;
+        cursor: move;
+        transition: visibility 0s step-end .4s, opacity .4s linear, top .4s linear, transform .4s linear;
+        opacity: 0;
+    }
+
+    .panzoom {
+        position: relative;
+        height: 100%;
+    }
+
+    svg {
+        display: block;
+    }
+
+    .base {
+        &_shadow {
+            fill: $map__baseShadowFillColor;
+        }
+        &1 {
+            fill: $map__baseFillColor;
+            stroke: $map__baseStrokeColor;
+            stroke-width: 1.4px;
+            stroke-miterlimit: 10;
+        }
+    }
+
+    .shop {
+        opacity: .4;
+
+        &1 {
+            fill: $map__shopFillColor;
+            fill-rule: evenodd;
+            stroke: $map__shopStrokeColor;
+            stroke-miterlimit: 10;
+        }
+
+        &_hover {
+            &_group {
+                cursor: pointer;
+                transition: all .2s linear;
+                opacity: 0;
+
+                &:hover,
+                &--active {
+                    opacity: 1;
+                }
+            }
+
+            &_type {
+                &1 {
+                    fill: $map__shopFillColorType1;
+                }
+
+                &2 {
+                    fill: $map__shopFillColorType2;
+                }
+
+                &3 {
+                    fill: $map__shopFillColorType3;
+                }
+
+                &4 {
+                    fill: $map__shopFillColorType4;
+                }
+            }
+
+            &_shadow {
+                fill: $map__shopShadowFillColor--active;
+            }
+        }
+    }
+
+    .icon {
+        &1 {
+            fill: none;
+            stroke: $map__iconFillColor;
+            stroke-width: 1.4px;
+            stroke-miterlimit: 10;
+        }
+
+        &2 {
+            fill: none;
+            stroke: $map__iconFillColor;
+            stroke-miterlimit: 10;
+        }
+
+        &3 {
+            fill: none;
+            stroke: $map__iconFillColor;
+            stroke-width: .5px;
+            stroke-miterlimit: 10;
+        }
+
+        &4 {
+            fill: $map__iconFillColor;
+        }
+
+        &5 {
+            fill: $map__textFillColor;
+        }
+    }
+
+    .text {
+        &1 {
+            font-size: $map__textFontSize;
+            fill: $map__iconFillColor;
+        }
+
+        &2 {
+            cursor: pointer;
+            fill: $map__textFillColor;
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        left: 15px;
+        opacity: 0;
+        transition: all .1s linear;
+    }
+
+    &__plus,
+    &__minus {
+        font-size: $map__controlsTextFontSize;
+        line-height: (30px / $map__controlsTextFontSize);
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 10px 0;
+        transition: all .2s linear;
+        text-align: center;
+        text-decoration: none;
+        color: $map__controlsTextColor;
+        background: $map__controlsBackgroundColor;
+
+        &:hover {
+            background: $map__controlsBackgroundColor--active;
+        }
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $map__infoBorderColor;
+        background: $map__infoBackgroundColor;
+
+        &-close {
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: url('../images/content/icon/close.png') no-repeat;
+        }
+
+        &-image {
+            position: absolute;
+            display: block;
+            text-align: center;
+        }
+
+        &-title {
+            font-size: ($map__infoTextFontSize - 2px);
+            font-weight: 700;
+            position: relative;
+            margin: 0 0 5px;
+        }
+
+        &-link {
+            line-height: 1;
+            display: inline-block;
+            transition: all .2s linear;
+            text-decoration: none;
+            color: $map__infoTextColor;
+            border-bottom: 1px dashed;
+
+            &:hover {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &-floor {
+            position: relative;
+            margin: 0 0 5px;
+            padding: 0 0 0 25px;
+            color: $map__infoFloorTextColor;
+
+            &:before {
+                position: relative;
+                display: block;
+                float: left;
+                width: 16px;
+                height: 17px;
+                margin: 0 9px 0 -25px;
+                content: '';
+                background: url('../images/content/icon/feature.png') 0 -70px no-repeat;
+            }
+        }
+
+        &-feature {
+            position: relative;
+
+            &-item {
+                position: relative;
+                margin: 0 0 4px;
+                padding: 0 0 0 25px;
+
+                &:before {
+                    position: relative;
+                    top: 3px;
+                    display: block;
+                    float: left;
+                    width: 16px;
+                    margin: 0 9px 0 -25px;
+                    content: '';
+                    background: url('../images/content/icon/feature.png') no-repeat;
+                }
+
+                &--type {
+                    &:before {
+                        height: 17px;
+                        background-position: 0 0;
+                    }
+                }
+
+                &--phone {
+                    &:before {
+                        height: 16px;
+                        background-position: 0 -18px;
+                    }
+                }
+
+                &--time {
+                    &:before {
+                        height: 16px;
+                        background-position: 0 -35px;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__legend {
+        line-height: (23px / $map__baseFontSize);
+        position: relative;
+
+        @include clearfix;
+
+        &-item {
+            position: relative;
+            float: left;
+            height: 23px;
+            margin: 0 20px 15px 0;
+            white-space: nowrap;
+        }
+
+        img {
+            position: relative;
+            top: -2px;
+            margin: 0 10px 0 0;
+        }
+    }
+
+    &__button {
+        font-size: $map__controlsTextFontSize;
+        line-height: (40px / $map__controlsTextFontSize);
+        position: relative;
+        display: block;
+        max-width: 320px;
+        height: 40px;
+        margin: 0 auto 30px;
+        transition: all .2s linear;
+        text-align: center;
+        text-decoration: none;
+        color: $map__controlsBackgroundColor;
+        border: 1px solid $map__controlsBackgroundColor;
+        border-radius: 4px;
+
+        &:hover {
+            color: $map__controlsTextColor;
+            background: $map__controlsBackgroundColor--active;
+        }
+    }
+
+    &__note {
+        position: absolute;
+        z-index: 2;
+        max-width: 130px;
+        padding: 10px;
+        text-align: center;
+        color: $map__noteTextColor;
+        border-radius: 5px;
+        background: $map__noteBackgroundColor;
+
+        &:before {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 10px;
+            height: 6px;
+            margin: 0 0 0 -5px;
+            content: '';
+            background: url('../images/content/icon/map-note-arrow.png') no-repeat;
+        }
+    }
+
+    &__pagination {
+        position: relative;
+
+        &-title {
+            font-size: $map__floorPaginationTextFontSize;
+            position: relative;
+            margin: 0 0 13px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #9c9c9a;
+        }
+
+        &-list {
+            position: relative;
+        }
+
+        &-item {
+            position: relative;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-link {
+            position: relative;
+            display: block;
+            text-decoration: none;
+
+            &:hover,
+            &--active {
+                .map {
+                    &__pagination {
+                        &-hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .2s linear;
+            opacity: 0;
+        }
+
+        &-number {
+            font-size: $map__floorPaginationNumberTextFontSize;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            margin: -17px 0 0;
+            text-align: center;
+            color: $map__floorPaginationNumberTextColor;
+        }
+    }
+
+    @media (max-width: $screenSmMax) {
+
+        margin: 0 -15px;
+
+        &__inner {
+            margin-top: 20px;
+        }
+
+        &__info {
+            font-size: ($map__baseFontSize - 2px);
+            padding-left: calc(45% + 30px);
+            margin-top: 20px;
+
+            &-image {
+                font-size: 0;
+                position: absolute;
+                top: 0;
+                left: 10px;
+                bottom: 0;
+                width: 45%;
+
+                &:before {
+                    position: relative;
+                    display: inline-block;
+                    width: 0;
+                    height: 100%;
+                    content: '';
+                    vertical-align: middle;
+                }
+
+                img {
+                    font-size: $map__baseFontSize;
+                }
+            }
+        }
+
+        &__legend {
+            margin: 0 15px;
+        }
+
+        &__pagination {
+            @include clearfix;
+
+            &-item {
+                float: left;
+                width: 25%;
+
+                &:nth-child(1) {
+                    margin: ((64px - 52px) / 2) 0;
+                }
+
+                &:nth-child(2) {
+                    margin: ((64px - 54px) / 2) 0;
+                }
+
+                &:nth-child(3) {
+                    margin: ((64px - 53px) / 2) 0;
+                }
+            }
+
+            &-link {
+                text-align: center;
+            }
+
+            &-hover {
+                left: 50%;
+                margin: 0 0 0 (-93px / 2);
+            }
+        }
+
+    }
+
+    @media (min-width: $screenMdMin) {
+
+        // &__controls {
+        //     left: 0;
+        // }
+
+        &__info {
+            max-width: 270px;
+            padding: 19px;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-50%);
+
+            &-image {
+                position: relative;
+                margin: 0 0 34px;
+            }
+
+            &-title {
+                margin-bottom: 11px;
+            }
+
+            &-floor {
+                margin-bottom: 11px;
+            }
+
+            &-title {
+                font-size: $map__infoTextFontSize;
+            }
+        }
+
+        &__pagination {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            margin: (-320px / 2) 0 0;
+
+            &-item {
+                margin: 0 0 20px;
+            }
+        }
+
+    }
+}

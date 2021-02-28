@@ -1,0 +1,256 @@
+@import 'vars/_variable.scss';
+
+.secondary-menu {
+    font-weight: 300;
+    position: relative;
+    cursor: default;
+
+    &__list {
+        position: relative;
+
+        @include clearfix;
+    }
+
+    &__item {
+        position: relative;
+        width: 78px;
+        height: 65px;
+        opacity: 0;
+        transform: translateX(-78px);
+        transition: all .3s linear;
+        will-change: transform;
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        transition: all .2s linear .4s;
+        border-radius: 0 33px 33px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            transition: all .2s linear .2s;
+            border-radius: 0 33px 33px 0;
+        }
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 65px;
+            height: 65px;
+            display: block;
+            margin: 0 0 0 -45px;
+            content: '';
+            transition: all .2s linear .2s;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &--shop {
+            background-image: url('../images/nav/bg/shop.jpg');
+
+            &:before {
+                background: $secondaryMenu__shopBgColor;
+            }
+
+            &:after {
+                background-color: $secondaryMenu__shopBgColor;
+                background-image: url('../images/nav/icon/shop.png');
+            }
+
+            &.secondary-menu {
+                &__box {
+                    &--active {
+                        &:before {
+                            background: $secondaryMenu__shopMaskBgColor;
+                        }
+
+                        &:after {
+                            background-color: lighten($secondaryMenu__shopBgColor, 10%);
+                        }
+                    }
+                }
+            }
+
+            .secondary-menu {
+                &__link {
+                    background: $secondaryMenu__shopBgColor;
+                }
+            }
+        }
+
+        &--food {
+            background-image: url('../images/nav/bg/food.jpg');
+
+            &:before {
+                background: $secondaryMenu__foodBgColor;
+            }
+
+            &:after {
+                background-color: $secondaryMenu__foodBgColor;
+                background-image: url('../images/nav/icon/food.png');
+            }
+
+            &.secondary-menu {
+                &__box {
+                    &--active {
+                        &:before {
+                            background: $secondaryMenu__foodMaskBgColor;
+                        }
+
+                        &:after {
+                            background-color: lighten($secondaryMenu__foodBgColor, 10%);
+                        }
+                    }
+                }
+            }
+
+            .secondary-menu {
+                &__link {
+                    background: $secondaryMenu__foodBgColor;
+                }
+            }
+        }
+
+        &--service {
+            background-image: url('../images/nav/bg/service.jpg');
+
+            &:before {
+                background: $secondaryMenu__serviceBgColor;
+            }
+
+            &:after {
+                background-color: $secondaryMenu__serviceBgColor;
+                background-image: url('../images/nav/icon/service.png');
+            }
+
+            &.secondary-menu {
+                &__box {
+                    &--active {
+                        &:before {
+                            background: $secondaryMenu__serviceMaskBgColor;
+                        }
+
+                        &:after {
+                            background-color: lighten($secondaryMenu__serviceBgColor, 10%);
+                        }
+                    }
+                }
+            }
+
+            .secondary-menu {
+                &__link {
+                    background: $secondaryMenu__serviceBgColor;
+                }
+            }
+        }
+
+        &--entertainment {
+            background-image: url('../images/nav/bg/entertainment.jpg');
+
+            &:before {
+                background: $secondaryMenu__entertainmentBgColor;
+            }
+
+            &:after {
+                background-color: $secondaryMenu__entertainmentBgColor;
+                background-image: url('../images/nav/icon/entertainment.png');
+            }
+
+            &.secondary-menu {
+                &__box {
+                    &--active {
+                        &:before {
+                            background: $secondaryMenu__entertainmentMaskBgColor;
+                        }
+
+                        &:after {
+                            background-color: lighten($secondaryMenu__entertainmentMaskBgColor, 10%);
+                        }
+                    }
+                }
+            }
+
+            .secondary-menu {
+                &__link {
+                    background: $secondaryMenu__entertainmentBgColor;
+                }
+            }
+        }
+
+        &--active {
+            width: 350px;
+            transition: all .2s linear .2s;
+
+            .secondary-menu {
+                &__link {
+                    padding-left: 100px;
+                    opacity: 1;
+                    transition: all .2s linear .3s;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-size: $secondaryMenu__linkFontSize;
+        line-height: (65px / $secondaryMenu__linkFontSize);
+        position: relative;
+        display: block;
+        overflow: hidden;
+        opacity: 0;
+        width: 100%;
+        padding: 1px 0 0 0;
+        transition: all .2s linear .2s;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        border-radius: 0 33px 33px 0;
+        color: $secondaryMenu__linkColor;
+
+        &:before {
+            font-size: 16px;
+            line-height: (65px / 16px);
+            padding: 0 15px;
+            position: absolute;
+            top: 0;
+            left: 5px;
+            content: attr(data-count);
+            color: $base;
+        }
+    }
+
+    &__sub {
+        &list {
+            font-size: $fontSizeH3;
+            line-height: 1;
+            position: relative;
+            display: none;
+            padding: 5px (25 / 292.5 * 100%) 45px 100px;
+        }
+
+        &item {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        &link {
+            text-decoration: none;
+            color: $secondaryMenu__sublinkColor;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

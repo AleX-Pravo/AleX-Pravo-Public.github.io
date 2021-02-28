@@ -1,0 +1,95 @@
+include vars/_variable.pug
+
+-
+    var pageTitle = 'Main page'
+    var owlCarousel = true
+
+doctype html
+html
+    include core/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            .greeting(style='background-image: url("assets/images/content/bg/greeting.jpg")')
+                a.greeting__link(href='#')
+                include region/header/_header.pug
+                include region/nav/_nav.pug
+
+                nav.nav.nav--device.hide-md-min
+                    = '\n'
+                    //= Primary menu =
+                    .primary-menu
+                        ul.primary-menu__list
+                            each val in mainMenu
+                                li.primary-menu__item
+                                    .primary-menu__box(class='primary-menu__box--' + val.class)
+                                        a.primary-menu__link(href='#')= val.name
+                    //= End primary menu =
+                    = '\n'
+
+            //= Main =
+            main#main.main
+                #nav_side.nav.nav-side.hide-sm-max
+                    include region/nav/module/secondaryMenu/_secondaryMenu.pug
+
+                .container
+                    = '\n'
+                    //= Section =
+                    .section
+                        include module/partners/_partners.pug
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section
+                        .section__title
+                            a.section__link(href='#') Акції
+                        include module/share/_share.pug
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section
+                        .section__title
+                            a.section__link(href='#') Новини
+                        include module/mainNews/_mainNews.pug
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section
+                        .section__title Карта «Златa плазa»
+                        include module/mapZlata/_mapZlata.pug
+                    //= End section =
+                    = '\n'
+
+                    //= Section =
+                    .section
+                        .section__title Наша підтримка
+
+                        - var partners2OwlCarouselInit = true
+
+                        = '\n'
+                        //= Partners =
+                        .partners
+                            #partners2_owl.owl-carousel
+                                each val in partners
+                                    .owl-carousel-item
+                                        a.partners__link(href='#' target='_blank')
+                                            img(src='data/partners/' + val + '.png' alt= val)
+                        //= End partners =
+                        = '\n'
+
+                    //= End section =
+                    = '\n'
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include region/footer/_footer.pug
+        include module/deviceMenu/_deviceMenu.pug
+        include core/_script.pug

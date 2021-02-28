@@ -1,0 +1,25 @@
+@import 'vars/_variable.scss';
+
+.controls-panel {
+    position: relative;
+    float: right;
+    margin: 9px 0 0;
+
+    @media (min-width: $screenXsMin) {
+
+        margin-top: -40px;
+
+    }
+
+    @media (max-width: $screenSmMax) {
+
+        margin-bottom: 9px;
+
+    }
+
+    @media (min-width: $screenMdMin) {
+
+        margin-top: -48px;
+
+    }
+}

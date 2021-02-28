@@ -1,0 +1,78 @@
+include vars/_variable.pug
+
+
+= '\n'
+//= Tab =
+.tab
+    .tab__menu.hide-md-min
+        ul.tab__menu-list
+            li.tab__menu-item
+                a.tab__menu-link(href='#actually')
+                    span.tab__menu-link-text Актуальні
+
+            li.tab__menu-item
+                a.tab__menu-link(href='#all')
+                    span.tab__menu-link-text Всі новини
+
+
+    #actually.tab__content
+        = '\n'
+        //= News =
+        .news
+            .news__section
+                .news__section-title.hide-sm-max Актуальні
+
+                .news__section-content
+                    each val in news
+                        .news__item
+                            .news__inner
+                                a.news__image(href='#')
+                                    img(src='data/main-news/' + val.image + '.jpg' alt='')
+
+                                    span.news__date= val.date
+
+                                .news__content
+                                    .news__title
+                                        a.news__link(href='#')= val.title
+
+                                    .news__description= val.description
+        //= End news =
+        = '\n'
+
+        //= Pagination =
+        .pagination
+            button.pagination__button Дивитись ще
+        //= End pagination =
+        = '\n'
+
+    #all.tab__content
+        = '\n'
+        //= News =
+        .news
+            .news__section
+                .news__section-title.hide-sm-max Всі новини
+
+                .news__section-content
+                    each val in news
+                        .news__item
+                            .news__inner
+                                a.news__image(href='#')
+                                    img(src='data/main-news/' + val.image + '.jpg' alt='')
+
+                                    span.news__date= val.date
+
+                                .news__content
+                                    .news__title
+                                        a.news__link(href='#')= val.title
+
+                                    .news__description= val.description
+        //= End news =
+        = '\n'
+
+        //= Pagination =
+        .pagination
+            button.pagination__button Дивитись ще
+        //= End pagination =
+        = '\n'
+//= Tab =
+= '\n'

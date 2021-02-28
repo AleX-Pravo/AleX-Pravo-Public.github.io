@@ -1,0 +1,62 @@
+@import 'vars/_variable.scss';
+
+.map-zlata {
+    position: relative;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    &__text {
+        font-size: ($mapZlata__textFontSize - 4px);
+        font-weight: 300;
+        display: block;
+        color: $mapZlata__textColor;
+        border-radius: 5px;
+    }
+
+    @media (max-width: $screenMbMax) {
+
+        &__text {
+            margin: 20px 0;
+        }
+
+    }
+
+    @media (min-width: $screenXsMin) {
+
+        &__text {
+            font-size: $mapZlata__textFontSize;
+            position: absolute;
+            padding: 20px;
+
+            &--left {
+                left: 20px;
+            }
+
+            &--right {
+                right: 20px;
+            }
+
+            &--1 {
+                top: 18%;
+            }
+
+            &--2 {
+                top: 43%;
+            }
+
+            &--3 {
+                top: 68%;
+            }
+        }
+
+    }
+
+    @media (max-width: $screenSmMax) {
+
+        &__text {
+            background: $mapZlata__backgroundColor;
+        }
+
+    }
+}

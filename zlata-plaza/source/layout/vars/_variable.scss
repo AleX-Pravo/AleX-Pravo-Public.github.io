@@ -1,0 +1,58 @@
+//- BASE
+//------------------------------------------------
+
+//- Colors
+
+$base:                  #fff !default;
+$grayBase:              #000 !default;
+$grayDarker:            #111 !default;
+$grayDark:              #313131 !default;
+$gray:                  #484848 !default;
+$grayLight:             #858585 !default;
+$grayLighter:           #999 !default;
+
+$brandPrimary:          #000 !default;
+$brandSuccess:          #000 !default;
+$brandInfo:             #000 !default;
+$brandWarning:          #000 !default;
+$brandDanger:           #000 !default;
+
+//- Reset
+
+$bodyBg:                $base !default;
+$textColor:             $grayDark !default;
+$linkColor:             $brandPrimary !default;
+$linkColor--active:     #f7a600 !default;
+
+
+//- Typography
+
+$fontFamilySansSerif:   'Myriad Pro', 'Arial', sans-serif !default;
+
+$fontFamilyBase:        $fontFamilySansSerif !default;
+
+$fontSizeBase:          14px !default;
+$fontSizeLarge:         18px !default;
+$fontSizeSmall:         12px !default;
+
+$fontSizeH1:            30px !default;
+$fontSizeH2:            29px !default;
+$fontSizeH3:            20px !default;
+$fontSizeH4:            16px !default;
+$fontSizeH5:            13px !default;
+$fontSizeH6:            11px !default;
+
+$lineHeightBase:        1.5 !default; // 21/14
+
+
+//- Media queries breakpoints
+
+$screenXsMin:           600px !default;
+$screenSmMin:           800px !default;
+$screenMdMin:           1024px !default;
+$screenLgMin:           1200px !default;
+
+$screenMbMax:           ($screenXsMin - 1) !default;
+$screenXsMax:           ($screenSmMin - 1) !default;
+$screenSmMax:           ($screenMdMin - 1) !default;
+$screenMdMax:           ($screenLgMin - 1) !default;

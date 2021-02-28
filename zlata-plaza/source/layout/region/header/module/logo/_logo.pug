@@ -1,0 +1,12 @@
+include vars/_variable.pug
+
+= '\n'
+//= Logo =
+.logo
+    if (pageTitle != 'Main page')
+        a.logo__link(href='#')
+            img(src='assets/images/header/logo.png' alt='')
+    else
+        img(src='assets/images/header/logo.png' alt='')
+//= End logo =
+= '\n'

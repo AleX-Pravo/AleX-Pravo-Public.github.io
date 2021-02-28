@@ -1,0 +1,25 @@
+@import 'vars/_variable.scss';
+
+.page404 {
+    position: relative;
+    max-width: 630px;
+    margin: 73px auto 90px;
+    text-align: center;
+
+    &__image {
+        position: relative;
+        margin: 0 0 32px;
+    }
+
+    &__text {
+        font-size: $page404__textFontSize;
+        line-height: (34px / $page404__textFontSize);
+        position: relative;
+        margin: 0 0 10px;
+    }
+
+    &__link {
+        font-size: $page404__textFontSize;
+        color: $page404__textColor
+    }
+}

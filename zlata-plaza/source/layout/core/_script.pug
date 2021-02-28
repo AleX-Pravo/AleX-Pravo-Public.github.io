@@ -1,0 +1,269 @@
+if (photoswipe)
+    = '\n'
+    //= Photoswipe layout =
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= End photoswipe layout =
+
+= '\n'
+//= Script =
+script(src=bowerDir + 'jquery/dist/jquery.min.js')
+
+if (owlCarousel)
+    script(src=bowerDir + 'owl.carousel/dist/owl.carousel.min.js')
+
+if (slick)
+    script(src=bowerDir + 'slick-carousel/slick/slick.min.js')
+
+if (photoswipe)
+    script(src=bowerDir + 'photoswipe/dist/photoswipe.min.js')
+    script(src=bowerDir + 'photoswipe/dist/photoswipe-ui-default.min.js')
+
+if (panzoom)
+    script(src=bowerDir + 'jquery.panzoom/dist/jquery.panzoom.js')
+    script(src='assets/js/map' + minSuffix + '.js')
+
+    script.
+        function showInstituionPopup() {
+            console.log('work-work!');
+        }
+
+if (select2)
+    script(src=bowerDir + 'select2/dist/js/select2.full.min.js')
+
+script(src='assets/js/main' + minSuffix + '.js')
+
+if (partnersOwlCarouselInit)
+    script.
+        $(document).ready(function() {
+            $('#partners_owl').owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    250: {
+                        items: 2
+                    },
+                    500: {
+
+                        items: 3
+                    },
+                    750: {
+
+                        items: 4
+                    },
+                    1000: {
+
+                        items: 5
+                    },
+                    1200: {
+
+                        items: 6
+                    }
+                }
+            });
+        });
+
+if (partners2OwlCarouselInit)
+    script.
+        $(document).ready(function() {
+            $('#partners2_owl').owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    250: {
+                        items: 2
+                    },
+                    500: {
+
+                        items: 3
+                    },
+                    750: {
+
+                        items: 4
+                    },
+                    1000: {
+
+                        items: 5
+                    },
+                    1200: {
+
+                        items: 6
+                    }
+                }
+            });
+        });
+
+if (shareOwlCarouselInit)
+    script.
+        $(document).ready(function() {
+            $('#share_owl').owlCarousel({
+                margin: 30,
+                loop: true,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    }
+                }
+            });
+        });
+
+if (mainNewsOwlCarouselInit)
+    script.
+        $(document).ready(function() {
+            $('#main-news_owl').owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+if (shopSlickInit)
+    script.
+        $(document).ready(function() {
+            $('#shop_slick-for').slick({
+                arrows: false,
+                //- asNavFor: '#shop_slick-nav',
+                dots: true,
+                fade: true,
+                autoplay: true,
+                pauseOnHover: false
+                //- infinite: false,
+                //- slidesToShow: 1,
+                //- slidesToScroll: 1,
+                //- mobileFirst: true,
+                //- responsive: [
+                //-     {
+                //-         breakpoint: 1023,
+                //-         settings: {
+                //-             dots: false
+                //-         }
+                //-     }
+                //- ]
+            });
+
+            //- $('#shop_slick-nav').slick({
+            //-     asNavFor: '#shop_slick-for',
+            //-     focusOnSelect: true,
+            //-     slidesToShow: 3,
+            //-     slidesToScroll: 1,
+            //-     vertical: true
+            //- });
+        });
+
+if (newsInnerSlickInit)
+    script.
+        $(document).ready(function() {
+            $('#news-inner_slick').slick({
+                arrows: false,
+                dots: true,
+                fade: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+
+if (formSelect2Init)
+    script.
+        $(document).ready(function() {
+            $('.select').select2({
+                minimumResultsForSearch: Infinity
+            });
+        });
+
+if (shopPhotoswipeInit)
+    script.
+        $(document).ready(function () {
+            // execute above function
+            initPhotoSwipeFromDOM('#shop_slick-for');
+        });
+
+if (galleryInnerPhotoswipeInit)
+    script.
+        $(document).ready(function () {
+            // execute above function
+            initPhotoSwipeFromDOM('#gallery-inner_gallery');
+        });
+
+if (newsInnerPhotoswipeInit)
+    script.
+        $(document).ready(function () {
+            // execute above function
+            initPhotoSwipeFromDOM('#news-inner_slick');
+        });
+
+if (aboutOwlCarouselInit)
+    script.
+        $(document).ready(function() {
+            $('.about__project-owl-carousel').owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+
+                        items: 2
+                    },
+                    1024: {
+
+                        items: 3
+                    }
+                }
+            });
+        });
+//= End script =
+= '\n'
