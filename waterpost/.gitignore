@@ -28,6 +28,5 @@ nbproject
 .sass-cache
 .tmp
 _tmp
-vendor
 node_modules
 bower_components
