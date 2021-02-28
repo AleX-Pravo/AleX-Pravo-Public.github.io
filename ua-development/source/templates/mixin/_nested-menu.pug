@@ -1,0 +1,17 @@
+mixin nested-menu(obj)
+    each item in obj
+        -
+            main = (item.main) ? 'main' : ''
+        
+        if item.list
+            li.has-children
+                a(href='javascript:void(0);' class= main)= item.title
+                    span.nested-menu__button.go-forward
+                ul.is-hidden
+                    li
+                        a(href='javascript:void(0);' class= main)= item.title
+                            span.nested-menu__button.go-back
+                    +nested-menu(item.list)
+        else
+            li
+                a(href='javascript:void(0);')= item.title

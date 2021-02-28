@@ -1,0 +1,14 @@
+= '\n'
+//= index-news =
+//- (source/assets/css/module/_index-news.scss)
+.index-news
+    .container
+        .index-news__top
+            h2 Новини
+            .index-news__link
+                a(href="blog.html") Всі новини
+                +icon('icon-right-arrow')
+        - cycleNumber = 1
+        include _index-newsWrap.pug
+//= End index-news =
+= '\n'

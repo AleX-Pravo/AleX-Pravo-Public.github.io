@@ -1,0 +1,153 @@
+.investment-card {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &--right {
+        .investment-card {
+            &__slider {
+                order: 1;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 300px;
+                    height: 275px;
+                    right: 0;
+                    top: 0;
+                    background: url(../../images/square.svg) no-repeat;
+                    z-index: -1;
+                    left: auto;
+                }
+            }
+
+            &__swiper {
+                left: 0;
+            }
+
+            &__block {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &__text {
+                padding: 0;
+                order: 1;
+            }
+        }
+    }
+
+    &:last-child {
+        &::before {
+            content: '';
+            display: none;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        left: 0;
+        top: 100%;
+        border-bottom: 1px solid $brandInfo;
+    }
+
+    &__slider {
+        width: 100%;
+        position: relative;
+        margin: auto;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 300px;
+            height: 275px;
+            left: 0;
+            top: 0;
+            background: url(../../images/square.svg) no-repeat;
+            z-index: -1;
+            display: none;
+        }
+    }
+
+    &__text {
+        max-width: 570px;
+        width: 100%;
+        margin: 35px auto 0;
+    }
+
+    //600px 
+    @media (min-width: $screen_S_Min) {
+
+        &--right {
+            .investment-card {
+
+                &__block {
+                    left: 0;
+                    right: auto;
+                    transform: none;
+                }
+            }
+        }
+
+        &__slider {
+            max-width: 570px;
+            height: 365px;
+
+            &::before {
+                display: block;
+            }
+        }
+
+        &__text {
+            margin: 25px auto 0;
+        }
+    }
+
+    //980px 
+    @media (min-width: 980px) {
+        flex-flow: row nowrap;
+        padding-bottom: 40px;
+
+        &--right {
+            .investment-card {
+                &__slider {
+                    order: 2;
+                }
+
+                &__text {
+                    padding: 0 (30 / 1170) * 100% 0 0;
+                }
+            }
+        }
+
+        &__slider {
+            width: (570 / 1170) * 100%;
+            margin: 0;
+        }
+
+        &__text {
+            width: (600 / 1170) * 100%;
+            padding-left: (30 /1170) *100%;
+            margin: 0;
+            z-index: 1;
+            max-width: none;
+
+            &__wrap {
+                padding: 14px 20px 14px;
+            }
+        }
+    }
+
+    @media (min-width: 1300px) {
+
+        &__text {
+            margin-top: 56px;
+        }
+    }
+}

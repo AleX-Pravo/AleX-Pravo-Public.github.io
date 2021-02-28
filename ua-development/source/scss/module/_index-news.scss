@@ -1,0 +1,119 @@
+.index-news {
+    padding-bottom: 80px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 30px;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: -3px;
+
+        a {
+            font-size: $fontSize16;
+            line-height: 19px;
+            color: $brandPrimary;
+            position: relative;
+            text-decoration: none;
+            display: block;
+            margin-right: 10px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                border: 1px dashed $brandPrimary;
+                left: 0;
+                width: 100%;
+                top: 92%;
+            }
+        }
+
+        svg {
+            width: 7px;
+            height: 11px;
+            fill: $brandPrimary;
+        }
+    }
+
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 -15px;
+        flex-flow: row wrap;
+    }
+
+    &__inner {
+        width: 100%;
+        padding: 0 15px 30px;
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__info {
+        padding: 0 16px 11px;
+        border: 1px solid $brandInfo;
+        border-top: none;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: $fontSize20;
+        line-height: 24px;
+        color: $grayDark;
+        margin-bottom: 30px;
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__text {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 50px;
+            top: -18px;
+            border: 2px solid $brandPrimary;
+        }
+
+        p {
+            height: 100px;
+            font-size: $fontSize16;
+            line-height: 24px;
+            color: $grayLight;
+            margin: 0;
+        }
+    }
+
+    //600px
+    @media (min-width: $screen_S_Min) {
+
+        &__inner {
+            width: 50%;
+        }
+
+        &__title {
+            height: 50px;
+            overflow: hidden;
+        }
+    }
+}

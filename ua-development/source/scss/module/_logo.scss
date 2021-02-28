@@ -1,0 +1,14 @@
+.logo {
+    text-align: center;
+
+    svg {
+        margin-top: 10px;
+        height: 50px;
+    }
+    //768px
+    @media (min-width: $screen_M_Min) {
+        svg {
+            height: 69px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+= '\n'
+//= name-block =
+//-=(module/_name-block.scss)=
+.name-block
+    h1= nameBlock
+    if (nameBlockButton)
+        .name-block__button
+            //-.name-block__button-dark
+                - classButtonDark = 'attractinvestors-modal'
+                - hrefButtonDark = '#attractinvestors-drive'
+                - buttonNameDark = 'Залучити інвесторів'
+                include _button-dark.pug
+            .name-block__button-white
+                - classButtonWhite = 'attractinvestors-modal'
+                - hrefButtonWhite = '#attractinvestors-drive'
+                - buttonNameWhite = 'Залучити інвесторів'
+                include _button-white.pug
+            .name-block__button-white
+                - classButtonWhite = 'invest-modal'
+                - hrefButtonWhite = '#invest-drive'
+                - buttonNameWhite = 'Інвестувати'
+                include _button-white.pug
+//= End name-block =
+= '\n'

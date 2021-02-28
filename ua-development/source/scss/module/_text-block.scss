@@ -1,0 +1,24 @@
+.text-block {
+    margin: -17px 0 70px;
+
+    &__img {
+        margin: 0 0 30px;
+
+        img {
+            margin: auto;
+        }
+    }
+
+    //860px
+    @media (min-width: 860px) {
+
+        &__img {
+            float: left;
+            margin: 0 30px 10px 0;
+
+            img {
+                margin: 0;
+            }
+        }
+    }
+}

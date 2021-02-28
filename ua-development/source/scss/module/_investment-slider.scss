@@ -1,0 +1,95 @@
+.investment-slider {
+    margin-bottom: 67px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &__swiper {
+        margin: 0;
+    }
+
+    &__block {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgba(50, 50, 50, 0.95);
+        width: 100%;
+        height: 30px;
+        z-index: 1;
+
+        .swiper {
+
+            &-pagination {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 49%;
+
+                &-bullet {
+                    width: 6px;
+                    height: 6px;
+                    margin-right: 10px;
+                    background: $grayLight;
+
+                    &-active {
+                        background: $base;
+                    }
+                }
+            }
+
+            &-button-prev,
+            &-button-next {
+                background-image: none;
+                width: 7px;
+                height: 11px;
+                margin-top: -9px;
+                outline: none;
+
+                &.swiper-button-disabled {
+                    svg {
+                        fill: $grayLight;
+                    }
+                }
+
+                svg {
+                    fill: $base;
+                    width: 7px;
+                    height: 11px;
+                }
+            }
+
+            &-button-prev {
+                left: auto;
+                right: 26%;
+            }
+
+            &-button-next {
+                left: auto;
+                right: 20%;
+            }
+        }
+    }
+
+    //480px 
+    @media (min-width: $screen_XS_Min) {
+
+        &__block {
+            max-width: 300px;
+            background: $grayDark;
+            height: 50px;
+        }
+    }
+
+    //1024px 
+    @media (min-width: $screen_L_Min) {
+
+        &__swiper {
+            width: 95%;
+            margin: 0;
+        }
+
+        &__block {
+            height: 100px;
+        }
+    }
+}

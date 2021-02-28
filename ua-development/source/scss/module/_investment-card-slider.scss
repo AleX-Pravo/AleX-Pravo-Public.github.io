@@ -1,0 +1,119 @@
+.investment-card {
+
+    &__swiper {
+        position: relative;
+
+        a {
+            text-align: center;
+            display: flex;
+        }
+    }
+
+    &__block {
+        position: absolute;
+        z-index: 1;
+        top: 109%;
+        outline: none;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &-wrap {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .swiper {
+
+            &-pagination {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                white-space: nowrap;
+                height: 6px;
+
+                &-bullet {
+                    width: 6px;
+                    height: 6px;
+                    margin-right: 3px;
+                    background: #757575;
+
+                    &-active {
+                        background: $grayLight;
+                    }
+                }
+            }
+
+            &-button-prev,
+            &-button-next {
+                background-image: none;
+                width: 11px;
+                height: 18px;
+                width: 20px;
+                height: 24px;
+                margin-top: -12px;
+                outline: none;
+                position: relative;
+
+                &.swiper-button-disabled {
+                    opacity: 1;
+
+                    svg {
+                        fill: $brandPrimary;
+                    }
+                }
+
+                svg {
+                    fill: $grayDark;
+                    width: 11px;
+                    height: 18px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            &-button-prev {
+                left: auto;
+                margin-right: 4px;
+            }
+
+            &-button-next {
+                right: auto;
+            }
+        }
+    }
+
+    //600px
+    @media (min-width: $screen_S_Min) {
+
+        &__swiper {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            max-width: 530px;
+        }
+
+        &__block {
+            top: -19px;
+            left: auto;
+            transform: none;
+            right: 0;
+        }
+    }
+
+    //980px
+    @media (min-width: 980px) {
+
+        &__swiper {
+            width: (530 / 570) * 100%;
+            margin: 0;
+            right: 0;
+            left: auto;
+        }
+
+        &__block {
+        }
+    }
+}

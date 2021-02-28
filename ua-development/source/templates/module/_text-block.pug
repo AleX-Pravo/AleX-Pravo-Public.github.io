@@ -1,0 +1,29 @@
+= '\n'
+//= text-block =
+//- (source/assets/css/module/_text-block.scss)
+.text-block.text
+    .text-block__img
+        //proportions and the maximum size of images 670x380
+        img(src="../data/investment-inner/2.jpg", alt="")
+
+    if (p1)
+        p= p1
+
+    if (li1)
+        ul
+            if (li1)
+                li= li1
+            if (li2)
+                li= li2
+            if (li3)
+                li= li3
+            if (li4)
+                li= li4
+
+    if (p2)
+        p= p2
+    if (p3)
+        p= p3
+        include _text-audit.pug
+//= End text-block =
+= '\n'

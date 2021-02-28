@@ -1,0 +1,100 @@
+//- Utility
+
+include utils/_variable.pug
+
+-
+    pageTitle = 'investment'
+    nameTitle = 'Інвестиційна діяльність'
+    //-subTitle = 'Маршрути'
+
+    //- use if necessary
+    swiper = true
+    //easeSwiper = true
+    innerSwiper = true
+    //mCustomScrollbar = true
+    magnificPopup = true // init magnificPopup styles
+    magnificPopupOrdercall = true
+    magnificPopupAttractinvestors = true
+    magnificPopupInvest = true
+
+
+    //for breadcrumbs
+    breadcrumbItems = ['Головна']
+
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout.layout
+            include layout/_header.pug
+            //= Main =
+            main#main.main
+                .container
+                    .layout-box
+                        .layout-box__content.__base
+                            include module/_breadcrumb.pug
+                            - nameBlock = 'Інвестиційна діяльність'
+                            - nameBlockButton = true
+                            include module/_name-block.pug
+                            - for(let i = 1; i <= 3; i++)
+                                - if (i % 2 == 0)  //2,4,6,8 все четные числа
+                                    - let card = true
+                                    include module/_investment-card.pug
+
+                                - else
+                                    include module/_investment-card.pug
+                        .layout-box__nav.__right
+                            include layout/header/secondMenu/_secondMenu.pug
+            //= End main =
+            = '\n'
+
+            #shadow
+
+        //= End layout =
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.mfp-hide#ordercall-drive
+
+            .modal__content
+                - ordercall = true
+                include module/_popup.pug
+                - ordercall = false
+
+        //= End modal =
+        = '\n'
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.mfp-hide#attractinvestors-drive
+
+            .modal__content
+                - attractinvestors = true
+                include module/_popup.pug
+                - attractinvestors = false
+
+        //= End modal =
+        = '\n'
+
+        = '\n'
+        //= Modal =
+        .modal.modal--user.mfp-hide#invest-drive
+
+            .modal__content
+                - invest = true
+                include module/_popup.pug
+                - invest = false
+
+        //= End modal =
+        = '\n'
+
+        include layout/_footer.pug
+        include module/_mobile-menu.pug
+        include module/_cookies.pug
+
+        include layout/_sprite.pug
+        include layout/_scripts.pug

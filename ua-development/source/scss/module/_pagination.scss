@@ -1,0 +1,119 @@
+.pagination {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px 0;
+    flex-flow: row wrap;
+
+    li {
+        position: relative;
+
+        &:not(:last-child) {
+            margin: 0 20px 0 0;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $grayDark;
+            cursor: pointer;
+            //border: 1px solid $brandPrimary;
+            background: transparent;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: $fontSize16;
+        }
+
+        &:hover,
+        &.active {
+
+            a {
+                color: $base;
+                background: $brandPrimary;
+                border-color: $brandPrimary;
+            }
+        }
+
+        &.prev,
+        &.next {
+
+            span,
+            a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                text-decoration: none;
+                //background: url(../images/example/arrows_slider.png) no-repeat;
+                //background-position-y: -22px;
+                cursor: pointer;
+                border-color: transparent;
+                position: relative;
+                background: none;
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    fill: $brandPrimary;
+                    width: 8px;
+                    height: 19px;
+                }
+
+            }
+
+            &.prev {
+
+                span,
+                a {
+
+                    svg {
+                        right: 7px;
+                    }
+                }
+            }
+
+            &.next {
+
+                span,
+                a {
+
+                    svg {
+                        left: 7px;
+                    }
+                }
+            }
+
+            span {
+                display: none;
+                background-position-y: 0;
+            }
+
+            &.disabled {
+                span {
+                    display: block;
+
+                    svg {
+                        fill: $grayLight;
+                    }
+                }
+
+                a {
+                    display: none;
+                }
+            }
+        }
+
+        &.next {
+
+            span,
+            a {
+                //background-position-x: -13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.contacts {
+    margin: 20px 0 80px;
+    position: relative;
+
+    &__info {
+        position: relative;
+        top: 10px;
+        background: $base;
+        border: 1px solid $brandInfo;
+        padding: 17px 10px 0px 28px;
+        max-width: 320px;
+        width: 100%;
+        transform: translateX(-50%);
+        left: 50%;
+
+        h1 {
+            font-weight: normal;
+            position: relative;
+            margin: 0 0 17px !important;
+            font-size: 25px;
+            line-height: 30px;
+            color: $grayDark;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 50px;
+                top: 104%;
+                border: 1px solid $brandPrimary;
+            }
+        }
+    }
+
+    &__list {
+
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            &:last-child {
+                a {
+                    cursor: text;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &__inner {
+                padding-left: 10px;
+
+                p {
+                    font-weight: 500;
+                    font-size: $fontSize16;
+                    line-height: 19px;
+                    color: $grayLight;
+                    margin: 0 0 1px;
+                }
+
+                a {
+                    font-size: $fontSize16;
+                    line-height: 19px;
+                    color: $grayDark;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    //600px
+    @media (min-width: $screen_S_Min) {
+
+        &__info {
+            position: absolute;
+            left: 10px;
+            transform: none;
+
+            h1 {
+                font-size: 40px;
+                line-height: 50px;
+            }
+        }
+    }
+
+    @media (min-width: 980px) {
+        &__info {
+            h1 {
+                font-size: 50px;
+                line-height: 60px;
+                margin: 0;
+            }
+        }
+    }
+
+    //1024px
+    @media (min-width: $screen_L_Min) {
+
+        &__info {
+            top: 83px;
+            left: 81px;
+        }
+    }
+}

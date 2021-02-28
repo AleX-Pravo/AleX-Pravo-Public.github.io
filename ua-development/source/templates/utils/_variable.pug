@@ -1,0 +1,343 @@
+include ../mixin/_sprite-svg.pug
+
+-
+    listItems = [
+        {
+            main: true,
+            title: 'list 1',
+            list: [
+                {
+                    title: 'list 1.1'
+                },
+                {
+                    title: 'list 1.2'
+                },
+                {
+                    title: 'list 1.3'
+                },
+                {
+                    title: 'list 1.4'
+                },
+                {
+                    title: 'list 1.5'
+                },
+                {
+                    title: 'list 1.6'
+                },
+                {
+                    title: 'list 1.7'
+                },
+                {
+                    title: 'list 1.8'
+                }
+            ]
+        },
+        {
+            main: true,
+            title: 'list 2',
+            list: [
+                {
+                    title: 'list 2.1'
+                },
+                {
+                    title: 'list 2.2'
+                },
+                {
+                    main: true,
+                    title: 'list 2.3',
+                    list: [
+                        {
+                            title: 'list 2.3.1'
+                        },
+                        {
+                            title: 'list 2.3.2'
+                        },
+                        {
+                            title: 'list 2.3.3'
+                        },
+                        {
+                            title: 'list 2.3.4'
+                        },
+                        {
+                            title: 'list 2.3.5'
+                        }
+                    ]
+                },
+                {
+                    main: true,
+                    title: 'list 2.4',
+                    list: [
+                        {
+                            title: 'list 2.4.1'
+                        },
+                        {
+                            title: 'list 2.4.2'
+                        },
+                        {
+                            title: 'list 2.4.3'
+                        },
+                        {
+                            title: 'list 2.4.4'
+                        }
+                    ]
+                },
+                {
+                    main: true,
+                    title: 'list 2.5',
+                    list: [
+                        {
+                            title: 'list 2.5.1'
+                        },
+                        {
+                            title: 'list 2.5.2'
+                        },
+                        {
+                            title: 'list 2.5.3'
+                        },
+                        {
+                            title: 'list 2.5.4'
+                        },
+                        {
+                            title: 'list 2.5.5'
+                        },
+                        {
+                            title: 'list 2.5.6'
+                        }
+                    ]
+                },
+                {
+                    title: 'list 2.6'
+                },
+                {
+                    title: 'list 2.7'
+                },
+                {
+                    title: 'list 2.8'
+                },
+                {
+                    title: 'list 2.9'
+                },
+                {
+                    title: 'list 2.10'
+                },
+                {
+                    title: 'list 2.11'
+                }
+            ]
+        }
+    ]
+
+    socialListItems = [
+        'instagram', 'facebook'
+        //'facebook'
+    ]
+
+    filterListItems = [
+        {
+            hide: true,
+            title: 'Производитель',
+            list: [
+                {
+                    name: 'Embawood',
+                    counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Arbor Drev',
+                    counter: '(14)',
+                    checked: true,
+                    disabled: false
+                },
+                {
+                    name: 'BRW Брест',
+                    counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Dizi',
+                    counter: '(0)',
+                    disabled: true,
+                    checked: false
+                },
+                {
+                    name: 'Luxe Studio',
+                    counter: '(0)',
+                    disabled: true,
+                    checked: false
+                }
+            ]
+        },
+        {
+            title: 'Производитель',
+            list: [
+                {
+                    name: 'Embawood',
+                    counter: '(5)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Arbor Drev',
+                    counter: '(14)',
+                    checked: true,
+                    disabled: false
+                },
+                {
+                    name: 'BRW Брест',
+                    counter: '(3)',
+                    checked: false,
+                    disabled: false
+                },
+                {
+                    name: 'Dizi',
+                    counter: '(0)',
+                    disabled: true,
+                    checked: false
+                },
+                {
+                    name: 'Luxe Studio',
+                    counter: '(0)',
+                    disabled: true,
+                    checked: false
+                }
+            ]
+        }
+    ]
+
+    primaryMenu = [
+        {
+            href: 'investment.html',
+            name: 'Інвестиційна діяльність'
+        },
+        {
+            href: 'legal.html',
+            name: 'Юридична допомога'
+        },
+        {
+            href: 'architecture.html',
+            name: 'Архітектура та дизайн'
+        },
+        {
+            href: 'catalogue.html',
+            name: 'Каталог нерухомості'
+        }
+    ] 
+
+    secondMenu = [
+        {
+            href: 'aboutcompany.html',
+            class: '',
+            name: 'Про компанію'
+        },
+        {
+            href: 'blog.html',
+            class: '',
+            name: 'Блог'
+        },
+        {
+            href: 'contacts.html',
+            class: '',
+            name: 'Контакти'
+        },
+        {
+            href: '#ordercall-drive',
+            class: 'ordercall-modal',
+            name: 'Замовити дзвінок'
+        }
+    ] 
+
+    indexServices = [
+        {
+            imageFull: '1.jpg',
+            title: 'Інвестиційна діяльність',
+            icon: 'services-invest',
+            text: 'Допомога у інвестуванні та пошуку інвесторів'
+        },
+        {
+            imageFull: '1.jpg',
+            title: 'Юридична допомога та супровід об\'єктів будівництва',
+            icon: 'services-legal',
+            text: 'Супровід процесу оформлення права власності на об’єкти нерухомості введення в експлуатацію збудованого нерухомого майна'
+        },
+        {
+            imageFull: '1.jpg',
+            title: 'Каталог нерухомості',
+            icon: 'services-office',
+            text: 'Земельні ділянки та об\'єкти нерухомості'
+        },
+        {
+            imageFull: '1.jpg',
+            title: 'Архітектура, проектування та дизайн',
+            icon: 'services-architectural',
+            text: 'Фахівці з управління проектами, архітектори, досвідчені дизайнери втілюють іноваційні та унікальні рішення у кожному з наших проектів'
+        }
+    ]           
+
+    indexNews = [
+        {
+            img: '1',
+            //date: '08.07.2019',
+            title: 'Став партнером літньої школи урбаністики в кнуба',
+            text: 'Development в рамках Академії KAN приєднався до Літньої Школи Урбаністики КНУБА, що проходить за підтримки німецького фонду: Stiffing zur Foerderung des Bauwesens, Kyjiw. Літня Школа Урбаністики об`єднує студентів-урбаністів та викладачів з усієї України, провідних'
+        },
+        {
+            img: '2',
+            //date: '07.07.2019',
+            title: 'Ua-development запустив проект «маленькі експерти»',
+            text: 'Ми створюємо житлові квартали по-справжньому живими та максимально зрозумілими для дітей. Батьки цінують PRO-квартири, сучасну архітектуру, ефективну теплоізоляцію... але навіщо це дітям? Їм важливо, щоби у дворі можна було гратися зранку до вечора.'
+        }
+    ]
+
+    catalogue = [
+        {
+            img: '1',
+            title: 'Житловий квартал «Respublika»',
+            text: 'Живий квартал Respublika — це продовження проектів малоповерхової квартальної забудови, що розвиваються спільними зусиллями компаній Development.',
+            value: '7 га',
+            number: '1 500 000 грн'
+        },
+        {
+            img: '2',
+            title: 'Жк «Сentral Park»',
+            text: 'Живий квартал Сentral Park — це продовження проектів малоповерхової квартальної забудови, що розвиваються спільними зусиллями компаній Development.',
+            value: '41 592 м2',
+            number: '2 000 000 грн'
+        },
+        {
+            img: '2',
+            title: 'Жк «Сentral Park»',
+            text: 'Живий квартал Сentral Park — це продовження проектів малоповерхової квартальної забудови, що розвиваються спільними зусиллями компаній Development.',
+            value: '41 592 м2',
+            number: '1 500 000 грн'
+        },
+        {
+            img: '1',
+            title: 'Житловий квартал «Respublika»',
+            text: 'Живий квартал Respublika — це продовження проектів малоповерхової квартальної забудови, що розвиваються спільними зусиллями компаній Development.',
+            value: '7 га',
+            number: '2 000 000 грн'
+        },
+    ]
+
+    contacts = [
+        {
+            icon: 'phone',
+            name: 'Телефонуйте',
+            href: 'tel:0673058569',
+            numbers: '(067) 30-58-569'
+        },
+        {
+            icon: 'main',
+            name: 'Надсилайте лист',
+            href: 'mailto:uadevelopment@gmail.com',
+            numbers: 'uadevelopment@gmail.com'
+        },
+        {
+            icon: 'intent',
+            name: 'Завітайте до нас',
+            href: 'javascript:void(0);',
+            numbers: 'м. Рівне, вул. Київська, 65'
+        }
+    ]

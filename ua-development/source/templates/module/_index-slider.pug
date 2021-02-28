@@ -1,0 +1,12 @@
+= '\n'
+//= index-slider =
+//- (source/assets/css/module/_index-slider.scss)
+.index-slider
+    .index-slider__swiper
+        - swiperImg = 'index/bigslider/banner1.jpg'
+        .swiper-object
+            include _slider-swiper.pug
+    //-.index-slider__second-menu.__right-index
+        include ../layout/header/secondMenu/_secondMenu.pug
+//= End index-slider =
+= '\n'

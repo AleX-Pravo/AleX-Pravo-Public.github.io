@@ -1,0 +1,330 @@
+.modal {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px;
+    background: $base;
+    width: 100%;
+
+    &--user {
+        padding: 0;
+        max-width: 460px;
+    }
+
+    &--progress {
+        padding: 0;
+        max-width: 1245px;
+        height: 540px;
+
+        .popup {
+            max-width: none;
+            width: 100%;
+            background: $base;
+            padding: 20px 0px;
+            margin: auto;
+
+            &__wrapper {
+                max-width: none;
+                width: 100%;
+                margin: 0 auto;
+
+                .swiper-slide {
+                    width: (100 / 6) * 1%;
+                }
+            }
+        }
+    }
+
+    &--message {
+        width: auto;
+        max-width: 460px;
+
+        p {
+            text-align: center;
+            font-size: $fontSize20;
+            line-height: 30px;
+            color: $grayDark;
+            font-weight: normal;
+            margin: 18px 0;
+        }
+    }
+
+    &__wrapper {
+
+        h2 {
+            text-align: center;
+            font-size: 25px;
+            line-height: 30px;
+            color: $grayDark;
+            font-weight: normal;
+            margin: 0 0 30px;
+        }
+
+        .swiper-slider__block {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            background: transparent;
+            height: 64px;
+
+            .swiper-current {
+                color: $brandPrimary;
+            }
+
+            .swiper-pagination-bullet {
+                opacity: .9;
+
+                &-active {
+                    background: $brandPrimary;
+                }
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+
+                svg {
+                    fill: $brandPrimary;
+                }
+            }
+        }
+    }
+
+    .mfp {
+        &-close {
+            color: $grayBase;
+            font-size: $fontSize30;
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &.cart-open {
+        display: none;
+        //position: relative;
+        vertical-align: middle;
+        margin: 0 auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+
+        &.move {
+            display: inline-block;
+            display: block;
+            z-index: 56;
+        }
+    }
+
+    .close {
+        color: $grayDark;
+        font-size: $fontSize30;
+        width: 35px;
+        height: 35px;
+        background: transparent;
+        border: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    //600px
+    @media (min-width: $screen_S_Min) {
+
+        h2 {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+
+    @media (min-width: 980px) {
+
+        h2 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+}
+
+.custom-popup {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+
+    &[data-active='true'] {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s step-end,
+        opacity .2s ease-in-out;
+    }
+
+    &[data-active='false'] {
+        transition: visibility 0s step-end .2s,
+        opacity .2s ease-in-out;
+    }
+}
+
+.custom-popup-mask {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparentize($grayBase, 0.25);
+}
+
+.custom-popup-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-popup-wrapper {
+    position: relative;
+    z-index: 2;
+    //width: 600px;
+    background: $base;
+    transform: scale(0.75);
+    //width: 100%;
+    padding: 27px 40px;
+
+    .custom-popup[data-active='true'] & {
+        transform: scale(1);
+        transition: transform .2s ease-in-out;
+        width: 100%;
+    }
+
+    .custom-popup[data-active='false'] & {
+        transition: transform .2s ease-in-out;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+        color: $grayDark;
+        font-weight: normal;
+        margin: 0 0 30px;
+    }
+
+    .swiper-wrapper {
+        height: auto;
+
+        &.disabled {
+            justify-content: center;
+
+            .swiper-slide {
+                width: auto;
+                margin-right: 4px;
+                max-width: 190px;
+            }
+        }
+    }
+
+    .swiper-container {
+        height: auto;
+        margin: 0 0 28px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        //min-width: 190px;
+
+        .zoom-gallery {
+            margin-bottom: 4px;
+        }
+    }
+
+    .swiper-slider__block {
+        //left: 50%;
+        //transform: translateX(-50%);
+        //bottom: 0;
+        background: transparent;
+        height: 64px;
+        max-width: 180px;
+        margin: 0 auto;
+        position: relative;
+
+        &.disabled {
+            display: none;
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
+
+        .swiper-current {
+            color: $brandPrimary;
+        }
+
+        .swiper-pagination-bullet {
+            opacity: .9;
+
+            &-active {
+                background: $brandPrimary;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+
+            svg {
+                fill: $brandPrimary;
+            }
+        }
+    }
+
+    .custom-popup-close {
+        color: $grayDark;
+        font-size: $fontSize30;
+        width: 55px;
+        height: 35px;
+        background: transparent;
+        border: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    //600px
+    @media (min-width: $screen_S_Min) {
+
+        h2 {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+
+    @media (min-width: 980px) {
+
+        h2 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+        width: auto;
+
+        .custom-popup[data-active='true'] & {
+            width: auto;
+        }
+    }
+}
