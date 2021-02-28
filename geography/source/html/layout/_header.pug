@@ -1,0 +1,52 @@
+= '\n'
+//= Header =
+-
+    modifier = (pageTitle != 'main') ? 'header--light' : ''
+    micromarking = true
+
+    itemscope = (micromarking) ? true : false
+    itemprop = (micromarking) ? 'organization' : false
+    itemtype = (micromarking) ? 'http://schema.org/Organization' : false
+
+    itempropBrand = (micromarking) ? 'brand' : false
+    itempropBrandContent = (micromarking) ? 'hotel-geography' : false
+
+header#header.header(class= modifier itemscope= itemscope itemprop= itemprop itemtype= itemtype)
+    .header__wrapper
+        -
+            navigationItems = navigationListItems
+            dark = true
+            micromarking = false
+
+        include ../module/_mobile-menu.pug
+
+        - micromarking = true
+
+        .header__address
+            - address = 'Рівненська обл., с. Вересневе,<br>вул. 7 серпня, буд. 1 (траса Київ-Чоп)'
+
+            include ../module/_address.pug
+            include ../module/_languages.pug
+
+            - itemprop = (micromarking) ? 'email' : false
+            a.link(href= 'mailto:admingeografia@gmail.com' itemprop= itemprop) admingeografia@gmail.com
+            meta(itemprop= itempropBrand content= itempropBrandContent)
+
+        .header__logo
+            include ../module/_logo.pug
+        .header__callback
+            include ../module/_enter
+            include ../module/_callback.pug
+
+
+    - navigationItems = navigationListItems
+
+    include _navigation.pug
+    include ../module/_form-popup
+
+- micromarking = false
+
+
+
+//= End header =
+= '\n'

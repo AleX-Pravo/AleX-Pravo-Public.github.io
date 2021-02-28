@@ -1,0 +1,126 @@
+.popular {
+    text-decoration: none;
+
+    &__wrapper {
+        position: relative;
+        display: block;
+        padding: 15px;
+        flex-shrink: 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    &__image {
+        position: relative;
+        text-decoration: none;
+        display: block;
+        overflow: hidden;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(360deg, rgba(51, 42, 28, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            transition: all 1s ease-out;
+        }
+
+        &:hover {
+
+            img {
+                transform: scale(1.1);
+            }
+
+        }
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 35px 35px 26px 25px;
+        z-index: 2;
+
+        &-title {
+            color: $base;
+            font-size: $fontSizeH4;
+            padding: 0 0 20px 0;
+            line-height: 1;
+        }
+
+        &-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px dashed rgba(255, 255, 255, 0.5);
+            padding: 11px 0 0 0;
+        }
+
+        &-price {
+            color: $base;
+            font-size: 30px;
+            text-decoration: none;
+            span {
+                // margin: 0 0 0 8px;
+                margin: 0;
+                font-size: $fontSizeBase;
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        width: 50%;
+    }
+
+    @media (min-width: 840px) {
+        width: 33.333334%;
+
+        &__info {
+            &-title {
+                font-size: 30px;
+            }
+
+            &-price {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media (min-width: 1320px) {
+        &__info {
+
+            &-title {
+                font-size: $fontSizeH3;
+            }
+
+            &-price {
+                font-size: $fontSizeH2;
+
+                span {
+                    font-size: $fontSizeLarge;
+                    margin: -5px 0 0 5px;
+                }
+            }
+
+            .pin {
+                font-size: 18px;
+                line-height: 50px;
+                padding: 0 21px;
+            }
+
+            .not-available {
+                line-height: 1;
+                padding: 7px 21px;
+                max-width: 185px;
+            }
+        }
+    }
+}

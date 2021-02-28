@@ -1,0 +1,20 @@
+= '\n'
+//= Callback =
+-
+    modifier = (dark && pageTitle != 'main') ? "dark" : ""
+    itempropTel = (micromarking) ? 'telephone' : false
+
+.callback(class= modifier)
+
+    a.callback__tel(href='tel:+380673648807') 38 (067) 364-88-07
+        span.callback__phone
+        span.callback__title Ресторан
+        meta(itemprop= itempropTel content= '+38(067)364-88-07')
+
+    a.callback__tel(href='tel:+380673648807') 38 (067) 364-88-07
+        span.callback__phone
+        span.callback__title Готель
+        meta(itemprop= itempropTel content= '+38(067)364-88-07')
+
+//= End callback =
+= '\n'

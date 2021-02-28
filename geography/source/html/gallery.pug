@@ -1,0 +1,34 @@
+//- Utility
+- pageTitle = 'Фотогалерея'
+include utils/_variable.pug
+ - var breadcrumbs = ['Головна', pageTitle]
+doctype html
+html
+    include layout/_head.pug
+
+    body
+
+        = '\n'
+        //= Layout =
+        #layout
+            include layout/_header.pug
+
+            //= Main =
+            main#main.main
+
+                .container
+                    include module/_breadcrumbs.pug
+                    include module/_gallery-content.pug
+
+
+
+            //= End main =
+            = '\n'
+
+        //= End layout =
+
+        include layout/_footer.pug
+        include layout/_scripts.pug
+
+
+

@@ -1,0 +1,37 @@
+= '\n'
+//= timeline =
+//-=(source/assets/css/module/_timeline.scss)=
+//- modifierTimeline = (pageTitle == 'order-fact' && item.imgactive1 || pageTitle == 'main' && item.imgactive1) ?'active' : ''
+
+.timeline
+	//-each item in timeline
+	.timeline__wrap
+		.timeline__inner
+			.timeline__img
+
+			.timeline__text
+				p Вибір номеру
+		.timeline__circle-left
+		.timeline__circle-right
+		.timeline__icon
+
+	.timeline__wrap.active
+		.timeline__inner
+			.timeline__img
+
+			.timeline__text
+				p Ваші дані
+		.timeline__circle-left
+		.timeline__circle-right
+
+	.timeline__wrap.--active
+		.timeline__inner
+			.timeline__img
+
+			.timeline__text
+				p Підтвердження
+		.timeline__circle-left
+		.timeline__circle-right
+
+//= End timeline =
+= '\n'

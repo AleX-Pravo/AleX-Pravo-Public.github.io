@@ -1,0 +1,25 @@
+= '\n'
+//= main-slider =
+//- (source/assets/css/module/_main-slider.scss)
+.main-slider
+    img(src='data/header/mainslider.jpg', alt='')
+    img.active(src='data/header/1.jpg', alt='')
+
+    .main-slider__box
+        a.show-evening.--active(href="javascript:void(0)") Показати вечірній вигляд
+
+    .main-slider__booking
+        form(id ='' action='' method='')
+            include _menology
+            .form-group
+                button.pin(type='button' disabled) Бронювати
+    //- if (pageTitle == 'main')
+    //-     .swiper-contain
+    //-         .swiper-wrapper
+    //-             - for(var i =0; i < 2; i++)
+    //-                 .swiper-slide
+    //-                     img(src='data/header/main.png', alt='')
+    //-         .swiper-button-prev
+    //-         .swiper-button-next
+//= End main-slider =
+= '\n'

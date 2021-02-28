@@ -1,0 +1,32 @@
+= '\n'
+//= visitor =
+//-=(source/assets/css/module/_visitor.scss)=
+.visitor
+	.visitor__wrap
+		include _form-visitor.pug
+
+	.visitor__aside
+		- nameTitle = 'Ваше бронювання'
+		- classTitle = 'caption--base'
+		include _caption.pug
+
+		.visitor__inner
+			include _bout.pug
+
+			.guests
+				ul
+					li Двомістний стандарт
+					li Гостей:
+						span 2
+			include _multipurpose.pug
+
+			.total
+				ul
+					li
+						span Всього:
+						span
+						span
+							i 1041.50
+							|грн
+//= End visitor =
+= '\n'

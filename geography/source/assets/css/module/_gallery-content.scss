@@ -1,0 +1,21 @@
+.gallery-content {
+    margin-bottom: 80px;
+    .layout-box__photos {
+        margin: 0;
+        &-link {
+            text-decoration: none;
+            p {
+                padding: 0 20px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

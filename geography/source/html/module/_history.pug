@@ -1,0 +1,27 @@
+.history
+	- nameTitle = 'Історія бронювань'
+	- classTitle = 'caption--small'
+	include _caption
+
+	each item in historyStatus
+		.history__block
+			.history__wrapper
+				.history__photo
+					img(src='data/profile/2.png' alt='')
+				.history__info
+					p.history__status Статус:
+						span= item.status
+					h4 Двомісний стандарт з одним ліжком
+					span.history__guests Гостей:1
+
+					ul
+						each val in historyEnter
+							li= val.event
+								span= val.date
+
+			.history__prices
+				ul
+					if(item.prices)
+						each val in item.prices
+							li= val.name
+								span= val.price

@@ -1,0 +1,172 @@
+.history {
+
+	&__block {
+		display: flex;
+		padding: 16px;
+		background: $base;
+		border: 1px solid $grayLighter;
+		border-top: none;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__photo {
+		max-width: 223px;
+		width: 100%;
+		margin: 0 16px 0 0;
+	}
+
+	&__info {
+
+		h4 {
+			margin: 0 0 4px;
+			font-size: $fontSizeBase;
+			line-height: 21px;
+			font-weight: 500;
+		}
+
+		ul {
+
+			li {
+				font-size: $fontSizeSmall;
+				line-height: 1.5;
+				color: $grayDark;
+				font-weight: 700;
+
+				span {
+					font-weight: 400;
+					position: relative;
+					padding: 0 15px 0;
+
+					&:before{
+						content: '/';
+						position: absolute;
+						top: -2px;
+						left: 0;
+						color: $brandPrimary;
+						font-size: $fontSizeSmall;
+					}
+				}
+			}
+		}
+	}
+
+	&__guests {
+		color: $grayText;
+		font-size: $fontSizeSmall;
+		line-height: 19px;
+		margin: 0 0 10px;
+		display: block;
+	}
+
+	&__status {
+		margin: 7px 0;
+		font-size: $fontSizeExtraSmall;
+		font-weight: 500;
+		line-height: 16px;
+
+		span {
+			color: $brandPrimary;
+		}
+	}
+
+	&__prices {
+		position: relative;
+		background: $grayProfile;
+		padding: 16px 0;
+		width: 100%;
+
+		ul {
+
+			overflow: hidden;
+
+			li {
+				display: flex;
+				justify-content: space-between;
+				font-size: $fontSizeSmall;
+				line-height: 20px;
+				color: $grayDark;
+				padding: 0 16px;
+
+				&:not(&:last-child) {
+					margin: 0 0 6px;
+				}
+
+				&:last-child {
+					font-weight: 500;
+					padding: 14px 16px 0;
+					position: relative;
+					border-top: 1px solid $base;
+
+					span {
+						font-size: $fontSizeBase;
+					}
+
+				}
+
+				span {
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 600px) {
+
+		&__block {
+			flex-direction: row;
+			align-items: flex-start;
+		}
+
+		&__wrapper {
+			align-items: flex-start;
+		}
+
+		&__prices {
+			max-width: 246px;
+			margin-left: auto;
+
+		}
+	}
+
+	@media (min-width: $screenSmMin) { //768
+
+	    &__block {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: flex-start;
+		}
+
+		&__wrapper {
+
+			flex-direction: row;
+		}
+
+	}
+
+	@media (min-width: $screenMdMin) { //1024
+
+		&__block {
+
+			flex-wrap: nowrap;
+		}
+
+		&__wrapper {
+			flex-direction: row;
+		}
+	}
+
+	@media (min-width: $screenLgMin) { //1200
+
+		&__guests {
+
+			margin: 0 0 21px;
+		}
+	}
+}

@@ -1,0 +1,126 @@
+.mobile-menu {
+    position: absolute;
+    //top: 28%;
+    top: 42%;
+    left: 37px;
+    transition: top .3s ease-out;
+
+    &__button {
+        position: relative;
+        z-index: 3;
+        display: block;
+        width: 23px;
+        height: 17px;
+
+        &:before {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            content: '';
+            background: url(../images/icons/btn.svg) no-repeat;
+        }
+    }
+
+    &__drop {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: -320px;
+        width: 320px;
+        height: 100%;
+        transition: left .3s ease-out;
+        background: $base;
+        overflow-y: auto;
+        background: $grayDark;
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+        top: 25px;
+        right: 39px;
+        width: 19px;
+        height: 19px;
+        background: url(../images/icons/close.svg) no-repeat;
+        background-size: 100%;
+    }
+
+    &__wrapper {
+        height: 100%;
+    }
+
+    &__content {
+        background: $base;
+        height: auto;
+        overflow: hidden;
+        padding: 70px 23px 23px;
+        background: $grayDark;
+
+        .navigation {
+            display: block;
+            margin: 0 -23px;
+
+            &__list {
+                flex-direction: column;
+                padding: 17px 0;
+
+                &-link {
+                    color: #C5A26D;
+                    line-height: 38px;
+                }
+
+                &-item {
+                    padding: 0 23px;
+                }
+            }
+        }
+
+        .callback {
+            align-items: flex-start;
+            padding: 0;
+
+            &.dark {
+                .callback__tel {
+                    color: #fff;
+                }
+            }
+        }
+
+        .languages {
+            &--dark {
+                .languages {
+                    &__item {
+                        color:$brandPrimary;
+                        &.active {
+                            color: $base;
+                            &:before {
+                                background: $base;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .enter {
+            display: block;
+            padding: 0 0 0 23px;
+        }
+
+        &-item {
+            margin: 0 -23px;
+            padding: 17px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            &:first-child {
+                border: none;
+            }
+        }
+    }
+
+    @media (min-width: $screenMdMin) {
+        display: none;
+    }
+}

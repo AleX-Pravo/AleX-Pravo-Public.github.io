@@ -1,0 +1,16 @@
+form.form-info(id ='' action='' method='')
+	each item in formInfo
+		- nameTitle = item.title
+		- classTitle = 'caption--small'
+		include _caption
+
+		.form-info__block(class=item.modifier)
+			if(item.input)
+				each val in item.input
+					.form-group
+						input.form-control(type= val.type placeholder= val.placeholder)
+						.help-block
+			if(item.number)
+				a.form-info__add(href='javascript:void(0)') Додати ще один номер
+			.form-group.form-group--button
+				button.pin(type='submit')= item.button

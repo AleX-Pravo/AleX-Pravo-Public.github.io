@@ -1,0 +1,27 @@
+.reserve-success {
+    position: relative;
+    border: 2px solid $brandPrimary;
+    padding: 17px 14px;
+    max-width: 630px;
+    width: 100%;
+    background: transparent;
+    z-index: 99;
+    &__close {
+        position: absolute;
+        background: url(../images/exit-big.png)no-repeat;
+        z-index: 1;
+        display: block;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        right: 0;
+    }
+    &__inner {
+        position: relative;
+        background: $base;
+        text-align: center;
+        padding: 40px 0;
+        font-size: $fontSizeH4;
+        color: $grayDark;
+    }
+}

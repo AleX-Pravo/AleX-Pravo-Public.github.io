@@ -1,0 +1,24 @@
+= '\n'
+//= Mobile menu =
+
+.mobile-menu
+    a.mobile-menu__button(href='javascript:void(0)')
+
+    .mobile-menu__drop
+        a.mobile-menu__close(href='#')
+
+        .mobile-menu__wrapper
+            .mobile-menu__content
+                .mobile-menu__content-item
+                    include ../module/_enter.pug
+                include ../layout/_navigation.pug
+                .mobile-menu__content-item
+                    include ../module/_callback.pug
+                .mobile-menu__content-item
+                    include ../module/_social.pug
+                .mobile-menu__content-item
+                    include ../module/_languages.pug
+                .mobile-menu__content-item
+                    a.pin(href='hotel-rooms.html') Забронювати
+//= End mobile menu =
+= '\n'

@@ -1,0 +1,209 @@
+.main-slider {
+    position: relative;
+    max-width: 1920px;
+
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+
+        transition: opacity 3s ease-in-out;
+
+        &.active {
+            position: absolute;
+            display: block;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &__box {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        max-width: 1200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__booking {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        background: $base;
+        min-height: 98px;
+        margin: 5px 0 0;
+
+        form {
+
+            position: relative;
+            width: 100%;
+            padding: 0 5px;
+
+        }
+
+        .menology {
+
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .form-group {
+
+                &.calendar {
+                    height: 50px;
+                    margin: 0;
+                }
+            }
+        }
+
+        .pin {
+            box-shadow: none;
+            height: 50px;
+            flex-grow: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .show-evening {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+        color: $brandPrimary;
+        font-size: 13px;
+        font-family: $fontFamilyGilroy;
+        background: linear-gradient($brandPrimary, $brandPrimary)no-repeat;
+        background-size: 100% 1px;
+        background-position: 0 1.15em;
+        text-decoration: none;
+
+        &:hover {
+            background: none;
+        }
+
+        &:before {
+           content:'';
+           width: 32px;
+           height: 32px;
+           position: absolute;
+           background: url(../images/icons/lamp.svg)no-repeat;
+           top: 50%;
+           transform: translateY(-50%);
+           left: -40px;
+        }
+
+        &.active {
+            &:before {
+                content: '';
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                background: url(../images/icons/lamp-light.svg)no-repeat;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -40px;
+            }
+        }
+    }
+
+    .swiper-contain {
+
+        .swiper-button-prev {
+            background: url(../images/arrow-left.svg)no-repeat;
+        }
+
+        .swiper-button-next {
+            background: url(../images/arrow-right.svg)no-repeat;
+        }
+    }
+
+    .swiper {
+        &-slide {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+
+    @media (min-width: 480px) {
+        .show-evening {
+            top: 65px;
+            font-size: $fontSizeBase;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        &__booking {
+            position: absolute;
+            padding: 0 24px;
+            top: (480px * 100%) / 1230px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 705px;
+
+            form {
+                display: flex;
+                padding: 0;
+            }
+
+            .menology {
+
+                margin: 0 20px 0 0;
+
+                .form-group {
+
+                    &.calendar {
+                        margin: 0 4px 0;
+                        max-width: 235px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .pin {
+                min-width: 147px;
+            }
+
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        &__box {
+            top: 220px;
+        }
+
+        .show-evening {
+            left: auto;
+            transform: none;
+            right: 10px;
+        }
+    }
+}
+
+
+
+
+@keyframes day-night {
+
+    from {
+        opacity: 0.7
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+

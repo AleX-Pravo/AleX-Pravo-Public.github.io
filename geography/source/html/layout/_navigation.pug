@@ -1,0 +1,16 @@
+//= Nav =
+- modifier = (pageTitle != 'main') ? "navigation--dark" : ""
+nav.navigation(class= modifier)
+    ul.navigation__list
+        each item, index in navigationItems
+            - modifier = (index == 0) ? 'active' : ''
+            li.navigation__list-item
+                if (index == 0)
+                    span.navigation__list-link(class= modifier href= item.link)= item.value
+                else
+                    a.navigation__list-link(class= modifier href= item.link)= item.value
+    include ../module/_social
+    a.pin(href='javascript:void(0)') Бронювати
+//= End nav =
+= '\n'
+
