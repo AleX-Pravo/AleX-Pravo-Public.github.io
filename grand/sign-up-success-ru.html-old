@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>IT-навчання - Заявка успішно надіслана</title>
+    <meta name="keywords" content="Компютерні курси, гранд, IT-навчання для учнів, ІТ-навчання, ІТ-освіта, ІТ-робота, ІТ-напрямки, комп'ютерне навчання, комп'ютерне навчання для дітей, навчання для учнів, сертифікат, зручний розклад, будні і вихідні, кваліфіковані викладачі, записатися на курси, практичні заняття, комфортні класи, сучасна техніка, хороша робота, кар'єра, найбільша кількість тем,  доступна ціна, користь для дітей, зручне розташування, якісні знання, творчі здібності, напрямки дизайну, креативні роботи, як створити власний сайт, роль ІТ в сучасному світі, як зацікавити дитину, куди віддати дитину на навчання, корисне і цікаве, корисно і цікаво, як знайти нових друзів, практичні заняття, цікавий матеріал, хороша освіта, високооплачувана робота, вирішення задач, освіта дитини, ліцензоване навчання, курси для дітей, ІТ курси для школярів, курси програмування для дітей, комп’ютерні курси для дітей, 3D-графіка, 3д-графіка, анімація, проектрування, інтер'єр, екстер'єр, створення персонажів, анімація персонажів, моделювання, текстурування, поєднання відео і 3D, спецефекти, 3D-друк, Unity 3D, створення ігор, ігрові движки, графіка, дизайн, Photoshop, фотошоп, ефекти, реклама, поліграфія, векторна, растрова, фірмовий стиль, правила дизайну, програмування, розробка програм, java, C#, Python, технічна англійська, відео, звук, sony vegas, створення intro, створити свій блог, канал, розкрутити блог, обробка звуку, web-розробка, веб-розробка, як створити сайт, дизайн навчання, курси веб дизайну, курси дизайнерів, графічний дизайн навчання, навчання веб дизайну, дизайнер, стати дизайнером, комп ютерний дизайн, web-дизайн, дизайн інтер єрів, навчання дизайну, навчання дизайнерів, програміст, мови програмування, основи програмування, як стати програмістом, комп ютерна освіта, розробка програмного забезпечення, навчання основам програмування, навчання мові с, курси с#, навчання sql, курси java, навчання для дітей, комп ютер для дітей, компютерні курси для дітей, дитячі курси, навчання дітей, комп ютерне навчання, заняття для дітей.">
+    <meta name="description" content="Цікаве IT-навчання для учнів">
+    <link href="/css/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset-scroll.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style-scroll.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="main-header__inner">
+                <a href="/index-ru.html" class="logo">
+                    <img class="logo__image" src="/images/logo.png" alt="">
+                </a>
+                <ul class="nav">
+                    <li class="nav__item">
+                        <a class="nav__link" href="/index-ru.html">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link"
+                           href="/program-ru.html">
+                            Программа
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link"
+                           href="/feedbacks-ru.html">
+                            Истории
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link"
+                           href="/for-parents-ru.html">
+                            Для родителей
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link"
+                           href="/sign-up-ru.html">
+                            Запись
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link"
+                           href="https://itosvita.weblium.site/">
+                            Кабинет
+                        </a>
+                    </li>
+                </ul>
+                <div class="contact-phones">
+                    <div class="contact-phones__main">
+                        <ul class="contact-phones__list">
+                            <li class="contact-phones__item">
+                                <a class="contact-phones__link" href="tel:0950993545">(095) 099-35-45</a>
+                            </li>
+                            <li class="contact-phones__item">
+                                <a class="contact-phones__link" href="tel:0931384616">(093) 138-46-16</a>
+                            </li>
+                        </ul>
+                        <ul class="contact-phones__list">
+                            <li class="contact-phones__item">
+                                <a class="contact-phones__link" href="tel:0632881202">(063) 288-12-02</a>
+                            </li>
+                            <li class="contact-phones__item">
+                                <a class="contact-phones__link" href="tel:0958114277">(095) 811-42-77</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="note-link">
+                        <a class="note-link__link" href="/program-ru.html">Программа</a>
+                        <a href="/sign-up-ru.html" class="note-link__link" data-value="Запис">Запись</a>
+                    </div>
+                </div>
+                <a href="/sign-up.html" class="main-header__locale">
+                    Ua
+                </a>
+                <div class="toggle" data-el="toggle" data-target="toggle_drop">
+                    <a class="toggle__icon">
+                        <span class="toggle__line"></span>
+                        <span class="toggle__line"></span>
+                        <span class="toggle__line"></span>
+                        <span class="toggle__line"></span>
+                    </a>
+                </div>
+                <div class="toggle-drop" id="toggle_drop">
+                    <div class="toggle-drop__main-menu">
+                        <ul class="main-menu">
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="/index-ru.html">Главная</a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="/program-ru.html">Программа</a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="/feedbacks-ru.html">Истории</a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="/for-parents-ru.html">Для родителей</a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="/sign-up-ru.html">Запись</a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="https://itosvita.weblium.site/">Кабинет</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="toggle-drop__locale">
+                        <a href="/sign-up.html" class="toggle-drop__locale-link">
+                            Ua
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main main--sign-up">
+            <div class="container">
+                <div class="sign-up sign-up--success">
+                    <h1 class="page-header">Спасибо, мы получили Вашу заявку.</h1>
+                    <div class="sign-up__success-text"> Сейчас формируются группы. <br> Занятия начнутся в течение месяца. <br> Через некоторое время Вам придет СМС с расписанием <br> или мы перезвоним. Спасибо.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/fallback/jquery-3.1.1.min.js"><\/script>')</script>
+    <script src="/js/main.min.js"></script>
+    <script type="text/template" data-el="bootstrap-select.template.caret"></script>
+</body>
+
+</html>

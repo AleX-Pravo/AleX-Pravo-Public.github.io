@@ -1,0 +1,46 @@
+
+RewriteEngine on
+
+RewriteOptions inherit
+RewriteCond %{HTTP_HOST} ^grand\.rv\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.grand\.rv\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^grand\.org\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.grand\.org\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^it\-osvita\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.it\-osvita\.com$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^it\-osvita\.in\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.it\-osvita\.in\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^it\-osvita\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.it\-osvita\.net$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^it\-osvita\.net\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.it\-osvita\.net\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^it\-osvita\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.it\-osvita\.org$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^itosvita\.com\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.itosvita\.com\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^itosvita\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.itosvita\.net$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^itosvita\.net\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.itosvita\.net\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^itosvita\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.itosvita\.org$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^itosvita\.org\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.itosvita\.org\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^kursi\.org\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.kursi\.org\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^it\-osvita\.org\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.it\-osvita\.org\.ua$
+RewriteRule ^(.*)$ "https\:\/\/itosvita\.com\/$1" [R=301,L]

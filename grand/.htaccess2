@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+RewriteEngine On
+Redirect 301 /content/shanovni-batky http://grand.rv.ua/for-parents.html
+Redirect 301 /content/testuvannya http://grand.rv.ua/sign-up.html
+Redirect 301 /contact http://grand.rv.ua/sign-up.html
+Redirect 301 /content/grafika-i-dyzayn http://grand.rv.ua/program.html
+Redirect 301 /content/programuvannya http://grand.rv.ua/program.html
+Redirect 301 /content/ofisni-programy http://grand.rv.ua/program.html
+Redirect 301 /content/montazh-video http://grand.rv.ua/program.html
+Redirect 301 /content/obrobka-zvuku http://grand.rv.ua/program.html
+Redirect 301 /content/veb-dyzayn http://grand.rv.ua/program.html
+Redirect 301 /content/3d-grafika http://grand.rv.ua/program.html
+Redirect 301 /content/ustanovka-windows http://grand.rv.ua/program.html
