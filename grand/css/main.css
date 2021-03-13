@@ -3723,12 +3723,18 @@ input[type="checkbox"] {
     }
 
     .section-logos__content {
-        min-height: 500px;
+        min-height: 600px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .section-logos__content {
-        min-height: 400px;
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-logos__content {
+        min-height: 460px;
     }
 }
