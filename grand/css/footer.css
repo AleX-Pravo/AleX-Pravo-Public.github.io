@@ -7,6 +7,12 @@
     margin-top: -120px;
 }
 
+.footer-program {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
 .footer__picture {
     position: relative;
     height: 338px;
