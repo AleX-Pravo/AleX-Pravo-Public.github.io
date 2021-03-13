@@ -3700,3 +3700,22 @@ input[type="checkbox"] {
 .main-footer__top-line {
     padding-bottom: 4rem;
 }
+
+
+@media screen and (max-width: 1200px) {
+    .main-footer__top-line {
+        padding-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .main-footer__top-line {
+        padding-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-footer__top-line {
+        padding-bottom: 7rem;
+    }
+}
