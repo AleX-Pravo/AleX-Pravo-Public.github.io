@@ -3705,6 +3705,50 @@ input[type="checkbox"] {
     padding: 0 0 120px;
 }
 
+.main .footer-section {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    background-color: #bfc2c9;
+}
+
+@media screen and (max-width: 1600px) {
+    .main .section-info--program {
+        margin-left: -27%;
+        margin-left: -15%;
+    }
+    .main .section-figure--program-left,
+    .main .section-figure--program-right {
+        left: -25%;
+        left: -13%;
+    }
+
+    .main .section-info--for-parents {
+        margin-left: -8%;
+    }
+
+    .main .section-figure--for-parents-left {
+        left: -8%;
+    }
+
+    .main .section-figure--for-parents-right {
+        left: -13%;
+    }
+
+    .main .section-info--clients {
+        margin-left: -12%;
+    }
+
+    .main .section-figure--clients-left {
+        left: -2%;
+    }
+
+    .main .section-figure--clients-right {
+        left: -8%;
+    }
+}
+
+
 @media screen and (max-width: 1200px) {
     .main-footer__top-line {
         padding-bottom: 5rem;
