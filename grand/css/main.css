@@ -3701,6 +3701,9 @@ input[type="checkbox"] {
     padding-bottom: 4rem;
 }
 
+.section-team-viewer {
+    padding: 0 0 120px;
+}
 
 @media screen and (max-width: 1200px) {
     .main-footer__top-line {
@@ -3717,5 +3720,15 @@ input[type="checkbox"] {
 @media screen and (max-width: 767px) {
     .main-footer__top-line {
         padding-bottom: 7rem;
+    }
+
+    .section-logos__content {
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-logos__content {
+        min-height: 400px;
     }
 }
