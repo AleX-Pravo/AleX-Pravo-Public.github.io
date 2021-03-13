@@ -672,7 +672,7 @@ small.copyright {
     margin-top: 90px;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    background-image: url(../images/feedbacks/backgrounds/1.png), url(../images/feedbacks/backgrounds/2.png), url(../images/feedbacks/backgrounds/3.png), url(../images/feedbacks/backgrounds/4.png);
+    background-image: url(/images/feedbacks/backgrounds/1.png), url(/images/feedbacks/backgrounds/2.png), url(/images/feedbacks/backgrounds/3.png), url(/images/feedbacks/backgrounds/4.png);
     background-position: top 2% right, top 36% right, top 66% right, bottom 3% right;
     background-size: contain;
     background-repeat: no-repeat;
@@ -3677,4 +3677,18 @@ input[type="checkbox"] {
 .test-video video {
     width: 100%;
     height: 100%;
+}
+
+/*SS*/
+.for-parents-page__text h2,
+.for-parents-page__text p {
+    margin-bottom: 10px;
+}
+
+.feedbacks {
+    background-image: url(../images/feedbacks/backgrounds/1.png), url(../images/feedbacks/backgrounds/2.png), url(../images/feedbacks/backgrounds/3.png), url(../images/feedbacks/backgrounds/4.png);
+}
+
+.for-parents-page__content {
+    background-image: url(../images/for-parents/backgrounds/1.png), url(../images/for-parents/backgrounds/2.png);
 }
