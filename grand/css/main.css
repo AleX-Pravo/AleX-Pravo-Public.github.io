@@ -3712,6 +3712,21 @@ input[type="checkbox"] {
     background-color: #bfc2c9;
 }
 
+.main .footer-section:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../images/note-form.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    transform: scaleX(-1);
+}
+
 @media screen and (max-width: 1600px) {
     .main .section-info--program {
         margin-left: -27%;
