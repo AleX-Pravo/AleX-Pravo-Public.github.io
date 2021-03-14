@@ -21,7 +21,7 @@
 
 .footer__picture {
     position: relative;
-    height: 338px;
+    height: 230px;
     top: 0;
 }
 
@@ -31,11 +31,11 @@
     position: absolute;
     right: 0;
     left: 0;
-    height: 169px;
+    height: 120px;
 }
 
 .footer__picture::before {
-    background: url(../images/footer/topwave.svg) no-repeat 47.19% 0% / cover;
+    background: url(../images/footer/topwave.svg) no-repeat 0% 0% / cover;
     top: 0;
     z-index: 1;
 }
@@ -48,7 +48,7 @@
 .footer__wrap {
     background: #465064;
     position: relative;
-    padding-top: 27px;
+    padding-top: 25px;
 }
 
 .footer__main {
@@ -74,7 +74,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 33px;
+    margin-top: 34px;
 }
 
 .footer__menu .nav {
@@ -145,7 +145,7 @@
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    margin-bottom: 33px;
+    margin-bottom: 34px;
 }
 
 .footer__social .social {
@@ -200,14 +200,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .footer__picture {
-        height: 248px;
-    }
-
-    .footer__picture::before,
-    .footer__picture::after {
-        height: 124px;
-    }
 
     .footer__social {
         flex-flow: row nowrap;
@@ -226,14 +218,6 @@
 }
 
 @media screen and (max-width: 991px) {
-    .footer__picture {
-        height: 220px;
-    }
-
-    .footer__picture::before,
-    .footer__picture::after {
-        height: 110px;
-    }
 
     .footer__main {
         flex-flow: column nowrap;
